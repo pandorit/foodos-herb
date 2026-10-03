@@ -1,0 +1,43 @@
+﻿# ── כלי ניהול מקומיים ──
+admin-descriptions.html
+admin.html
+verification-dashboard.html
+server.py
+
+# ── קבצי עבודה ומחקר (שורש בלבד) ──
+*.py
+*.csv
+/brands.json
+/certs.json
+/brands_with_descriptions2.json
+
+# ── HTML טיוטות בשורש ──
+design-option-*.html
+export-ls.html
+keto.html
+foodos-herb-homepage.html
+
+# ── תיקיות עבודה בשורש בלבד ──
+/images/
+/BuDrakonit-Bold-desktop/
+/Varela_Round/
+/Varela_Round.zip
+/Caveat.zip
+/css/
+/js/
+/data/
+/scripts/
+
+# ── קבצי תמונה בשורש ──
+/*.jpg
+/*.png
+/*.avif
+
+# ── גיבויים ──
+data/backups/
+
+# ── מערכת ──
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

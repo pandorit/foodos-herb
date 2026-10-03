@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- טקסט משפטי סופק על ידי בעלת האתר לאחר בדיקה משפטית - אין לשנות ניסוח ללא אישור בעלת האתר. -->
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מדיניות פרטיות — Foodos Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'VarelaRound';
+      src: url('Varela_Round/VarelaRound-Regular.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal:#4A9D9A; --teal-dark:#2C6360; --teal-light:#EBF6F6;
+      --bg:#FFFFFF; --text:#1A1A1A; --text-mid:#3D3D3D; --text-soft:#6B7280;
+      --border:#E5E7E5;
+      --serif:'Playfair Display',Georgia,serif;
+      --sans:'VarelaRound','Inter',system-ui,sans-serif;
+      --radius-pill:100px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--text); background: var(--bg); direction: rtl; line-height: 1.75; overflow-x: hidden; }
+    a { text-decoration: none; color: var(--teal); }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 3px; }
+
+    /* NAV */
+    .nav { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 200; height: 68px; display: flex; align-items: center; }
+    .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-badge { width: 40px; height: 40px; background: var(--teal-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.2rem; color: white; font-weight: 700; flex-shrink: 0; }
+    .logo-name { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.1; }
+    .logo-name small { display: block; font-family: var(--sans); font-size: 0.6rem; font-weight: 500; color: var(--teal); letter-spacing: 1px; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
+    .nav-links a:hover { color: var(--teal); text-decoration: none; }
+    .nav-cta { background: var(--teal) !important; color: white !important; padding: 9px 20px; border-radius: var(--radius-pill); }
+
+    /* HERO BAR */
+    .page-hero { background: var(--teal-light); border-bottom: 1px solid rgba(74,157,154,.15); padding: 3rem 0; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--teal-dark); margin-bottom: 0.4rem; }
+    .page-hero .updated { font-size: 0.82rem; color: var(--text-soft); margin-top: 0.5rem; }
+    .container { max-width: 820px; margin: 0 auto; padding: 0 2rem; }
+
+    /* CONTENT */
+    .legal-body { padding: 3rem 0 5rem; }
+    .legal-body h2 { font-family: var(--serif); font-size: 1.25rem; font-weight: 700; color: var(--teal-dark); margin: 2.5rem 0 0.8rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .legal-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .legal-body h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    .legal-body p { font-size: 0.93rem; color: var(--text-mid); margin-bottom: 0.9rem; }
+    .legal-body ul { margin: 0.5rem 0 1rem 0; padding-inline-start: 1.4rem; }
+    .legal-body li { font-size: 0.93rem; color: var(--text-mid); margin-bottom: 0.4rem; }
+    .legal-body strong { color: var(--text); }
+    .legal-body a { color: var(--teal); }
+
+    .contact-box { background: var(--teal-light); border-radius: 12px; padding: 1.2rem 1.5rem; margin-top: 2rem; font-size: 0.9rem; color: var(--text-mid); }
+    .contact-box a { font-weight: 600; }
+
+    /* FOOTER */
+    .footer { background: var(--teal-dark); padding: 2rem 0; }
+    .footer-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: white; }
+    .footer-brand span { background: linear-gradient(90deg,#4A9D9A,#A8D44B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-links { display: flex; gap: 1.2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,.6); transition: color .18s; }
+    .footer-links a:hover { color: white; text-decoration: none; }
+    .footer-links a:focus-visible { outline: 2px solid white; outline-offset: 3px; border-radius: 3px; }
+    .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,.35); text-align: center; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.08); }
+
+    @media (max-width: 768px) {
+      .nav-links { gap: 1rem; }
+      .nav-links li:not(:last-child) { display: none; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="ניווט ראשי">
+  <div class="nav-inner">
+    <a href="../foodos-herb-homepage.html" class="logo" aria-label="Foodos Online - דף הבית">
+      <div class="logo-badge" aria-hidden="true">פ</div>
+      <div class="logo-name">FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
+        <small>herb</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../foodos-herb-homepage.html">דף הבית</a></li>
+      <li><a href="certs.html">הכשרויות</a></li>
+      <li><a href="https://www.iherb.com" target="_blank" rel="noopener sponsored" class="nav-cta">לחנות iHerb</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero" role="banner">
+  <div class="container">
+    <h1>מדיניות פרטיות</h1>
+    <p class="updated">עודכן לאחרונה: ספטמבר 2026 | ליצירת קשר בנושאי פרטיות: <a href="mailto:foodos.is.online@gmail.com">foodos.is.online@gmail.com</a></p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<main class="legal-body" id="main-content">
+  <div class="container">
+
+    <p>ברוכים הבאים ל-Foodos Online (online.foodos.co.il). הפרטיות שלכם חשובה לנו.
+    מדיניות זו נכתבה בהתאם לחוק הגנת הפרטיות, התשמ"א-1981, לרבות תיקון מס' 13
+    (התשפ"ד-2024, בתוקף מ-14.8.2025), ותקנות הגנת הפרטיות (אבטחת מידע), התשע"ז-2017.</p>
+
+    <p><strong>בעלת השליטה במידע:</strong> Foodos Online (עוסק פטור, זוהרת ניר כהן)<br>
+    <strong>כתובת:</strong> רחוב שבט 13, מודיעין<br>
+    <strong>דוא"ל:</strong> <a href="mailto:foodos.is.online@gmail.com">foodos.is.online@gmail.com</a></p>
+
+    <h2>1. מי אנחנו ומה מטרת האתר</h2>
+    <p>Foodos Online הוא אתר תוכן והמלצות, הקשור לקהילת "פודוס" (56,000 חברים בפייסבוק),
+    המתמקד באיתור, בדיקה ואירגון מוצרים בעלי הכשר הזמינים באתר iHerb.</p>
+    <p><strong>האתר אינו חנות מקוונת</strong> — אנו לא מוכרים מוצרים, לא מעבדים תשלומים, ולא
+    צד לעסקת הרכישה. רכישה מתבצעת ישירות באתר iHerb.</p>
+
+    <h2>2. איזה מידע אנו עשויים לאסוף</h2>
+
+    <h3>מידע שאתם מוסרים לנו ביוזמתכם</h3>
+    <p>אם תירשמו בעתיד לניוזלטר או תפנו אלינו בדוא"ל: כתובת דוא"ל, שם (אם התבקש),
+    ותוכן הפנייה. <strong>אין חובה חוקית למסור מידע זה</strong> — המסירה מרצונכם והסכמתכם
+    בלבד. אם תבחרו שלא למסור — ייתכן שלא נוכל לספק את השירות הספציפי (למשל, צירוף לרשימת תפוצה).</p>
+
+    <h3>מידע טכני שנאסף אוטומטית</h3>
+    <p>כתובת IP, סוג דפדפן/מכשיר, דפים שנצפו, שאילתות חיפוש, ומזהים מקוונים
+    (Cookies וטכנולוגיות דומות) — לצורך תפעול תקין, אבטחה, ושיפור השירות.</p>
+
+    <p>אנו משתמשים בכלים הבאים לניתוח שימוש ולמדידת ביצועים:</p>
+    <ul>
+      <li><strong>Google Analytics</strong> — לניתוח סטטיסטי של השימוש באתר. לפרטים: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">מדיניות הפרטיות של Google</a></li>
+      <li><strong>Meta Pixel</strong> (פייסבוק/אינסטגרם) — למדידת ביצועי תוכן ופרסום. לפרטים: <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">מדיניות הפרטיות של Meta</a></li>
+      <li><strong>Encharge</strong> — מערכת לניהול דיוור ותקשורת עם נרשמים לניוזלטר (כאשר ייפתח בעתיד). לפרטים: <a href="https://encharge.io/privacy-policy/" target="_blank" rel="noopener">מדיניות הפרטיות של Encharge</a></li>
+    </ul>
+    <p>כלים אלה עשויים להציב Cookies ולאסוף מזהים מקוונים בהתאם למדיניותם העצמאית, בנוסף למדיניות זו.</p>
+
+    <h2>3. הבסיס לאיסוף המידע</h2>
+    <p>הדין הישראלי אינו מבוסס על רשימת "בסיסים חוקיים" סגורה כמו ב-GDPR. מידע שנמסר ביוזמתכם
+    (הרשמה, פנייה) מעובד על בסיס הסכמתכם והצורך לספק את השירות המבוקש. מידע טכני מעובד לצורך
+    תפעול ואבטחה תקינים של האתר.</p>
+
+    <h2>4. קישורי שותפים ומעבר לאתרי מסחר שותפים</h2>
+    <p>חלק מהקישורים באתר הם <strong>קישורי שותפים</strong> (Affiliate), במסגרת תוכניות שותפים של אתרי
+    מסחר שאנו עובדים איתם, וביניהם נכון להיום <strong>iHerb</strong> (דרך פלטפורמת Partnerize),
+    ושותפים נוספים שעשויים להתווסף מעת לעת. בלחיצה על קישור כזה ורכישה, אנו עשויים לקבל עמלה,
+    <strong>ללא תוספת תשלום מצדכם</strong>.</p>
+    <p>לצורך מדידת ההפניה, האתרים השותפים ו/או פלטפורמות השותפים שלהם עשויות להשתמש בקישורי מעקב,
+    Cookies ומזהים מקוונים. <strong>לאחר המעבר לאתר שותף כלשהו, עיבוד המידע כפוף למדיניות
+    הפרטיות העצמאית שלו</strong> — אנו לא שולטים בה ולא מעבירים אליו את פרטיכם האישיים ישירות.
+    מומלץ לעיין במדיניות הפרטיות של כל אתר שותף בנפרד לפני רכישה.</p>
+
+    <h2>5. Cookies ואנליטיקס</h2>
+    <p>האתר משתמש בעוגיות וכלי אנליטיקס (Google Analytics, Meta Pixel — ראו סעיף 2) לתפעול, אבטחה,
+    וסטטיסטיקה, כולל מדידת הפניות דרך קישורי שותפים. ניתן לחסום/למחוק עוגיות דרך הגדרות הדפדפן
+    (עלול לפגוע בחלק מהפונקציונליות).</p>
+    <p><strong>באנר עוגיות:</strong> מאחר שמדובר בכלים שעשויים להיחשב "שיווקיים" (Meta Pixel בפרט),
+    יש להציג באנר הסכמה בכניסה הראשונה לאתר, המאפשר למשתמש לבחור אילו קטגוריות עוגיות לאשר
+    (הכרחיות בלבד / גם אנליטיקס / גם שיווק), בהתאם להנחיות הרשות להגנת הפרטיות.</p>
+
+    <h2>6. ניוזלטר ודיוור (כשיופעל בעתיד)</h2>
+    <p>הרשמה לניוזלטר תתבצע רק לפי הסכמה מפורשת (Opt-in אקטיבי, לא מסומן מראש), בהתאם לסעיף 30א
+    לחוק התקשורת (בזק ושידורים), התשמ"ב-1982 ("חוק הספאם"). הדיוור ינוהל באמצעות מערכת
+    <strong>Encharge</strong> — כתובת הדוא"ל שתמסרו תישמר במערכת זו לצורך משלוח התכנים.
+    ניתן להסיר את עצמכם בכל עת דרך קישור הסרה או פנייה במייל.</p>
+
+    <h2>7. שיתוף מידע עם צדדים שלישיים</h2>
+    <p>איננו מוכרים מידע אישי. אנו עשויים לשתף מידע עם ספקים המסייעים בתפעול האתר — לרבות
+    <strong>Google</strong> (אנליטיקס), <strong>Meta</strong> (Pixel), ו-<strong>Encharge</strong>
+    (דיוור) — המחויבים לשמירת סודיות בהתאם למדיניותם; וכן במקרה של חובה חוקית, צו שיפוטי,
+    או דרישה מוסמכת.</p>
+
+    <h2>8. העברת מידע מחוץ לישראל</h2>
+    <p>ככל שספקי שירותים פועלים מחוץ לישראל, נפעל בהתאם לתקנות הגנת הפרטיות (העברת מידע אל מאגרי
+    מידע שמחוץ לגבולות המדינה), התשס"א-2001.</p>
+
+    <h2>9. שמירת מידע</h2>
+    <ul>
+      <li><strong>כתובות דוא"ל</strong> (הרשמה לניוזלטר/פנייה בטופס) — נשמרות ברשימת התפוצה/מערכת
+      יצירת הקשר שלנו כל עוד לא ביקשתם הסרה. ניתן לבקש הסרה בכל עת דרך קישור ההסרה בכל הודעה,
+      או בפנייה ישירה במייל.</li>
+      <li><strong>מידע טכני אחר</strong> (לוגים, שאילתות חיפוש) — יישמר רק כל עוד נדרש באופן סביר
+      לתפעול ואבטחת האתר, ולא מעבר לכך.</li>
+    </ul>
+    <p>מידע הנשמר על ידי ספקי השירות שלנו (Google, Meta, Encharge) כפוף גם למדיניות השמירה העצמאית שלהם.</p>
+
+    <h2>10. אבטחת מידע</h2>
+    <p>אנו נוקטים אמצעים סבירים בהתאם לתקנות הגנת הפרטיות (אבטחת מידע), התשע"ז-2017 — לרבות
+    הגבלת הרשאות גישה ואבטחת תקשורת. עם זאת, אין אפשרות להבטיח חסינות מוחלטת מפני אירועי אבטחה.</p>
+
+    <h2>11. הזכויות שלכם</h2>
+    <ul>
+      <li><strong>זכות עיון</strong> (סעיף 13 לחוק) — לבקש לדעת אילו מידע מוחזק עליכם</li>
+      <li><strong>זכות לתיקון או מחיקה</strong> (סעיף 14) — אם המידע שגוי, לא שלם, לא ברור או לא
+      מעודכן. <strong>הבהרה חשובה: בניגוד ל-GDPR, אין בישראל זכות גורפת "להישכח" — הזכות מתייחסת
+      למידע שאינו תקין</strong>, אם כי נשקול גם בקשות מחיקה כלליות כשאין עוד צורך עסקי/חוקי במידע</li>
+      <li><strong>הפסקת דיוור</strong> — בכל עת, דרך קישור הסרה או פנייה במייל</li>
+    </ul>
+
+    <h2>12. קטינים</h2>
+    <p>האתר אינו מיועד לאיסוף מידע ביודעין מקטינים. אם יתברר שנאסף מידע כאמור, נפעל למחיקתו.</p>
+
+    <h2>13. שינויים במדיניות</h2>
+    <p>נעדכן מדיניות זו מעת לעת; תאריך העדכון יוצג בראש המסמך.</p>
+
+    <h2>14. יצירת קשר</h2>
+    <div class="contact-box" role="complementary" aria-label="פרטי יצירת קשר">
+      <a href="mailto:foodos.is.online@gmail.com">foodos.is.online@gmail.com</a> | רחוב שבט 13, מודיעין
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">FOODOS <span>Online</span></div>
+    <ul class="footer-links" aria-label="קישורי פוטר">
+      <li><a href="../foodos-herb-homepage.html">דף הבית</a></li>
+      <li><a href="category.html">מוצרים</a></li>
+      <li><a href="accessibility.html">הצהרת נגישות</a></li>
+      <li><a href="privacy.html" aria-current="page">מדיניות פרטיות</a></li>
+      <li><a href="terms.html">תנאי שימוש</a></li>
+      <li><a href="mailto:foodos.is.online@gmail.com">צור קשר</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">
+    © 2026 Foodos Online · online.foodos.co.il · קישורי שותפים עם iHerb Associates
+    <br>אתר זה כולל קישורי שותפים — אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
+  </div>
+</footer>
+
+<script src="https://negishot.co.il/cdn/widget.php?code=NGS_D51C06908CC9"></script>
+</body>
+</html>

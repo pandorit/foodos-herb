@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">קטגוריה — Foodos Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'VarelaRound';
+      src: url('Varela_Round/VarelaRound-Regular.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal:#4A9D9A; --teal-dark:#2C6360; --teal-xdark:#1A4F4D; --teal-mid:#3A8380;
+      --teal-light:#EBF6F6; --teal-xlight:#C8E8E7; --lime:#7AB648; --orange:#E85D04;
+      --bg:#FFFFFF; --bg-soft:#F8F9F8; --text:#1A1A1A; --text-mid:#3D3D3D; --text-soft:#6B7280;
+      --border:#E5E7E5; --card-bg:#F4F4F2;
+      --serif:'Playfair Display',Georgia,serif;
+      --sans:'VarelaRound','Inter',system-ui,sans-serif;
+      --radius-sm:8px; --radius:14px; --radius-lg:20px; --radius-pill:100px;
+      --shadow-sm:0 1px 4px rgba(0,0,0,.06); --shadow:0 4px 16px rgba(0,0,0,.08); --shadow-lg:0 12px 40px rgba(0,0,0,.12);
+    }
+
+    /* ── BREADCRUMB ─────────────────────────────────────────── */
+    .breadcrumb-bar {
+      background: var(--teal-light, #EBF6F6);
+      border-bottom: 1px solid rgba(74,157,154,.18);
+      padding: 8px 2rem;
+    }
+    .breadcrumb-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.78rem; color: var(--text-soft, #6B7280);
+    }
+    .breadcrumb-inner a { color: var(--teal, #4A9D9A); font-weight: 600; text-decoration: none; }
+    .breadcrumb-inner a:hover { text-decoration: underline; }
+    .breadcrumb-sep { opacity: .45; font-size: 0.72rem; }
+    .breadcrumb-current { font-weight: 600; color: var(--text-mid, #3D3D3D); }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--text); background: var(--bg); direction: rtl; line-height: 1.6; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
+    img { display: block; max-width: 100%; }
+
+    /* ── NAV ── */
+    .nav { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 200; height: 68px; display: flex; align-items: center; }
+    .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 8px rgba(74,157,154,.2); }
+    .logo-name { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.1; }
+    .logo-name small { display: block; font-family: var(--sans); font-size: 0.6rem; font-weight: 500; color: var(--teal); letter-spacing: 1px; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-cta { background: var(--teal) !important; color: white !important; font-size: 0.85rem !important; font-weight: 600 !important; padding: 9px 20px; border-radius: var(--radius-pill); }
+    .breadcrumb { font-size: 0.78rem; color: var(--text-soft); display: flex; align-items: center; gap: 6px; }
+    .breadcrumb a { color: var(--teal); }
+    .breadcrumb-sep { opacity: .4; }
+
+    /* ── CATEGORY HERO ── */
+    .cat-hero { background: var(--teal-light); border-bottom: 1px solid var(--border); padding: 3.5rem 0; position: relative; overflow: hidden; }
+    .cat-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 15% 50%, rgba(74,157,154,.18) 0%, transparent 65%);
+    }
+    .cat-hero-inner { position: relative; z-index: 1; max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2rem; }
+    .cat-hero-text { }
+    .cat-breadcrumb-wrap { margin-bottom: 1.5rem; }
+    .cat-emoji-display { font-size: 1.5rem; margin-bottom: 0.8rem; }
+    .cat-title { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: var(--text); line-height: 1.1; margin-bottom: 0.6rem; }
+    .cat-subtitle { font-size: 0.95rem; color: var(--text-soft); line-height: 1.7; max-width: 520px; }
+    .cat-stats { display: flex; gap: 2.5rem; margin-top: 1.8rem; flex-wrap: wrap; }
+    .cat-stat-num { font-family: var(--serif); font-size: 1.8rem; font-weight: 900; color: var(--teal-dark); line-height: 1; }
+    .cat-stat-label { font-size: 0.72rem; color: var(--text-soft); margin-top: 3px; }
+    .cat-hero-emoji { font-size: 8rem; opacity: .18; filter: drop-shadow(0 8px 24px rgba(74,157,154,.3)); }
+
+    /* ── FILTER BAR ── */
+    .filter-bar { background: white; border-bottom: 1px solid var(--border); padding: 1.2rem 0; position: sticky; top: 68px; z-index: 100; }
+    .filter-bar-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+    .filter-group { display: flex; align-items: center; gap: 0.5rem; }
+    .filter-group-label { font-size: 0.7rem; font-weight: 700; color: var(--text-soft); text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+    .pill { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.78rem; font-weight: 600; padding: 5px 14px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; font-family: var(--sans); }
+    .pill:hover { border-color: var(--teal); color: var(--teal); }
+    .pill.active { background: var(--teal); border-color: var(--teal); color: white; }
+    .pill.active-cert { background: var(--teal-dark); border-color: var(--teal-dark); }
+    .filter-divider { width: 1px; height: 24px; background: var(--border); flex-shrink: 0; }
+
+    /* ── PRODUCTS SECTION ── */
+    .products-section { padding: 2.5rem 0 5rem; }
+    .results-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.5rem; }
+    .results-count { font-size: 0.82rem; color: var(--text-soft); }
+    .reset-btn { background: none; border: 1.5px solid var(--border); color: var(--text-soft); font-family: var(--sans); font-size: 0.75rem; font-weight: 600; padding: 5px 14px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; }
+    .reset-btn:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* ── PRODUCT GRID ── */
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+    .product-card { background: var(--card-bg); border-radius: var(--radius-lg); overflow: hidden; transition: transform .22s, box-shadow .22s; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .card-img-wrap { background: white; height: 170px; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid rgba(0,0,0,.04); }
+    .card-emoji { font-size: 4rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,.08)); }
+    .cert-badge-abs { position: absolute; top: 10px; left: 10px; font-size: 0.58rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); color: white; text-decoration: none; transition: opacity .15s; }
+    .cert-badge-abs:hover { opacity: .8; }
+    .card-body { padding: 1rem 1.1rem 1.2rem; }
+    .card-top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px; }
+    .card-brand-link { font-size: 0.7rem; font-weight: 700; color: var(--teal-dark); transition: color .15s; }
+    .card-brand-link:hover { color: var(--teal); text-decoration: underline; }
+    .card-name-he { font-family: var(--serif); font-size: 0.95rem; font-weight: 700; line-height: 1.3; color: var(--text); margin-bottom: 2px; }
+    .card-name-en { font-size: 0.68rem; color: var(--text-soft); line-height: 1.3; margin-bottom: 7px; }
+    .card-name { font-family: var(--serif); font-size: 0.92rem; font-weight: 700; line-height: 1.35; color: var(--text); margin-bottom: 7px; }
+    .card-desc { font-size: 0.78rem; color: var(--text-soft); line-height: 1.5; margin-bottom: 0.3rem; }
+    .card-desc-extra { font-size: 0.78rem; color: var(--text-soft); line-height: 1.5; display: none; margin-bottom: 0.3rem; }
+    .card-read-more { font-size: 0.72rem; font-weight: 600; color: var(--teal); cursor: pointer; background: none; border: none; font-family: var(--sans); padding: 0; margin-bottom: 0.7rem; display: inline-block; }
+    .card-read-more:hover { text-decoration: underline; }
+    .card-actions { display: flex; flex-direction: column; gap: 6px; margin-top: 0.7rem; }
+    .card-btn { display: flex; align-items: center; justify-content: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: background .18s; }
+    .card-btn:hover { background: var(--teal-mid); }
+    .card-btn-outline { display: flex; align-items: center; justify-content: center; gap: 5px; background: transparent; color: var(--teal-dark); border: 1.5px solid var(--teal-dark); font-size: 0.75rem; font-weight: 600; padding: 7px 16px; border-radius: var(--radius-pill); transition: all .18s; }
+    .card-btn-outline:hover { background: var(--teal-light); }
+    .card-btn-size { flex: 0 1 auto; font-size: 0.74rem; padding: 7px 13px; }
+
+    .skeleton-card { background: var(--card-bg); border-radius: var(--radius-lg); height: 270px; animation: skel 1.4s ease-in-out infinite; }
+    @keyframes skel { 0%,100%{opacity:1} 50%{opacity:.4} }
+    .load-more-wrap { display: none; justify-content: center; margin-top: 2.2rem; }
+    .load-more-btn { background: var(--bg); border: 2px solid var(--border); color: var(--text-mid); font-family: var(--sans); font-size: 0.88rem; font-weight: 600; padding: 12px 32px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; }
+    .load-more-btn:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* ── SUB-SECTION DIVIDER ── */
+    .subsection-header { margin: 2.5rem 0 1.2rem; display: flex; align-items: center; gap: 1rem; }
+    .subsection-header::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .subsection-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .subsection-count { font-size: 0.75rem; color: var(--text-soft); background: var(--teal-light); padding: 3px 10px; border-radius: var(--radius-pill); white-space: nowrap; }
+
+    /* ── OTHER CATEGORIES ── */
+    .other-cats-section { background: var(--bg-soft); border-top: 1px solid var(--border); padding: 2.5rem 0; }
+    .other-cats-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 1.2rem; }
+    .other-cats-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .other-cat-pill { display: inline-flex; align-items: center; gap: 5px; background: white; border: 1.5px solid var(--border); color: var(--text-mid); font-size: 0.82rem; font-weight: 600; padding: 7px 16px; border-radius: var(--radius-pill); transition: all .18s; }
+    .other-cat-pill:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--teal-dark); padding: 2.5rem 0 1.5rem; }
+    .footer-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: white; }
+    .footer-brand span { background: linear-gradient(90deg,#4A9D9A,#A8D44B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,.6); }
+    .footer-links a:hover { color: white; }
+    .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,.35); text-align: center; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.08); }
+
+    @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2,1fr); } .cat-hero-inner { grid-template-columns: 1fr; } .cat-hero-emoji { display: none; } }
+    @media (max-width: 640px) { .product-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .cat-stats { gap: 1.5rem; } }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../foodos-herb-homepage.html" class="logo">
+      <img src="../FOODOS_online2_LOGO.png" alt="FOODOS Online" class="logo-img">
+      <div class="logo-name">
+        FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
+        <small>מוצרים כשרים איכותיים</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../foodos-herb-homepage.html#products">מוצרים</a></li>
+      <li><a href="../foodos-herb-homepage.html#categories">קטגוריות</a></li>
+      <li><a href="certs.html">הכשרויות</a></li>
+      <li><a href="../foodos-herb-homepage.html#values">על הפרויקט</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+<!-- ── BREADCRUMB ───────────────────────────────────────── -->
+<div class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="../foodos-herb-homepage.html">Foodos Online</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Foodos-Herb</span>
+    <span class="breadcrumb-sep" id="bc-sep2" style="display:none">›</span>
+    <span class="breadcrumb-current" id="bc-page" style="display:none">קטגוריה</span>
+  </div>
+</div>
+
+
+<!-- ── HERO ── -->
+<section class="cat-hero">
+  <div class="cat-hero-inner">
+    <div class="cat-hero-text">
+      <div class="cat-breadcrumb-wrap">
+        <div class="breadcrumb">
+          <a href="../foodos-herb-homepage.html">בית</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="../foodos-herb-homepage.html#categories">קטגוריות</a>
+          <span class="breadcrumb-sep">›</span>
+          <span id="bc-cat">...</span>
+        </div>
+      </div>
+      <div class="cat-emoji-display" id="hero-emoji">📦</div>
+      <h1 class="cat-title" id="cat-title">טוען...</h1>
+      <p class="cat-subtitle" id="cat-subtitle">מוצרים כשרים מאומתים בקטגוריה זו, זמינים ב-iHerb עם משלוח ישיר לישראל.</p>
+      <div class="cat-stats">
+        <div><div class="cat-stat-num" id="stat-products">—</div><div class="cat-stat-label">מוצרים</div></div>
+        <div><div class="cat-stat-num" id="stat-brands">—</div><div class="cat-stat-label">מותגים</div></div>
+        <div><div class="cat-stat-num" id="stat-certs">—</div><div class="cat-stat-label">הכשרויות</div></div>
+      </div>
+    </div>
+    <div class="cat-hero-emoji" id="hero-emoji-bg">📦</div>
+  </div>
+</section>
+
+<!-- ── FILTER BAR ── -->
+<div class="filter-bar">
+  <div class="filter-bar-inner">
+    <div class="filter-group">
+      <span class="filter-group-label">כשרות:</span>
+      <div id="cert-pills-wrap"></div>
+    </div>
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-group-label">מותג:</span>
+      <div id="brand-pills-wrap"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PRODUCTS ── -->
+<section class="products-section">
+  <div class="container">
+    <div class="results-meta">
+      <span class="results-count" id="results-count">טוען...</span>
+      <button class="reset-btn" id="reset-btn" onclick="resetFilters()" style="display:none">נקה פילטרים ✕</button>
+    </div>
+    <div class="product-grid" id="product-grid">
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+    </div>
+    <div class="load-more-wrap" id="load-more-wrap">
+      <button class="load-more-btn" onclick="loadMore()">הצג עוד מוצרים ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── OTHER CATEGORIES ── -->
+<section class="other-cats-section">
+  <div class="container">
+    <div class="other-cats-title">קטגוריות נוספות</div>
+    <div class="other-cats-row" id="other-cats"></div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">FOODOS <span>Online</span></div>
+    <ul class="footer-links" aria-label="קישורי פוטר">
+      <li><a href="../foodos-herb-homepage.html#products">כל המוצרים</a></li>
+      <li><a href="../foodos-herb-homepage.html#categories">קטגוריות</a></li>
+      <li><a href="../foodos-herb-homepage.html#values">על הפרויקט</a></li>
+      <li><a href="accessibility.html">הצהרת נגישות</a></li>
+      <li><a href="privacy.html">מדיניות פרטיות</a></li>
+      <li><a href="terms.html">תנאי שימוש</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">
+    © 2026 Foodos Online · online.foodos.co.il · קישורי שותפים עם iHerb Associates
+    <br>אתר זה כולל קישורי שותפים — אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
+  </div>
+</footer>
+
+<script>
+  function toggleDesc(uid, btn) {
+    const extra = document.getElementById(uid + '-extra');
+    if (!extra) return;
+    const open = extra.style.display === 'block';
+    extra.style.display = open ? 'none' : 'block';
+    btn.textContent = open ? 'קרא עוד ↓' : 'פחות ↑';
+  }
+
+  const catEmoji = {
+    'תבלינים':'🧂','שמנים':'🫒','קמחים':'🌾','שוקולד':'🍫','תה':'🍵',
+    'ממרחים':'🍯','פסטה':'🍝','קטניות':'🫘','חטיפים':'🍿',
+    'דגנים':'🌾','ריבות':'🍓','אגוזים וזרעים':'🥜','ממתקים':'🍬',
+    'קפה':'☕','תיבול':'🌶️','אסייתי':'🍜','קונדיטוריה':'🎂',
+    'כלי מטבח':'🔪','שתייה':'🧉','מרקים':'🍲','לחמים':'🍞',
+    'אפייה':'🧁','ביסקוויטים':'🍪','בריאות':'💚',
+    'ממתיקים ומוצרים ללא סוכר':'🍯',
+    'קרמרים ותחליפי חלב':'☕'
+  };
+  const catBg = {
+    'תבלינים':'linear-gradient(135deg,#F4E4C8,#E8C98A)',
+    'שמנים':'linear-gradient(135deg,#C8DFB8,#9EC47E)',
+    'קמחים':'linear-gradient(135deg,#F0E4D0,#D4B894)',
+    'שוקולד':'linear-gradient(135deg,#D4B0A0,#A06848)',
+    'תה':'linear-gradient(135deg,#C8E8C8,#7EC47E)',
+    'חטיפים':'linear-gradient(135deg,#F4E0D0,#E8C0A0)',
+    'קטניות':'linear-gradient(135deg,#D8ECF4,#A8CCE0)'
+  };
+  const certColors = {
+    'OU':'#1a3c8c','OK':'#2c7a6e','KOF-K':'#5c4a9a','Star-K':'#8a3c1a',
+    'KSA':'#2c6360','EarthKosher':'#3a6e1a','COR':'#1a5c3c','CRC':'#3c1a5c',
+    'Kehilla':'#7a5c2c','KA':'#1a3c5c','Kosher Check':'#3c1a6e',
+    'Kosher Scroll K':'#1a5c5c','כלי מטבח':'#555'
+  };
+
+  // תיאורים מיוחדים לקטגוריות
+  const catDescriptions = {
+    'קרמרים ותחליפי חלב': 'קרמר הוא תוסף לקפה שמחליף שמנת או חלב. מוסיפים אותו לקפה כדי לרכך את הטעם, להוסיף מתיקות ועשירות. הקרמרים כאן הם פרווה לחלוטין ומתאימים גם לארוחות בשריות.',
+    'ממתיקים ומוצרים ללא סוכר': 'מוצרים ממותקים באופן טבעי ללא סוכר, המתאימים לתפריט קטו, לסוכרתיים ולמי שמפחית סוכר. הקטגוריה כוללת ממתיקים טבעיים (סוכר קוקוס, מונק פרוט, אלולוז) לצד מוצרי Walden Farms ללא קלוריות.',
+  };
+
+  // קטגוריות עם פיצול פנימי: מפתח = שם הקטגוריה, ערך = פונקציית מיון לשני חלקים
+  const SPLIT_CATS = {
+    'ממתיקים ומוצרים ללא סוכר': {
+      groupA: { label: 'ממתיקים', desc: 'סוכרים טבעיים, תחליפי סוכר ומממתיקים ללא קלוריות', fn: p => p.brand !== 'Walden Farms' },
+      groupB: { label: 'מוצרים ללא סוכר', desc: 'ריבות, רטבים, סירופים וממרחים בלי טיפת סוכר', fn: p => p.brand === 'Walden Farms' }
+    }
+  };
+
+  let catProducts = [];
+  let filteredProducts = [];
+  let activeCert  = 'הכל';
+  let activeBrand = 'הכל';
+  let currentPage = 0;
+  const PAGE_SIZE = 12;
+  let splitMode = false;
+
+  async function init() {
+    const params  = new URLSearchParams(location.search);
+    const catName = params.get('cat') || '';
+
+    if (!catName) {
+      
+      // Update breadcrumb
+      const bcPage = document.getElementById('bc-page');
+      const bcSep2 = document.getElementById('bc-sep2');
+      if (bcPage && catName) {
+        bcPage.textContent = catName;
+        bcPage.style.display = '';
+        if (bcSep2) bcSep2.style.display = '';
+      }
+
+      document.getElementById('cat-title').textContent = 'קטגוריה לא נמצאה';
+      return;
+    }
+
+    document.title = `${catName} — Foodos Online`;
+    document.getElementById('bc-cat').textContent = catName;
+    
+      // Update breadcrumb
+      const bcPage = document.getElementById('bc-page');
+      const bcSep2 = document.getElementById('bc-sep2');
+      if (bcPage && catName) {
+        bcPage.textContent = catName;
+        bcPage.style.display = '';
+        if (bcSep2) bcSep2.style.display = '';
+      }
+
+      document.getElementById('cat-title').textContent = catName;
+
+    // תיאור מיוחד לקטגוריה
+    if (catDescriptions[catName]) {
+      document.getElementById('cat-subtitle').textContent = catDescriptions[catName];
+    }
+
+    const emoji = catEmoji[catName] || '📦';
+    document.getElementById('hero-emoji').textContent = emoji;
+    document.getElementById('hero-emoji-bg').textContent = emoji;
+
+    // Style hero based on category
+    if (catBg[catName]) {
+      document.querySelector('.cat-hero').style.background = catBg[catName];
+    }
+
+    // Load products
+    if (location.protocol === 'file:') throw new Error('file-protocol');
+    const res = await fetch('data/products_explained_human_descriptions.json');
+    const allProducts = (await res.json()).filter(p => !p.suspended);
+
+    catProducts = allProducts.filter(p => Array.isArray(p.cat) ? p.cat.includes(catName) : p.cat === catName);
+    splitMode = !!SPLIT_CATS[catName];
+
+    // Stats
+    const brandSet = new Set(catProducts.map(p => p.brand).filter(Boolean));
+    const certSet  = new Set(catProducts.map(p => p.cert).filter(Boolean));
+    document.getElementById('stat-products').textContent = catProducts.length;
+    document.getElementById('stat-brands').textContent   = brandSet.size;
+    document.getElementById('stat-certs').textContent    = certSet.size;
+
+    // Cert filter pills
+    const certs = ['הכל', ...[...certSet].sort((a,b) => a.localeCompare(b))];
+    document.getElementById('cert-pills-wrap').innerHTML = certs.map(c =>
+      `<button class="pill${c===activeCert?' active':''}" onclick="setCert(this,'${c.replace(/'/g,"\\'")}')">${c}</button>`
+    ).join('');
+
+    // Brand filter pills
+    const brands = ['הכל', ...[...brandSet].sort((a,b) => a.localeCompare(b,'he'))];
+    document.getElementById('brand-pills-wrap').innerHTML = brands.map(b =>
+      `<button class="pill${b===activeBrand?' active':''}" onclick="setBrand(this,'${b.replace(/'/g,"\\'")}')">${b}</button>`
+    ).join('');
+
+    // Other categories
+    const allCats = [...new Set(allProducts.flatMap(p => Array.isArray(p.cat) ? p.cat : [p.cat]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'he'));
+    document.getElementById('other-cats').innerHTML = allCats
+      .filter(c => c !== catName)
+      .map(c => `<a href="category.html?cat=${encodeURIComponent(c)}" class="other-cat-pill">${catEmoji[c]||''} ${c}</a>`)
+      .join('');
+
+    applyFilter();
+  }
+
+  function setCert(el, cert) {
+    activeCert = cert;
+    document.querySelectorAll('#cert-pills-wrap .pill').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    applyFilter();
+  }
+
+  function setBrand(el, brand) {
+    activeBrand = brand;
+    document.querySelectorAll('#brand-pills-wrap .pill').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    applyFilter();
+  }
+
+  function applyFilter() {
+    filteredProducts = catProducts.filter(p => {
+      if (activeCert  !== 'הכל' && p.cert  !== activeCert)  return false;
+      if (activeBrand !== 'הכל' && p.brand !== activeBrand) return false;
+      return true;
+    });
+    currentPage = 0;
+    renderProducts(true);
+    const hasF = activeCert !== 'הכל' || activeBrand !== 'הכל';
+    document.getElementById('reset-btn').style.display = hasF ? 'inline-block' : 'none';
+  }
+
+  function resetFilters() {
+    activeCert = 'הכל'; activeBrand = 'הכל';
+    document.querySelectorAll('#cert-pills-wrap .pill, #brand-pills-wrap .pill').forEach(b => {
+      b.classList.remove('active');
+      if (b.textContent.trim() === 'הכל') b.classList.add('active');
+    });
+    applyFilter();
+  }
+
+  function renderProducts(reset) {
+    const grid = document.getElementById('product-grid');
+    if (reset) grid.innerHTML = '';
+    document.getElementById('results-count').textContent = `${filteredProducts.length} מוצרים`;
+
+    if (filteredProducts.length === 0) {
+      grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-soft)">
+        <div style="font-size:2.5rem;margin-bottom:.6rem">🔍</div>
+        <strong>לא נמצאו מוצרים</strong><br><span style="font-size:.85rem">נסה לשנות את הפילטרים</span>
+      </div>`;
+      document.getElementById('load-more-wrap').style.display = 'none';
+      return;
+    }
+
+    const catName = new URLSearchParams(location.search).get('cat') || '';
+    const split = SPLIT_CATS[catName];
+
+    if (split && reset) {
+      // מצב פיצול: מציג שני חלקים עם כותרת ביניהם
+      const groupA = filteredProducts.filter(split.groupA.fn);
+      const groupB = filteredProducts.filter(split.groupB.fn);
+
+      grid.innerHTML = '';
+
+      if (groupA.length) {
+        grid.insertAdjacentHTML('beforeend', `
+          <div class="subsection-header" style="grid-column:1/-1">
+            <span class="subsection-title">🍯 ${split.groupA.label}</span>
+            <span class="subsection-count">${groupA.length} מוצרים</span>
+          </div>`);
+        groupA.forEach(p => {
+          const div = document.createElement('div');
+          div.className = 'product-card';
+          div.innerHTML = buildCard(p);
+          grid.appendChild(div);
+        });
+      }
+
+      if (groupB.length) {
+        grid.insertAdjacentHTML('beforeend', `
+          <div class="subsection-header" style="grid-column:1/-1;margin-top:${groupA.length ? '1rem' : '0'}">
+            <span class="subsection-title">🚫🍬 ${split.groupB.label}</span>
+            <span class="subsection-count">${groupB.length} מוצרים</span>
+          </div>`);
+        groupB.forEach(p => {
+          const div = document.createElement('div');
+          div.className = 'product-card';
+          div.innerHTML = buildCard(p);
+          grid.appendChild(div);
+        });
+      }
+
+      document.getElementById('load-more-wrap').style.display = 'none';
+      return;
+    }
+
+    // מצב רגיל עם pagination
+    const start = currentPage * PAGE_SIZE;
+    filteredProducts.slice(start, start + PAGE_SIZE).forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'product-card';
+      div.innerHTML = buildCard(p);
+      grid.appendChild(div);
+    });
+    currentPage++;
+    document.getElementById('load-more-wrap').style.display =
+      currentPage * PAGE_SIZE < filteredProducts.length ? 'flex' : 'none';
+  }
+
+  function loadMore() { renderProducts(false); }
+
+  function buildCard(p) {
+    const emoji = catEmoji[Array.isArray(p.cat) ? p.cat[0] : p.cat] || '📦';
+    const cc    = certColors[p.cert] || '#2c6360';
+    const parts = (p.name||'').split(',');
+    const shortName = parts.length > 1 ? parts.slice(1, parts.length > 2 ? -1 : undefined).join(',').trim() : p.name;
+    return `
+      <div class="card-img-wrap">
+        <span class="card-emoji">${emoji}</span>
+        <a href="cert.html?c=${encodeURIComponent(p.cert||'')}" class="cert-badge-abs" style="background:${cc}">${p.cert}</a>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row">
+          <a href="brand.html?b=${encodeURIComponent(p.brand||'')}" class="card-brand-link">${p.brand||''}</a>
+        </div>
+        ${p.nameHe ? `<div class="card-name-he">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>` : `<div class="card-name" dir="auto">${shortName}</div>`}
+        ${(() => {
+          const raw = (p.desc||'').replace(/\s*—\s*/g, ', ');
+          const sentences = raw.match(/[^.!?]+[.!?]+/g) || [raw];
+          const first2 = sentences.slice(0,2).join(' ').trim();
+          const rest = sentences.slice(2).join(' ').trim();
+          const uid = 'desc-' + p.id;
+          if (rest) {
+            return `<div class="card-desc">${first2}</div>
+                    <div class="card-desc-extra" id="${uid}-extra">${rest}</div>
+                    <button class="card-read-more" onclick="toggleDesc('${uid}',this)">קרא עוד ↓</button>`;
+          }
+          return `<div class="card-desc">${raw}</div>`;
+        })()}
+        <div class="card-actions">
+          <a href="product.html?id=${p.id}" class="card-btn-outline">פרטים נוספים ←</a>
+          ${p.sizes && p.sizes.length > 1
+            ? p.sizes.map(s => `<a href="${s.url}" target="_blank" rel="noopener noreferrer" class="card-btn card-btn-size">${s.label} ←</a>`).join('')
+            : `<a href="${p.url||'#'}" target="_blank" rel="noopener noreferrer" class="card-btn">לחנות iHerb ←</a>`}
+        </div>
+      </div>`;
+  }
+
+  init().catch(e => {
+    console.error(e);
+    const isFile = location.protocol === 'file:';
+    document.getElementById('product-grid').innerHTML = `
+      <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-soft)">
+        <div style="font-size:2rem;margin-bottom:1rem">⚠️</div>
+        ${isFile
+          ? `<strong>הקובץ נפתח ישירות — יש לפתוח דרך השרת המקומי</strong><br><br>
+             <code style="background:#f4f4f2;padding:6px 14px;border-radius:8px;font-size:.85rem">http://localhost:7824/foodos-herb-homepage.html</code><br><br>
+             <span style="font-size:.82rem">הפעל את השרת מ-Claude Code, ואז פתח את הקישור הזה בדפדפן.</span>`
+          : `<strong>שגיאה בטעינת הנתונים</strong><br><span style="font-size:.82rem">${e.message}</span>`
+        }
+      </div>`;
+    document.getElementById('results-count').textContent = '';
+  });
+</script>
+<script src="https://negishot.co.il/cdn/widget.php?code=NGS_D51C06908CC9"></script>
+</body>
+</html>
