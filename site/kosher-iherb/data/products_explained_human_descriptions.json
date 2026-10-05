@@ -5868,14 +5868,16 @@
         "url": "https://il.iherb.com/pr/mike-s-hot-honey-infused-with-chilies-12-oz-340-g/83676",
         "available": false,
         "cert": "KOF-K",
-        "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/83676/83676.jpg"
+        "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/83676/83676.jpg",
+        "desc": "המותג המקורי. דבש פרחי עם צ'ילי טבעי, טעם מעושן קל. 340 גרם."
       },
       {
         "label": "Nate's 454g — OU",
         "url": "https://il.iherb.com/pr/nate-s-honey-hot-honey-infused-with-chili-pepper-16-oz-454-g/162072",
         "available": false,
         "cert": "OU",
-        "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/162072/162072.jpg"
+        "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/162072/162072.jpg",
+        "desc": "גרסה גדולה יותר עם כשרות OU. דבש רב-פרחוני עם פלפל צ'ילי. 454 גרם."
       }
     ]
   },

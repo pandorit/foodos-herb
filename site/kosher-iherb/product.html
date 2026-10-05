@@ -633,13 +633,31 @@
 
       if (product.sizes && product.sizes.length > 0) {
         product.sizes.forEach(function(size) {
+          const wrap = document.createElement('div');
+          wrap.style.cssText = 'margin-bottom:0.5rem';
+
           const a = document.createElement('a');
-          a.className = 'btn-primary';
-          a.href = size.affiliateUrl || size.url;
-          a.target = '_blank';
-          a.rel = 'noopener noreferrer sponsored';
-          a.textContent = 'לרכישה ב-iHerb' + (size.label ? ' (' + size.label + ')' : '') + ' ←';
-          btnGroup.appendChild(a);
+          const isAvailable = size.available !== false;
+          if (isAvailable) {
+            a.className = 'btn-primary';
+            a.href = size.affiliateUrl || size.url;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer sponsored';
+            a.textContent = 'לרכישה ב-iHerb (' + size.label + ') ←';
+          } else {
+            a.className = 'btn-secondary';
+            a.style.cssText = 'opacity:.45;cursor:default;pointer-events:none';
+            a.textContent = size.label + ' — לא זמין כרגע';
+          }
+          wrap.appendChild(a);
+
+          if (size.desc) {
+            const d = document.createElement('p');
+            d.style.cssText = 'font-size:.78rem;color:#6B7280;margin:4px 0 0;line-height:1.4';
+            d.textContent = size.desc;
+            wrap.appendChild(d);
+          }
+          btnGroup.appendChild(wrap);
         });
       } else if (product.affiliateUrl || product.url) {
         const a = document.createElement('a');
