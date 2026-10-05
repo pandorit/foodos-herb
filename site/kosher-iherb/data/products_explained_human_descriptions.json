@@ -1603,7 +1603,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/75456/75456.jpg",
-    "available": false
+    "available": false,
+    "suspended": true
   },
   {
     "id": 164,
@@ -4803,7 +4804,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/109455/109455.jpg",
-    "available": false
+    "available": false,
+    "suspended": true
   },
   {
     "id": 396,
@@ -4888,7 +4890,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/119213/119213.jpg",
-    "available": false
+    "available": false,
+    "suspended": true
   },
   {
     "id": 400,
@@ -4908,7 +4911,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/119214/119214.jpg",
-    "available": false
+    "available": false,
+    "suspended": true
   },
   {
     "id": 401,
@@ -4928,7 +4932,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/119212/119212.jpg",
-    "available": false
+    "available": false,
+    "suspended": true
   },
   {
     "id": 402,
@@ -4948,7 +4953,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/119215/119215.jpg",
-    "available": false
+    "available": false,
+    "suspended": true
   },
   {
     "id": 403,
@@ -4968,7 +4974,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/119216/119216.jpg",
-    "available": false
+    "available": false,
+    "suspended": true
   },
   {
     "id": 404,
@@ -4988,7 +4995,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/119217/119217.jpg",
-    "available": false
+    "available": false,
+    "suspended": true
   },
   {
     "id": 405,
@@ -6295,7 +6303,8 @@
     "certVerified": true,
     "_descStatus": "approved",
     "_certVerified": true,
-    "available": false
+    "available": false,
+    "suspended": true
   },
   {
     "id": 473,
