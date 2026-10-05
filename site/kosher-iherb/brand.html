@@ -113,13 +113,15 @@
     .card-unavailable .card-img-wrap { filter: grayscale(55%); opacity: .8; }
     .badge-unavailable { position: absolute; bottom: 8px; right: 8px; background: #9CA3AF; color: white; font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); }
 
-    /* ── BRANDS NAV BAR ── */
-    .brands-nav-bar { background: var(--card-bg); border-bottom: 1px solid var(--border); padding: 0.6rem 0; }
-    .brands-nav-scroll { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; flex-wrap: wrap; }
-    .brands-nav-scroll::-webkit-scrollbar { display: none; }
-    .brand-nav-pill { display: inline-block; padding: 5px 14px; border-radius: 100px; font-size: 0.75rem; font-weight: 600; background: white; border: 1.5px solid var(--border); color: var(--text-mid); white-space: nowrap; transition: all .15s; text-decoration: none; }
-    .brand-nav-pill:hover { border-color: var(--teal); color: var(--teal); }
-    .brand-nav-pill.active { background: var(--teal-dark); color: white; border-color: var(--teal-dark); }
+    /* ── BRANDS DROPDOWN ── */
+    .nav-has-dd { position: relative; }
+    .nav-dd-trigger { cursor: pointer; }
+    .nav-dropdown-panel { display: none; position: absolute; top: calc(100% + 12px); right: 0; background: white; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 8px 32px rgba(0,0,0,.12); min-width: 260px; max-height: 420px; overflow-y: auto; z-index: 300; padding: 10px; }
+    .nav-dropdown-panel.open { display: block; }
+    .brands-dd-list { display: flex; flex-direction: column; gap: 2px; }
+    .brand-dd-item { display: block; padding: 7px 12px; border-radius: 8px; font-size: 0.82rem; font-weight: 500; color: var(--text-mid); text-decoration: none; transition: background .12s; }
+    .brand-dd-item:hover { background: var(--teal-light); color: var(--teal-dark); }
+    .brand-dd-item.active { background: var(--teal-dark); color: white; font-weight: 700; }
 
     /* skeleton */
     .skeleton-card { background: var(--card-bg); border-radius: var(--radius-lg); height: 270px; animation: skel 1.4s ease-in-out infinite; }
@@ -155,9 +157,14 @@
     <ul class="nav-links">
       <li><a href="../foodos-herb-homepage.html#products">מוצרים</a></li>
       <li><a href="../foodos-herb-homepage.html#categories">קטגוריות</a></li>
+      <li class="nav-has-dd" id="brands-dd-wrap">
+        <a href="#" class="nav-dd-trigger" onclick="toggleBrandsDD(event)">מותגים ▾</a>
+        <div class="nav-dropdown-panel" id="brands-dd-panel">
+          <div class="brands-dd-list" id="brands-dd-list"></div>
+        </div>
+      </li>
       <li><a href="certs.html">הכשרויות</a></li>
       <li><a href="../foodos-herb-homepage.html#values">על הפרויקט</a></li>
-      
     </ul>
   </div>
 </nav>
@@ -205,13 +212,6 @@
 <div class="desc-strip" id="desc-strip" style="display:none">
   <div class="container">
     <p class="desc-text" id="brand-desc-full"></p>
-  </div>
-</div>
-
-<!-- ── ALL BRANDS NAV ── -->
-<div class="brands-nav-bar" id="brands-nav-bar" style="display:none">
-  <div class="container">
-    <div class="brands-nav-scroll" id="brands-nav-scroll"></div>
   </div>
 </div>
 
@@ -313,16 +313,11 @@
       document.getElementById('desc-strip').style.display = 'block';
     }
 
-    // Build brands nav bar
+    // Build brands dropdown list
     const allBrandNames = [...new Set(allProducts.map(p => p.brand).filter(Boolean))].sort((a,b) => a.localeCompare(b,'en'));
-    const brandsNav = document.getElementById('brands-nav-scroll');
-    brandsNav.innerHTML = allBrandNames.map(b =>
-      `<a href="brand.html?b=${encodeURIComponent(b)}" class="brand-nav-pill${b === brandName ? ' active' : ''}">${b}</a>`
+    document.getElementById('brands-dd-list').innerHTML = allBrandNames.map(b =>
+      `<a href="brand.html?b=${encodeURIComponent(b)}" class="brand-dd-item${b === brandName ? ' active' : ''}">${b}</a>`
     ).join('');
-    document.getElementById('brands-nav-bar').style.display = 'block';
-    // Scroll active pill into view
-    const activePill = brandsNav.querySelector('.active');
-    if (activePill) activePill.scrollIntoView({ inline: 'center', block: 'nearest' });
 
     // Filter products for this brand
     const products = allProducts.filter(p => p.brand === brandName);
@@ -377,6 +372,17 @@
         </div>`;
     }).join('');
   }
+
+  // ── BRANDS DROPDOWN ──
+  function toggleBrandsDD(e) {
+    e.preventDefault();
+    document.getElementById('brands-dd-panel').classList.toggle('open');
+  }
+  document.addEventListener('click', e => {
+    if (!document.getElementById('brands-dd-wrap')?.contains(e.target)) {
+      document.getElementById('brands-dd-panel')?.classList.remove('open');
+    }
+  });
 
   init().catch(e => {
     console.error(e);
