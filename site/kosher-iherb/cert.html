@@ -296,24 +296,24 @@
     'קפה':'☕','תיבול':'🌶️','אסייתי':'🍜','קונדיטוריה':'🎂',
     'כלי מטבח':'🔪','שתייה':'🧉','בריאות':'💚'
   };
-  // cert logo images — folder: "Reliable Kosher Marks/"
+  // cert logo images — folder: images/certs/
   const certImages = {
-    'OU':           'Reliable Kosher Marks/OU-Orthodox Union.svg.png',
-    'OK':           'Reliable Kosher Marks/OK-Organized Kashrut.png',
-    'KOF-K':        'Reliable Kosher Marks/KOF-K Kosher Certification.png',
-    'Star-K':       'Reliable Kosher Marks/Star-K-Orthodox Jewish Council of Baltimore.jpg',
-    'KSA':          'Reliable Kosher Marks/KSA -Kosher Supervision of America.png',
-    'COR':          'Reliable Kosher Marks/COR -Kashruth Council of Canada.png',
-    'CRC':          'Reliable Kosher Marks/CRC- Chicago Rabbinical Council.png',
-    'EarthKosher':  'Reliable Kosher Marks/EarthKosher- Kosher Certification Agency COLORADO.jpg',
-    'Kehilla':      'Reliable Kosher Marks/Kehilla Kosher Los Angeles - merge with OK.png',
-    'KA':           'Reliable Kosher Marks/Kosher Authority of Australia and NZ.jpg',
-    'Kosher Scroll K': 'Reliable Kosher Marks/kosher Scroll K.jpg',
+    'OU':           'images/certs/OU-Orthodox Union.svg.png',
+    'OK':           'images/certs/OK-Organized Kashrut.png',
+    'KOF-K':        'images/certs/KOF-K Kosher Certification.png',
+    'Star-K':       'images/certs/Star-K-Orthodox Jewish Council of Baltimore.jpg',
+    'KSA':          'images/certs/KSA -Kosher Supervision of America.png',
+    'COR':          'images/certs/COR -Kashruth Council of Canada.png',
+    'CRC':          'images/certs/CRC- Chicago Rabbinical Council.png',
+    'EarthKosher':  'images/certs/EarthKosher- Kosher Certification Agency COLORADO.jpg',
+    'Kehilla':      'images/certs/Kehilla Kosher Los Angeles - merge with OK.png',
+    'KA':           'images/certs/Kosher Authority of Australia and NZ.jpg',
+    'Kosher Scroll K': 'images/certs/kosher Scroll K.jpg',
   };
   const certFallbackText = {
     'OU':'OU','OK':'OK','KOF-K':'K','Star-K':'★K','KSA':'KSA',
     'EarthKosher':'🌍','COR':'COR','CRC':'cRc','Kehilla':'K',
-    'KA':'KA','Kosher Check':'✓','Kosher Scroll K':'K','כלי מטבח':'🔪'
+    'KA':'KA','Kosher Check':'✓','Kosher Scroll K':'K','כלי מטבח':'🔪','KCK':'KCK'
   };
 
   let certProducts = [];
@@ -411,7 +411,7 @@
 
     // Stats
     const brandSet = new Set(certProducts.map(p => p.brand).filter(Boolean));
-    const catSet   = new Set(certProducts.map(p => p.cat).filter(Boolean));
+    const catSet   = new Set(certProducts.flatMap(p => Array.isArray(p.cat) ? p.cat : [p.cat]).filter(Boolean));
     document.getElementById('stat-products').textContent = certProducts.length;
     document.getElementById('stat-brands').textContent   = brandSet.size;
     document.getElementById('stat-cats').textContent     = catSet.size;

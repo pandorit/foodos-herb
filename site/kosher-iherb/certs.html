@@ -378,20 +378,21 @@
 
 <script>
   const certImages = {
-    'OU':           '../Reliable Kosher Marks/OU-Orthodox Union.svg.png',
-    'OK':           '../Reliable Kosher Marks/OK-Organized Kashrut.png',
-    'KOF-K':        '../Reliable Kosher Marks/KOF-K Kosher Certification.png',
-    'Star-K':       '../Reliable Kosher Marks/Star-K-Orthodox Jewish Council of Baltimore.jpg',
-    'KSA':          '../Reliable Kosher Marks/KSA -Kosher Supervision of America.png',
-    'COR':          '../Reliable Kosher Marks/COR -Kashruth Council of Canada.png',
-    'CRC':          '../Reliable Kosher Marks/CRC- Chicago Rabbinical Council.png',
-    'EarthKosher':  '../Reliable Kosher Marks/EarthKosher- Kosher Certification Agency COLORADO.jpg',
-    'Kehilla':      '../Reliable Kosher Marks/Kehilla Kosher Los Angeles - merge with OK.png',
-    'Kosher Scroll K': '../Reliable Kosher Marks/kosher Scroll K.jpg',
+    'OU':           'images/certs/OU-Orthodox Union.svg.png',
+    'OK':           'images/certs/OK-Organized Kashrut.png',
+    'KOF-K':        'images/certs/KOF-K Kosher Certification.png',
+    'Star-K':       'images/certs/Star-K-Orthodox Jewish Council of Baltimore.jpg',
+    'KSA':          'images/certs/KSA -Kosher Supervision of America.png',
+    'COR':          'images/certs/COR -Kashruth Council of Canada.png',
+    'CRC':          'images/certs/CRC- Chicago Rabbinical Council.png',
+    'EarthKosher':  'images/certs/EarthKosher- Kosher Certification Agency COLORADO.jpg',
+    'Kehilla':      'images/certs/Kehilla Kosher Los Angeles - merge with OK.png',
+    'Kosher Scroll K': 'images/certs/kosher Scroll K.jpg',
   };
   const certFallback = {
     'OU':'OU','OK':'OK','KOF-K':'K','Star-K':'★K','KSA':'KSA','EarthKosher':'🌍',
-    'COR':'COR','CRC':'cRc','Kehilla':'K','KA':'KA','Kosher Check':'✓','Kosher Scroll K':'K'
+    'COR':'COR','CRC':'cRc','Kehilla':'K','KA':'KA','Kosher Check':'✓','Kosher Scroll K':'K',
+    'KCK':'KCK'
   };
   const certOrg = {
     'OU':           'Orthodox Union, ניו יורק',
@@ -406,6 +407,7 @@
     'Kosher Check': 'Orthodox Rabbinical Council of BC, ונקובר',
     'Kosher Scroll K': 'Vaad Hakashrus of Denver, קולורדו',
     'KA':           'Kosher Australia, אוסטרליה',
+    'KCK':          'Vaad HaKashruth of Kansas City, קנזס סיטי',
   };
 
   async function init() {
