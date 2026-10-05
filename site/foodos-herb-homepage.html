@@ -894,7 +894,7 @@
 <section class="search-engine-section section-pad" id="products">
   <div class="container">
     <div class="search-hero-wrap">
-      <h2 class="search-hero-title">חפש מבין <em>180 מוצרים</em> כשרים מאומתים</h2>
+      <h2 class="search-hero-title">חפש מבין <em id="search-hero-count">276 מוצרים</em> כשרים מאומתים</h2>
       <p class="search-hero-sub">כל המוצרים נבדקו ידנית — כשרות מאומתת לפי רשימת ההכשרויות המאושרות</p>
     </div>
 
@@ -1203,6 +1203,8 @@
     if (statCats) statCats.textContent = cats;
     const statCerts = document.getElementById('stat-certs');
     if (statCerts) statCerts.textContent = certs;
+    const heroCount = document.getElementById('search-hero-count');
+    if (heroCount) heroCount.textContent = total + ' מוצרים';
   }
 
   async function initProducts() {
