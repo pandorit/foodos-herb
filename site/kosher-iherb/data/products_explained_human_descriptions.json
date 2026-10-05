@@ -311,7 +311,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/sog/sog18608/d/42.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimply-organic-onion-powder-3-oz-85-g%2F31435%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 25.0,
+    "priceILS": 25,
     "available": true
   },
   {
@@ -2774,7 +2774,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/shk/shk00071/d/12.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsahale-snacks-glazed-mix-maple-pecans-4-oz-113-g%2F59671%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 28.0,
+    "priceILS": 28,
     "available": true
   },
   {
@@ -4870,7 +4870,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/edn/edn49115/d/19.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Feden-foods-organic-traditional-barley-malt-syrup-20-oz-566-g%2F11224%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 60.0,
+    "priceILS": 60,
     "available": true
   },
   {
@@ -6506,7 +6506,9 @@
       "ללא סוכר"
     ],
     "_descStatus": "approved",
-    "desc": "מסטיק ספרמינט ממותק ב-100% קסיליטול — ללא אספרטם, ללא סוכר, טבעוני, ללא גלוטן וסויה. מיוצר בשווייץ. קסיליטול נחקר כמסייע למניעת עששת ולחיזוק מינרלים בשן. כשרות OU."
+    "desc": "מסטיק ספרמינט ממותק ב-100% קסיליטול — ללא אספרטם, ללא סוכר, טבעוני, ללא גלוטן וסויה. מיוצר בשווייץ. קסיליטול נחקר כמסייע למניעת עששת ולחיזוק מינרלים בשן. כשרות OU.",
+    "descNew": "מסטיק ספרמינט ממותק ב-100% קסיליטול, הממתיק שנחקר ומוכח כמפחית עששת ולא מזין את חיידקי הפה. ללא אספרטם, ללא סוכר, טבעוני, ללא גלוטן. מיוצר בשווייץ. OU כשר.",
+    "longDesc": "הדבר המיוחד במסטיק PUR הוא לא רק מה שאין בו, אלא מה שיש: קסיליטול. בניגוד לסוכר ולרוב תחלופותיו, קסיליטול לא מספק מזון לחיידקי הפה שגורמים לעששת. מחקרים הראו שלעיסה קבועה במסטיק קסיליטול יכולה להפחית באופן פעיל את הסיכון לחורים בשיניים, ולכן ארגוני רפואת השיניים ממליצים עליו. PUR מממתק ב-100% קסיליטול בלי לערבב עם אספרטם, אצסולפאם K או ממתיקים סינתטיים אחרים. טבעוני, ללא גלוטן, ללא סויה, מיוצר בשווייץ. OU כשר."
   },
   {
     "id": 482,
@@ -6529,5 +6531,246 @@
     ],
     "_descStatus": "approved",
     "desc": "אגר אגר אורגני באבקה — תחליף טבעוני לג'לטין, מיוצר מאצות ים. מתאים לריבות, פודינגים, ג'לי וקינוחים. ללא גלוטן, Non-GMO. כשרות CRC."
+  },
+  {
+    "id": 483,
+    "name": "Simply Desserts, Plant-Based Instant Pudding, Vanilla, Sugar Free, 48g",
+    "nameHe": "פודינג וניל מיידי על בסיס צמחי",
+    "brand": "Simply Desserts",
+    "cert": "OK",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": "קינוחים",
+    "conf": "גבוהה",
+    "url": "https://il.iherb.com/pr/simply-desserts-plant-based-instant-pudding-vanilla-sugar-free-1-7-oz-48-g/92663",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimply-desserts-plant-based-instant-pudding-vanilla-sugar-free-1-7-oz-48-g%2F92663%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/92663/92663.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "ללא סוכר",
+      "טבעוני",
+      "ללא גלוטן",
+      "ללא לקטוז"
+    ],
+    "desc": "פודינג וניל מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מתכין תוך דקות עם חלב צמחי. OK כשר פרווה.",
+    "descNew": "פודינג וניל מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מתכין תוך דקות עם חלב צמחי. OK כשר פרווה.",
+    "longDesc": "פודינג מיידי שמתכין תוך 5 דקות עם חלב צמחי (שקדים, שיבולת שועל, קוקוס). ללא סוכר, ללא גלוטן, ללא לקטוז, ללא שמן דקלים. המרקם קרמי ורך, טעם וניל נקי. גרסה פרווה אידיאלית לאחר ארוחת בשר. OK כשר פרווה.",
+    "_descStatus": "approved",
+    "seeAlso": [
+      484
+    ]
+  },
+  {
+    "id": 484,
+    "name": "Simply Desserts, Plant-Based Instant Pudding, Chocolate, Sugar Free, 48g",
+    "nameHe": "פודינג שוקולד מיידי על בסיס צמחי",
+    "brand": "Simply Desserts",
+    "cert": "OK",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": "קינוחים",
+    "conf": "גבוהה",
+    "url": "https://il.iherb.com/pr/simply-desserts-plant-based-instant-pudding-chocolate-sugar-free-1-7-oz-48-g/92662",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimply-desserts-plant-based-instant-pudding-chocolate-sugar-free-1-7-oz-48-g%2F92662%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/92662/92662.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "ללא סוכר",
+      "טבעוני",
+      "ללא גלוטן",
+      "ללא לקטוז"
+    ],
+    "desc": "פודינג שוקולד מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מתכין תוך דקות עם חלב צמחי. OK כשר פרווה.",
+    "descNew": "פודינג שוקולד מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מתכין תוך דקות עם חלב צמחי. OK כשר פרווה.",
+    "longDesc": "פודינג מיידי שמתכין תוך 5 דקות עם חלב צמחי (שקדים, שיבולת שועל, קוקוס). ללא סוכר, ללא גלוטן, ללא לקטוז, ללא שמן דקלים. טעם שוקולד עמוק עם מרקם קרמי. גרסה פרווה אידיאלית לאחר ארוחת בשר. OK כשר פרווה.",
+    "_descStatus": "approved",
+    "seeAlso": [
+      483
+    ]
+  },
+  {
+    "id": 485,
+    "name": "Comvita, Manuka Honey, UMF 18+, MGO 696+, 250g (8.8 oz)",
+    "nameHe": "דבש מנוקה UMF 18+ קומביטה",
+    "brand": "Comvita",
+    "cert": "OU",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": "ממרחים",
+    "conf": "גבוהה",
+    "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-18-mgo-696-8-8-oz-250-g/112008",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fcomvita-manuka-honey-umf-18-mgo-696-8-8-oz-250-g%2F112008%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/112008/112008.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "דבש",
+      "מנוקה",
+      "ניו זילנד"
+    ],
+    "desc": "דבש מנוקה ניו זילנדי מאומת UMF 18+ של Comvita, עם ריכוז MGO 696+ ופעילות אנטיבקטריאלית גבוהה. גולמי ולא מפוסטר. OU כשר פרווה.",
+    "descNew": "דבש מנוקה ניו זילנדי מאומת UMF 18+ של Comvita, עם ריכוז MGO 696+ ופעילות אנטיבקטריאלית גבוהה. גולמי ולא מפוסטר. OU כשר פרווה.",
+    "longDesc": "Comvita היא חברת דבש מנוקה ניו זילנדית שמגדלת דבורים מ-1974. ה-UMF (Unique Manuka Factor) הוא תקן מאומת שמודד את ריכוז שלושת הסמנים הפעילים: MGO (מתילגליוקסל), DHA ולפטוספרין. UMF 18+ נחשב לדרגה גבוהה, עם MGO 696+ לפחות. גולמי ולא מפוסטר, כך שמרכיביו הטבעיים נשמרים. OU כשר פרווה.",
+    "_descStatus": "approved",
+    "seeAlso": [
+      486,
+      487
+    ]
+  },
+  {
+    "id": 486,
+    "name": "Comvita, Manuka Honey, UMF 10+, MGO 263+, 250g (8.8 oz)",
+    "nameHe": "דבש מנוקה UMF 10+ קומביטה 250g",
+    "brand": "Comvita",
+    "cert": "OU",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": "ממרחים",
+    "conf": "גבוהה",
+    "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-10-mgo-263-8-8-oz-250-g/88563",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fcomvita-manuka-honey-umf-10-mgo-263-8-8-oz-250-g%2F88563%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/88563/88563.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "דבש",
+      "מנוקה",
+      "ניו זילנד"
+    ],
+    "desc": "דבש מנוקה ניו זילנדי מאומת UMF 10+ של Comvita, עם ריכוז MGO 263+. גולמי ולא מפוסטר. גרסת הכניסה למנוקה של Comvita. OU כשר פרווה.",
+    "descNew": "דבש מנוקה ניו זילנדי מאומת UMF 10+ של Comvita, עם ריכוז MGO 263+. גולמי ולא מפוסטר. גרסת הכניסה למנוקה של Comvita. OU כשר פרווה.",
+    "longDesc": "UMF 10+ הוא נקודת הפתיחה של Comvita, עם MGO 263+ לפחות. מתאים לשימוש יומיומי על לחם, עם תה או בבישול קל. טעם מנוקה עשיר ומעט מריר, שונה מדבש רגיל. גולמי ולא מפוסטר. OU כשר פרווה.",
+    "_descStatus": "approved",
+    "seeAlso": [
+      485,
+      487
+    ]
+  },
+  {
+    "id": 487,
+    "name": "Comvita, Manuka Honey, UMF 10+, MGO 263+, 500g (17.6 oz)",
+    "nameHe": "דבש מנוקה UMF 10+ קומביטה 500g",
+    "brand": "Comvita",
+    "cert": "OU",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": "ממרחים",
+    "conf": "גבוהה",
+    "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-10-mgo-263-17-6-oz-500-g/95048",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fcomvita-manuka-honey-umf-10-mgo-263-17-6-oz-500-g%2F95048%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/95048/95048.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "דבש",
+      "מנוקה",
+      "ניו זילנד"
+    ],
+    "desc": "דבש מנוקה ניו זילנדי מאומת UMF 10+ של Comvita, 500 גרם. גולמי ולא מפוסטר. אריזה גדולה למי שכבר מכיר ואוהב. OU כשר פרווה.",
+    "descNew": "דבש מנוקה ניו זילנדי מאומת UMF 10+ של Comvita, 500 גרם. גולמי ולא מפוסטר. אריזה גדולה למי שכבר מכיר ואוהב. OU כשר פרווה.",
+    "longDesc": "אותו דבש מנוקה UMF 10+ של Comvita, בכמות כפולה של 500 גרם. מתאים למשפחה שכבר מכירה את הדבש ורוצה לחסוך בעלות למנה. גולמי ולא מפוסטר. OU כשר פרווה.",
+    "_descStatus": "approved",
+    "seeAlso": [
+      485,
+      486
+    ]
+  },
+  {
+    "id": 488,
+    "name": "Date Lady, Chocolate Spread, 10.2 oz (290g)",
+    "nameHe": "ממרח שוקולד תמרים",
+    "brand": "Date Lady",
+    "cert": "KCK",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": "ממרחים",
+    "conf": "גבוהה",
+    "url": "https://il.iherb.com/pr/date-lady-chocolate-spread-10-2-oz-290-g/143022",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fdate-lady-chocolate-spread-10-2-oz-290-g%2F143022%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/143022/143022.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "ממרח שוקולד",
+      "תמרים",
+      "אורגני",
+      "ללא סוכר מוסף"
+    ],
+    "desc": "ממרח שוקולד אורגני של Date Lady, עם 5 מרכיבים בלבד: תמרים, קקאו, שמן קוקוס, חמאת קקאו ווניל. ממותק אך ורק מתמרים, ללא סוכר לבן או ממתיקים מלאכותיים. KCK כשר פרווה.",
+    "descNew": "ממרח שוקולד אורגני של Date Lady, עם 5 מרכיבים בלבד: תמרים, קקאו, שמן קוקוס, חמאת קקאו ווניל. ממותק אך ורק מתמרים, ללא סוכר לבן או ממתיקים מלאכותיים. KCK כשר פרווה.",
+    "longDesc": "ממרח שוקולד שהמרכיב הראשון שלו הוא תמרים, לא סוכר. Date Lady מייצרת ממריחים שמבוססים על תמרים מג'וול אורגניים, שמספקים מתיקות טבעית וסיבים. הפורמולה פשוטה: תמרים, קקאו, שמן קוקוס, חמאת קקאו, וניל, מלח ים. ברזל, מגנזיום ואשלגן מהתמרים עצמם. ממרח שמרגיש כמו שוקולד אמיתי אבל בלי האשמה. KCK כשר פרווה, אורגני מאושר MOSA.",
+    "_descStatus": "approved",
+    "seeAlso": [
+      489,
+      490
+    ]
+  },
+  {
+    "id": 489,
+    "name": "Date Lady, Date Sugar, 12 oz (340g)",
+    "nameHe": "סוכר תמרים",
+    "brand": "Date Lady",
+    "cert": "KCK",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": "ממתיקים טבעיים",
+    "conf": "גבוהה",
+    "url": "https://il.iherb.com/pr/date-lady-date-sugar-12-oz-340-g/98027",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fdate-lady-date-sugar-12-oz-340-g%2F98027%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/98027/98027.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "ממתיק טבעי",
+      "תמרים",
+      "אורגני",
+      "ללא סוכר מוסף",
+      "אפייה"
+    ],
+    "desc": "סוכר תמרים של Date Lady, מרכיב יחיד: תמרים מיובשים וטחונים. תחליף 1:1 לסוכר לבן באפייה, עם סיבים תזונתיים, ברזל ואשלגן. חשוב: לא נמס בנוזלים, מצוין לאפייה בלבד. KCK כשר פרווה.",
+    "descNew": "סוכר תמרים של Date Lady, מרכיב יחיד: תמרים מיובשים וטחונים. תחליף 1:1 לסוכר לבן באפייה, עם סיבים תזונתיים, ברזל ואשלגן. חשוב: לא נמס בנוזלים, מצוין לאפייה בלבד. KCK כשר פרווה.",
+    "longDesc": "סוכר תמרים הוא פשוט תמרים מיובשים טחונים דק, מרכיב אחד בלבד. הוא מחליף סוכר לבן ביחס 1:1 באפייה (עוגות, עוגיות, מאפינס), אבל חשוב לדעת שלא נמס טוב בנוזלים, ולכן לא מתאים לקפה, תה, ורטבים. גם מקטינים את כמות הקמח ב-25% כשמשתמשים בו. היתרון: שומר על הסיבים, הברזל, המגנזיום והאשלגן של התמר שלם. KCK כשר פרווה, אורגני מאושר MOSA.",
+    "_descStatus": "approved",
+    "seeAlso": [
+      488,
+      490
+    ]
+  },
+  {
+    "id": 490,
+    "name": "Date Lady, Organic Barbecue Sauce, 13.8 oz (391g)",
+    "nameHe": "רוטב ברביקיו אורגני על בסיס תמרים",
+    "brand": "Date Lady",
+    "cert": "KCK",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": "רטבים",
+    "conf": "גבוהה",
+    "url": "https://il.iherb.com/pr/date-lady-organic-barbecue-sauce-13-8-oz-391-g/98029",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fdate-lady-organic-barbecue-sauce-13-8-oz-391-g%2F98029%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/98029/98029.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "רוטב",
+      "ברביקיו",
+      "תמרים",
+      "אורגני",
+      "ללא גלוטן",
+      "ללא סוכר מוסף",
+      "BPA-free"
+    ],
+    "desc": "רוטב ברביקיו אורגני של Date Lady, ממותק בתמרים בלבד ללא סוכר לבן. עשוי עגבניות, חומץ תפוחים, פפריקה מעושנת, צ'ילי אנצ'ו וכמון. KCK כשר פרווה.",
+    "descNew": "רוטב ברביקיו אורגני של Date Lady, ממותק בתמרים בלבד ללא סוכר לבן. עשוי עגבניות, חומץ תפוחים, פפריקה מעושנת, צ'ילי אנצ'ו וכמון. KCK כשר פרווה.",
+    "longDesc": "רוטב ברביקיו שהמרכיב הראשון שלו הוא תמרים, לא סוכר תירס. Date Lady בנתה פורמולה שמשלבת עגבניות טריות, חומץ תפוחים, פפריקה מעושנת עם עץ ואנצ'ו צ'ילי שמוסיף עומק ומורכבות. הטעם מלא ועשיר בלי תחושת הסוכר הגס של רטבי ברביקיו מסחריים. מתאים לצלי, לגריל, לציפוי ולטיגון. KCK כשר פרווה, אורגני מאושר MOSA.",
+    "_descStatus": "approved",
+    "seeAlso": [
+      488,
+      489
+    ],
+    "glutenFree": true,
+    "organic": true
   }
 ]

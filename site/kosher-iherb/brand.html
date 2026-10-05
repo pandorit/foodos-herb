@@ -108,6 +108,10 @@
     .card-desc { font-size: 0.78rem; color: var(--text-soft); line-height: 1.5; margin-bottom: 0.7rem; }
     .card-btn { display: flex; align-items: center; justify-content: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: background .18s; }
     .card-btn:hover { background: var(--teal-mid); }
+    .card-name-en { font-size: 0.67rem; color: var(--text-soft); margin-bottom: 6px; }
+    .card-price { font-size: 0.8rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.45rem; }
+    .card-unavailable .card-img-wrap { filter: grayscale(55%); opacity: .8; }
+    .badge-unavailable { position: absolute; bottom: 8px; right: 8px; background: #9CA3AF; color: white; font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); }
 
     /* skeleton */
     .skeleton-card { background: var(--card-bg); border-radius: var(--radius-lg); height: 270px; animation: skel 1.4s ease-in-out infinite; }
@@ -326,17 +330,23 @@
       const cc = certColors[p.cert] || '#2c6360';
       const parts = (p.name||'').split(',');
       const shortName = parts.length > 1 ? parts.slice(1, parts.length > 2 ? -1 : undefined).join(',').trim() : p.name;
+      const cat = Array.isArray(p.cat) ? p.cat[0] : (p.cat||'');
       return `
-        <div class="product-card">
+        <div class="product-card${p.available === false ? ' card-unavailable' : ''}">
           <div class="card-img-wrap">
-            <span class="card-emoji">${emoji}</span>
+            ${p.img
+              ? `<img src="${p.img}" alt="${(p.nameHe||p.name||'').replace(/"/g,'')}" style="width:100%;height:100%;object-fit:contain;padding:12px" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+              : ''}
+            <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
             <a href="cert.html?c=${encodeURIComponent(p.cert||'')}" class="cert-badge-abs" style="background:${cc}">${p.cert}</a>
+            ${p.available === false ? '<span class="badge-unavailable">אזל מהמלאי</span>' : ''}
           </div>
           <div class="card-body">
-            <div class="card-cat-txt"><a href="category.html?cat=${encodeURIComponent(p.cat||'')}">${p.cat||''}</a></div>
-            <div class="card-name" dir="auto">${shortName}</div>
-            <div class="card-desc">${(p.desc||'').replace(/\s*—\s*/g, ', ')}</div>
-            <a href="${p.url||'#'}" target="_blank" rel="noopener noreferrer" class="card-btn">לחנות iHerb ←</a>
+            <div class="card-cat-txt"><a href="category.html?cat=${encodeURIComponent(cat)}">${cat}</a></div>
+            ${p.nameHe ? `<div class="card-name">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>` : `<div class="card-name" dir="auto">${shortName}</div>`}
+            ${p.priceILS ? `<div class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</div>` : ''}
+            <div class="card-desc">${(p.descNew||p.desc||'').replace(/\s*—\s*/g, ', ')}</div>
+            <a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">לחנות iHerb ←</a>
           </div>
         </div>`;
     }).join('');

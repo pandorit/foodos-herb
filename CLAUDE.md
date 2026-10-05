@@ -24,6 +24,7 @@ Only include products with certifications from this approved list:
 - KSA (Kosher Supervision of America)
 - Kosher Scroll K
 - Kosher Check (formerly BC Kosher — Orthodox Rabbinical Council of British Columbia, Canada)
+- KCK (Vaad HaKashruth of Kansas City — rated "Recommended" by cRc)
 
 **IMPORTANT:** Do NOT include any product that does not have one of these certifications.
 

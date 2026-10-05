@@ -657,7 +657,7 @@
           </div>`);
         groupA.forEach(p => {
           const div = document.createElement('div');
-          div.className = 'product-card';
+          div.className = 'product-card' + (p.available === false ? ' card-unavailable' : '');
           div.innerHTML = buildCard(p);
           grid.appendChild(div);
         });
@@ -671,7 +671,7 @@
           </div>`);
         groupB.forEach(p => {
           const div = document.createElement('div');
-          div.className = 'product-card';
+          div.className = 'product-card' + (p.available === false ? ' card-unavailable' : '');
           div.innerHTML = buildCard(p);
           grid.appendChild(div);
         });
@@ -713,7 +713,7 @@
       <div class="card-body">
         <div class="card-top-row">
           <a href="brand.html?b=${encodeURIComponent(p.brand||'')}" class="card-brand-link">${p.brand||''}</a>
-          ${p.priceILS ? `<span class="card-price">₪${parseFloat(p.priceILS).toFixed(2)}</span>` : ''}
+          ${p.priceILS ? `<span class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</span>` : ''}
         </div>
         ${p.nameHe ? `<div class="card-name-he">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>` : `<div class="card-name" dir="auto">${shortName}</div>`}
         ${(() => {
