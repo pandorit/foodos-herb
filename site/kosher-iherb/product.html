@@ -446,6 +446,9 @@
 
           <!-- LEFT: sidebar details -->
           <aside class="sidebar-card" id="sidebar-card">
+            <div id="product-img-wrap" style="display:none; background:white; border-radius:12px; overflow:hidden; margin-bottom:1rem; border:1px solid rgba(0,0,0,.06);">
+              <img id="product-img" src="" alt="" style="width:100%; max-height:220px; object-fit:contain; padding:16px; display:block;">
+            </div>
             <div class="sidebar-card-title">פרטי המוצר</div>
             <div class="detail-row">
               <span class="detail-label">כשרות</span>
@@ -632,20 +635,31 @@
         product.sizes.forEach(function(size) {
           const a = document.createElement('a');
           a.className = 'btn-primary';
-          a.href = size.url;
+          a.href = size.affiliateUrl || size.url;
           a.target = '_blank';
-          a.rel = 'noopener';
+          a.rel = 'noopener noreferrer sponsored';
           a.textContent = 'לרכישה ב-iHerb' + (size.label ? ' (' + size.label + ')' : '') + ' ←';
           btnGroup.appendChild(a);
         });
-      } else if (product.url) {
+      } else if (product.affiliateUrl || product.url) {
         const a = document.createElement('a');
         a.className = 'btn-primary';
-        a.href = product.url;
+        a.href = product.affiliateUrl || product.url;
         a.target = '_blank';
-        a.rel = 'noopener';
-        a.textContent = 'לרכישה ב-iHerb ←';
+        a.rel = 'noopener noreferrer sponsored';
+        const priceStr = product.priceILS ? ' — ₪' + parseFloat(product.priceILS).toFixed(2) : '';
+        a.textContent = 'לרכישה ב-iHerb' + priceStr + ' ←';
         btnGroup.appendChild(a);
+      }
+
+      // ── Product image
+      if (product.img) {
+        const imgEl = document.getElementById('product-img');
+        const imgWrap = document.getElementById('product-img-wrap');
+        imgEl.src = product.img;
+        imgEl.alt = product.nameHe || product.name;
+        imgEl.onerror = function() { imgWrap.style.display = 'none'; };
+        imgWrap.style.display = 'block';
       }
 
       const backBtn = document.createElement('button');
