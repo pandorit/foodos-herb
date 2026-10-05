@@ -619,7 +619,9 @@
     .card-unavailable .card-img-wrap { filter: grayscale(55%); opacity: .8; }
     .card-unavailable .card-name { color: var(--text-soft); }
     .badge-unavailable { position: absolute; bottom: 8px; right: 8px; background: #9CA3AF; color: white; font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; letter-spacing: .3px; }
-    .card-price { font-size: 0.82rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.5rem; direction: ltr; text-align: right; }
+    .card-price-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 0.5rem; }
+    .card-price { font-size: 0.82rem; font-weight: 700; color: var(--teal-dark); direction: ltr; }
+    .card-size-tag { font-size: 0.72rem; font-weight: 600; color: var(--text-soft); background: var(--bg-soft); border: 1px solid var(--border); border-radius: 20px; padding: 2px 8px; white-space: nowrap; }
     .skeleton-card { background: var(--card-bg); border-radius: var(--radius-lg); height: 280px; animation: skel-pulse 1.5s ease-in-out infinite; }
     @keyframes skel-pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
     .load-more-wrap { display: none; justify-content: center; margin-top: 2.2rem; }
@@ -1358,6 +1360,8 @@
     const certUrl  = `kosher-iherb/cert.html?c=${encodeURIComponent(p.cert||'')}`;
     const catUrl   = `kosher-iherb/category.html?cat=${encodeURIComponent(p.cat||'')}`;
     const parts    = (p.name||'').split(',');
+    const lastPart = parts[parts.length - 1].trim();
+    const sizeStr  = (parts.length > 2 && /\d/.test(lastPart)) ? lastPart : '';
     const shortName = parts.length > 1 ? parts.slice(1, parts.length > 2 ? -1 : undefined).join(',').trim() : p.name;
     return `
       <div class="card-img-wrap" style="background:white">
@@ -1389,7 +1393,10 @@
           }
           return `<div class="card-desc-txt">${raw}</div>`;
         })()}
-        ${p.priceILS ? `<div class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</div>` : ''}
+        ${(p.priceILS || sizeStr) ? `<div class="card-price-row">
+          ${sizeStr ? `<span class="card-size-tag">${sizeStr}</span>` : ''}
+          ${p.priceILS ? `<span class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</span>` : ''}
+        </div>` : ''}
         <div class="card-actions">
           <a href="kosher-iherb/product.html?id=${p.id}" class="card-btn-outline">פרטים ←</a>
           ${p.sizes && p.sizes.length > 1

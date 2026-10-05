@@ -103,7 +103,8 @@
     .card-img-wrap { background: white; height: 170px; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid rgba(0,0,0,.04); }
     .card-emoji { font-size: 4rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,.08)); }
     .card-product-img { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
-    .card-price { font-size: 0.82rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 6px; }
+    .card-price { font-size: 0.82rem; font-weight: 700; color: var(--teal-dark); }
+    .card-size-tag { font-size: 0.72rem; font-weight: 600; color: var(--text-soft); background: var(--bg-soft,#F8F9F8); border: 1px solid var(--border,#E5E7E5); border-radius: 20px; padding: 2px 8px; white-space: nowrap; }
     .card-unavailable .card-img-wrap { filter: grayscale(60%); opacity: .75; }
     .badge-unavailable { position: absolute; bottom: 8px; right: 8px; background: #6B7280; color: white; font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); }
     .card-btn-disabled { display: flex; align-items: center; justify-content: center; background: #E5E7EB; color: #9CA3AF; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); cursor: default; }
@@ -699,7 +700,9 @@
   function buildCard(p) {
     const emoji = catEmoji[Array.isArray(p.cat) ? p.cat[0] : p.cat] || '📦';
     const cc    = certColors[p.cert] || '#2c6360';
-    const parts = (p.name||'').split(',');
+    const parts    = (p.name||'').split(',');
+    const lastPart = parts[parts.length - 1].trim();
+    const sizeStr  = (parts.length > 2 && /\d/.test(lastPart)) ? lastPart : '';
     const shortName = parts.length > 1 ? parts.slice(1, parts.length > 2 ? -1 : undefined).join(',').trim() : p.name;
     return `
       <div class="card-img-wrap">
@@ -713,7 +716,10 @@
       <div class="card-body">
         <div class="card-top-row">
           <a href="brand.html?b=${encodeURIComponent(p.brand||'')}" class="card-brand-link">${p.brand||''}</a>
-          ${p.priceILS ? `<span class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</span>` : ''}
+          <div style="display:flex;align-items:center;gap:5px;flex-shrink:0;">
+            ${sizeStr ? `<span class="card-size-tag">${sizeStr}</span>` : ''}
+            ${p.priceILS ? `<span class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</span>` : ''}
+          </div>
         </div>
         ${p.nameHe ? `<div class="card-name-he">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>` : `<div class="card-name" dir="auto">${shortName}</div>`}
         ${(() => {
