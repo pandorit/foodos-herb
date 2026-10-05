@@ -5795,7 +5795,11 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/149626/149626.jpg",
-    "available": false
+    "available": false,
+    "seeAlso": [
+      479,
+      480
+    ]
   },
   {
     "id": 448,
@@ -6425,5 +6429,61 @@
       "חריף",
       "רטבים"
     ]
+  },
+  {
+    "id": 479,
+    "name": "Ready, Protein Puffs, Pink Himalayan Sea Salt, 6 Bags, 88g",
+    "nameHe": "פאפס חלבון Ready — מלח ורוד",
+    "brand": "Ready",
+    "cert": "OU",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": [
+      "מוצרי חלבון",
+      "חטיפים"
+    ],
+    "url": "https://il.iherb.com/pr/ready-protein-puffs-pink-himalayan-sea-salt-6-bags-3-1-oz-88-g-each/149627",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fready-protein-puffs-pink-himalayan-sea-salt-6-bags-3-1-oz-88-g-each%2F149627",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/149627/149627.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "חלבון",
+      "חטיף"
+    ],
+    "seeAlso": [
+      447,
+      480
+    ],
+    "_descStatus": "approved",
+    "desc": "פאפס חלבון קריספי בטעם מלח ורוד היימלאי. 25 גרם חלבון לשקית, ללא סויה, ללא חלב. כשרות OU."
+  },
+  {
+    "id": 480,
+    "name": "Ready, Protein Puffs, Chipotle, 6 Bags, 78g",
+    "nameHe": "פאפס חלבון Ready — צ'יפוטלה",
+    "brand": "Ready",
+    "cert": "OU",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": [
+      "מוצרי חלבון",
+      "חטיפים"
+    ],
+    "url": "https://il.iherb.com/pr/ready-protein-puffs-chipotle-6-bags-2-75-oz-78-g-each/149629",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fready-protein-puffs-chipotle-6-bags-2-75-oz-78-g-each%2F149629",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/149629/149629.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "חלבון",
+      "חטיף"
+    ],
+    "seeAlso": [
+      447,
+      479
+    ],
+    "_descStatus": "approved",
+    "desc": "פאפס חלבון קריספי בטעם צ'יפוטלה מעושן. 25 גרם חלבון לשקית, ללא סויה, ללא חלב. כשרות OU."
   }
 ]
