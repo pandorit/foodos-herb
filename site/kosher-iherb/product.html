@@ -692,6 +692,31 @@
       });
       btnGroup.appendChild(backBtn);
 
+      // ── See Also (alternatives)
+      if (product.seeAlso && product.seeAlso.length > 0) {
+        const alts = product.seeAlso.map(id => allProducts.find(x => x.id === id)).filter(Boolean);
+        if (alts.length > 0) {
+          const seeAlsoWrap = document.createElement('div');
+          seeAlsoWrap.style.cssText = 'margin-top:1rem;padding:0.75rem 1rem;background:#EBF6F6;border-radius:10px;font-size:.85rem;';
+          const label = document.createElement('span');
+          label.style.cssText = 'color:#2C6360;font-weight:600;margin-left:6px;';
+          label.textContent = 'אלטרנטיבה זמינה:';
+          seeAlsoWrap.appendChild(label);
+          alts.forEach(function(alt) {
+            const a = document.createElement('a');
+            a.href = 'product.html?id=' + alt.id;
+            a.style.cssText = 'color:#4A9D9A;font-weight:600;text-decoration:none;';
+            a.textContent = (alt.nameHe || alt.name) + ' (' + alt.cert + ')';
+            if (alt.available === false) {
+              a.style.opacity = '0.55';
+              a.textContent += ' — לא זמין כרגע';
+            }
+            seeAlsoWrap.appendChild(a);
+          });
+          btnGroup.parentElement.appendChild(seeAlsoWrap);
+        }
+      }
+
       // ── Sidebar details
       document.getElementById('sidebar-cert').textContent = certText;
       document.getElementById('sidebar-cat').textContent  = catStr;
