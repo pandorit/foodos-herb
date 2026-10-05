@@ -156,14 +156,24 @@
     </a>
     <ul class="nav-links">
       <li><a href="../foodos-herb-homepage.html#products">מוצרים</a></li>
-      <li><a href="../foodos-herb-homepage.html#categories">קטגוריות</a></li>
+      <li class="nav-has-dd" id="cats-dd-wrap">
+        <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'cats-dd-panel')">קטגוריות ▾</a>
+        <div class="nav-dropdown-panel" id="cats-dd-panel">
+          <div class="brands-dd-list" id="cats-dd-list"></div>
+        </div>
+      </li>
       <li class="nav-has-dd" id="brands-dd-wrap">
-        <a href="#" class="nav-dd-trigger" onclick="toggleBrandsDD(event)">מותגים ▾</a>
+        <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'brands-dd-panel')">מותגים ▾</a>
         <div class="nav-dropdown-panel" id="brands-dd-panel">
           <div class="brands-dd-list" id="brands-dd-list"></div>
         </div>
       </li>
-      <li><a href="certs.html">הכשרויות</a></li>
+      <li class="nav-has-dd" id="certs-dd-wrap">
+        <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'certs-dd-panel')">הכשרויות ▾</a>
+        <div class="nav-dropdown-panel" id="certs-dd-panel">
+          <div class="brands-dd-list" id="certs-dd-list"></div>
+        </div>
+      </li>
       <li><a href="../foodos-herb-homepage.html#values">על הפרויקט</a></li>
     </ul>
   </div>
@@ -313,10 +323,22 @@
       document.getElementById('desc-strip').style.display = 'block';
     }
 
-    // Build brands dropdown list
+    // Build brands dropdown
     const allBrandNames = [...new Set(allProducts.map(p => p.brand).filter(Boolean))].sort((a,b) => a.localeCompare(b,'en'));
     document.getElementById('brands-dd-list').innerHTML = allBrandNames.map(b =>
       `<a href="brand.html?b=${encodeURIComponent(b)}" class="brand-dd-item${b === brandName ? ' active' : ''}">${b}</a>`
+    ).join('');
+
+    // Build categories dropdown
+    const allCatNames = [...new Set(allProducts.flatMap(p => Array.isArray(p.cat) ? p.cat : [p.cat]).filter(Boolean))].sort((a,b) => a.localeCompare(b,'he'));
+    document.getElementById('cats-dd-list').innerHTML = allCatNames.map(c =>
+      `<a href="category.html?cat=${encodeURIComponent(c)}" class="brand-dd-item">${c}</a>`
+    ).join('');
+
+    // Build certs dropdown
+    const allCertNames = [...new Set(allProducts.map(p => p.cert).filter(Boolean))].sort((a,b) => a.localeCompare(b,'en'));
+    document.getElementById('certs-dd-list').innerHTML = allCertNames.map(c =>
+      `<a href="cert.html?c=${encodeURIComponent(c)}" class="brand-dd-item">${c}</a>`
     ).join('');
 
     // Filter products for this brand
@@ -373,14 +395,17 @@
     }).join('');
   }
 
-  // ── BRANDS DROPDOWN ──
-  function toggleBrandsDD(e) {
+  // ── NAV DROPDOWNS ──
+  function toggleDD(e, panelId) {
     e.preventDefault();
-    document.getElementById('brands-dd-panel').classList.toggle('open');
+    const panel = document.getElementById(panelId);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown-panel').forEach(p => p.classList.remove('open'));
+    if (!isOpen) panel.classList.add('open');
   }
   document.addEventListener('click', e => {
-    if (!document.getElementById('brands-dd-wrap')?.contains(e.target)) {
-      document.getElementById('brands-dd-panel')?.classList.remove('open');
+    if (!e.target.closest('.nav-has-dd')) {
+      document.querySelectorAll('.nav-dropdown-panel').forEach(p => p.classList.remove('open'));
     }
   });
 
