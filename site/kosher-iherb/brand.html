@@ -113,6 +113,14 @@
     .card-unavailable .card-img-wrap { filter: grayscale(55%); opacity: .8; }
     .badge-unavailable { position: absolute; bottom: 8px; right: 8px; background: #9CA3AF; color: white; font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); }
 
+    /* ── BRANDS NAV BAR ── */
+    .brands-nav-bar { background: var(--card-bg); border-bottom: 1px solid var(--border); padding: 0.6rem 0; }
+    .brands-nav-scroll { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; flex-wrap: wrap; }
+    .brands-nav-scroll::-webkit-scrollbar { display: none; }
+    .brand-nav-pill { display: inline-block; padding: 5px 14px; border-radius: 100px; font-size: 0.75rem; font-weight: 600; background: white; border: 1.5px solid var(--border); color: var(--text-mid); white-space: nowrap; transition: all .15s; text-decoration: none; }
+    .brand-nav-pill:hover { border-color: var(--teal); color: var(--teal); }
+    .brand-nav-pill.active { background: var(--teal-dark); color: white; border-color: var(--teal-dark); }
+
     /* skeleton */
     .skeleton-card { background: var(--card-bg); border-radius: var(--radius-lg); height: 270px; animation: skel 1.4s ease-in-out infinite; }
     @keyframes skel { 0%,100%{opacity:1} 50%{opacity:.4} }
@@ -197,6 +205,13 @@
 <div class="desc-strip" id="desc-strip" style="display:none">
   <div class="container">
     <p class="desc-text" id="brand-desc-full"></p>
+  </div>
+</div>
+
+<!-- ── ALL BRANDS NAV ── -->
+<div class="brands-nav-bar" id="brands-nav-bar" style="display:none">
+  <div class="container">
+    <div class="brands-nav-scroll" id="brands-nav-scroll"></div>
   </div>
 </div>
 
@@ -297,6 +312,17 @@
       document.getElementById('brand-desc-full').textContent = brandInfo.brandDesc;
       document.getElementById('desc-strip').style.display = 'block';
     }
+
+    // Build brands nav bar
+    const allBrandNames = [...new Set(allProducts.map(p => p.brand).filter(Boolean))].sort((a,b) => a.localeCompare(b,'en'));
+    const brandsNav = document.getElementById('brands-nav-scroll');
+    brandsNav.innerHTML = allBrandNames.map(b =>
+      `<a href="brand.html?b=${encodeURIComponent(b)}" class="brand-nav-pill${b === brandName ? ' active' : ''}">${b}</a>`
+    ).join('');
+    document.getElementById('brands-nav-bar').style.display = 'block';
+    // Scroll active pill into view
+    const activePill = brandsNav.querySelector('.active');
+    if (activePill) activePill.scrollIntoView({ inline: 'center', block: 'nearest' });
 
     // Filter products for this brand
     const products = allProducts.filter(p => p.brand === brandName);
