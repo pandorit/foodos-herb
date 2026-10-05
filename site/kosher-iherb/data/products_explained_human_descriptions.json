@@ -131,7 +131,8 @@
     "img": "https://s3.images-iherb.com/fro/fro02651/d/16.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-organic-decorticated-cardamom-seed-ground-16-oz-453-g%2F30966%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 245.22,
-    "available": true
+    "available": true,
+    "suspended": true
   },
   {
     "id": 16,
