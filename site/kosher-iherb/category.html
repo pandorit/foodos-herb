@@ -563,10 +563,13 @@
         })()}
         <div class="card-actions">
           <a href="product.html?id=${p.id}" class="card-btn-outline">פרטים נוספים ←</a>
-          ${p.available === false
-            ? '<span class="card-btn-disabled">לא זמין כרגע</span>'
-            : p.sizes && p.sizes.length > 1
-              ? p.sizes.map(s => `<a href="${s.affiliateUrl||s.url}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn card-btn-size">${s.label} ←</a>`).join('')
+          ${p.sizes && p.sizes.length > 1
+            ? p.sizes.map(s => s.available === false
+                ? `<span class="card-btn-disabled card-btn-size">${s.label}</span>`
+                : `<a href="${s.affiliateUrl||s.url}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn card-btn-size">${s.label} ←</a>`
+              ).join('')
+            : p.available === false
+              ? '<span class="card-btn-disabled">לא זמין כרגע</span>'
               : `<a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">לחנות iHerb ←</a>`}
         </div>
       </div>`;

@@ -5850,18 +5850,34 @@
   },
   {
     "id": 451,
-    "name": "Mike's Hot Honey, Infused With Chilies, 12 oz (340 g)",
-    "brand": "Mike's Hot Honey",
-    "cert": "KOF-K",
+    "name": "Hot Honey — Mike's / Nate's",
+    "brand": "Mike's / Nate's",
+    "cert": "KOF-K / OU",
     "cat": "רטבים",
     "url": "https://il.iherb.com/pr/mike-s-hot-honey-infused-with-chilies-12-oz-340-g/83676",
     "desc": "דבש ברזילאי עם צ'ילי — ממכר ופשוט. נשפך על פיצה, עוף פריך, גבינה, ואפילו גלידה. הניגוד מתוק-חריף עובד טוב במיוחד על דברים שמנים ומלוחים. KOF-K.",
     "status": "pending",
-    "nameHe": "דבש מחריף בפלפלים",
+    "nameHe": "דבש חריף",
     "_certVerified": true,
     "certVerified": true,
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/83676/83676.jpg",
-    "available": false
+    "available": false,
+    "sizes": [
+      {
+        "label": "Mike's 340g — KOF-K",
+        "url": "https://il.iherb.com/pr/mike-s-hot-honey-infused-with-chilies-12-oz-340-g/83676",
+        "available": false,
+        "cert": "KOF-K",
+        "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/83676/83676.jpg"
+      },
+      {
+        "label": "Nate's 454g — OU",
+        "url": "https://il.iherb.com/pr/nate-s-honey-hot-honey-infused-with-chili-pepper-16-oz-454-g/162072",
+        "available": false,
+        "cert": "OU",
+        "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/162072/162072.jpg"
+      }
+    ]
   },
   {
     "id": 452,
