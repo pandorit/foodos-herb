@@ -1355,7 +1355,10 @@
     const shortName = parts.length > 1 ? parts.slice(1, parts.length > 2 ? -1 : undefined).join(',').trim() : p.name;
     return `
       <div class="card-img-wrap" style="background:white">
-        <span class="card-emoji">${emoji}</span>
+        ${p.img
+          ? `<img src="${p.img}" alt="${p.nameHe||p.name||''}" style="width:100%;height:100%;object-fit:contain;padding:12px" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+          : ''}
+        <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
         <a href="${certUrl}" class="cert-corner-link" title="${p.cert}" style="background:${certColor}">${p.cert}</a>
       </div>
       <div class="card-body">
@@ -1387,6 +1390,14 @@
           <button class="card-report-btn" onclick="openReport(${p.id}, '${(p.name||'').replace(/'/g,"\\'")}', '${(p.cert||'').replace(/'/g,"\\'")}')">⚑</button>
         </div>
       </div>`;
+  }
+
+  function toggleHpDesc(uid, btn) {
+    const extra = document.getElementById(uid + '-extra');
+    if (!extra) return;
+    const open = extra.style.display !== 'none';
+    extra.style.display = open ? 'none' : 'block';
+    btn.textContent = open ? 'קרא עוד ↓' : 'פחות ↑';
   }
 
   document.getElementById('srch')?.addEventListener('keydown', e => { if(e.key==='Enter') applyFilters(); });
