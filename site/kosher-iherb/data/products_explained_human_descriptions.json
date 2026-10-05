@@ -6485,5 +6485,49 @@
     ],
     "_descStatus": "approved",
     "desc": "פאפס חלבון קריספי בטעם צ'יפוטלה מעושן. 25 גרם חלבון לשקית, ללא סויה, ללא חלב. כשרות OU."
+  },
+  {
+    "id": 481,
+    "name": "The PUR Company, Chewing Gum, Spearmint, 55 Pieces, 77g",
+    "nameHe": "מסטיק ספרמינט PUR — ללא סוכר, 55 יחידות",
+    "brand": "The PUR Company",
+    "cert": "OU",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "url": "https://il.iherb.com/pr/the-pur-company-chewing-gum-spearmint-55-pieces-2-72-oz-77-g/119802",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fthe-pur-company-chewing-gum-spearmint-55-pieces-2-72-oz-77-g%2F119802",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/119802/119802.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "מסטיק",
+      "קסיליטול",
+      "ללא סוכר"
+    ],
+    "_descStatus": "approved",
+    "desc": "מסטיק ספרמינט ממותק ב-100% קסיליטול — ללא אספרטם, ללא סוכר, טבעוני, ללא גלוטן וסויה. מיוצר בשווייץ. קסיליטול נחקר כמסייע למניעת עששת ולחיזוק מינרלים בשן. כשרות OU."
+  },
+  {
+    "id": 482,
+    "name": "Foods Alive, Agar Agar Powder, 56g",
+    "nameHe": "אגר אגר אורגני Foods Alive",
+    "brand": "Foods Alive",
+    "cert": "CRC",
+    "certVerified": true,
+    "_certVerified": true,
+    "cat": "תוספי אפייה",
+    "url": "https://il.iherb.com/pr/foods-alive-agar-agar-powder-2-oz-56-g/107122",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffoods-alive-agar-agar-powder-2-oz-56-g%2F107122",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/107122/107122.jpg",
+    "available": true,
+    "dairy": false,
+    "tags": [
+      "אפייה",
+      "טבעוני",
+      "אורגני"
+    ],
+    "_descStatus": "approved",
+    "desc": "אגר אגר אורגני באבקה — תחליף טבעוני לג'לטין, מיוצר מאצות ים. מתאים לריבות, פודינגים, ג'לי וקינוחים. ללא גלוטן, Non-GMO. כשרות CRC."
   }
 ]
