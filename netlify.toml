@@ -22,6 +22,12 @@
   [headers.values]
     Cache-Control = "public, max-age=300, stale-while-revalidate=60"
 
+# /kosher-iherb/ → homepage
+[[redirects]]
+  from   = "/kosher-iherb/"
+  to     = "/foodos-herb-homepage.html"
+  status = 302
+
 # 404 fallback
 [[redirects]]
   from   = "/*"
