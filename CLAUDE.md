@@ -1,38 +1,28 @@
 # CLAUDE.md
 
-## Project Rules
+> תיעוד מלא של מצב הפרויקט, החלטות ארכיטקטוניות ומשימות פתוחות: `docs/project-state.md`
 
-### Approved Kosher Certifications
+---
 
-Only include products with certifications from this approved list:
+## Approved Kosher Certifications
 
-**Most Reliable:**
-- OU (Orthodox Union)
-- OK (OK Kosher)
-- KOF-K
-- Star-K
-- COR (Kashruth Council of Canada)
+**Most Reliable:** OU, OK, KOF-K, Star-K, COR
 
-**Reliable:**
-- CRC (Chicago Rabbinical Council)
-- JSOR
-- MK (Montreal Kosher)
-- Kehilla Kosher
-- EarthKosher
-- KVH (Kosher Supervision of America / Vaad HaKashrus)
-- MR
-- KSA (Kosher Supervision of America)
-- Kosher Scroll K
-- Kosher Check (formerly BC Kosher — Orthodox Rabbinical Council of British Columbia, Canada)
-- KCK (Vaad HaKashruth of Kansas City — rated "Recommended" by cRc)
+**Reliable:** CRC, JSOR, MK, Kehilla Kosher, EarthKosher, KVH, MR, KSA, Kosher Scroll K, Kosher Check, KCK
 
-**IMPORTANT:** Do NOT include any product that does not have one of these certifications.
+Policy: certifications rated "Recommended" by cRc ASKcRc are approved. See `docs/project-state.md` for details.
+
+**IMPORTANT:** Do NOT include any product without one of these certifications.
+
+---
 
 ## Writing Style
 
 **אסור להשתמש במקף ארוך (em dash): —**
 במקומו להשתמש בפסיק, נקודה, או פסיק-נקודה בהתאם להקשר.
 
-## Model Selection
+---
+
+## Model
 
 model: claude-sonnet-4-5-20251001

@@ -36,6 +36,9 @@ keto.html
 # ── גיבויים ──
 data/backups/
 
+# ── תיעוד עבודה פנימי ──
+docs/handoff.md
+
 # ── מערכת ──
 .DS_Store
 Thumbs.db

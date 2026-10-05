@@ -53,10 +53,12 @@
       border-bottom: 1px solid var(--border);
       position: sticky; top: 0; z-index: 200;
       height: 68px; display: flex; align-items: center;
+      overflow: visible;
     }
     .nav-inner {
       max-width: 1160px; margin: 0 auto; padding: 0 2rem;
       width: 100%; display: flex; align-items: center; justify-content: space-between;
+      overflow: visible;
     }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
     .logo-circle {
@@ -89,6 +91,13 @@
       white-space: nowrap;
     }
     .nav-cta:hover { background: var(--teal-mid) !important; }
+    .nav-has-dd { position: relative; }
+    .nav-dd-trigger { cursor: pointer; }
+    .nav-dropdown-panel { display: none; position: absolute; top: calc(100% + 12px); right: 0; background: white; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 8px 32px rgba(0,0,0,.12); min-width: 240px; max-height: 400px; overflow-y: auto; z-index: 300; padding: 10px; }
+    .nav-dropdown-panel.open { display: block; }
+    .nav-dd-list { display: flex; flex-direction: column; gap: 2px; }
+    .nav-dd-item { display: block; padding: 7px 12px; border-radius: 8px; font-size: 0.82rem; font-weight: 500; color: var(--text-mid); text-decoration: none; transition: background .12s; }
+    .nav-dd-item:hover { background: var(--teal-light); color: var(--teal-dark); }
 
     /* ── BREADCRUMB ── */
     .breadcrumb-bar {
@@ -383,8 +392,25 @@
       </a>
       <ul class="nav-links">
         <li><a href="../foodos-herb-homepage.html#products">מוצרים</a></li>
-        <li><a href="../foodos-herb-homepage.html#categories">קטגוריות</a></li>
-        <li><a href="../foodos-herb-homepage.html#articles">מאמרים</a></li>
+        <li class="nav-has-dd">
+          <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'cats-dd-panel')">קטגוריות ▾</a>
+          <div class="nav-dropdown-panel" id="cats-dd-panel">
+            <div class="nav-dd-list" id="cats-dd-list"></div>
+          </div>
+        </li>
+        <li class="nav-has-dd">
+          <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'brands-dd-panel')">מותגים ▾</a>
+          <div class="nav-dropdown-panel" id="brands-dd-panel">
+            <div class="nav-dd-list" id="brands-dd-list"></div>
+          </div>
+        </li>
+        <li class="nav-has-dd">
+          <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'certs-dd-panel')">הכשרויות ▾</a>
+          <div class="nav-dropdown-panel" id="certs-dd-panel">
+            <div class="nav-dd-list" id="certs-dd-list"></div>
+          </div>
+        </li>
+        <li><a href="../foodos-herb-homepage.html#values">על הפרויקט</a></li>
         <li><a href="https://il.iherb.com" target="_blank" rel="noopener noreferrer sponsored" class="nav-cta">לחנות iHerb ←</a></li>
       </ul>
     </div>
@@ -581,6 +607,24 @@
         showError('המוצר עם מזהה ' + productId + ' לא נמצא במסד הנתונים.');
         return;
       }
+
+      // ── Populate nav dropdowns ──
+      const active = products.filter(p => !p.suspended);
+      // Categories
+      const cats = [...new Set(active.flatMap(p => Array.isArray(p.cat) ? p.cat : [p.cat]).filter(Boolean))].sort();
+      document.getElementById('cats-dd-list').innerHTML = cats.map(c =>
+        `<a class="nav-dd-item" href="category.html?cat=${encodeURIComponent(c)}">${c}</a>`
+      ).join('');
+      // Brands
+      const brandNames = [...new Set(active.map(p => p.brand).filter(Boolean))].sort();
+      document.getElementById('brands-dd-list').innerHTML = brandNames.map(b =>
+        `<a class="nav-dd-item" href="brand.html?brand=${encodeURIComponent(b)}">${b}</a>`
+      ).join('');
+      // Certs
+      const certNames = [...new Set(active.map(p => p.cert).filter(Boolean))].sort();
+      document.getElementById('certs-dd-list').innerHTML = certNames.map(c =>
+        `<a class="nav-dd-item" href="cert.html?cert=${encodeURIComponent(c)}">${c}</a>`
+      ).join('');
 
       renderProduct(product, brands, products);
     }
@@ -807,10 +851,41 @@
       }
     }
 
+    // ── Nav dropdowns ──
+    function toggleDD(e, panelId) {
+      e.preventDefault();
+      const panel = document.getElementById(panelId);
+      const isOpen = panel.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown-panel').forEach(p => p.classList.remove('open'));
+      if (!isOpen) panel.classList.add('open');
+    }
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.nav-has-dd')) {
+        document.querySelectorAll('.nav-dropdown-panel').forEach(p => p.classList.remove('open'));
+      }
+    });
+
     // Run
     init();
   </script>
 
+<footer style="background:var(--teal-dark);padding:2rem 0 1.2rem;margin-top:3rem;">
+  <div style="max-width:1160px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+    <div style="font-family:var(--serif);font-size:1rem;font-weight:700;color:white;">
+      FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
+    </div>
+    <ul style="display:flex;gap:1.5rem;list-style:none;">
+      <li><a href="../foodos-herb-homepage.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">דף הבית</a></li>
+      <li><a href="certs.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">הכשרויות</a></li>
+      <li><a href="../privacy.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">פרטיות</a></li>
+      <li><a href="../terms.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">תנאי שימוש</a></li>
+    </ul>
+  </div>
+  <div style="font-size:0.72rem;color:rgba(255,255,255,.35);text-align:center;margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.08);max-width:1160px;margin-right:auto;margin-left:auto;padding-right:2rem;padding-left:2rem;">
+    © 2026 Foodos Online · online.foodos.co.il · קישורי שותפים עם iHerb Associates
+    <br>אתר זה כולל קישורי שותפים — אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
+  </div>
+</footer>
 <script src="https://negishot.co.il/cdn/widget.php?code=NGS_D51C06908CC9"></script>
 </body>
 </html>
