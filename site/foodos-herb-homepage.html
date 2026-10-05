@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodos Online — מדריך המוצרים הכשרים שלנו</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'BuDrakonit';
+      src: url('BuDrakonit-Bold-desktop/BuDrakonit - Bold - desktop/buDrakonit-1.2-700-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'VarelaRound';
+      src: url('Varela_Round/VarelaRound-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:        #4A9D9A;
+      --teal-dark:   #2C6360;
+      --teal-xdark:  #1A4F4D;
+      --teal-mid:    #3A8380;
+      --teal-light:  #EBF6F6;
+      --teal-xlight: #C8E8E7;
+      --lime:        #7AB648;
+      --orange:      #E85D04;
+      --bg:          #FFFFFF;
+      --bg-soft:     #F8F9F8;
+      --text:        #1A1A1A;
+      --text-mid:    #3D3D3D;
+      --text-soft:   #6B7280;
+      --border:      #E5E7E5;
+      --card-bg:     #F4F4F2;
+      --serif:       'Playfair Display', Georgia, serif;
+      --sans:        'VarelaRound', 'Inter', system-ui, sans-serif;
+      --radius-sm:   8px;
+      --radius:      14px;
+      --radius-lg:   20px;
+      --radius-pill: 100px;
+      --shadow-sm:   0 1px 4px rgba(0,0,0,.06);
+      --shadow:      0 4px 16px rgba(0,0,0,.08);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--text); background: var(--bg); direction: rtl; line-height: 1.6; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
+    .section-pad { padding: 5rem 0; }
+
+    /* ── ANNOUNCEMENT BAR ───────────────────── */
+    .announce-bar {
+      background: var(--teal-xdark);
+      color: rgba(255,255,255,.82);
+      text-align: center;
+      padding: 9px 2rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+    .announce-bar strong { color: var(--teal-xlight); font-weight: 700; }
+
+    /* ── LOGO ───────────────────────────────── */
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-img { width: 80px; height: 80px; border-radius: 50%; object-fit: contain; flex-shrink: 0; box-shadow: 0 2px 12px rgba(74,157,154,.25); }
+    .logo-circle {
+      width: 52px; height: 52px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px rgba(74,157,154,.3);
+    }
+    .logo-heb { font-size: 16px; line-height: 1; }
+    .logo-foodos-txt { font-family: var(--serif); font-size: 8.5px; font-weight: 900; color: white; line-height: 1; letter-spacing: -0.2px; }
+    .logo-herb {
+      font-family: var(--sans); font-size: 8px; font-weight: 800;
+      background: linear-gradient(90deg, #4A9D9A, #A8D44B);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      line-height: 1; letter-spacing: 0.5px;
+    }
+    .logo-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: var(--text); line-height: 1.1; }
+    .logo-name small { display: block; font-family: var(--sans); font-size: 0.65rem; font-weight: 500; color: var(--teal); letter-spacing: 1px; text-transform: uppercase; }
+
+    /* ── NAV ────────────────────────────────── */
+    .nav { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 200; height: 88px; display: flex; align-items: center; }
+    .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
+    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-cta { background: var(--teal); color: white !important; font-size: 0.85rem !important; font-weight: 600 !important; padding: 9px 20px; border-radius: var(--radius-pill); transition: background .18s !important; }
+    .nav-cta:hover { background: var(--teal-mid) !important; }
+
+    /* ── TRUST BAR ──────────────────────────── */
+    .trust-bar { background: rgba(44,99,96,.05); border-bottom: 1px solid rgba(74,157,154,.15); }
+    .trust-bar-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; align-items: center; gap: 0; }
+    .trust-bar-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.78rem; font-weight: 600; color: var(--teal-dark);
+      padding: 0.65rem 2.5rem; border-left: 1px solid rgba(74,157,154,.2);
+    }
+    .trust-bar-item:last-child { border-left: none; }
+    .trust-bar-item:first-child { border-left: none; }
+    .tbi-icon { font-size: 1rem; }
+
+    /* ── HERO ───────────────────────────────── */
+    .hero {
+      background: #1A4F4D;
+      min-height: 620px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Mojo-style SVG splash background */
+    .hero-splash-svg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none; z-index: 0;
+    }
+
+    /* background radial glow elements */
+    .hero-glow-1 {
+      position: absolute; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(74,157,154,.22) 0%, transparent 65%);
+      top: -150px; left: 30%; border-radius: 50%; pointer-events: none;
+    }
+    .hero-glow-2 {
+      position: absolute; width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(120,210,200,.15) 0%, transparent 65%);
+      bottom: -100px; left: 5%; border-radius: 50%; pointer-events: none;
+    }
+
+    /* hero nav arrows */
+    .hero-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(255,255,255,.12); border: 1.5px solid rgba(255,255,255,.25);
+      color: white; font-size: 1.3rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .18s; z-index: 10;
+    }
+    .hero-arrow:hover { background: rgba(255,255,255,.22); }
+    .hero-arrow-right { right: 1.2rem; }
+    .hero-arrow-left  { left: 1.2rem; }
+
+    .hero-inner {
+      max-width: 1160px; margin: 0 auto; padding: 0 4rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; min-height: 580px;
+      position: relative; z-index: 1;
+    }
+
+    /* ── PRODUCT VISUAL (left column in RTL) ── */
+    .hero-visual {
+      position: relative;
+      display: flex; align-items: flex-end; justify-content: center;
+      padding-top: 2rem;
+      min-height: 560px;
+    }
+
+    /* organic blob behind product */
+    .hero-blob {
+      position: absolute;
+      width: 340px; height: 340px;
+      background: radial-gradient(ellipse, rgba(90,180,170,.3) 0%, rgba(74,157,154,.08) 55%, transparent 75%);
+      border-radius: 50%;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    /* rotating circular badge elements */
+    .ring-badge {
+      position: absolute;
+      width: 88px; height: 88px;
+      border: 1.5px solid rgba(255,255,255,.28);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      font-size: 0.58rem; font-weight: 700;
+      color: rgba(255,255,255,.8);
+      text-transform: uppercase; letter-spacing: 0.5px;
+      padding: 10px;
+      z-index: 3;
+    }
+    .rb-inner { display: flex; flex-direction: column; align-items: center; gap: 3px; line-height: 1.25; }
+    .rb-icon { font-size: 1.15rem; margin-bottom: 2px; }
+
+    .ring-badge:nth-child(1) { top: 14%; left: 4%; animation: spin 18s linear infinite; }
+    .ring-badge:nth-child(2) { top: 48%; left: 0%; animation: spin 22s linear infinite reverse; }
+    .ring-badge:nth-child(3) { bottom: 22%; left: 8%; animation: spin 16s linear infinite; }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    .rb-inner { animation: spinReverse 18s linear infinite; }
+    .ring-badge:nth-child(2) .rb-inner { animation-duration: 22s; animation-direction: reverse; }
+    .ring-badge:nth-child(3) .rb-inner { animation-duration: 16s; }
+    @keyframes spinReverse {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(-360deg); }
+    }
+
+    /* the product bottle+hand stack */
+    .product-stack {
+      display: flex; flex-direction: column; align-items: center;
+      position: relative; z-index: 4;
+      /* fade animation wrapper */
+    }
+
+    /* individual product slides */
+    .pslide {
+      display: flex; flex-direction: column; align-items: center;
+      position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+      opacity: 0; transition: opacity .7s ease;
+      pointer-events: none;
+    }
+    .pslide.active {
+      opacity: 1; position: relative; left: auto; bottom: auto; transform: none;
+      pointer-events: auto;
+    }
+
+    /* ── CSS BOTTLE ── */
+    /* NOTE FOR PRODUCTION: Replace .css-bottle with <img> of real iHerb product photo */
+    .css-bottle {
+      width: 138px; height: 255px;
+      background: white;
+      border-radius: 22px 22px 14px 14px;
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,.38), 0 6px 18px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.9);
+    }
+    /* cap */
+    .css-bottle::before {
+      content: ''; position: absolute; top: -19px; left: 50%; transform: translateX(-50%);
+      width: 56px; height: 21px;
+      background: linear-gradient(180deg, #d8d8d8 0%, #b8b8b8 100%);
+      border-radius: 8px 8px 0 0;
+    }
+    /* neck */
+    .css-bottle::after {
+      content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 68px; height: 36px;
+      background: #f2f2f2; border-radius: 3px;
+    }
+    .bottle-label {
+      position: absolute; top: 43px; left: 10px; right: 10px; bottom: 14px;
+      border-radius: 10px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 12px 6px;
+      transition: background .5s ease;
+    }
+    .bl-emoji { font-size: 2.5rem; line-height: 1; margin-bottom: 5px; }
+    .bl-name {
+      font-size: 0.58rem; font-weight: 800; color: white;
+      text-align: center; line-height: 1.3;
+      text-transform: uppercase; letter-spacing: 0.3px;
+      text-shadow: 0 1px 3px rgba(0,0,0,.25);
+    }
+    .bl-cert {
+      margin-top: 6px; background: rgba(255,255,255,.25); border: 1px solid rgba(255,255,255,.4);
+      color: white; font-size: 0.55rem; font-weight: 800;
+      padding: 2px 8px; border-radius: 100px; letter-spacing: 0.5px;
+    }
+
+    /* ── CSS HAND (replace with real photo) ── */
+    .css-hand {
+      width: 154px; height: 68px;
+      background: linear-gradient(175deg, #C8906A 0%, #B07248 60%, #9E6438 100%);
+      border-radius: 38px 38px 0 0;
+      margin-top: -6px;
+      position: relative;
+      box-shadow: 0 -6px 20px rgba(0,0,0,.2);
+    }
+    /* thumb hint left */
+    .css-hand::before {
+      content: ''; position: absolute; top: -8px; left: 12px;
+      width: 14px; height: 22px;
+      background: #C8906A; border-radius: 7px 7px 0 0;
+    }
+    /* finger hint right */
+    .css-hand::after {
+      content: ''; position: absolute; top: -8px; right: 12px;
+      width: 14px; height: 22px;
+      background: #C8906A; border-radius: 7px 7px 0 0;
+    }
+
+    /* real product images */
+    .hero-product-img {
+      height: 560px;
+      width: auto;
+      max-width: 480px;
+      object-fit: contain;
+      filter: drop-shadow(0 30px 60px rgba(0,0,0,.55)) drop-shadow(0 8px 20px rgba(0,0,0,.3));
+    }
+
+    .pslide-caption {
+      color: rgba(255,255,255,.8); font-size: 0.8rem; font-weight: 600;
+      margin-top: 1.2rem; text-align: center; letter-spacing: 0.2px;
+      display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
+    }
+    .pslide-cert {
+      display: inline-block; background: rgba(255,255,255,0.2); color: white;
+      font-size: 0.7rem; font-weight: 700; padding: 2px 9px;
+      border-radius: 20px; border: 1px solid rgba(255,255,255,0.4);
+      letter-spacing: 0.5px; white-space: nowrap;
+    }
+
+    /* carousel dot strip inside hero */
+    .hero-dots {
+      position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 7px; z-index: 5;
+    }
+    .hdot {
+      width: 24px; height: 5px; border-radius: 3px;
+      background: rgba(255,255,255,.3); cursor: pointer; transition: all .25s;
+    }
+    .hdot.active { width: 36px; background: white; }
+
+    /* ── HERO TEXT (right column in RTL) ── */
+    .hero-text {
+      padding: 4rem 1rem 4rem 2.5rem;
+      position: relative; z-index: 2;
+    }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+      color: rgba(255,255,255,.9); font-size: 0.73rem; font-weight: 700;
+      padding: 5px 16px; border-radius: var(--radius-pill);
+      letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.4rem;
+    }
+    .hero h1 {
+      font-family: 'BuDrakonit', var(--serif);
+      font-size: clamp(3.2rem, 5.5vw, 5.8rem);
+      line-height: 1.0; color: white;
+      margin-bottom: 1.4rem; letter-spacing: -1px; font-weight: 700;
+    }
+    .hero h1 em { font-style: italic; color: var(--teal-xlight); }
+    .hero-sub {
+      font-size: 1rem; color: rgba(255,255,255,.72);
+      line-height: 1.72; font-weight: 300; margin-bottom: 2.2rem; max-width: 400px;
+    }
+    .hero-btns { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .btn-hero {
+      background: white; color: var(--teal-dark);
+      font-weight: 700; font-size: 0.92rem; padding: 15px 30px;
+      border-radius: var(--radius-pill);
+      transition: transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,.2);
+    }
+    .btn-hero:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.28); }
+    .btn-hero-outline {
+      background: transparent; color: rgba(255,255,255,.88);
+      font-weight: 600; font-size: 0.92rem; padding: 15px 26px;
+      border-radius: var(--radius-pill); border: 1.5px solid rgba(255,255,255,.35);
+      transition: border-color .2s, background .2s;
+    }
+    .btn-hero-outline:hover { border-color: rgba(255,255,255,.7); background: rgba(255,255,255,.08); }
+    .hero-stats {
+      display: flex; gap: 2.5rem; margin-top: 2.5rem;
+      padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.15);
+    }
+    .hstat { color: white; }
+    .hstat-num { font-family: var(--serif); font-size: 1.7rem; font-weight: 900; line-height: 1; display: block; }
+    .hstat-label { font-size: 0.7rem; color: rgba(255,255,255,.58); margin-top: 3px; display: block; }
+
+    /* ── PRODUCT LINEUP ─────────────────────── */
+    .lineup { background: var(--bg); }
+    .lineup-header { margin-bottom: 2rem; }
+    .lineup-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: 1.5rem; }
+    .lineup-title em { font-style: italic; }
+    .filter-pills { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; justify-content: space-between; }
+    .filter-pills-left { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .pill { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.82rem; font-weight: 600; padding: 7px 18px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; }
+    .pill:hover { border-color: var(--teal); color: var(--teal); }
+    .pill.active { background: var(--teal); border-color: var(--teal); color: white; }
+    .nav-arrows { display: flex; gap: 8px; }
+    .arrow-btn { width: 36px; height: 36px; border: 1.5px solid var(--border); background: var(--bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1rem; color: var(--text-mid); transition: all .18s; }
+    .arrow-btn:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* PRODUCT CARDS */
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 1.5rem; }
+    .product-card { background: var(--card-bg); border-radius: var(--radius-lg); overflow: hidden; transition: transform .22s, box-shadow .22s; cursor: pointer; position: relative; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .card-img-wrap { background: white; height: 180px; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid rgba(0,0,0,.04); }
+    .card-emoji { font-size: 4.5rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,.1)); }
+    .badge-corner { position: absolute; top: 12px; right: 12px; font-size: 0.62rem; font-weight: 700; padding: 3px 10px; border-radius: var(--radius-pill); letter-spacing: 0.5px; text-transform: uppercase; }
+    .badge-orange { background: var(--orange); color: white; }
+    .badge-teal { background: var(--teal); color: white; }
+    .cert-corner { position: absolute; top: 12px; left: 12px; background: var(--teal-light); border: 1px solid var(--teal); color: var(--teal-dark); font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); }
+    .card-body { padding: 1.1rem 1.1rem 1.3rem; }
+    .card-cat { font-size: 0.68rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .card-name { font-family: var(--serif); font-size: 0.95rem; font-weight: 700; line-height: 1.35; color: var(--text); margin-bottom: 8px; }
+    .card-stars { display: flex; align-items: center; gap: 5px; margin-bottom: 0.8rem; }
+    .stars-gold { color: #F59E0B; font-size: 0.78rem; }
+    .stars-count { font-size: 0.72rem; color: var(--text-soft); }
+    .card-actions { display: flex; gap: 8px; align-items: center; }
+    .card-btn { display: inline-flex; align-items: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: background .18s; flex: 1; justify-content: center; }
+    .card-btn:hover { background: var(--teal-mid); }
+    .card-btn-size { flex: 0 1 auto; font-size: 0.74rem; padding: 7px 13px; }
+    .card-report-btn { flex-shrink: 0; background: none; border: 1.5px solid var(--border); color: var(--text-soft); font-size: 0.73rem; font-weight: 600; padding: 7px 11px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; }
+    .card-report-btn:hover { border-color: #e85d04; color: #e85d04; background: #fff5f0; }
+
+    /* ── REPORT MODAL ── */
+    .report-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .2s; }
+    .report-modal-overlay.open { opacity: 1; pointer-events: auto; }
+    .report-modal-box { background: white; border-radius: 20px; padding: 2rem 2rem 1.5rem; max-width: 420px; width: calc(100% - 2rem); position: relative; transform: translateY(20px); transition: transform .2s; max-height: 90vh; overflow-y: auto; }
+    .report-modal-overlay.open .report-modal-box { transform: translateY(0); }
+    .report-modal-close { position: absolute; top: 1rem; left: 1rem; background: var(--bg-soft); border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 1rem; color: var(--text-mid); display: flex; align-items: center; justify-content: center; transition: background .15s; }
+    .report-modal-close:hover { background: var(--border); }
+    .report-modal-icon { font-size: 1.8rem; margin-bottom: .5rem; }
+    .report-modal-title { font-family: var(--serif); font-size: 1.25rem; font-weight: 700; color: var(--text); margin-bottom: .3rem; }
+    .report-modal-product { font-size: .83rem; color: var(--text-mid); font-weight: 600; dir: auto; margin-bottom: .2rem; }
+    .report-modal-cert { font-size: .78rem; color: var(--text-soft); margin-bottom: 1.2rem; }
+    .report-field { margin-bottom: 1rem; }
+    .report-label { display: block; font-size: .75rem; font-weight: 700; color: var(--text-mid); margin-bottom: .4rem; letter-spacing: .3px; }
+    .report-select, .report-textarea, .report-input { width: 100%; border: 1.5px solid var(--border); border-radius: 10px; padding: 9px 12px; font-size: .87rem; font-family: var(--sans); color: var(--text); background: var(--bg-soft); transition: border-color .15s; box-sizing: border-box; }
+    .report-select:focus, .report-textarea:focus, .report-input:focus { outline: none; border-color: var(--teal); }
+    .report-textarea { resize: vertical; min-height: 80px; }
+    .report-actions { display: flex; gap: 10px; margin-top: 1.2rem; }
+    .report-submit-btn { flex: 1; background: var(--teal-dark); color: white; border: none; border-radius: var(--radius-pill); padding: 10px 20px; font-size: .87rem; font-weight: 700; cursor: pointer; transition: background .18s; font-family: var(--sans); }
+    .report-submit-btn:hover { background: var(--teal); }
+    .report-cancel-btn { background: var(--bg-soft); color: var(--text-mid); border: 1.5px solid var(--border); border-radius: var(--radius-pill); padding: 10px 16px; font-size: .87rem; font-weight: 600; cursor: pointer; transition: all .18s; font-family: var(--sans); }
+    .report-cancel-btn:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* ── FEATURED PRODUCT ───────────────────── */
+    .featured { background: var(--bg); border-top: 1px solid var(--border); }
+    .featured-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .featured-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; color: var(--text-soft); text-transform: uppercase; margin-bottom: 1rem; }
+    .featured-title { font-family: var(--serif); font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 900; line-height: 1.12; color: var(--text); margin-bottom: 1.3rem; }
+    .featured-title em { font-style: italic; }
+    .featured-desc { font-size: 0.95rem; color: var(--text-soft); line-height: 1.75; margin-bottom: 1.8rem; }
+    .featured-checks { list-style: none; margin-bottom: 2.2rem; }
+    .featured-checks li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; font-weight: 500; color: var(--text-mid); padding: 5px 0; }
+    .check-icon { width: 20px; height: 20px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.65rem; flex-shrink: 0; margin-top: 2px; }
+    .featured-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--teal); color: white; font-weight: 600; font-size: 0.88rem; padding: 13px 26px; border-radius: var(--radius-pill); transition: background .18s; }
+    .btn-primary:hover { background: var(--teal-mid); }
+    .btn-dark { background: var(--teal-dark); color: white; font-weight: 600; font-size: 0.88rem; padding: 13px 26px; border-radius: var(--radius-pill); transition: background .18s; }
+    .btn-dark:hover { background: var(--teal-mid); }
+    .btn-pricing { background: transparent; border: 1.5px solid var(--border); color: var(--text-mid); font-weight: 600; font-size: 0.82rem; padding: 13px 20px; border-radius: var(--radius-pill); display: flex; align-items: center; gap: 8px; }
+    .featured-visual { background: var(--teal-light); border-radius: var(--radius-lg); height: 420px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .featured-visual::before { content: ''; position: absolute; width: 300px; height: 300px; background: rgba(74,157,154,.1); border-radius: 50%; bottom: -60px; right: -60px; }
+    .featured-big-emoji { font-size: 7rem; filter: drop-shadow(0 8px 20px rgba(0,0,0,.15)); }
+    .featured-cert-badge { margin-top: 1.5rem; background: white; border: 2px solid var(--teal); color: var(--teal-dark); font-size: 0.78rem; font-weight: 700; padding: 6px 18px; border-radius: var(--radius-pill); }
+
+    /* ── SHOP BY CATEGORY ───────────────────── */
+    .categories { background: var(--bg); border-top: 1px solid var(--border); }
+    .cat-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.8rem; }
+    .cat-title { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--text); }
+    .view-all-btn { background: transparent; border: 1.5px solid var(--border); color: var(--text-mid); font-size: 0.82rem; font-weight: 600; padding: 9px 20px; border-radius: var(--radius-pill); transition: all .18s; }
+    .view-all-btn:hover { border-color: var(--teal); color: var(--teal); }
+    .cat-scroll { display: flex; gap: 1.2rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: none; }
+    .cat-scroll::-webkit-scrollbar { display: none; }
+    .cat-card { flex-shrink: 0; width: 200px; height: 240px; border-radius: var(--radius-lg); overflow: hidden; position: relative; cursor: pointer; transition: transform .22s; display: block; text-decoration: none; }
+    .cat-card:hover { transform: scale(1.03); }
+    .cat-card:hover .cat-card-overlay { background: rgba(44,99,96,.55); }
+    .cat-card-bg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4.5rem; }
+    .cat-card-bg.spices { background: linear-gradient(145deg, #F4E4C8, #E8C98A); }
+    .cat-card-bg.oils   { background: linear-gradient(145deg, #C8DFB8, #9EC47E); }
+    .cat-card-bg.flour  { background: linear-gradient(145deg, #F0E4D0, #D4B894); }
+    .cat-card-bg.choc   { background: linear-gradient(145deg, #D4B0A0, #A06848); }
+    .cat-card-bg.tea    { background: linear-gradient(145deg, #C8E8C8, #7EC47E); }
+    .cat-card-overlay { position: absolute; inset: 0; background: rgba(44,99,96,.4); display: flex; align-items: flex-end; padding: 1.2rem; transition: background .22s; }
+    .cat-card-name { color: white; font-family: var(--serif); font-size: 1.1rem; font-weight: 700; text-shadow: 0 2px 6px rgba(0,0,0,.3); }
+
+    /* ── TESTIMONIALS ───────────────────────── */
+    .testimonials { background: var(--teal-dark); }
+    .testi-stars { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,.7); font-weight: 500; margin-bottom: 1rem; }
+    .testi-stars .stars { color: #F59E0B; }
+    .testi-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; color: white; }
+    .testi-nav { display: flex; gap: 10px; margin-top: 1rem; }
+    .arrow-btn-white { width: 38px; height: 38px; border: 1.5px solid rgba(255,255,255,.3); background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1rem; color: white; transition: all .18s; }
+    .arrow-btn-white:hover { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.6); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .testi-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius-lg); padding: 1.6rem; transition: background .2s; }
+    .testi-card:hover { background: rgba(255,255,255,.13); }
+    .testi-video { width: 100%; height: 160px; border-radius: var(--radius); background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem; position: relative; }
+    .testi-video-emoji { font-size: 3rem; }
+    .play-btn { position: absolute; width: 44px; height: 44px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--teal-dark); font-size: 1rem; box-shadow: var(--shadow); }
+    .testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.8rem; }
+    .testi-name { font-weight: 600; color: white; font-size: 0.9rem; margin-bottom: 4px; }
+    .testi-role { font-size: 0.75rem; color: rgba(255,255,255,.6); margin-bottom: 0.8rem; }
+    .testi-text { font-size: 0.85rem; color: rgba(255,255,255,.8); line-height: 1.65; }
+    .testi-stars-sm { color: #F59E0B; font-size: 0.75rem; margin-top: 0.8rem; }
+
+    /* ── VALUES ─────────────────────────────── */
+    .values { background: var(--bg); }
+    .values-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .values-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; line-height: 1.12; color: var(--text); margin-bottom: 1.2rem; }
+    .values-desc { font-size: 0.95rem; color: var(--text-soft); line-height: 1.75; margin-bottom: 2rem; }
+    .accordion { border-top: 1px solid var(--border); }
+    .accordion-item { border-bottom: 1px solid var(--border); }
+    .accordion-trigger { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 1.3rem 0; background: none; border: none; cursor: pointer; text-align: right; gap: 1rem; }
+    .accordion-trigger-text { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--teal-dark); }
+    .accordion-icon { font-size: 1.2rem; color: var(--text-soft); flex-shrink: 0; transition: transform .22s; }
+    .accordion-item.open .accordion-icon { transform: rotate(180deg); }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+    .accordion-item.open .accordion-content { max-height: 200px; }
+    .accordion-body { font-size: 0.9rem; color: var(--text-soft); line-height: 1.7; padding-bottom: 1.2rem; }
+
+    /* ── FOOTER ─────────────────────────────── */
+    .footer { background: var(--teal-dark); padding: 3.5rem 0 2rem; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+    .footer-brand-name { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+    .footer-brand-name span { background: linear-gradient(90deg, #4A9D9A, #A8D44B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-desc { font-size: 0.85rem; color: rgba(255,255,255,.6); line-height: 1.7; margin-bottom: 1.3rem; }
+    .footer-cert-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .f-cert-pill { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.75); font-size: 0.65rem; font-weight: 700; padding: 3px 10px; border-radius: var(--radius-pill); }
+    .footer-col-title { font-family: var(--serif); font-size: 0.95rem; font-weight: 700; color: white; margin-bottom: 1rem; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.6rem; }
+    .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,.6); transition: color .18s; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.5rem; text-align: center; font-size: 0.78rem; color: rgba(255,255,255,.4); }
+
+    /* ── NAV DROPDOWNS ─────────────────────── */
+    .nav-item { position: relative; }
+    .nav-dd-trigger {
+      background: none; border: none; cursor: pointer; padding: 0;
+      font-family: var(--sans); font-size: 0.88rem; font-weight: 500;
+      color: var(--text-mid); display: inline-flex; align-items: center; gap: 5px;
+      transition: color .18s; white-space: nowrap;
+    }
+    .nav-dd-trigger:hover,
+    .nav-dd-trigger.active { color: var(--teal); }
+    .dd-arrow { font-size: .65rem; display: inline-block; transition: transform .2s; }
+    .nav-dd-trigger.active .dd-arrow { transform: rotate(180deg); }
+    /* split trigger: link + arrow button */
+    .nav-dd-split { display: inline-flex; align-items: center; gap: 2px; }
+    .nav-dd-split-link { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; white-space: nowrap; }
+    .nav-dd-split-link:hover { color: var(--teal); }
+    .nav-dd-arrow-btn { background: none; border: none; cursor: pointer; padding: 2px 4px; color: var(--text-mid); transition: color .18s; line-height: 1; }
+    .nav-dd-arrow-btn:hover, .nav-dd-arrow-btn.active { color: var(--teal); }
+    .nav-dd-arrow-btn.active .dd-arrow { transform: rotate(180deg); }
+
+    .nav-dropdown {
+      position: absolute; top: 100%; right: 0;
+      padding-top: 8px;
+      background: white; border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-lg);
+      min-width: 210px; max-height: 420px; overflow-y: auto;
+      padding: .45rem 0; z-index: 500;
+      opacity: 0; transform: translateY(-6px); pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    /* אין גפ — padding-top מטפל במרחק הוויזואלי */
+    .nav-dropdown.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .nav-item:hover .nav-dropdown { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .nav-dd-item {
+      display: block; padding: .52rem 1.1rem;
+      font-size: .83rem; color: var(--text-mid);
+      transition: background .1s, color .1s; white-space: nowrap;
+    }
+    .nav-dd-item:hover { background: var(--teal-light); color: var(--teal-dark); }
+    .nav-dd-divider { height: 1px; background: var(--border); margin: .35rem .8rem; }
+    .nav-dd-header {
+      font-size: .67rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--text-soft); padding: .6rem 1.1rem .3rem; display: block;
+    }
+
+    /* Wide dropdown for brands — 2 columns */
+    .nav-dropdown-brands {
+      min-width: 440px;
+    }
+    #dd-brands-list {
+      columns: 2; column-gap: 0;
+    }
+    .nav-dropdown-brands .nav-dd-item {
+      break-inside: avoid; display: block;
+    }
+    /* prevent off-screen: align left edge for wide dropdowns */
+    .nav-item-brands .nav-dropdown { right: auto; left: -80px; }
+
+    /* ── SEARCH ENGINE ──────────────────────── */
+    .search-engine-section { background: var(--bg-soft); border-top: 1px solid var(--border); }
+    .search-hero-wrap { text-align: center; margin-bottom: 2.2rem; }
+    .search-hero-title { font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 900; color: var(--text); margin-bottom: 0.4rem; }
+    .search-hero-title em { font-style: italic; color: var(--teal); }
+    .search-hero-sub { font-size: 0.88rem; color: var(--text-soft); }
+    .search-bar-outer { max-width: 620px; margin: 0 auto 2rem; }
+    .search-bar-inner { display: flex; align-items: center; background: white; border: 2px solid var(--border); border-radius: var(--radius-pill); padding: 5px 5px 5px 18px; box-shadow: var(--shadow-sm); transition: border-color .2s, box-shadow .2s; gap: 8px; }
+    .search-bar-inner:focus-within { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(74,157,154,.1); }
+    .search-bar-input { flex: 1; border: none; outline: none; background: transparent; font-family: var(--sans); font-size: 0.9rem; color: var(--text); text-align: right; min-width: 0; }
+    .search-bar-input::placeholder { color: var(--text-soft); }
+    .search-bar-btn { background: var(--teal); color: white; border: none; padding: 9px 22px; border-radius: var(--radius-pill); font-family: var(--sans); font-size: 0.85rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background .18s; flex-shrink: 0; }
+    .search-bar-btn:hover { background: var(--teal-mid); }
+    .filter-section { margin-bottom: 1rem; }
+    .filter-section-label { font-size: 0.7rem; font-weight: 700; color: var(--text-soft); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.5rem; }
+    .filter-pills-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .pill-sm { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.73rem; font-weight: 600; padding: 4px 12px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; }
+    .pill-sm:hover { border-color: var(--teal); color: var(--teal); }
+    .pill-sm.active { background: var(--teal-dark); border-color: var(--teal-dark); color: white; }
+    /* Tag pills — slightly distinct style */
+    .pill-tag { gap: 4px; }
+    .pill-tag.active { background: var(--teal); border-color: var(--teal); }
+    .tag-count { display: inline-block; background: rgba(255,255,255,0.25); border-radius: 20px; font-size: 0.65rem; padding: 0 5px; margin-right: 4px; vertical-align: middle; line-height: 1.5; }
+    .pill-sm:not(.active) .tag-count { background: var(--teal-light); color: var(--teal-dark); }
+    .results-meta { display: flex; align-items: center; justify-content: space-between; margin: 1.2rem 0 1rem; }
+    .results-count-txt { font-size: 0.82rem; color: var(--text-soft); font-weight: 500; }
+    .reset-btn { background: none; border: 1.5px solid var(--border); color: var(--text-soft); font-family: var(--sans); font-size: 0.75rem; font-weight: 600; padding: 5px 14px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; }
+    .reset-btn:hover { border-color: var(--teal); color: var(--teal); }
+    .card-brand-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px; }
+    .card-brand-link { font-size: 0.7rem; font-weight: 700; color: var(--teal-dark); text-decoration: none; transition: color .15s; }
+    .card-brand-link:hover { color: var(--teal); text-decoration: underline; }
+    .card-name-en { font-size: 0.68rem; color: var(--text-soft); line-height: 1.3; margin-bottom: 7px; }
+    .card-desc-txt { font-size: 0.8rem; color: var(--text-soft); line-height: 1.5; margin-bottom: 0.3rem; }
+    .card-read-more { font-size: 0.72rem; font-weight: 600; color: var(--teal); cursor: pointer; background: none; border: none; font-family: var(--sans); padding: 0; margin-bottom: 0.5rem; display: inline-block; }
+    .card-read-more:hover { text-decoration: underline; }
+    .card-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 5px; background: transparent; color: var(--teal-dark); border: 1.5px solid var(--teal-dark); font-size: 0.75rem; font-weight: 600; padding: 7px 13px; border-radius: var(--radius-pill); transition: all .18s; white-space: nowrap; }
+    .card-btn-outline:hover { background: var(--teal-light); }
+    .card-cat-link { font-size: 0.68rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: .8px; text-decoration: none; }
+    .card-cat-link:hover { text-decoration: underline; }
+    .skeleton-card { background: var(--card-bg); border-radius: var(--radius-lg); height: 280px; animation: skel-pulse 1.5s ease-in-out infinite; }
+    @keyframes skel-pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+    .load-more-wrap { display: none; justify-content: center; margin-top: 2.2rem; }
+    .load-more-btn { background: var(--bg); border: 2px solid var(--border); color: var(--text-mid); font-family: var(--sans); font-size: 0.88rem; font-weight: 600; padding: 12px 32px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; }
+    .load-more-btn:hover { border-color: var(--teal); color: var(--teal); }
+    /* cert-corner clickable */
+    .cert-corner-link { position: absolute; top: 12px; left: 12px; font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); color: white; text-decoration: none; transition: opacity .15s; }
+    .cert-corner-link:hover { opacity: .8; }
+
+    /* ── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; padding: 0 2rem; }
+      .hero-visual { min-height: 340px; order: -1; }
+      .hero h1 { font-size: 2.8rem; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .featured-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .featured-visual { height: 280px; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .values-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .ring-badge { display: none; }
+      .trust-bar-item { padding: 0.65rem 1rem; }
+    }
+    @media (max-width: 640px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero h1 { font-size: 2.2rem; }
+      .section-pad { padding: 3rem 0; }
+      .trust-bar-inner { gap: 0; flex-wrap: wrap; }
+      .trust-bar-item { font-size: 0.7rem; padding: 0.5rem 0.8rem; border-left: none; border-bottom: 1px solid rgba(74,157,154,.15); width: 50%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── ANNOUNCEMENT BAR ──────────────────────────── -->
+<div class="announce-bar">
+  <strong>חדש:</strong> <span id="ticker-count">340</span>+ מוצרים כשרים מאומתים &nbsp;|&nbsp; משלוח ישיר לישראל ✡
+</div>
+
+<!-- ── NAV ──────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <img src="FOODOS_online2_LOGO.png" alt="FOODOS Online" class="logo-img">
+      <div class="logo-name">
+        FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
+        <small>כשר, שווה וקולינרי - זה כאן.</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#products">מוצרים</a></li>
+
+      <li class="nav-item">
+        <button class="nav-dd-trigger" onclick="toggleDD('dd-cats', this)">
+          סוגי מוצרים <span class="dd-arrow">▾</span>
+        </button>
+        <div class="nav-dropdown" id="dd-cats">
+          <span class="nav-dd-header">סוגי מוצרים</span>
+          <div class="nav-dd-divider"></div>
+          <a href="#categories" class="nav-dd-item">← כל הקטגוריות</a>
+          <div class="nav-dd-divider"></div>
+          <div id="dd-cats-list"></div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <button class="nav-dd-trigger" onclick="toggleDD('dd-lifestyle', this)">
+          סוגי תזונה <span class="dd-arrow">▾</span>
+        </button>
+        <div class="nav-dropdown" id="dd-lifestyle">
+          <span class="nav-dd-header">סגנון תזונה</span>
+          <div class="nav-dd-divider"></div>
+          <div id="dd-lifestyle-list"></div>
+        </div>
+      </li>
+
+      <li class="nav-item nav-item-brands">
+        <button class="nav-dd-trigger" onclick="toggleDD('dd-brands', this)">
+          מותגים <span class="dd-arrow">▾</span>
+        </button>
+        <div class="nav-dropdown nav-dropdown-brands" id="dd-brands">
+          <a href="herb/brand.html" class="nav-dd-all-link" style="-webkit-column-span:all;column-span:all;display:block;font-size:.82rem;font-weight:700;color:var(--teal);padding:6px 0 10px;border-bottom:1px solid var(--border);margin-bottom:8px;">כל המותגים ←</a>
+          <div id="dd-brands-list"></div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a href="herb/certs.html" class="nav-dd-trigger" style="text-decoration:none;">הכשרויות <span class="dd-arrow">▾</span></a>
+        <div class="nav-dropdown" id="dd-certs">
+          <a href="herb/certs.html" class="nav-dd-all-link" style="display:block;font-size:.82rem;font-weight:700;color:var(--teal);padding:6px 0 10px;border-bottom:1px solid var(--border);margin-bottom:8px;">כל הכשרויות שלנו ←</a>
+          <span class="nav-dd-header">קפצי לכשרות ספציפית</span>
+          <div class="nav-dd-divider"></div>
+          <div id="dd-certs-list"></div>
+        </div>
+      </li>
+
+      <li><a href="#values">על הפרויקט</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── TRUST BAR ─────────────────────────────────── -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-bar-item"><span class="tbi-icon">✡</span> הכשרות מאומתת</div>
+    <div class="trust-bar-item"><span class="tbi-icon">🔍</span> נבדק ידנית</div>
+    <div class="trust-bar-item"><span class="tbi-icon">👥</span> קהילת 56,000</div>
+    <div class="trust-bar-item"><span class="tbi-icon">🚚</span> משלוח לישראל</div>
+  </div>
+</div>
+
+<!-- ── HERO ──────────────────────────────────────── -->
+<section class="hero">
+
+  <!-- Flowing wave SVG background -->
+  <svg class="hero-splash-svg" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="glowCenter" cx="65%" cy="40%" r="55%">
+        <stop offset="0%"   stop-color="#3D8D8A" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#1A4F4D" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="glowLeft" cx="10%" cy="80%" r="40%">
+        <stop offset="0%"   stop-color="#4A9D9A" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#1A4F4D" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <!-- base -->
+    <rect width="1440" height="640" fill="#1A4F4D"/>
+
+    <!-- radial glows for depth -->
+    <rect width="1440" height="640" fill="url(#glowCenter)"/>
+    <rect width="1440" height="640" fill="url(#glowLeft)"/>
+
+    <!-- wave 1 — darkest, bottom -->
+    <path d="M0,520 C180,470 360,560 540,510 C720,460 900,530 1080,490 C1260,450 1380,500 1440,480 L1440,640 L0,640Z"
+          fill="#163F3D" opacity="0.95"/>
+
+    <!-- wave 2 — medium teal -->
+    <path d="M0,440 C200,400 380,480 580,435 C780,390 960,460 1150,420 C1300,390 1400,430 1440,415 L1440,640 L0,640Z"
+          fill="#2C6360" opacity="0.75"/>
+
+    <!-- wave 3 — lighter teal, upper -->
+    <path d="M0,340 C240,295 460,375 700,330 C900,295 1100,360 1300,320 C1380,305 1430,320 1440,315 L1440,500 C1380,515 1260,490 1100,528 C900,572 700,500 500,545 C300,585 120,530 0,560Z"
+          fill="#3A8380" opacity="0.45"/>
+
+    <!-- wave 4 — brightest teal, decorative ripple -->
+    <path d="M0,200 C150,170 300,210 450,185 C600,160 750,200 900,175 C1050,150 1200,185 1350,165 C1400,158 1430,162 1440,160 L1440,230 C1380,252 1240,218 1080,240 C880,268 680,228 480,252 C280,276 100,248 0,268Z"
+          fill="#4A9D9A" opacity="0.22"/>
+
+    <!-- lime accent arcs -->
+    <path d="M1100,0 C1220,-20 1380,20 1440,80 L1440,0Z"
+          fill="#7AB648" opacity="0.5"/>
+    <path d="M1180,0 C1280,10 1400,55 1440,120 L1440,0Z"
+          fill="#A8D44B" opacity="0.25"/>
+
+    <!-- subtle lime glow dots -->
+    <circle cx="1390" cy="160" r="18" fill="#A8D44B" opacity="0.35"/>
+    <circle cx="860"  cy="580" r="12" fill="#A8D44B" opacity="0.3"/>
+  </svg>
+
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+
+  <button class="hero-arrow hero-arrow-right" onclick="changeSlide(-1)">‹</button>
+  <button class="hero-arrow hero-arrow-left"  onclick="changeSlide(1)">›</button>
+
+  <div class="hero-inner">
+
+    <!-- PRODUCT VISUAL — left in RTL -->
+    <div class="hero-visual">
+      <div class="hero-blob"></div>
+
+      <!-- ring badges removed -->
+
+      <!-- product slides -->
+      <!--
+        PRODUCTION NOTE:
+        Replace each .pslide with:
+        <div class="pslide [active]">
+          <img src="hand-holding-[product].jpg" alt="..." style="height:320px; object-fit:contain;">
+          <div class="pslide-caption">שם מוצר • הכשרות</div>
+        </div>
+      -->
+      <div class="product-stack" id="productStack">
+
+        <div class="pslide active" id="slide-0">
+          <img src="images/4ce7afb9-06df-43c5-af19-618af89b6218.png" alt="Frontier Co-op Organic Vanilla" class="hero-product-img">
+          <div class="pslide-caption">Frontier Co-op &nbsp;•&nbsp; תמצית וניל אורגנית<span class="pslide-cert">KSA</span></div>
+        </div>
+
+        <div class="pslide" id="slide-1">
+          <img src="images/913fafe9-f1b7-4de9-8ea4-75793c24ef55.png" alt="Navitas Organics Acai Powder" class="hero-product-img">
+          <div class="pslide-caption">Navitas Organics &nbsp;•&nbsp; אבקת אסאי אורגנית<span class="pslide-cert">EarthKosher</span></div>
+        </div>
+
+        <div class="pslide" id="slide-2">
+          <img src="images/89162099-ddf8-4bda-b403-8b3450b67f4d.png" alt="Seapoint Farms Dry Roasted Edamame" class="hero-product-img">
+          <div class="pslide-caption">Seapoint Farms &nbsp;•&nbsp; אדממה קלוי עם מלח ים<span class="pslide-cert">OK</span></div>
+        </div>
+
+        <div class="pslide" id="slide-3">
+          <img src="images/b13d98f5-5056-4226-a4db-58ff9dbcd22f.png" alt="Nesquik Chocolate" class="hero-product-img">
+          <div class="pslide-caption">Nestle Nesquik &nbsp;•&nbsp; אבקת שוקו<span class="pslide-cert">OU</span></div>
+        </div>
+
+        <div class="pslide" id="slide-4">
+          <img src="images/be115b30-ed64-4bd4-9dfc-9ceed7c20719.png" alt="Simply Organic Everything Blend" class="hero-product-img">
+          <div class="pslide-caption">Simply Organic &nbsp;•&nbsp; תערובת תבלינים Everything<span class="pslide-cert">KSA</span></div>
+        </div>
+
+        <div class="pslide" id="slide-5">
+          <img src="images/ChatGPT Image Jul 28, 2026, 01_06_42 AM (1).png" alt="PopCorners White Cheddar" class="hero-product-img">
+          <div class="pslide-caption">PopCorners &nbsp;•&nbsp; צ'יפס פופקורן צ'דר לבן<span class="pslide-cert">OU</span></div>
+        </div>
+
+      </div><!-- /product-stack -->
+
+      <!-- dot navigation -->
+      <div class="hero-dots">
+        <div class="hdot active" onclick="goSlide(0)"></div>
+        <div class="hdot" onclick="goSlide(1)"></div>
+        <div class="hdot" onclick="goSlide(2)"></div>
+        <div class="hdot" onclick="goSlide(3)"></div>
+        <div class="hdot" onclick="goSlide(4)"></div>
+        <div class="hdot" onclick="goSlide(5)"></div>
+      </div>
+
+    </div><!-- /hero-visual -->
+
+    <!-- TEXT — right in RTL -->
+    <div class="hero-text">
+      <div class="hero-kicker">✡ &nbsp;<span id="hero-kicker-count">340</span>+ מוצרים כשרים מאומתים</div>
+      <h1 style="font-family:'BuDrakonit','Playfair Display',serif; font-style:normal; line-height:1.05; letter-spacing:-1px;">
+        <span style="display:inline-flex; align-items:center; gap:0.2em; vertical-align:middle;">
+          <img src="%D7%9E%D7%99%D7%9C%D7%AA%20%D7%94%D7%9C%D7%95%D7%92%D7%95%20%D7%A9%D7%9C%20%D7%A4%D7%95%D7%93%D7%95%D7%A1%20%D7%A2%D7%9C%20%D7%A8%D7%A7%D7%A2%20%D7%A9%D7%A7%D7%95%D7%A3.png"
+               alt="פודוס"
+               style="height:0.95em; width:auto; display:inline-block; vertical-align:middle; filter:brightness(0) invert(1);">
+          <span style="font-family:'Caveat',cursive; font-weight:700; font-size:1em; color:#F5C518; letter-spacing:2px; vertical-align:middle;">Online</span>
+        </span><br>
+        <span style="font-size:0.42em; line-height:1.3; font-family:'VarelaRound','Varela Round',sans-serif; font-weight:400; display:block; margin-top:0.3em; color:rgba(255,255,255,0.95); white-space:nowrap;">כשר, שווה וקולינרי - זה כאן.</span>
+        <span style="font-size:0.24em; line-height:1.5; font-family:var(--sans); font-weight:500; display:block; margin-top:0.5em; color:rgba(255,255,255,0.6); letter-spacing:0.5px;">מבית פודוס פודי'ז שומרי כשרות</span>
+      </h1>
+      <p class="hero-sub" style="margin-top:1.2rem;">
+        מוצרים כשרים מ-iHERB שנבדקו ידנית, ג'אדטים קולינריים והמלצות מרחבי הרשת.
+      </p>
+      <div class="hero-btns">
+        <a href="#" class="btn-hero">גלו את המוצרים ←</a>
+        <a href="#" class="btn-hero-outline">על הפרויקט</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-num" id="stat-products">340+</span>
+          <span class="hstat-label">מוצרים מאומתים</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-num" id="stat-cats">7</span>
+          <span class="hstat-label">קטגוריות</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-num" id="stat-certs">12</span>
+          <span class="hstat-label">כשרויות מאושרות</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /hero-inner -->
+</section>
+
+<!-- ── PRODUCT SEARCH ENGINE ──────────────────────────────── -->
+<section class="search-engine-section section-pad" id="products">
+  <div class="container">
+    <div class="search-hero-wrap">
+      <h2 class="search-hero-title">חפש מבין <em>180 מוצרים</em> כשרים מאומתים</h2>
+      <p class="search-hero-sub">כל המוצרים נבדקו ידנית — כשרות מאומתת לפי רשימת ההכשרויות המאושרות</p>
+    </div>
+
+    <div class="search-bar-outer">
+      <div class="search-bar-inner">
+        <input type="text" id="srch" class="search-bar-input" placeholder="חפש לפי שם מוצר, מותג, קטגוריה...">
+        <button class="search-bar-btn" onclick="applyFilters()">חיפוש</button>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-section-label">תגיות</div>
+      <div class="filter-pills-row" id="tag-pills"></div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-section-label">קטגוריה</div>
+      <div class="filter-pills-row" id="cat-pills"></div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-section-label">כשרות</div>
+      <div class="filter-pills-row" id="cert-pills"></div>
+    </div>
+
+    <div class="results-meta">
+      <span class="results-count-txt" id="results-count">טוען מוצרים...</span>
+      <button class="reset-btn" id="reset-btn" onclick="resetFilters()" style="display:none">נקה פילטרים ✕</button>
+    </div>
+
+    <div class="product-grid" id="product-grid">
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+    </div>
+
+    <div class="load-more-wrap" id="load-more-wrap">
+      <button class="load-more-btn" onclick="loadMore()">הצג עוד מוצרים ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PRODUCT ───────────────────────────── -->
+<section class="featured section-pad">
+  <div class="container">
+    <div class="featured-inner">
+      <div>
+        <div class="featured-label">FEATURED PRODUCT</div>
+        <h2 class="featured-title">שדרגי את הבישול שלך<br>עם <em>שמן זית כתית</em></h2>
+        <p class="featured-desc">שמן הזית של Krinos מגיע ישירות מיוון — עשיר בפוליפנולים, עם הכשר OU מאומת. מושלם לסלטים, טיגון קל ובישול יומיומי.</p>
+        <ul class="featured-checks">
+          <li><span class="check-icon">✓</span><span><strong>הכשר OU</strong> — אחת ההכשרויות האמינות בעולם</span></li>
+          <li><span class="check-icon">✓</span><span><strong>כתית מעולה</strong> — חומציות פחות מ-0.8%</span></li>
+          <li><span class="check-icon">✓</span><span><strong>ייצור יווני</strong> — אזור אוליאה המסורתי</span></li>
+          <li><span class="check-icon">✓</span><span><strong>חיסכון של עד 30%</strong> — לעומת מחיר בארץ</span></li>
+        </ul>
+        <div class="featured-btns">
+          <a href="#" class="btn-dark">לרכישה ←</a>
+          <a href="#" class="btn-pricing">הכשרות OU | מאומת ✡</a>
+        </div>
+      </div>
+      <div class="featured-visual">
+        <span class="featured-big-emoji">🫒</span>
+        <div class="featured-cert-badge">✡ OU KOSHER CERTIFIED</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SHOP BY CATEGORY ───────────────────────────── -->
+<div id="categories"></div>
+<section class="categories section-pad">
+  <div class="container">
+    <div class="cat-header">
+      <h2 class="cat-title">קנייה לפי קטגוריה</h2>
+      <a href="#" class="view-all-btn">צפייה בכולן ←</a>
+    </div>
+    <div class="cat-scroll" id="cat-cards-row">
+      <a href="herb/category.html?cat=%D7%AA%D7%91%D7%9C%D7%99%D7%A0%D7%99%D7%9D" class="cat-card"><div class="cat-card-bg spices">🧂</div><div class="cat-card-overlay"><span class="cat-card-name">תבלינים</span></div></a>
+      <a href="herb/category.html?cat=%D7%A9%D7%9E%D7%A0%D7%99%D7%9D" class="cat-card"><div class="cat-card-bg oils">🫒</div><div class="cat-card-overlay"><span class="cat-card-name">שמנים</span></div></a>
+      <a href="herb/category.html?cat=%D7%A7%D7%9E%D7%97%D7%99%D7%9D" class="cat-card"><div class="cat-card-bg flour">🌾</div><div class="cat-card-overlay"><span class="cat-card-name">קמחים</span></div></a>
+      <a href="herb/category.html?cat=%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%93" class="cat-card"><div class="cat-card-bg choc">🍫</div><div class="cat-card-overlay"><span class="cat-card-name">שוקולד</span></div></a>
+      <a href="herb/category.html?cat=%D7%AA%D7%94" class="cat-card"><div class="cat-card-bg tea">🌿</div><div class="cat-card-overlay"><span class="cat-card-name">תה</span></div></a>
+      <a href="herb/category.html?cat=%D7%97%D7%98%D7%99%D7%A4%D7%99%D7%9D" class="cat-card" style="background:linear-gradient(145deg,#E8D5C8,#D4A88C)"><div class="cat-card-bg" style="background:linear-gradient(145deg,#F4E0D0,#E8C0A0)">🍿</div><div class="cat-card-overlay"><span class="cat-card-name">חטיפים</span></div></a>
+      <a href="herb/category.html?cat=%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA" class="cat-card" style="background:linear-gradient(145deg,#C8D8E8,#90B4CC)"><div class="cat-card-bg" style="background:linear-gradient(145deg,#D8ECF4,#A8CCE0)">🫘</div><div class="cat-card-overlay"><span class="cat-card-name">קטניות</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CERTS ANCHOR ───────────────────────────────── -->
+<div id="certs-section"></div>
+<!-- ── TESTIMONIALS ───────────────────────────────── -->
+<section class="testimonials section-pad">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; margin-bottom:2.8rem;">
+      <div>
+        <div class="testi-stars"><span class="stars">★★★★★</span><span><span id="testi-count">340</span>+ מוצרים כשרים מאומתים</span></div>
+        <h2 class="testi-title">מה אומרת הקהילה</h2>
+      </div>
+      <div class="testi-nav">
+        <button class="arrow-btn-white">←</button>
+        <button class="arrow-btn-white">→</button>
+      </div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-video"><span class="testi-video-emoji">🫒</span><div class="play-btn">▶</div></div>
+        <div class="testi-avatar">ר</div>
+        <div class="testi-name">רונית כ.</div>
+        <div class="testi-role">חברת FOODOS מתל אביב</div>
+        <div class="testi-text">"סוף סוף מצאתי מקום שבודק בשבילי! הזמנתי שמן זית ותבלינים — הכל הגיע מהיר ובמחיר שלא ייאמן."</div>
+        <div class="testi-stars-sm">★★★★★</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-video"><span class="testi-video-emoji">🌿</span><div class="play-btn">▶</div></div>
+        <div class="testi-avatar">מ</div>
+        <div class="testi-name">מיכל ב.</div>
+        <div class="testi-role">שומרת כשרות, חיפה</div>
+        <div class="testi-text">"הייתי תמיד חוששת לקנות ב-iHerb כי לא ידעתי מה כשר. עכשיו אני פשוט נכנסת לרשימה ומזמינה בביטחון."</div>
+        <div class="testi-stars-sm">★★★★★</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-video"><span class="testi-video-emoji">🫘</span><div class="play-btn">▶</div></div>
+        <div class="testi-avatar">ד</div>
+        <div class="testi-name">דנה ש.</div>
+        <div class="testi-role">בלוגרית מזון, ירושלים</div>
+        <div class="testi-text">"קמח החומוס של Bob's Red Mill שינה לי את חיי! ה-Foodos Online היה האתר היחיד שאמת שיש לו הכשר OU."</div>
+        <div class="testi-stars-sm">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VALUES ─────────────────────────────────────── -->
+<section class="values section-pad" id="values">
+  <div class="container">
+    <div class="values-inner">
+      <div>
+        <h2 class="values-title">כשרות פשוטה,<br>כנה ומאומתת לגמרי</h2>
+        <p class="values-desc">המשימה שלנו פשוטה: לחסוך לך שעות של מחקר. בדקנו מאות מוצרים ב-iHerb כדי שתוכלי לקנות בביטחון מלא — עם מידע ברור, שקוף ומדויק.</p>
+        <a href="#" class="btn-dark">הצטרפי לקהילה ←</a>
+      </div>
+      <div>
+        <div class="accordion">
+          <div class="accordion-item open">
+            <button class="accordion-trigger" onclick="toggleAcc(this)">
+              <span class="accordion-trigger-text">הכשרות שלנו</span>
+              <span class="accordion-icon">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p class="accordion-body">אנו מכירים רק בהכשרויות מהאמינות בעולם: OU, OK, KOF-K, Star-K, COR, EarthKosher, Kosher Check ועוד. כל מוצר נבדק ידנית לפני הכנסתו לרשימה.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" onclick="toggleAcc(this)">
+              <span class="accordion-trigger-text">מחירים הוגנים</span>
+              <span class="accordion-icon">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p class="accordion-body">iHerb מציעה מחירים הרבה יותר נמוכים ממה שתמצאי בישראל — לעיתים חיסכון של 30–50%. המשלוח מגיע ישירות מארה"ב תוך כ-2 שבועות.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" onclick="toggleAcc(this)">
+              <span class="accordion-trigger-text">שקיפות מלאה</span>
+              <span class="accordion-icon">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p class="accordion-body">אנו חברות ב-iHerb Associates ומרוויחות עמלה על כל רכישה. הכשרות ורמת האמינות תמיד מוצגות בגלוי ובבהירות.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">FOODOS <span>Online</span></div>
+        <p class="footer-desc">מוצרי מזון כשרים שנבחרו ואומתו על ידי קהילת Foodos Online.<br>56,000 שומרי כשרות בפייסבוק שאוהבים לבשל.</p>
+        <div class="footer-cert-row">
+          <span class="f-cert-pill">OU</span><span class="f-cert-pill">OK</span><span class="f-cert-pill">KOF-K</span>
+          <span class="f-cert-pill">Star-K</span><span class="f-cert-pill">COR</span>
+          <span class="f-cert-pill">Kosher Check</span><span class="f-cert-pill">EarthKosher</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">ניווט</div>
+        <ul class="footer-links">
+          <li><a href="#">כל המוצרים</a></li>
+          <li><a href="#">קטגוריות</a></li>
+          <li><a href="herb/certs.html">הכשרויות המאושרות</a></li>
+          <li><a href="#">מוצרים חדשים</a></li>
+          <li><a href="#">על הפרויקט</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">קהילה</div>
+        <ul class="footer-links" aria-label="קישורי קהילה">
+          <li><a href="#">FOODOS בפייסבוק</a></li>
+          <li><a href="mailto:foodos.is.online@gmail.com">יצירת קשר</a></li>
+          <li><a href="#">הגשת מוצר לבדיקה</a></li>
+          <li><a href="https://www.iherb.com" target="_blank" rel="noopener sponsored">לחנות iHerb</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">מידע משפטי</div>
+        <ul class="footer-links" aria-label="קישורי מידע משפטי">
+          <li><a href="herb/accessibility.html">הצהרת נגישות</a></li>
+          <li><a href="herb/privacy.html">מדיניות פרטיות</a></li>
+          <li><a href="herb/terms.html">תנאי שימוש</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Foodos Online · online.foodos.co.il · קישורי שותפים עם iHerb Associates
+      <br>אתר זה כולל קישורי שותפים — אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── HERO CAROUSEL ────────────────────────────────
+  let currentSlide = 0;
+  const totalSlides = 6;
+  let autoTimer;
+
+  function goSlide(n) {
+    const slides = document.querySelectorAll('.pslide');
+    const dots   = document.querySelectorAll('.hdot');
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = ((n % totalSlides) + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+  function changeSlide(dir) { clearInterval(autoTimer); goSlide(currentSlide + dir); startAuto(); }
+  function startAuto() { autoTimer = setInterval(() => goSlide(currentSlide + 1), 3500); }
+  startAuto();
+
+  // ── ACCORDION ────────────────────────────────────
+  function toggleAcc(btn) {
+    const item = btn.closest('.accordion-item');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+    if (!open) item.classList.add('open');
+  }
+
+  // ── PRODUCT SEARCH ENGINE ─────────────────────────
+  let allProducts = [];
+  let filteredProducts = [];
+  let activeCat  = 'הכל';
+  let activeCert = 'הכל';
+  let activeTag  = 'הכל';
+
+  // ── TAG DETECTION ─────────────────────────────────────────────
+  const TAG_DEFS = [
+    { key: 'אורגני',    icon: '🌿', test: p => /organic/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.descNew||'')) },
+    { key: 'ללא גלוטן', icon: '🌾', test: p => /gluten|גלוטן/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
+    { key: 'טבעוני',   icon: '🥦', test: p => /vegan|טבעוני|plant.?based/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
+    { key: 'ללא סוכר', icon: '🚫', test: p => /sugar.?free|no sugar|ללא סוכר/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
+    { key: 'קיטו',        icon: '🥑', test: p => /keto|paleo|קיטו|פליאו|low.?carb/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
+    { key: 'עשיר בחלבון', icon: '💪', test: p => /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
+  ];
+  function getProductTags(p) {
+    return TAG_DEFS.filter(t => t.test(p)).map(t => t.key);
+  }
+  let currentPage = 0;
+  const PAGE_SIZE = 12;
+
+  const catEmoji = {
+    'תבלינים':'🧂','שמנים':'🫒','קמחים':'🌾','שוקולד':'🍫','תה':'🍵',
+    'ממרחים':'🍯','פסטה':'🍝','קטניות':'🫘','חטיפים':'🍿',
+    'דגנים':'🌾','ריבות':'🍓','אגוזים וזרעים':'🥜','ממתקים':'🍬',
+    'קפה':'☕','תיבול':'🌶️','אסייתי':'🍜','קונדיטוריה':'🎂',
+    'כלי מטבח':'🔪','שתייה':'🧉','מרקים':'🍲','לחמים':'🍞',
+    'אפייה':'🧁','ביסקוויטים':'🍪','ירקות':'🥕','פירות':'🍎','בריאות':'💚'
+  };
+
+  const certColors = {
+    'OU':'#1a3c8c','OK':'#2c7a6e','KOF-K':'#5c4a9a','Star-K':'#8a3c1a',
+    'KSA':'#2c6360','EarthKosher':'#3a6e1a','COR':'#1a5c3c','CRC':'#3c1a5c',
+    'Kehilla':'#7a5c2c','KA':'#1a3c5c','Kosher Check':'#3c1a6e',
+    'Kosher Scroll K':'#1a5c5c','כלי מטבח':'#555'
+  };
+
+  function updateHeroStats() {
+    const total = allProducts.length;
+    const cats  = new Set(allProducts.map(p => p.cat).filter(Boolean)).size;
+    const certs = new Set(allProducts.map(p => p.cert).filter(Boolean)).size;
+    // Update all occurrences of the product count
+    ['hero-kicker-count','stat-products','testi-count','ticker-count'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = total;
+    });
+    // stat-products shows "180+" with the plus sign outside the span — fix label
+    const statProd = document.getElementById('stat-products');
+    if (statProd) statProd.textContent = total + '+';
+    // Update category and cert counts
+    const statCats = document.getElementById('stat-cats');
+    if (statCats) statCats.textContent = cats;
+    const statCerts = document.getElementById('stat-certs');
+    if (statCerts) statCerts.textContent = certs;
+  }
+
+  async function initProducts() {
+    try {
+      const res = await fetch('data/products_explained_human_descriptions.json?v=' + Date.now());
+      allProducts = (await res.json()).filter(p => !p.suspended);
+
+      // Pre-activate tag/cat from URL params (?tag=X or ?cat=X)
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlTag = urlParams.get('tag');
+      const urlCat = urlParams.get('cat');
+      if (urlTag) activeTag = decodeURIComponent(urlTag);
+      if (urlCat) activeCat = decodeURIComponent(urlCat);
+
+      buildTagPills();
+      buildCatPills();
+      buildCertPills();
+      applyFilters();
+      buildNavDropdowns();
+      updateHeroStats();
+
+      // Scroll to products if tag/cat was given in URL
+      if (urlTag || urlCat) {
+        setTimeout(() => {
+          document.getElementById('products')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 400);
+      }
+    } catch(e) {
+      document.getElementById('product-grid').innerHTML =
+        '<p style="grid-column:1/-1;text-align:center;color:var(--text-soft);padding:3rem">שגיאה בטעינת המוצרים. נסה לרענן את הדף.</p>';
+      document.getElementById('results-count').textContent = '';
+    }
+  }
+
+  function buildCatPills() {
+    const seen = new Set();
+    const cats = ['הכל'];
+    allProducts.forEach(p => {
+      const catList = Array.isArray(p.cat) ? p.cat : (p.cat ? [p.cat] : []);
+      catList.forEach(c => { if(c && !seen.has(c)){seen.add(c);cats.push(c);} });
+    });
+    cats.sort((a,b) => a==='הכל'?-1:b==='הכל'?1:a.localeCompare(b,'he'));
+    document.getElementById('cat-pills').innerHTML = cats.map(c => {
+      const e = catEmoji[c] || '';
+      return `<button class="pill${c===activeCat?' active':''}" onclick="setCat(this,'${c.replace(/'/g,"\\'")}')">${e?e+' ':''}${c}</button>`;
+    }).join('');
+  }
+
+  function buildCertPills() {
+    const seen = new Set();
+    const certs = ['הכל'];
+    allProducts.forEach(p => { if(p.cert && !seen.has(p.cert)){seen.add(p.cert);certs.push(p.cert);} });
+    certs.sort((a,b) => a==='הכל'?-1:b==='הכל'?1:a.localeCompare(b));
+    document.getElementById('cert-pills').innerHTML = certs.map(c =>
+      `<button class="pill pill-sm${c===activeCert?' active':''}" onclick="setCert(this,'${c.replace(/'/g,"\\'")}')">${c}</button>`
+    ).join('');
+  }
+
+  function buildTagPills() {
+    // Calculate count per tag
+    const tagCounts = {};
+    TAG_DEFS.forEach(t => { tagCounts[t.key] = allProducts.filter(t.test).length; });
+    const pills = [{ key:'הכל', icon:'', count: allProducts.length }]
+      .concat(TAG_DEFS.filter(t => tagCounts[t.key] > 0));
+    document.getElementById('tag-pills').innerHTML = pills.map(t =>
+      `<button class="pill pill-sm pill-tag${t.key===activeTag?' active':''}" onclick="setTag(this,'${t.key.replace(/'/g,"\\'")}')">
+        ${t.icon ? t.icon+' ' : ''}${t.key}${t.key!=='הכל' ? `<span class="tag-count">${tagCounts[t.key]||''}</span>` : ''}
+      </button>`
+    ).join('');
+  }
+
+  function setCat(el, cat) {
+    activeCat = cat;
+    document.querySelectorAll('#cat-pills .pill').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    applyFilters();
+  }
+
+  function setCert(el, cert) {
+    activeCert = cert;
+    document.querySelectorAll('#cert-pills .pill').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    applyFilters();
+  }
+
+  function setTag(el, tag) {
+    activeTag = tag;
+    document.querySelectorAll('#tag-pills .pill').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const q = (document.getElementById('srch')?.value || '').toLowerCase().trim();
+    filteredProducts = allProducts.filter(p => {
+      if (activeCat  !== 'הכל') { const pc = Array.isArray(p.cat) ? p.cat : [p.cat]; if (!pc.includes(activeCat)) return false; }
+      if (activeCert !== 'הכל' && p.cert !== activeCert)  return false;
+      if (activeTag  !== 'הכל') { const td = TAG_DEFS.find(t => t.key===activeTag); if (td && !td.test(p)) return false; }
+      if (q) {
+        const hay = [p.name, p.desc, p.brand, p.cat].filter(Boolean).join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+    currentPage = 0;
+    renderProducts(true);
+    updateMeta();
+  }
+
+  function renderProducts(reset) {
+    const grid = document.getElementById('product-grid');
+    if (reset) grid.innerHTML = '';
+    if (filteredProducts.length === 0) {
+      grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-soft)">
+        <div style="font-size:2.5rem;margin-bottom:.6rem">🔍</div>
+        <strong>לא נמצאו מוצרים</strong><br><span style="font-size:.85rem">נסה לשנות את מילת החיפוש או הפילטרים</span>
+      </div>`;
+      document.getElementById('load-more-wrap').style.display = 'none';
+      return;
+    }
+    const start = currentPage * PAGE_SIZE;
+    filteredProducts.slice(start, start + PAGE_SIZE).forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'product-card';
+      div.innerHTML = buildCard(p);
+      grid.appendChild(div);
+    });
+    currentPage++;
+    document.getElementById('load-more-wrap').style.display =
+      currentPage * PAGE_SIZE < filteredProducts.length ? 'flex' : 'none';
+  }
+
+  function loadMore() { renderProducts(false); }
+
+  function updateMeta() {
+    document.getElementById('results-count').textContent = `${filteredProducts.length} מוצרים`;
+    const hasF = activeCat !== 'הכל' || activeCert !== 'הכל' || activeTag !== 'הכל' || (document.getElementById('srch')?.value||'').trim();
+    document.getElementById('reset-btn').style.display = hasF ? 'inline-block' : 'none';
+  }
+
+  function resetFilters() {
+    activeCat = 'הכל'; activeCert = 'הכל'; activeTag = 'הכל';
+    if(document.getElementById('srch')) document.getElementById('srch').value = '';
+    buildCatPills(); buildCertPills(); applyFilters(); buildNavDropdowns();
+  }
+
+  function buildCard(p) {
+    const emoji = catEmoji[p.cat] || '📦';
+    const certColor = certColors[p.cert] || '#2c6360';
+    const brandUrl = `herb/brand.html?b=${encodeURIComponent(p.brand||'')}`;
+    const certUrl  = `herb/cert.html?c=${encodeURIComponent(p.cert||'')}`;
+    const catUrl   = `herb/category.html?cat=${encodeURIComponent(p.cat||'')}`;
+    const parts    = (p.name||'').split(',');
+    const shortName = parts.length > 1 ? parts.slice(1, parts.length > 2 ? -1 : undefined).join(',').trim() : p.name;
+    return `
+      <div class="card-img-wrap" style="background:white">
+        <span class="card-emoji">${emoji}</span>
+        <a href="${certUrl}" class="cert-corner-link" title="${p.cert}" style="background:${certColor}">${p.cert}</a>
+      </div>
+      <div class="card-body">
+        <div class="card-brand-row">
+          <a href="${brandUrl}" class="card-brand-link">${p.brand||''}</a>
+          <a href="${catUrl}" class="card-cat-link">${p.cat||''}</a>
+        </div>
+        ${p.nameHe
+          ? `<div class="card-name">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>`
+          : `<div class="card-name" dir="auto">${shortName}</div>`}
+        ${(() => {
+          const raw = (p.desc||'').replace(/\s*—\s*/g, ', ');
+          const sentences = raw.match(/[^.!?]+[.!?]+/g) || [raw];
+          const first2 = sentences.slice(0,2).join(' ').trim();
+          const rest = sentences.slice(2).join(' ').trim();
+          const uid = 'hp-desc-' + p.id;
+          if (rest) {
+            return `<div class="card-desc-txt">${first2}</div>
+                    <div class="card-desc-txt" id="${uid}-extra" style="display:none">${rest}</div>
+                    <button class="card-read-more" onclick="toggleHpDesc('${uid}',this)">קרא עוד ↓</button>`;
+          }
+          return `<div class="card-desc-txt">${raw}</div>`;
+        })()}
+        <div class="card-actions">
+          <a href="herb/product.html?id=${p.id}" class="card-btn-outline">פרטים ←</a>
+          ${p.sizes && p.sizes.length > 1
+            ? p.sizes.map(s => `<a href="${s.url}" target="_blank" rel="noopener noreferrer" class="card-btn card-btn-size">${s.label} ←</a>`).join('')
+            : `<a href="${p.url||'#'}" target="_blank" rel="noopener noreferrer" class="card-btn">iHerb ←</a>`}
+          <button class="card-report-btn" onclick="openReport(${p.id}, '${(p.name||'').replace(/'/g,"\\'")}', '${(p.cert||'').replace(/'/g,"\\'")}')">⚑</button>
+        </div>
+      </div>`;
+  }
+
+  document.getElementById('srch')?.addEventListener('keydown', e => { if(e.key==='Enter') applyFilters(); });
+
+  // ── NAV DROPDOWNS ────────────────────────────────
+  let ddOpen = null;
+
+  function toggleDD(id, btn) {
+    const dd = document.getElementById(id);
+    const isOpen = dd.classList.contains('open');
+    closeAllDD();
+    if (!isOpen) {
+      dd.classList.add('open');
+      btn.classList.add('active');
+      ddOpen = { dd, btn };
+    }
+  }
+
+  function closeAllDD() {
+    document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+    document.querySelectorAll('.nav-dd-trigger.active').forEach(b => b.classList.remove('active'));
+    ddOpen = null;
+  }
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-item')) closeAllDD();
+  });
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllDD(); });
+
+  function buildNavDropdowns() {
+    if (!allProducts.length) return;
+
+    // Categories (סוגי מוצרים)
+    const catSet = new Set();
+    allProducts.forEach(p => { (Array.isArray(p.cat) ? p.cat : (p.cat ? [p.cat] : [])).forEach(c => catSet.add(c)); });
+    const cats = [...catSet].sort((a,b) => a.localeCompare(b,'he'));
+    document.getElementById('dd-cats-list').innerHTML = cats.map(c =>
+      `<a href="herb/category.html?cat=${encodeURIComponent(c)}" class="nav-dd-item">${catEmoji[c]||''} ${c}</a>`
+    ).join('');
+
+    // Lifestyle tags (סוגי תזונה)
+    const lifestylePages = {
+      'קיטו': 'keto.html',
+    };
+    const lifestyleList = document.getElementById('dd-lifestyle-list');
+    if (lifestyleList) {
+      lifestyleList.innerHTML = TAG_DEFS.map(t => {
+        const count = allProducts.filter(t.test).length;
+        const href = lifestylePages[t.key]
+          ? lifestylePages[t.key]
+          : `foodos-herb-homepage.html?tag=${encodeURIComponent(t.key)}#products`;
+        return `<a href="${href}" class="nav-dd-item" style="display:flex;justify-content:space-between;align-items:center">
+          <span>${t.icon} ${t.key}</span>
+          <span style="color:var(--text-soft);font-size:.72rem;background:var(--teal-light);padding:1px 7px;border-radius:99px;font-weight:600;margin-right:.5rem">${count}</span>
+        </a>`;
+      }).join('');
+    }
+
+    // Brands
+    const brands = [...new Set(allProducts.map(p => p.brand).filter(Boolean))]
+      .sort((a,b) => a.localeCompare(b,'he'));
+    document.getElementById('dd-brands-list').innerHTML = brands.map(b =>
+      `<a href="herb/brand.html?b=${encodeURIComponent(b)}" class="nav-dd-item">${b}</a>`
+    ).join('');
+
+    // Certs (with cert count)
+    const certCount = {};
+    allProducts.forEach(p => { if(p.cert) certCount[p.cert] = (certCount[p.cert]||0)+1; });
+    const certs = [...new Set(allProducts.map(p => p.cert).filter(Boolean))]
+      .sort((a,b) => (certCount[b]||0)-(certCount[a]||0));
+    document.getElementById('dd-certs-list').innerHTML = certs.map(c =>
+      `<a href="herb/cert.html?c=${encodeURIComponent(c)}" class="nav-dd-item">
+        <span>${c}</span>
+        <span style="color:var(--text-soft);font-size:.72rem;float:left;margin-right:.5rem">${certCount[c]}</span>
+      </a>`
+    ).join('');
+  }
+
+  initProducts();
+
+  // ── REPORT MODAL ─────────────────────────────────────────────
+  function openReport(id, name, cert) {
+    document.getElementById('report-product-name').textContent = name;
+    document.getElementById('report-cert-name').textContent = cert;
+    document.getElementById('report-product-id').value = id;
+    document.getElementById('report-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeReport() {
+    document.getElementById('report-modal').classList.remove('open');
+    document.body.style.overflow = '';
+    document.getElementById('report-form').reset();
+    document.getElementById('report-success').style.display = 'none';
+    document.getElementById('report-form-inner').style.display = 'block';
+  }
+
+  document.getElementById('report-modal')?.addEventListener('click', e => {
+    if (e.target === document.getElementById('report-modal')) closeReport();
+  });
+
+  document.getElementById('report-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = {
+      productId: document.getElementById('report-product-id').value,
+      productName: document.getElementById('report-product-name').textContent,
+      reason: document.getElementById('report-reason').value,
+      details: document.getElementById('report-details').value,
+      email: document.getElementById('report-email').value,
+      date: new Date().toISOString()
+    };
+    // Send via mailto as fallback (until backend is set up)
+    const subject = encodeURIComponent(`דיווח מוצר Foodos Online — ${data.productName}`);
+    const body = encodeURIComponent(
+      `מוצר: ${data.productName}\nID: ${data.productId}\nסיבה: ${data.reason}\nפרטים: ${data.details}\nאימייל: ${data.email || 'לא הוזן'}\nתאריך: ${data.date}`
+    );
+    window.open(`mailto:Zoheret.cohen@gmail.com?subject=${subject}&body=${body}`, '_blank');
+    document.getElementById('report-form-inner').style.display = 'none';
+    document.getElementById('report-success').style.display = 'block';
+  });
+</script>
+
+<!-- ── REPORT MODAL ── -->
+<div id="report-modal" class="report-modal-overlay" role="dialog" aria-modal="true">
+  <div class="report-modal-box">
+    <button class="report-modal-close" onclick="closeReport()" aria-label="סגור">✕</button>
+    <div class="report-modal-icon">⚑</div>
+    <h3 class="report-modal-title">דיווח על מוצר</h3>
+    <p class="report-modal-product" id="report-product-name"></p>
+    <p class="report-modal-cert">הכשרות נוכחית: <strong id="report-cert-name"></strong></p>
+
+    <div id="report-form-inner">
+      <form id="report-form">
+        <input type="hidden" id="report-product-id">
+        <div class="report-field">
+          <label class="report-label">סיבת הדיווח *</label>
+          <select id="report-reason" class="report-select" required>
+            <option value="">בחרי סיבה...</option>
+            <option value="cert-revoked">הכשרות הוסרה / בוטלה</option>
+            <option value="cert-expired">הכשרות פגה</option>
+            <option value="product-changed">פורמולה המוצר השתנתה</option>
+            <option value="wrong-cert">הכשרות רשומה בטעות</option>
+            <option value="other">אחר</option>
+          </select>
+        </div>
+        <div class="report-field">
+          <label class="report-label">פרטים נוספים</label>
+          <textarea id="report-details" class="report-textarea" rows="3" placeholder="ספרי לנו מה ראית / מאיפה המידע..."></textarea>
+        </div>
+        <div class="report-field">
+          <label class="report-label">אימייל (אופציונלי)</label>
+          <input type="email" id="report-email" class="report-input" placeholder="לעדכון בטיפול">
+        </div>
+        <div class="report-actions">
+          <button type="submit" class="report-submit-btn">שלחי דיווח ←</button>
+          <button type="button" class="report-cancel-btn" onclick="closeReport()">ביטול</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="report-success" style="display:none; text-align:center; padding:1.5rem 0;">
+      <div style="font-size:2.5rem; margin-bottom:.75rem">✅</div>
+      <p style="font-weight:700; color:var(--teal-dark); margin-bottom:.4rem">תודה על הדיווח!</p>
+      <p style="font-size:.87rem; color:var(--text-mid)">נבדוק את המוצר בהקדם ונעדכן אם נדרש שינוי.</p>
+      <button onclick="closeReport()" class="report-submit-btn" style="margin-top:1.2rem">סגור</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://negishot.co.il/cdn/widget.php?code=NGS_D51C06908CC9"></script>
+</body>
+</html>

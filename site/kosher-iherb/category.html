@@ -160,37 +160,58 @@
     .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px 8px; font-size: 1.5rem; color: var(--text-mid); line-height: 1; border-radius: var(--radius-sm); transition: background .15s; }
     .nav-hamburger:hover { background: var(--teal-light); }
 
-    /* ── CATEGORIES DROPDOWN ── */
-    .nav-dropdown { position: relative; }
-    .nav-dropdown > a { display: flex; align-items: center; gap: 4px; }
-    .nav-dropdown > a::after { content: '▾'; font-size: 0.7rem; transition: transform .18s; }
-    .nav-dropdown:hover > a::after,
-    .nav-dropdown.open > a::after { transform: rotate(180deg); }
-    .dropdown-menu {
+    /* ── CATEGORIES TRIGGER ── */
+    .nav-cats-trigger { display: flex; align-items: center; gap: 4px; cursor: pointer; }
+    .nav-cats-trigger::after { content: '▾'; font-size: 0.7rem; transition: transform .22s; }
+    .nav-cats-trigger.mega-open::after { transform: rotate(180deg); }
+
+    /* ── MEGA MENU ── */
+    .mega-menu {
       display: none;
-      position: absolute;
-      top: calc(100% + 10px);
-      right: 0;
-      min-width: 200px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-lg);
-      list-style: none;
-      padding: 6px 0;
-      z-index: 300;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: #fff;
+      border-top: 2px solid var(--teal-xlight);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 12px 40px rgba(0,0,0,.10);
+      z-index: 199;
+      padding: 2rem 0 2.2rem;
     }
-    .nav-dropdown:hover .dropdown-menu,
-    .nav-dropdown.open .dropdown-menu { display: block; }
-    .dropdown-menu li a {
-      display: flex; align-items: center; gap: 8px;
-      padding: 8px 18px;
-      font-size: 0.84rem; font-weight: 500; color: var(--text-mid);
-      white-space: nowrap; transition: background .12s, color .12s;
+    .mega-menu.open { display: block; }
+    .mega-inner {
+      max-width: 1160px; margin: 0 auto; padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 2rem;
     }
-    .dropdown-menu li a:hover { background: var(--teal-light); color: var(--teal-dark); }
+    .mega-col { }
+    .mega-col-title {
+      display: block;
+      font-size: 0.65rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1.8px;
+      color: var(--teal-dark);
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 2px solid var(--teal-xlight);
+    }
+    .mega-col a {
+      display: block;
+      font-size: 0.84rem; font-weight: 500;
+      color: var(--text-mid);
+      padding: 4px 0;
+      transition: color .14s;
+      border-bottom: none;
+    }
+    .mega-col a:hover { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Mobile mega overlay */
+    .mega-overlay { display: none; position: fixed; inset: 0; z-index: 198; background: rgba(0,0,0,.18); }
+    .mega-overlay.open { display: block; }
 
     @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2,1fr); } .cat-hero-inner { grid-template-columns: 1fr; } .cat-hero-emoji { display: none; } }
+    @media (max-width: 900px) {
+      .mega-inner { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    }
     @media (max-width: 640px) {
       .product-grid { grid-template-columns: 1fr; }
       .cat-stats { gap: 1.5rem; }
@@ -199,11 +220,9 @@
       .nav-links.nav-open { display: flex; }
       .nav-links li { width: 100%; }
       .nav-links a { display: block; padding: 10px 1.5rem; font-size: 0.95rem; }
-      /* dropdown on mobile: always show inline, no hover */
-      .nav-dropdown > a::after { display: none; }
-      .dropdown-menu { display: none; position: static; box-shadow: none; border: none; border-top: 1px solid var(--teal-xlight); border-radius: 0; padding: 0; background: var(--teal-light); min-width: unset; }
-      .nav-dropdown.open .dropdown-menu { display: block; }
-      .dropdown-menu li a { padding: 8px 2rem; font-size: 0.88rem; }
+      .nav-cats-trigger::after { display: none; }
+      .mega-menu { position: fixed; top: 0; bottom: 0; right: 0; left: 0; overflow-y: auto; padding: 1rem 0; z-index: 300; }
+      .mega-inner { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
     }
   </style>
 </head>
@@ -221,11 +240,8 @@
     </a>
     <ul class="nav-links" id="nav-links">
       <li><a href="../foodos-herb-homepage.html#products">מוצרים</a></li>
-      <li class="nav-dropdown" id="nav-cats-dropdown">
-        <a href="../foodos-herb-homepage.html#categories" onclick="toggleCatsDropdown(event)">קטגוריות</a>
-        <ul class="dropdown-menu" id="cats-dropdown-menu">
-          <!-- populated by JS from catEmoji -->
-        </ul>
+      <li>
+        <a class="nav-cats-trigger" id="cats-trigger" href="#" role="button" aria-haspopup="true" aria-expanded="false">קטגוריות</a>
       </li>
       <li><a href="certs.html">הכשרויות</a></li>
       <li><a href="../foodos-herb-homepage.html#values">על הפרויקט</a></li>
@@ -233,6 +249,67 @@
     <button class="nav-hamburger" id="nav-hamburger" aria-label="תפריט" onclick="toggleNav()">☰</button>
   </div>
 </nav>
+
+<!-- ── MEGA MENU ── -->
+<div class="mega-overlay" id="mega-overlay"></div>
+<div class="mega-menu" id="mega-menu" role="navigation" aria-label="קטגוריות מוצרים">
+  <div class="mega-inner">
+    <div class="mega-col">
+      <span class="mega-col-title">בישול ותיבול</span>
+      <a href="category.html?cat=%D7%AA%D7%91%D7%9C%D7%99%D7%A0%D7%99%D7%9D">תבלינים</a>
+      <a href="category.html?cat=%D7%9E%D7%9C%D7%97">מלח</a>
+      <a href="category.html?cat=%D7%A9%D7%9E%D7%A0%D7%99%D7%9D">שמנים</a>
+      <a href="category.html?cat=%D7%A8%D7%98%D7%91%D7%99%D7%9D">רטבים</a>
+      <a href="category.html?cat=%D7%AA%D7%99%D7%91%D7%95%D7%9C">תיבול</a>
+      <a href="category.html?cat=%D7%90%D7%A1%D7%99%D7%99%D7%AA%D7%99">אסייתי</a>
+      <a href="category.html?cat=%D7%9E%D7%A8%D7%A7%D7%99%D7%9D">מרקים</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">אפייה ולחמים</span>
+      <a href="category.html?cat=%D7%A7%D7%9E%D7%97%D7%99%D7%9D">קמחים</a>
+      <a href="category.html?cat=%D7%90%D7%A4%D7%99%D7%99%D7%94">אפייה</a>
+      <a href="category.html?cat=%D7%9C%D7%97%D7%9E%D7%99%D7%9D">לחמים</a>
+      <a href="category.html?cat=%D7%AA%D7%95%D7%A1%D7%A4%D7%99+%D7%90%D7%A4%D7%99%D7%99%D7%94">תוספי אפייה</a>
+      <a href="category.html?cat=%D7%91%D7%99%D7%A1%D7%A7%D7%95%D7%95%D7%99%D7%98%D7%99%D7%9D">ביסקוויטים</a>
+      <a href="category.html?cat=%D7%A7%D7%95%D7%A0%D7%93%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%94">קונדיטוריה</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">דגנים וקטניות</span>
+      <a href="category.html?cat=%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA">קטניות</a>
+      <a href="category.html?cat=%D7%A4%D7%A1%D7%98%D7%94">פסטה</a>
+      <a href="category.html?cat=%D7%93%D7%92%D7%A0%D7%99%D7%9D">דגנים</a>
+      <a href="category.html?cat=%D7%93%D7%92%D7%A0%D7%99+%D7%91%D7%95%D7%A7%D7%A8">דגני בוקר</a>
+      <a href="category.html?cat=%D7%90%D7%92%D7%95%D7%96%D7%99%D7%9D+%D7%95%D7%96%D7%A8%D7%A2%D7%99%D7%9D">אגוזים וזרעים</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">חטיפים ומתוקים</span>
+      <a href="category.html?cat=%D7%97%D7%98%D7%99%D7%A4%D7%99%D7%9D">חטיפים</a>
+      <a href="category.html?cat=%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%93">שוקולד</a>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%A7%D7%99%D7%9D">ממתקים</a>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%A7%D7%99%D7%9D+%D7%98%D7%91%D7%A2%D7%99%D7%99%D7%9D">ממתקים טבעיים</a>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%99%D7%A7%D7%99%D7%9D+%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D+%D7%9C%D7%9C%D7%90+%D7%A1%D7%95%D7%9B%D7%A8">ממתיקים וללא סוכר</a>
+      <a href="category.html?cat=%D7%A8%D7%99%D7%91%D7%95%D7%AA">ריבות</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">שתייה</span>
+      <a href="category.html?cat=%D7%AA%D7%94">תה</a>
+      <a href="category.html?cat=%D7%A7%D7%A4%D7%94">קפה</a>
+      <a href="category.html?cat=%D7%A9%D7%AA%D7%99%D7%99%D7%94+%D7%97%D7%9E%D7%94">שתייה חמה</a>
+      <a href="category.html?cat=%D7%A9%D7%AA%D7%99%D7%99%D7%94">שתייה</a>
+      <a href="category.html?cat=%D7%A7%D7%A8%D7%9E%D7%A8%D7%99%D7%9D+%D7%95%D7%AA%D7%97%D7%9C%D7%99%D7%A4%D7%99+%D7%97%D7%9C%D7%91">קרמרים ותחליפי חלב</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">ממרחים ובריאות</span>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%A8%D7%97%D7%99%D7%9D">ממרחים</a>
+      <a href="category.html?cat=%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99+%D7%93%D7%92%D7%99%D7%9D">שימורי דגים</a>
+      <a href="category.html?cat=%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99+%D7%AA%D7%96%D7%95%D7%A0%D7%AA%D7%99%D7%99%D7%9D">שימורי תזונתיים</a>
+      <a href="category.html?cat=%D7%A1%D7%95%D7%A4%D7%A8+%D7%A4%D7%95%D7%93">סופר פוד</a>
+      <a href="category.html?cat=%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA">בריאות</a>
+      <a href="category.html?cat=%D7%9E%D7%95%D7%A6%D7%A8%D7%99+%D7%97%D7%9C%D7%91%D7%95%D7%9F">מוצרי חלבון</a>
+      <a href="category.html?cat=%D7%9B%D7%9C%D7%99+%D7%9E%D7%98%D7%91%D7%97">כלי מטבח</a>
+    </div>
+  </div>
+</div>
 
 <!-- ── BREADCRUMB ───────────────────────────────────────── -->
 <div class="breadcrumb-bar">
@@ -370,8 +447,43 @@
 
   // תיאורים מיוחדים לקטגוריות
   const catDescriptions = {
-    'קרמרים ותחליפי חלב': 'קרמר הוא תוסף לקפה שמחליף שמנת או חלב. מוסיפים אותו לקפה כדי לרכך את הטעם, להוסיף מתיקות ועשירות. הקרמרים כאן הם פרווה לחלוטין ומתאימים גם לארוחות בשריות.',
-    'ממתיקים ומוצרים ללא סוכר': 'מוצרים ממותקים באופן טבעי ללא סוכר, המתאימים לתפריט קטו, לסוכרתיים ולמי שמפחית סוכר. הקטגוריה כוללת ממתיקים טבעיים (סוכר קוקוס, מונק פרוט, אלולוז) לצד מוצרי Walden Farms ללא קלוריות.',
+    'תבלינים':       'עשבי תיבול, תערובות תבלינים ופלפלים כשרים ומאומתים. מתאימים לבישול יומיומי ולמטבח ישראלי ובינלאומי.',
+    'מלח':           'מלח ים, מלח היווני, מלח ורוד היימלאי ועוד — כשרים ומאומתים. הבסיס של כל מטבח טוב.',
+    'שמנים':         'שמני זית כתית, שמן קוקוס, שמן אבוקדו ועוד. כולם כשרים, בקבקים שעוברים בדיקה ידנית של הקהילה.',
+    'רטבים':         'רטבי סויה, אמינואים, טריאקי, חומוס ועוד רטבים כשרים שיהפכו כל ארוחה ליצירת מופת.',
+    'תיבול':         'ריבועי ציר, שמרי תזונה, רוטב וורצ\'סטר ותיבולים מיוחדים — הסודות הקולינריים של השפים הביתיים.',
+    'אסייתי':        'מיסו, אמינואים, נורי, סויה ורטבים אסייתיים כשרים. כל מה שצריך להכנת סושי, ראמן ומנות ים סיני בבית.',
+    'מרקים':         'ציר עצמות, מרק ירקות אורגני ועוד בסיסים כשרים למרקים ביתיים. נוחים, מהירים ומזינים.',
+    'קמחים':         'קמח שקדים, קמח חומוס, קמח קוקוס ועוד — כשרים ומתאימים לאפייה ללא גלוטן וקלאסית.',
+    'אפייה':         'שוקולד שבבים, קמחים מיוחדים, תמציות וחומרי אפייה כשרים לעוגות, עוגיות ומאפים ביתיים.',
+    'לחמים':         'לחמים בריאים, לחם שאור, חטיפי אורז ופריכיות — כשרים ומתאימים לתפריט יומיומי.',
+    'תוספי אפייה':   'אבקות אפייה, שמרים, ג\'לטין, קשיו גרוס ועוד — כל הבסיסים שצריך לאפייה כשרה מוצלחת.',
+    'ביסקוויטים':    'עוגיות, קרקרים וחטיפי אפייה כשרים לקפה ולחטיפים. כולם עברו אימות כשרות.',
+    'קונדיטוריה':    'ממתקים מיוחדים, שוקולד איכותי וטיפולים מתוקים לכל אוהב קינוחים.',
+    'קטניות':        'שעועית, עדשים, חומוס, אפונה ועוד קטניות כשרות ועשירות בחלבון צמחי.',
+    'פסטה':          'פסטה מחיטה מלאה, פסטה מסוגים שונים ואטריות — כשרות ומוכנות לכל רוטב.',
+    'דגנים':         'שיבולת שועל, קינואה, כוסמת ועוד דגנים מלאים כשרים. בסיס לתפריט בריא ומאוזן.',
+    'דגני בוקר':     'גרנולה, דייסה, קורנפלקס ועוד דגני בוקר כשרים — הדלק המושלם לבוקר שמתחיל בחיוך.',
+    'אגוזים וזרעים': 'שקדים, קשיו, אגוזי מלך, זרעי צ\'יה, פשתן וסומסום — חטיפים כשרים עמוסי תזונה.',
+    'חטיפים':        'חטיפים כשרים ובריאים לצד וריאציות קלאסיות. כל חטיף עבר אימות כשרות לפני שהגיע לרשימה.',
+    'שוקולד':        'שוקולד מריר, חלבי ולבן — כשר ומאומת. מהמובחרים בעולם, עכשיו בישראל.',
+    'ממתקים':        'סוכריות, גומיות, מרשמלו ועוד ממתקים כשרים. כולם עברו בדיקה ידנית של קהילת FOODOS.',
+    'ממתקים טבעיים': 'תמרים, פירות יבשים, חטיפי חלוקת אנרגיה ועוד מתיקות טבעית לחלוטין.',
+    'ממתיקים ומוצרים ללא סוכר': 'מוצרים ממותקים באופן טבעי ללא סוכר, לתפריט קטו, לסוכרתיים ולמי שמפחית סוכר.',
+    'ריבות':         'ריבות פרי, מרמלדות וממרחים פירותיים כשרים — כולם ללא תוספים מיותרים.',
+    'תה':            'תה ירוק, שחור, צמחים ועוד — כשרים ומרעננים. מ-Celestial Seasonings ועד Yogi Tea.',
+    'קפה':           'קפה טחון, קפסולות ואינסטנט כשרים מהמותגים המובחרים. למחר הכי טוב שלך.',
+    'שתייה חמה':     'קקאו, שוקו טבעי, תה צמחים ושתייה חמה מנחמת — כשרים לגמרי.',
+    'שתייה':         'משקאות כשרים, מיצים ושתייה קרה. כולם עברו אימות כשרות.',
+    'קרמרים ותחליפי חלב': 'קרמר הוא תוסף לקפה שמחליף שמנת או חלב. הקרמרים כאן הם פרווה לחלוטין ומתאימים גם לארוחות בשריות.',
+    'ממרחים':        'חמאת בוטנים, טחינה, ממרח שקדים ועוד ממרחים כשרים. בלי שמן דקלים, בלי רכיבים מיותרים.',
+    'שימורי דגים':   'סרדינים, טונה, סלמון ומקרל כשרים. פרוטאין מהיר, טעים ובריא.',
+    'שימורי תזונתיים': 'שימורי ירקות, שעועית ועגבניות כשרים. לאחסון ארוך טווח ובישול מהיר.',
+    'סופר פוד':      'כורכום, ספירולינה, אצות, גוג\'י, מאקה ועוד מזוני-על כשרים שנבדקו על ידי הקהילה.',
+    'בריאות':        'תוספי תזונה טבעיים, ויטמינים ממזון ומוצרים תפקודיים כשרים לתמיכה בבריאות יומיומית.',
+    'מוצרי חלבון':   'אבקות חלבון, חטיפי חלבון ושייקים כשרים לאחר אימון ולחיזוק יומיומי.',
+    'כלי מטבח':      'כלי מטבח איכותיים, קרשי חיתוך ואביזרי בישול — לא מזון, אבל חלק מהמטבח הכשר המושלם.',
+    'מטבח':          'אביזרים שימושיים למטבח כשר — ספריי שמן, נייר אפייה ועוד.',
   };
 
   // קטגוריות עם פיצול פנימי: מפתח = שם הקטגוריה, ערך = פונקציית מיון לשני חלקים
@@ -631,35 +743,60 @@
       </div>`;
   }
 
-  /* ── NAV: hamburger + categories dropdown ── */
+  /* ── NAV: hamburger + mega menu ── */
   function toggleNav() {
     const links = document.getElementById('nav-links');
     links.classList.toggle('nav-open');
   }
 
-  function toggleCatsDropdown(e) {
-    const isMobile = window.innerWidth <= 640;
-    if (!isMobile) return; // desktop uses CSS :hover
-    e.preventDefault();
-    document.getElementById('nav-cats-dropdown').classList.toggle('open');
-  }
+  // Mega menu hover/click logic
+  (function initMegaMenu() {
+    const trigger  = document.getElementById('cats-trigger');
+    const menu     = document.getElementById('mega-menu');
+    const overlay  = document.getElementById('mega-overlay');
+    if (!trigger || !menu) return;
 
-  // Close nav + dropdown when clicking outside
-  document.addEventListener('click', function(e) {
-    const nav = document.querySelector('.nav');
-    if (!nav.contains(e.target)) {
-      document.getElementById('nav-links').classList.remove('nav-open');
-      document.getElementById('nav-cats-dropdown').classList.remove('open');
+    let hideTimer = null;
+
+    function openMega() {
+      clearTimeout(hideTimer);
+      menu.classList.add('open');
+      overlay.classList.add('open');
+      trigger.classList.add('mega-open');
+      trigger.setAttribute('aria-expanded','true');
     }
-  });
+    function closeMega() {
+      hideTimer = setTimeout(() => {
+        menu.classList.remove('open');
+        overlay.classList.remove('open');
+        trigger.classList.remove('mega-open');
+        trigger.setAttribute('aria-expanded','false');
+      }, 120);
+    }
 
-  // Populate the categories dropdown from catEmoji
-  (function buildCatsDropdown() {
-    const menu = document.getElementById('cats-dropdown-menu');
-    if (!menu) return;
-    menu.innerHTML = Object.keys(catEmoji).map(cat =>
-      `<li><a href="category.html?cat=${encodeURIComponent(cat)}">${catEmoji[cat]} ${cat}</a></li>`
-    ).join('');
+    // Desktop: hover
+    trigger.addEventListener('mouseenter', openMega);
+    trigger.addEventListener('mouseleave', closeMega);
+    menu.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+    menu.addEventListener('mouseleave', closeMega);
+
+    // Mobile/click: toggle
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (menu.classList.contains('open')) closeMega();
+      else openMega();
+    });
+
+    // Overlay click closes
+    overlay.addEventListener('click', closeMega);
+
+    // Close on Escape
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMega(); });
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!menu.contains(e.target) && e.target !== trigger) closeMega();
+    });
   })();
 
   init().catch(e => {
