@@ -618,7 +618,7 @@
       // Brands
       const brandNames = [...new Set(active.map(p => p.brand).filter(Boolean))].sort();
       document.getElementById('brands-dd-list').innerHTML = brandNames.map(b =>
-        `<a class="nav-dd-item" href="brand.html?brand=${encodeURIComponent(b)}">${b}</a>`
+        `<a class="nav-dd-item" href="brand.html?b=${encodeURIComponent(b)}">${b}</a>`
       ).join('');
       // Certs
       const certNames = [...new Set(active.map(p => p.cert).filter(Boolean))].sort();
