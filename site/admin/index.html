@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOODOS Admin — ניהול מוצרים</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #4A9D9A;
+      --teal-dark: #2C6360;
+      --teal-light: #EBF6F6;
+      --orange: #E85D04;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --text: #1A1A1A;
+      --text-mid: #444;
+      --text-soft: #888;
+      --border: #e5e7eb;
+      --bg: #f9fafb;
+      --card: #fff;
+      --shadow: 0 2px 8px rgba(0,0,0,.08);
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Heebo', sans-serif; background: var(--bg); color: var(--text); direction: rtl; min-height: 100vh; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── LOGIN ── */
+    #login-screen {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+    }
+    .login-card {
+      background: white; border-radius: 20px; padding: 3rem 2.5rem; width: 360px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.2); text-align: center;
+    }
+    .login-logo {
+      width: 72px; height: 72px; background: var(--teal); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; font-weight: 900; color: white; margin: 0 auto 1.2rem;
+    }
+    .login-card h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.4rem; }
+    .login-card p { color: var(--text-soft); font-size: 0.9rem; margin-bottom: 1.8rem; line-height: 1.5; }
+    .login-card input {
+      width: 100%; padding: 12px 16px; border: 2px solid var(--border); border-radius: 10px;
+      font-size: 0.95rem; font-family: monospace; direction: ltr; text-align: left;
+      margin-bottom: 12px; outline: none; transition: border-color .2s;
+    }
+    .login-card input:focus { border-color: var(--teal); }
+    .login-card button {
+      width: 100%; padding: 13px; background: var(--teal); color: white; border: none;
+      border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer;
+      font-family: 'Heebo', sans-serif; transition: background .2s;
+    }
+    .login-card button:hover { background: var(--teal-dark); }
+    .login-error { color: var(--red); font-size: 0.83rem; margin-top: 8px; }
+
+    /* ── HEADER ── */
+    #admin-screen { display: none; }
+    .admin-header {
+      background: var(--teal-dark); color: white; padding: 0 2rem; height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    }
+    .admin-header-logo { font-size: 1.2rem; font-weight: 800; letter-spacing: .5px; }
+    .admin-header-logo span { color: #A8D44B; }
+    .header-meta { display: flex; align-items: center; gap: 1.5rem; font-size: 0.85rem; }
+    .header-stat { opacity: .85; }
+    .header-stat strong { color: #A8D44B; font-weight: 700; }
+    .btn-logout {
+      background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+      color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem;
+      cursor: pointer; font-family: 'Heebo', sans-serif; transition: background .2s;
+    }
+    .btn-logout:hover { background: rgba(255,255,255,.25); }
+
+    /* ── TOOLBAR ── */
+    .toolbar {
+      background: white; border-bottom: 1px solid var(--border);
+      padding: 12px 2rem; display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+    }
+    .toolbar input, .toolbar select {
+      padding: 8px 14px; border: 1.5px solid var(--border); border-radius: 8px;
+      font-size: 0.88rem; font-family: 'Heebo', sans-serif; outline: none;
+      background: white; color: var(--text); transition: border-color .2s;
+    }
+    .toolbar input { flex: 1; min-width: 200px; }
+    .toolbar input:focus, .toolbar select:focus { border-color: var(--teal); }
+    .toolbar select { cursor: pointer; }
+    .toolbar-count { margin-right: auto; font-size: 0.82rem; color: var(--text-soft); white-space: nowrap; }
+
+    /* ── PRODUCT LIST ── */
+    .product-list {
+      max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px;
+    }
+    .product-card {
+      background: var(--card); border-radius: var(--radius); border: 1.5px solid var(--border);
+      display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+      cursor: pointer; transition: border-color .18s, box-shadow .18s; position: relative;
+    }
+    .product-card:hover { border-color: var(--teal); box-shadow: 0 4px 16px rgba(74,157,154,.15); }
+    .product-card.is-suspended { opacity: .5; }
+    .product-img {
+      width: 56px; height: 56px; border-radius: 10px; object-fit: contain;
+      background: var(--bg); flex-shrink: 0; border: 1px solid var(--border);
+    }
+    .product-info { flex: 1; min-width: 0; }
+    .product-name-he { font-weight: 700; font-size: 0.95rem; color: var(--text); margin-bottom: 2px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .product-name-en { font-size: 0.75rem; color: var(--text-soft); direction: ltr; text-align: right;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .product-badges { display: flex; gap: 5px; margin-top: 5px; flex-wrap: wrap; }
+    .badge {
+      font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;
+      white-space: nowrap; letter-spacing: .3px;
+    }
+    .badge-cert { background: var(--teal-light); color: var(--teal-dark); }
+    .badge-cat { background: #f3f4f6; color: var(--text-mid); }
+    .badge-unavail { background: #fef3c7; color: #92400e; }
+    .badge-suspended { background: #fee2e2; color: #991b1b; }
+    .badge-ok { background: #dcfce7; color: #166534; }
+    .product-price { font-size: 0.82rem; font-weight: 700; color: var(--teal-dark); white-space: nowrap; }
+    .card-edit-btn {
+      position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+      background: var(--teal-light); color: var(--teal-dark); border: none;
+      border-radius: 8px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700;
+      cursor: pointer; font-family: 'Heebo', sans-serif; opacity: 0; transition: opacity .15s;
+    }
+    .product-card:hover .card-edit-btn { opacity: 1; }
+
+    /* ── EDIT PANEL ── */
+    #edit-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 200;
+    }
+    #edit-panel {
+      position: fixed; left: 0; top: 0; height: 100vh; width: 480px; max-width: 95vw;
+      background: white; z-index: 201; box-shadow: -4px 0 24px rgba(0,0,0,.15);
+      transform: translateX(-100%); transition: transform .28s cubic-bezier(.4,0,.2,1);
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    #edit-panel.open { transform: translateX(0); }
+    .panel-header {
+      background: var(--teal-dark); color: white; padding: 1.2rem 1.5rem;
+      display: flex; align-items: center; gap: 12px; flex-shrink: 0;
+    }
+    .panel-header img { width: 44px; height: 44px; border-radius: 8px; object-fit: contain; background: white; padding: 2px; }
+    .panel-title { flex: 1; min-width: 0; }
+    .panel-title h3 { font-size: 1rem; font-weight: 700; margin-bottom: 2px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .panel-title small { font-size: 0.75rem; opacity: .75; }
+    .panel-close {
+      background: rgba(255,255,255,.15); border: none; color: white; width: 32px; height: 32px;
+      border-radius: 50%; cursor: pointer; font-size: 1.1rem; line-height: 1;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .panel-body { flex: 1; overflow-y: auto; padding: 1.5rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-label { font-size: 0.8rem; font-weight: 700; color: var(--text-mid); margin-bottom: 5px; display: block; }
+    .form-hint { font-size: 0.72rem; color: var(--text-soft); margin-top: 3px; }
+    .form-input, .form-textarea, .form-select {
+      width: 100%; padding: 9px 12px; border: 1.5px solid var(--border); border-radius: 8px;
+      font-size: 0.9rem; font-family: 'Heebo', sans-serif; color: var(--text);
+      outline: none; transition: border-color .2s; background: white;
+      resize: vertical;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--teal); }
+    .form-textarea { min-height: 80px; line-height: 1.6; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .toggle-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 14px; background: var(--bg); border-radius: 8px; margin-bottom: 8px;
+    }
+    .toggle-label { font-size: 0.88rem; font-weight: 600; }
+    .toggle-desc { font-size: 0.72rem; color: var(--text-soft); margin-top: 1px; }
+    .toggle {
+      width: 42px; height: 24px; background: var(--border); border-radius: 12px;
+      position: relative; cursor: pointer; transition: background .2s; flex-shrink: 0;
+    }
+    .toggle.on { background: var(--teal); }
+    .toggle.on.danger { background: var(--red); }
+    .toggle::after {
+      content: ''; position: absolute; width: 18px; height: 18px;
+      background: white; border-radius: 50%; top: 3px; right: 3px;
+      transition: right .2s; box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    }
+    .toggle.on::after { right: 21px; }
+    .section-divider { font-size: 0.72rem; font-weight: 800; color: var(--teal); letter-spacing: 1px;
+      text-transform: uppercase; margin: 1.4rem 0 0.8rem; padding-bottom: 5px;
+      border-bottom: 2px solid var(--teal-light); }
+    .panel-footer {
+      padding: 1rem 1.5rem; border-top: 1px solid var(--border); flex-shrink: 0;
+      display: flex; gap: 10px; background: white;
+    }
+    .btn-save {
+      flex: 1; padding: 11px; background: var(--teal); color: white; border: none;
+      border-radius: 10px; font-size: 0.95rem; font-weight: 700; cursor: pointer;
+      font-family: 'Heebo', sans-serif; transition: background .2s;
+    }
+    .btn-save:hover { background: var(--teal-dark); }
+    .btn-save:disabled { background: var(--border); color: var(--text-soft); cursor: not-allowed; }
+    .btn-cancel {
+      padding: 11px 20px; background: var(--bg); border: 1.5px solid var(--border);
+      border-radius: 10px; font-size: 0.9rem; font-weight: 600; cursor: pointer;
+      font-family: 'Heebo', sans-serif; transition: border-color .2s;
+    }
+    .btn-cancel:hover { border-color: var(--teal); }
+
+    /* ── TOAST ── */
+    #toast {
+      position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(80px);
+      background: var(--teal-dark); color: white; padding: 12px 24px; border-radius: 30px;
+      font-size: 0.9rem; font-weight: 600; z-index: 300; transition: transform .3s;
+      box-shadow: 0 4px 20px rgba(0,0,0,.25); white-space: nowrap;
+    }
+    #toast.show { transform: translateX(-50%) translateY(0); }
+    #toast.error { background: var(--red); }
+
+    /* ── EMPTY / LOADING ── */
+    .state-message {
+      text-align: center; padding: 4rem 2rem; color: var(--text-soft);
+      grid-column: 1 / -1;
+    }
+    .state-message .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .spinner {
+      width: 40px; height: 40px; border: 3px solid var(--teal-light);
+      border-top-color: var(--teal); border-radius: 50%;
+      animation: spin 0.8s linear infinite; margin: 0 auto 1rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 640px) {
+      .product-list { grid-template-columns: 1fr; padding: 1rem; }
+      .toolbar { padding: 10px 1rem; }
+      .admin-header { padding: 0 1rem; }
+      .header-meta { gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── LOGIN ── -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">פ</div>
+    <h1>FOODOS Admin</h1>
+    <p>הכנסי GitHub Personal Access Token<br>כדי לגשת לממשק הניהול</p>
+    <input type="password" id="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+           onkeydown="if(event.key==='Enter') login()">
+    <button onclick="login()">כניסה לניהול</button>
+    <p class="login-error" id="login-error"></p>
+    <p style="font-size:.72rem;color:#bbb;margin-top:1.2rem;line-height:1.6">
+      הטוקן נשמר בזיכרון הדפדפן בלבד ונמחק עם סגירת הטאב
+    </p>
+  </div>
+</div>
+
+<!-- ── ADMIN ── -->
+<div id="admin-screen">
+  <header class="admin-header">
+    <div class="admin-header-logo">FOODOS <span>Admin</span></div>
+    <div class="header-meta">
+      <span class="header-stat">מוצרים: <strong id="h-total">—</strong></span>
+      <span class="header-stat">זמינים: <strong id="h-avail">—</strong></span>
+      <span class="header-stat">ענף: <strong>dev</strong></span>
+      <button class="btn-logout" onclick="logout()">יציאה</button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <input type="text" id="search" placeholder="🔍  חיפוש לפי שם, מותג, תיאור..." oninput="renderList()">
+    <select id="filter-cat" onchange="renderList()">
+      <option value="">כל הקטגוריות</option>
+    </select>
+    <select id="filter-cert" onchange="renderList()">
+      <option value="">כל ההכשרויות</option>
+    </select>
+    <select id="filter-status" onchange="renderList()">
+      <option value="">כל המצבים</option>
+      <option value="available">✅ זמין</option>
+      <option value="unavailable">⚠️ לא זמין</option>
+      <option value="suspended">🚫 מושהה</option>
+    </select>
+    <span class="toolbar-count" id="results-count"></span>
+  </div>
+
+  <div class="product-list" id="product-list">
+    <div class="state-message">
+      <div class="spinner"></div>
+      <p>טוען מוצרים מ-GitHub...</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── EDIT OVERLAY ── -->
+<div id="edit-overlay" onclick="closeEdit()"></div>
+
+<!-- ── EDIT PANEL ── -->
+<div id="edit-panel">
+  <div class="panel-header">
+    <img id="ep-img" src="" alt="">
+    <div class="panel-title">
+      <h3 id="ep-name">מוצר</h3>
+      <small id="ep-id">ID #</small>
+    </div>
+    <button class="panel-close" onclick="closeEdit()">✕</button>
+  </div>
+
+  <div class="panel-body">
+    <div class="section-divider">שמות ותיאורים</div>
+
+    <div class="form-group">
+      <label class="form-label">שם בעברית</label>
+      <input type="text" class="form-input" id="f-nameHe" placeholder="שם קצר ומדויק בעברית">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">תיאור קצר (desc)</label>
+      <textarea class="form-textarea" id="f-desc" placeholder="תיאור קצר לכרטיס המוצר" style="min-height:90px"></textarea>
+      <p class="form-hint">מופיע בכרטיס המוצר ובאינדקס</p>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">תיאור משופר (descNew)</label>
+      <textarea class="form-textarea" id="f-descNew" placeholder="גרסה משופרת של התיאור" style="min-height:90px"></textarea>
+      <p class="form-hint">אם קיים — מוצג במקום ה-desc הישן</p>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">תיאור ארוך (longDesc)</label>
+      <textarea class="form-textarea" id="f-longDesc" placeholder="תיאור מורחב לעמוד המוצר" style="min-height:100px"></textarea>
+    </div>
+
+    <div class="section-divider">קטגוריה ופרטים</div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">קטגוריה (cat)</label>
+        <input type="text" class="form-input" id="f-cat" placeholder="תבלינים">
+        <p class="form-hint">אפשר כמה קטגוריות מופרדות בפסיק</p>
+      </div>
+      <div class="form-group">
+        <label class="form-label">הכשרות (cert)</label>
+        <select class="form-select" id="f-cert">
+          <option value="OU">OU</option>
+          <option value="OK">OK</option>
+          <option value="KOF-K">KOF-K</option>
+          <option value="Star-K">Star-K</option>
+          <option value="COR">COR</option>
+          <option value="CRC">CRC</option>
+          <option value="JSOR">JSOR</option>
+          <option value="MK">MK</option>
+          <option value="Kehilla Kosher">Kehilla Kosher</option>
+          <option value="EarthKosher">EarthKosher</option>
+          <option value="KVH">KVH</option>
+          <option value="MR">MR</option>
+          <option value="KSA">KSA</option>
+          <option value="KCK">KCK</option>
+          <option value="Kosher Scroll K">Kosher Scroll K</option>
+          <option value="Kosher Check">Kosher Check</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">מחיר (₪)</label>
+        <input type="number" class="form-input" id="f-price" placeholder="0.00" step="0.01">
+      </div>
+      <div class="form-group">
+        <label class="form-label">ביטחון (conf)</label>
+        <select class="form-select" id="f-conf">
+          <option value="גבוהה">גבוהה</option>
+          <option value="בינונית">בינונית</option>
+          <option value="נמוכה">נמוכה</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section-divider">סטטוס מוצר</div>
+
+    <div class="toggle-row">
+      <div>
+        <div class="toggle-label">זמין לרכישה</div>
+        <div class="toggle-desc">מוצג בחנות עם כפתור רכישה</div>
+      </div>
+      <div class="toggle" id="t-available" onclick="toggleField('available')"></div>
+    </div>
+
+    <div class="toggle-row">
+      <div>
+        <div class="toggle-label">מושהה</div>
+        <div class="toggle-desc">מסתיר את המוצר לחלוטין מהאתר</div>
+      </div>
+      <div class="toggle danger" id="t-suspended" onclick="toggleField('suspended')"></div>
+    </div>
+
+    <div class="toggle-row">
+      <div>
+        <div class="toggle-label">מוצר חלבי</div>
+        <div class="toggle-desc">מציין שהמוצר מכיל מרכיבי חלב</div>
+      </div>
+      <div class="toggle" id="t-dairy" onclick="toggleField('dairy')"></div>
+    </div>
+
+    <div class="section-divider">קישורים (לקריאה בלבד)</div>
+    <div class="form-group">
+      <label class="form-label">קישור iHerb</label>
+      <input type="text" class="form-input" id="f-url" readonly style="direction:ltr;font-size:.78rem;color:var(--text-soft)">
+    </div>
+  </div>
+
+  <div class="panel-footer">
+    <button class="btn-save" id="save-btn" onclick="saveProduct()">💾 שמירה ל-GitHub</button>
+    <button class="btn-cancel" onclick="closeEdit()">ביטול</button>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div id="toast"></div>
+
+<script>
+  // ── CONFIG ──
+  const OWNER  = 'pandorit';
+  const REPO   = 'foodos-herb';
+  const BRANCH = 'dev';
+  const FILE   = 'site/kosher-iherb/data/products_explained_human_descriptions.json';
+  const API    = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE}?ref=${BRANCH}`;
+  const API_PUT = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE}`;
+
+  // ── STATE ──
+  let token = '';
+  let products = [];
+  let fileSha = '';
+  let editIdx = -1;
+  let editProduct = null;
+  let toggleState = {};
+
+  // ── AUTH ──
+  async function login() {
+    const t = document.getElementById('token-input').value.trim();
+    if (!t) return;
+    document.querySelector('.login-card button').textContent = 'מתחבר...';
+    document.getElementById('login-error').textContent = '';
+    const res = await fetch(API, { headers: { Authorization: `token ${t}`, Accept: 'application/vnd.github.v3+json' } });
+    if (!res.ok) {
+      document.getElementById('login-error').textContent = res.status === 401 ? 'טוקן לא תקין' : res.status === 404 ? 'קובץ לא נמצא — בדקי הגדרות' : 'שגיאה: ' + res.status;
+      document.querySelector('.login-card button').textContent = 'כניסה לניהול';
+      return;
+    }
+    token = t;
+    const data = await res.json();
+    fileSha = data.sha;
+    products = JSON.parse(atob(data.content.replace(/\n/g, '')));
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('admin-screen').style.display = 'block';
+    buildFilters();
+    renderStats();
+    renderList();
+  }
+
+  function logout() {
+    token = ''; products = []; fileSha = '';
+    document.getElementById('login-screen').style.display = 'flex';
+    document.getElementById('admin-screen').style.display = 'none';
+    document.getElementById('token-input').value = '';
+    document.querySelector('.login-card button').textContent = 'כניסה לניהול';
+  }
+
+  // ── FILTERS ──
+  function buildFilters() {
+    const cats = new Set(), certs = new Set();
+    products.forEach(p => {
+      const cs = Array.isArray(p.cat) ? p.cat : [p.cat];
+      cs.forEach(c => c && cats.add(c));
+      if (p.cert) certs.add(p.cert);
+    });
+    const catSel = document.getElementById('filter-cat');
+    const certSel = document.getElementById('filter-cert');
+    [...cats].sort().forEach(c => catSel.add(new Option(c, c)));
+    [...certs].sort().forEach(c => certSel.add(new Option(c, c)));
+  }
+
+  // ── STATS ──
+  function renderStats() {
+    const avail = products.filter(p => p.available && !p.suspended).length;
+    document.getElementById('h-total').textContent = products.length;
+    document.getElementById('h-avail').textContent = avail;
+  }
+
+  // ── LIST ──
+  function renderList() {
+    const q = document.getElementById('search').value.trim().toLowerCase();
+    const cat = document.getElementById('filter-cat').value;
+    const cert = document.getElementById('filter-cert').value;
+    const status = document.getElementById('filter-status').value;
+
+    let filtered = products.filter(p => {
+      if (q) {
+        const hay = [p.nameHe, p.name, p.brand, p.desc, p.descNew].join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      if (cat) {
+        const cs = Array.isArray(p.cat) ? p.cat : [p.cat];
+        if (!cs.includes(cat)) return false;
+      }
+      if (cert && p.cert !== cert) return false;
+      if (status === 'available'   && (!p.available || p.suspended)) return false;
+      if (status === 'unavailable' && (p.available  || p.suspended)) return false;
+      if (status === 'suspended'   && !p.suspended) return false;
+      return true;
+    });
+
+    document.getElementById('results-count').textContent = `${filtered.length} מוצרים מוצגים`;
+
+    const list = document.getElementById('product-list');
+    if (filtered.length === 0) {
+      list.innerHTML = '<div class="state-message"><div class="icon">🔍</div><p>לא נמצאו מוצרים תואמים</p></div>';
+      return;
+    }
+
+    list.innerHTML = filtered.map(p => {
+      const cats = Array.isArray(p.cat) ? p.cat : [p.cat];
+      const isSusp = !!p.suspended;
+      const isAvail = p.available && !isSusp;
+      const statusBadge = isSusp
+        ? '<span class="badge badge-suspended">מושהה</span>'
+        : isAvail
+          ? '<span class="badge badge-ok">זמין</span>'
+          : '<span class="badge badge-unavail">לא זמין</span>';
+      const price = p.priceILS ? `₪${p.priceILS.toFixed(0)}` : '';
+      return `
+        <div class="product-card${isSusp ? ' is-suspended' : ''}" onclick="openEdit(${p.id})">
+          <img class="product-img" src="${p.img || ''}" alt="" loading="lazy" onerror="this.style.display='none'">
+          <div class="product-info">
+            <div class="product-name-he">${p.nameHe || '—'}</div>
+            <div class="product-name-en">${p.brand || ''}</div>
+            <div class="product-badges">
+              <span class="badge badge-cert">${p.cert || ''}</span>
+              ${cats.filter(Boolean).map(c=>`<span class="badge badge-cat">${c}</span>`).join('')}
+              ${statusBadge}
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0">
+            <div class="product-price">${price}</div>
+            <button class="card-edit-btn">עריכה</button>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // ── EDIT ──
+  function openEdit(id) {
+    const p = products.find(x => x.id === id);
+    if (!p) return;
+    editProduct = JSON.parse(JSON.stringify(p));
+    editIdx = products.findIndex(x => x.id === id);
+
+    document.getElementById('ep-img').src = p.img || '';
+    document.getElementById('ep-name').textContent = p.nameHe || p.name || '—';
+    document.getElementById('ep-id').textContent = `ID #${p.id} | ${p.brand || ''}`;
+
+    document.getElementById('f-nameHe').value  = p.nameHe  || '';
+    document.getElementById('f-desc').value    = p.desc    || '';
+    document.getElementById('f-descNew').value = p.descNew || '';
+    document.getElementById('f-longDesc').value= p.longDesc|| '';
+    document.getElementById('f-cat').value     = Array.isArray(p.cat) ? p.cat.join(', ') : (p.cat || '');
+    document.getElementById('f-cert').value    = p.cert    || 'OU';
+    document.getElementById('f-price').value   = p.priceILS|| '';
+    document.getElementById('f-conf').value    = p.conf    || 'גבוהה';
+    document.getElementById('f-url').value     = p.url     || '';
+
+    toggleState = {
+      available: !!p.available,
+      suspended: !!p.suspended,
+      dairy:     !!p.dairy
+    };
+    updateToggles();
+
+    document.getElementById('edit-overlay').style.display = 'block';
+    document.getElementById('edit-panel').classList.add('open');
+    document.getElementById('save-btn').disabled = false;
+    document.getElementById('save-btn').textContent = '💾 שמירה ל-GitHub';
+  }
+
+  function closeEdit() {
+    document.getElementById('edit-overlay').style.display = 'none';
+    document.getElementById('edit-panel').classList.remove('open');
+    editProduct = null; editIdx = -1;
+  }
+
+  function toggleField(field) {
+    toggleState[field] = !toggleState[field];
+    updateToggles();
+  }
+
+  function updateToggles() {
+    Object.entries(toggleState).forEach(([k, v]) => {
+      const el = document.getElementById(`t-${k}`);
+      if (!el) return;
+      el.classList.toggle('on', v);
+    });
+  }
+
+  // ── SAVE ──
+  async function saveProduct() {
+    if (!token || editIdx < 0) return;
+    const btn = document.getElementById('save-btn');
+    btn.disabled = true;
+    btn.textContent = 'שומר...';
+
+    // Read updated values into editProduct
+    editProduct.nameHe   = document.getElementById('f-nameHe').value.trim();
+    editProduct.desc     = document.getElementById('f-desc').value.trim();
+    editProduct.descNew  = document.getElementById('f-descNew').value.trim();
+    editProduct.longDesc = document.getElementById('f-longDesc').value.trim();
+    editProduct.cert     = document.getElementById('f-cert').value;
+    editProduct.priceILS = parseFloat(document.getElementById('f-price').value) || editProduct.priceILS;
+    editProduct.conf     = document.getElementById('f-conf').value;
+    editProduct.available = toggleState.available;
+    editProduct.suspended = toggleState.suspended || undefined;
+    if (!editProduct.suspended) delete editProduct.suspended;
+    editProduct.dairy    = toggleState.dairy;
+
+    // Handle cat (could be array)
+    const catRaw = document.getElementById('f-cat').value.trim();
+    const catArr = catRaw.split(',').map(s => s.trim()).filter(Boolean);
+    editProduct.cat = catArr.length === 1 ? catArr[0] : catArr;
+
+    // Apply to products array
+    products[editIdx] = editProduct;
+
+    // Encode to base64
+    const json = JSON.stringify(products, null, 2);
+    const b64  = btoa(unescape(encodeURIComponent(json)));
+
+    try {
+      const res = await fetch(API_PUT, {
+        method: 'PUT',
+        headers: {
+          Authorization: `token ${token}`,
+          Accept: 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: `Admin: עדכון מוצר #${editProduct.id} — ${editProduct.nameHe || editProduct.name}`,
+          content: b64,
+          sha: fileSha,
+          branch: BRANCH
+        })
+      });
+
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.message || res.status);
+      }
+
+      const data = await res.json();
+      fileSha = data.content.sha; // update SHA for next save
+
+      renderStats();
+      renderList();
+      closeEdit();
+      showToast('✅ נשמר בהצלחה ל-GitHub (ענף dev)');
+    } catch (e) {
+      showToast('❌ שגיאה בשמירה: ' + e.message, true);
+      btn.disabled = false;
+      btn.textContent = '💾 שמירה ל-GitHub';
+    }
+  }
+
+  // ── TOAST ──
+  function showToast(msg, isError = false) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.className = isError ? 'error show' : 'show';
+    setTimeout(() => t.classList.remove('show'), 3500);
+  }
+</script>
+</body>
+</html>

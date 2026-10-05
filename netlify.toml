@@ -22,6 +22,12 @@
   [headers.values]
     Cache-Control = "public, max-age=300, stale-while-revalidate=60"
 
+# Admin panel — must come before catch-all
+[[redirects]]
+  from   = "/admin"
+  to     = "/admin/index.html"
+  status = 200
+
 # /kosher-iherb/ → homepage
 [[redirects]]
   from   = "/kosher-iherb/"
