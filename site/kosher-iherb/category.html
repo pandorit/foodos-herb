@@ -446,8 +446,8 @@
     'Kosher Scroll K':'#1a5c5c','כלי מטבח':'#555'
   };
 
-  // תיאורים מיוחדים לקטגוריות
-  const catDescriptions = {
+  // תיאורים מיוחדים לקטגוריות — נטענים מ-content.json, עם ברירת מחדל מקומית
+  let catDescriptions = {
     'תבלינים':       'עשבי תיבול, תערובות תבלינים ופלפלים כשרים ומאומתים. מתאימים לבישול יומיומי ולמטבח ישראלי ובינלאומי.',
     'מלח':           'מלח ים, מלח היווני, מלח ורוד היימלאי ועוד — כשרים ומאומתים. הבסיס של כל מטבח טוב.',
     'שמנים':         'שמני זית כתית, שמן קוקוס, שמן אבוקדו ועוד. כולם כשרים, בקבקים שעוברים בדיקה ידנית של הקהילה.',
@@ -504,6 +504,17 @@
   let splitMode = false;
 
   async function init() {
+    // טעינת תוכן מ-content.json (לא חיונית — fallback לברירות מחדל מקומיות)
+    try {
+      if (location.protocol !== 'file:') {
+        const cr = await fetch('data/content.json');
+        if (cr.ok) {
+          const cdata = await cr.json();
+          if (cdata.categories) Object.assign(catDescriptions, cdata.categories);
+        }
+      }
+    } catch(e) {}
+
     const params  = new URLSearchParams(location.search);
     const catName = params.get('cat') || '';
 

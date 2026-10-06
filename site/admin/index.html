@@ -266,6 +266,42 @@
     @keyframes spin { to { transform: rotate(360deg); } }
     .empty-state { text-align: center; padding: 3rem; color: var(--text-soft); }
 
+    /* ── TABS ── */
+    .tab-btn {
+      background: none; border: none; border-bottom: 3px solid transparent;
+      padding: 16px 20px; font-family: 'Heebo', sans-serif; font-size: 0.88rem;
+      font-weight: 600; color: var(--text-soft); cursor: pointer; transition: all .15s;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--teal); border-bottom-color: var(--teal); }
+
+    /* ── CONTENT EDITOR ── */
+    .content-section {
+      background: white; border-radius: var(--radius); border: 1px solid var(--border);
+      padding: 1.5rem; margin-bottom: 1.2rem;
+    }
+    .content-section-title {
+      font-size: 0.95rem; font-weight: 800; color: var(--text);
+      margin-bottom: 1.2rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border);
+    }
+    .content-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+    .content-field { }
+    .testimonial-card {
+      background: var(--bg); border-radius: var(--radius); padding: 1rem;
+      border: 1px solid var(--border); margin-bottom: 0.8rem;
+    }
+    .testimonial-card-title { font-size: 0.78rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.8rem; }
+    .accordion-item {
+      background: var(--bg); border-radius: var(--radius); padding: 1rem;
+      border: 1px solid var(--border); margin-bottom: 0.8rem;
+    }
+    .cat-desc-item { margin-bottom: 0.8rem; }
+    .cat-desc-item label { font-size: 0.78rem; font-weight: 700; color: var(--teal-dark); display: block; margin-bottom: 4px; }
+    .cat-desc-item textarea { width: 100%; padding: 8px 12px; border: 1.5px solid var(--border); border-radius: 8px; font-family: 'Heebo', sans-serif; font-size: 0.85rem; resize: vertical; min-height: 54px; line-height: 1.5; background: white; transition: border-color .15s; }
+    .cat-desc-item textarea:focus { outline: none; border-color: var(--teal); }
+
     @media (max-width: 768px) {
       .stats-bar { grid-template-columns: repeat(2, 1fr); }
       .drawer { width: 100%; }
@@ -307,7 +343,18 @@
     </div>
   </div>
 
+  <!-- ── TABS ── -->
+  <div style="border-bottom:1px solid var(--border);background:white;padding:0 2rem;">
+    <div style="max-width:1100px;margin:0 auto;display:flex;gap:0;">
+      <button class="tab-btn active" id="tab-products" onclick="switchTab('products')">📦 מוצרים</button>
+      <button class="tab-btn" id="tab-content" onclick="switchTab('content')">✏️ תוכן האתר</button>
+    </div>
+  </div>
+
   <div class="main-content">
+
+    <!-- ── TAB: PRODUCTS ── -->
+    <div id="panel-products">
     <div class="stats-bar">
       <div class="stat-card"><div class="stat-num" id="stat-total">—</div><div class="stat-label">סה"כ מוצרים</div></div>
       <div class="stat-card"><div class="stat-num" id="stat-active">—</div><div class="stat-label">פעילים</div></div>
@@ -335,6 +382,97 @@
     <div id="products-container">
       <div class="loading"><div class="spinner"></div><span>טוען מוצרים...</span></div>
     </div>
+    </div><!-- /panel-products -->
+
+    <!-- ── TAB: CONTENT ── -->
+    <div id="panel-content" style="display:none;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+        <div>
+          <div style="font-size:1.1rem;font-weight:800;">תוכן האתר</div>
+          <div style="font-size:0.82rem;color:var(--text-soft);margin-top:3px;">עריכת טקסטים שמופיעים בעמוד הבית ובדפי הקטגוריות</div>
+        </div>
+        <button class="btn-save-all visible" id="save-content-btn" onclick="saveContent()" style="display:flex;">💾 שמור תוכן ל-GitHub</button>
+      </div>
+
+      <!-- Homepage -->
+      <div class="content-section">
+        <div class="content-section-title">🏠 עמוד הבית</div>
+        <div class="content-grid">
+          <div class="content-field">
+            <label class="drawer-label">פס הכרזה עליון</label>
+            <input type="text" id="c-announcement" class="drawer-input">
+          </div>
+          <div class="content-field">
+            <label class="drawer-label">שורת הבאדג' בהירו</label>
+            <input type="text" id="c-hero-badge" class="drawer-input">
+          </div>
+          <div class="content-field" style="grid-column:1/-1;">
+            <label class="drawer-label">כותרת ראשית (הירו)</label>
+            <input type="text" id="c-hero-headline" class="drawer-input" style="font-size:1rem;font-weight:700;">
+          </div>
+          <div class="content-field">
+            <label class="drawer-label">תגית מתחת לכותרת</label>
+            <input type="text" id="c-hero-tagline" class="drawer-input">
+          </div>
+          <div class="content-field" style="grid-column:1/-1;">
+            <label class="drawer-label">תת-כותרת הירו</label>
+            <textarea id="c-hero-subtitle" class="drawer-textarea" style="min-height:60px;"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Product -->
+      <div class="content-section">
+        <div class="content-section-title">⭐ מוצר מומלץ (Featured)</div>
+        <div class="content-grid">
+          <div class="content-field">
+            <label class="drawer-label">כותרת</label>
+            <input type="text" id="c-feat-headline" class="drawer-input">
+          </div>
+          <div class="content-field">
+            <label class="drawer-label">ID מוצר</label>
+            <input type="number" id="c-feat-id" class="drawer-input" dir="ltr" min="1">
+          </div>
+          <div class="content-field" style="grid-column:1/-1;">
+            <label class="drawer-label">תיאור</label>
+            <textarea id="c-feat-body" class="drawer-textarea" style="min-height:70px;"></textarea>
+          </div>
+          <div class="content-field" style="grid-column:1/-1;">
+            <label class="drawer-label">יתרונות (שורה אחת = יתרון אחד)</label>
+            <textarea id="c-feat-benefits" class="drawer-textarea" style="min-height:80px;"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="content-section">
+        <div class="content-section-title">💬 המלצות</div>
+        <div id="testimonials-editor"></div>
+      </div>
+
+      <!-- Values -->
+      <div class="content-section">
+        <div class="content-section-title">💡 סעיף הערכים</div>
+        <div class="content-grid">
+          <div class="content-field" style="grid-column:1/-1;">
+            <label class="drawer-label">כותרת</label>
+            <input type="text" id="c-val-headline" class="drawer-input">
+          </div>
+          <div class="content-field" style="grid-column:1/-1;">
+            <label class="drawer-label">טקסט</label>
+            <textarea id="c-val-body" class="drawer-textarea"></textarea>
+          </div>
+        </div>
+        <div id="accordion-editor" style="margin-top:1rem;"></div>
+      </div>
+
+      <!-- Category Descriptions -->
+      <div class="content-section">
+        <div class="content-section-title">📂 תיאורי קטגוריות</div>
+        <div id="cats-editor"></div>
+      </div>
+    </div><!-- /panel-content -->
+
   </div>
 </div>
 
@@ -686,6 +824,137 @@ function showToast(msg, isError) {
   t.textContent = msg; t.className = `toast${isError?' error':''} show`;
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove('show'), 4000);
+}
+
+// ── TABS ──
+function switchTab(tab) {
+  document.getElementById('panel-products').style.display = tab === 'products' ? '' : 'none';
+  document.getElementById('panel-content').style.display  = tab === 'content'  ? '' : 'none';
+  document.getElementById('tab-products').classList.toggle('active', tab === 'products');
+  document.getElementById('tab-content').classList.toggle('active',  tab === 'content');
+  if (tab === 'content' && !contentLoaded) loadContent();
+}
+
+// ── CONTENT EDITOR ──
+const CONTENT_PATH = 'site/kosher-iherb/data/content.json';
+let siteContent = null;
+let contentSha = '';
+let contentLoaded = false;
+
+async function loadContent() {
+  try {
+    const res = await ghGet(`/repos/${REPO}/contents/${CONTENT_PATH}?ref=${BRANCH}`, token);
+    const data = await res.json();
+    contentSha = data.sha;
+    siteContent = JSON.parse(decodeURIComponent(escape(atob(data.content.replace(/\n/g,'')))));
+    populateContentForm(siteContent);
+    contentLoaded = true;
+  } catch(e) {
+    showToast('שגיאה בטעינת content.json', true);
+  }
+}
+
+function populateContentForm(c) {
+  const hp = c.homepage;
+  document.getElementById('c-announcement').value   = hp.announcement || '';
+  document.getElementById('c-hero-badge').value     = hp.hero.badge || '';
+  document.getElementById('c-hero-headline').value  = hp.hero.headline || '';
+  document.getElementById('c-hero-tagline').value   = hp.hero.tagline || '';
+  document.getElementById('c-hero-subtitle').value  = hp.hero.subtitle || '';
+  document.getElementById('c-feat-headline').value  = hp.featured.headline || '';
+  document.getElementById('c-feat-id').value        = hp.featured.product_id || '';
+  document.getElementById('c-feat-body').value      = hp.featured.body || '';
+  document.getElementById('c-feat-benefits').value  = (hp.featured.benefits || []).join('\n');
+  document.getElementById('c-val-headline').value   = hp.values.headline || '';
+  document.getElementById('c-val-body').value       = hp.values.body || '';
+
+  // Testimonials
+  const te = document.getElementById('testimonials-editor');
+  te.innerHTML = (hp.testimonials || []).map((t, i) => `
+    <div class="testimonial-card">
+      <div class="testimonial-card-title">המלצה ${i+1}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.8rem;">
+        <div><label class="drawer-label">שם</label><input type="text" id="t-name-${i}" class="drawer-input" value="${esc(t.name||'')}"></div>
+        <div><label class="drawer-label">כוכבים (1-5)</label><input type="number" id="t-stars-${i}" class="drawer-input" dir="ltr" min="1" max="5" value="${t.stars||5}"></div>
+      </div>
+      <label class="drawer-label">ציטוט</label>
+      <textarea id="t-text-${i}" class="drawer-textarea" style="min-height:60px;">${esc(t.text||'')}</textarea>
+    </div>`).join('');
+
+  // Accordion
+  const ae = document.getElementById('accordion-editor');
+  ae.innerHTML = (hp.values.accordion || []).map((a, i) => `
+    <div class="accordion-item">
+      <label class="drawer-label">כותרת ${i+1}</label>
+      <input type="text" id="acc-title-${i}" class="drawer-input" value="${esc(a.title||'')}" style="margin-bottom:8px;">
+      <label class="drawer-label">טקסט</label>
+      <textarea id="acc-body-${i}" class="drawer-textarea" style="min-height:70px;">${esc(a.body||'')}</textarea>
+    </div>`).join('');
+
+  // Category descriptions
+  const ce = document.getElementById('cats-editor');
+  const cats = c.categories || {};
+  ce.innerHTML = Object.entries(cats).map(([k, v]) => `
+    <div class="cat-desc-item">
+      <label>${k}</label>
+      <textarea id="cat-${encodeURIComponent(k)}">${esc(v)}</textarea>
+    </div>`).join('');
+}
+
+function readContentForm() {
+  const c = JSON.parse(JSON.stringify(siteContent)); // deep clone
+  c.homepage.announcement         = document.getElementById('c-announcement').value.trim();
+  c.homepage.hero.badge           = document.getElementById('c-hero-badge').value.trim();
+  c.homepage.hero.headline        = document.getElementById('c-hero-headline').value.trim();
+  c.homepage.hero.tagline         = document.getElementById('c-hero-tagline').value.trim();
+  c.homepage.hero.subtitle        = document.getElementById('c-hero-subtitle').value.trim();
+  c.homepage.featured.headline    = document.getElementById('c-feat-headline').value.trim();
+  c.homepage.featured.product_id  = parseInt(document.getElementById('c-feat-id').value) || c.homepage.featured.product_id;
+  c.homepage.featured.body        = document.getElementById('c-feat-body').value.trim();
+  c.homepage.featured.benefits    = document.getElementById('c-feat-benefits').value.split('\n').map(s=>s.trim()).filter(Boolean);
+  c.homepage.values.headline      = document.getElementById('c-val-headline').value.trim();
+  c.homepage.values.body          = document.getElementById('c-val-body').value.trim();
+  // Testimonials
+  c.homepage.testimonials = c.homepage.testimonials.map((t, i) => ({
+    name:  document.getElementById(`t-name-${i}`).value.trim(),
+    text:  document.getElementById(`t-text-${i}`).value.trim(),
+    stars: parseInt(document.getElementById(`t-stars-${i}`).value) || 5
+  }));
+  // Accordion
+  c.homepage.values.accordion = c.homepage.values.accordion.map((a, i) => ({
+    title: document.getElementById(`acc-title-${i}`).value.trim(),
+    body:  document.getElementById(`acc-body-${i}`).value.trim()
+  }));
+  // Categories
+  const cats = c.categories || {};
+  Object.keys(cats).forEach(k => {
+    const el = document.getElementById(`cat-${encodeURIComponent(k)}`);
+    if (el) cats[k] = el.value.trim();
+  });
+  return c;
+}
+
+async function saveContent() {
+  const btn = document.getElementById('save-content-btn');
+  btn.innerHTML = '⏳ שומר...'; btn.disabled = true;
+  try {
+    const updated = readContentForm();
+    const json = JSON.stringify(updated, null, 2);
+    const content = btoa(unescape(encodeURIComponent(json)));
+    const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${CONTENT_PATH}`, {
+      method: 'PUT',
+      headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: 'admin: עדכון תוכן האתר', content, sha: contentSha, branch: BRANCH })
+    });
+    if (!res.ok) { const e = await res.json(); throw new Error(e.message); }
+    const result = await res.json();
+    contentSha = result.content.sha;
+    siteContent = updated;
+    showToast('✅ תוכן האתר נשמר ב-GitHub (ענף dev)');
+  } catch(e) {
+    showToast('❌ שגיאה: ' + e.message, true);
+  }
+  btn.innerHTML = '💾 שמור תוכן ל-GitHub'; btn.disabled = false;
 }
 
 // ── AUTO LOGIN ──
