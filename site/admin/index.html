@@ -180,6 +180,9 @@
     .btn-edit:hover { background: var(--teal); color: white; }
     .changed-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; display: inline-block; margin-left: 4px; visibility: hidden; vertical-align: middle; }
     .changed-dot.visible { visibility: visible; }
+    .heart-btn { background: none; border: none; font-size: 1.1rem; cursor: pointer; padding: 4px; line-height: 1; border-radius: 50%; transition: transform .15s; }
+    .heart-btn:hover { transform: scale(1.25); }
+    .heart-btn.on { filter: drop-shadow(0 0 3px rgba(220,50,50,.4)); }
 
     /* ── EDIT DRAWER ── */
     .drawer-overlay {
@@ -653,8 +656,12 @@ function renderTable(list) {
     const isActive = !eff.suspended;
     const isAvail = eff.available !== false;
     const changed = !!pendingChanges[p.id];
+    const isPinned = eff.pinned === true;
     return `<tr>
       <td class="product-id">${p.id}</td>
+      <td style="width:36px;text-align:center;">
+        <button class="heart-btn ${isPinned?'on':''}" onclick="togglePinned(${p.id},this)" title="${isPinned?'הסר מועדפים':'הוסף למועדפים'}">${isPinned?'❤️':'🤍'}</button>
+      </td>
       <td><div style="font-size:0.75rem;color:var(--text-soft);direction:ltr;text-align:left;">${p.brand||''}</div><div class="product-name-en">${p.name||''}</div></td>
       <td class="product-name-he-cell">
         <span class="changed-dot ${changed?'visible':''}" id="dot-${p.id}"></span>
@@ -668,9 +675,24 @@ function renderTable(list) {
   }).join('');
   document.getElementById('products-container').innerHTML = `
     <table class="products-table">
-      <thead><tr><th>#</th><th>מותג / שם</th><th>שם עברית</th><th>הכשרות</th><th>פעיל</th><th>זמין</th><th></th></tr></thead>
+      <thead><tr><th>#</th><th>❤️</th><th>מותג / שם</th><th>שם עברית</th><th>הכשרות</th><th>פעיל</th><th>זמין</th><th></th></tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
+}
+
+// ── HEART / PIN ──
+function togglePinned(id, btn) {
+  const eff = {...products.find(p=>p.id===id), ...(pendingChanges[id]||{})};
+  const newVal = eff.pinned !== true;
+  if (!pendingChanges[id]) pendingChanges[id] = {};
+  const orig = products.find(p=>p.id===id);
+  if (newVal === (orig.pinned||false)) delete pendingChanges[id].pinned;
+  else pendingChanges[id].pinned = newVal;
+  if (!Object.keys(pendingChanges[id]).length) delete pendingChanges[id];
+  btn.textContent = newVal ? '❤️' : '🤍';
+  btn.classList.toggle('on', newVal);
+  btn.title = newVal ? 'הסר מועדפים' : 'הוסף למועדפים';
+  updateDot(id); updateSaveBtn();
 }
 
 // ── QUICK EDIT ──

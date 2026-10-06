@@ -1310,7 +1310,12 @@
         if (!hay.includes(q)) return false;
       }
       return true;
-    }).sort((a, b) => (a.available === false ? 1 : 0) - (b.available === false ? 1 : 0));
+    }).sort((a, b) => {
+      // מועדפים (❤️) ראשונים, אחר כך לא זמינים לסוף
+      const pinnedDiff = (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0);
+      if (pinnedDiff !== 0) return pinnedDiff;
+      return (a.available === false ? 1 : 0) - (b.available === false ? 1 : 0);
+    });
     currentPage = 0;
     renderProducts(true);
     updateMeta();

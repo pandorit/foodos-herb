@@ -618,6 +618,8 @@
       if (activeBrand !== 'הכל' && p.brand !== activeBrand) return false;
       return true;
     }).sort((a, b) => {
+      const pinnedDiff = (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0);
+      if (pinnedDiff !== 0) return pinnedDiff;
       const av = a.available === false ? 1 : 0;
       const bv = b.available === false ? 1 : 0;
       return av - bv;
