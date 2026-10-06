@@ -359,8 +359,15 @@
       <input type="text" id="edit-name" class="drawer-input" dir="ltr" readonly style="color:var(--text-soft);cursor:default;">
     </div>
     <div class="drawer-field">
-      <label class="drawer-label">תיאור בעברית</label>
-      <textarea id="edit-desc" class="drawer-textarea" placeholder="תיאור המוצר..."></textarea>
+      <label class="drawer-label">תיאור קצר <span style="font-weight:400;color:var(--text-soft)">(לכרטיס המוצר)</span></label>
+      <textarea id="edit-descNew" class="drawer-textarea" placeholder="2-3 משפטים שמופיעים על כרטיס המוצר..." style="min-height:80px;"></textarea>
+    </div>
+    <div class="drawer-field">
+      <label class="drawer-label">תיאור ארוך <span style="font-weight:400;color:var(--text-soft)">(לדף המוצר)</span></label>
+      <textarea id="edit-longDesc" class="drawer-textarea" placeholder="תיאור מלא לדף המוצר. תומך Markdown: **מודגש**, [טקסט](קישור)..." style="min-height:130px;"></textarea>
+      <div style="font-size:0.72rem;color:var(--text-soft);margin-top:5px;line-height:1.5;">
+        קישור למוצר אחר: <code style="background:var(--teal-light);padding:1px 5px;border-radius:4px;">[שם המוצר](/product?id=23)</code>
+      </div>
     </div>
     <hr class="drawer-divider">
     <div class="drawer-row">
@@ -582,7 +589,8 @@ function openDrawer(id) {
   document.getElementById('edit-id').value = id;
   document.getElementById('edit-nameHe').value = eff.nameHe || '';
   document.getElementById('edit-name').value = p.name || '';
-  document.getElementById('edit-desc').value = eff.desc || '';
+  document.getElementById('edit-descNew').value = eff.descNew || '';
+  document.getElementById('edit-longDesc').value = eff.longDesc || '';
   document.getElementById('edit-price').value = eff.price || '';
   document.getElementById('edit-cert').value = p.cert || '';
   document.getElementById('edit-link').value = eff.link || '';
@@ -616,8 +624,10 @@ function saveDrawer() {
   const changes = {};
   const nameHe = document.getElementById('edit-nameHe').value.trim();
   if (nameHe !== (orig.nameHe||'')) changes.nameHe = nameHe;
-  const desc = document.getElementById('edit-desc').value.trim();
-  if (desc !== (orig.desc||'')) changes.desc = desc;
+  const descNew = document.getElementById('edit-descNew').value.trim();
+  if (descNew !== (orig.descNew||'')) changes.descNew = descNew;
+  const longDesc = document.getElementById('edit-longDesc').value.trim();
+  if (longDesc !== (orig.longDesc||'')) changes.longDesc = longDesc;
   const price = parseFloat(document.getElementById('edit-price').value);
   if (!isNaN(price) && price !== orig.price) changes.price = price;
   const link = document.getElementById('edit-link').value.trim();
