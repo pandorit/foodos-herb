@@ -445,7 +445,7 @@
 
     // Filter out כלי מטבח, sort: active first, then merged
     const displayCerts = allCerts
-      .filter(c => c.cert !== 'כלי מטבח' && c.cert !== 'KA')
+      .filter(c => c.cert !== 'כלי מטבח')
       .sort((a, b) => {
         // active before merged
         const aM = a.status === 'merged' ? 1 : 0;

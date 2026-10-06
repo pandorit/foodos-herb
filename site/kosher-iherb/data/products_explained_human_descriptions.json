@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": 1,
     "name": "Frontier Co-op, Organic Ceylon Cinnamon Powder, 453g",
@@ -215,7 +215,7 @@
     "brand": "Frontier Co-op",
     "longDesc": "זהו פתרון מוצלח למי שרוצה פתיתי מלח ים כשר, חלופה מצוינת למלדון במחיר נמוך. פתיתי מלח גדולים ואווריריים קלים יותר לאחיזה ולפיזור ממלח שולחן, ולכן נוחים במיוחד לתיבול ביד. זה מלח שנועד לתת גם תיבול וגם נגיעה קטנה של קראנץ' או צבע. הוא מתאים במיוחד לעגבניות, אבוקדו, תפוחי אדמה, מאפים ושוקולד מריר.",
     "descNew": "מלח ים בפתיתים בסגנון קושר, גבישים שטוחים וקלים לצביטה בין האצבעות. הפתיתים נדבקים היטב לבשר ולירקות ומעניקים תיבול אחיד ופריך. מלח הכרחי במטבח לכל שף ביתי שרוצה שליטה בכמויות.",
-    "nameHe": "מלח ים פתיתים כשר",
+    "nameHe": "פתיתי מלח מהאוקיינוס",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
@@ -684,7 +684,7 @@
     "name": "Bob's Red Mill, Large Flake Nutritional Yeast, 142g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-large-flake-nutritional-yeast-gluten-free-5-oz-142-g/89491",
     "desc": "שמרי בירה תזונתיים (Nutritional Yeast) מבית Bob's Red Mill, ידועים כ\"תבלין הקסם\" הסודי של המטבח הבריא והטבעוני, ולגמרי כדאי גם לנו לאמץ כשומרי כשרות. מדובר בשמרים שאינם פעילים (כלומר: לא מתפיחים שום בצק), העוברים ייבוש ועשירים בוויטמינים מקבוצת B ובחלבון. נחשבים פצצת אומאמי מענגת בפרופיל אגוזי-גבינתי שמזכיר מאוד גבינת פרמזן עזת טעם, למרות שהם פרווה לגמרי. מפזרים אותם בכיף מעל פופקורן לוהט, פסטות, סלטים וירקות קלויים, או משלבים ברטבים כדי לקבל מרקם קטיפתי וטעם עמוק, בלי טיפת חלב או גלוטן. אואמרים שהם גם מושלמים בפירה.",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "שמרים תזונתיים",
     "conf": "בינונית",
     "brand": "Bob's Red Mill",
@@ -1297,7 +1297,7 @@
     "name": "Bob's Red Mill, White Rice Flour, 680g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-white-rice-flour-24-oz-680-g/103986",
     "desc": "קמח אורז לבן של Bob's Red Mill, טחון דק במטחנות אבן מסורתיות. חופשי מגלוטן ומצוין לאפייה של קרקרים, של פנקייק וכמעבה בבישול אסייתי. Bob's Red Mill היא חברה משפחתית מאורגון עם התמחות עצומה בקמחים ללא גלוטן.",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "conf": "גבוהה",
     "brand": "Bob's Red Mill",
@@ -1317,7 +1317,7 @@
     "name": "Bob's Red Mill, Brown Rice Flour, Whole Grain, 680g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-brown-rice-flour-whole-grain-24-oz-680-g/103982",
     "desc": "קמח אורז מלא של Bob's Red Mill, נטחן דק מגרעיני אורז חום שלמים. שומר על הסובין והנבט ולכן מכיל יותר סיבים וויטמינים מקמח אורז לבן, והטעם בהתאם - כפרי וגס יותר. מצוין לאפייה ללא גלוטן, לפנקייק ולעיבוי רטבים.",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "conf": "גבוהה",
     "brand": "Bob's Red Mill",
@@ -1337,7 +1337,7 @@
     "name": "Bob's Red Mill, Tapioca Flour, Gluten Free, 454g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-tapioca-flour-gluten-free-16-oz-454-g/126948",
     "desc": "קמח טפיוקה ללא גלוטן, מופק משורש הקסאווה ומעניק גמישות ומרקם עדין לאפייה ללא גלוטן. הבסיס למאפי pão de queijo ברזילאיים ומעבה מצוין לרוטב שקוף. במובן מסוים, הוא משמש כאלטרנטיבה לקורנפלור.  Bob's Red Mill מתמחה בקמחים חלופיים ובריאותיים.",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": [
       "קמחים",
       "תוספי אפייה"
@@ -1360,7 +1360,7 @@
     "name": "Bob's Red Mill, Super-Fine Almond Flour, 453g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-super-fine-almond-flour-16-oz-453-g/89504",
     "desc": "קמח שקדים סופר דק של Bob's Red Mill, מיוצר משקדים מולבנים שנטחנו טחינה עדינה במיוחד. אידיאלי לאפייה קיטו, למקרונים, לפאלאו ולעוגות ללא גלוטן. עשיר בחלבון ובוויטמין E ונותן מרקם רך ולחלוחי לעוגות.",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "conf": "גבוהה",
     "brand": "Bob's Red Mill",
@@ -1380,7 +1380,7 @@
     "name": "Bob's Red Mill, Chickpea Flour, Gluten Free, 454g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-chickpea-flour-gluten-free-1-lb-454-g/126943",
     "desc": "קמח חומוס של Bob's Red Mill, טחון מגרגירי חומוס שלמים ומצוין לאפייה ללא גלוטן, ואפילו להכנת חביתה טבעונית. עשיר בחלבון ובסיבים, ומשמש רבות במטבח ההודי (בסאן) ובמטבח האיטלקי (פאריני). אפשר להכין ממנו לחמים שטוחים או להסמיך לרטבים. ",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "conf": "גבוהה",
     "brand": "Bob's Red Mill",
@@ -1400,7 +1400,7 @@
     "name": "Bob's Red Mill, Cassava Flour, Grain Free, 567g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-cassava-flour-grain-free-20-oz-567-g/90391",
     "desc": "קמח קסאווה ללא דגנים ובלי גלוטן, מיוצר משורש הקסאווה של דרום אמריקה. שונה מטפיוקה בכך שמשתמשים בשורש השלם, כולל הסיבים. מתאים למי שנמנע מדגנים לחלוטין ולתפריט פאלאו קפדני.",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "conf": "גבוהה",
     "brand": "Bob's Red Mill",
@@ -1420,7 +1420,7 @@
     "name": "Bob's Red Mill, Teff Flour, Whole Grain, Gluten Free, 567g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-teff-flour-whole-grain-gluten-free-20-oz-567-g/103993",
     "desc": "קמח טף אתיופי מלא ללא גלוטן, מגרגירים זעירים במיוחד שאין להם מקבילה בעולם. הבסיס ללחם האינג'רה האתיופי, עשיר בברזל ובחלבון ורבים מתייחסים אליו כסופר פוד. Bob's Red Mill היא אחת המעטות שמייבאת טף אורגני אמיתי.",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "conf": "גבוהה",
     "brand": "Bob's Red Mill",
@@ -1440,7 +1440,7 @@
     "name": "Bob's Red Mill, Oat Flour, Whole Grain, Gluten Free, 510g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-oat-flour-whole-grain-gluten-free-18-oz-510-g/103976",
     "desc": "קמח שיבולת שועל מלא ללא גלוטן של Bob's Red Mill, טחון במפעל ייעודי כדי למנוע זיהום צולב. מצוין לאפייה של עוגיות ופנקייק. מקור נהדר לסיבים ולבטא-גלוקן, שתורם לתחושת שובע.",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "conf": "גבוהה",
     "brand": "Bob's Red Mill",
@@ -1849,7 +1849,7 @@
     "url": "https://www.iherb.com/pr/frontier-co-op-organic-stir-fry-seasoning-16-oz-453-g/152788",
     "desc": "תערובת תיבול אורגנית למוקפצים אסייתיים, עם ג'ינג'ר, שום, שומשום ופלפל צ'ילי. חוסכת הכנה של תבלינים טריים לפני מוקפץ ומוסיפה טעם שוק אסייתי אותנטי. אפשר לפזר על ירקות במחבת עם מעט שמן שומשום ורוטב סויה.",
     "cert": "KSA",
-    "cat": "תבלינים",
+    "cat": ["תבלינים", "אסייתי"],
     "conf": "גבוהה",
     "brand": "Frontier Co-op",
     "longDesc": "כשהמטרה היא לשדרג בלי להסתבך, זה מוצר שמביא תערובת אורגנית למוקפצים עם שום, ג'ינג'ר, שומשום וטעמי טמארי. תערובת למוקפץ מרכזת מראש טעמי שום, ג'ינג'ר ואומאמי, ולכן היא שימושית כשאין בבית כמה רטבים ותבלינים אסייתיים. טמארי הוא רוטב סויה יפני עשיר ומרוכז יותר, ובגרסאות רבות הוא מיוצר ללא חיטה; תמיד כדאי לבדוק את הסימון הספציפי. הוא חוסך ערבוב של כמה תבלינים ועדיין משאיר מקום לטעם של חומרי הגלם. נסו אותו קודם במנה פשוטה כמו תפוחי אדמה, עוף או ירקות כדי להכיר את העוצמה שלו.",
@@ -1993,7 +1993,7 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/118782/118782.jpg",
-    "available": false
+    "available": true
   },
   {
     "id": 197,
@@ -2308,7 +2308,7 @@
     "name": "Bob's Red Mill, Oat Flour, Whole Grain, 567g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-oat-flour-whole-grain-20-oz-567-g/103977",
     "desc": "קמח שיבולת שועל מלא של Bob's Red Mill (לא ללא גלוטן), טחון במטחנת אבן. מתאים למי שאינו רגיש לגלוטן ומחפש קמח דגני עתיר סיבים לפנקייק ולעוגיות. שומר על הסובין והנבט המקוריים.",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "conf": "גבוהה",
     "brand": "Bob's Red Mill",
@@ -2884,7 +2884,7 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/21370/21370.jpg",
-    "available": false
+    "available": true
   },
   {
     "id": 269,
@@ -3154,7 +3154,7 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/153318/153318.jpg",
-    "available": false
+    "available": true
   },
   {
     "id": 299,
@@ -3669,7 +3669,7 @@
     "id": 343,
     "name": "Bob's Red Mill, Organic Buckwheat, Whole Grain, 454g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-organic-buckwheat-whole-grain-16-oz-454-g/97772",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "brand": "Bob's Red Mill",
     "conf": "גבוהה",
@@ -3691,7 +3691,7 @@
     "id": 344,
     "name": "Bob's Red Mill, Millet, Whole Grain, Gluten Free, 794g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-millet-whole-grain-gluten-free-28-oz-794-g/103991",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "brand": "Bob's Red Mill",
     "conf": "גבוהה",
@@ -3713,7 +3713,7 @@
     "id": 345,
     "name": "Bob's Red Mill, Sorghum Flour, 22 oz (624 g)",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-sorghum-flour-22-oz-624-g/103983",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "brand": "Bob's Red Mill",
     "conf": "גבוהה",
@@ -3735,7 +3735,7 @@
     "id": 346,
     "name": "Bob's Red Mill, Arrowroot Starch, 454g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-arrowroot-starch-flour-gluten-free-16-oz-454-g/89499",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": [
       "קמחים",
       "תוספי אפייה"
@@ -3760,7 +3760,7 @@
     "id": 347,
     "name": "Bob's Red Mill, Coconut Flour, Organic, Gluten Free, 453g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-organic-coconut-flour-gluten-free-16-oz-453-g/89502",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "brand": "Bob's Red Mill",
     "conf": "גבוהה",
@@ -3782,7 +3782,7 @@
     "id": 348,
     "name": "Bob's Red Mill, Old Fashioned Rolled Oats, Whole Grain, Gluten Free, 907g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-old-fashioned-rolled-oats-whole-grain-gluten-free-32-oz-907-g/89516",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "דגני בוקר",
     "brand": "Bob's Red Mill",
     "conf": "גבוהה",
@@ -3804,7 +3804,7 @@
     "id": 349,
     "name": "Bob's Red Mill, Organic Flaxseed Meal, Whole Ground, 453g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-organic-flaxseed-meal-whole-ground-1-lb-453-g/77015",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "סופר פוד",
     "brand": "Bob's Red Mill",
     "conf": "גבוהה",
@@ -3826,7 +3826,7 @@
     "id": 350,
     "name": "Bob's Red Mill, Organic Amaranth, Whole Grain, 680g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-organic-amaranth-whole-grain-24-oz-680-g/97762",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "סופר פוד",
     "brand": "Bob's Red Mill",
     "conf": "גבוהה",
@@ -4751,7 +4751,7 @@
     "name": "Bob's Red Mill, Double Acting Baking Powder, Gluten Free, 14 oz (397 g)",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-double-acting-baking-powder-gluten-free-14-oz-397-g/89507",
     "desc": "אבקת אפייה דו-שלבית של Bob's Red Mill, ללא אלומיניום ועם תוצאות אפייה עדינות ואווריריות. ללא גלוטן, מתאימה לכל מתכון. הכמות הגדולה חסכונית במיוחד לאופות תכופות. Bob's Red Mill נחשבת לאחד המותגים האמינים ביותר לאפייה ללא גלוטן בעולם. כשר K פארווה.",
-    "cert": "Kehilla",
+    "cert": "Kehilla Kosher",
     "cat": "תוספי אפייה",
     "conf": "גבוהה",
     "brand": "Bob's Red Mill",
@@ -5935,7 +5935,7 @@
     "_descStatus": "edited",
     "certVerified": true,
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/77003/77003.jpg",
-    "available": false
+    "available": true
   },
   {
     "id": 455,
@@ -6418,7 +6418,7 @@
     "cat": "רטבים",
     "url": "https://il.iherb.com/pr/nate-s-honey-hot-honey-infused-with-chili-pepper-16-oz-454-g/162072",
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/162072/162072.jpg",
-    "available": false,
+    "available": true,
     "desc": "דבש פרחוני עם פלפל צ'ילי — גרסה גדולה יותר (454 גרם) עם כשרות OU. טעם מתוק-חריף עדין, מצוין לגבינות, פיצה ואפייה. אלטרנטיבה מעולה ל-Mike's.",
     "seeAlso": [
       451

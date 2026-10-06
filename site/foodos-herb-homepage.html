@@ -20,6 +20,22 @@
       font-style: normal;
       font-display: swap;
     }
+    @font-face {
+      font-family: 'DanaBenOved';
+      src: url('fonts/DanaBenOved-Regular.woff2') format('woff2'),
+           url('fonts/DanaBenOved-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'AnerShapiro';
+      src: url('fonts/OHAnerShapiro-Regular.woff2') format('woff2'),
+           url('fonts/OHAnerShapiro-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -98,17 +114,6 @@
     .nav-cta { background: var(--teal); color: white !important; font-size: 0.85rem !important; font-weight: 600 !important; padding: 9px 20px; border-radius: var(--radius-pill); transition: background .18s !important; }
     .nav-cta:hover { background: var(--teal-mid) !important; }
 
-    /* ── TRUST BAR ──────────────────────────── */
-    .trust-bar { background: rgba(44,99,96,.05); border-bottom: 1px solid rgba(74,157,154,.15); }
-    .trust-bar-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; align-items: center; gap: 0; }
-    .trust-bar-item {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 0.78rem; font-weight: 600; color: var(--teal-dark);
-      padding: 0.65rem 2.5rem; border-left: 1px solid rgba(74,157,154,.2);
-    }
-    .trust-bar-item:last-child { border-left: none; }
-    .trust-bar-item:first-child { border-left: none; }
-    .tbi-icon { font-size: 1rem; }
 
     /* ── HERO ───────────────────────────────── */
     .hero {
@@ -383,7 +388,7 @@
     .arrow-btn:hover { border-color: var(--teal); color: var(--teal); }
 
     /* PRODUCT CARDS */
-    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 1.5rem; }
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 0; }
     .product-card { background: var(--card-bg); border-radius: var(--radius-lg); overflow: hidden; transition: transform .22s, box-shadow .22s; cursor: pointer; position: relative; }
     .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .card-img-wrap { background: white; height: 180px; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid rgba(0,0,0,.04); }
@@ -404,6 +409,12 @@
     .card-btn-size { flex: 0 1 auto; font-size: 0.74rem; padding: 7px 13px; }
     .card-report-btn { flex-shrink: 0; background: none; border: 1.5px solid var(--border); color: var(--text-soft); font-size: 0.73rem; font-weight: 600; padding: 7px 11px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; }
     .card-report-btn:hover { border-color: #e85d04; color: #e85d04; background: #fff5f0; }
+    .dairy-badge { display: inline-flex; align-items: center; gap: 3px; background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-pill); margin-bottom: 5px; }
+    .like-btn { flex-shrink: 0; background: none; border: 1.5px solid var(--border); color: var(--text-soft); font-size: 0.73rem; font-weight: 600; padding: 7px 11px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+    .like-btn:hover { border-color: #e85d86; color: #e85d86; background: #fff5f8; }
+    .like-btn.liked { border-color: #e85d86; color: #e85d86; background: #fff5f8; }
+    .like-btn .like-heart { font-size: 0.9rem; transition: transform .15s; }
+    .like-btn:hover .like-heart, .like-btn.liked .like-heart { transform: scale(1.2); }
 
     /* ── REPORT MODAL ── */
     .report-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .2s; }
@@ -593,14 +604,100 @@
     .filter-section { margin-bottom: 1rem; }
     .filter-section-label { font-size: 0.7rem; font-weight: 700; color: var(--text-soft); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.5rem; }
     .filter-pills-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-    .pill-sm { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.73rem; font-weight: 600; padding: 4px 12px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; }
+    .pill-sm { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.73rem; font-weight: 600; padding: 4px 12px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; text-decoration: none; display: inline-block; font-family: inherit; }
     .pill-sm:hover { border-color: var(--teal); color: var(--teal); }
     .pill-sm.active { background: var(--teal-dark); border-color: var(--teal-dark); color: white; }
     /* Tag pills — slightly distinct style */
-    .pill-tag { gap: 4px; }
-    .pill-tag.active { background: var(--teal); border-color: var(--teal); }
-    .tag-count { display: inline-block; background: rgba(255,255,255,0.25); border-radius: 20px; font-size: 0.65rem; padding: 0 5px; margin-right: 4px; vertical-align: middle; line-height: 1.5; }
-    .pill-sm:not(.active) .tag-count { background: var(--teal-light); color: var(--teal-dark); }
+    /* ── SIDEBAR LAYOUT ── */
+    .products-with-sidebar { display: flex; gap: 2rem; align-items: flex-start; margin-top: 1.2rem; }
+    .cat-sidebar { width: 160px; flex-shrink: 0; position: sticky; top: 80px; }
+    .products-main { flex: 1; min-width: 0; }
+    .product-grid { margin-top: 0; }
+
+    /* סרגל קטגוריות — סגנון אמאזון */
+    .cat-sidebar-item { display: block; width: 100%; text-align: right; background: none; border: none; padding: 5px 0; font-size: 0.82rem; color: var(--text-mid); cursor: pointer; transition: color .15s; font-family: var(--sans); line-height: 1.4; }
+    .cat-sidebar-item:hover { color: var(--teal); }
+    .cat-sidebar-item.active { color: var(--teal-dark); font-weight: 700; }
+
+    /* mobile cat select */
+    .cat-select-wrap { display: none; }
+    .cat-select { width: 100%; padding: 10px 14px; font-size: 0.9rem; font-family: var(--sans); color: var(--text); background: white; border: 1.5px solid var(--border); border-radius: var(--radius-pill); appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A9D9A' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: left 14px center; cursor: pointer; }
+    .cat-select:focus { outline: none; border-color: var(--teal); }
+
+    @media (max-width: 768px) {
+      .products-with-sidebar { flex-direction: column; }
+      .cat-sidebar { display: none; }
+      .cat-select-wrap { display: block; margin-bottom: 1rem; }
+    }
+
+    /* ── CATEGORY DRAWER TRIGGER ── */
+    .cat-drawer-trigger { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.82rem; font-weight: 600; padding: 7px 16px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; font-family: var(--sans); }
+    .cat-drawer-trigger:hover, .cat-drawer-trigger.active { border-color: var(--teal); color: var(--teal); }
+    .cat-trigger-icon { font-size: 0.9rem; }
+
+    /* ── CATEGORY DRAWER ── */
+    .cat-drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.3); z-index: 900; opacity: 0; pointer-events: none; transition: opacity .25s; }
+    .cat-drawer-overlay.open { opacity: 1; pointer-events: auto; }
+    .cat-drawer { position: fixed; top: 0; right: -340px; width: 320px; height: 100vh; background: white; z-index: 901; box-shadow: -4px 0 24px rgba(0,0,0,.12); transition: right .28s cubic-bezier(.4,0,.2,1); overflow-y: auto; display: flex; flex-direction: column; }
+    .cat-drawer-overlay.open .cat-drawer { right: 0; }
+    .cat-drawer-header { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 1.4rem; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: white; z-index: 1; }
+    .cat-drawer-title { font-size: 0.7rem; font-weight: 700; color: var(--text-soft); text-transform: uppercase; letter-spacing: 1.2px; }
+    .cat-drawer-close { background: none; border: none; font-size: 1.2rem; color: var(--text-soft); cursor: pointer; padding: 4px 8px; border-radius: 6px; transition: background .15s; }
+    .cat-drawer-close:hover { background: var(--bg-soft); color: var(--text); }
+    .cat-drawer-body { padding: 1rem 1.4rem 2rem; display: flex; flex-direction: column; gap: 0.35rem; }
+    .cat-drawer-item { display: block; width: 100%; text-align: right; background: none; border: none; padding: 9px 12px; border-radius: 10px; font-size: 0.88rem; font-weight: 500; color: var(--text-mid); cursor: pointer; transition: all .15s; font-family: var(--sans); }
+    .cat-drawer-item:hover { background: var(--teal-light); color: var(--teal-dark); }
+    .cat-drawer-item.active { background: var(--teal); color: white; font-weight: 700; }
+
+    /* ── CATEGORY GROUPS (unused now) ── */
+
+    /* ── TAG PILLS — minimalist handwriting style ── */
+    .filter-pills-row#tag-pills { gap: 0; align-items: center; }
+    .pill-tag {
+      font-family: 'AnerShapiro', cursive;
+      font-size: 1.75rem;
+      font-weight: 400;
+      border: none;
+      background: none;
+      color: var(--text-mid);
+      padding: 4px 12px;
+      border-radius: 0;
+      position: relative;
+      transition: color .18s;
+      letter-spacing: 0.02em;
+      -webkit-font-smoothing: antialiased;
+    }
+    .pill-tag:hover { color: var(--teal); background: none; border: none; }
+    .pill-tag.active { color: var(--teal-dark); background: none; border: none; }
+    .pill-tag.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 10px; left: 10px;
+      height: 1.5px;
+      background: var(--teal-dark);
+      border-radius: 2px;
+    }
+    /* מפריד | בין תגיות */
+    .pill-tag + .pill-tag::before {
+      content: '|';
+      position: absolute;
+      right: -2px;
+      color: var(--border);
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 300;
+      pointer-events: none;
+    }
+    .tag-count {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-soft);
+      opacity: 0.7;
+      vertical-align: middle;
+      margin-right: 2px;
+    }
+    .pill-tag.active .tag-count { color: var(--teal-dark); opacity: 1; }
     .results-meta { display: flex; align-items: center; justify-content: space-between; margin: 1.2rem 0 1rem; }
     .results-count-txt { font-size: 0.82rem; color: var(--text-soft); font-weight: 500; }
     .reset-btn { background: none; border: 1.5px solid var(--border); color: var(--text-soft); font-family: var(--sans); font-size: 0.75rem; font-weight: 600; padding: 5px 14px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; }
@@ -643,15 +740,12 @@
       .values-inner { grid-template-columns: 1fr; gap: 2rem; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
       .ring-badge { display: none; }
-      .trust-bar-item { padding: 0.65rem 1rem; }
     }
     @media (max-width: 640px) {
       .product-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .hero h1 { font-size: 2.2rem; }
       .section-pad { padding: 3rem 0; }
-      .trust-bar-inner { gap: 0; flex-wrap: wrap; }
-      .trust-bar-item { font-size: 0.7rem; padding: 0.5rem 0.8rem; border-left: none; border-bottom: 1px solid rgba(74,157,154,.15); width: 50%; justify-content: center; }
     }
   </style>
 </head>
@@ -724,15 +818,7 @@
   </div>
 </nav>
 
-<!-- ── TRUST BAR ─────────────────────────────────── -->
-<div class="trust-bar">
-  <div class="trust-bar-inner">
-    <div class="trust-bar-item"><span class="tbi-icon">✡</span> הכשרות מאומתת</div>
-    <div class="trust-bar-item"><span class="tbi-icon">🔍</span> נבדק ידנית</div>
-    <div class="trust-bar-item"><span class="tbi-icon">👥</span> קהילת 56,000</div>
-    <div class="trust-bar-item"><span class="tbi-icon">🚚</span> משלוח לישראל</div>
-  </div>
-</div>
+
 
 <!-- ── HERO ──────────────────────────────────────── -->
 <section class="hero">
@@ -913,30 +999,45 @@
     </div>
 
     <div class="filter-section">
-      <div class="filter-section-label">קטגוריה</div>
-      <div class="filter-pills-row" id="cat-pills"></div>
-    </div>
-
-    <div class="filter-section">
       <div class="filter-section-label">כשרות</div>
       <div class="filter-pills-row" id="cert-pills"></div>
     </div>
 
-    <div class="results-meta">
-      <span class="results-count-txt" id="results-count">טוען מוצרים...</span>
-      <button class="reset-btn" id="reset-btn" onclick="resetFilters()" style="display:none">נקה פילטרים ✕</button>
+    <div class="products-with-sidebar">
+
+      <!-- סרגל קטגוריות -->
+      <aside class="cat-sidebar">
+        <div class="filter-section-label" style="margin-bottom:.8rem">קטגוריה</div>
+        <nav id="cat-sidebar-list"></nav>
+      </aside>
+
+      <!-- מוצרים -->
+      <div class="products-main">
+        <!-- select במובייל -->
+        <div class="cat-select-wrap">
+          <select class="cat-select" id="cat-select" onchange="setCatSidebar(this.value)">
+            <option value="הכל">כל הקטגוריות</option>
+          </select>
+        </div>
+        <div class="results-meta">
+          <span class="results-count-txt" id="results-count">טוען מוצרים...</span>
+          <button class="reset-btn" id="reset-btn" onclick="resetFilters()" style="display:none">נקה פילטרים ✕</button>
+        </div>
+        <div class="product-grid" id="product-grid">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+        <div class="load-more-wrap" id="load-more-wrap">
+          <button class="load-more-btn" onclick="loadMore()">הצג עוד מוצרים ↓</button>
+        </div>
+      </div>
+
     </div>
 
-    <div class="product-grid" id="product-grid">
-      <div class="skeleton-card"></div>
-      <div class="skeleton-card"></div>
-      <div class="skeleton-card"></div>
-      <div class="skeleton-card"></div>
-    </div>
-
-    <div class="load-more-wrap" id="load-more-wrap">
-      <button class="load-more-btn" onclick="loadMore()">הצג עוד מוצרים ↓</button>
-    </div>
+    <div id="cat-pills" style="display:none"></div>
+    <div id="cat-groups" style="display:none"></div>
   </div>
 </section>
 
@@ -1165,6 +1266,7 @@
     { key: 'ללא סוכר', icon: '🚫', test: p => /sugar.?free|no sugar|ללא סוכר/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'קיטו',        icon: '🥑', test: p => /keto|paleo|קיטו|פליאו|low.?carb/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'עשיר בחלבון', icon: '💪', test: p => /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
+    { key: 'חלבי',        icon: '🥛', test: p => p.dairy === true || /\-D$/i.test(p.cert||'') },
   ];
   function getProductTags(p) {
     return TAG_DEFS.filter(t => t.test(p)).map(t => t.key);
@@ -1182,9 +1284,10 @@
   };
 
   const certColors = {
-    'OU':'#1a3c8c','OK':'#2c7a6e','KOF-K':'#5c4a9a','Star-K':'#8a3c1a',
+    'OU':'#1a3c8c','OU-D':'#1D4ED8','OU-P':'#1a3c8c','OU-M':'#1a3c8c',
+    'OK':'#2c7a6e','KOF-K':'#5c4a9a','Star-K':'#8a3c1a',
     'KSA':'#2c6360','EarthKosher':'#3a6e1a','COR':'#1a5c3c','CRC':'#3c1a5c',
-    'Kehilla':'#7a5c2c','KA':'#1a3c5c','Kosher Check':'#3c1a6e',
+    'Kehilla Kosher':'#7a5c2c','Kehilla':'#7a5c2c','KA':'#1a3c5c','Kosher Check':'#3c1a6e',
     'Kosher Scroll K':'#1a5c5c','כלי מטבח':'#555'
   };
 
@@ -1242,17 +1345,48 @@
   }
 
   function buildCatPills() {
-    const seen = new Set();
-    const cats = ['הכל'];
+    const existingCats = new Set();
     allProducts.forEach(p => {
-      const catList = Array.isArray(p.cat) ? p.cat : (p.cat ? [p.cat] : []);
-      catList.forEach(c => { if(c && !seen.has(c)){seen.add(c);cats.push(c);} });
+      (Array.isArray(p.cat) ? p.cat : (p.cat ? p.cat.split(',').map(c=>c.trim()) : [])).forEach(c => existingCats.add(c));
     });
-    cats.sort((a,b) => a==='הכל'?-1:b==='הכל'?1:a.localeCompare(b,'he'));
-    document.getElementById('cat-pills').innerHTML = cats.map(c => {
-      const e = catEmoji[c] || '';
-      return `<button class="pill${c===activeCat?' active':''}" onclick="setCat(this,'${c.replace(/'/g,"\\'")}')">${e?e+' ':''}${c}</button>`;
-    }).join('');
+    const cats = ['הכל', ...[...existingCats].sort((a,b) => a.localeCompare(b,'he'))];
+
+    const nav = document.getElementById('cat-sidebar-list');
+    if (nav) nav.innerHTML = cats.map(c =>
+      `<button class="cat-sidebar-item${c===activeCat?' active':''}" onclick="setCatSidebar('${c.replace(/'/g,"\\'")}')">${c}</button>`
+    ).join('');
+
+    // sync mobile select
+    const sel = document.getElementById('cat-select');
+    if (sel) {
+      sel.innerHTML = cats.map(c =>
+        `<option value="${c.replace(/"/g,'&quot;')}"${c===activeCat?' selected':''}>${c==='הכל'?'כל הקטגוריות':c}</option>`
+      ).join('');
+    }
+  }
+
+  function setCatSidebar(cat) {
+    activeCat = cat;
+    buildCatPills();
+    applyFilters();
+  }
+
+  function openCatDrawer() {
+    document.getElementById('cat-drawer-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCatDrawer(e) {
+    if (e && e.target !== document.getElementById('cat-drawer-overlay')) return;
+    document.getElementById('cat-drawer-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function setCatFromDrawer(cat) {
+    activeCat = cat;
+    buildCatPills();
+    closeCatDrawer();
+    applyFilters();
   }
 
   function buildCertPills() {
@@ -1260,9 +1394,15 @@
     const certs = ['הכל'];
     allProducts.forEach(p => { if(p.cert && !seen.has(p.cert)){seen.add(p.cert);certs.push(p.cert);} });
     certs.sort((a,b) => a==='הכל'?-1:b==='הכל'?1:a.localeCompare(b));
-    document.getElementById('cert-pills').innerHTML = certs.map(c =>
-      `<button class="pill pill-sm${c===activeCert?' active':''}" onclick="setCert(this,'${c.replace(/'/g,"\\'")}')">${c}</button>`
-    ).join('');
+    document.getElementById('cert-pills').innerHTML = certs.map(c => {
+      if (c === 'הכל') {
+        return `<button class="pill pill-sm${activeCert==='הכל'?' active':''}" onclick="setCert(this,'הכל')">הכל</button>`;
+      }
+      if (c === 'כלי מטבח') {
+        return `<a class="pill pill-sm" href="kosher-iherb/category.html?cat=${encodeURIComponent(c)}">${c}</a>`;
+      }
+      return `<a class="pill pill-sm" href="kosher-iherb/cert.html?c=${encodeURIComponent(c)}">${c}</a>`;
+    }).join('');
   }
 
   function buildTagPills() {
@@ -1272,7 +1412,7 @@
     const pills = [{ key:'הכל', icon:'', count: allProducts.length }]
       .concat(TAG_DEFS.filter(t => tagCounts[t.key] > 0));
     document.getElementById('tag-pills').innerHTML = pills.map(t =>
-      `<button class="pill pill-sm pill-tag${t.key===activeTag?' active':''}" onclick="setTag(this,'${t.key.replace(/'/g,"\\'")}')">
+      `<button class="pill-tag${t.key===activeTag?' active':''}" onclick="setTag(this,'${t.key.replace(/'/g,"\\'")}')">
         ${t.icon ? t.icon+' ' : ''}${t.key}${t.key!=='הכל' ? `<span class="tag-count">${tagCounts[t.key]||''}</span>` : ''}
       </button>`
     ).join('');
@@ -1280,8 +1420,7 @@
 
   function setCat(el, cat) {
     activeCat = cat;
-    document.querySelectorAll('#cat-pills .pill').forEach(b => b.classList.remove('active'));
-    el.classList.add('active');
+    buildCatPills();
     applyFilters();
   }
 
@@ -1294,7 +1433,7 @@
 
   function setTag(el, tag) {
     activeTag = tag;
-    document.querySelectorAll('#tag-pills .pill').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#tag-pills .pill-tag').forEach(b => b.classList.remove('active'));
     el.classList.add('active');
     applyFilters();
   }
@@ -1302,7 +1441,7 @@
   function applyFilters() {
     const q = (document.getElementById('srch')?.value || '').toLowerCase().trim();
     filteredProducts = allProducts.filter(p => {
-      if (activeCat  !== 'הכל') { const pc = Array.isArray(p.cat) ? p.cat : [p.cat]; if (!pc.includes(activeCat)) return false; }
+      if (activeCat  !== 'הכל') { const pc = Array.isArray(p.cat) ? p.cat : (p.cat ? p.cat.split(',').map(c=>c.trim()) : []); if (!pc.includes(activeCat)) return false; }
       if (activeCert !== 'הכל' && p.cert !== activeCert)  return false;
       if (activeTag  !== 'הכל') { const td = TAG_DEFS.find(t => t.key===activeTag); if (td && !td.test(p)) return false; }
       if (q) {
@@ -1352,6 +1491,11 @@
     document.getElementById('reset-btn').style.display = hasF ? 'inline-block' : 'none';
   }
 
+  function scrollCats(dir) {
+    const track = document.getElementById('cat-pills');
+    if (track) track.scrollBy({ left: dir * -180, behavior: 'smooth' });
+  }
+
   function resetFilters() {
     activeCat = 'הכל'; activeCert = 'הכל'; activeTag = 'הכל';
     if(document.getElementById('srch')) document.getElementById('srch').value = '';
@@ -1371,7 +1515,7 @@
     return `
       <div class="card-img-wrap" style="background:white">
         ${p.img
-          ? `<img src="${p.img}" alt="${p.nameHe||p.name||''}" style="width:100%;height:100%;object-fit:contain;padding:12px" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+          ? `<img src="${p.img}" alt="${p.nameHe||p.name||''}" style="width:100%;height:100%;object-fit:contain;padding:12px" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
           : ''}
         <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
         <a href="${certUrl}" class="cert-corner-link" title="${p.cert}" style="background:${certColor}">${p.cert}</a>
@@ -1382,6 +1526,7 @@
           <a href="${brandUrl}" class="card-brand-link">${p.brand||''}</a>
           <a href="${catUrl}" class="card-cat-link">${p.cat||''}</a>
         </div>
+        ${(p.dairy === true || /\-D$/i.test(p.cert||'')) ? '<span class="dairy-badge">🥛 חלבי</span>' : ''}
         ${p.nameHe
           ? `<div class="card-name">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>`
           : `<div class="card-name" dir="auto">${shortName}</div>`}
@@ -1542,6 +1687,16 @@
 </script>
 
 <!-- ── REPORT MODAL ── -->
+<div id="cat-drawer-overlay" class="cat-drawer-overlay" onclick="closeCatDrawer(event)">
+  <div class="cat-drawer" onclick="event.stopPropagation()">
+    <div class="cat-drawer-header">
+      <span class="cat-drawer-title">קטגוריה</span>
+      <button class="cat-drawer-close" onclick="closeCatDrawer()">✕</button>
+    </div>
+    <div class="cat-drawer-body" id="cat-drawer-list"></div>
+  </div>
+</div>
+
 <div id="report-modal" class="report-modal-overlay" role="dialog" aria-modal="true">
   <div class="report-modal-box">
     <button class="report-modal-close" onclick="closeReport()" aria-label="סגור">✕</button>

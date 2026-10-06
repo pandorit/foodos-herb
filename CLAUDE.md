@@ -8,7 +8,10 @@
 
 **Most Reliable:** OU, OK, KOF-K, Star-K, COR
 
-**Reliable:** CRC, JSOR, MK, Kehilla Kosher, EarthKosher, KVH, MR, KSA, Kosher Scroll K, Kosher Check, KCK
+**Reliable:** CRC, JSOR, MK, Kehilla Kosher, EarthKosher, KVH, MR, KSA, Kosher Scroll K, Kosher Check, KCK, KA (Kosher Authority of Australia and NZ — cRc Recommended)
+
+**OU Variants:** OU-D (dairy — must display "חלבי" badge), OU-P (Passover), OU-M (meat)
+Note: All OU variants are approved. OU-D products must be visually flagged as dairy in all card displays.
 
 Policy: certifications rated "Recommended" by cRc ASKcRc are approved. See `docs/project-state.md` for details.
 

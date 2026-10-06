@@ -120,6 +120,7 @@
     .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .card-img-wrap { background: white; height: 160px; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid rgba(0,0,0,.04); }
     .card-emoji { font-size: 3.8rem; }
+    .card-product-img { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
     .card-body { padding: 0.95rem 1rem 1.1rem; }
     .card-top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
     .card-brand-link { font-size: 0.68rem; font-weight: 700; color: var(--teal-dark); transition: color .15s; }
@@ -149,7 +150,23 @@
     .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,.35); text-align: center; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.08); }
 
     @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2,1fr); } .cert-stats { gap: 1.5rem; } }
-    @media (max-width: 640px) { .product-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .brands-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 640px) { .product-grid { grid-template-columns: 1fr; } .brands-grid { grid-template-columns: repeat(2,1fr); } }
+
+    /* ── MEGA MENU ── */
+    .nav-cats-trigger { display: flex; align-items: center; gap: 4px; cursor: pointer; font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; background: none; border: none; font-family: inherit; }
+    .nav-cats-trigger:hover { color: var(--teal); }
+    .nav-cats-trigger::after { content: '▾'; font-size: 0.7rem; transition: transform .22s; }
+    .nav-cats-trigger.mega-open::after { transform: rotate(180deg); }
+    .mega-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; background: #fff; border-top: 2px solid var(--teal-xlight); border-bottom: 1px solid var(--border); box-shadow: 0 12px 40px rgba(0,0,0,.10); z-index: 199; padding: 2rem 0 2.2rem; }
+    .mega-menu.open { display: block; }
+    .mega-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; }
+    .mega-col-title { display: block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px; color: var(--teal-dark); margin-bottom: 0.9rem; padding-bottom: 0.55rem; border-bottom: 2px solid var(--teal-xlight); }
+    .mega-col a { display: block; font-size: 0.84rem; font-weight: 500; color: var(--text-mid); padding: 4px 0; transition: color .14s; }
+    .mega-col a:hover { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .mega-overlay { display: none; position: fixed; inset: 0; z-index: 198; background: rgba(0,0,0,.18); }
+    .mega-overlay.open { display: block; }
+    @media (max-width: 900px) { .mega-inner { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 640px) { .nav-links { display: none; } .mega-menu { position: fixed; top: 0; bottom: 0; overflow-y: auto; padding: 1rem 0; z-index: 300; } .mega-inner { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; } }
   </style>
 </head>
 <body>
@@ -166,13 +183,65 @@
     </a>
     <ul class="nav-links">
       <li><a href="../foodos-herb-homepage.html#products">מוצרים</a></li>
-      <li><a href="../foodos-herb-homepage.html#categories">קטגוריות</a></li>
+      <li><button class="nav-cats-trigger" id="cats-trigger" aria-haspopup="true" aria-expanded="false">קטגוריות</button></li>
       <li><a href="certs.html">הכשרויות</a></li>
       <li><a href="../foodos-herb-homepage.html#values">על הפרויקט</a></li>
-      
     </ul>
   </div>
 </nav>
+
+<!-- ── MEGA MENU ── -->
+<div class="mega-overlay" id="mega-overlay"></div>
+<div class="mega-menu" id="mega-menu" role="navigation" aria-label="קטגוריות מוצרים">
+  <div class="mega-inner">
+    <div class="mega-col">
+      <span class="mega-col-title">בישול ותיבול</span>
+      <a href="category.html?cat=%D7%AA%D7%91%D7%9C%D7%99%D7%A0%D7%99%D7%9D">תבלינים</a>
+      <a href="category.html?cat=%D7%9E%D7%9C%D7%97">מלח</a>
+      <a href="category.html?cat=%D7%A9%D7%9E%D7%A0%D7%99%D7%9D">שמנים</a>
+      <a href="category.html?cat=%D7%A8%D7%98%D7%91%D7%99%D7%9D">רטבים</a>
+      <a href="category.html?cat=%D7%90%D7%A1%D7%99%D7%99%D7%AA%D7%99">אסייתי</a>
+      <a href="category.html?cat=%D7%97%D7%95%D7%9E%D7%A5">חומץ</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">אפייה ולחמים</span>
+      <a href="category.html?cat=%D7%A7%D7%9E%D7%97%D7%99%D7%9D">קמחים</a>
+      <a href="category.html?cat=%D7%90%D7%A4%D7%99%D7%99%D7%94">אפייה</a>
+      <a href="category.html?cat=%D7%AA%D7%95%D7%A1%D7%A4%D7%99+%D7%90%D7%A4%D7%99%D7%99%D7%94">תוספי אפייה</a>
+      <a href="category.html?cat=%D7%A7%D7%95%D7%A0%D7%93%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%94">קונדיטוריה</a>
+      <a href="category.html?cat=%D7%9C%D7%97%D7%9E%D7%99%D7%9D">לחמים</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">דגנים וקטניות</span>
+      <a href="category.html?cat=%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA">קטניות</a>
+      <a href="category.html?cat=%D7%90%D7%95%D7%A8%D7%96+%D7%95%D7%A4%D7%A1%D7%98%D7%94">אורז ופסטה</a>
+      <a href="category.html?cat=%D7%93%D7%92%D7%A0%D7%99+%D7%91%D7%95%D7%A7%D7%A8">דגני בוקר</a>
+      <a href="category.html?cat=%D7%9E%D7%98%D7%91%D7%97">מטבח</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">חטיפים ומתוקים</span>
+      <a href="category.html?cat=%D7%97%D7%98%D7%99%D7%A4%D7%99%D7%9D">חטיפים</a>
+      <a href="category.html?cat=%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%93">שוקולד</a>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%A7%D7%99%D7%9D">ממתקים</a>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%99%D7%A7%D7%99%D7%9D+%D7%98%D7%91%D7%A2%D7%99%D7%99%D7%9D">ממתיקים טבעיים</a>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%99%D7%A7%D7%99%D7%9D+%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D+%D7%9C%D7%9C%D7%90+%D7%A1%D7%95%D7%9B%D7%A8">ממתיקים ומוצרים ללא סוכר</a>
+      <a href="category.html?cat=%D7%A7%D7%99%D7%A0%D7%95%D7%97%D7%99%D7%9D">קינוחים</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">שתייה</span>
+      <a href="category.html?cat=%D7%A9%D7%AA%D7%99%D7%99%D7%94+%D7%97%D7%9E%D7%94">שתייה חמה</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">ממרחים ובריאות</span>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%A8%D7%97%D7%99%D7%9D">ממרחים</a>
+      <a href="category.html?cat=%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99+%D7%93%D7%92%D7%99%D7%9D">שימורי דגים</a>
+      <a href="category.html?cat=%D7%A9%D7%9E%D7%A8%D7%99%D7%9D+%D7%AA%D7%96%D7%95%D7%A0%D7%AA%D7%99%D7%99%D7%9D">שמרים תזונתיים</a>
+      <a href="category.html?cat=%D7%A1%D7%95%D7%A4%D7%A8+%D7%A4%D7%95%D7%93">סופר פוד</a>
+      <a href="category.html?cat=%D7%9E%D7%95%D7%A6%D7%A8%D7%99+%D7%97%D7%9C%D7%91%D7%95%D7%9F">מוצרי חלבון</a>
+      <a href="category.html?cat=%D7%9B%D7%9C%D7%99+%D7%9E%D7%98%D7%91%D7%97">כלי מטבח</a>
+    </div>
+  </div>
+</div>
 
 <!-- ── BREADCRUMB ───────────────────────────────────────── -->
 <div class="breadcrumb-bar">
@@ -488,7 +557,10 @@
     const parts = (p.name||'').split(',');
     const shortName = parts.length > 1 ? parts.slice(1, parts.length > 2 ? -1 : undefined).join(',').trim() : p.name;
     return `
-      <div class="card-img-wrap"><span class="card-emoji">${emoji}</span></div>
+      <div class="card-img-wrap">
+        ${p.img ? `<img src="${p.img}" alt="${(p.nameHe||p.name||'').replace(/"/g,'')}" class="card-product-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">` : ''}
+        <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
+      </div>
       <div class="card-body">
         <div class="card-top-row">
           <a href="brand.html?b=${encodeURIComponent(p.brand||'')}" class="card-brand-link">${p.brand||''}</a>
@@ -499,6 +571,19 @@
         <a href="${p.url||'#'}" target="_blank" rel="noopener noreferrer" class="card-btn">לחנות iHerb ←</a>
       </div>`;
   }
+
+  // ── MEGA MENU ──
+  (function() {
+    const trigger = document.getElementById('cats-trigger');
+    const menu    = document.getElementById('mega-menu');
+    const overlay = document.getElementById('mega-overlay');
+    if (!trigger || !menu) return;
+    function openMega() { menu.classList.add('open'); overlay.classList.add('open'); trigger.classList.add('mega-open'); trigger.setAttribute('aria-expanded','true'); }
+    function closeMega() { menu.classList.remove('open'); overlay.classList.remove('open'); trigger.classList.remove('mega-open'); trigger.setAttribute('aria-expanded','false'); }
+    trigger.addEventListener('click', e => { e.preventDefault(); menu.classList.contains('open') ? closeMega() : openMega(); });
+    overlay.addEventListener('click', closeMega);
+    document.addEventListener('keydown', e => { if (e.key==='Escape') closeMega(); });
+  })();
 
   init().catch(e => {
     console.error(e);

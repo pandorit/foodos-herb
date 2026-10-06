@@ -1,6 +1,9 @@
 [build]
   publish = "site"
 
+[functions]
+  directory = "netlify/functions"
+
 # Security headers for all pages
 [[headers]]
   for = "/*"
