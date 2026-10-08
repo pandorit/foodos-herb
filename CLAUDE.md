@@ -4,6 +4,18 @@
 
 ---
 
+## CRITICAL — Domain Name
+
+**הדומיין הנכון והיחיד של האתר: `online.foodos.co.il`**
+**הנתיב המאושר על ידי iHerb: `online.foodos.co.il/kosher-iherb`**
+
+- **לעולם אל תשתמש ב-`herb.foodos.co.il`** — זה לא הדומיין, ו-iHerb לא אישרו אותו.
+- `herb.foodos.co.il` אינו קיים ואינו בשימוש.
+- שם התיקייה הפנימית `/kosher-iherb/` הוא נתיב תוכן בלבד, לא שם הדומיין.
+- iHerb אישרו במפורש: "Domain looks good to us" — על `online.foodos.co.il/kosher-iherb`.
+
+---
+
 ## Approved Kosher Certifications
 
 **Most Reliable:** OU, OK, KOF-K, Star-K, COR

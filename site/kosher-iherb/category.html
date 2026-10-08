@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKCJC4WR8J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JKCJC4WR8J');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="page-title">קטגוריה — Foodos Online</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="data/products-data.js"></script>
   <style>
     @font-face {
       font-family: 'VarelaRound';
@@ -88,6 +98,8 @@
     .pill.active { background: var(--teal); border-color: var(--teal); color: white; }
     .pill.active-cert { background: var(--teal-dark); border-color: var(--teal-dark); }
     .filter-divider { width: 1px; height: 24px; background: var(--border); flex-shrink: 0; }
+    .sort-select { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.78rem; font-weight: 600; padding: 5px 10px 5px 28px; border-radius: var(--radius-pill); cursor: pointer; font-family: var(--sans); appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: left 8px center; direction: rtl; }
+    .sort-select:focus { outline: none; border-color: var(--teal); }
 
     /* ── PRODUCTS SECTION ── */
     .products-section { padding: 2.5rem 0 5rem; }
@@ -123,11 +135,24 @@
     .card-read-more { font-size: 0.72rem; font-weight: 600; color: var(--teal); cursor: pointer; background: none; border: none; font-family: var(--sans); padding: 0; margin-bottom: 0.7rem; display: inline-block; }
     .card-read-more:hover { text-decoration: underline; }
     .card-actions { display: flex; flex-direction: column; gap: 6px; margin-top: 0.7rem; }
-    .card-btn { display: flex; align-items: center; justify-content: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: background .18s; }
+    /* מסתיר כל כפתור שמוזרק ע"י סקריפטים חיצוניים לתוך card-actions */
+    .card-actions > *:not(.card-btn):not(.card-btn-outline):not(.card-btn-disabled):not(.card-btn-size) { display: none !important; }
+    .card-btn { display: flex; align-items: center; justify-content: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border: 1.5px solid transparent; border-radius: var(--radius-pill); transition: background .18s; min-height: 36px; }
     .card-btn:hover { background: var(--teal-mid); }
-    .card-btn-outline { display: flex; align-items: center; justify-content: center; gap: 5px; background: transparent; color: var(--teal-dark); border: 1.5px solid var(--teal-dark); font-size: 0.75rem; font-weight: 600; padding: 7px 16px; border-radius: var(--radius-pill); transition: all .18s; }
+    .card-btn-outline { display: flex; align-items: center; justify-content: center; gap: 5px; background: transparent; color: var(--teal-dark); border: 1.5px solid var(--teal-dark); font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: all .18s; min-height: 36px; }
     .card-btn-outline:hover { background: var(--teal-light); }
-    .card-btn-size { flex: 0 1 auto; font-size: 0.74rem; padding: 7px 13px; }
+    .card-btn-size { font-size: 0.78rem; padding: 8px 16px; border: 1.5px solid transparent; min-height: 36px; }
+    .card-report-link { display: block; text-align: center; font-size: 0.68rem; color: var(--text-soft); margin-top: 4px; padding: 2px 0; transition: color .15s; text-decoration: none; }
+    .card-report-link:hover { color: #E85D04; text-decoration: underline; }
+
+    /* ── LIKE BUTTON ── */
+    .card-like-btn { position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; border-radius: 50%; background: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,.12); transition: transform .15s; z-index: 5; padding: 0; }
+    .card-like-btn:hover { transform: scale(1.15); }
+    .card-like-btn svg { width: 16px; height: 16px; transition: all .2s; }
+    .card-like-btn .heart-fill { fill: none; stroke: #ccc; stroke-width: 2; transition: all .2s; }
+    .card-like-btn.liked .heart-fill { fill: #E85D04; stroke: #E85D04; }
+    @keyframes heartPop { 0%{transform:scale(1)} 40%{transform:scale(1.35)} 70%{transform:scale(0.9)} 100%{transform:scale(1)} }
+    .card-like-btn.liked { animation: heartPop .35s ease; }
 
     .skeleton-card { background: var(--card-bg); border-radius: var(--radius-lg); height: 270px; animation: skel 1.4s ease-in-out infinite; }
     @keyframes skel { 0%,100%{opacity:1} 50%{opacity:.4} }
@@ -287,7 +312,6 @@
       <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%A7%D7%99%D7%9D">ממתקים</a>
       <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%99%D7%A7%D7%99%D7%9D+%D7%98%D7%91%D7%A2%D7%99%D7%99%D7%9D">ממתיקים טבעיים</a>
       <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%99%D7%A7%D7%99%D7%9D+%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D+%D7%9C%D7%9C%D7%90+%D7%A1%D7%95%D7%9B%D7%A8">ממתיקים ומוצרים ללא סוכר</a>
-      <a href="category.html?cat=%D7%A7%D7%99%D7%A0%D7%95%D7%97%D7%99%D7%9D">קינוחים</a>
     </div>
     <div class="mega-col">
       <span class="mega-col-title">שתייה</span>
@@ -354,6 +378,15 @@
     <div class="filter-group">
       <span class="filter-group-label">מותג:</span>
       <div id="brand-pills-wrap"></div>
+    </div>
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-group-label">מיון:</span>
+      <select class="sort-select" id="sort-select" onchange="setSort(this.value)">
+        <option value="default">ברירת מחדל</option>
+        <option value="price-asc">מחיר: מהזול ליקר ↑</option>
+        <option value="price-desc">מחיר: מהיקר לזול ↓</option>
+      </select>
     </div>
   </div>
 </div>
@@ -493,6 +526,7 @@
   let filteredProducts = [];
   let activeCert  = 'הכל';
   let activeBrand = 'הכל';
+  let activeSort  = 'default';
   let currentPage = 0;
   const PAGE_SIZE = 12;
   let splitMode = false;
@@ -555,12 +589,24 @@
       document.querySelector('.cat-hero').style.background = catBg[catName];
     }
 
-    // Load products
-    if (location.protocol === 'file:') throw new Error('file-protocol');
-    const res = await fetch('data/products_explained_human_descriptions.json');
-    const allProducts = (await res.json()).filter(p => !p.suspended);
+    // Load products — prefer pre-loaded JS (works from file://) then fetch
+    let rawProducts;
+    if (window.FOODOS_PRODUCTS) {
+      rawProducts = window.FOODOS_PRODUCTS;
+    } else {
+      const res = await fetch('data/products_explained_human_descriptions.json');
+      rawProducts = await res.json();
+    }
+    const allProducts = rawProducts.filter(p => !p.suspended);
 
-    catProducts = allProducts.filter(p => Array.isArray(p.cat) ? p.cat.includes(catName) : p.cat === catName);
+    // Helper: parse cat field into array regardless of format (string / comma-string / array)
+    function parseCats(p) {
+      if (Array.isArray(p.cat)) return p.cat;
+      if (!p.cat) return [];
+      return p.cat.split(',').map(c => c.trim()).filter(Boolean);
+    }
+
+    catProducts = allProducts.filter(p => parseCats(p).includes(catName));
     splitMode = !!SPLIT_CATS[catName];
 
     // Stats
@@ -582,8 +628,8 @@
       `<button class="pill${b===activeBrand?' active':''}" onclick="setBrand(this,'${b.replace(/'/g,"\\'")}')">${b}</button>`
     ).join('');
 
-    // Other categories
-    const allCats = [...new Set(allProducts.flatMap(p => Array.isArray(p.cat) ? p.cat : [p.cat]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'he'));
+    // Other categories — also use parseCats so comma-strings are extracted correctly
+    const allCats = [...new Set(allProducts.flatMap(p => parseCats(p)))].sort((a,b)=>a.localeCompare(b,'he'));
     document.getElementById('other-cats').innerHTML = allCats
       .filter(c => c !== catName)
       .map(c => `<a href="category.html?cat=${encodeURIComponent(c)}" class="other-cat-pill">${catEmoji[c]||''} ${c}</a>`)
@@ -612,11 +658,31 @@
       if (activeBrand !== 'הכל' && p.brand !== activeBrand) return false;
       return true;
     }).sort((a, b) => {
-      const pinnedDiff = (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0);
-      if (pinnedDiff !== 0) return pinnedDiff;
+      // מוצרים שאינם זמינים — תמיד אחרונים
       const av = a.available === false ? 1 : 0;
       const bv = b.available === false ? 1 : 0;
-      return av - bv;
+      if (av !== bv) return av - bv;
+
+      // מוצרים עם לב — תמיד ראשונים
+      const likes = getLikes();
+      const al = likes.has(String(a.id)) ? 0 : 1;
+      const bl = likes.has(String(b.id)) ? 0 : 1;
+      if (al !== bl) return al - bl;
+
+      // מיון לפי מחיר
+      if (activeSort === 'price-asc') {
+        const pa = a.priceILS ?? a.sizes?.[0]?.priceILS ?? Infinity;
+        const pb = b.priceILS ?? b.sizes?.[0]?.priceILS ?? Infinity;
+        return pa - pb;
+      }
+      if (activeSort === 'price-desc') {
+        const pa = a.priceILS ?? a.sizes?.[0]?.priceILS ?? -Infinity;
+        const pb = b.priceILS ?? b.sizes?.[0]?.priceILS ?? -Infinity;
+        return pb - pa;
+      }
+
+      // ברירת מחדל: pinned ראשון
+      return (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0);
     });
     currentPage = 0;
     renderProducts(true);
@@ -624,12 +690,39 @@
     document.getElementById('reset-btn').style.display = hasF ? 'inline-block' : 'none';
   }
 
+  function setSort(val) {
+    activeSort = val;
+    applyFilter();
+  }
+
+  // ── LIKES ──────────────────────────────────────────────────
+  function getLikes() { try { return new Set(JSON.parse(localStorage.getItem('foodos_likes')||'[]')); } catch(e){ return new Set(); } }
+  function saveLikes(s) { localStorage.setItem('foodos_likes', JSON.stringify([...s])); }
+  function toggleLike(id, btn) {
+    const likes = getLikes();
+    const key = String(id);
+    if (likes.has(key)) { likes.delete(key); btn.classList.remove('liked'); }
+    else { likes.add(key); btn.classList.remove('liked'); void btn.offsetWidth; btn.classList.add('liked'); }
+    saveLikes(likes);
+    applyFilter(); // מוצרים עם לב עולים למעלה
+  }
+  function initLikes() {
+    const likes = getLikes();
+    likes.forEach(id => {
+      const btn = document.getElementById('like-' + id);
+      if (btn) btn.classList.add('liked');
+    });
+  }
+  // ────────────────────────────────────────────────────────────
+
   function resetFilters() {
-    activeCert = 'הכל'; activeBrand = 'הכל';
+    activeCert = 'הכל'; activeBrand = 'הכל'; activeSort = 'default';
     document.querySelectorAll('#cert-pills-wrap .pill, #brand-pills-wrap .pill').forEach(b => {
       b.classList.remove('active');
       if (b.textContent.trim() === 'הכל') b.classList.add('active');
     });
+    const sortSel = document.getElementById('sort-select');
+    if (sortSel) sortSel.value = 'default';
     applyFilter();
   }
 
@@ -644,6 +737,7 @@
         <strong>לא נמצאו מוצרים</strong><br><span style="font-size:.85rem">נסה לשנות את הפילטרים</span>
       </div>`;
       document.getElementById('load-more-wrap').style.display = 'none';
+      initLikes();
       return;
     }
 
@@ -686,6 +780,7 @@
       }
 
       document.getElementById('load-more-wrap').style.display = 'none';
+      initLikes();
       return;
     }
 
@@ -700,6 +795,7 @@
     currentPage++;
     document.getElementById('load-more-wrap').style.display =
       currentPage * PAGE_SIZE < filteredProducts.length ? 'flex' : 'none';
+    initLikes();
   }
 
   function loadMore() { renderProducts(false); }
@@ -719,6 +815,9 @@
         <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
         <a href="cert.html?c=${encodeURIComponent(p.cert||'')}" class="cert-badge-abs" style="background:${cc}">${p.cert}</a>
         ${p.available === false ? '<span class="badge-unavailable">לא זמין כרגע</span>' : ''}
+        <button class="card-like-btn" id="like-${p.id}" onclick="toggleLike(${p.id},this)" title="שמור למועדפים">
+          <svg viewBox="0 0 24 24"><path class="heart-fill" d="M12 21C12 21 3 14.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.08C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 14.5 12 21 12 21Z"/></svg>
+        </button>
       </div>
       <div class="card-body">
         <div class="card-top-row">
@@ -734,7 +833,7 @@
           const raw = (p.desc||'').replace(/\s*—\s*/g, ', ');
           const sentences = raw.match(/[^.!?]+[.!?]+/g) || [raw];
           const first2 = sentences.slice(0,2).join(' ').trim();
-          const rest = sentences.slice(2).join(' ').trim();
+          const rest = p.longDesc || sentences.slice(2).join(' ').trim();
           const uid = 'desc-' + p.id;
           if (rest) {
             return `<div class="card-desc">${first2}</div>
@@ -754,6 +853,7 @@
               ? '<span class="card-btn-disabled">לא זמין כרגע</span>'
               : `<a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">לחנות iHerb ←</a>`}
         </div>
+        <a href="mailto:foodos.online@gmail.com?subject=דיווח על מוצר ${p.id}&body=שם מוצר: ${encodeURIComponent(p.nameHe||p.name)}%0Aבעיה:" class="card-report-link">🚩 דווח על שגיאה</a>
       </div>`;
   }
 

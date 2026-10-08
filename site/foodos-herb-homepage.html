@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKCJC4WR8J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JKCJC4WR8J');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foodos Online — מדריך המוצרים הכשרים שלנו</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="kosher-iherb/data/products-data.js"></script>
   <style>
     @font-face {
       font-family: 'BuDrakonit';
@@ -399,16 +409,16 @@
     .cert-corner { position: absolute; top: 12px; left: 12px; background: var(--teal-light); border: 1px solid var(--teal); color: var(--teal-dark); font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); }
     .card-body { padding: 1.1rem 1.1rem 1.3rem; }
     .card-cat { font-size: 0.68rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-    .card-name { font-family: var(--serif); font-size: 0.95rem; font-weight: 700; line-height: 1.35; color: var(--text); margin-bottom: 8px; }
+    .card-name { font-family: 'AnerShapiro', cursive; font-size: 1.5rem; font-weight: 400; line-height: 1.3; color: var(--text); margin-bottom: 8px; }
     .card-stars { display: flex; align-items: center; gap: 5px; margin-bottom: 0.8rem; }
     .stars-gold { color: #F59E0B; font-size: 0.78rem; }
     .stars-count { font-size: 0.72rem; color: var(--text-soft); }
     .card-actions { display: flex; gap: 8px; align-items: center; }
-    .card-btn { display: inline-flex; align-items: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: background .18s; flex: 1; justify-content: center; }
+    .card-btn { display: inline-flex; align-items: center; justify-content: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: background .18s; white-space: nowrap; }
     .card-btn:hover { background: var(--teal-mid); }
-    .card-btn-size { flex: 0 1 auto; font-size: 0.74rem; padding: 7px 13px; }
-    .card-report-btn { flex-shrink: 0; background: none; border: 1.5px solid var(--border); color: var(--text-soft); font-size: 0.73rem; font-weight: 600; padding: 7px 11px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; }
-    .card-report-btn:hover { border-color: #e85d04; color: #e85d04; background: #fff5f0; }
+    .card-btn-size { font-size: 0.74rem; padding: 8px 14px; }
+    .card-report-btn { display: block; background: none; border: none; color: var(--text-soft); font-size: 0.68rem; font-family: var(--sans); font-weight: 500; padding: 2px 0; margin-top: 5px; cursor: pointer; transition: color .15s; text-align: center; width: 100%; }
+    .card-report-btn:hover { color: #e85d04; }
     .dairy-badge { display: inline-flex; align-items: center; gap: 3px; background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-pill); margin-bottom: 5px; }
     .like-btn { flex-shrink: 0; background: none; border: 1.5px solid var(--border); color: var(--text-soft); font-size: 0.73rem; font-weight: 600; padding: 7px 11px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
     .like-btn:hover { border-color: #e85d86; color: #e85d86; background: #fff5f8; }
@@ -460,24 +470,30 @@
     .featured-cert-badge { margin-top: 1.5rem; background: white; border: 2px solid var(--teal); color: var(--teal-dark); font-size: 0.78rem; font-weight: 700; padding: 6px 18px; border-radius: var(--radius-pill); }
 
     /* ── SHOP BY CATEGORY ───────────────────── */
-    .categories { background: var(--bg); border-top: 1px solid var(--border); }
-    .cat-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.8rem; }
+    /* ── CATEGORY STRIP — סגנון Next (מעגלים) ── */
+    .categories { background: white; border-top: 1px solid var(--border); }
+    .cat-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; }
     .cat-title { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--text); }
     .view-all-btn { background: transparent; border: 1.5px solid var(--border); color: var(--text-mid); font-size: 0.82rem; font-weight: 600; padding: 9px 20px; border-radius: var(--radius-pill); transition: all .18s; }
     .view-all-btn:hover { border-color: var(--teal); color: var(--teal); }
-    .cat-scroll { display: flex; gap: 1.2rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: none; }
+    .cat-scroll { display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 0.5rem; scrollbar-width: none; align-items: flex-start; }
     .cat-scroll::-webkit-scrollbar { display: none; }
-    .cat-card { flex-shrink: 0; width: 200px; height: 240px; border-radius: var(--radius-lg); overflow: hidden; position: relative; cursor: pointer; transition: transform .22s; display: block; text-decoration: none; }
-    .cat-card:hover { transform: scale(1.03); }
-    .cat-card:hover .cat-card-overlay { background: rgba(44,99,96,.55); }
-    .cat-card-bg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4.5rem; }
-    .cat-card-bg.spices { background: linear-gradient(145deg, #F4E4C8, #E8C98A); }
-    .cat-card-bg.oils   { background: linear-gradient(145deg, #C8DFB8, #9EC47E); }
-    .cat-card-bg.flour  { background: linear-gradient(145deg, #F0E4D0, #D4B894); }
-    .cat-card-bg.choc   { background: linear-gradient(145deg, #D4B0A0, #A06848); }
-    .cat-card-bg.tea    { background: linear-gradient(145deg, #C8E8C8, #7EC47E); }
-    .cat-card-overlay { position: absolute; inset: 0; background: rgba(44,99,96,.4); display: flex; align-items: flex-end; padding: 1.2rem; transition: background .22s; }
-    .cat-card-name { color: white; font-family: var(--serif); font-size: 1.1rem; font-weight: 700; text-shadow: 0 2px 6px rgba(0,0,0,.3); }
+    .cat-card { flex-shrink: 0; width: 128px; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; text-decoration: none; transition: transform .2s ease; cursor: pointer; }
+    .cat-card:hover { transform: translateY(-5px); }
+    .cat-card-circle { width: 128px; height: 128px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3.6rem; box-shadow: 0 2px 14px rgba(0,0,0,.07); transition: box-shadow .2s ease; }
+    .cat-card:hover .cat-card-circle { box-shadow: 0 8px 28px rgba(74,157,154,.2); }
+    .cat-card-circle.spices  { background: #FEF3E2; }
+    .cat-card-circle.oils    { background: #EDF7ED; }
+    .cat-card-circle.flour   { background: #FDF6EE; }
+    .cat-card-circle.choc    { background: #F7EDE8; }
+    .cat-card-circle.tea     { background: #E8F6F0; }
+    .cat-card-circle.snacks  { background: #FFF1EB; }
+    .cat-card-circle.legumes { background: #EEF4FD; }
+    .cat-card-circle.default { background: #F0F4F4; }
+    .cat-card-name { color: var(--text); font-family: var(--sans); font-size: 0.85rem; font-weight: 600; text-align: center; line-height: 1.3; }
+    /* רכיבים ישנים — הוסתרו */
+    .cat-card-bg { display: none !important; }
+    .cat-card-overlay { display: none !important; }
 
     /* ── TESTIMONIALS ───────────────────────── */
     .testimonials { background: var(--teal-dark); }
@@ -587,6 +603,43 @@
     }
     /* prevent off-screen: align left edge for wide dropdowns */
     .nav-item-brands .nav-dropdown { right: auto; left: -80px; }
+
+    /* ── MEGA MENU ───────────────────────────── */
+    .nav-cats-trigger { display: inline-flex; align-items: center; gap: 5px; background: none; border: none; cursor: pointer; font-family: var(--sans); font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; padding: 0; white-space: nowrap; }
+    .nav-cats-trigger:hover, .nav-cats-trigger.mega-open { color: var(--teal); }
+    .nav-cats-trigger::after { content: '▾'; font-size: .65rem; display: inline-block; transition: transform .2s; }
+    .nav-cats-trigger.mega-open::after { transform: rotate(180deg); }
+    .mega-overlay { display: none; position: fixed; inset: 0; z-index: 198; background: rgba(0,0,0,.15); }
+    .mega-overlay.open { display: block; }
+    .mega-menu {
+      display: none; position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #fff;
+      border-top: 2px solid var(--teal-light);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 12px 40px rgba(0,0,0,.10);
+      z-index: 199; padding: 1.8rem 0 2rem;
+    }
+    .mega-menu.open { display: block; }
+    .mega-inner {
+      max-width: 1160px; margin: 0 auto; padding: 0 2rem;
+      display: grid; grid-template-columns: repeat(6,1fr); gap: 1.8rem;
+    }
+    .mega-col-title {
+      display: block;
+      font-family: 'AnerShapiro', cursive;
+      font-size: 1.7rem; font-weight: 400;
+      letter-spacing: 0;
+      color: var(--teal-dark); margin-bottom: 0.8rem;
+      padding-bottom: 0.5rem; border-bottom: 2px solid var(--teal-light);
+    }
+    .mega-col a {
+      display: block; font-size: 0.84rem; font-weight: 500;
+      color: var(--text-mid); padding: 4px 0; transition: color .14s;
+    }
+    .mega-col a:hover { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 900px) { .mega-inner { grid-template-columns: repeat(3,1fr); gap: 1.4rem; } }
+    @media (max-width: 640px) { .mega-menu { top: 0; bottom: 0; overflow-y: auto; } .mega-inner { grid-template-columns: repeat(2,1fr); gap: 1.2rem; } }
 
     /* ── SEARCH ENGINE ──────────────────────── */
     .search-engine-section { background: var(--bg-soft); border-top: 1px solid var(--border); }
@@ -709,7 +762,7 @@
     .card-desc-txt { font-size: 0.8rem; color: var(--text-soft); line-height: 1.5; margin-bottom: 0.3rem; }
     .card-read-more { font-size: 0.72rem; font-weight: 600; color: var(--teal); cursor: pointer; background: none; border: none; font-family: var(--sans); padding: 0; margin-bottom: 0.5rem; display: inline-block; }
     .card-read-more:hover { text-decoration: underline; }
-    .card-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 5px; background: transparent; color: var(--teal-dark); border: 1.5px solid var(--teal-dark); font-size: 0.75rem; font-weight: 600; padding: 7px 13px; border-radius: var(--radius-pill); transition: all .18s; white-space: nowrap; }
+    .card-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 5px; background: transparent; color: var(--teal-dark); border: 1.5px solid var(--teal-dark); font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: all .18s; white-space: nowrap; }
     .card-btn-outline:hover { background: var(--teal-light); }
     .card-cat-link { font-size: 0.68rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: .8px; text-decoration: none; }
     .card-cat-link:hover { text-decoration: underline; }
@@ -727,6 +780,13 @@
     /* cert-corner clickable */
     .cert-corner-link { position: absolute; top: 12px; left: 12px; font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); color: white; text-decoration: none; transition: opacity .15s; }
     .cert-corner-link:hover { opacity: .8; }
+    .card-like-btn { position: absolute; top: 10px; right: 10px; background: white; border: none; cursor: pointer; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 6px rgba(0,0,0,.12); transition: transform .18s, box-shadow .18s; padding: 0; }
+    .card-like-btn:hover { transform: scale(1.15); box-shadow: 0 3px 10px rgba(0,0,0,.18); }
+    .card-like-btn svg { width: 16px; height: 16px; transition: fill .2s, stroke .2s; }
+    .card-like-btn .heart-fill { fill: none; stroke: #ccc; stroke-width: 2; transition: fill .2s, stroke .2s; }
+    .card-like-btn.liked .heart-fill { fill: #e53e3e; stroke: #e53e3e; }
+    .card-like-btn.liked { animation: heartPop .25s ease; }
+    @keyframes heartPop { 0%{transform:scale(1)} 50%{transform:scale(1.35)} 100%{transform:scale(1)} }
 
     /* ── RESPONSIVE ─────────────────────────── */
     @media (max-width: 900px) {
@@ -751,10 +811,7 @@
 </head>
 <body>
 
-<!-- ── ANNOUNCEMENT BAR ──────────────────────────── -->
-<div class="announce-bar">
-  <strong>חדש:</strong> <span id="ticker-count">340</span>+ מוצרים כשרים מאומתים &nbsp;|&nbsp; משלוח ישיר לישראל ✡
-</div>
+
 
 <!-- ── NAV ──────────────────────────────────────── -->
 <nav class="nav">
@@ -767,19 +824,8 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#products">מוצרים</a></li>
-
-      <li class="nav-item">
-        <button class="nav-dd-trigger" onclick="toggleDD('dd-cats', this)">
-          סוגי מוצרים <span class="dd-arrow">▾</span>
-        </button>
-        <div class="nav-dropdown" id="dd-cats">
-          <span class="nav-dd-header">סוגי מוצרים</span>
-          <div class="nav-dd-divider"></div>
-          <a href="#categories" class="nav-dd-item">← כל הקטגוריות</a>
-          <div class="nav-dd-divider"></div>
-          <div id="dd-cats-list"></div>
-        </div>
+      <li>
+        <button class="nav-cats-trigger" id="cats-trigger" onclick="toggleMega(this)">קטגוריות</button>
       </li>
 
       <li class="nav-item">
@@ -818,7 +864,57 @@
   </div>
 </nav>
 
-
+<!-- ── MEGA MENU ──────────────────────────────────── -->
+<div class="mega-overlay" id="mega-overlay" onclick="closeMega()"></div>
+<div class="mega-menu" id="mega-menu" role="navigation" aria-label="קטגוריות מוצרים">
+  <div class="mega-inner">
+    <div class="mega-col">
+      <span class="mega-col-title">בישול ותיבול</span>
+      <a href="kosher-iherb/category.html?cat=%D7%AA%D7%91%D7%9C%D7%99%D7%A0%D7%99%D7%9D">תבלינים</a>
+      <a href="kosher-iherb/category.html?cat=%D7%9E%D7%9C%D7%97">מלח</a>
+      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%9E%D7%A0%D7%99%D7%9D">שמנים</a>
+      <a href="kosher-iherb/category.html?cat=%D7%A8%D7%98%D7%91%D7%99%D7%9D">רטבים</a>
+      <a href="kosher-iherb/category.html?cat=%D7%90%D7%A1%D7%99%D7%99%D7%AA%D7%99">אסייתי</a>
+      <a href="kosher-iherb/category.html?cat=%D7%97%D7%95%D7%9E%D7%A5">חומץ</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">אפייה ולחמים</span>
+      <a href="kosher-iherb/category.html?cat=%D7%A7%D7%9E%D7%97%D7%99%D7%9D">קמחים</a>
+      <a href="kosher-iherb/category.html?cat=%D7%90%D7%A4%D7%99%D7%99%D7%94">אפייה</a>
+      <a href="kosher-iherb/category.html?cat=%D7%AA%D7%95%D7%A1%D7%A4%D7%99+%D7%90%D7%A4%D7%99%D7%99%D7%94">תוספי אפייה</a>
+      <a href="kosher-iherb/category.html?cat=%D7%A7%D7%95%D7%A0%D7%93%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%94">קונדיטוריה</a>
+      <a href="kosher-iherb/category.html?cat=%D7%9C%D7%97%D7%9E%D7%99%D7%9D">לחמים</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">דגנים וקטניות</span>
+      <a href="kosher-iherb/category.html?cat=%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA">קטניות</a>
+      <a href="kosher-iherb/category.html?cat=%D7%90%D7%95%D7%A8%D7%96+%D7%95%D7%A4%D7%A1%D7%98%D7%94">אורז ופסטה</a>
+      <a href="kosher-iherb/category.html?cat=%D7%93%D7%92%D7%A0%D7%99+%D7%91%D7%95%D7%A7%D7%A8">דגני בוקר</a>
+      <a href="kosher-iherb/category.html?cat=%D7%9E%D7%98%D7%91%D7%97">מטבח</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">חטיפים ומתוקים</span>
+      <a href="kosher-iherb/category.html?cat=%D7%97%D7%98%D7%99%D7%A4%D7%99%D7%9D">חטיפים</a>
+      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%93">שוקולד</a>
+      <a href="kosher-iherb/category.html?cat=%D7%9E%D7%9E%D7%AA%D7%A7%D7%99%D7%9D">ממתקים</a>
+      <a href="kosher-iherb/category.html?cat=%D7%9E%D7%9E%D7%AA%D7%99%D7%A7%D7%99%D7%9D+%D7%98%D7%91%D7%A2%D7%99%D7%99%D7%9D">ממתיקים טבעיים</a>
+      <a href="kosher-iherb/category.html?cat=%D7%9E%D7%9E%D7%AA%D7%99%D7%A7%D7%99%D7%9D+%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D+%D7%9C%D7%9C%D7%90+%D7%A1%D7%95%D7%9B%D7%A8">ממתיקים ומוצרים ללא סוכר</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">שתייה</span>
+      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%AA%D7%99%D7%99%D7%94+%D7%97%D7%9E%D7%94">שתייה חמה</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">ממרחים ובריאות</span>
+      <a href="kosher-iherb/category.html?cat=%D7%9E%D7%9E%D7%A8%D7%97%D7%99%D7%9D">ממרחים</a>
+      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99+%D7%93%D7%92%D7%99%D7%9D">שימורי דגים</a>
+      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%9E%D7%A8%D7%99%D7%9D+%D7%AA%D7%96%D7%95%D7%A0%D7%AA%D7%99%D7%99%D7%9D">שמרים תזונתיים</a>
+      <a href="kosher-iherb/category.html?cat=%D7%A1%D7%95%D7%A4%D7%A8+%D7%A4%D7%95%D7%93">סופר פוד</a>
+      <a href="kosher-iherb/category.html?cat=%D7%9E%D7%95%D7%A6%D7%A8%D7%99+%D7%97%D7%9C%D7%91%D7%95%D7%9F">מוצרי חלבון</a>
+      <a href="kosher-iherb/category.html?cat=%D7%9B%D7%9C%D7%99+%D7%9E%D7%98%D7%91%D7%97">כלי מטבח</a>
+    </div>
+  </div>
+</div>
 
 <!-- ── HERO ──────────────────────────────────────── -->
 <section class="hero">
@@ -941,10 +1037,10 @@
 
     <!-- TEXT — right in RTL -->
     <div class="hero-text">
-      <div class="hero-kicker">✡ &nbsp;<span id="hero-kicker-count">340</span>+ מוצרים כשרים מאומתים</div>
+
       <h1 style="font-family:'BuDrakonit','Playfair Display',serif; font-style:normal; line-height:1.05; letter-spacing:-1px;">
         <span style="display:inline-flex; align-items:center; gap:0.2em; vertical-align:middle;">
-          <img src="%D7%9E%D7%99%D7%9C%D7%AA%20%D7%94%D7%9C%D7%95%D7%92%D7%95%20%D7%A9%D7%9C%20%D7%A4%D7%95%D7%93%D7%95%D7%A1%20%D7%A2%D7%9C%20%D7%A8%D7%A7%D7%A2%20%D7%A9%D7%A7%D7%95%D7%A3.png"
+          <img src="foodos-logo-word.png"
                alt="פודוס"
                style="height:0.95em; width:auto; display:inline-block; vertical-align:middle; filter:brightness(0) invert(1);">
           <span style="font-family:'Caveat',cursive; font-weight:700; font-size:1em; color:#F5C518; letter-spacing:2px; vertical-align:middle;">Online</span>
@@ -1077,13 +1173,42 @@
       <a href="#" class="view-all-btn">צפייה בכולן ←</a>
     </div>
     <div class="cat-scroll" id="cat-cards-row">
-      <a href="kosher-iherb/category.html?cat=%D7%AA%D7%91%D7%9C%D7%99%D7%A0%D7%99%D7%9D" class="cat-card"><div class="cat-card-bg spices">🧂</div><div class="cat-card-overlay"><span class="cat-card-name">תבלינים</span></div></a>
-      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%9E%D7%A0%D7%99%D7%9D" class="cat-card"><div class="cat-card-bg oils">🫒</div><div class="cat-card-overlay"><span class="cat-card-name">שמנים</span></div></a>
-      <a href="kosher-iherb/category.html?cat=%D7%A7%D7%9E%D7%97%D7%99%D7%9D" class="cat-card"><div class="cat-card-bg flour">🌾</div><div class="cat-card-overlay"><span class="cat-card-name">קמחים</span></div></a>
-      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%93" class="cat-card"><div class="cat-card-bg choc">🍫</div><div class="cat-card-overlay"><span class="cat-card-name">שוקולד</span></div></a>
-      <a href="kosher-iherb/category.html?cat=%D7%AA%D7%94" class="cat-card"><div class="cat-card-bg tea">🌿</div><div class="cat-card-overlay"><span class="cat-card-name">תה</span></div></a>
-      <a href="kosher-iherb/category.html?cat=%D7%97%D7%98%D7%99%D7%A4%D7%99%D7%9D" class="cat-card" style="background:linear-gradient(145deg,#E8D5C8,#D4A88C)"><div class="cat-card-bg" style="background:linear-gradient(145deg,#F4E0D0,#E8C0A0)">🍿</div><div class="cat-card-overlay"><span class="cat-card-name">חטיפים</span></div></a>
-      <a href="kosher-iherb/category.html?cat=%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA" class="cat-card" style="background:linear-gradient(145deg,#C8D8E8,#90B4CC)"><div class="cat-card-bg" style="background:linear-gradient(145deg,#D8ECF4,#A8CCE0)">🫘</div><div class="cat-card-overlay"><span class="cat-card-name">קטניות</span></div></a>
+      <a href="kosher-iherb/category.html?cat=%D7%AA%D7%91%D7%9C%D7%99%D7%A0%D7%99%D7%9D" class="cat-card">
+        <div class="cat-card-circle spices">🧂</div>
+        <span class="cat-card-name">תבלינים</span>
+      </a>
+      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%9E%D7%A0%D7%99%D7%9D" class="cat-card">
+        <div class="cat-card-circle oils">🫒</div>
+        <span class="cat-card-name">שמנים</span>
+      </a>
+      <a href="kosher-iherb/category.html?cat=%D7%A7%D7%9E%D7%97%D7%99%D7%9D" class="cat-card">
+        <div class="cat-card-circle flour">🌾</div>
+        <span class="cat-card-name">קמחים</span>
+      </a>
+      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%93" class="cat-card">
+        <div class="cat-card-circle choc">🍫</div>
+        <span class="cat-card-name">שוקולד</span>
+      </a>
+      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%AA%D7%99%D7%99%D7%94+%D7%97%D7%9E%D7%94" class="cat-card">
+        <div class="cat-card-circle tea">🌿</div>
+        <span class="cat-card-name">שתייה חמה</span>
+      </a>
+      <a href="kosher-iherb/category.html?cat=%D7%97%D7%98%D7%99%D7%A4%D7%99%D7%9D" class="cat-card">
+        <div class="cat-card-circle snacks">🍿</div>
+        <span class="cat-card-name">חטיפים</span>
+      </a>
+      <a href="kosher-iherb/category.html?cat=%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA%2C+%D7%90%D7%95%D7%A8%D7%96+%D7%95%D7%A4%D7%A1%D7%98%D7%94" class="cat-card">
+        <div class="cat-card-circle legumes">🫘</div>
+        <span class="cat-card-name">קטניות ופסטה</span>
+      </a>
+      <a href="kosher-iherb/category.html?cat=%D7%A1%D7%95%D7%A4%D7%A8+%D7%A4%D7%95%D7%93" class="cat-card">
+        <div class="cat-card-circle default">🌱</div>
+        <span class="cat-card-name">סופר פוד</span>
+      </a>
+      <a href="kosher-iherb/category.html?cat=%D7%A8%D7%98%D7%91%D7%99%D7%9D" class="cat-card">
+        <div class="cat-card-circle default" style="background:#FEF0F0">🥫</div>
+        <span class="cat-card-name">רטבים</span>
+      </a>
     </div>
   </div>
 </section>
@@ -1263,7 +1388,13 @@
     { key: 'אורגני',    icon: '🌿', test: p => /organic/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.descNew||'')) },
     { key: 'ללא גלוטן', icon: '🌾', test: p => /gluten|גלוטן/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'טבעוני',   icon: '🥦', test: p => /vegan|טבעוני|plant.?based/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
-    { key: 'ללא סוכר', icon: '🚫', test: p => /sugar.?free|no sugar|ללא סוכר/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
+    { key: 'ללא סוכר', icon: '🚫', test: p => {
+      const txt = p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'');
+      if (/sugar.?free|no sugar|zero.?sugar|ללא סוכר|אפס סוכר|0g sugar|without sugar/i.test(txt)) return true;
+      // כל מוצרי הקטגוריה "ללא סוכר" — מלבד סוכר/נקטר קוקוס שהם סוכר אמיתי
+      if ((p.cat||'').includes('ממתיקים ומוצרים ללא סוכר') && !/coconut.?sugar|סוכר קוקוס|coconut.?nectar|נקטר קוקוס/i.test(p.name)) return true;
+      return false;
+    }},
     { key: 'קיטו',        icon: '🥑', test: p => /keto|paleo|קיטו|פליאו|low.?carb/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'עשיר בחלבון', icon: '💪', test: p => /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'חלבי',        icon: '🥛', test: p => p.dairy === true || /\-D$/i.test(p.cert||'') },
@@ -1314,8 +1445,14 @@
 
   async function initProducts() {
     try {
-      const res = await fetch('kosher-iherb/data/products_explained_human_descriptions.json?v=' + Date.now());
-      allProducts = (await res.json()).filter(p => !p.suspended);
+      // Use pre-loaded window.FOODOS_PRODUCTS (works with file:// and http://)
+      // Falls back to fetch for http:// servers that don't serve the JS file
+      if (window.FOODOS_PRODUCTS) {
+        allProducts = window.FOODOS_PRODUCTS.filter(p => !p.suspended);
+      } else {
+        const res = await fetch('kosher-iherb/data/products_explained_human_descriptions.json');
+        allProducts = (await res.json()).filter(p => !p.suspended);
+      }
 
       // Pre-activate tag/cat from URL params (?tag=X or ?cat=X)
       const urlParams = new URLSearchParams(window.location.search);
@@ -1338,6 +1475,7 @@
         }, 400);
       }
     } catch(e) {
+      console.error('initProducts error:', e);
       document.getElementById('product-grid').innerHTML =
         '<p style="grid-column:1/-1;text-align:center;color:var(--text-soft);padding:3rem">שגיאה בטעינת המוצרים. נסה לרענן את הדף.</p>';
       document.getElementById('results-count').textContent = '';
@@ -1481,6 +1619,7 @@
     currentPage++;
     document.getElementById('load-more-wrap').style.display =
       currentPage * PAGE_SIZE < filteredProducts.length ? 'flex' : 'none';
+    initLikes();
   }
 
   function loadMore() { renderProducts(false); }
@@ -1519,6 +1658,9 @@
           : ''}
         <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
         <a href="${certUrl}" class="cert-corner-link" title="${p.cert}" style="background:${certColor}">${p.cert}</a>
+        <button class="card-like-btn" id="like-${p.id}" onclick="toggleLike(${p.id}, this)" title="שמור למועדפים">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="heart-fill" d="M12 21C12 21 3 14.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 14.5 12 21 12 21Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
         ${p.available === false ? '<span class="badge-unavailable">אזל מהמלאי</span>' : ''}
       </div>
       <div class="card-body">
@@ -1552,8 +1694,8 @@
           ${p.sizes && p.sizes.length > 1
             ? p.sizes.map(s => `<a href="${s.url}" target="_blank" rel="noopener noreferrer" class="card-btn card-btn-size">${s.label} ←</a>`).join('')
             : `<a href="${p.url||'#'}" target="_blank" rel="noopener noreferrer" class="card-btn">iHerb ←</a>`}
-          <button class="card-report-btn" onclick="openReport(${p.id}, '${(p.name||'').replace(/'/g,"\\'")}', '${(p.cert||'').replace(/'/g,"\\'")}')">⚑</button>
         </div>
+        <button class="card-report-btn" onclick="openReport(${p.id}, '${(p.nameHe||p.name||'').replace(/'/g,"\\'")}', '${(p.cert||'').replace(/'/g,"\\'")}', '${(p.url||'').replace(/'/g,"\\'")}')">דווח על הסרת כשרות</button>
       </div>`;
   }
 
@@ -1588,21 +1730,38 @@
   }
 
   document.addEventListener('click', e => {
-    if (!e.target.closest('.nav-item')) closeAllDD();
+    if (!e.target.closest('.nav-item') && !e.target.closest('#cats-trigger') && !e.target.closest('#mega-menu')) closeAllDD();
+    if (!e.target.closest('#cats-trigger') && !e.target.closest('#mega-menu')) closeMega();
   });
 
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllDD(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMega(); closeAllDD(); } });
+
+  // ── MEGA MENU toggle ─────────────────────────────
+  function toggleMega(btn) {
+    const menu = document.getElementById('mega-menu');
+    const overlay = document.getElementById('mega-overlay');
+    const isOpen = menu.classList.contains('open');
+    closeAllDD();
+    if (!isOpen) {
+      // Position directly below the nav
+      const navEl = document.querySelector('.nav');
+      if (navEl) menu.style.top = navEl.getBoundingClientRect().bottom + 'px';
+      menu.classList.add('open');
+      overlay.classList.add('open');
+      btn.classList.add('mega-open');
+    } else {
+      closeMega();
+    }
+  }
+  function closeMega() {
+    document.getElementById('mega-menu').classList.remove('open');
+    document.getElementById('mega-overlay').classList.remove('open');
+    const trigger = document.getElementById('cats-trigger');
+    if (trigger) trigger.classList.remove('mega-open');
+  }
 
   function buildNavDropdowns() {
     if (!allProducts.length) return;
-
-    // Categories (סוגי מוצרים)
-    const catSet = new Set();
-    allProducts.forEach(p => { (Array.isArray(p.cat) ? p.cat : (p.cat ? [p.cat] : [])).forEach(c => catSet.add(c)); });
-    const cats = [...catSet].sort((a,b) => a.localeCompare(b,'he'));
-    document.getElementById('dd-cats-list').innerHTML = cats.map(c =>
-      `<a href="kosher-iherb/category.html?cat=${encodeURIComponent(c)}" class="nav-dd-item">${catEmoji[c]||''} ${c}</a>`
-    ).join('');
 
     // Lifestyle tags (סוגי תזונה)
     const lifestylePages = {
@@ -1645,12 +1804,39 @@
   initProducts();
 
   // ── REPORT MODAL ─────────────────────────────────────────────
-  function openReport(id, name, cert) {
-    document.getElementById('report-product-name').textContent = name;
-    document.getElementById('report-cert-name').textContent = cert;
-    document.getElementById('report-product-id').value = id;
-    document.getElementById('report-modal').classList.add('open');
-    document.body.style.overflow = 'hidden';
+  // ── LIKES ──────────────────────────────────────
+  const LIKES_KEY = 'foodos_likes';
+  function getLikes() {
+    try { return new Set(JSON.parse(localStorage.getItem(LIKES_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+  function saveLikes(set) {
+    localStorage.setItem(LIKES_KEY, JSON.stringify([...set]));
+  }
+  function toggleLike(id, btn) {
+    const likes = getLikes();
+    if (likes.has(id)) {
+      likes.delete(id);
+      btn.classList.remove('liked');
+    } else {
+      likes.add(id);
+      btn.classList.remove('liked');
+      void btn.offsetWidth; // restart animation
+      btn.classList.add('liked');
+    }
+    saveLikes(likes);
+  }
+  function initLikes() {
+    const likes = getLikes();
+    likes.forEach(id => {
+      const btn = document.getElementById('like-' + id);
+      if (btn) btn.classList.add('liked');
+    });
+  }
+
+  function openReport(id, name, cert, url) {
+    const msg = `שלום! דיווח על בעיית כשרות:\nמוצר: ${name}\nקוד: #${id}\nכשרות נוכחית: ${cert}${url ? '\nלינק: ' + url : ''}`;
+    window.open('https://wa.me/972506543718?text=' + encodeURIComponent(msg), '_blank');
   }
 
   function closeReport() {

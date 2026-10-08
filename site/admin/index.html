@@ -610,13 +610,34 @@ async function loadProducts() {
   document.getElementById('products-container').innerHTML = '<div class="loading"><div class="spinner"></div><span>טוען מוצרים...</span></div>';
   try {
     const res = await ghGet(`/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`, token);
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error(`GitHub ${res.status}: ${errData.message || res.statusText}`);
+    }
     const data = await res.json();
+    if (!data.content) throw new Error('הקובץ ריק או גדול מדי (>1MB) ב-GitHub');
     fileSha = data.sha;
-    products = JSON.parse(decodeURIComponent(escape(atob(data.content.replace(/\n/g,'')))));
+    // Decode base64 content with proper UTF-8 support
+    const b64 = data.content.replace(/\n/g, '');
+    let decoded;
+    try {
+      // Modern approach: TextDecoder handles UTF-8 correctly
+      const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+      decoded = new TextDecoder('utf-8').decode(bytes);
+    } catch (_) {
+      // Fallback: legacy escape/unescape approach
+      decoded = decodeURIComponent(escape(atob(b64)));
+    }
+    // Handle double-stringified JSON (content wrapped in extra quotes)
+    if (decoded.startsWith('"') && decoded.endsWith('"')) {
+      decoded = JSON.parse(decoded);
+    }
+    products = JSON.parse(decoded);
     pendingChanges = {};
     updateStats(); populateCertFilter(); renderTable(products);
   } catch(e) {
-    document.getElementById('products-container').innerHTML = '<div class="empty-state">שגיאה בטעינת המוצרים.</div>';
+    console.error('loadProducts error:', e);
+    document.getElementById('products-container').innerHTML = `<div class="empty-state">שגיאה בטעינת המוצרים.<br><small style="color:#999;font-size:0.75rem;direction:ltr">${e?.message || String(e)}</small></div>`;
   }
 }
 

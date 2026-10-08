@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKCJC4WR8J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JKCJC4WR8J');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="page-title">מוצר — FOODOS herb</title>
@@ -339,6 +348,194 @@
     }
     .related-link-iherb:hover { background: var(--teal-mid); }
 
+    /* ── RELATED CARD IMAGE ── */
+    .related-card-img {
+      width: 100%; height: 120px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #f5f5f5;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ── COMMENTS SECTION ── */
+    .comments-section {
+      padding: 3rem 0 4rem;
+      background: #fff;
+      border-top: 1px solid var(--border);
+    }
+    .comments-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .comments-title {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+    .comments-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      margin-bottom: 1.8rem;
+      line-height: 1.6;
+    }
+    .iherb-tip {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      background: #FFF3E0;
+      border: 1px solid #FFB74D;
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      margin-bottom: 2rem;
+      font-size: 0.83rem;
+      color: #5D4037;
+      line-height: 1.6;
+    }
+    .iherb-tip .tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+    .iherb-tip-dismiss {
+      margin-right: auto;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #999;
+      font-size: 1rem;
+      padding: 0;
+      flex-shrink: 0;
+    }
+    .comment-form {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.4rem 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .comment-form-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .comment-stars {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 4px;
+      margin-bottom: 1rem;
+    }
+    .comment-stars input[type=radio] { display: none; }
+    .comment-stars label {
+      font-size: 1.6rem;
+      color: #ccc;
+      cursor: pointer;
+      transition: color .12s;
+      line-height: 1;
+    }
+    .comment-stars input[type=radio]:checked ~ label,
+    .comment-stars label:hover,
+    .comment-stars label:hover ~ label { color: #F59E0B; }
+    .comment-field {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      color: var(--text);
+      background: white;
+      resize: vertical;
+      margin-bottom: 0.75rem;
+      direction: rtl;
+    }
+    .comment-field:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(74,157,154,.12); }
+    .comment-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+    .comment-name-wrap { flex: 1; min-width: 160px; }
+    .comment-name-label { font-size: 0.78rem; color: var(--text-soft); margin-bottom: 4px; display: block; }
+    .comment-name-input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.55rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--text);
+      background: white;
+      direction: rtl;
+    }
+    .comment-name-input:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(74,157,154,.12); }
+    .btn-comment-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--teal);
+      color: white;
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 0.58rem 1.4rem;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .15s;
+      white-space: nowrap;
+    }
+    .btn-comment-submit:hover { background: var(--teal-mid); }
+    .btn-comment-submit:disabled { opacity: 0.5; cursor: default; }
+    .comment-error {
+      font-size: 0.8rem;
+      color: #DC2626;
+      margin-top: 0.4rem;
+      display: none;
+    }
+    .comments-list { display: flex; flex-direction: column; gap: 1rem; }
+    .comment-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+    }
+    .comment-item-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .comment-avatar {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--teal);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+    .comment-author { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+    .comment-date { font-size: 0.75rem; color: var(--text-soft); margin-right: auto; }
+    .comment-rating { font-size: 0.9rem; color: #F59E0B; letter-spacing: 1px; }
+    .comment-body {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+    .comments-empty {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-soft);
+      font-size: 0.9rem;
+    }
+
     /* ── ERROR STATE ── */
     .error-wrap {
       max-width: 560px; margin: 6rem auto; padding: 0 2rem; text-align: center;
@@ -529,6 +726,55 @@
         </div>
       </section>
 
+      <!-- COMMENTS SECTION -->
+      <section class="comments-section" id="comments-section">
+        <div class="comments-inner">
+          <h2 class="comments-title">תגובות על המוצר</h2>
+          <p class="comments-subtitle">מכירים את המוצר? רכשתם לאחרונה? שתפו את הניסיון שלכם וכך תעזרו לשאר הקהילה לקנות בחוכמה.</p>
+
+          <!-- iHerb tip banner -->
+          <div class="iherb-tip" id="iherb-tip">
+            <span class="tip-icon">💡</span>
+            <span>כדאי להעתיק את התגובה שלך גם לדף המוצר ב-iHerb ותקבלו
+              <strong>תגמולי iHerb</strong> על ביקורות מאומתות!</span>
+            <button class="iherb-tip-dismiss" id="iherb-tip-dismiss" title="סגור">✕</button>
+          </div>
+
+          <!-- Form -->
+          <div class="comment-form">
+            <div class="comment-form-title">השאירו תגובה</div>
+
+            <div class="comment-stars" id="comment-stars" role="group" aria-label="דירוג">
+              <input type="radio" name="rating" id="s5" value="5">
+              <label for="s5" title="5 כוכבים">★</label>
+              <input type="radio" name="rating" id="s4" value="4">
+              <label for="s4" title="4 כוכבים">★</label>
+              <input type="radio" name="rating" id="s3" value="3">
+              <label for="s3" title="3 כוכבים">★</label>
+              <input type="radio" name="rating" id="s2" value="2">
+              <label for="s2" title="2 כוכבים">★</label>
+              <input type="radio" name="rating" id="s1" value="1">
+              <label for="s1" title="כוכב אחד">★</label>
+            </div>
+
+            <textarea class="comment-field" id="comment-text" rows="4"
+              placeholder="כתבו כאן את הביקורת, תיאור הטעם, שימוש בבישול, תאימות למשפחה..." aria-label="טקסט תגובה"></textarea>
+
+            <div class="comment-row">
+              <div class="comment-name-wrap">
+                <label class="comment-name-label" for="comment-name">שם (אופציונלי)</label>
+                <input class="comment-name-input" id="comment-name" type="text" placeholder="למשל: שרה מ.">
+              </div>
+              <button class="btn-comment-submit" id="comment-submit">פרסמו תגובה ←</button>
+            </div>
+            <div class="comment-error" id="comment-error">נא לכתוב תגובה לפני הפרסום.</div>
+          </div>
+
+          <!-- Existing comments list -->
+          <div class="comments-list" id="comments-list"></div>
+        </div>
+      </section>
+
     </div><!-- /product-content -->
 
   </main>
@@ -660,7 +906,7 @@
       }
 
       const longDescEl = document.getElementById('product-long-desc');
-      const longText = product.descNew || product.longDesc || '';
+      const longText = product.longDesc || product.descNew || '';
       longDescEl.textContent = longText;
 
       // ── Rich content (if present)
@@ -811,6 +1057,17 @@
           const card = document.createElement('div');
           card.className = 'related-card';
 
+          // Image
+          if (rel.img) {
+            const imgEl = document.createElement('img');
+            imgEl.src = rel.img;
+            imgEl.alt = rel.nameHe || rel.name;
+            imgEl.className = 'related-card-img';
+            imgEl.loading = 'lazy';
+            imgEl.onerror = function() { this.style.display = 'none'; };
+            card.appendChild(imgEl);
+          }
+
           const certSpan = document.createElement('span');
           certSpan.className = 'related-cert';
           certSpan.textContent = certLabel(rel.cert);
@@ -850,6 +1107,110 @@
         document.getElementById('related-section').style.display = 'block';
       }
     }
+
+    // ── Comments ──
+    (function() {
+      var productId = new URLSearchParams(window.location.search).get('id');
+      var STORAGE_KEY = 'foodos_comments_' + productId;
+      var TIP_KEY = 'foodos_iherb_tip_dismissed';
+
+      // Dismiss iHerb tip
+      var tipEl = document.getElementById('iherb-tip');
+      var tipDismiss = document.getElementById('iherb-tip-dismiss');
+      if (localStorage.getItem(TIP_KEY)) {
+        if (tipEl) tipEl.style.display = 'none';
+      }
+      if (tipDismiss) {
+        tipDismiss.addEventListener('click', function() {
+          if (tipEl) tipEl.style.display = 'none';
+          try { localStorage.setItem(TIP_KEY, '1'); } catch(e) {}
+        });
+      }
+
+      function loadComments() {
+        try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
+        catch(e) { return []; }
+      }
+      function saveComments(arr) {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(arr)); } catch(e) {}
+      }
+      function starsHtml(n) {
+        var s = '';
+        for (var i = 1; i <= 5; i++) s += i <= n ? '★' : '☆';
+        return s;
+      }
+      function formatDate(iso) {
+        try {
+          var d = new Date(iso);
+          return d.toLocaleDateString('he-IL', { day:'numeric', month:'long', year:'numeric' });
+        } catch(e) { return iso; }
+      }
+      function initials(name) {
+        if (!name) return '?';
+        var parts = name.trim().split(/\s+/);
+        if (parts.length >= 2) return parts[0][0] + parts[1][0];
+        return parts[0].slice(0, 2);
+      }
+
+      function renderComments() {
+        var list = document.getElementById('comments-list');
+        if (!list) return;
+        var comments = loadComments();
+        if (comments.length === 0) {
+          list.innerHTML = '<div class="comments-empty">עדיין אין תגובות. היו הראשונים לשתף!</div>';
+          return;
+        }
+        list.innerHTML = comments.slice().reverse().map(function(c) {
+          var name = c.name || 'גולש/ת אנונימי';
+          var av = initials(c.name || '');
+          var stars = c.rating ? '<span class="comment-rating">' + starsHtml(c.rating) + '</span>' : '';
+          return '<div class="comment-item">' +
+            '<div class="comment-item-header">' +
+              '<div class="comment-avatar">' + av + '</div>' +
+              '<span class="comment-author">' + name + '</span>' +
+              stars +
+              '<span class="comment-date">' + formatDate(c.date) + '</span>' +
+            '</div>' +
+            '<div class="comment-body">' + c.text.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</div>' +
+          '</div>';
+        }).join('');
+      }
+
+      var submitBtn = document.getElementById('comment-submit');
+      var errorEl = document.getElementById('comment-error');
+      if (submitBtn) {
+        submitBtn.addEventListener('click', function() {
+          var text = (document.getElementById('comment-text').value || '').trim();
+          var name = (document.getElementById('comment-name').value || '').trim();
+          var ratingEl = document.querySelector('#comment-stars input[name=rating]:checked');
+          var rating = ratingEl ? parseInt(ratingEl.value) : 0;
+
+          if (!text) {
+            if (errorEl) { errorEl.style.display = 'block'; }
+            return;
+          }
+          if (errorEl) errorEl.style.display = 'none';
+
+          var comments = loadComments();
+          comments.push({ text: text, name: name, rating: rating, date: new Date().toISOString() });
+          saveComments(comments);
+
+          // Reset form
+          document.getElementById('comment-text').value = '';
+          document.getElementById('comment-name').value = '';
+          var checked = document.querySelector('#comment-stars input[name=rating]:checked');
+          if (checked) checked.checked = false;
+
+          renderComments();
+
+          // Scroll to list
+          var listEl = document.getElementById('comments-list');
+          if (listEl) listEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+
+      renderComments();
+    })();
 
     // ── Nav dropdowns ──
     function toggleDD(e, panelId) {
