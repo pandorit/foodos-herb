@@ -38,6 +38,18 @@ Policy: certifications rated "Recommended" by cRc ASKcRc are approved. See `docs
 
 ---
 
+## Product Card UX Rules
+
+**תמונת מוצר חייבת להיות קליקבילית ולנווט לדף המוצר.**
+
+בכל כרטיס מוצר (homepage, category.html, וכל דף עתידי), ה-`card-img-wrap` חייב לכלול:
+- `style="cursor:pointer"`
+- `onclick="window.location.href='product.html?id=${p.id}'"` (נתיב יחסי לפי המיקום)
+
+רכיבים פנימיים ב-`card-img-wrap` שאינם חלק מניווט המוצר (כמו כפתור לב וחותמת כשרות) חייבים לכלול `onclick="event.stopPropagation()"` כדי שלא יפעילו את הניווט.
+
+---
+
 ## Model
 
 model: claude-sonnet-4-5-20251001

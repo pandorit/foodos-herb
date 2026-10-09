@@ -1078,8 +1078,8 @@
 <section class="search-engine-section section-pad" id="products">
   <div class="container">
     <div class="search-hero-wrap">
-      <h2 class="search-hero-title">חפש מבין <em id="search-hero-count">276 מוצרים</em> כשרים מאומתים</h2>
-      <p class="search-hero-sub">כל המוצרים נבדקו ידנית — כשרות מאומתת לפי רשימת ההכשרויות המאושרות</p>
+      <h2 class="search-hero-title">אוהבים את iHerb? שומרי כשרות? זה הפיד החדש שלכם!</h2>
+      <p class="search-hero-sub">כל המוצרים נבדקו ידנית שהינם בעלי כשרות אמינה מרשימת הכשרויות המאושרת של ארגון CRC</p>
     </div>
 
     <div class="search-bar-outer">
@@ -1215,47 +1215,7 @@
 
 <!-- ── CERTS ANCHOR ───────────────────────────────── -->
 <div id="certs-section"></div>
-<!-- ── TESTIMONIALS ───────────────────────────────── -->
-<section class="testimonials section-pad">
-  <div class="container">
-    <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; margin-bottom:2.8rem;">
-      <div>
-        <div class="testi-stars"><span class="stars">★★★★★</span><span><span id="testi-count">340</span>+ מוצרים כשרים מאומתים</span></div>
-        <h2 class="testi-title">מה אומרת הקהילה</h2>
-      </div>
-      <div class="testi-nav">
-        <button class="arrow-btn-white">←</button>
-        <button class="arrow-btn-white">→</button>
-      </div>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-video"><span class="testi-video-emoji">🫒</span><div class="play-btn">▶</div></div>
-        <div class="testi-avatar">ר</div>
-        <div class="testi-name">רונית כ.</div>
-        <div class="testi-role">חברת FOODOS מתל אביב</div>
-        <div class="testi-text">"סוף סוף מצאתי מקום שבודק בשבילי! הזמנתי שמן זית ותבלינים — הכל הגיע מהיר ובמחיר שלא ייאמן."</div>
-        <div class="testi-stars-sm">★★★★★</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-video"><span class="testi-video-emoji">🌿</span><div class="play-btn">▶</div></div>
-        <div class="testi-avatar">מ</div>
-        <div class="testi-name">מיכל ב.</div>
-        <div class="testi-role">שומרת כשרות, חיפה</div>
-        <div class="testi-text">"הייתי תמיד חוששת לקנות ב-iHerb כי לא ידעתי מה כשר. עכשיו אני פשוט נכנסת לרשימה ומזמינה בביטחון."</div>
-        <div class="testi-stars-sm">★★★★★</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-video"><span class="testi-video-emoji">🫘</span><div class="play-btn">▶</div></div>
-        <div class="testi-avatar">ד</div>
-        <div class="testi-name">דנה ש.</div>
-        <div class="testi-role">בלוגרית מזון, ירושלים</div>
-        <div class="testi-text">"קמח החומוס של Bob's Red Mill שינה לי את חיי! ה-Foodos Online היה האתר היחיד שאמת שיש לו הכשר OU."</div>
-        <div class="testi-stars-sm">★★★★★</div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ── TESTIMONIALS — הוסר זמנית, יוחזר עם חוות דעת אמיתיות ───── -->
 
 <!-- ── VALUES ─────────────────────────────────────── -->
 <section class="values section-pad" id="values">
@@ -1652,13 +1612,13 @@
     const sizeStr  = (parts.length > 2 && /\d/.test(lastPart)) ? lastPart : '';
     const shortName = parts.length > 1 ? parts.slice(1, parts.length > 2 ? -1 : undefined).join(',').trim() : p.name;
     return `
-      <div class="card-img-wrap" style="background:white">
+      <div class="card-img-wrap" style="background:white;cursor:pointer" onclick="window.location.href='kosher-iherb/product.html?id=${p.id}'">
         ${p.img
           ? `<img src="${p.img}" alt="${p.nameHe||p.name||''}" style="width:100%;height:100%;object-fit:contain;padding:12px" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
           : ''}
         <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
-        <a href="${certUrl}" class="cert-corner-link" title="${p.cert}" style="background:${certColor}">${p.cert}</a>
-        <button class="card-like-btn" id="like-${p.id}" onclick="toggleLike(${p.id}, this)" title="שמור למועדפים">
+        <a href="${certUrl}" class="cert-corner-link" title="${p.cert}" style="background:${certColor}" onclick="event.stopPropagation()">${p.cert}</a>
+        <button class="card-like-btn" id="like-${p.id}" onclick="event.stopPropagation();toggleLike(${p.id}, this)" title="שמור למועדפים">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="heart-fill" d="M12 21C12 21 3 14.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 14.5 12 21 12 21Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         ${p.available === false ? '<span class="badge-unavailable">אזל מהמלאי</span>' : ''}
