@@ -1995,7 +1995,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved",
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/118782/118782.jpg",
+    "img": "/images/products/Gourmet Lavender Extract Paste.avif",
     "available": true
   },
   {
@@ -2886,7 +2886,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/21370/21370.jpg",
+    "img": "/images/products/Chicory Herbal Coffee, Almond Amaretto.avif",
     "available": true
   },
   {
@@ -3156,7 +3156,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/153318/153318.jpg",
+    "img": "/images/products/Organic Super Seed Crackers.avif",
     "available": true
   },
   {
@@ -5978,7 +5978,7 @@ window.FOODOS_PRODUCTS = [
     "nameHe": "אבקת מאצ'ה אורגנית",
     "_descStatus": "edited",
     "certVerified": true,
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/77003/77003.jpg",
+    "img": "/images/products/Sunfood, Superfoods, Organic Matcha Powder.avif",
     "available": true
   },
   {
@@ -6465,7 +6465,7 @@ window.FOODOS_PRODUCTS = [
       "ממרחים"
     ],
     "url": "https://il.iherb.com/pr/nate-s-honey-hot-honey-infused-with-chili-pepper-16-oz-454-g/162072",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/162072/162072.jpg",
+    "img": "/images/products/Nate's Honey, Hot Honey, Infused with Chili Pepper.avif",
     "available": true,
     "desc": "דבש פרחוני עם פלפל צ'ילי — גרסה גדולה יותר (454 גרם) עם כשרות OU. טעם מתוק-חריף עדין, מצוין לגבינות, פיצה ואפייה. אלטרנטיבה מעולה ל-Mike's.",
     "seeAlso": [
@@ -6549,7 +6549,7 @@ window.FOODOS_PRODUCTS = [
     "cat": "ממתיקים ומוצרים ללא סוכר",
     "url": "https://il.iherb.com/pr/the-pur-company-chewing-gum-spearmint-55-pieces-2-72-oz-77-g/119802",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fthe-pur-company-chewing-gum-spearmint-55-pieces-2-72-oz-77-g%2F119802",
-    "img": "https://s3.images-iherb.com/pur/pur00119802/d/9.jpg",
+    "img": "/images/products/The PUR Company, Chewing Gum, Spearmint.avif",
     "available": true,
     "dairy": false,
     "tags": [
