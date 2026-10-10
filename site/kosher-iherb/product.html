@@ -895,7 +895,9 @@
       document.getElementById('product-name-en').textContent = product.name;
 
       // ── Descriptions
-      document.getElementById('product-desc-lead').textContent = product.desc || '';
+      // Short: prefer descNew (humanized) over original desc
+      const shortText = product.descNew || product.desc || '';
+      document.getElementById('product-desc-lead').textContent = shortText;
 
       // ── CertNote warning box
       const certNoteBox = document.getElementById('cert-note-box');
@@ -906,7 +908,8 @@
       }
 
       const longDescEl = document.getElementById('product-long-desc');
-      const longText = product.longDesc || product.descNew || '';
+      // Long: only longDesc — never fall back to shortText (avoids duplication)
+      const longText = product.longDesc || '';
       longDescEl.textContent = longText;
 
       // ── Rich content (if present)
