@@ -171,6 +171,12 @@
       margin-bottom: 1.5rem;
       font-weight: 400;
     }
+    .product-desc-lead p {
+      margin-bottom: 0.75rem;
+    }
+    .product-desc-lead p:last-child {
+      margin-bottom: 0;
+    }
 
     .divider {
       border: none; border-top: 1px solid var(--border);
@@ -182,6 +188,12 @@
       color: var(--text-mid);
       line-height: 1.8;
       margin-bottom: 1.5rem;
+    }
+    .product-long-desc p {
+      margin-bottom: 1rem;
+    }
+    .product-long-desc p:last-child {
+      margin-bottom: 0;
     }
 
     .rich-content-block {
@@ -897,7 +909,16 @@
       // ── Descriptions
       // Short: prefer descNew (humanized) over original desc
       const shortText = product.descNew || product.desc || '';
-      document.getElementById('product-desc-lead').textContent = shortText;
+      (function() {
+        const el = document.getElementById('product-desc-lead');
+        el.innerHTML = '';
+        shortText.split('\n\n').forEach(function(para) {
+          if (!para.trim()) return;
+          const p = document.createElement('p');
+          p.innerHTML = para.trim().replace(/\n/g, '<br>');
+          el.appendChild(p);
+        });
+      })();
 
       // ── CertNote warning box
       const certNoteBox = document.getElementById('cert-note-box');
@@ -910,7 +931,13 @@
       const longDescEl = document.getElementById('product-long-desc');
       // Long: only longDesc — never fall back to shortText (avoids duplication)
       const longText = product.longDesc || '';
-      longDescEl.textContent = longText;
+      longDescEl.innerHTML = '';
+      longText.split('\n\n').forEach(function(para) {
+        if (!para.trim()) return;
+        const p = document.createElement('p');
+        p.innerHTML = para.trim().replace(/\n/g, '<br>');
+        longDescEl.appendChild(p);
+      });
 
       // ── Rich content (if present)
       if (product.richContent) {
