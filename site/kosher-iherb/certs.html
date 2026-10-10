@@ -22,158 +22,740 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --teal:#4A9D9A; --teal-dark:#2C6360; --teal-xdark:#1A4F4D; --teal-mid:#3A8380;
-      --teal-light:#EBF6F6; --teal-xlight:#C8E8E7; --lime:#7AB648; --orange:#E85D04;
-      --bg:#FFFFFF; --bg-soft:#F8F9F8; --text:#1A1A1A; --text-mid:#3D3D3D; --text-soft:#6B7280;
-      --border:#E5E7E5; --card-bg:#F4F4F2;
-      --serif:'Playfair Display',Georgia,serif;
-      --sans:'VarelaRound','Inter',system-ui,sans-serif;
-      --radius-sm:8px; --radius:14px; --radius-lg:20px; --radius-pill:100px;
-      --shadow-sm:0 1px 4px rgba(0,0,0,.06); --shadow:0 4px 16px rgba(0,0,0,.08); --shadow-lg:0 12px 40px rgba(0,0,0,.12);
+      --teal: #4A9D9A;
+      --teal-dark: #2C6360;
+      --teal-xdark: #1A4F4D;
+      --teal-mid: #3A8380;
+      --teal-light: #EBF6F6;
+      --teal-xlight: #C8E8E7;
+      --lime: #7AB648;
+      --orange: #E85D04;
+      --cream: #F5F0E8;
+      --cream-dark: #EDE5D5;
+      --bg: #FFFFFF;
+      --bg-soft: #F8F9F8;
+      --text: #1A1A1A;
+      --text-mid: #3D3D3D;
+      --text-soft: #6B7280;
+      --border: #E5E7E5;
+      --card-bg: #F4F4F2;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'VarelaRound', 'Inter', system-ui, sans-serif;
     }
-
-    /* ── BREADCRUMB ─────────────────────────────────────────── */
-    .breadcrumb-bar {
-      background: var(--teal-light, #EBF6F6);
-      border-bottom: 1px solid rgba(74,157,154,.18);
-      padding: 8px 2rem;
-    }
-    .breadcrumb-inner {
-      max-width: 1160px; margin: 0 auto;
-      display: flex; align-items: center; gap: 6px;
-      font-size: 0.78rem; color: var(--text-soft, #6B7280);
-    }
-    .breadcrumb-inner a { color: var(--teal, #4A9D9A); font-weight: 600; text-decoration: none; }
-    .breadcrumb-inner a:hover { text-decoration: underline; }
-    .breadcrumb-sep { opacity: .45; font-size: 0.72rem; }
-    .breadcrumb-current { font-weight: 600; color: var(--text-mid, #3D3D3D); }
 
     html { scroll-behavior: smooth; }
-    body { font-family: var(--sans); color: var(--text); background: var(--bg); direction: rtl; line-height: 1.6; overflow-x: hidden; }
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--bg);
+      direction: rtl;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
     a { text-decoration: none; color: inherit; }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
     img { display: block; max-width: 100%; }
 
     /* ── NAV ── */
-    .nav { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 200; height: 68px; display: flex; align-items: center; }
-    .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .nav {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      height: 68px;
+      display: flex;
+      align-items: center;
+    }
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     .logo { display: flex; align-items: center; gap: 10px; }
-    .logo-img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 8px rgba(74,157,154,.2); }
-    .logo-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--text); line-height: 1.1; }
-    .logo-name small { display: block; font-family: var(--sans); font-size: 0.72rem; font-weight: 500; color: var(--teal); letter-spacing: 1px; text-transform: uppercase; }
+    .logo-img {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(74,157,154,.2);
+    }
+    .logo-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.1;
+    }
+    .logo-name small {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--teal);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
     .nav-links a:hover { color: var(--teal); }
     .nav-links a.active { color: var(--teal); font-weight: 700; }
-    .nav-cta { background: var(--teal) !important; color: white !important; font-size: 0.85rem !important; font-weight: 600 !important; padding: 9px 20px; border-radius: var(--radius-pill); }
-    .breadcrumb { font-size: 0.78rem; color: var(--text-soft); display: flex; align-items: center; gap: 6px; }
-    .breadcrumb a { color: var(--teal); }
-    .breadcrumb-sep { opacity: .4; }
 
-    /* ── PAGE HERO ── */
-    .page-hero { background: var(--teal-xdark); padding: 4rem 0 4.5rem; position: relative; overflow: hidden; }
-    .page-hero::before {
-      content: ''; position: absolute; inset: 0;
-      background:
-        linear-gradient(135deg, rgba(74,157,154,.3) 0%, transparent 55%),
-        radial-gradient(ellipse at 90% 20%, rgba(122,182,72,.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 10% 80%, rgba(74,157,154,.12) 0%, transparent 45%);
+    /* ── BREADCRUMB ── */
+    .breadcrumb-bar {
+      background: var(--teal-light);
+      border-bottom: 1px solid rgba(74,157,154,.18);
+      padding: 8px 2rem;
     }
-    .page-hero-inner { position: relative; z-index: 1; max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
-    .hero-breadcrumb { margin-bottom: 2rem; }
-    .hero-eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-xlight); border: 1.5px solid rgba(255,255,255,.2); padding: 5px 16px; border-radius: var(--radius-pill); margin-bottom: 1.2rem; }
-    .hero-title { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 900; color: white; line-height: 1.05; margin-bottom: 1.2rem; }
-    .hero-title em { font-style: italic; color: var(--teal-xlight); }
-    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,.78); line-height: 1.8; max-width: 640px; margin-bottom: 2.5rem; }
-    .hero-stats { display: flex; gap: 3.5rem; flex-wrap: wrap; }
-    .hero-stat-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 900; color: white; line-height: 1; }
-    .hero-stat-label { font-size: 0.75rem; color: rgba(255,255,255,.55); margin-top: 5px; }
+    .breadcrumb-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+    .breadcrumb-inner a { color: var(--teal); font-weight: 600; }
+    .breadcrumb-inner a:hover { text-decoration: underline; }
+    .breadcrumb-sep { opacity: .45; font-size: 0.72rem; }
+    .breadcrumb-current { font-weight: 600; color: var(--text-mid); }
 
-    /* ── PHILOSOPHY SECTION ── */
-    .philosophy-section { background: var(--bg-soft); border-bottom: 1px solid var(--border); padding: 4rem 0; }
-    .philosophy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-    .philosophy-main { }
-    .section-eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 0.8rem; }
-    .section-title { font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 900; color: var(--text); line-height: 1.15; margin-bottom: 1.2rem; }
-    .section-title em { font-style: italic; color: var(--teal); }
-    .body-text { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; }
-    .body-text + .body-text { margin-top: 1rem; }
-    .philosophy-side { }
-    .principle-list { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 0.5rem; }
-    .principle-item { display: flex; gap: 1rem; align-items: flex-start; }
-    .principle-icon { width: 38px; height: 38px; background: var(--teal-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
-    .principle-title { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 3px; }
-    .principle-desc { font-size: 0.82rem; color: var(--text-soft); line-height: 1.6; }
+    /* ── HERO ── */
+    .page-hero {
+      background: var(--bg);
+      border-bottom: 3px solid var(--teal);
+      padding: 3.5rem 0 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '✡';
+      position: absolute;
+      left: -0.05em;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 22rem;
+      line-height: 1;
+      color: var(--teal-light);
+      pointer-events: none;
+      font-family: serif;
+      opacity: 0.7;
+    }
+    .hero-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-kicker {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-kicker::after {
+      content: '';
+      flex: 1;
+      max-width: 48px;
+      height: 1.5px;
+      background: var(--teal);
+      display: inline-block;
+    }
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.0;
+      margin-bottom: 1.4rem;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--teal-dark);
+    }
+    .hero-lead {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      max-width: 580px;
+      border-right: 3px solid var(--teal-xlight);
+      padding-right: 1.2rem;
+    }
+    .hero-stats-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      align-items: flex-end;
+      min-width: 160px;
+    }
+    .hero-stat {
+      text-align: center;
+      background: var(--cream);
+      border: 1.5px solid var(--cream-dark);
+      padding: 1.1rem 1.6rem;
+      width: 100%;
+    }
+    .hero-stat-num {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--teal-dark);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.68rem;
+      color: var(--text-soft);
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    /* ── PHILOSOPHY ── */
+    .philosophy-section {
+      background: var(--cream);
+      border-bottom: 1px solid var(--cream-dark);
+      padding: 5rem 0;
+    }
+    .philosophy-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-label::before {
+      content: '';
+      width: 24px;
+      height: 1.5px;
+      background: var(--teal);
+      display: inline-block;
+    }
+    .philosophy-heading {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 2.5rem;
+      max-width: 620px;
+    }
+    .philosophy-heading em { font-style: italic; color: var(--teal-dark); }
+    .philosophy-body {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .phil-text p {
+      font-size: 1rem;
+      color: var(--text-mid);
+      line-height: 1.9;
+      margin-bottom: 1.1rem;
+    }
+    .phil-text p:last-child { margin-bottom: 0; }
+
+    /* editorial numbered principles */
+    .principles {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .principle-row {
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      gap: 1rem;
+      padding: 1.4rem 0;
+      border-top: 1px solid var(--cream-dark);
+    }
+    .principle-row:last-child { border-bottom: 1px solid var(--cream-dark); }
+    .principle-num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--teal-xlight);
+      line-height: 1;
+      padding-top: 2px;
+    }
+    .principle-content {}
+    .principle-title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .principle-desc {
+      font-size: 0.83rem;
+      color: var(--text-soft);
+      line-height: 1.65;
+    }
 
     /* ── STANDARDS SECTION ── */
-    .standards-section { padding: 4rem 0; border-bottom: 1px solid var(--border); }
-    .standards-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 3rem; }
-    .crc-badge { background: var(--teal-light); border: 2px solid var(--teal-xlight); border-radius: var(--radius-lg); padding: 1.8rem; }
-    .crc-badge-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.6rem; }
-    .crc-badge-text { font-size: 0.85rem; color: var(--text-mid); line-height: 1.7; }
-    .crc-badge-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 0.8rem; font-size: 0.8rem; font-weight: 600; color: var(--teal); border-bottom: 1.5px solid var(--teal-xlight); padding-bottom: 1px; transition: border-color .18s; }
-    .crc-badge-link:hover { border-color: var(--teal); }
-    .tiers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .tier-card { background: white; border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.3rem 1.5rem; }
-    .tier-card.tier-top { border-color: var(--teal-xlight); background: linear-gradient(135deg, rgba(74,157,154,.04), rgba(200,232,231,.08)); }
-    .tier-label { font-size: 0.62rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 0.5rem; }
-    .tier-label.tier-solid { color: #1a7040; }
-    .tier-certs { font-size: 0.82rem; font-weight: 600; color: var(--text); line-height: 1.7; }
-    .tier-desc { font-size: 0.75rem; color: var(--text-soft); margin-top: 0.4rem; line-height: 1.5; }
+    .standards-section {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .standards-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .standards-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      margin-bottom: 3.5rem;
+      align-items: end;
+    }
+    .standards-heading {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .standards-heading em { font-style: italic; color: var(--teal-dark); }
+    .standards-lead {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+    /* cRc note integrated as a text block */
+    .crc-note {
+      background: var(--teal-light);
+      border-right: 3px solid var(--teal);
+      padding: 1.4rem 1.6rem;
+    }
+    .crc-note-heading {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 0.5rem;
+    }
+    .crc-note-text {
+      font-size: 0.84rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+    }
+    .crc-note-link {
+      display: inline-block;
+      margin-top: 0.7rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--teal-dark);
+      border-bottom: 1.5px solid var(--teal);
+      padding-bottom: 1px;
+      transition: color .18s;
+    }
+    .crc-note-link:hover { color: var(--teal); }
 
-    /* ── CERTS GRID ── */
-    .certs-section { padding: 4rem 0 5rem; }
-    .certs-section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 2rem; gap: 1rem; flex-wrap: wrap; }
-    .certs-count-badge { font-size: 0.8rem; color: var(--text-soft); background: var(--teal-light); padding: 4px 14px; border-radius: var(--radius-pill); }
-    .cert-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
-    .cert-card { background: white; border: 1.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: all .22s; display: flex; flex-direction: column; }
-    .cert-card:hover { border-color: var(--teal); box-shadow: var(--shadow); transform: translateY(-3px); }
-    .cert-card.cert-merged { opacity: .72; }
-    .cert-card.cert-merged:hover { opacity: 1; }
-    .cert-card-header { padding: 1.5rem 1.5rem 1.2rem; display: flex; align-items: flex-start; gap: 1.1rem; border-bottom: 1px solid var(--border); }
-    .cert-logo-wrap { width: 64px; height: 64px; background: var(--bg-soft); border: 1.5px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; padding: 6px; }
-    .cert-logo-wrap img { width: 100%; height: 100%; object-fit: contain; }
-    .cert-logo-text { font-family: var(--serif); font-size: 1.1rem; font-weight: 900; color: var(--teal-dark); text-align: center; line-height: 1.1; }
-    .cert-card-meta { flex: 1; min-width: 0; }
-    .cert-card-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 900; color: var(--text); margin-bottom: 3px; }
-    .cert-card-org { font-size: 0.72rem; color: var(--text-soft); line-height: 1.4; }
-    .cert-status-pill { display: inline-block; font-size: 0.6rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; border-radius: var(--radius-pill); margin-top: 6px; }
-    .status-active { background: rgba(74,157,154,.12); color: var(--teal-dark); border: 1px solid rgba(74,157,154,.25); }
-    .status-merged { background: #fef3d8; color: #8a6010; border: 1px solid #e8c060; }
-    .cert-card-body { padding: 1.2rem 1.5rem; flex: 1; }
-    .cert-card-desc { font-size: 0.82rem; color: var(--text-mid); line-height: 1.75; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
-    .cert-card-footer { padding: 1rem 1.5rem 1.4rem; display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; }
-    .cert-stat-row { display: flex; gap: 1.2rem; }
+    /* tier comparison: asymmetric columns */
+    .tiers-compare {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 0;
+      border: 2px solid var(--border);
+    }
+    .tier-col {
+      padding: 2rem 2.2rem;
+    }
+    .tier-col-national {
+      background: var(--bg);
+      border-left: 1px solid var(--border);
+    }
+    .tier-col-local {
+      background: var(--bg-soft);
+    }
+    .tier-col-label {
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tier-col-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .tier-stamps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .tier-stamp {
+      font-family: var(--serif);
+      font-weight: 900;
+      padding: 4px 14px;
+      border: 2px solid var(--text);
+      font-size: 1rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .tier-col-national .tier-stamp {
+      font-size: 1.3rem;
+      padding: 5px 18px;
+      border-color: var(--teal-dark);
+      color: var(--teal-dark);
+    }
+    .tier-desc {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    /* ── CERT CARDS GRID ── */
+    .certs-section {
+      padding: 5rem 0 6rem;
+      background: var(--cream);
+    }
+    .certs-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .certs-header-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+      border-bottom: 2px solid var(--cream-dark);
+      padding-bottom: 1.2rem;
+    }
+    .certs-heading {
+      font-family: var(--serif);
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.1;
+    }
+    .certs-heading em { font-style: italic; color: var(--teal-dark); }
+    .certs-count-badge {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--teal-dark);
+      background: var(--teal-light);
+      border: 1px solid var(--teal-xlight);
+      padding: 4px 14px;
+    }
+
+    /* Stamp-style cert cards */
+    .cert-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+    }
+    .cert-card {
+      background: var(--bg);
+      border: 2px solid var(--cream-dark);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    /* stamp offset effect */
+    .cert-card::after {
+      content: '';
+      position: absolute;
+      inset: 4px -4px -4px 4px;
+      background: transparent;
+      border: 1.5px solid var(--cream-dark);
+      z-index: -1;
+      transition: border-color .2s;
+    }
+    .cert-card:hover {
+      border-color: var(--teal);
+      box-shadow: 3px 3px 0 var(--teal-xlight);
+    }
+    .cert-card:hover::after {
+      border-color: var(--teal-xlight);
+    }
+    .cert-card.cert-merged {
+      opacity: .68;
+    }
+    .cert-card.cert-merged:hover {
+      opacity: 1;
+    }
+    /* Logo area — centered, square */
+    .cert-card-header {
+      padding: 1.8rem 1.5rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid var(--cream-dark);
+      background: var(--bg-soft);
+    }
+    .cert-logo-wrap {
+      width: 72px;
+      height: 72px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 6px;
+      margin-bottom: 0.9rem;
+    }
+    .cert-logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .cert-logo-text {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--teal-dark);
+      text-align: center;
+      line-height: 1.1;
+    }
+    .cert-card-name {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--text);
+      text-align: center;
+      margin-bottom: 3px;
+    }
+    .cert-card-org {
+      font-size: 0.7rem;
+      color: var(--text-soft);
+      text-align: center;
+      line-height: 1.4;
+    }
+    .cert-status-pill {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 10px;
+      margin-top: 6px;
+    }
+    .status-active {
+      background: rgba(74,157,154,.12);
+      color: var(--teal-dark);
+      border: 1px solid rgba(74,157,154,.3);
+    }
+    .status-merged {
+      background: #fef3d8;
+      color: #8a6010;
+      border: 1px solid #e8c060;
+    }
+    /* body */
+    .cert-card-body {
+      padding: 1.1rem 1.4rem;
+      flex: 1;
+    }
+    .cert-card-desc {
+      font-size: 0.81rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    /* footer */
+    .cert-card-footer {
+      padding: 0.9rem 1.4rem 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      border-top: 1px solid var(--cream-dark);
+      background: var(--bg-soft);
+    }
+    .cert-stat-row { display: flex; gap: 1.4rem; }
     .cert-mini-stat { text-align: center; }
-    .cert-mini-num { font-family: var(--serif); font-size: 1.1rem; font-weight: 900; color: var(--teal-dark); line-height: 1; }
-    .cert-mini-label { font-size: 0.62rem; color: var(--text-soft); margin-top: 2px; }
-    .cert-card-link { display: inline-flex; align-items: center; gap: 4px; font-size: 0.78rem; font-weight: 600; color: var(--teal); border: 1.5px solid var(--teal-xlight); padding: 6px 14px; border-radius: var(--radius-pill); transition: all .18s; white-space: nowrap; }
-    .cert-card-link:hover { background: var(--teal); color: white; border-color: var(--teal); }
+    .cert-mini-num {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--teal-dark);
+      line-height: 1;
+    }
+    .cert-mini-label {
+      font-size: 0.6rem;
+      color: var(--text-soft);
+      margin-top: 2px;
+    }
+    .cert-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--teal-dark);
+      border-bottom: 1.5px solid var(--teal);
+      padding-bottom: 1px;
+      white-space: nowrap;
+      transition: color .18s;
+    }
+    .cert-card-link:hover { color: var(--teal); }
 
     /* ── HOW IT WORKS ── */
-    .how-section { background: var(--teal-xdark); padding: 4.5rem 0; color: white; }
-    .how-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
-    .how-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: white; text-align: center; margin-bottom: 0.6rem; }
-    .how-sub { text-align: center; color: rgba(255,255,255,.65); font-size: 0.95rem; margin-bottom: 3.5rem; max-width: 560px; margin-right: auto; margin-left: auto; }
-    .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-    .how-step { text-align: center; }
-    .how-step-num { width: 48px; height: 48px; background: rgba(74,157,154,.25); border: 2px solid rgba(74,157,154,.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.2rem; font-weight: 900; color: var(--teal-xlight); margin: 0 auto 1rem; }
-    .how-step-title { font-size: 0.92rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
-    .how-step-desc { font-size: 0.8rem; color: rgba(255,255,255,.6); line-height: 1.65; }
-    .how-connector { display: none; }
+    .how-section {
+      background: var(--teal-xdark);
+      padding: 5rem 0;
+    }
+    .how-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .how-kicker {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--teal-xlight);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.7rem;
+      opacity: 0.75;
+    }
+    .how-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .how-title em { font-style: italic; color: var(--teal-xlight); }
+    .how-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--teal);
+      margin: 1.4rem 0 2.5rem;
+    }
+    /* vertical step list */
+    .how-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .how-step {
+      display: grid;
+      grid-template-columns: 3.5rem 1fr;
+      gap: 1.4rem;
+      padding: 1.6rem 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .how-step:last-child { border-bottom: 1px solid rgba(255,255,255,.08); }
+    .how-step-num {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: rgba(255,255,255,.18);
+      line-height: 1;
+      padding-top: 3px;
+    }
+    .how-step-content {}
+    .how-step-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 5px;
+    }
+    .how-step-desc {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,.6);
+      line-height: 1.7;
+    }
 
     /* ── FOOTER ── */
-    .footer { background: var(--teal-dark); padding: 2.5rem 0 1.5rem; }
-    .footer-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-    .footer-brand { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: white; }
-    .footer-brand span { background: linear-gradient(90deg,#4A9D9A,#A8D44B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer {
+      background: var(--teal-dark);
+      padding: 2.5rem 0 1.5rem;
+    }
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: white;
+    }
+    .footer-brand span {
+      background: linear-gradient(90deg, #4A9D9A, #A8D44B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
     .footer-links { display: flex; gap: 1.5rem; list-style: none; }
     .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,.6); }
     .footer-links a:hover { color: white; }
-    .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,.35); text-align: center; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.08); }
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,.35);
+      text-align: center;
+      margin-top: 1.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,.08);
+      max-width: 1160px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
 
-    @media (max-width: 1000px) { .cert-cards-grid { grid-template-columns: repeat(2,1fr); } .philosophy-grid { grid-template-columns: 1fr; gap: 2.5rem; } .standards-header { grid-template-columns: 1fr; gap: 2rem; } .how-steps { grid-template-columns: repeat(2,1fr); } }
-    @media (max-width: 640px) { .cert-cards-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .tiers-grid { grid-template-columns: 1fr; } .hero-stats { gap: 2rem; } .how-steps { grid-template-columns: 1fr; } }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1000px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-stats-block { flex-direction: row; align-items: stretch; }
+      .hero-stat { flex: 1; }
+      .philosophy-body { grid-template-columns: 1fr; gap: 2.5rem; }
+      .standards-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .tiers-compare { grid-template-columns: 1fr; }
+      .tier-col-national { border-left: none; border-bottom: 1px solid var(--border); }
+      .cert-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .cert-cards-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero-stats-block { flex-direction: column; }
+      .hero-stat { width: 100%; }
+      .page-hero::before { font-size: 14rem; }
+    }
   </style>
 </head>
 <body>
@@ -193,12 +775,11 @@
       <li><a href="../foodos-herb-homepage.html#categories">קטגוריות</a></li>
       <li><a href="certs.html" class="active">הכשרויות</a></li>
       <li><a href="../foodos-herb-homepage.html#values">על הפרויקט</a></li>
-      
     </ul>
   </div>
 </nav>
 
-<!-- ── BREADCRUMB ───────────────────────────────────────── -->
+<!-- ── BREADCRUMB ── -->
 <div class="breadcrumb-bar">
   <div class="breadcrumb-inner">
     <a href="../foodos-herb-homepage.html">Foodos Online</a>
@@ -209,21 +790,15 @@
   </div>
 </div>
 
-
 <!-- ── HERO ── -->
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="hero-breadcrumb">
-      <div class="breadcrumb">
-        <a href="../foodos-herb-homepage.html" style="color:rgba(255,255,255,.65)">בית</a>
-        <span class="breadcrumb-sep" style="color:rgba(255,255,255,.35)">›</span>
-        <span style="color:white">הכשרויות שלנו</span>
-      </div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-kicker">מדיניות כשרות</div>
+      <h1 class="hero-title">רק כשרות<br><em>שאפשר לסמוך עליה</em></h1>
+      <p class="hero-lead">כל מוצר ב-Foodos Online עבר אימות ידני של סמל הכשרות. לא מוכרים מוצר שלא ידוע לנו מי עומד מאחורי ההכשר, מה הסטנדרטים שלו ואיפה הוא מוכר כמהימן.</p>
     </div>
-    <div class="hero-eyebrow">✡ מדיניות כשרות</div>
-    <h1 class="hero-title">רק כשרות <em>שאפשר לסמוך עליה</em></h1>
-    <p class="hero-sub">כל מוצר ב-Foodos Online עבר אימות ידני של סמל הכשרות. לא מוכרים מוצר שלא ידוע לנו מי עומד מאחורי ההכשר, מה הסטנדרטים שלו ואיפה הוא מוכר כמהימן.</p>
-    <div class="hero-stats">
+    <div class="hero-stats-block">
       <div class="hero-stat">
         <div class="hero-stat-num" id="stat-total-certs">11</div>
         <div class="hero-stat-label">גופי כשרות מאושרים</div>
@@ -242,45 +817,42 @@
 
 <!-- ── PHILOSOPHY ── -->
 <section class="philosophy-section">
-  <div class="container">
-    <div class="philosophy-grid">
-      <div class="philosophy-main">
-        <div class="section-eyebrow">הפילוסופיה שלנו</div>
-        <h2 class="section-title">למה אנחנו בוחרים כל<br><em>הכשרות בנפרד?</em></h2>
-        <p class="body-text">iHerb מוכרת מאות אלפי מוצרים. רק חלק קטן מהם כשרים, וגם בתוך אותו חלק יש הבדל עצום בין גוף כשרות מוכר ומבוקר לבין חותמת "K" שהיצרן הדביק לעצמו ללא כל פיקוח חיצוני.</p>
-        <p class="body-text">הפרויקט הזה נולד מתסכול אישי: רצינו לקנות ב-iHerb בלי לבזבז שעות על בדיקת כל מוצר בנפרד. הפתרון שלנו פשוט: רשימה מוקפדת של גופי כשרות שאנחנו מכירים, בודקים ומאמינים בהם, ובדיקת כל מוצר ידנית כנגד הרשימה הזו.</p>
-        <p class="body-text">אנחנו לא קובעים מה כשר ומה לא, ולא מתחרים עם הפוסקים. אנחנו עושים את עבודת הסינון הבסיסית, כדי שאפשר יהיה לקנות בביטחון.</p>
+  <div class="philosophy-inner">
+    <div class="section-label">הפילוסופיה שלנו</div>
+    <h2 class="philosophy-heading">למה אנחנו בוחרים כל<br><em>הכשרות בנפרד?</em></h2>
+    <div class="philosophy-body">
+      <div class="phil-text">
+        <p>iHerb מוכרת מאות אלפי מוצרים. רק חלק קטן מהם כשרים, וגם בתוך אותו חלק יש הבדל עצום בין גוף כשרות מוכר ומבוקר לבין חותמת "K" שהיצרן הדביק לעצמו ללא כל פיקוח חיצוני.</p>
+        <p>הפרויקט הזה נולד מתסכול אישי: רצינו לקנות ב-iHerb בלי לבזבז שעות על בדיקת כל מוצר בנפרד. הפתרון שלנו פשוט: רשימה מוקפדת של גופי כשרות שאנחנו מכירים, בודקים ומאמינים בהם, ובדיקת כל מוצר ידנית כנגד הרשימה הזו.</p>
+        <p>אנחנו לא קובעים מה כשר ומה לא, ולא מתחרים עם הפוסקים. אנחנו עושים את עבודת הסינון הבסיסית, כדי שאפשר יהיה לקנות בביטחון.</p>
       </div>
-      <div class="philosophy-side">
-        <div class="section-eyebrow">העקרונות שלנו</div>
-        <div class="principle-list">
-          <div class="principle-item">
-            <div class="principle-icon">🔍</div>
-            <div>
-              <div class="principle-title">אימות ידני של כל מוצר</div>
-              <div class="principle-desc">לא מסתמכים על תיאור iHerb. בודקים את תמונות האריזה, מוצאים את סמל ההכשר, ומאמתים שהוא שייך לגוף כשרות מוכר.</div>
-            </div>
+      <div class="principles">
+        <div class="principle-row">
+          <div class="principle-num">1</div>
+          <div class="principle-content">
+            <div class="principle-title">אימות ידני של כל מוצר</div>
+            <div class="principle-desc">לא מסתמכים על תיאור iHerb. בודקים את תמונות האריזה, מוצאים את סמל ההכשר, ומאמתים שהוא שייך לגוף כשרות מוכר.</div>
           </div>
-          <div class="principle-item">
-            <div class="principle-icon">✅</div>
-            <div>
-              <div class="principle-title">גופים מוכרים בלבד</div>
-              <div class="principle-desc">רק גופי כשרות אורתודוקסים שפועלים תחת פיקוח רבני, עם נהלים ברורים, ביקורות תקופתיות ואחריות ציבורית.</div>
-            </div>
+        </div>
+        <div class="principle-row">
+          <div class="principle-num">2</div>
+          <div class="principle-content">
+            <div class="principle-title">גופים מוכרים בלבד</div>
+            <div class="principle-desc">רק גופי כשרות אורתודוקסים שפועלים תחת פיקוח רבני, עם נהלים ברורים, ביקורות תקופתיות ואחריות ציבורית.</div>
           </div>
-          <div class="principle-item">
-            <div class="principle-icon">📋</div>
-            <div>
-              <div class="principle-title">עמוד ה-CRC כנקודת ייחוס</div>
-              <div class="principle-desc">השתמשנו ברשימת הסוכנויות המאושרות של ה-cRc (Chicago Rabbinical Council) כבסיס עיקרי לקביעת מהימנות. זהו אחד הכלים הצרכניים הנפוצים ביותר בתחום הכשרות.</div>
-            </div>
+        </div>
+        <div class="principle-row">
+          <div class="principle-num">3</div>
+          <div class="principle-content">
+            <div class="principle-title">עמוד ה-cRc כנקודת ייחוס</div>
+            <div class="principle-desc">השתמשנו ברשימת הסוכנויות המאושרות של ה-cRc (Chicago Rabbinical Council) כבסיס עיקרי לקביעת מהימנות.</div>
           </div>
-          <div class="principle-item">
-            <div class="principle-icon">🚫</div>
-            <div>
-              <div class="principle-title">K סתם, לא</div>
-              <div class="principle-desc">חותמת K ללא שם גוף מזהה אינה מספיקה. כל יצרן יכול להדביקה לעצמו. אנחנו דורשים גוף כשרות שאפשר לזהות ולאמת.</div>
-            </div>
+        </div>
+        <div class="principle-row">
+          <div class="principle-num">4</div>
+          <div class="principle-content">
+            <div class="principle-title">K סתם, לא</div>
+            <div class="principle-desc">חותמת K ללא שם גוף מזהה אינה מספיקה. כל יצרן יכול להדביקה לעצמו. אנחנו דורשים גוף כשרות שאפשר לזהות ולאמת.</div>
           </div>
         </div>
       </div>
@@ -290,46 +862,55 @@
 
 <!-- ── STANDARDS ── -->
 <section class="standards-section">
-  <div class="container">
-    <div class="standards-header">
+  <div class="standards-inner">
+    <div class="standards-intro">
       <div>
-        <div class="section-eyebrow">הסטנדרטים שלנו</div>
-        <h2 class="section-title">איזה כשרויות<br><em>מקובלות כאן?</em></h2>
-        <p class="body-text">חילקנו את גופי הכשרות לשתי קבוצות לפי רמת הוותק, הגודל והפריסה הגיאוגרפית. כל גוף בשתי הקבוצות הוא כשרות אורתודוקסית עם פיקוח רבני מלא.</p>
+        <div class="section-label">הסטנדרטים שלנו</div>
+        <h2 class="standards-heading">איזה כשרויות<br><em>מקובלות כאן?</em></h2>
+        <p class="standards-lead">חילקנו את גופי הכשרות לשתי קבוצות לפי רמת הוותק, הגודל והפריסה הגיאוגרפית. כל גוף בשתי הקבוצות הוא כשרות אורתודוקסית עם פיקוח רבני מלא.</p>
       </div>
-      <div class="crc-badge">
-        <div class="crc-badge-title">✡ מדוע ה-cRc?</div>
-        <div class="crc-badge-text">ה-cRc (Chicago Rabbinical Council) מפרסם חינם רשימה מעודכנת של גופי כשרות שהוא רואה כמהימנים. זוהי אחת הרשימות הצרכניות הנפוצות ביותר בעולם הכשרות האמריקאי, ומשמשת כלי סינון ראשוני עבור צרכנים ורשתות מזון. כל הכשרויות שמופיעות ב-Foodos Online נמצאות גם ברשימה זו.</div>
-        <a class="crc-badge-link" href="https://consumer.crckosher.org/acceptable-kashrus-agencies/" target="_blank" rel="noopener">לרשימת ה-cRc המלאה ←</a>
+      <div class="crc-note">
+        <div class="crc-note-heading">✡ מדוע ה-cRc?</div>
+        <div class="crc-note-text">ה-cRc (Chicago Rabbinical Council) מפרסם חינם רשימה מעודכנת של גופי כשרות שהוא רואה כמהימנים. זוהי אחת הרשימות הצרכניות הנפוצות ביותר בעולם הכשרות האמריקאי. כל הכשרויות שמופיעות ב-Foodos Online נמצאות גם ברשימה זו.</div>
+        <a class="crc-note-link" href="https://consumer.crckosher.org/acceptable-kashrus-agencies/" target="_blank" rel="noopener">לרשימת ה-cRc המלאה ←</a>
       </div>
     </div>
-    <div class="tiers-grid">
-      <div class="tier-card tier-top">
-        <div class="tier-label tier-solid">פעילים ברמה הארצית</div>
-        <div class="tier-certs">OU, OK, KOF-K, Star-K, COR</div>
-        <div class="tier-desc">גופים אורתודוקסים גדולים שפועלים עשרות שנים, מפקחים על עשרות אלפי מוצרים ומוכרים באופן אוניברסלי בקהילות כשרות ברחבי העולם.</div>
+    <div class="tiers-compare">
+      <div class="tier-col tier-col-national">
+        <div class="tier-col-label">ארצי</div>
+        <div class="tier-stamps">
+          <span class="tier-stamp">OU</span>
+          <span class="tier-stamp">OK</span>
+          <span class="tier-stamp">KOF-K</span>
+          <span class="tier-stamp">Star-K</span>
+          <span class="tier-stamp">COR</span>
+        </div>
+        <p class="tier-desc">גופים אורתודוקסים גדולים שפועלים עשרות שנים, מפקחים על עשרות אלפי מוצרים ומוכרים באופן אוניברסלי בקהילות כשרות ברחבי העולם.</p>
       </div>
-      <div class="tier-card tier-top">
-        <div class="tier-label">פעילים ברמה המקומית</div>
-        <div class="tier-certs">CRC, KSA, EarthKosher, Kosher Check, Kosher Scroll K, Kehilla</div>
-        <div class="tier-desc">גופים אורתודוקסים עם פעילות ותיקה, חברות ב-AKO (איגוד ארגוני הכשרות) ונוכחות ברשימת ה-cRc. מתמחים לרוב בתחום גיאוגרפי או ענפי מסוים.</div>
+      <div class="tier-col tier-col-local">
+        <div class="tier-col-label">מקומי</div>
+        <div class="tier-stamps">
+          <span class="tier-stamp">CRC</span>
+          <span class="tier-stamp">KSA</span>
+          <span class="tier-stamp">EarthKosher</span>
+          <span class="tier-stamp">Kosher Check</span>
+          <span class="tier-stamp">Kosher Scroll K</span>
+          <span class="tier-stamp">Kehilla</span>
+        </div>
+        <p class="tier-desc">גופים אורתודוקסים עם פעילות ותיקה, חברות ב-AKO ונוכחות ברשימת ה-cRc. מתמחים לרוב בתחום גיאוגרפי או ענפי מסוים.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── CERTS GRID ── -->
+<!-- ── CERT CARDS GRID ── -->
 <section class="certs-section">
-  <div class="container">
-    <div class="certs-section-header">
-      <div>
-        <div class="section-eyebrow">כל הכשרויות</div>
-        <h2 class="section-title">גופי הכשרות ב-<em>Foodos Online</em></h2>
-      </div>
+  <div class="certs-inner">
+    <div class="certs-header-row">
+      <h2 class="certs-heading">גופי הכשרות ב-<em>Foodos Online</em></h2>
       <div class="certs-count-badge" id="certs-count-badge">טוען...</div>
     </div>
     <div class="cert-cards-grid" id="cert-cards-grid">
-      <!-- loaded by JS -->
       <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-soft)">
         <div style="font-size:1.5rem;margin-bottom:.5rem;opacity:.4">✡</div>
         טוען נתונים...
@@ -341,28 +922,37 @@
 <!-- ── HOW IT WORKS ── -->
 <section class="how-section">
   <div class="how-inner">
-    <h2 class="how-title">איך אנחנו מאמתים מוצרים?</h2>
-    <p class="how-sub">כל מוצר עובר תהליך בדיקה ידני לפני שהוא מתווסף למאגר.</p>
+    <div class="how-kicker">תהליך הבדיקה</div>
+    <h2 class="how-title">איך אנחנו<br><em>מאמתים מוצרים?</em></h2>
+    <div class="how-divider"></div>
     <div class="how-steps">
       <div class="how-step">
         <div class="how-step-num">1</div>
-        <div class="how-step-title">מזהים את הסמל</div>
-        <div class="how-step-desc">בודקים את תמונות האריזה ב-iHerb ומחפשים סמל כשרות ברור ומזוהה. חותמת K ללא גוף שם לא עוברת.</div>
+        <div class="how-step-content">
+          <div class="how-step-title">מזהים את הסמל</div>
+          <div class="how-step-desc">בודקים את תמונות האריזה ב-iHerb ומחפשים סמל כשרות ברור ומזוהה. חותמת K ללא גוף שם לא עוברת.</div>
+        </div>
       </div>
       <div class="how-step">
         <div class="how-step-num">2</div>
-        <div class="how-step-title">מאמתים את הגוף</div>
-        <div class="how-step-desc">בודקים שהגוף המכשיר נמצא ברשימת הכשרויות המאושרות שלנו. גוף לא מוכר, אפילו שנראה "כשר", לא מתקבל.</div>
+        <div class="how-step-content">
+          <div class="how-step-title">מאמתים את הגוף</div>
+          <div class="how-step-desc">בודקים שהגוף המכשיר נמצא ברשימת הכשרויות המאושרות שלנו. גוף לא מוכר, אפילו שנראה "כשר", לא מתקבל.</div>
+        </div>
       </div>
       <div class="how-step">
         <div class="how-step-num">3</div>
-        <div class="how-step-title">בודקים חלבי, פרווה, בשרי</div>
-        <div class="how-step-desc">מציינים את סוג הכשרות (D לחלבי, פרווה, בשרי) כדי שתוכלו לדעת אם המוצר מתאים לארוחה שלכם.</div>
+        <div class="how-step-content">
+          <div class="how-step-title">בודקים חלבי, פרווה, בשרי</div>
+          <div class="how-step-desc">מציינים את סוג הכשרות (D לחלבי, פרווה, בשרי) כדי שתוכלו לדעת אם המוצר מתאים לארוחה שלכם.</div>
+        </div>
       </div>
       <div class="how-step">
         <div class="how-step-num">4</div>
-        <div class="how-step-title">מסמנים את הוודאות</div>
-        <div class="how-step-desc">כשיש ספק בקריאת הסמל, מציינים רמת ביטחון "בינונית". כל מוצר עם וודאות גבוהה אומר שראינו את הסמל בעצמנו.</div>
+        <div class="how-step-content">
+          <div class="how-step-title">מסמנים את הוודאות</div>
+          <div class="how-step-desc">כשיש ספק בקריאת הסמל, מציינים רמת ביטחון "בינונית". כל מוצר עם וודאות גבוהה אומר שראינו את הסמל בעצמנו.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -489,11 +1079,9 @@
               ${logoHtml}
               ${fallbackHtml}
             </div>
-            <div class="cert-card-meta">
-              <div class="cert-card-name">${c.cert}</div>
-              <div class="cert-card-org">${orgLine}</div>
-              <span class="cert-status-pill ${isMerged ? 'status-merged' : 'status-active'}">${isMerged ? 'מוזגה' : 'פעיל'}</span>
-            </div>
+            <div class="cert-card-name">${c.cert}</div>
+            <div class="cert-card-org">${orgLine}</div>
+            <span class="cert-status-pill ${isMerged ? 'status-merged' : 'status-active'}">${isMerged ? 'מוזגה' : 'פעיל'}</span>
           </div>
           <div class="cert-card-body">
             <div class="cert-card-desc">${c.certDesc || ''}</div>
