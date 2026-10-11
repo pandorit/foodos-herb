@@ -844,19 +844,26 @@
 
       let products, brands;
 
-      try {
-        const [pRes, bRes] = await Promise.all([
-          fetch('data/products_explained_human_descriptions.json'),
-          fetch('data/brands.json')
-        ]);
-        if (!pRes.ok) throw new Error('products fetch failed: ' + pRes.status);
-        if (!bRes.ok) throw new Error('brands fetch failed: ' + bRes.status);
-        products = await pRes.json();
-        brands   = await bRes.json();
-      } catch (e) {
-        showError('שגיאה בטעינת נתוני המוצרים. אנא רעננו את הדף.');
-        console.error(e);
-        return;
+      // Use embedded data (works with file:// and http://)
+      if (window.FOODOS_PRODUCTS && window.FOODOS_BRANDS) {
+        products = window.FOODOS_PRODUCTS;
+        brands   = window.FOODOS_BRANDS;
+      } else {
+        // Fallback: fetch from server (requires http://)
+        try {
+          const [pRes, bRes] = await Promise.all([
+            fetch('data/products_explained_human_descriptions.json'),
+            fetch('data/brands.json')
+          ]);
+          if (!pRes.ok) throw new Error('products fetch failed: ' + pRes.status);
+          if (!bRes.ok) throw new Error('brands fetch failed: ' + bRes.status);
+          products = await pRes.json();
+          brands   = await bRes.json();
+        } catch (e) {
+          showError('שגיאה בטעינת נתוני המוצרים. אנא רעננו את הדף.');
+          console.error(e);
+          return;
+        }
       }
 
       const product = products.find(p => p.id === productId);
@@ -1278,6 +1285,8 @@
     <br>אתר זה כולל קישורי שותפים — אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
   </div>
 </footer>
+<script src="data/products-data.js"></script>
+<script src="data/brands-data.js"></script>
 <script src="https://negishot.co.il/cdn/widget.php?code=NGS_D51C06908CC9"></script>
 </body>
 </html>
