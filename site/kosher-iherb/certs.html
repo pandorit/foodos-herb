@@ -20,12 +20,6 @@
       src: url('Varela_Round/VarelaRound-Regular.ttf') format('truetype');
       font-weight: 400; font-style: normal; font-display: swap;
     }
-    @font-face {
-      font-family: 'AnerShapiro';
-      src: url('../fonts/OHAnerShapiro-Regular.woff2') format('woff2'),
-           url('../fonts/OHAnerShapiro-Regular.woff') format('woff');
-      font-weight: 400; font-style: normal; font-display: swap;
-    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --teal: #4A9D9A;
@@ -45,7 +39,7 @@
       --text-soft: #6B7280;
       --border: #E5E7E5;
       --card-bg: #F4F4F2;
-      --serif: 'AnerShapiro', 'VarelaRound', sans-serif;
+      --serif: 'VarelaRound', 'Inter', system-ui, sans-serif;
       --sans: 'VarelaRound', 'Inter', system-ui, sans-serif;
     }
 
@@ -189,7 +183,7 @@
       margin-bottom: 1.4rem;
     }
     .hero-title em {
-      font-style: italic;
+      font-style: normal;
       color: var(--teal-dark);
     }
     .hero-lead {
@@ -264,7 +258,7 @@
       margin-bottom: 2.5rem;
       max-width: 620px;
     }
-    .philosophy-heading em { font-style: italic; color: var(--teal-dark); }
+    .philosophy-heading em { font-style: normal; color: var(--teal-dark); }
     .philosophy-body {
       display: grid;
       grid-template-columns: 5fr 4fr;
@@ -341,7 +335,7 @@
       line-height: 1.1;
       margin-bottom: 1rem;
     }
-    .standards-heading em { font-style: italic; color: var(--teal-dark); }
+    .standards-heading em { font-style: normal; color: var(--teal-dark); }
     .standards-lead {
       font-size: 0.95rem;
       color: var(--text-mid);
@@ -465,7 +459,7 @@
       color: var(--text);
       line-height: 1.1;
     }
-    .certs-heading em { font-style: italic; color: var(--teal-dark); }
+    .certs-heading em { font-style: normal; color: var(--teal-dark); }
     .certs-count-badge {
       font-size: 0.78rem;
       font-weight: 600;
@@ -657,7 +651,7 @@
       line-height: 1.1;
       margin-bottom: 0.5rem;
     }
-    .how-title em { font-style: italic; color: var(--teal-xlight); }
+    .how-title em { font-style: normal; color: var(--teal-xlight); }
     .how-divider {
       width: 48px;
       height: 2px;
