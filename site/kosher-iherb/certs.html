@@ -20,6 +20,12 @@
       src: url('Varela_Round/VarelaRound-Regular.ttf') format('truetype');
       font-weight: 400; font-style: normal; font-display: swap;
     }
+    @font-face {
+      font-family: 'AnerShapiro';
+      src: url('../fonts/OHAnerShapiro-Regular.woff2') format('woff2'),
+           url('../fonts/OHAnerShapiro-Regular.woff') format('woff');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --teal: #4A9D9A;
@@ -39,7 +45,7 @@
       --text-soft: #6B7280;
       --border: #E5E7E5;
       --card-bg: #F4F4F2;
-      --serif: 'Playfair Display', Georgia, serif;
+      --serif: 'AnerShapiro', 'VarelaRound', sans-serif;
       --sans: 'VarelaRound', 'Inter', system-ui, sans-serif;
     }
 
