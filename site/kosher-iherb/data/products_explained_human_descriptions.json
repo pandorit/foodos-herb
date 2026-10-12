@@ -449,7 +449,8 @@
     "img": "https://s3.images-iherb.com/nut/nut10676/d/78.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fnutiva-organic-coconut-oil-buttery-14-fl-oz-414-ml%2F68678%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 46.52,
-    "available": true
+    "available": true,
+    "pinned": true
   },
   {
     "id": 50,
@@ -475,7 +476,8 @@
     "img": "https://s3.images-iherb.com/bra/bra00116/d/41.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbragg-organic-apple-cider-vinegar-with-the-mother-16-fl-oz-473-ml%2F5817%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 29.81,
-    "available": true
+    "available": true,
+    "pinned": true
   },
   {
     "id": 58,
@@ -774,7 +776,8 @@
     "img": "https://s3.images-iherb.com/now/now06948/d/57.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fnow-foods-real-food-organic-maple-syrup-grade-a-dark-color-16-fl-oz-473-ml%2F13573%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 60.14,
-    "available": true
+    "available": true,
+    "pinned": true
   },
   {
     "id": 88,
@@ -1544,7 +1547,8 @@
     "img": "https://s3.images-iherb.com/wld/wld00047/d/41.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwild-planet-wild-pink-salmon-skinless-boneless-6-oz-170-g%2F34652%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 32.16,
-    "available": true
+    "available": true,
+    "pinned": true
   },
   {
     "id": 156,
@@ -1777,7 +1781,8 @@
     "img": "https://s3.images-iherb.com/sog/sog18043/d/59.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimply-organic-everything-blend-3-49-oz-99-g%2F101646%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 23.47,
-    "available": true
+    "available": true,
+    "pinned": true
   },
   {
     "id": 184,
@@ -1932,7 +1937,8 @@
     "img": "https://s3.images-iherb.com/fro/fro18346/d/56.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-five-spice-powder-1-92-oz-54-g%2F35916%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 18.88,
-    "available": true
+    "available": true,
+    "pinned": true
   },
   {
     "id": 193,
@@ -2085,7 +2091,8 @@
     "img": "https://s3.images-iherb.com/lsn/lsn00054/d/29.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fle-saunier-de-camargue-fleur-de-sel-finishing-sea-salt-4-4-oz-125-g%2F21347%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 42.62,
-    "available": true
+    "available": true,
+    "pinned": true
   },
   {
     "id": 201,
@@ -2801,7 +2808,8 @@
     "img": "https://s3.images-iherb.com/brw/brw01238/d/18.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsheila-g-s-brownie-brittle-salted-caramel-5-oz-142-g%2F83582%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 20.32,
-    "available": true
+    "available": true,
+    "pinned": true
   },
   {
     "id": 264,
@@ -3232,7 +3240,7 @@
     "brand": "Bragg",
     "longDesc": "חומר גלם שהפך לסטנדרט בקהילת התזונה הבריאה. ה\"ליקוויד אמינוס\" מתפקד קולינרית בדיוק כמו רוטב סויה איכותי, אך תהליך הייצור שלו שונה לחלוטין: הוא אינו מותסס ואינו מכיל חיטה (ולכן נטול גלוטן), אלא מיוצר מפירוק טבעי של חלבון פולי סויה. הוא מציע מליחות עמוקה ועשירה באומאמי (כל המלח מגיע טבעית מתהליך הפירוק של הסויה) ומהווה מקור פנטסטי לחומצות אמינו חיוניות. מושלם לתיבול מהיר של ירקות מוקפצים, אורז, ורטבי סלט. (כשרות KSA).\n\nכדאי לדעת: הוא דומה בשימוש לרוטב סויה, אבל אינו רוטב מותסס מסורתי והמליחות יכולה להיות שונה.",
     "descNew": "תיבול נוזלי של Bragg על בסיס פולי סויה, אך ללא תסיסה בדרך של רוטב סויה קלאסי. בעל טעם מלוח-אומאמי עם 16 חומצות אמינו טבעיות. מסורתי בקהילת שוחרי הבריאות בארה\"ב ומחליף מלח בטבעונות.",
-    "nameHe": "אמינוס נוזלי מסויה",
+    "nameHe": "רוטב סויה לא מותסס (\"ליקווויד אמינוס\")",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
@@ -3241,7 +3249,8 @@
     "img": "https://s3.images-iherb.com/bra/bra00016/d/28.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbragg-liquid-aminos-soy-protein-seasoning-16-fl-oz-473-ml%2F38027%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 31.37,
-    "available": true
+    "available": true,
+    "pinned": true
   },
   {
     "id": 305,
