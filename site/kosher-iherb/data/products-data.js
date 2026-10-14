@@ -1547,8 +1547,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/wld/wld00047/d/41.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwild-planet-wild-pink-salmon-skinless-boneless-6-oz-170-g%2F34652%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 32.16,
-    "available": true,
-    "pinned": true
+    "available": true
   },
   {
     "id": 156,
@@ -2634,7 +2633,8 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/cos/cos01191/d/10.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fchicken-of-the-sea-wild-caught-alaskan-pink-salmon-in-spring-water-2-5-oz-70-g%2F104395%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 10.84,
-    "available": true
+    "available": true,
+    "pinned": true
   },
   {
     "id": 251,
