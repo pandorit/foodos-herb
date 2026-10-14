@@ -867,7 +867,7 @@
       .hero-visual { height: 280px; min-height: unset; overflow: hidden; }
       .product-stack { height: 100%; }
       .pslide { height: 100%; display: flex; align-items: center; justify-content: center; }
-      .hero-product-img { height: 100%; width: 100%; object-fit: contain; max-width: 100%; }
+      .hero-product-img { height: 100%; width: 100%; object-fit: contain; object-position: bottom center; max-width: 100%; }
       .hero-blob { width: 200px; height: 200px; }
       /* חצי קרוסלה — נסתר במובייל, משתמשים בנקודות */
       .hero-arrow { display: none; }
@@ -1064,11 +1064,6 @@
       <div class="product-stack" id="productStack">
 
         <div class="pslide active" id="slide-0">
-          <img src="images/4ce7afb9-06df-43c5-af19-618af89b6218.png" alt="Frontier Co-op Organic Vanilla" class="hero-product-img">
-          <div class="pslide-caption">Frontier Co-op &nbsp;•&nbsp; תמצית וניל אורגנית<span class="pslide-cert">KSA</span></div>
-        </div>
-
-        <div class="pslide" id="slide-1">
           <img src="images/913fafe9-f1b7-4de9-8ea4-75793c24ef55.png" alt="Navitas Organics Acai Powder" class="hero-product-img">
           <div class="pslide-caption">Navitas Organics &nbsp;•&nbsp; אבקת אסאי אורגנית<span class="pslide-cert">EarthKosher</span></div>
         </div>
@@ -1102,7 +1097,6 @@
         <div class="hdot" onclick="goSlide(2)"></div>
         <div class="hdot" onclick="goSlide(3)"></div>
         <div class="hdot" onclick="goSlide(4)"></div>
-        <div class="hdot" onclick="goSlide(5)"></div>
       </div>
 
     </div><!-- /hero-visual -->
@@ -1384,7 +1378,7 @@
 <script>
   // ── HERO CAROUSEL ────────────────────────────────
   let currentSlide = 0;
-  const totalSlides = 6;
+  const totalSlides = 5;
   let autoTimer;
 
   function goSlide(n) {
