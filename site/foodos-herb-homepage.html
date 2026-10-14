@@ -1356,16 +1356,28 @@
     { key: 'טבעוני',   icon: '🥦', test: p => /vegan|טבעוני|plant.?based/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'ללא סוכר', icon: '🚫', test: p => {
       const txt = p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'');
-      // "ללא סוכר מזוקק" הוא לא ללא סוכר — צריך להיות ברור שאין סוכר בכלל
-      const cleanTxt = txt.replace(/ללא סוכר מזוקק/g, '').replace(/no refined sugar/gi, '').replace(/without refined sugar/gi, '');
-      if (/sugar.?free|no sugar|zero.?sugar|ללא סוכר|אפס סוכר|0g sugar|without sugar/i.test(cleanTxt)) return true;
+      // ביטויים שאינם שקולים ל"ללא סוכר בכלל": ללא סוכר לבן/מזוקק/מעובד, כמעט ללא סוכר
+      const cleanTxt = txt
+        .replace(/ללא סוכר מזוקק/g, '')
+        .replace(/ללא סוכר לבן/g, '')
+        .replace(/ללא סוכר מעובד/g, '')
+        .replace(/כמעט ללא סוכר/g, '')
+        .replace(/כמעט בלי סוכר/g, '')
+        .replace(/no refined sugar/gi, '')
+        .replace(/no white sugar/gi, '')
+        .replace(/no added sugar/gi, '')
+        .replace(/without refined sugar/gi, '')
+        .replace(/without added sugar/gi, '');
+      if (/sugar.?free|no sugar|zero.?sugar|ללא סוכר|אפס סוכר|0g sugar|0\s*גרם\s*סוכר|without sugar/i.test(cleanTxt)) return true;
       // מוצרי הקטגוריה "ללא סוכר" — מלבד אלו עם סוכר טבעי
       if ((p.cat||'').includes('ממתיקים ומוצרים ללא סוכר') && !/coconut.?sugar|סוכר קוקוס|coconut.?nectar|נקטר קוקוס|maple|מייפל|honey|דבש|date|תמר|agave|אגבה/i.test(p.name + ' ' + txt)) return true;
       return false;
     }},
     { key: 'סוכר טבעי', icon: '🍯', test: p => {
       const txt = p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'');
-      return /maple|מייפל|honey|דבש|silan|סילאן|date.?syrup|agave|אגבה|coconut.?sugar|סוכר קוקוס|coconut.?nectar|נקטר קוקוס|date.?sugar|סוכר תמרים/i.test(txt);
+      // מוצר שהוא ללא סוכר לחלוטין לא ייחשב כ"סוכר טבעי" (למשל Walden Farms Honey BBQ)
+      if (/sugar.?free|zero.?sugar|אפס סוכר|0g sugar|0\s*גרם\s*סוכר/i.test(txt)) return false;
+      return /maple|מייפל|honey|דבש|silan|סילאן|date.?syrup|סירופ.?תמרים|agave|אגבה|coconut.?sugar|סוכר קוקוס|coconut.?nectar|נקטר קוקוס|date.?sugar|סוכר תמרים/i.test(txt);
     }},
     { key: 'קיטו',        icon: '🥑', test: p => /keto|paleo|קיטו|פליאו|low.?carb/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'עשיר בחלבון', icon: '💪', test: p => /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
