@@ -2,7 +2,7 @@
 (function () {
   var KEY = 'foodos_cc';
 
-  // אם כבר ענתה — טוען GA4 אם הסכימה, יוצא
+  // אם כבר ענתה — מפעיל כלים אם הסכימה, יוצא
   var saved = localStorage.getItem(KEY);
   if (saved === 'y') { if (typeof window.loadGA4 === 'function') window.loadGA4(); return; }
   if (saved === 'n') return;
@@ -26,7 +26,7 @@
   bar.id = 'foodos-cc';
   bar.innerHTML = [
     '<div id="foodos-cc-inner">',
-    '  <p>🍪 כדי לשפר את האתר בשבילך, אנחנו משתמשים ב-Google Analytics — נתונים אנונימיים בלבד, ללא פרסום ממוקד.',
+    '  <p>🍪 <strong>היי אתם,</strong> כדי לשפר את האתר ולהכיר טוב יותר את ההעדפות שלכם, קהילת הפודוסים בארץ ובעולם, אנחנו משתמשים בכלי מעקב וניתוח שאוספים נתונים בצורה אנונימית בלבד. נשמח אם תוכלו לאשר את הקוקיז כדי שנדע אילו מוצרים אנשים אוהבים במיוחד.',
     '  <a href="privacy.html">מדיניות פרטיות</a></p>',
     '  <div id="foodos-cc-btns">',
     '    <button id="foodos-cc-accept">בסדר, אני בעניין</button>',
