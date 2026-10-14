@@ -127,6 +127,9 @@
     .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
     .nav-links a:hover { color: var(--teal); }
+    /* ── HAMBURGER ── */
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px 8px; font-size: 1.5rem; color: var(--text-mid); line-height: 1; border-radius: 8px; transition: background .15s; }
+    .nav-hamburger:hover { background: var(--teal-light); }
     .nav-cta { background: var(--teal); color: white !important; font-size: 0.85rem !important; font-weight: 600 !important; padding: 9px 20px; border-radius: var(--radius-pill); transition: background .18s !important; }
     .nav-cta:hover { background: var(--teal-mid) !important; }
 
@@ -809,7 +812,11 @@
     }
     @media (max-width: 640px) {
       .product-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+      .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: 0; position: absolute; top: 88px; right: 0; left: 0; background: white; border-bottom: 1px solid var(--border); padding: 0.5rem 0; box-shadow: 0 4px 16px rgba(0,0,0,.08); z-index: 190; }
+      .nav-links.nav-open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a, .nav-links button { display: block; padding: 10px 1.5rem; font-size: 0.95rem; width: 100%; text-align: right; }
       .hero h1 { font-size: 2.2rem; }
       .section-pad { padding: 3rem 0; }
     }
@@ -829,7 +836,7 @@
         <small>כשר, שווה וקולינרי - זה כאן.</small>
       </div>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li>
         <button class="nav-cats-trigger" id="cats-trigger" onclick="toggleMega(this)">קטגוריות</button>
       </li>
@@ -867,6 +874,7 @@
 
       <li><a href="#values">על הפרויקט</a></li>
     </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="תפריט" onclick="toggleNav()">☰</button>
   </div>
 </nav>
 
@@ -1695,6 +1703,12 @@
 
   // ── NAV DROPDOWNS ────────────────────────────────
   let ddOpen = null;
+
+  // ── Hamburger ──
+  function toggleNav() {
+    const links = document.getElementById('nav-links');
+    if (links) links.classList.toggle('nav-open');
+  }
 
   function toggleDD(id, btn) {
     const dd = document.getElementById(id);

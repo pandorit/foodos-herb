@@ -101,6 +101,9 @@
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
     .nav-links a:hover { color: var(--teal); }
+    /* ── HAMBURGER ── */
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px 8px; font-size: 1.5rem; color: var(--text-mid); line-height: 1; border-radius: 8px; transition: background .15s; }
+    .nav-hamburger:hover { background: var(--teal-light); }
     .nav-cta {
       background: var(--teal) !important; color: white !important;
       font-size: 0.85rem !important; font-weight: 600 !important;
@@ -596,7 +599,11 @@
       .btn-primary, .btn-secondary { justify-content: center; }
       .related-grid { grid-template-columns: repeat(2, 1fr); }
       .brand-inner, .related-inner { padding: 0 1.2rem; }
-      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+      .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: 0; position: absolute; top: 68px; right: 0; left: 0; background: white; border-bottom: 1px solid var(--border); padding: 0.5rem 0; box-shadow: 0 4px 16px rgba(0,0,0,.08); z-index: 190; }
+      .nav-links.nav-open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 10px 1.5rem; font-size: 0.95rem; }
     }
     @media (max-width: 480px) {
       .related-grid { grid-template-columns: 1fr; }
@@ -615,7 +622,7 @@
           <small>מדריך מוצרים כשרים</small>
         </div>
       </a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="../foodos-herb-homepage.html#products">מוצרים</a></li>
         <li class="nav-has-dd">
           <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'cats-dd-panel')">קטגוריות ▾</a>
@@ -638,6 +645,7 @@
         <li><a href="../foodos-herb-homepage.html#values">על הפרויקט</a></li>
         <li><a href="https://il.iherb.com" target="_blank" rel="noopener noreferrer sponsored" class="nav-cta">לחנות iHerb ←</a></li>
       </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="תפריט" onclick="toggleNav()">☰</button>
     </div>
   </nav>
 
@@ -1258,6 +1266,12 @@
 
       renderComments();
     })();
+
+    // ── Hamburger ──
+    function toggleNav() {
+      const links = document.getElementById('nav-links');
+      links.classList.toggle('nav-open');
+    }
 
     // ── Nav dropdowns ──
     function toggleDD(e, panelId) {
