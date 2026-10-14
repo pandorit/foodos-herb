@@ -801,6 +801,8 @@
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; padding: 0 2rem; }
       .hero-visual { min-height: 340px; order: -1; }
+      .hero-product-img { height: 360px; }
+      .hero-blob { width: 280px; height: 280px; }
       .hero h1 { font-size: 2.8rem; }
       .product-grid { grid-template-columns: repeat(2, 1fr); }
       .featured-inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -811,13 +813,69 @@
       .ring-badge { display: none; }
     }
     @media (max-width: 640px) {
+      /* ── GRID ── */
       .product-grid { grid-template-columns: 1fr; }
+
+      /* ── NAV HAMBURGER ── */
       .nav-hamburger { display: block; }
-      .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: 0; position: absolute; top: 88px; right: 0; left: 0; background: white; border-bottom: 1px solid var(--border); padding: 0.5rem 0; box-shadow: 0 4px 16px rgba(0,0,0,.08); z-index: 190; }
+      .nav-links {
+        display: none; flex-direction: column; gap: 0;
+        position: absolute; top: 88px; right: 0; left: 0;
+        background: white; border-bottom: 1px solid var(--border);
+        padding: 0.4rem 0; box-shadow: 0 4px 16px rgba(0,0,0,.08);
+        z-index: 190;
+      }
       .nav-links.nav-open { display: flex; }
       .nav-links li { width: 100%; }
-      .nav-links a, .nav-links button { display: block; padding: 10px 1.5rem; font-size: 0.95rem; width: 100%; text-align: right; }
-      .hero h1 { font-size: 2.2rem; }
+      /* כפתורים וקישורים — override ספציפי מאוד */
+      .nav-links > li > a,
+      .nav-links > li > button,
+      .nav-links > li > .nav-cats-trigger,
+      .nav-links > li > .nav-dd-trigger {
+        display: block !important;
+        width: 100% !important;
+        padding: 11px 1.4rem !important;
+        font-size: 0.95rem !important;
+        text-align: right !important;
+        color: var(--text-mid) !important;
+        background: none !important;
+        border: none !important;
+        border-bottom: 1px solid var(--border) !important;
+        box-shadow: none !important;
+        font-family: var(--sans) !important;
+        cursor: pointer;
+      }
+      .nav-links > li:last-child > * { border-bottom: none !important; }
+      /* הסתרת sub-dropdowns ו-arrows במובייל */
+      .nav-links .nav-dropdown,
+      .nav-links .nav-dropdown-brands { display: none !important; }
+      .nav-links .dd-arrow { display: none; }
+      .nav-links .nav-cats-trigger::after { display: none !important; }
+      /* כפתור iHerb */
+      .nav-links .nav-cta {
+        margin: 0.6rem 1.4rem !important;
+        width: calc(100% - 2.8rem) !important;
+        display: block !important;
+        text-align: center !important;
+        border-radius: 100px !important;
+      }
+
+      /* ── HERO ── */
+      .hero { min-height: auto; }
+      .hero-inner { min-height: auto; padding: 1.5rem 1.2rem 2rem; gap: 1.5rem; }
+      /* גובה קבוע לקרוסלה — מונע קפיצות */
+      .hero-visual { height: 280px; min-height: unset; overflow: hidden; }
+      .product-stack { height: 100%; }
+      .pslide { height: 100%; display: flex; align-items: center; justify-content: center; }
+      .hero-product-img { height: 100%; width: 100%; object-fit: contain; max-width: 100%; }
+      .hero-blob { width: 200px; height: 200px; }
+      /* חצי קרוסלה — נסתר במובייל, משתמשים בנקודות */
+      .hero-arrow { display: none; }
+
+      /* ── TYPOGRAPHY ── */
+      .hero h1 { font-size: 2rem; }
+      .hero-sub { font-size: 0.9rem; margin-bottom: 1.4rem; }
+      .hero-stats { gap: 1.2rem; flex-wrap: wrap; }
       .section-pad { padding: 3rem 0; }
     }
   </style>
