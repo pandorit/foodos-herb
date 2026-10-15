@@ -20,6 +20,19 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-organic-ceylon-cinnamon-1-76-oz-50-g%2F35483%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 25.91,
     "available": true,
+    "sizes": [
+      {
+        "label": "50 גרם",
+        "url": "https://www.iherb.com/pr/frontier-co-op-organic-ceylon-cinnamon-1-76-oz-50-g/35483",
+        "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-organic-ceylon-cinnamon-1-76-oz-50-g%2F35483%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1"
+      },
+      {
+        "label": "453 גרם — אריזת חסכון",
+        "url": "https://www.iherb.com/pr/frontier-co-op-organic-ceylon-cinnamon-16-oz-453-g/31018",
+        "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-organic-ceylon-cinnamon-16-oz-453-g%2F31018%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+        "desc": "₪90.88 — חסכון של כ-55% ביחס למחיר ל-100 גרם"
+      }
+    ],
     "seeAlso": [
       469
     ]
