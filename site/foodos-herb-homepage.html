@@ -20,6 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foodos Online — מדריך המוצרים הכשרים שלנו</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <script src="kosher-iherb/data/products-data.js"></script>
   <style>
     @font-face {
@@ -478,6 +479,42 @@
     .featured-big-emoji { font-size: 7rem; filter: drop-shadow(0 8px 20px rgba(0,0,0,.15)); }
     .featured-cert-badge { margin-top: 1.5rem; background: white; border: 2px solid var(--teal); color: var(--teal-dark); font-size: 0.78rem; font-weight: 700; padding: 6px 18px; border-radius: var(--radius-pill); }
 
+    /* ── KNOWLEDGE CARDS ─────────────────────── */
+    .knowledge { background: var(--bg); border-top: 1px solid var(--border); }
+    .knowledge-header { text-align: center; margin-bottom: 2.5rem; }
+    .knowledge-eyebrow { display: inline-block; background: var(--teal-light); color: var(--teal-dark); font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 16px; border-radius: var(--radius-pill); margin-bottom: 1rem; }
+    .knowledge-title { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 900; color: var(--text); margin-bottom: 0.5rem; }
+    .knowledge-title em { font-style: italic; color: var(--teal); }
+    .knowledge-subtitle { font-size: 0.9rem; color: var(--text-soft); }
+    .knowledge-tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 2rem; scrollbar-width: none; -ms-overflow-style: none; }
+    .knowledge-tabs::-webkit-scrollbar { display: none; }
+    .ktab { background: var(--bg-soft); border: 1.5px solid var(--border); color: var(--text-mid); font-family: var(--sans); font-size: 0.82rem; font-weight: 600; padding: 9px 18px; border-radius: var(--radius-pill); cursor: pointer; white-space: nowrap; transition: all .18s; flex-shrink: 0; }
+    .ktab:hover { border-color: var(--teal); color: var(--teal); }
+    .ktab.active { background: var(--teal); border-color: var(--teal); color: white; }
+    .knowledge-cards { position: relative; }
+    .kcard { display: none; }
+    .kcard.active { display: block; animation: kfadeIn .35s ease; }
+    @keyframes kfadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .kcard-inner { display: grid; grid-template-columns: 1fr 320px; gap: 2.5rem; align-items: start; background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,.04); }
+    .kcard-emoji { font-size: 2.8rem; margin-bottom: 0.8rem; display: block; }
+    .kcard-title { font-family: var(--serif); font-size: 1.6rem; font-weight: 800; color: var(--text); margin-bottom: 1.2rem; line-height: 1.25; }
+    .kcard-body p { font-size: 0.9rem; color: var(--text-soft); line-height: 1.8; margin-bottom: 0.9rem; }
+    .kcard-body p:last-child { margin-bottom: 0; }
+    .kcard-body strong { color: var(--text-mid); font-weight: 700; }
+    .kcard-products { background: var(--bg-soft); border-radius: var(--radius-md); padding: 1.5rem; }
+    .kcard-products-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-soft); display: block; margin-bottom: 1rem; }
+    .kcard-product-links { display: flex; flex-direction: column; gap: 7px; }
+    .kcard-product-link { display: flex; align-items: center; gap: 14px; text-decoration: none; padding: 15px 18px; background: white; border: 1px solid var(--border); border-radius: 14px; font-weight: 500; color: var(--text-mid); transition: all .18s; }
+    .kcard-product-link:hover { border-color: var(--teal); color: var(--teal-dark); background: var(--teal-light); }
+    .kpl-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .kpl-name { flex: 1; line-height: 1.35; font-family: 'AnerShapiro', var(--sans); font-size: 1.5rem; font-weight: 400; }
+    .kpl-arrow { color: var(--teal); font-size: 1rem; flex-shrink: 0; }
+    .knowledge-footer { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 1.5rem; }
+    .kdot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; padding: 0; transition: all .2s; }
+    .kdot.active { background: var(--teal); width: 22px; border-radius: 4px; }
+    .knowledge-nav { background: none; border: 1.5px solid var(--border); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-mid); font-size: 1.1rem; transition: all .18s; flex-shrink: 0; line-height: 1; }
+    .knowledge-nav:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
+
     /* ── SHOP BY CATEGORY ───────────────────── */
     /* ── CATEGORY STRIP — סגנון Next (מעגלים) ── */
     .categories { background: white; border-top: 1px solid var(--border); }
@@ -485,24 +522,27 @@
     .cat-title { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--text); }
     .view-all-btn { background: transparent; border: 1.5px solid var(--border); color: var(--text-mid); font-size: 0.82rem; font-weight: 600; padding: 9px 20px; border-radius: var(--radius-pill); transition: all .18s; }
     .view-all-btn:hover { border-color: var(--teal); color: var(--teal); }
-    .cat-scroll { display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 0.5rem; scrollbar-width: none; align-items: flex-start; }
+    .cat-scroll { flex: 1; min-width: 0; display: flex; gap: 1.4rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: none; align-items: flex-start; }
     .cat-scroll::-webkit-scrollbar { display: none; }
-    .cat-card { flex-shrink: 0; width: 128px; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; text-decoration: none; transition: transform .2s ease; cursor: pointer; }
-    .cat-card:hover { transform: translateY(-5px); }
-    .cat-card-circle { width: 128px; height: 128px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3.6rem; box-shadow: 0 2px 14px rgba(0,0,0,.07); transition: box-shadow .2s ease; }
-    .cat-card:hover .cat-card-circle { box-shadow: 0 8px 28px rgba(74,157,154,.2); }
-    .cat-card-circle.spices  { background: #FEF3E2; }
-    .cat-card-circle.oils    { background: #EDF7ED; }
-    .cat-card-circle.flour   { background: #FDF6EE; }
-    .cat-card-circle.choc    { background: #F7EDE8; }
-    .cat-card-circle.tea     { background: #E8F6F0; }
-    .cat-card-circle.snacks  { background: #FFF1EB; }
-    .cat-card-circle.legumes { background: #EEF4FD; }
-    .cat-card-circle.default { background: #F0F4F4; }
-    .cat-card-name { color: var(--text); font-family: var(--sans); font-size: 0.85rem; font-weight: 600; text-align: center; line-height: 1.3; }
+    .cat-card { flex-shrink: 0; width: 168px; display: flex; flex-direction: column; align-items: center; gap: 0; text-decoration: none; }
+    .cat-card-circle { width: 168px; height: 168px; border-radius: 50%; background: #EBF6F6; border: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem; padding: 18px; box-sizing: border-box; transition: transform .22s ease, box-shadow .22s ease, background .22s ease; box-shadow: 0 2px 12px rgba(74,157,154,.10); }
+    .cat-card:hover .cat-card-circle { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(74,157,154,.20); background: #d6eeee; }
+    .cat-card-icon { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .cat-card-icon i { font-size: 26px; color: #2E2E2E; line-height: 1; }
+    .cat-card-name { font-family: 'AnerShapiro', sans-serif; font-size: 1.55rem; font-weight: 400; color: #2E2E2E; text-align: center; line-height: 1.2; padding: 0 8px; word-break: break-word; overflow-wrap: break-word; white-space: normal; }
+    .cat-scroll-wrap { position: relative; display: flex; align-items: center; gap: 0.6rem; }
+    .cat-arrow { flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%; background: white; border: 1.5px solid #c8e4e3; color: #4A9D9A; font-size: 1.5rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .18s; box-shadow: 0 2px 8px rgba(74,157,154,.12); }
+    .cat-arrow:hover { background: #EBF6F6; border-color: #4A9D9A; box-shadow: 0 4px 14px rgba(74,157,154,.22); }
     /* רכיבים ישנים — הוסתרו */
     .cat-card-bg { display: none !important; }
     .cat-card-overlay { display: none !important; }
+    @media (max-width: 768px) {
+      .cat-scroll { gap: 1rem; }
+      .cat-card { width: 110px; }
+      .cat-card-circle { width: 110px; height: 110px; padding: 12px; gap: 0.2rem; }
+      .cat-card-icon i { font-size: 22px; }
+      .cat-card-name { font-size: 1rem; }
+    }
 
     /* ── TESTIMONIALS ───────────────────────── */
     .testimonials { background: var(--teal-dark); }
@@ -760,10 +800,13 @@
       margin-right: 2px;
     }
     .pill-tag.active .tag-count { color: var(--teal-dark); opacity: 1; }
-    .results-meta { display: flex; align-items: center; justify-content: space-between; margin: 1.2rem 0 1rem; }
+    .results-meta { display: flex; align-items: center; justify-content: space-between; margin: 1.2rem 0 1rem; gap: 0.5rem; flex-wrap: wrap; }
+    .results-meta-right { display: flex; align-items: center; gap: 0.5rem; }
     .results-count-txt { font-size: 0.82rem; color: var(--text-soft); font-weight: 500; }
     .reset-btn { background: none; border: 1.5px solid var(--border); color: var(--text-soft); font-family: var(--sans); font-size: 0.75rem; font-weight: 600; padding: 5px 14px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; }
     .reset-btn:hover { border-color: var(--teal); color: var(--teal); }
+    .sort-select { font-family: var(--sans); font-size: 0.78rem; font-weight: 600; color: var(--text-mid); background: white; border: 1.5px solid var(--border); border-radius: var(--radius-pill); padding: 5px 12px 5px 8px; cursor: pointer; outline: none; transition: border-color .18s; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%234A9D9A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: left 8px center; padding-left: 24px; }
+    .sort-select:hover, .sort-select:focus { border-color: var(--teal); }
     .card-brand-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px; }
     .card-brand-link { font-size: 0.7rem; font-weight: 700; color: var(--teal-dark); text-decoration: none; transition: color .15s; }
     .card-brand-link:hover { color: var(--teal); text-decoration: underline; }
@@ -807,6 +850,7 @@
       .product-grid { grid-template-columns: repeat(2, 1fr); }
       .featured-inner { grid-template-columns: 1fr; gap: 2rem; }
       .featured-visual { height: 280px; }
+      .kcard-inner { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem; }
       .testi-grid { grid-template-columns: 1fr; }
       .values-inner { grid-template-columns: 1fr; gap: 2rem; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1177,13 +1221,21 @@
       <div class="products-main">
         <!-- select במובייל -->
         <div class="cat-select-wrap">
-          <select class="cat-select" id="cat-select" onchange="setCatSidebar(this.value)">
+          <select class="cat-select" id="cat-select">
             <option value="הכל">כל הקטגוריות</option>
           </select>
         </div>
         <div class="results-meta">
-          <span class="results-count-txt" id="results-count">טוען מוצרים...</span>
-          <button class="reset-btn" id="reset-btn" onclick="resetFilters()" style="display:none">נקה פילטרים ✕</button>
+          <div class="results-meta-right">
+            <span class="results-count-txt" id="results-count">טוען מוצרים...</span>
+            <button class="reset-btn" id="reset-btn" onclick="resetFilters()" style="display:none">נקה פילטרים ✕</button>
+          </div>
+          <select class="sort-select" id="sort-select" onchange="setSort(this.value)">
+            <option value="default">מיון: ברירת מחדל</option>
+            <option value="price-asc">מחיר: מהזול ליקר ↑</option>
+            <option value="price-desc">מחיר: מהיקר לזול ↓</option>
+            <option value="name-asc">א-ב לפי שם מוצר</option>
+          </select>
         </div>
         <div class="product-grid" id="product-grid">
           <div class="skeleton-card"></div>
@@ -1203,29 +1255,218 @@
   </div>
 </section>
 
-<!-- ── FEATURED PRODUCT ───────────────────────────── -->
-<section class="featured section-pad">
+<!-- ── CULINARY KNOWLEDGE ───────────────────────────── -->
+<section class="knowledge section-pad">
   <div class="container">
-    <div class="featured-inner">
-      <div>
-        <div class="featured-label">FEATURED PRODUCT</div>
-        <h2 class="featured-title">שדרוגי את הפופקורן<br>עם <em>שמן קוקוס חמאתי</em></h2>
-        <p class="featured-desc">שדרוג מושלם לפופקורן ביתי "כמו בקולנוע". שמן קוקוס אורגני של Nutiva עם טעם חמאתי טבעי — פרווה לגמרי, בלי חמאה אמיתית.</p>
-        <ul class="featured-checks">
-          <li><span class="check-icon">✓</span><span><strong>הכשר OU</strong> — פרווה מאושר</span></li>
-          <li><span class="check-icon">✓</span><span><strong>טעם חמאתי</strong> — ממיצוי טבעי, בלי מוצרי חלב</span></li>
-          <li><span class="check-icon">✓</span><span><strong>אורגני</strong> — כבישה קרה, ללא תוספות</span></li>
-          <li><span class="check-icon">✓</span><span><strong>מושלם לאפייה</strong> — תחליף פרווה לחמאה במאפים</span></li>
-        </ul>
-        <div class="featured-btns">
-          <a href="kosher-iherb/product.html?id=49" class="btn-dark">לפרטים ורכישה ←</a>
-          <a href="kosher-iherb/cert.html?c=OU" class="btn-pricing">הכשרות OU | מאומת ✡</a>
+    <div class="knowledge-header">
+      <span class="knowledge-eyebrow">מדע המטבח</span>
+      <h2 class="knowledge-title">הידעת? <em>מדריך קולינרי</em></h2>
+
+    </div>
+
+    <div class="knowledge-tabs" id="knowledge-tabs">
+      <button class="ktab active" onclick="showKCard(0, true)">🧂 מלחי גימור</button>
+      <button class="ktab" onclick="showKCard(1, true)">🍫 קקאו גולמי</button>
+      <button class="ktab" onclick="showKCard(2, true)">🍯 ממתיקים טבעיים</button>
+      <button class="ktab" onclick="showKCard(3, true)">🌍 תבלינים עולמיים</button>
+      <button class="ktab" onclick="showKCard(4, true)">🌱 חלבון צמחי</button>
+      <button class="ktab" onclick="showKCard(5, true)">🌾 אפייה ללא גלוטן</button>
+      <button class="ktab" onclick="showKCard(6, true)">🍜 אומאמי</button>
+    </div>
+
+    <div class="knowledge-cards" id="knowledge-cards">
+
+      <!-- Card 0: מלחי גימור -->
+      <div class="kcard active" id="kcard-0">
+        <div class="kcard-inner">
+          <div>
+            <span class="kcard-emoji">🧂</span>
+            <h3 class="kcard-title">מלחי גימור של העולם</h3>
+            <div class="kcard-body">
+              <p>מלח גימור הוא מלח שמוסיפים <strong>בסוף הבישול</strong>, ולפעמים ממש על הצלחת. הרעיון: לא להמיס אותו בחום, אלא לתת לקריסטלים להתפצח על הלשון ולהפתיע בטקסטורה, בגוון ובמינרליות שנעלמות בבישול.</p>
+              <p><strong>Fleur de Sel</strong> (פרח המלח) נאסף ביד מפני בריכות מלח בחוף הצרפתי, רק בימים שחמים ויבשים. הוא לח מעט, עדין ומאוזן, עם ניחוח קל של ים. Le Saunier מקמרג הוא הקלאסיקה הצרפתית, ו-Saltverk האיסלנדי מיוצר בכוח גיאותרמי בלבד.</p>
+              <p><strong>מלח לבה שחורה</strong> מהוואי מועשר בפחם קוקוס פעיל, מוסיף ניגוד ויזואלי מדהים ומינרליות נוספת. <strong>מלח כמהין</strong> (Truffle Salt) מכיל שבבי כמהין אמיתיים. כמה גבישים על ביצת עין, על פסטה טרייה, או על פרוסת לחם עם חמאה הופכים אותם לחוויה אחרת לגמרי.</p>
+              <p>טיפ: שמרו את מלחי הגימור האיכותיים לשימוש קר או חמים בסוף. לבישול עצמו, מלח גס רגיל יעשה את העבודה.</p>
+            </div>
+          </div>
+          <div class="kcard-products">
+            <span class="kcard-products-label">מוצרים קשורים</span>
+            <div class="kcard-product-links">
+              <a href="kosher-iherb/product.html?id=200" class="kcard-product-link"><span class="kpl-icon">🇫🇷</span><span class="kpl-name">מלח ים פלר דה סל קמרג</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=199" class="kcard-product-link"><span class="kpl-icon">🇮🇸</span><span class="kpl-name">מלח ים איסלנדי</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=24" class="kcard-product-link"><span class="kpl-icon">🌊</span><span class="kpl-name">מלח ים פלר דה סל</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=96" class="kcard-product-link"><span class="kpl-icon">🍄</span><span class="kpl-name">מלח ים עם כמהין שחור</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=243" class="kcard-product-link"><span class="kpl-icon">🖤</span><span class="kpl-name">מלח לבה שחורה הוואיי</span><span class="kpl-arrow">←</span></a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="featured-visual">
-        <span class="featured-big-emoji">🥥</span>
-        <div class="featured-cert-badge">✡ OU KOSHER CERTIFIED</div>
+
+      <!-- Card 1: קקאו גולמי -->
+      <div class="kcard" id="kcard-1">
+        <div class="kcard-inner">
+          <div>
+            <span class="kcard-emoji">🍫</span>
+            <h3 class="kcard-title">קקאו גולמי לעומת שוקולד מסחרי</h3>
+            <div class="kcard-body">
+              <p>פולי קקאו עוברים תסיסה, ייבוש וצלייה בדרך לאבקת הקקאו שאנחנו מכירים. הצלייה מפתחת טעם עמוק אבל מורידה חלק מהפלבנואידים. <strong>Raw Cacao</strong> נעצר לפני הצלייה ושומר על ריכוז גבוה יותר של נוגדי חמצון.</p>
+              <p><strong>שלושת הצורות הגולמיות:</strong> אבקת קקאו (Cacao Powder) לשתייה חמה ואפייה, ניבס (Cacao Nibs) לגרנולה, סלטים וסמות'י עם נגיסה פריכה ומרירה-שוקולדית, וחמאת קקאו (Cacao Butter) כשומן בסיסי לשוקולד ביתי ולמוצרי קוסמטיקה.</p>
+              <p>שוקולד כהה מעל <strong>70% קקאו</strong> שומר על חלק מהיתרונות. <strong>88%</strong> הוא עמוק, מריר וכמעט ללא סוכר, מדהים עם מלח גימור. <strong>72%</strong> הוא האיזון הנחמד: מספיק מריר ומספיק טעים לנשנוש.</p>
+              <p>טיפ: אבקת קקאו ואבקת קוקוא (Cocoa) הן לא אותו מוצר — קקאו (Cacao) גולמי יותר ומרוכז יותר. קוקוא מעובד ועדין יותר לשתייה.</p>
+            </div>
+          </div>
+          <div class="kcard-products">
+            <span class="kcard-products-label">מוצרים קשורים</span>
+            <div class="kcard-product-links">
+              <a href="kosher-iherb/product.html?id=63" class="kcard-product-link"><span class="kpl-icon">🟤</span><span class="kpl-name">אבקת קקאו אורגנית</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=66" class="kcard-product-link"><span class="kpl-icon">🍫</span><span class="kpl-name">ניבס פירורי פולי קקאו</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=78" class="kcard-product-link"><span class="kpl-icon">🧈</span><span class="kpl-name">חמאת קקאו אורגנית</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=88" class="kcard-product-link"><span class="kpl-icon">🖤</span><span class="kpl-name">שוקולד מריר 88% קקאו</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=89" class="kcard-product-link"><span class="kpl-icon">🍫</span><span class="kpl-name">שוקולד מריר 72% קקאו</span><span class="kpl-arrow">←</span></a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Card 2: ממתיקים טבעיים -->
+      <div class="kcard" id="kcard-2">
+        <div class="kcard-inner">
+          <div>
+            <span class="kcard-emoji">🍯</span>
+            <h3 class="kcard-title">ממתיקים טבעיים: מה מתנהג כמו סוכר?</h3>
+            <div class="kcard-body">
+              <p>לא כל ממתיק טבעי זהה, ולא כל אחד מתאים לכל שימוש. <strong>סוכר קוקוס</strong> (אינדקס גליקמי ~54, לעומת 65 של סוכר לבן) טעמו קרמלי-עמוק ומחליף סוכר 1:1 באפייה. <strong>מייפל כהה</strong> (Grade A Dark) עשיר יותר בטעם, מצוין לעוגיות, שיבולת שועל ומרינדות.</p>
+              <p><strong>אלוּלוֹז</strong> הוא סוכר נדיר שנמצא בטבע באגסים ובתאנים. הגוף לא מעכל אותו, כך שהמתיקות אמיתית (70% מסוכר) אבל הקלוריות כמעט אפס. יתרון גדול: הוא מקרמל, קצת פחות טוב לנפח.</p>
+              <p><strong>מונק פרוט + אריתריטול</strong> הוא השילוב הכי נקי לאפס גליקמי. מונק פרוט ממתיק 150–200 פעם יותר מסוכר, לכן מערבבים אותו עם אריתריטול שנותן מסה. ביחד הם עובדים לא רע במרנג, גנאש, ומשקאות קרים.</p>
+              <p>טיפ: אריתריטול יוצר לפעמים תחושת קרירות בפה. אם זה מפריע, אלוּלוֹז הוא חלקה יותר.</p>
+            </div>
+          </div>
+          <div class="kcard-products">
+            <span class="kcard-products-label">מוצרים קשורים</span>
+            <div class="kcard-product-links">
+              <a href="kosher-iherb/product.html?id=81" class="kcard-product-link"><span class="kpl-icon">🍁</span><span class="kpl-name">סירופ מייפל אורגני כהה</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=93" class="kcard-product-link"><span class="kpl-icon">🥥</span><span class="kpl-name">סוכר קוקוס אורגני</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=208" class="kcard-product-link"><span class="kpl-icon">🔬</span><span class="kpl-name">ממתיק אלולוז אפס קלוריות</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=226" class="kcard-product-link"><span class="kpl-icon">🍋</span><span class="kpl-name">ממתיק פרי נזיר עם אריתריטול</span><span class="kpl-arrow">←</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: תבלינים עולמיים -->
+      <div class="kcard" id="kcard-3">
+        <div class="kcard-inner">
+          <div>
+            <span class="kcard-emoji">🌍</span>
+            <h3 class="kcard-title">תבלינים עולמיים: מאסיה ואפריקה</h3>
+            <div class="kcard-body">
+              <p><strong>ברברה</strong> הוא התבלין הלאומי של אתיופיה, תמהיל של כ-12 תבלינים: פלפל צ'ילי, פפריקה, ג'ינג'ר, כורכום, ציפורן, הל שחור ועוד. הפרופיל שלו הוא חריף-חמוץ-ארומטי בבת אחת. כף ממנו בנזיד עדשים, בקוסקוס, או בביצים מקושקשות הופכת אותם לתבשיל אתיופי אמיתי.</p>
+              <p><strong>חמישה תבלינים</strong> (Five Spice) הוא ה-DNA של המטבח הסיני: אניס כוכב, פלפל סיצ'ואן, ציפורן, קינמון וזרעי שומר. הפלפל הסיצ'ואני מוסיף תחושת עקצוץ קלה ייחודית. מעולה לטופו צלוי, לאגוזים מתובלים, ולנוזלי מרינדה לדגים.</p>
+              <p><strong>ג'רק ג'מייקני</strong> מבוסס על Allspice (בהרת) שצומח בג'מייקה, עם פלפל חריף ותבלינים חמים. הוא הופך כל דבר שנכנס לתנור לבשרי ומעושן. <strong>Stir-Fry Seasoning</strong> הוא הדרך המהירה לאסייתי ביתי: שמן שומשום, ג'ינג'ר ושום — הכל בקופסה.</p>
+              <p>טיפ: תבלינים מעורבים (blends) מאבדים ארומה מהר יותר מתבלינים שלמים. כדאי לשמור אותם בצנצנת אטומה, רחוק מהאחלה.</p>
+            </div>
+          </div>
+          <div class="kcard-products">
+            <span class="kcard-products-label">מוצרים קשורים</span>
+            <div class="kcard-product-links">
+              <a href="kosher-iherb/product.html?id=140" class="kcard-product-link"><span class="kpl-icon">🇪🇹</span><span class="kpl-name">תיבול ברברה אורגני</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=190" class="kcard-product-link"><span class="kpl-icon">🇨🇳</span><span class="kpl-name">תערובת חמישה תבלינים</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=184" class="kcard-product-link"><span class="kpl-icon">🇯🇲</span><span class="kpl-name">תיבול קריבי ג'רק אורגני</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=187" class="kcard-product-link"><span class="kpl-icon">🥢</span><span class="kpl-name">תיבול מוקפץ אסייתי אורגני</span><span class="kpl-arrow">←</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: חלבון צמחי -->
+      <div class="kcard" id="kcard-4">
+        <div class="kcard-inner">
+          <div>
+            <span class="kcard-emoji">🌱</span>
+            <h3 class="kcard-title">חלבון מהצומח: מדריך מעשי</h3>
+            <div class="kcard-body">
+              <p>חלבון צמחי הוא לא רק לטבעונים. הוא פשוט גמיש יותר, פרווה, ולפעמים עשיר יותר בסיבים וברזל מאשר חלבון מהחי. הסוד הוא לשלב מקורות שמשלימים זה את זה בחומצות האמינו.</p>
+              <p><strong>קמח חומוס</strong> מכיל כ-21 גרם חלבון ל-100 גרם, בנוסף לסיבים, ברזל ואשלגן. בהודו הוא בסיס Besan Cheela, פנקייקס מלוחים מהירים. כאן הוא מצוין לקציצות, לפנה גלוטן-פרי ולסמיך מרקים.</p>
+              <p><strong>אדממה</strong> (פולי סויה ירוקים) הם חלבון שלם, כלומר מכילים את כל 9 חומצות האמינו החיוניות. 113 גרם מספקים כ-14 גרם חלבון מוכן לאכילה — מנה שלמה. מתאים לנשנוש, לסלטים, לקערות בודהה ולקרמי סויה.</p>
+              <p><strong>שמרים תזונתיים</strong> של Bragg: לא סתם טעם גבינתי. הם מכילים B12 (בגרסה המועשרת) שנדיר במקורות צמחיים, 8 גרם חלבון ל-2 כפות, ופרופיל אמינו חלקי. פופקורן, פסטה, פירה, הומוס — הם עושים הכל טוב יותר.</p>
+            </div>
+          </div>
+          <div class="kcard-products">
+            <span class="kcard-products-label">מוצרים קשורים</span>
+            <div class="kcard-product-links">
+              <a href="kosher-iherb/product.html?id=147" class="kcard-product-link"><span class="kpl-icon">🫘</span><span class="kpl-name">קמח חומוס ללא גלוטן</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=198" class="kcard-product-link"><span class="kpl-icon">🟢</span><span class="kpl-name">אדמאמה קלוי עם מלח ים</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=73" class="kcard-product-link"><span class="kpl-icon">🌿</span><span class="kpl-name">אבקת המפ אורגנית</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=121" class="kcard-product-link"><span class="kpl-icon">⭐</span><span class="kpl-name">שמרים תזונתיים Bragg</span><span class="kpl-arrow">←</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5: אפייה ללא גלוטן -->
+      <div class="kcard" id="kcard-5">
+        <div class="kcard-inner">
+          <div>
+            <span class="kcard-emoji">🌾</span>
+            <h3 class="kcard-title">אפייה ללא גלוטן: מדריך הקמחים</h3>
+            <div class="kcard-body">
+              <p>הגלוטן עושה שלושה דברים: נותן אלסטיות (שהבצק יימתח), לכידות (שלא יתפרק) ואוויריות (שהגז שהשמרים מייצרים יישאר). בלי גלוטן, צריך לפצות על כל אחד מהם בנפרד.</p>
+              <p><strong>קמח שקדים</strong> — עשיר, לח ושומני, מצוין לעוגות, מאפינס ועוגיות לחות. לא מתאים ללחם לבד כי כבד מדי. <strong>קמח טפיוקה</strong> — עמילני, קל ואלסטי, מצוין כדבק בתערובות ולמרקם גמיש בפיצה ובלחמניות. <strong>קמח קסאווה</strong> — הכי דומה לקמח לבן, עובד 1:1 בהרבה מתכונים.</p>
+              <p><strong>טף</strong> הוא דגן אתיופי עתיק שגדל בגובה. לגרגיריו יש יותר ברזל מרוב הדגנים. טעמו אגוזי ועמוק ומתאים ללחם כהה, לפנקייקס (כן, אינג'רה!), ולהוספה בכמות קטנה לכל תערובת.</p>
+              <p>טיפ מעשי: שילוב מנצח ללחם — 50% קסאווה + 30% טפיוקה + 20% שקדים. לעוגיות — 60% שקדים + 40% טפיוקה.</p>
+            </div>
+          </div>
+          <div class="kcard-products">
+            <span class="kcard-products-label">מוצרים קשורים</span>
+            <div class="kcard-product-links">
+              <a href="kosher-iherb/product.html?id=146" class="kcard-product-link"><span class="kpl-icon">🌰</span><span class="kpl-name">קמח שקדים</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=145" class="kcard-product-link"><span class="kpl-icon">⚪</span><span class="kpl-name">קמח טפיוקה ללא גלוטן</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=148" class="kcard-product-link"><span class="kpl-icon">🌿</span><span class="kpl-name">קמח קסאווה ללא גרעינים</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=147" class="kcard-product-link"><span class="kpl-icon">🫘</span><span class="kpl-name">קמח חומוס ללא גלוטן</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=149" class="kcard-product-link"><span class="kpl-icon">🌾</span><span class="kpl-name">קמח טף מלא ללא גלוטן</span><span class="kpl-arrow">←</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6: אומאמי -->
+      <div class="kcard" id="kcard-6">
+        <div class="kcard-inner">
+          <div>
+            <span class="kcard-emoji">🍜</span>
+            <h3 class="kcard-title">אומאמי: הטעם החמישי</h3>
+            <div class="kcard-body">
+              <p>אומאמי הוא הטעם החמישי — אחרי מתוק, חמוץ, מלוח ומריר. מקורו ב<strong>גלוטמט</strong>, חומצת אמינו שמופיעה טבעית בעגבנייה, גבינה, פטריות, אצות ותוצרי תסיסה. כשאוכל "עמוק" או "שלם" בטעמו, כנראה שיש שם אומאמי.</p>
+              <p><strong>מיסו</strong> הוא ממרח מותסס יפני שנוצר כשפולי סויה, מלח ומחמצת (Koji) עוברים תסיסה של שבועות עד שנים. <strong>Shiro Miso</strong> (לבן, תסיסה קצרה) עדין ומעט מתוק, מצוין לרוטב וינגרט לסלט, לחמאה מיסו ולמרינדה לדגים. <strong>Genmai Miso</strong> (עם אורז חום, תסיסה ארוכה) עמוק ומלוח יותר, הכי טוב למרק מיסו קלאסי ולתיבול תבשילים.</p>
+              <p><strong>טמארי</strong> הוא רוטב סויה שמיוצר עם מינימום חיטה או בלעדיה לגמרי — גלוטן-פרי בדרך כלל. הוא סמיך, עמוק ופחות מלוח מסויה רגיל. <strong>Coconut Aminos</strong> מיוצר מנקטר פרחי קוקוס שעבר תסיסה — מתוק יותר, עם פחות נתרן, ללא סויה לחלוטין.</p>
+              <p>טיפ: לא מבשלים מיסו! מוסיפים אותו בסוף כי חום גבוה הורג את חיידקי התסיסה הפעילים ופוגם בטעם.</p>
+            </div>
+          </div>
+          <div class="kcard-products">
+            <span class="kcard-products-label">מוצרים קשורים</span>
+            <div class="kcard-product-links">
+              <a href="kosher-iherb/product.html?id=99" class="kcard-product-link"><span class="kpl-icon">⬜</span><span class="kpl-name">מיסו לבן אורגני</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=242" class="kcard-product-link"><span class="kpl-icon">🟫</span><span class="kpl-name">מיסו גנמאי אורגני</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=58" class="kcard-product-link"><span class="kpl-icon">🫙</span><span class="kpl-name">רוטב סויה טמרי אורגני</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=59" class="kcard-product-link"><span class="kpl-icon">🥥</span><span class="kpl-name">אמינו קוקוס</span><span class="kpl-arrow">←</span></a>
+              <a href="kosher-iherb/product.html?id=121" class="kcard-product-link"><span class="kpl-icon">⭐</span><span class="kpl-name">שמרים תזונתיים Bragg</span><span class="kpl-arrow">←</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /knowledge-cards -->
+
+    <div class="knowledge-footer">
+      <button class="knowledge-nav" onclick="showKCard((kCardIdx - 1 + 7) % 7, true)" aria-label="הקודם">›</button>
+      <button class="kdot active" onclick="showKCard(0, true)"></button>
+      <button class="kdot" onclick="showKCard(1, true)"></button>
+      <button class="kdot" onclick="showKCard(2, true)"></button>
+      <button class="kdot" onclick="showKCard(3, true)"></button>
+      <button class="kdot" onclick="showKCard(4, true)"></button>
+      <button class="kdot" onclick="showKCard(5, true)"></button>
+      <button class="kdot" onclick="showKCard(6, true)"></button>
+      <button class="knowledge-nav" onclick="showKCard((kCardIdx + 1) % 7, true)" aria-label="הבא">‹</button>
     </div>
   </div>
 </section>
@@ -1238,43 +1479,12 @@
       <h2 class="cat-title">קנייה לפי קטגוריה</h2>
       <a href="#" class="view-all-btn">צפייה בכולן ←</a>
     </div>
-    <div class="cat-scroll" id="cat-cards-row">
-      <a href="kosher-iherb/category.html?cat=%D7%AA%D7%91%D7%9C%D7%99%D7%A0%D7%99%D7%9D" class="cat-card">
-        <div class="cat-card-circle spices">🧂</div>
-        <span class="cat-card-name">תבלינים</span>
-      </a>
-      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%9E%D7%A0%D7%99%D7%9D" class="cat-card">
-        <div class="cat-card-circle oils">🫒</div>
-        <span class="cat-card-name">שמנים</span>
-      </a>
-      <a href="kosher-iherb/category.html?cat=%D7%A7%D7%9E%D7%97%D7%99%D7%9D" class="cat-card">
-        <div class="cat-card-circle flour">🌾</div>
-        <span class="cat-card-name">קמחים</span>
-      </a>
-      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%93" class="cat-card">
-        <div class="cat-card-circle choc">🍫</div>
-        <span class="cat-card-name">שוקולד</span>
-      </a>
-      <a href="kosher-iherb/category.html?cat=%D7%A9%D7%AA%D7%99%D7%99%D7%94+%D7%97%D7%9E%D7%94" class="cat-card">
-        <div class="cat-card-circle tea">🌿</div>
-        <span class="cat-card-name">שתייה חמה</span>
-      </a>
-      <a href="kosher-iherb/category.html?cat=%D7%97%D7%98%D7%99%D7%A4%D7%99%D7%9D" class="cat-card">
-        <div class="cat-card-circle snacks">🍿</div>
-        <span class="cat-card-name">חטיפים</span>
-      </a>
-      <a href="kosher-iherb/category.html?cat=%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA%2C+%D7%90%D7%95%D7%A8%D7%96+%D7%95%D7%A4%D7%A1%D7%98%D7%94" class="cat-card">
-        <div class="cat-card-circle legumes">🫘</div>
-        <span class="cat-card-name">קטניות ופסטה</span>
-      </a>
-      <a href="kosher-iherb/category.html?cat=%D7%A1%D7%95%D7%A4%D7%A8+%D7%A4%D7%95%D7%93" class="cat-card">
-        <div class="cat-card-circle default">🌱</div>
-        <span class="cat-card-name">סופר פוד</span>
-      </a>
-      <a href="kosher-iherb/category.html?cat=%D7%A8%D7%98%D7%91%D7%99%D7%9D" class="cat-card">
-        <div class="cat-card-circle default" style="background:#FEF0F0">🥫</div>
-        <span class="cat-card-name">רטבים</span>
-      </a>
+    <div class="cat-scroll-wrap">
+      <button class="cat-arrow" onclick="scrollCatCards(1)" aria-label="הבא">›</button>
+      <div class="cat-scroll" id="cat-cards-row">
+        <!-- filled by buildCatCards() after products load -->
+      </div>
+      <button class="cat-arrow" onclick="scrollCatCards(-1)" aria-label="הקודם">‹</button>
     </div>
   </div>
 </section>
@@ -1408,6 +1618,7 @@
   let activeCat  = 'הכל';
   let activeCert = 'הכל';
   let activeTag  = 'הכל';
+  let activeSort = 'default';
 
   // ── TAG DETECTION ─────────────────────────────────────────────
   const TAG_DEFS = [
@@ -1511,6 +1722,7 @@
       applyFilters();
       buildNavDropdowns();
       updateHeroStats();
+      buildCatCards();
 
       // Scroll to products if tag/cat was given in URL
       if (urlTag || urlCat) {
@@ -1526,6 +1738,40 @@
     }
   }
 
+  function buildCatCards() {
+    const row = document.getElementById('cat-cards-row');
+    if (!row) return;
+
+    // Ordered list of categories to display
+    const CATS = [
+      { name: 'תבלינים',            icon: 'la-mortar-pestle', cat: 'תבלינים'   },
+      { name: 'שמנים',              icon: 'la-fill-drip',     cat: 'שמנים'     },
+      { name: 'שוקולד',             icon: 'la-cookie-bite',   cat: 'שוקולד'    },
+      { name: 'קמחים',              icon: 'la-bread-slice',   cat: 'קמחים'     },
+      { name: 'שתייה חמה',          icon: 'la-mug-hot',       cat: 'שתייה חמה' },
+      { name: 'חטיפים',             icon: 'la-apple-alt',     cat: 'חטיפים'    },
+      { name: 'קטניות, אורז ופסטה', icon: 'la-utensils',      cat: 'קטניות'    },
+      { name: 'סופר פוד',           icon: 'la-seedling',      cat: 'סופר פוד'  },
+      { name: 'רטבים',              icon: 'la-wine-bottle',   cat: 'רטבים'     },
+    ];
+
+    row.innerHTML = CATS.map(c => {
+      const href = 'kosher-iherb/category.html?cat=' + encodeURIComponent(c.cat);
+      return `<a href="${href}" class="cat-card">
+        <div class="cat-card-circle">
+          <span class="cat-card-icon"><i class="las ${c.icon}"></i></span>
+          <span class="cat-card-name">${c.name}</span>
+        </div>
+      </a>`;
+    }).join('');
+  }
+
+  function scrollCatCards(dir) {
+    const row = document.getElementById('cat-cards-row');
+    if (!row) return;
+    row.scrollBy({ left: dir * 220, behavior: 'smooth' });
+  }
+
   function buildCatPills() {
     const existingCats = new Set();
     allProducts.forEach(p => {
@@ -1538,12 +1784,15 @@
       `<button class="cat-sidebar-item${c===activeCat?' active':''}" onclick="setCatSidebar('${c.replace(/'/g,"\\'")}')">${c}</button>`
     ).join('');
 
-    // sync mobile select
+    // sync mobile select — remove onchange first to prevent spurious re-fire
+    // when innerHTML is replaced (Safari/iOS fires change on innerHTML assignment)
     const sel = document.getElementById('cat-select');
     if (sel) {
+      sel.onchange = null;
       sel.innerHTML = cats.map(c =>
         `<option value="${c.replace(/"/g,'&quot;')}"${c===activeCat?' selected':''}>${c==='הכל'?'כל הקטגוריות':c}</option>`
       ).join('');
+      sel.onchange = function() { setCatSidebar(this.value); };
     }
   }
 
@@ -1632,10 +1881,22 @@
       }
       return true;
     }).sort((a, b) => {
-      // מועדפים (❤️) ראשונים, אחר כך לא זמינים לסוף
-      const pinnedDiff = (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0);
-      if (pinnedDiff !== 0) return pinnedDiff;
-      return (a.available === false ? 1 : 0) - (b.available === false ? 1 : 0);
+      // לא זמינים — תמיד לסוף
+      const unavailDiff = (a.available === false ? 1 : 0) - (b.available === false ? 1 : 0);
+      if (unavailDiff !== 0) return unavailDiff;
+      // מיון לפי בחירת המשתמש
+      if (activeSort === 'price-asc') {
+        return (a.priceILS || Infinity) - (b.priceILS || Infinity);
+      } else if (activeSort === 'price-desc') {
+        const ap = a.priceILS || 0, bp = b.priceILS || 0;
+        if (!a.priceILS && b.priceILS) return 1;
+        if (a.priceILS && !b.priceILS) return -1;
+        return bp - ap;
+      } else if (activeSort === 'name-asc') {
+        return (a.nameHe || a.name || '').localeCompare(b.nameHe || b.name || '', 'he');
+      }
+      // ברירת מחדל: מועדפים ראשונים
+      return (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0);
     });
     currentPage = 0;
     renderProducts(true);
@@ -1679,9 +1940,16 @@
     if (track) track.scrollBy({ left: dir * -180, behavior: 'smooth' });
   }
 
+  function setSort(val) {
+    activeSort = val;
+    applyFilters();
+  }
+
   function resetFilters() {
-    activeCat = 'הכל'; activeCert = 'הכל'; activeTag = 'הכל';
+    activeCat = 'הכל'; activeCert = 'הכל'; activeTag = 'הכל'; activeSort = 'default';
     if(document.getElementById('srch')) document.getElementById('srch').value = '';
+    const sel = document.getElementById('sort-select');
+    if (sel) sel.value = 'default';
     buildCatPills(); buildCertPills(); applyFilters(); buildNavDropdowns();
   }
 
@@ -1900,6 +2168,23 @@
   document.getElementById('report-modal')?.addEventListener('click', e => {
     if (e.target === document.getElementById('report-modal')) closeReport();
   });
+
+  // ── KNOWLEDGE CARDS ─────────────────────────────
+  var kCardIdx = 0;
+  var kCardTimer = null;
+  var kCardTotal = 7;
+
+  function showKCard(idx, isManual) {
+    document.querySelectorAll('.kcard').forEach(function(c, i) { c.classList.toggle('active', i === idx); });
+    document.querySelectorAll('.ktab').forEach(function(t, i)  { t.classList.toggle('active', i === idx); });
+    document.querySelectorAll('.kdot').forEach(function(d, i)  { d.classList.toggle('active', i === idx); });
+    kCardIdx = idx;
+    if (isManual) {
+      clearInterval(kCardTimer);
+      kCardTimer = setInterval(function(){ showKCard((kCardIdx + 1) % kCardTotal, false); }, 14000);
+    }
+  }
+  kCardTimer = setInterval(function(){ showKCard((kCardIdx + 1) % kCardTotal, false); }, 14000);
 
   document.getElementById('report-form')?.addEventListener('submit', function(e) {
     e.preventDefault();

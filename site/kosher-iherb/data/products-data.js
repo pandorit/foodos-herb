@@ -19,7 +19,10 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/fro/fro02972/d/9.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-organic-ceylon-cinnamon-16-oz-453-g%2F31018%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 90.88,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      469
+    ]
   },
   {
     "id": 4,
@@ -201,7 +204,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro04412/d/11.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-fluer-de-sel-sea-salt-16-oz-453-g%2F46433%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 67.83,
+    "priceILS": 67.84,
     "available": true
   },
   {
@@ -382,7 +385,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/rtc/rtc80160/d/8.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fredmond-real-salt-ancient-kosher-sea-salt-16-oz-454-g%2F110070%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 44.13,
+    "priceILS": 44.14,
     "available": true
   },
   {
@@ -522,8 +525,13 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/24098/24098.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/ccs/ccs00204/d/99.jpg",
+    "available": true,
+    "priceILS": 30.77,
+    "seeAlso": [
+      304
+    ],
+    "seeAlsoNote": "Bragg Liquid Aminos, חלופה על בסיס סויה לרוטב סויה:"
   },
   {
     "id": 60,
@@ -605,8 +613,8 @@ window.FOODOS_PRODUCTS = [
     "conf": "בינונית",
     "brand": "Navitas Organics",
     "longDesc": "שבבי קקאו טהורים המופקים מפולי קקאו אורגניים שבורים, ללא קלייה או עיבוד בחום (Raw), וללא שום המתקה. הם שומרים על הערכים המקוריים של הפרי, כולל רמות גבוהות של מגנזיום ונוגדי חמצון (פלאבנואידים). מבחינה קולינרית, הם מספקים פריכות (קראנץ') נהדרת ומרירות שוקולדית אדמתית המאזנת מנות מתוקות. פתרון מושלם לפיזור מעל קערות אסאי, יוגורט, שייקים, או לשילוב בעוגיות בראוניז. (כשרות EarthKosher).\n\nכדאי לדעת: לעומת שוקולד צ'יפס הם מוסיפים קראנץ' ומרירות ולא כיסי שוקולד מומס. לעומת אבקת קקאו הם מוסיפים מרקם בנוסף לטעם.\n\nטיפים לשימוש:\n• לגרנולה: להוסיף 2–3 כפות אחרי האפייה כדי לשמור על הקראנץ'\n• לעוגיות: להחליף חלק מהשוקולד צ'יפס בניבס לקבלת פחות מתיקות ויותר מרירות\n• על טוסט עם חמאת שקדים: לפזר כפית מעל לקבלת קראנץ' שוקולדי\n• בסלט סלק וגבינת עיזים: כף ניבס יכולה להחליף אגוזים ולהוסיף מרירות וקראנץ'",
-    "descNew": "פירורי קקאו אורגניים לא ממותקים, פולי קקאו גולמיים חתוכים ומיובשים בקור. תוספת פריכה למותק, לסלטים, ליוגורט או לגרנולה שנותנת עומק שוקולדי מר. עשיר במגנזיום, בברזל ובנוגדי חמצון.",
-    "nameHe": "ניבס - פירורי פולי קקאו לא ממותקים",
+    "descNew": "פירורי קקאו אורגניים לא ממותקים, פולי קקאו גולמיים חתוכים ומיובשים בקור. תוספת פריכה לקינוחים, לסלטים, ליוגורט או לגרנולה שנותנת עומק שוקולדי מר. עשיר במגנזיום, בברזל ובנוגדי חמצון.",
+    "nameHe": "ניבס טבעיים - פולי קקאו גרוסים לא ממותקים",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
@@ -615,7 +623,11 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/nav/nav00068/d/21.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fnavitas-organics-organic-cacao-nibs-unsweetened-8-oz-227-g%2F79888%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 49.55,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      68
+    ],
+    "seeAlsoNote": "המרירות חזקה מדי? קיימת גרסה ממותקת עם אותו קראנץ':"
   },
   {
     "id": 68,
@@ -628,14 +640,19 @@ window.FOODOS_PRODUCTS = [
     "brand": "Navitas Organics",
     "longDesc": "ניבס קקאו ממותקים הם חתיכות פריכות של פולי קקאו שמצופות בממתיק, ולכן הם שומרים על הקראנץ' והטעם הקקאו-אגוזי של ניבס, אך פחות מרירים מניבס טבעיים. זהו חטיף או תוספת לקינוחים, לא תחליף לאבקת קקאו (כשרות EarthKosher).\n\nלעומת ניבס קקאו לא ממותקים, הם נגישים יותר למי שלא אוהב מרירות גבוהה אך מכילים סוכר מוסף. לעומת שוקולד צ'יפס, הם פריכים ואינם נמסים, כך שהם נותנים מרקם שונה ולא כיסי שוקולד רכים.",
     "descNew": "פירורי קקאו ממותקים קלות של Navitas, גרסה נגישה יותר למי שמוצא את פירורי הקקאו הגולמיים מרים. הממתיק הוא סוכר קוקוס אורגני שמעצים את הטעם השוקולדי בצורה טבעית. מצוינים כתוספת לגרנולה, ליוגורט או לחטיפי אנרגיה ביתיים.",
-    "nameHe": "פיסות קקאו מתוקות אורגניות",
+    "nameHe": "ניבס ממותקים - פולי קקאו גרוסים במתיקות מעודנת",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/90332/90332.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/nav/nav02131/d/9.jpg",
+    "available": true,
+    "priceILS": 63.12,
+    "seeAlso": [
+      66
+    ],
+    "seeAlsoNote": "מעדיפה ללא תוספת סוכר? הגרסה הטבעית מרירה יותר ועשירה בנוגדי חמצון:"
   },
   {
     "id": 69,
@@ -699,7 +716,12 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/brm/brm02546/d/12.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbob-s-red-mill-large-flake-nutritional-yeast-gluten-free-5-oz-142-g%2F89491%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 30.36,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      121,
+      338
+    ],
+    "seeAlsoNote": "שמרי תזונה נוספים מ-Bragg ו-Frontier:"
   },
   {
     "id": 78,
@@ -858,7 +880,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/wholesome-organic-fair-trade-coconut-palm-sugar-16-oz-454-g/47429",
     "desc": "סוכר קוקוס אורגני של Wholesome בעל תו סחר הוגן. מופק מלשד פרחי הקוקוס ואינו עובר זיקוק, כך שנשמרים מינרלים כמו אשלגן וברזל. מהווה תחליף טבעי, לא מעובד ופרווה לסוכר לבן או חום. הוא מתאפיין בטעם קרמלי עמוק ועדין (בלי שום טעם של קוקוסי!) ובאינדקס גליקמי נמוך יותר מסוכר רגיל.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "בינונית",
     "brand": "Wholesome",
     "longDesc": "סוכר קוקוס אינו מופק מהפרי עצמו, אלא מצוף פרחי עץ הקוקוס המיובש בחום נמוך. בניגוד לסוכר לבן מעובד, הוא שומר על מינרלים טבעיים כמו ברזל, אבץ וסידן, ומתאפיין במדד גליקמי נמוך יותר. הוא אינו בטעם קוקוס כלל, אלא מציע טעם עשיר המזכיר סוכר חום כהה או קרמל, ומשתלב נפלא באפיית עוגיות, הכנת גרנולה, או המתקת קפה. מתפקד כתחליף ביחס של 1:1 לסוכר רגיל. (כשרות OU).\n\nכדאי לדעת: למרות המיתוג הטבעי, הוא עדיין סוכר; היתרון הקולינרי העיקרי מול סוכר לבן הוא הטעם והצבע.",
@@ -869,8 +891,13 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/47429/47429.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/whs/whs92106/d/14.jpg",
+    "available": true,
+    "priceILS": 33.78,
+    "seeAlso": [
+      329
+    ],
+    "seeAlsoNote": "סוכר קוקוס של Madhava, מותג אחר לאותה מטרה:"
   },
   {
     "id": 94,
@@ -878,7 +905,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/big-tree-farms-organic-coconut-sugar-16-oz-454-g/34435",
     "desc": "סוכר קוקוס אורגני, הפעם של מותג אחר, Big Tree Farms, שמייצרת ישירות עם קהילות חקלאים באינדונזיה. סוכר לא מזוקק בעל אינדקס גליקמי נמוך יחסית, מגיע מצוף פרחי דקל הקוקוס. מתאים לאפייה, לקפה או ליוגורט. ",
     "cert": "EarthKosher",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "בינונית",
     "brand": "Big Tree Farms",
     "longDesc": "סוכר קוקוס הוא אחד הממתיקים הלא-מזוקקים הפופולריים והידידותיים ביותר לבישול ולאפייה. המותג Big Tree Farms מקפיד על תהליך ייצור מסורתי שמשמר את הטעם הקרמלי-אדמתי הייחודי של סוכר הקוקוס. מכיוון שהוא נוטה להתקרמל ולהשחים מהר יותר מסוכר לבן, הוא מושלם ליצירת מאפים שחומים וקריספיים כמו עוגיות שוקולד צ'יפס, וכבסיס לרטבי ברביקיו וטריאקי ביתיים. (כשרות EarthKosher).\n\nכדאי לדעת: למרות המיתוג הטבעי, הוא עדיין סוכר; היתרון הקולינרי העיקרי מול סוכר לבן הוא הטעם והצבע.",
@@ -898,7 +925,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/coconut-secret-traditional-coconut-nectar-low-glycemic-sweetener-12-fl-oz-355-ml/24095",
     "desc": "פנו מקום, חבר חדש מצטרף למדף של הדבש, המייפל והסילאן. תכירו את נקטר הקוקוס, ממתיק טבעי ולא-מעובד מבית Coconut Secret, המופק מצוף הפרחים של עץ הקוקוס. הוא בעל אינדקס גליקמי נמוך במיוחד, עשיר בוויטמינים, מינרלים וחומצות אמינו, ומציע טעם קרמלי בעל מתיקות מעודנת (אף אחד לא ינחש שזה קוקוס!). הוא פרווה לחלוטין, נמס בקלות וסוגר פינה נהדרת בכל פינה שדרוש בה זילוף של מתוק.",
     "cert": "Star-K",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "בינונית",
     "brand": "Coconut Secret",
     "longDesc": "אלטרנטיבה מעולה לסירופ אגבה, מייפל או דבש, עבור מי שמחפש ממתיק נוזלי בעל ערך גליקמי נמוך יותר ופרופיל טעמים עדין. הנקטר הוא בעצם השלב הנוזלי המקדים של סוכר הקוקוס. יש לו מתיקות מאוזנת וטעם ניטרלי-קרמלי קל שאינו משתלט. הוא מצוין להמתקה של שייקים קרים, יוגורט, פנקייקים, או כמרכיב קשירה רטוב בהכנת חטיפי אנרגיה ביתיים. (כשרות Star-K).\n\nכדאי לדעת: לעומת אגבה הוא כהה ועשיר יותר בטעם, אך עדיין מתפקד כממתיק נוזלי.",
@@ -1148,7 +1175,12 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra06605/d/30.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbragg-nutritional-yeast-4-5-oz-127-g%2F56885%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 29.73,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      75,
+      338
+    ],
+    "seeAlsoNote": "שמרי תזונה נוספים מ-Bob's ו-Frontier:"
   },
   {
     "id": 123,
@@ -1375,7 +1407,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm05381/d/14.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbob-s-red-mill-super-fine-almond-flour-16-oz-453-g%2F89504%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 53.04,
+    "priceILS": 53.05,
     "available": true
   },
   {
@@ -1525,7 +1557,11 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/wld/wld00049/d/29.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwild-planet-wild-sockeye-salmon-skinless-boneless-6-oz-170-g%2F34649%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 46.46,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      155
+    ],
+    "seeAlsoNote": "סלמון ורוד Wild Planet, מחיר נמוך יותר מ-Sockeye:"
   },
   {
     "id": 155,
@@ -1547,7 +1583,11 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/wld/wld00047/d/41.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwild-planet-wild-pink-salmon-skinless-boneless-6-oz-170-g%2F34652%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 32.16,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      154
+    ],
+    "seeAlsoNote": "סלמון Sockeye Wild Planet, טעם עשיר ואדמדם יותר:"
   },
   {
     "id": 156,
@@ -1566,8 +1606,9 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/34645/34645.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/wld/wld00080/d/63.jpg",
+    "available": true,
+    "priceILS": 13.48
   },
   {
     "id": 162,
@@ -1714,7 +1755,9 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/ats/ats00056/d/43.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fartisana-organics-raw-pecan-butter-with-cashews-8-oz-227-g%2F27159%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 52.51,
-    "available": true
+    "available": true,
+    "seeAlso": [178, 508],
+    "seeAlsoNote": "ממרחי אגוזים כשרים נוספים, כל אחד עם אופי שונה:"
   },
   {
     "id": 178,
@@ -1736,7 +1779,9 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/jnb/jnb00031/d/30.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fjustin-s-nut-butter-classic-almond-butter-16-oz-454-g%2F36200%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 61.83,
-    "available": true
+    "available": true,
+    "seeAlso": [176, 508],
+    "seeAlsoNote": "ממרחי אגוזים כשרים נוספים, כל אחד עם אופי שונה:"
   },
   {
     "id": 182,
@@ -1822,7 +1867,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro02348/d/7.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-organic-tequila-lime-seasoning-16-oz-453-g%2F146049%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 44.87,
+    "priceILS": 52.74,
     "available": true
   },
   {
@@ -1869,7 +1914,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro02745/d/3.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-organic-stir-fry-seasoning-16-oz-453-g%2F152788%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 76.66,
+    "priceILS": 123.53,
     "available": true
   },
   {
@@ -2001,7 +2046,8 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "/images/products/Gourmet Lavender Extract Paste.avif",
-    "available": true
+    "available": true,
+    "priceILS": 32.31
   },
   {
     "id": 197,
@@ -2121,7 +2167,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/wholesome-sweeteners-allulose-zero-calorie-sweetener-12-oz-340-g/104197",
     "desc": "אלולוזה, ממתיק חדשני עם 70% ממתיקות של סוכר אך ללא קלוריות ובלי השפעה על רמות הסוכר בדם. שלא כמו סוכרים דיאטטיים אחרים, האלולוזה בישולית ומקרמלת בדיוק כמו סוכר רגיל. אידיאלית לאופים ולקוקטיילים שמחפשים חלופה טבעית.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Wholesome Sweeteners",
     "longDesc": "אלולוז הוא חד־סוכר שקיים בטבע בכמויות קטנות ומתוק בערך 70% מסוכר רגיל. מבחינה קולינרית הוא מעניין משום שהוא לא רק ממתיק: הוא גם מוסיף נפח, משחים בחום ועוזר לשמור על מרקם רך.\n\nממתיק אלולוז דל מאוד בקלוריות, המתאים גם לבישול ולאפייה. אלולוז מתוק פחות מסוכר רגיל, אך בניגוד לסטיביה הוא מוסיף נפח ויכול להשחים ולהתרכך באפייה; התוצאה עדיין אינה זהה לחלוטין לסוכר. היתרון שלו בולט כשצריך גם מתיקות וגם נפח, ולא רק כמה טיפות לקפה. במטבח הביתי, אפשר להשתמש בו בקפה, רטבים, עוגות ועוגיות, תוך התאמת הכמות.\n\nכדאי לדעת: לעומת סטיביה או מונק פרוט הוא מתנהג הרבה יותר כמו סוכר באפייה. לעומת אריתריטול הוא פחות נותן תחושת קירור בפה, אבל הוא משחים מהר יותר ועלול לגרום לעוגיות להתפשט ולהישאר רכות יותר.\n\nטיפים לשימוש:\n• בקפה או תה: להתחיל בכפית וחצי במקום כפית סוכר, משום שהוא פחות מתוק\n• בעוגיות: לבחור מתכון שמיועד לאלולוז; אם הן משחימות מהר מדי, להפחית מעט את חום התנור\n• בגלידה: להחליף חלק מהסוכר באלולוז כדי לשמור על מרקם רך יותר לאחר הקפאה\n• ברוטב מתוק: לחמם בעדינות ולעקוב מקרוב — הוא משחים מהר יותר מסוכר שולחני",
@@ -2143,7 +2189,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/pyure-organic-allulose-sweetener-9-oz-255-g/135980",
     "desc": "אלולוזה אורגנית של Pyure, ממתיק חדש שמופק מתירס והמבנה שלו קרוב מאוד לזה של סוכר. הגוף אינו מפרק אותו לאנרגיה ולכן אינו משפיע על אינסולין, ובכל זאת הוא מקרמל ואופה כמו סוכר. חלופה נהדרת לחיים לא מתוקים מדי.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Pyure",
     "longDesc": "אלולוז הוא חד־סוכר שקיים בטבע בכמויות קטנות ומתוק בערך 70% מסוכר רגיל. מבחינה קולינרית הוא מעניין משום שהוא לא רק ממתיק: הוא גם מוסיף נפח, משחים בחום ועוזר לשמור על מרקם רך.\n\nOrganic Allulose Sweetener הוא בחירה מעניינת בזכות אלולוז אורגני של Pyure, אותו ממתיק נדיר בגרסה אורגנית מוסמכת. אלולוז מתוק פחות מסוכר רגיל, אך בניגוד לסטיביה הוא מוסיף נפח ויכול להשחים ולהתרכך באפייה; התוצאה עדיין אינה זהה לחלוטין לסוכר. אפס קלוריות, ללא תוספת סוכר, לשימוש במשקאות ובאפייה. במתכוני אפייה עדיף להתחיל ממתכון שכבר נבנה עבור סוג הממתיק הזה. המתיקות וההתנהגות באפייה שונות מעט מסוכר רגיל, ולכן כדאי להתאים את הכמות למתכון.\n\nכדאי לדעת: לעומת סטיביה או מונק פרוט הוא מתנהג הרבה יותר כמו סוכר באפייה. לעומת אריתריטול הוא פחות נותן תחושת קירור בפה, אבל הוא משחים מהר יותר ועלול לגרום לעוגיות להתפשט ולהישאר רכות יותר.",
@@ -2240,8 +2286,9 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/23302/23302.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/nav/nav00020/d/31.jpg",
+    "available": true,
+    "priceILS": 67.56
   },
   {
     "id": 215,
@@ -2351,7 +2398,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nbc/nbc03001/d/39.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fnutribiotic-organic-rice-protein-powder-plain-3-lb-1-36-kg%2F44487%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 192.52,
+    "priceILS": 192.53,
     "available": true
   },
   {
@@ -2360,7 +2407,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/health-garden-monk-fruit-with-erythritol-classic-16-oz-454-g/106083",
     "desc": "ממתיק מונק פרוט של Health Garden, בשילוב עם אריתריטול לנוחות מדידה כמו סוכר רגיל. פרי המונק (לוו האן גוו) הוא ממתיק סיני מסורתי בלי קלוריות ובלי השפעה על סוכר בדם. מתאים לתפריט קטו, לסוכרתיים ולירידה במשקל.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Health Garden",
     "longDesc": "מונק פרוט הוא ממתיק עוצמתי מפרי הנזיר. במוצרים רבים מערבבים אותו עם אריתריטול כדי לקבל נפח ומדידה נוחה יותר.\n\nלא צריך הרבה ממנו כדי להרגיש ממתיק גרגירי על בסיס אריתריטול ותמצית פרי הנזיר. פרי הנזיר מתוק מאוד ולכן מערבבים אותו לעיתים עם אריתריטול כדי לקבל נפח ומדידה נוחה יותר. התערובת עלולה להשאיר תחושת קירור קלה בפה. היתרון שלו בולט כשצריך גם מתיקות וגם נפח, ולא רק כמה טיפות לקפה. אפשר להשתמש בו בקפה, רטבים, עוגות ועוגיות, תוך התאמת הכמות.\n\nכדאי לדעת: לעומת סוכר, תערובות מונק פרוט אינן מתקרמלות באותה צורה ועלולות להשאיר תחושת קירור קלה בפה.",
@@ -2495,7 +2542,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/iyc/iyc01020/d/59.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fif-you-care-parchment-baking-paper-70-sq-ft-65-ft-x-13-in%2F26445%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 33.41,
+    "priceILS": 33.42,
     "available": true
   },
   {
@@ -2538,7 +2585,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/edn/edn13464/d/11.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Feden-foods-organic-genmai-miso-12-1-oz-345-g%2F12028%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 58.49,
+    "priceILS": 58.5,
     "available": true
   },
   {
@@ -2895,7 +2942,8 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "/images/products/Chicory Herbal Coffee, Almond Amaretto.avif",
-    "available": true
+    "available": true,
+    "priceILS": 49.76
   },
   {
     "id": 269,
@@ -2914,8 +2962,9 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/96525/96525.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/npa/npa77143/d/44.jpg",
+    "available": true,
+    "priceILS": 27.39
   },
   {
     "id": 273,
@@ -3069,7 +3118,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/walden-farms-caramel-syrup-12-fl-oz-355-ml/44610",
     "desc": "סירופ קרמל של Walden Farms, בלי סוכר, בלי קלוריות ובלי גלוטן. פתרון למי שרוצה טעם קרמל בקפה, ביוגורט או על גלידה בלי להוסיף שומן וסוכר. ממותק באריתריטול וסטיביה, ללא סוכרלוז. משמש רבות בתפריטי הרזיה.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Walden Farms",
     "longDesc": "סירופ חלק ודליל יחסית שנועד לספק חוויית טעם של קרמל אמיתי מבלי לפגוע בשגרת התזונה או בספירת הקלוריות. הוא ממותק באמצעות תחליפי סוכר (אריתריטול וסטיביה) ואינו מכיל פחמימות זמינות. קולינרית, הוא עובד מצוין כשהוא נמזג מעל גלידות טבעוניות, משולב בשייקים קרים (כמו פרפוצ'ינו ביתי) או כתוספת מעל קערת שיבולת שועל. יש לנער היטב לפני כל שימוש. (כשרות OU).",
@@ -3083,7 +3132,11 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/wal/wal88069/d/59.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwalden-farms-caramel-syrup-12-fl-oz-355-ml%2F44610%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 25.41,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      363
+    ],
+    "seeAlsoNote": "סירופ שוקולד ללא קלוריות מאותה סדרה:"
   },
   {
     "id": 294,
@@ -3091,7 +3144,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/pyure-organic-caramel-flavored-syrup-sugar-free-14-fl-oz-414-ml/101905",
     "desc": "סירופ קרמל של Pyure ללא סוכר, ממותק במונק פרוט ובאריתריטול טבעיים. עתיר בסמיכות ובטעם של קרמל אמיתי, בלי השפעה על סוכר בדם. מצוין לקפה, לוופלים או לפנקייק לתפריט קטו.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "בינונית",
     "brand": "Pyure",
     "longDesc": "זהו סירופ בטעם קרמל ללא סוכר וללא קלוריות של Walden Farms. הוא מיועד להעניק מתיקות וניחוח קרמלי כמוצר מוכן לזילוף, ולא להתנהג כמו סירופ סוכר אמיתי באפייה או בבישול (כשרות OU).\n\nלעומת רוטב קרמל רגיל, הוא אינו נותן את הסמיכות, ההשחמה והטעם החמאתי שנוצרים מסוכר מקורמל ושמנת. לעומת אלולוז או ממתיק גרגירי, הוא נוח לזילוף מיידי אך אינו מתאים כתחליף לסוכר בבצק; הוא עשוי להכיל ממתיקים וחומרי הסמכה עם טעם לוואי שמורגש אצל חלק מהאנשים.\n\nרעיונות לשימוש:\n• לזלף כף אחת על יוגורט, יוגורט קפוא או גלידה\n• להוסיף כף אחת לקפה קר, לאטה או שייק וניל\n• לזלף על פנקייקים, וופל או פרוסות תפוח במקום סירופ רגיל\n• לערבב כף אחת בתוך דייסת שיבולת שועל או פודינג צ'יה\n• להשתמש בכמות קטנה כרוטב לקינוח ולא כמרכיב באפיית עוגות\n• לנער היטב לפני השימוש ולשמור במקרר לאחר הפתיחה לפי הוראות התווית",
@@ -3165,7 +3218,8 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "/images/products/Organic Super Seed Crackers.avif",
-    "available": true
+    "available": true,
+    "priceILS": 18.77
   },
   {
     "id": 299,
@@ -3193,7 +3247,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/health-garden-all-natural-monk-fruit-sweetener-classic-40-packets-0-21-oz-6-g-each/123594",
     "desc": "ממתיק מונק פרוט בשקיקים אישיים של Health Garden, לנוחות בקפה בעבודה או בבית קפה. בלי קלוריות, בלי השפעה על סוכר בדם ובטבע דומה מאוד לסוכר במתיקות. פתרון נהדר לסוכרתיים ולתפריט קטו.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Health Garden",
     "longDesc": "פתרון פרקטי להמתקה אישית בתנועה. פרי הנזיר (Monk Fruit) הוא ממתיק טבעי עוצמתי שאינו מעלה את רמות הגלוקוז בדם, ואינו משאיר טעם לוואי מתכתי/מריר המאפיין ממתיקים אחרים. הוא משולב כאן עם אריתריטול כדי להעניק את הנפח וההתנהגות של סוכר לבן רגיל. השקיות האישיות מבטיחות מינון מדויק (כל שקית שוות ערך לכפית סוכר), מושלמות להמתקת קפה, תה או יוגורט במשרד או בבית הקפה, ללא קלוריות או פחמימות נטו. (כשרות OU).\n\nכדאי לדעת: לעומת סוכר, תערובות מונק פרוט אינן מתקרמלות באותה צורה ועלולות להשאיר תחושת קירור קלה בפה.",
@@ -3226,8 +3280,9 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/101637/101637.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/bpl/bpl00744/d/32.jpg",
+    "available": true,
+    "priceILS": 96.73
   },
   {
     "id": 304,
@@ -3250,7 +3305,11 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbragg-liquid-aminos-soy-protein-seasoning-16-fl-oz-473-ml%2F38027%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 31.37,
     "available": true,
-    "pinned": true
+    "pinned": true,
+    "seeAlso": [
+      59
+    ],
+    "seeAlsoNote": "Coconut Secret Aminos, חלופה ללא סויה וללא גלוטן:"
   },
   {
     "id": 305,
@@ -3258,7 +3317,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/lakanto-monkfruit-sweetener-with-erythritol-golden-16-oz-454-g/90765",
     "desc": "ממתיק לקנטו זהוב, המורכב ממונק פרוט ואריתריטול עם צבע וטעם הדומים לסוכר חום. שומר על טעם קרמלי בזכות תוספת מולסה של תמר. מצוין לאפייה של עוגיות שוקולד צ'יפס ולתחליף סוכר חום קלאסי.",
     "cert": "Kosher Check",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Lakanto",
     "longDesc": "תחליף הסוכר האולטימטיבי לתזונה הקטוגנית ולסוכרתיים, המיועד להחליף סוכר חום או סוכר דמררה ביחס של 1:1. הגרסה ה\"זהובה\" (Golden) של מותג Lakanto מכילה תמציות המעניקות לממתיק גוון כהה, לחות קלה וטעם שמזכיר קרמל ומולסה. הוא מצטיין במיוחד באפיית עוגיות שוקולד צ'יפס, עוגות בחושות ומאפינס שבהם נדרש טעם עמוק יותר מסוכר לבן, ואינו משאיר טעם לוואי קר. (כשרות Kosher Check).\n\nכדאי לדעת: לעומת סוכר, תערובות מונק פרוט אינן מתקרמלות באותה צורה ועלולות להשאיר תחושת קירור קלה בפה.",
@@ -3272,7 +3331,12 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/lak/lak00025/d/8.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Flakanto-monkfruit-sweetener-with-erythritol-golden-16-oz-454-g%2F90765%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 44.18,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      306,
+      307
+    ],
+    "seeAlsoNote": "גרסאות נוספות של Lakanto: מחקה סוכר לבן ואבקה:"
   },
   {
     "id": 306,
@@ -3280,7 +3344,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/lakanto-monkfruit-sweetener-with-erythritol-classic-16-oz-454-g/89995",
     "desc": "ממתיק לקנטו קלאסי, מונק פרוט ואריתריטול בפרופורציה 1:1 לסוכר לבן. הבסיס הפופולרי בעולם הקטו ובקרב סוכרתיים. לקנטו היא מותג פרימיום בשוק הממתיקים החלופיים.",
     "cert": "Kosher Check",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Lakanto",
     "longDesc": "הגרסה הקלאסית והנקייה ביותר של תחליף הסוכר הנחשב כיום לטוב בשוק. על ידי שילוב של תמצית פרי נזיר (Monk Fruit) מתוקה במיוחד עם אריתריטול (סוכר אלכוהולי טבעי), Lakanto הצליחו לשחזר את הנפח, המרקם וההתנהגות של סוכר לבן, ללא קפיצות האינסולין או הקלוריות. הוא מתאים לשימוש ביחס של 1:1, מתמוסס היטב במשקאות חמים, ומתפקד כמרכיב יסוד לאפייה יומיומית ללא סוכר, החל מקצפת ועד עוגות וניל ופנקייקס. (כשרות Kosher Check).\n\nכדאי לדעת: לעומת סוכר, תערובות מונק פרוט אינן מתקרמלות באותה צורה ועלולות להשאיר תחושת קירור קלה בפה.",
@@ -3294,7 +3358,12 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/lak/lak00022/d/10.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Flakanto-monkfruit-sweetener-with-erythritol-classic-16-oz-454-g%2F89995%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 43.91,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      305,
+      307
+    ],
+    "seeAlsoNote": "גרסאות נוספות של Lakanto: Golden ואבקה:"
   },
   {
     "id": 307,
@@ -3302,7 +3371,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/lakanto-powdered-monkfruit-sweetener-with-erythritol-sugar-free-1-lb-454-g/89994",
     "desc": "ממתיק לקנטו טחון (אבקה) של מונק פרוט ואריתריטול, בדיוק כמו סוכר אבקה. מצוין לגלייז לעוגיות, לזרייה על עוגות ולקינוחים בלי סוכר. נמס במהירות בזכות הטחינה הדקה.",
     "cert": "Kosher Check",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Lakanto",
     "longDesc": "אבקת ה\"קסם\" של הקונדיטוריה דלת-הפחמימות (קיטו). הגרסה הטחונה דק (Powdered) של ממתיק הלקנטו פותרת את בעיית ה\"קראנצ'יות\" שממתיקים נוטים להשאיר בקינוחים ללא אפייה. היא מתנהגת בדיוק כמו אבקת סוכר קלאסית: נמסה באופן מושלם ומהיר אל תוך קצפות, קרם חמאה, ציפויי גבינה (פרוסטינג) וזיגוגים, ללא תוספת קלוריות או פחמימות זמינות. היחס הוא 1:1 מול אבקת סוכר רגילה. (כשרות Kosher Check).\n\nכדאי לדעת: לעומת סוכר, תערובות מונק פרוט אינן מתקרמלות באותה צורה ועלולות להשאיר תחושת קירור קלה בפה.",
@@ -3316,7 +3385,12 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/lak/lak00052/d/12.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Flakanto-monkfruit-sweetener-with-erythritol-powdered-16-oz-454-g%2F89994%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 49.37,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      305,
+      306
+    ],
+    "seeAlsoNote": "גרסאות גרגירים של Lakanto: Golden ו-Classic:"
   },
   {
     "id": 318,
@@ -3337,7 +3411,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm03555/d/18.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbob-s-red-mill-xanthan-gum-8-oz-227-g%2F89485%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 48.95,
+    "priceILS": 48.96,
     "available": true
   },
   {
@@ -3404,8 +3478,9 @@ window.FOODOS_PRODUCTS = [
     "suspendReason": "גודל חלופי — מאוחד עם מוצר ראשי",
     "suspendDate": "2026-09-08",
     "mergedInto": 59,
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/24098/24098.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/ccs/ccs00204/d/99.jpg",
+    "available": true,
+    "priceILS": 30.77
   },
   {
     "id": 322,
@@ -3477,7 +3552,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/madhava-natural-sweeteners-organic-coconut-sugar-unrefined-1-lb-454-g/46871",
     "desc": "סוכר קוקוס אורגני של Madhava, לא מזוקק ובעל אינדקס גליקמי נמוך. מגיע מלשד פרחי דקל הקוקוס בתהליך מסורתי. שומר על מינרלים טבעיים ומעניק טעם קרמלי־עשיר בקפה ובאפייה.",
     "cert": "Kosher Scroll K",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Madhava",
     "longDesc": "סוכר קוקוס הוא הבחירה המועדפת על קונדיטורים המחפשים ממתיק טבעי ולא מזוקק. הוא מופק מצוף פריחת עץ הקוקוס, ומכיוון שאינו עובר תהליכי הלבנה וזיקוק תעשייתיים, הוא שומר על טעמו הקרמלי-אדמתי הייחודי ועל מדד גליקמי נמוך יותר בהשוואה לסוכר קנים. למרות שמו, אין לו טעם של קוקוס כלל. הוא מחליף סוכר לבן או חום ביחס של 1:1 ומשדרג באופן מיידי עוגות בחושות, עוגיות דפדפים וגרנולה ביתית. (כשרות Scroll K).\n\nכדאי לדעת: למרות המיתוג הטבעי, הוא עדיין סוכר; היתרון הקולינרי העיקרי מול סוכר לבן הוא הטעם והצבע.",
@@ -3491,7 +3566,11 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/mdh/mdh21600/d/25.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fmadhava-organic-coconut-sugar-unrefined-16-oz-454-g%2F46871%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 33.2,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      93
+    ],
+    "seeAlsoNote": "סוכר קוקוס של Wholesome, מותג אחר לאותה מטרה:"
   },
   {
     "id": 330,
@@ -3589,7 +3668,13 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/fro/fro19590/d/24.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-premium-nutritional-yeast-3-6-oz-102-g%2F106602%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 26.14,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      339,
+      75,
+      121
+    ],
+    "seeAlsoNote": "גודל גדול יותר וברנדים נוספים של שמרי תזונה:"
   },
   {
     "id": 339,
@@ -3611,7 +3696,13 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/fro/fro02326/d/16.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-nutritional-yeast-mini-flakes-16-oz-453-g%2F30690%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 79.01,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      338,
+      75,
+      121
+    ],
+    "seeAlsoNote": "גודל קטן יותר וברנדים נוספים של שמרי תזונה:"
   },
   {
     "id": 340,
@@ -3675,7 +3766,11 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/143548/143548.jpg",
-    "available": false
+    "available": false,
+    "seeAlso": [
+      500
+    ],
+    "seeAlsoNote": "קמח דוחן, טעם עדין יותר מכוסמת:"
   },
   {
     "id": 343,
@@ -3696,7 +3791,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm02580/d/10.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbob-s-red-mill-organic-buckwheat-whole-grain-16-oz-454-g%2F97772%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 31.88,
+    "priceILS": 31.89,
     "available": true
   },
   {
@@ -3719,7 +3814,11 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/brm/brm12406/d/12.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbob-s-red-mill-millet-whole-grain-gluten-free-28-oz-794-g%2F103991%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 29.11,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      500
+    ],
+    "seeAlsoNote": "קמח דוחן לאפייה ללא גלוטן מאותו מותג:"
   },
   {
     "id": 345,
@@ -4097,7 +4196,7 @@ window.FOODOS_PRODUCTS = [
     "id": 361,
     "name": "Walden Farms, Original Barbecue Sauce, 12 fl oz (355 ml)",
     "brand": "Walden Farms",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "cert": "OU",
     "url": "https://www.iherb.com/pr/walden-farms-original-barbecue-sauce-12-fl-oz-355-ml/39990",
     "desc": "רוטב ברביקיו קלאסי של Walden Farms, אפס קלוריות, אפס סוכר, אפס שומן. בשביל מי שרוצה את הטעם העמוק של ברביקיו מעושן בלי להתפשר על הדיאטה. מצוין לסטייק, עוף, צלעות ולמרינדות. ממותק באריתריטול וסטיביה, ללא סוכרלוז.",
@@ -4112,13 +4211,17 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwalden-farms-original-barbecue-sauce-12-fl-oz-355-ml%2F39990%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 25.61,
     "available": true,
-    "longDesc": "רוטב ברביקיו המיועד לשומרי משקל ולסוכרתיים שאינם מוכנים לוותר על חוויית המנגל. הוא אינו מכיל סוכר, שומן או קלוריות כלל, אך מצליח לשחזר את פרופיל הטעמים המעושן, העמוק והעשיר של רוטב ברביקיו מסורתי בעזרת תבלינים, עגבניות ותחליפי סוכר טבעיים. מעולה כמרינדה לבשרים לפני צלייה, כרוטב הברשה (מופ\"ק) בשלבי הצלייה האחרונים, או כמטבל מושלם להמבורגרים ונשנושים. (כשרות OU)."
+    "longDesc": "רוטב ברביקיו המיועד לשומרי משקל ולסוכרתיים שאינם מוכנים לוותר על חוויית המנגל. הוא אינו מכיל סוכר, שומן או קלוריות כלל, אך מצליח לשחזר את פרופיל הטעמים המעושן, העמוק והעשיר של רוטב ברביקיו מסורתי בעזרת תבלינים, עגבניות ותחליפי סוכר טבעיים. מעולה כמרינדה לבשרים לפני צלייה, כרוטב הברשה (מופ\"ק) בשלבי הצלייה האחרונים, או כמטבל מושלם להמבורגרים ונשנושים. (כשרות OU).",
+    "seeAlso": [
+      362
+    ],
+    "seeAlsoNote": "גרסת הדבש של אותו רוטב BBQ ללא קלוריות:"
   },
   {
     "id": 362,
     "name": "Walden Farms, Honey Barbecue Sauce, 12 fl oz (355 ml)",
     "brand": "Walden Farms",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "cert": "OU",
     "url": "https://www.iherb.com/pr/walden-farms-honey-barbecue-sauce-12-fl-oz-355-ml/53115",
     "desc": "גרסת הדבש של רוטב הברביקיו האייקוני של Walden Farms, מתיקות של דבש עם טעם מעושן, אפס קלוריות ואפס סוכר. מושלם לציפוי כנפיים, עוף בתנור או לשילוב בדיפים שונים. ממותק באריתריטול וסטיביה, ללא סוכרלוז.",
@@ -4133,13 +4236,17 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwalden-farms-honey-barbecue-sauce-12-fl-oz-355-ml%2F53115%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 25.48,
     "available": true,
-    "longDesc": "גרסה מתקתקה יותר לרוטב הברביקיו של Walden Farms, המשלבת את טעמי העישון העמוקים יחד עם ארומה ומתקתקות המזכירות דבש אמיתי – אך לחלוטין ללא דבש, ללא סוכר וללא קלוריות. הרוטב מעניק זיגוג מבריק וטעם מנחם למנות עוף, כנפיים, או בשר מפורק (Pulled Beef), ומאפשר ליהנות מחוויית \"ברביקיו אמריקאי\" מתוק וממכר תוך שמירה קפדנית על תזונה דלת פחמימות וקלוריות. (כשרות OU)."
+    "longDesc": "גרסה מתקתקה יותר לרוטב הברביקיו של Walden Farms, המשלבת את טעמי העישון העמוקים יחד עם ארומה ומתקתקות המזכירות דבש אמיתי – אך לחלוטין ללא דבש, ללא סוכר וללא קלוריות. הרוטב מעניק זיגוג מבריק וטעם מנחם למנות עוף, כנפיים, או בשר מפורק (Pulled Beef), ומאפשר ליהנות מחוויית \"ברביקיו אמריקאי\" מתוק וממכר תוך שמירה קפדנית על תזונה דלת פחמימות וקלוריות. (כשרות OU).",
+    "seeAlso": [
+      361
+    ],
+    "seeAlsoNote": "גרסת ה-BBQ הקלאסית ללא קלוריות מאותה סדרה:"
   },
   {
     "id": 363,
     "name": "Walden Farms, Chocolate Syrup, 12 fl oz (355 ml)",
     "brand": "Walden Farms",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "cert": "OU",
     "url": "https://www.iherb.com/pr/walden-farms-chocolate-syrup-12-fl-oz-355-ml/39773",
     "desc": "סירופ שוקולד של Walden Farms, אפס קלוריות, אפס סוכר, טעם שוקולד עשיר. מצוין לשפיכה על גלידה, פנקייקים, יוגורט, קפה קר או כל דבר אחר שדורש שוקולד. ממותק באריתריטול וסטיביה, ללא סוכרלוז. הכשר OU.",
@@ -4154,13 +4261,17 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwalden-farms-chocolate-syrup-12-fl-oz-355-ml%2F39773%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 25.73,
     "available": true,
-    "longDesc": "פינוק שוקולדי אמיתי ללא שום מחיר תזונתי. סירופ השוקולד של Walden Farms עשוי מאבקת קקאו אמיתית וממתיקים טבעיים, והוא נטול קלוריות, שומן וסוכר לחלוטין. הוא בעל מרקם נוזלי ונוח לזילוף, ומשתלב נהדר מעל גלידות דלות קלוריות, כבסיס להכנת שוקו קרים מהיר, או כזיגוג דקורטיבי מעל עוגות ופנקייקים. פריט חובה במזווה של כל מי שמנהל אורח חיים מוקפד אך מכור لشוקולד. (כשרות OU).\n\nכדאי לדעת: לעומת שוקולד מריר מומס או גנאש אין לו גוף שומני, מרקם קרמי או עומק של חמאת קקאו. לעומת סירופ שוקולד רגיל, הבידול שלו הוא פורמולת zero/low calorie לפי תווית המוצר — לא אחוז קקאו."
+    "longDesc": "פינוק שוקולדי אמיתי ללא שום מחיר תזונתי. סירופ השוקולד של Walden Farms עשוי מאבקת קקאו אמיתית וממתיקים טבעיים, והוא נטול קלוריות, שומן וסוכר לחלוטין. הוא בעל מרקם נוזלי ונוח לזילוף, ומשתלב נהדר מעל גלידות דלות קלוריות, כבסיס להכנת שוקו קרים מהיר, או כזיגוג דקורטיבי מעל עוגות ופנקייקים. פריט חובה במזווה של כל מי שמנהל אורח חיים מוקפד אך מכור لشוקולד. (כשרות OU).\n\nכדאי לדעת: לעומת שוקולד מריר מומס או גנאש אין לו גוף שומני, מרקם קרמי או עומק של חמאת קקאו. לעומת סירופ שוקולד רגיל, הבידול שלו הוא פורמולת zero/low calorie לפי תווית המוצר — לא אחוז קקאו.",
+    "seeAlso": [
+      293
+    ],
+    "seeAlsoNote": "סירופ קרמל ללא קלוריות מאותה סדרה:"
   },
   {
     "id": 364,
     "name": "Walden Farms, Marshmallow Dessert Dip, 12 oz (340 g)",
     "brand": "Walden Farms",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "cert": "OU",
     "url": "https://www.iherb.com/pr/walden-farms-marshmallow-dessert-dip-12-oz-340-g/39764",
     "desc": "דיפ מרשמלו של Walden Farms, אפס קלוריות ואפס סוכר, עם טעם מתוק-קרמי. מצוין לטבילת פירות, קרקרים, וופלים או כציפוי לפנקייקים. ממותק באריתריטול וסטיביה, ללא סוכרלוז. כשר OU, נדיר למצוא מרשמלו כשר בכלל, וכזה עם אפס קלוריות בפרט. שימי לב: הביקורות מפוצלות, חלק מהרוכשות מדווחות על מרקם דליל מהצפוי וטעם מלאכותי. מומלץ לקנות קודם מנה אחת לפני הזמנה כמותית.",
@@ -4181,7 +4292,7 @@ window.FOODOS_PRODUCTS = [
     "id": 365,
     "name": "Walden Farms, Strawberry Fruit Spread, 12 oz (340 g)",
     "brand": "Walden Farms",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "cert": "OU",
     "url": "https://www.iherb.com/pr/walden-farms-strawberry-fruit-spread-12-oz-340-g/41662",
     "desc": "ריבת תות של Walden Farms, אפס קלוריות, אפס סוכר, טעם תות אמיתי. מצוינת לטוסט, לגבינה, לדייסה או לכל מה שדורש ריבה בלי להתפשר על הדיאטה. ממותקת באריתריטול, סטיביה ומונק פרוט, ממתיקים טבעיים, ללא סוכרלוז. הכשר OU.",
@@ -4203,7 +4314,7 @@ window.FOODOS_PRODUCTS = [
     "id": 366,
     "name": "Walden Farms, Blueberry Fruit Spread, 12 oz (340 g)",
     "brand": "Walden Farms",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "cert": "OU",
     "url": "https://www.iherb.com/pr/walden-farms-blueberry-fruit-spread-12-oz-340-g/41663",
     "desc": "ריבת אוכמניות של Walden Farms, אפס קלוריות, אפס סוכר. טעם אוכמניות מתוק-חמצמץ שמתאים לטוסט, יוגורט, פנקייקים או גבינת שמנת. ממותקת באריתריטול וסטיביה, ממתיקים טבעיים, ללא סוכרלוז. הכשר OU.",
@@ -4225,7 +4336,7 @@ window.FOODOS_PRODUCTS = [
     "id": 367,
     "name": "Walden Farms, Apple Butter Fruit Spread, 12 oz (340 g)",
     "brand": "Walden Farms",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "cert": "OU",
     "url": "https://www.iherb.com/pr/walden-farms-apple-butter-fruit-spread-12-oz-340-g/41664",
     "desc": "חמאת תפוחים (Apple Butter) של Walden Farms, ממרח תפוחים עם נגיעת קינמון, אפס קלוריות ואפס סוכר. שונה מריבה רגילה, סמיך ועמוק יותר בטעם. מומלץ על טוסט, פנקייקים, דייסת שיבולת שועל ואפילו עם גבינות. ממותק באריתריטול, סטיביה ומונק פרוט, ממתיקים טבעיים, ללא סוכרלוז. הכשר OU.",
@@ -4246,7 +4357,7 @@ window.FOODOS_PRODUCTS = [
     "id": 368,
     "name": "Walden Farms, Marmalade Fruit Spread, Orange, 12 oz (340 g)",
     "brand": "Walden Farms",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "cert": "OU",
     "url": "https://www.iherb.com/pr/walden-farms-marmalade-fruit-spread-orange-12-oz-340-g/120211",
     "desc": "מרמלדה תפוז של Walden Farms, החמצמצות הקלאסית של מרמלדה תפוז אמיתית, אפס קלוריות ואפס סוכר. מצוינת על טוסט עם חמאה, כציפוי לעוף בתנור, או בחליטת תה. ממותקת באריתריטול וסטיביה, ממתיקים טבעיים, ללא סוכרלוז. הכשר OU. הביקורות מעורבות לגבי הטעם. אם תרכשו, עדכנו איך היה.",
@@ -4265,7 +4376,7 @@ window.FOODOS_PRODUCTS = [
     "id": 369,
     "name": "Walden Farms, Mocha Creamer, 12 fl oz (355 ml)",
     "brand": "Walden Farms",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "cert": "OU",
     "url": "https://www.iherb.com/pr/walden-farms-mocha-creamer-12-fl-oz-355-ml/102461",
     "desc": "קרמר מוקה לקפה — אפס קלוריות, אפס סוכר. ממותק בשילוב אריתריטול, סטיביה ומונק פרוט, בלי סוכרלוז. הטעם מוקה-שוקו, קצת יותר מורכב מסתם וניל. מתוק בצד, כדאי להתחיל בכפית ולהתאים. כשר OU.",
@@ -4285,7 +4396,7 @@ window.FOODOS_PRODUCTS = [
     "id": 370,
     "name": "Walden Farms, Whipped Peanut Spread, 12 oz (340 g)",
     "brand": "Walden Farms",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "cert": "OU",
     "url": "https://www.iherb.com/pr/walden-farms-whipped-peanut-spread-12-oz-340-g/39772",
     "desc": "ממרח בוטנים אפס-קלורי, מרקם מוקצף שקל למרוח. טעם חמאת בוטנים בסיסי — לא מחליף את הרגיל, אבל ממלא את התפקיד בלי הקלוריות. עובד על טוסט, פרי, בשייק. ממותק בסטיביה Reb M ואריתריטול. מכיל בוטנים. כשר OU.",
@@ -4300,7 +4411,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wal/wal66011/d/54.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwalden-farms-whipped-peanut-spread-12-oz-340-g%2F39772%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 24.98,
+    "priceILS": 24.99,
     "available": true
   },
   {
@@ -4309,7 +4420,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/walden-farms-sweet-creamy-creamer-12-fl-oz-355-ml/102460",
     "desc": "קרמר Sweet & Creamy של Walden Farms, טעם של שמנת מתוקה, אפס קלוריות ואפס סוכר. מוסיף קרמיות לקפה, לאטה או קפה קר בלי גרם שומן. ממותק באריתריטול, סטיביה ומונק פרוט, ממתיקים טבעיים, ללא סוכרלוז. פרווה, מתאים גם עם ארוחות בשריות. דירוגים לא אחידים באיהרב. שווה לנסות פעם אחת ולראות אם אתם אוהבים. הכשר OU.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Walden Farms",
     "descNew": "קרמר Sweet & Creamy של Walden Farms — מוסיף קרמיות לקפה ולאטה בלי שומן ובלי סוכר. ממותק באריתריטול וסטיביה.",
@@ -4331,7 +4442,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/walden-farms-bleu-cheese-dressing-12-fl-oz-355-ml/41659",
     "desc": "רוטב גבינה כחולה (Bleu Cheese) של Walden Farms. ללא קלוריות, אפס סוכר, אפס שומן, עם טעם של גבינה כחולה (לחובבי הז'אנר, אם אתם מתלבטים, קודם תטעמו גבינה כחולה). מתאים לסלטים, ירקות נאים ולשילוב בטוסטים. שימו לב, זה מוצר דיאטטי והטעם בהתאם. ממליצה לקרוא את התגובות באיהרב קודם רכישה. כשר OU-D, חלבי.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Walden Farms",
     "descNew": "רוטב גבינה כחולה לסלטים, כנפיים וירקות נאים — ללא שומן ו-0 קק\"ל. הטעם עדין יותר מגבינה כחולה אמיתית, אבל עובד יפה.",
@@ -4353,7 +4464,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/walden-farms-creamer-french-vanilla-12-fl-oz-355-ml/114281",
     "desc": "קרמר וניל צרפתי לקפה, אפס קלוריות ואפס סוכר. פרווה, אז אפשר גם בארוחות בשריות. חלק מהאנשים מוצאים אותו מתוק מדי — שווה להתחיל בכמות קטנה. ממותק בשילוב אריתריטול, סטיביה ומונק פרוט, ללא סוכרלוז. כשר OU.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Walden Farms",
     "descNew": "קרמר וניל צרפתי לקפה, פרווה — מתאים גם בארוחות בשריות. טעם וניל עשיר, ללא סוכר ו-0 קק\"ל.",
@@ -4374,7 +4485,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/walden-farms-coffee-creamer-caramel-12-fl-oz-355-ml/114283",
     "desc": "קרמר קרמל של Walden Farms לקפה. שונה מסירופ הקרמל שלהם, המוצר הזה מיועד ספציפית להוספה לקפה ומעניק מרקם קרמי עם טעם קרמל מתוק. אפס קלוריות ואפס סוכר. פרווה. ממותק באריתריטול, סטיביה ומולסה, ללא סוכרלוז. הכשר OU. שימי לב: זה מוצר דיאטטי. חלק מהרוכשים מדווחים על טעם מלאכותי קל, לשיקולכם.",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "conf": "גבוהה",
     "brand": "Walden Farms",
     "descNew": "קרמר קרמל לקפה — מרקם קרמי עם טעם קרמל מתוק, שונה מסירופ הקרמל שלהם ומיועד ספציפית לקפה. 0 קק\"ל.",
@@ -4447,7 +4558,12 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimple-mills-crunchy-almond-flour-cookies-double-chocolate-5-5-oz-156-g%2F75291%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 26.43,
     "available": true,
-    "longDesc": "עוגיות פריכות המיוצרות מקמח שקדים ותערובת זרעים, בתוספת כפולה של שוקולד וקקאו טהור. בניגוד לעוגיות תעשייתיות עמוסות קמח לבן וסוכר מעובד, הן ממותקות באמצעות סוכר קוקוס אורגני ואינן מכילות רכיבים מלאכותיים או גלוטן. המרקם שלהן קראנצ'י ומוצק, והן מספקות טעם שוקולדי עמוק ומספקים נשנוש איכותי ומזין ליד הקפה, עם ערכים תזונתיים גבוהים יותר משמעותית מעוגיות רגילות. (כשרות OU).\n\nכדאי לדעת: הבידול העיקרי הוא בסיס השקדים וההתאמה למי שמחפש מוצר ללא גלוטן. זו עדיין עוגייה מתוקה — לא מוצר שהיתרון שלו הוא 'בריאותי' אוטומטי."
+    "longDesc": "עוגיות פריכות המיוצרות מקמח שקדים ותערובת זרעים, בתוספת כפולה של שוקולד וקקאו טהור. בניגוד לעוגיות תעשייתיות עמוסות קמח לבן וסוכר מעובד, הן ממותקות באמצעות סוכר קוקוס אורגני ואינן מכילות רכיבים מלאכותיים או גלוטן. המרקם שלהן קראנצ'י ומוצק, והן מספקות טעם שוקולדי עמוק ומספקים נשנוש איכותי ומזין ליד הקפה, עם ערכים תזונתיים גבוהים יותר משמעותית מעוגיות רגילות. (כשרות OU).\n\nכדאי לדעת: הבידול העיקרי הוא בסיס השקדים וההתאמה למי שמחפש מוצר ללא גלוטן. זו עדיין עוגייה מתוקה — לא מוצר שהיתרון שלו הוא 'בריאותי' אוטומטי.",
+    "seeAlso": [
+      378,
+      379
+    ],
+    "seeAlsoNote": "טעמים נוספים של עוגיות Simple Mills:"
   },
   {
     "id": 378,
@@ -4469,7 +4585,12 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimple-mills-crunchy-almond-flour-cookies-toasted-pecan-5-5-oz-156-g%2F75292%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 26.52,
     "available": true,
-    "longDesc": "עוגיות פריכות המשלבות את הבסיס האיכותי של קמח שקדים וקמח קוקוס עם שבבי פקאן קלויים. האפייה המדויקת מדגישה את הטעם האגוזי והחמים של הפקאן, ומעניקה עוגייה יציבה וטעימה להפליא ללא שום שימוש בדגנים המכילים גלוטן. ממותקות באופן טבעי בסוכר קוקוס, מה שהופך אותן לבחירה שקולה ואיכותית למי שמחפש פינוק מתוק עם מינימום עיבוד תעשייתי. (כשרות OU).\n\nכדאי לדעת: הבידול העיקרי הוא בסיס השקדים וההתאמה למי שמחפש מוצר ללא גלוטן. זו עדיין עוגייה מתוקה — לא מוצר שהיתרון שלו הוא 'בריאותי' אוטומטי."
+    "longDesc": "עוגיות פריכות המשלבות את הבסיס האיכותי של קמח שקדים וקמח קוקוס עם שבבי פקאן קלויים. האפייה המדויקת מדגישה את הטעם האגוזי והחמים של הפקאן, ומעניקה עוגייה יציבה וטעימה להפליא ללא שום שימוש בדגנים המכילים גלוטן. ממותקות באופן טבעי בסוכר קוקוס, מה שהופך אותן לבחירה שקולה ואיכותית למי שמחפש פינוק מתוק עם מינימום עיבוד תעשייתי. (כשרות OU).\n\nכדאי לדעת: הבידול העיקרי הוא בסיס השקדים וההתאמה למי שמחפש מוצר ללא גלוטן. זו עדיין עוגייה מתוקה — לא מוצר שהיתרון שלו הוא 'בריאותי' אוטומטי.",
+    "seeAlso": [
+      377,
+      379
+    ],
+    "seeAlsoNote": "טעמים נוספים של עוגיות Simple Mills:"
   },
   {
     "id": 379,
@@ -4491,7 +4612,12 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimple-mills-crunchy-almond-flour-cookies-chocolate-chip-5-5-oz-156-g%2F75290%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 26.71,
     "available": true,
-    "longDesc": "התשובה הבריאה לעוגיית השוקולד צ'יפס הקלאסית. עוגיות אלו מבוססות על קמח שקדים, קמח קוקוס ועמילן טפיוקה, עם נטיפי שוקולד מריר איכותיים ומתיקות עדינה של סוכר קוקוס. הן פריכות, עשירות בטעם ונטולות גלוטן, חומרים משמרים או צבעי מאכל. בחירה מצוינת לילדים ולמבוגרים כאחד שרוצים ליהנות מחטיף שוקולד צ'יפס ביתי ואפוי ברשימת רכיבים נקייה לחלוטין. (כשרות OU).\n\nכדאי לדעת: הבידול העיקרי הוא בסיס השקדים וההתאמה למי שמחפש מוצר ללא גלוטן. זו עדיין עוגייה מתוקה — לא מוצר שהיתרון שלו הוא 'בריאותי' אוטומטי."
+    "longDesc": "התשובה הבריאה לעוגיית השוקולד צ'יפס הקלאסית. עוגיות אלו מבוססות על קמח שקדים, קמח קוקוס ועמילן טפיוקה, עם נטיפי שוקולד מריר איכותיים ומתיקות עדינה של סוכר קוקוס. הן פריכות, עשירות בטעם ונטולות גלוטן, חומרים משמרים או צבעי מאכל. בחירה מצוינת לילדים ולמבוגרים כאחד שרוצים ליהנות מחטיף שוקולד צ'יפס ביתי ואפוי ברשימת רכיבים נקייה לחלוטין. (כשרות OU).\n\nכדאי לדעת: הבידול העיקרי הוא בסיס השקדים וההתאמה למי שמחפש מוצר ללא גלוטן. זו עדיין עוגייה מתוקה — לא מוצר שהיתרון שלו הוא 'בריאותי' אוטומטי.",
+    "seeAlso": [
+      377,
+      378
+    ],
+    "seeAlsoNote": "טעמים נוספים של עוגיות Simple Mills:"
   },
   {
     "id": 381,
@@ -4609,8 +4735,8 @@ window.FOODOS_PRODUCTS = [
     "cert": "OU",
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/wild-planet-wild-white-anchovies-in-extra-virgin-olive-oil-4-4-oz-125-g/80963",
-    "desc": "אנשובי לבן פראי (Boquerones) בסגנון ספרדי — לא להתבלבל עם האנשובי החום המלוח. תהליך החמצה בחומץ ושקיעה בשמן זית נותן טעם עדין, מרקם רך ומעט חמצמץ. מי שניסתה רק אנשובי כבוש-במלח ולא אהבה — כדאי לתת לזה הזדמנות. טוב על לחם, בסלט, על פיצה. פרווה OU.",
-    "descNew": "אנשובי לבן פראי (White Anchovies / Boquerones) של Wild Planet בשמן זית כתית. שונה לחלוטין מאנשובי חום רגיל: טעם עדין ונקי, מרקם רך וקרמי, ללא המליחות החדה. מוחמץ בחומץ ואז משוקע בשמן זית, לפי המסורת הספרדית. מצוין על לחם, בסלטים, על פיצה, או ישירות מהצנצנת. 4.6 כוכבים עם 1,700+ ביקורות. פרווה OU.",
+    "desc": "אנשובי לבן פראי (Boquerones) בסגנון ספרדי — לא להתבלבל עם האנשובי החום המלוח. תהליך החמצה בחומץ והשהות בשמן זית נותן טעם עדין, מרקם רך ומעט חמצמץ. מי שניסתה רק אנשובי כבוש-במלח ולא אהבה — כדאי לתת לזה הזדמנות. טוב על לחם, בסלט, על פיצה. פרווה OU.",
+    "descNew": "אנשובי לבן פראי (White Anchovies / Boquerones) של Wild Planet בשמן זית כתית. שונה לחלוטין מאנשובי חום רגיל: טעם עדין ונקי, מרקם רך וקרמי, ללא המליחות החדה. מוחמץ בחומץ ואז שוהה בשמן זית, לפי המסורת הספרדית. מצוין על לחם, בסלטים, על פיצה, או ישירות מהצנצנת. 4.6 כוכבים עם 1,700+ ביקורות. פרווה OU.",
     "nameHe": "אנשובי לבן בשמן זית",
     "_descStatus": "edited",
     "certVerified": true,
@@ -4621,7 +4747,11 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwild-planet-wild-white-anchovies-in-extra-virgin-olive-oil-4-4-oz-125-g%2F80963%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 13.72,
     "available": true,
-    "longDesc": "אנשובי לבן של Wild Planet הוא דג קטן המשומר טרי בשמן זית כתית מעולה, מים ומלח. הוא שונה מאנשובי כהה ומיושן במלח: טעמו נקי ועדין יותר, המרקם רך, והוא אינו אמור להיות מלוח וחריף במיוחד (כשרות OU).\n\nלעומת פילה אנשובי קלאסי בצנצנת, האנשובי הלבן פחות מיושן, פחות מלוח ומתאים גם לאכילה כמנה עצמאית. לעומת סרדינים, הוא קטן ועדין יותר; אפשר להשתמש בו בסלטים ובטוסטים בלי שיתפקד רק כ\"מלח דגים\" ברוטב.\n\nרעיונות לשימוש:\n• לסלט\n• לכריך\n• לפסטה או קציצות לפי הדג\n• על קרקרים עם לימון או חרדל"
+    "longDesc": "אנשובי לבן של Wild Planet הוא דג קטן המשומר טרי בשמן זית כתית מעולה, מים ומלח. הוא שונה מאנשובי כהה ומיושן במלח: טעמו נקי ועדין יותר, המרקם רך, והוא אינו אמור להיות מלוח וחריף במיוחד (כשרות OU).\n\nלעומת פילה אנשובי קלאסי בצנצנת, האנשובי הלבן פחות מיושן, פחות מלוח ומתאים גם לאכילה כמנה עצמאית. לעומת סרדינים, הוא קטן ועדין יותר; אפשר להשתמש בו בסלטים ובטוסטים בלי שיתפקד רק כ\"מלח דגים\" ברוטב.\n\nרעיונות לשימוש:\n• לסלט\n• לכריך\n• לפסטה או קציצות לפי הדג\n• על קרקרים עם לימון או חרדל",
+    "seeAlso": [
+      387
+    ],
+    "seeAlsoNote": "אנשובי Crown Prince בפורמט שונה:"
   },
   {
     "id": 387,
@@ -4643,7 +4773,12 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/cpn/cpn00831/d/44.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fcrown-prince-natural-flat-fillets-anchovies-in-pure-olive-oil-1-5-oz-43-g%2F27583%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 16.28,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      386,
+      388
+    ],
+    "seeAlsoNote": "אנשובי לבן Wild Planet ומשחת אנשובי Crown Prince:"
   },
   {
     "id": 388,
@@ -4665,7 +4800,11 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fcrown-prince-natural-anchovy-paste-1-75-oz-50-g%2F27582%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 12.83,
     "available": true,
-    "longDesc": "משחת אנשובי היא אנשובי טחון עם שמן זית ומלח, ארוז בשפופרת. היא נותנת את אותה מליחות ואומאמי של פילה אנשובי, אך בלי צורך לפתוח צנצנת, לקצוץ או להתמודד עם שאריות פילטים (כשרות OU).\n\nלעומת פילה אנשובי, המשחה נוחה יותר למינון קטן ולהמסה ברוטב, אך אינה מתאימה כשמבקשים חתיכות דג נראות לעין. לעומת רוטב דגים, טעמה סמיך ומרוכז יותר; היא מכילה הרבה מלח ולכן משמשת כתיבול ולא כממרח עיקרי.\n\nרעיונות לשימוש:\n• להוסיף חצי כפית לרוטב עגבניות, פסטה או תבשיל שעועית של 4 מנות\n• לערבב רבע עד חצי כפית לתוך ויניגרט קיסר או רוטב חרדל-לימון\n• להמיס מעט משחה בשמן זית עם שום וצ'ילי כבסיס לפסטה\n• להוסיף כמות קטנה למרינדה של ירקות, דג או בשר לקבלת עומק מלוח\n• להתחיל בכמות קטנה ולהפחית את המלח במתכון, משום שהמשחה מרוכזת מאוד"
+    "longDesc": "משחת אנשובי היא אנשובי טחון עם שמן זית ומלח, ארוז בשפופרת. היא נותנת את אותה מליחות ואומאמי של פילה אנשובי, אך בלי צורך לפתוח צנצנת, לקצוץ או להתמודד עם שאריות פילטים (כשרות OU).\n\nלעומת פילה אנשובי, המשחה נוחה יותר למינון קטן ולהמסה ברוטב, אך אינה מתאימה כשמבקשים חתיכות דג נראות לעין. לעומת רוטב דגים, טעמה סמיך ומרוכז יותר; היא מכילה הרבה מלח ולכן משמשת כתיבול ולא כממרח עיקרי.\n\nרעיונות לשימוש:\n• להוסיף חצי כפית לרוטב עגבניות, פסטה או תבשיל שעועית של 4 מנות\n• לערבב רבע עד חצי כפית לתוך ויניגרט קיסר או רוטב חרדל-לימון\n• להמיס מעט משחה בשמן זית עם שום וצ'ילי כבסיס לפסטה\n• להוסיף כמות קטנה למרינדה של ירקות, דג או בשר לקבלת עומק מלוח\n• להתחיל בכמות קטנה ולהפחית את המלח במתכון, משום שהמשחה מרוכזת מאוד",
+    "seeAlso": [
+      387
+    ],
+    "seeAlsoNote": "אנשובי Crown Prince שלמים, פחות מרוכזים:"
   },
   {
     "id": 389,
@@ -4687,7 +4826,11 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fcrown-prince-natural-kipper-snacks-with-cracked-black-pepper-3-25-oz-92-g%2F44032%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 14.62,
     "available": true,
-    "longDesc": "\"קיפרס\" (Kippers) הם למעשה פילטים של דג הרינג איכותי שנידוג בטבע, אשר עברו תהליך מסורתי של עישון חם טבעי על עצי עץ קשה. הגרסה הזו מתובלת בפלפל שחור גרוס המוסיף עקצוץ שמחמיא לשומניות הטבעית (והבריאה) של ההרינג. הדג מתאפיין במרקם בשרני ומוצק, עשיר מאוד בחלבון ובשמני אומגה 3. הוא מוכן לאכילה ישירות מהקופסה, ומצוין לצד קרקרים, על לחם שיפון כהה עם חמאה, או כתוספת מעניינת לסלטים מבוססי תפוחי אדמה.\n\nכדאי לדעת: לעומת סרדינים הם בדרך כלל בשרניים ומעושנים יותר, עם אופי צפון-אירופי."
+    "longDesc": "\"קיפרס\" (Kippers) הם למעשה פילטים של דג הרינג איכותי שנידוג בטבע, אשר עברו תהליך מסורתי של עישון חם טבעי על עצי עץ קשה. הגרסה הזו מתובלת בפלפל שחור גרוס המוסיף עקצוץ שמחמיא לשומניות הטבעית (והבריאה) של ההרינג. הדג מתאפיין במרקם בשרני ומוצק, עשיר מאוד בחלבון ובשמני אומגה 3. הוא מוכן לאכילה ישירות מהקופסה, ומצוין לצד קרקרים, על לחם שיפון כהה עם חמאה, או כתוספת מעניינת לסלטים מבוססי תפוחי אדמה.\n\nכדאי לדעת: לעומת סרדינים הם בדרך כלל בשרניים ומעושנים יותר, עם אופי צפון-אירופי.",
+    "seeAlso": [
+      390
+    ],
+    "seeAlsoNote": "קיפרס מעושן Crown Prince, טעם עמוק יותר:"
   },
   {
     "id": 390,
@@ -4709,7 +4852,11 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fcrown-prince-natural-kipper-snacks-naturally-smoked-3-25-oz-92-g%2F27596%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 14.07,
     "available": true,
-    "longDesc": "הגרסה הקלאסית והנקייה ביותר של הרינג מעושן. הפילטים נטולי העצמות נידוגים באוקיינוס ומעושנים בשיטות מסורתיות ללא כל תוספת של תמציות עשן מלאכותיות או כימיקלים. התוצאה היא דג בעל צבע זהוב, טעם מעושן עמוק שאינו משתלט, ומרקם שומני ועסיסי. זהו פתרון נהדר ועתיר-חלבון לארוחת בוקר בסגנון אירופאי מסורתי, או כחומר גלם להכנת ממרחי דגים מעושנים ביתיים עם מעט גבינת שמנת ועירית.\n\nכדאי לדעת: לעומת סרדינים הם בדרך כלל בשרניים ומעושנים יותר, עם אופי צפון-אירופי."
+    "longDesc": "הגרסה הקלאסית והנקייה ביותר של הרינג מעושן. הפילטים נטולי העצמות נידוגים באוקיינוס ומעושנים בשיטות מסורתיות ללא כל תוספת של תמציות עשן מלאכותיות או כימיקלים. התוצאה היא דג בעל צבע זהוב, טעם מעושן עמוק שאינו משתלט, ומרקם שומני ועסיסי. זהו פתרון נהדר ועתיר-חלבון לארוחת בוקר בסגנון אירופאי מסורתי, או כחומר גלם להכנת ממרחי דגים מעושנים ביתיים עם מעט גבינת שמנת ועירית.\n\nכדאי לדעת: לעומת סרדינים הם בדרך כלל בשרניים ומעושנים יותר, עם אופי צפון-אירופי.",
+    "seeAlso": [
+      389
+    ],
+    "seeAlsoNote": "קיפרס פלפל Crown Prince, חריף יותר:"
   },
   {
     "id": 391,
@@ -4878,7 +5025,7 @@ window.FOODOS_PRODUCTS = [
     "cert": "OU",
     "cat": [
       "שוקולד",
-      "ממתקים"
+      "רטבים"
     ],
     "conf": "גבוהה",
     "brand": "Seed + Mill",
@@ -5063,7 +5210,12 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sog/sog15737/d/24.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimply-organic-umami-blends-roasted-garlic-herb-2-19-oz-62-g%2F116997%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 32.61,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      406,
+      492
+    ],
+    "seeAlsoNote": "תבלינים נוספים מ-Simply Organic לאותה ארוחה:"
   },
   {
     "id": 406,
@@ -5076,7 +5228,7 @@ window.FOODOS_PRODUCTS = [
     "brand": "Simply Organic",
     "longDesc": "תערובת אומאמי מקורית היא תיבול מוכן שמטרתו להוסיף טעם חמישי — עומק מלוח-בשרני או פטרייתי — למנות. היא שימושית במיוחד כשמנה חסרה עומק, אך אינה תחליף לטעם של ציר אמיתי, פטריות או רוטב סויה (כשרות KSA).\n\nלעומת MSG טהור, תערובת אומאמי כוללת בדרך כלל רכיבים נוספים כגון בצל, שום, פטריות או תבלינים. לעומת מלח, היא יכולה לחזק טעם גם בכמות מלח נמוכה יותר, אך בהרכב של תערובת מוכנה יש לבדוק את הנתרן.",
     "descNew": "תערובת אומאמי אורגנית של Simply Organic בטעם קלאסי. הרכיבים פטריות, בצל ותבלינים יוצרים עומק ועשירות בלי שמן, מלח או מוצ'ינג. תחליף מצוין לאבקת מרק לכל מטרה — על ירקות, ביצים, שעועית או אורז. כשרות KSA על האריזה. ⚠️ שימי לב: הגרסה Sweet & Smoky (מתוק ומעושן) של אותה סדרה אינה נושאת חותמת כשרות. יש לבחור רק את הטעמים Original ו-Roasted Garlic & Herb.",
-    "nameHe": "תיבול אומאמי מקורי",
+    "nameHe": "תבלין אומאמי פטריות",
     "_descStatus": "edited",
     "certVerified": true,
     "_certVerified": true,
@@ -5085,7 +5237,12 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sog/sog19651/d/24.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimply-organic-umami-blends-original-3-14-oz-89-g%2F117007%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 32.96,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      405,
+      492
+    ],
+    "seeAlsoNote": "תבלינים נוספים מ-Simply Organic לאותה ארוחה:"
   },
   {
     "id": 407,
@@ -5430,7 +5587,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/yue/yue00186/d/35.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fyumearth-organic-pops-assorted-flavors-50-individually-wrapped-pops-10-9-oz-310-g%2F10888%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 49.03,
+    "priceILS": 49.04,
     "available": true
   },
   {
@@ -5500,7 +5657,13 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/set/set00090/d/10.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbig-tree-farms-organic-golden-coconut-sugar-1-lb-454-g%2F85089%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 27.64,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      431,
+      329,
+      93
+    ],
+    "seeAlsoNote": "גרסת וניל ומותגים נוספים של סוכר קוקוס:"
   },
   {
     "id": 431,
@@ -5525,7 +5688,13 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/set/set10700/d/17.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbig-tree-farms-organic-vanilla-coconut-sugar-14-oz-396-g%2F53522%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 32.37,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      430,
+      329,
+      93
+    ],
+    "seeAlsoNote": "גרסה ללא וניל ומותגים נוספים של סוכר קוקוס:"
   },
   {
     "id": 432,
@@ -5547,7 +5716,12 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/tcc/tcc00679/d/8.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ftrue-citrus-true-lime-crystallized-lime-2-29-oz-65-g%2F126540%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 13.59,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      433,
+      435
+    ],
+    "seeAlsoNote": "טעמים נוספים מסדרת True Citrus:"
   },
   {
     "id": 433,
@@ -5566,8 +5740,14 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/88627/88627.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/tcc/tcc00678/d/34.jpg",
+    "available": true,
+    "priceILS": 13.51,
+    "seeAlso": [
+      432,
+      434
+    ],
+    "seeAlsoNote": "טעמים נוספים מסדרת True Citrus:"
   },
   {
     "id": 434,
@@ -5589,19 +5769,23 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/tcc/tcc00677/d/34.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ftrue-citrus-true-lemon-crystallized-lemon-pepper-2-12-oz-60-g%2F88626%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 13.51,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      433
+    ],
+    "seeAlsoNote": "הגרסה הקלאסית ללא פלפל מאותה סדרה:"
   },
   {
     "id": 435,
     "name": "True Citrus, True Lime, Crystallized Lime, Garlic & Cilantro, Salt-Free, 1.94 oz (55 g)",
     "url": "https://www.iherb.com/pr/true-citrus-true-lime-crystallized-lime-garlic-cilantro-salt-free-1-94-oz-55-g/88625",
-    "desc": "ליים עם שום וכוסברה, ללא מלח. טוב על עוף, אורז, גואקמולה וטאקוס. מי שלא אוהבת כוסברה — לדלג. כשר OU.",
+    "desc": "השילוש הקדוש: ליים, שום, וכוסברה. ללא מלח. מיץ ליים טרי שיובש לאבקה נוחה, עם ניחוח שום וכוסברה שמרימים כל מנה. שופכים על עוף, אורז, טאקוס, גואקמולה. מי שלא אוהבת כוסברה, לדלג. כשר OU.",
     "cert": "OU",
     "cat": "תבלינים",
     "conf": "גבוהה",
     "brand": "True Citrus",
     "longDesc": "True Lime Garlic \\& Cilantro הוא תיבול יבש שמחבר ליים מגובש עם שום וכוסברה. הוא מתאים לפרופיל לטיני-רענן ונותן חמיצות ועשבוניות בלי להוסיף נוזל למנה (כשרות OU).\n\nלעומת ליים טרי וכוסברה טרייה, הוא נוח לאחסון ואחיד בעוצמה אך אינו מחליף את הרעננות והמרקם של עשבים טריים. לעומת תיבול טאקו, הוא יותר ליימי-עשבוני ופחות כמוני-צ'ילי.",
-    "descNew": "מיץ ליים טרי שיובש וגובש לאבקה, משולב עם שום וכוסברה, ללא מלח. הטעם חמצמץ כמו ליים סחוט עם ניחוח שום וכוסברה. מצוין על עוף, אורז, גואקמולה וטאקוס. OU.",
+    "descNew": "השילוש הקדוש: ליים, שום, וכוסברה. ללא מלח. מיץ ליים טרי שיובש לאבקה נוחה, עם ניחוח שום וכוסברה שמרימים כל מנה. שופכים על עוף, אורז, טאקוס, גואקמולה. מי שלא אוהבת כוסברה, לדלג. כשר OU.",
     "nameHe": "ליים מגובש שום כוסברה",
     "_descStatus": "needs-review",
     "certVerified": true,
@@ -5611,7 +5795,11 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/tcc/tcc00675/d/34.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ftrue-citrus-true-lime-crystallized-lime-garlic-cilantro-salt-free-1-94-oz-55-g%2F88625%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 13.59,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      432
+    ],
+    "seeAlsoNote": "גרסה נקייה יותר של ליים מאותה סדרה:"
   },
   {
     "id": 436,
@@ -5727,7 +5915,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/qst/qst00774/d/131.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fquest-nutrition-protein-cookie-snickerdoodle-12-cookies-2-04-oz-58-g-each%2F86011%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 151.6,
+    "priceILS": 151.61,
     "available": true
   },
   {
@@ -5816,8 +6004,12 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/twp/twp79603/d/24.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ftwin-peaks-ingredients-protein-puffs-nacho-cheese-10-6-oz-300-g%2F122774%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 102.33,
-    "available": true
+    "priceILS": 102.34,
+    "available": true,
+    "seeAlso": [
+      450
+    ],
+    "seeAlsoNote": "טעם BBQ מאותה סדרת חטיפי חלבון Twin Peaks:"
   },
   {
     "id": 447,
@@ -5844,7 +6036,8 @@ window.FOODOS_PRODUCTS = [
     "seeAlso": [
       479,
       480
-    ]
+    ],
+    "seeAlsoNote": "מאותה סדרת חטיפי חלבון, בטעמים פרווה:"
   },
   {
     "id": 448,
@@ -5882,7 +6075,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "img": "https://s3.images-iherb.com/npa/npa17212/d/8.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fnature-s-path-love-crunch-premium-organic-granola-double-chocolate-chunk-11-5-oz-325-g%2F96540%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 28.77,
+    "priceILS": 28.8,
     "available": true,
     "descNew": "Love Crunch של Nature's Path נולדה ב-2010 כמתנת חתונה של שניים ממשפחת המייסדים. שיבולת שועל מלאה אורגנית עם שוקולד מריר Fair Trade ושוקולד לבן, לתוצאה עשירה ומורכבת. ללא מרכיבי חלב בפועל, אך מיוצרת במפעל חלבי (OU-D). מצוינת עם חלב צמחי, יוגורט, או כנשנוש יבש.",
     "longDesc": "Love Crunch הוא גרנולה מתוקה המבוססת על שיבולת שועל, עם חתיכות שוקולד מריר. זהו מוצר אפוי ופריך יותר מדגני בוקר תפוחים, ובדרך כלל נאכל בכמות קטנה יותר כתוספת ליוגורט, חלב או קינוח (כשרות OU-D).\n\nלעומת קורנפלקס, גרנולה צפופה ושומנית יותר ולכן מנה קטנה מספיקה. לעומת שיבולת שועל טבעית, היא כבר ממותקת ומתובלת ומכילה שוקולד, כך שהיא נוחה להגשה אך פחות ניטרלית ופחות מתאימה למי שרוצה לשלוט בכמות הסוכר."
@@ -5907,7 +6100,11 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ftwin-peaks-ingredients-protein-puffs-mesquite-bbq-10-6-oz-300-g%2F122776%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 102.73,
     "available": true,
-    "longDesc": "פתרון מדויק למי שמתגעגע לחטיפי תירס פריכים ומתובלים (כמו במבה אדומה או צ'יטוס), אך שומר על תזונה קפדנית, עתירת חלבון או קטוגנית. הפאפס האלו מציעים מרקם אוורירי ומתפצח במיוחד, ועטופים בתיבול ברביקיו מסורתי על בסיס עץ מסקיט המעניק עומק מעושן, מלוח וטיפה פיקנטי. בניגוד לנשנושים רגילים מלאי עמילן, כל מנה (כוס) מספקת 21 גרם של חלבון (ממי גבינה) ורק שני גרם פחמימות. מצוין גם כקרוטונים מתובלים מעל סלטים או מרקי חורף. (כשרות OU-D).\n\nכדאי לדעת: מי שמחפש בעיקר טעם של חטיף קלאסי עשוי להעדיף מוצר רגיל; מי שמחפש יותר חלבון בכל נשנוש יקבל כאן יתרון ברור."
+    "longDesc": "פתרון מדויק למי שמתגעגע לחטיפי תירס פריכים ומתובלים (כמו במבה אדומה או צ'יטוס), אך שומר על תזונה קפדנית, עתירת חלבון או קטוגנית. הפאפס האלו מציעים מרקם אוורירי ומתפצח במיוחד, ועטופים בתיבול ברביקיו מסורתי על בסיס עץ מסקיט המעניק עומק מעושן, מלוח וטיפה פיקנטי. בניגוד לנשנושים רגילים מלאי עמילן, כל מנה (כוס) מספקת 21 גרם של חלבון (ממי גבינה) ורק שני גרם פחמימות. מצוין גם כקרוטונים מתובלים מעל סלטים או מרקי חורף. (כשרות OU-D).\n\nכדאי לדעת: מי שמחפש בעיקר טעם של חטיף קלאסי עשוי להעדיף מוצר רגיל; מי שמחפש יותר חלבון בכל נשנוש יקבל כאן יתרון ברור.",
+    "seeAlso": [
+      446
+    ],
+    "seeAlsoNote": "טעם נאצ'וס מאותה סדרת חטיפי חלבון Twin Peaks:"
   },
   {
     "id": 451,
@@ -5929,7 +6126,8 @@ window.FOODOS_PRODUCTS = [
     "seeAlso": [
       478
     ],
-    "longDesc": "דבש חריף הוא דבש טהור שמושרה בפלפלי צ'ילי ומאוזן בכמות קטנה של חומץ. הוא אינו רוטב צ'ילי מתוק: הבסיס הוא דבש סמיך, והחריפות מגיעה בגל איטי לאחר המתיקות (כשרות KOF-K).\n\nלעומת סילאן או דבש רגיל, הוא מוסיף חריפות וחמיצות ולכן מתאים גם למנות מלוחות. לעומת רוטב צ'ילי מתוק, הוא פחות סמיך ופחות מתובל, עם מתיקות דבש טבעית מודגשת יותר; הוא אינו טבעוני ומתוק מאוד גם אם משתמשים בו כתיבול.\n\nרעיונות לשימוש:\n• לזלף כפית עד כף על פיצה עם גבינות, ירקות קלויים או פטריות לאחר האפייה\n• להבריש 1–2 כפות על כנפיים, פרגיות או כרובית ב-5 הדקות האחרונות של הצלייה\n• לערבב כף דבש חריף עם כף חרדל ורבע כוס שמן זית לוויניגרט לסלט עלים וגבינת עיזים\n• לזלף מעט על לאבנה, פטה או גבינת עיזים עם אגוזים\n• להוסיף כפית לרוטב טחינה או מיונז כדי לקבל מטבל מתוק-חריף\n• להתחיל בכמות קטנה, משום שהחריפות מתחזקת לאחר כמה שניות"
+    "longDesc": "דבש חריף הוא דבש טהור שמושרה בפלפלי צ'ילי ומאוזן בכמות קטנה של חומץ. הוא אינו רוטב צ'ילי מתוק: הבסיס הוא דבש סמיך, והחריפות מגיעה בגל איטי לאחר המתיקות (כשרות KOF-K).\n\nלעומת סילאן או דבש רגיל, הוא מוסיף חריפות וחמיצות ולכן מתאים גם למנות מלוחות. לעומת רוטב צ'ילי מתוק, הוא פחות סמיך ופחות מתובל, עם מתיקות דבש טבעית מודגשת יותר; הוא אינו טבעוני ומתוק מאוד גם אם משתמשים בו כתיבול.\n\nרעיונות לשימוש:\n• לזלף כפית עד כף על פיצה עם גבינות, ירקות קלויים או פטריות לאחר האפייה\n• להבריש 1–2 כפות על כנפיים, פרגיות או כרובית ב-5 הדקות האחרונות של הצלייה\n• לערבב כף דבש חריף עם כף חרדל ורבע כוס שמן זית לוויניגרט לסלט עלים וגבינת עיזים\n• לזלף מעט על לאבנה, פטה או גבינת עיזים עם אגוזים\n• להוסיף כפית לרוטב טחינה או מיונז כדי לקבל מטבל מתוק-חריף\n• להתחיל בכמות קטנה, משום שהחריפות מתחזקת לאחר כמה שניות",
+    "seeAlsoNote": "לא זמין כרגע בישראל — זו האלטרנטיבה הקרובה ביותר:"
   },
   {
     "id": 452,
@@ -5988,7 +6186,11 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "edited",
     "certVerified": true,
     "img": "/images/products/Sunfood, Superfoods, Organic Matcha Powder.avif",
-    "available": true
+    "available": true,
+    "seeAlso": [
+      455
+    ],
+    "seeAlsoNote": "אבקת מאצ'ה אורגנית של Organic Traditions, מותג אחר:"
   },
   {
     "id": 455,
@@ -6008,7 +6210,11 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "edited",
     "certVerified": true,
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/106063/106063.jpg",
-    "available": false
+    "available": false,
+    "seeAlso": [
+      454
+    ],
+    "seeAlsoNote": "אבקת מאצ'ה של Sunfood, מותג אחר לאותה מטרה:"
   },
   {
     "id": 456,
@@ -6050,8 +6256,9 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "_descStatus": "edited",
     "certVerified": true,
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/143805/143805.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/lsf/lsf00688/d/2.jpg",
+    "available": true,
+    "priceILS": 72.67
   },
   {
     "id": 458,
@@ -6091,8 +6298,9 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "_descStatus": "edited",
     "certVerified": true,
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/77801/77801.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/lsf/lsf00601/d/12.jpg",
+    "available": true,
+    "priceILS": 40.61
   },
   {
     "id": 460,
@@ -6112,8 +6320,9 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "_descStatus": "approved",
     "certVerified": true,
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/143678/143678.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/lsf/lsf13058/d/2.jpg",
+    "available": true,
+    "priceILS": 53.37
   },
   {
     "id": 461,
@@ -6138,13 +6347,18 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/brw/brw01224/d/28.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsheila-g-s-brownie-brittle-chocolate-chip-5-oz-142-g%2F83581%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 20.92,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      498,
+      499
+    ],
+    "seeAlsoNote": "טעמים נוספים של ביסקוויטי הבראוני של Sheila G's:"
   },
   {
     "id": 462,
     "name": "Terra, Real Vegetable Chips, Taro with Sea Salt, 5 oz (141 g)",
     "url": "https://www.iherb.com/pr/terra-real-vegetable-chips-taro-with-sea-salt-5-oz-141-g/134596",
-    "desc": "ציפס טארו של Terra. שורש טרופי שכמעט לא מוצאים בארץ, טעם עמילני עדין עם נגיעה אגוזית, מרקם אחר לגמרי מבטטה או תפוח אדמה. שווה לנסות לפחות פעם. KOF-K פרווה, ללא גלוטן.",
+    "desc": "ציפס טארו של Terra. שורש טרופי שכמעט לא מוצאים בארץ, טעם עמילני עדין עם נגיעה אגוזית, מרקם אחר לגמרי מבטטה או תפוח אדמה. בארץ הצ'יפסים שלהם נמכרים סביבות 24 ש\"ח. שווה לנסות לפחות פעם. KOF-K פרווה, ללא גלוטן.",
     "cert": "KOF-K",
     "cat": "חטיפים",
     "conf": "גבוהה",
@@ -6163,7 +6377,11 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/err/err78922/d/8.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fterra-real-vegetable-chips-taro-with-sea-salt-5-oz-141-g%2F134596%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 13.44,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      464
+    ],
+    "seeAlsoNote": "טעם בטטה מאותה סדרת Terra Chips:"
   },
   {
     "id": 464,
@@ -6187,7 +6405,11 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/134599/134599.jpg",
-    "available": false
+    "available": false,
+    "seeAlso": [
+      462
+    ],
+    "seeAlsoNote": "טעם טארו מאותה סדרת Terra Chips:"
   },
   {
     "id": 467,
@@ -6220,7 +6442,7 @@ window.FOODOS_PRODUCTS = [
     "id": 468,
     "name": "Happy Family Organics, Happy Baby, Organic Yogis, Mixed Berry, 1 oz (28 g)",
     "url": "https://il.iherb.com/pr/happy-family-organics-happy-baby-organic-yogis-freeze-dried-yogurt-fruit-snacks-crawling-baby-mixed-berry-1-oz-28-g/25218",
-    "desc": "חטיפי יוגורט קפוא-מיובש — נמסים בפה, לא מסוכנים לחנק, מיוגורט אורגני ופירות יער. לתינוקות שמתחילים אוכל עצמאי. OU חלבי, אורגני.",
+    "desc": "יוגורט מיובש-קפוא שנמס בפה ברגע, בטוח לתינוקות. עשוי מיוגורט אורגני ופירות יער, מצוין לשלב שבו הילד מתחיל לאכול לבד. OU חלבי, אורגני.",
     "cert": "OU",
     "cat": "חטיפים",
     "conf": "גבוהה",
@@ -6231,7 +6453,7 @@ window.FOODOS_PRODUCTS = [
       "glutenfree"
     ],
     "longDesc": "יוגיס הם חטיפים קטנים שנמסים בפה, המיועדים בעיקר לפעוטות ולילדים צעירים. הם מבוססים על יוגורט ופירות יער, מיובשים למרקם קליל, ואינם תחליף לגביע יוגורט טרי או למנת פרי (כשרות OU).\n\nלעומת צימוקים או פירות מיובשים, הם רכים ונמסים יותר ומכילים רכיב יוגורט מתוק. לעומת ממתקים, הם עדיין מוצר מעובד עם סוכר, ולכן עדיף להגיש מנה קטנה ולא להתייחס אליהם כאל תחליף לפירות טריים.",
-    "descNew": "חטיפי יוגורט קפוא-מיובש של Happy Baby - נמסים בפה, לא מסוכנים לחנק, עשויים מיוגורט אורגני ופירות יער. מושלם לתינוק שמתחיל אוכל עצמאי. OU חלבי, אורגני.",
+    "descNew": "יוגורט מיובש-קפוא שנמס בפה ברגע, בטוח לתינוקות. עשוי מיוגורט אורגני ופירות יער, מצוין לשלב שבו הילד מתחיל לאכול לבד. OU חלבי, אורגני.",
     "nameHe": "חטיפי יוגורט פירות יער",
     "_descStatus": "needs-review",
     "certVerified": true,
@@ -6266,7 +6488,11 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sog/sog18513/d/96.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimply-organic-cinnamon-2-45-oz-69-g%2F31367%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 23.64,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      1
+    ],
+    "seeAlsoNote": "קינמון ציילון, הגרסה העדינה יותר ומומלצת לשימוש יומי:"
   },
   {
     "id": 470,
@@ -6305,7 +6531,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "img": "https://s3.images-iherb.com/oga/oga00686/d/24.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Forgain-organic-protein-50-superfoods-creamy-chocolate-fudge-2-02-lbs-918-g%2F105862%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 199.56,
+    "priceILS": 199.57,
     "available": true
   },
   {
@@ -6316,7 +6542,7 @@ window.FOODOS_PRODUCTS = [
     "cert": "OU",
     "cat": [
       "ממתיקים טבעיים",
-      "ממתיקים ומוצרים ללא סוכר"
+      "ממתיקים טבעיים"
     ],
     "conf": "גבוהה",
     "brand": "Health Garden",
@@ -6361,8 +6587,9 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "_descStatus": "approved",
     "_certVerified": true,
-    "available": false,
-    "suspended": true
+    "available": true,
+    "suspended": true,
+    "priceILS": 27.32
   },
   {
     "id": 473,
@@ -6381,7 +6608,13 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/mci/mci07086/d/47.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fmccormick-pure-vanilla-extract-1-fl-oz-29-ml%2F99195%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 23.74,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      474,
+      475,
+      476
+    ],
+    "seeAlsoNote": "תמציות טעם נוספות לאפייה:"
   },
   {
     "id": 474,
@@ -6400,7 +6633,13 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/fro/fro23081/d/48.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-maple-flavor-non-alcoholic-2-fl-oz-59-ml%2F35809%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 26.66,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      473,
+      475,
+      476
+    ],
+    "seeAlsoNote": "תמציות טעם נוספות לאפייה:"
   },
   {
     "id": 475,
@@ -6416,8 +6655,15 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "_descStatus": "approved",
     "_certVerified": true,
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/31277/31277.jpg",
-    "available": false
+    "img": "https://s3.images-iherb.com/sog/sog18528/d/42.jpg",
+    "available": true,
+    "priceILS": 18.62,
+    "seeAlso": [
+      473,
+      474,
+      476
+    ],
+    "seeAlsoNote": "תמציות טעם נוספות לאפייה:"
   },
   {
     "id": 476,
@@ -6436,7 +6682,13 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sog/sog18529/d/42.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimply-organic-orange-flavor-2-fl-oz-59-ml%2F31278%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 18.62,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      473,
+      474,
+      475
+    ],
+    "seeAlsoNote": "תמציות טעם נוספות לאפייה:"
   },
   {
     "id": 477,
@@ -6487,7 +6739,8 @@ window.FOODOS_PRODUCTS = [
       "חריף",
       "רטבים"
     ],
-    "longDesc": "גרסת ה\"הוט האני\" (Hot Honey) של המותג המוכר Nate's. דבש טבעי 100% שספג את החריפות והארומה של פלפלי צ'ילי. המשחק הקולינרי כאן הוא על קונטרסט: הדבש פותח את בלוטות הטעם במתיקות עוטפת, ושנייה לאחר מכן מכה החריפות שמנקה את החך ומדגישה את שאר טעמי המנה. זהו התבלין המושלם ליצירת זיגוג מתוק-חריף (גלאז') לכנפי עוף או סלמון, לזילוף נועז מעל פיצה מרגריטה לוהטת, או כחלק מפלטת גבינות חריפות ובשלות. (כשרות OU)."
+    "longDesc": "גרסת ה\"הוט האני\" (Hot Honey) של המותג המוכר Nate's. דבש טבעי 100% שספג את החריפות והארומה של פלפלי צ'ילי. המשחק הקולינרי כאן הוא על קונטרסט: הדבש פותח את בלוטות הטעם במתיקות עוטפת, ושנייה לאחר מכן מכה החריפות שמנקה את החך ומדגישה את שאר טעמי המנה. זהו התבלין המושלם ליצירת זיגוג מתוק-חריף (גלאז') לכנפי עוף או סלמון, לזילוף נועז מעל פיצה מרגריטה לוהטת, או כחלק מפלטת גבינות חריפות ובשלות. (כשרות OU).",
+    "seeAlsoNote": "Mike's הוא הקלאסי של הז'אנר, לא תמיד זמין בישראל:"
   },
   {
     "id": 479,
@@ -6516,7 +6769,8 @@ window.FOODOS_PRODUCTS = [
     ],
     "_descStatus": "approved",
     "desc": "פאפס חלבון קריספי בטעם מלח ורוד היימלאי. 25 גרם חלבון לשקית, ללא סויה, ללא חלב. כשרות OU.",
-    "longDesc": "לחובבי התיבול המינימליסטי שרוצים להתרכז בפריכות. הפאפס האפויים של Ready מספקים חוויית נשנוש מתפצחת ואוורירית (בדומה לחטיפי תירס קלים), אך הם עשויים מחלבון מי גבינה ומספקים 21 גרם חלבון לכוס, עם מינימום פחמימות. תיבול מלח ההימלאיה הורוד מדגיש את הטעם העדין והטבעי של החטיף מבלי להעמיס עליו תבלינים חזקים. הם נהדרים כנשנוש יומיומי לילדים ומבוגרים, או כתחליף לקרוטונים עתירי פחמימות מעל מרק חם. (כשרות OU)."
+    "longDesc": "לחובבי התיבול המינימליסטי שרוצים להתרכז בפריכות. הפאפס האפויים של Ready מספקים חוויית נשנוש מתפצחת ואוורירית (בדומה לחטיפי תירס קלים), אך הם עשויים מחלבון מי גבינה ומספקים 21 גרם חלבון לכוס, עם מינימום פחמימות. תיבול מלח ההימלאיה הורוד מדגיש את הטעם העדין והטבעי של החטיף מבלי להעמיס עליו תבלינים חזקים. הם נהדרים כנשנוש יומיומי לילדים ומבוגרים, או כתחליף לקרוטונים עתירי פחמימות מעל מרק חם. (כשרות OU).",
+    "seeAlsoNote": "טעמים נוספים מאותה סדרת חטיפי חלבון:"
   },
   {
     "id": 480,
@@ -6532,7 +6786,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "url": "https://il.iherb.com/pr/ready-protein-puffs-chipotle-6-bags-2-75-oz-78-g-each/149629",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fready-protein-puffs-chipotle-6-bags-2-75-oz-78-g-each%2F149629",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/149629/149629.jpg",
+    "img": "https://s3.images-iherb.com/rfb/rfb01053/d/19.jpg",
     "available": true,
     "dairy": false,
     "tags": [
@@ -6545,7 +6799,9 @@ window.FOODOS_PRODUCTS = [
     ],
     "_descStatus": "approved",
     "desc": "פאפס חלבון קריספי בטעם צ'יפוטלה מעושן. 25 גרם חלבון לשקית, ללא סויה, ללא חלב. כשרות OU.",
-    "longDesc": "גרסה נועזת ופיקנטית לחטיף החלבון האוורירי. התיבול מתבסס על פלפלי צ'יפוטלה (חלפניו מעושן ויבש), המעניקים לפאפס צבע שחום, טעם מעושן עמוק, ועוקץ חריף שמצטבר ככל שאוכלים. זהו פתרון קלאסי לצורך בנשנוש מלוח ומתובל מול הטלוויזיה, המחליף את חטיפי הצ'יפס והנאצ'וס המטוגנים בחלופה עתירת חלבון (21 גרם למנה), אפויה, ודלת פחמימות ששומרת על שובע לאורך זמן. (כשרות OU)."
+    "longDesc": "גרסה נועזת ופיקנטית לחטיף החלבון האוורירי. התיבול מתבסס על פלפלי צ'יפוטלה (חלפניו מעושן ויבש), המעניקים לפאפס צבע שחום, טעם מעושן עמוק, ועוקץ חריף שמצטבר ככל שאוכלים. זהו פתרון קלאסי לצורך בנשנוש מלוח ומתובל מול הטלוויזיה, המחליף את חטיפי הצ'יפס והנאצ'וס המטוגנים בחלופה עתירת חלבון (21 גרם למנה), אפויה, ודלת פחמימות ששומרת על שובע לאורך זמן. (כשרות OU).",
+    "priceILS": 112.91,
+    "seeAlsoNote": "טעמים נוספים מאותה סדרת חטיפי חלבון:"
   },
   {
     "id": 481,
@@ -6555,7 +6811,7 @@ window.FOODOS_PRODUCTS = [
     "cert": "OU",
     "certVerified": true,
     "_certVerified": true,
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "url": "https://il.iherb.com/pr/the-pur-company-chewing-gum-spearmint-55-pieces-2-72-oz-77-g/119802",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fthe-pur-company-chewing-gum-spearmint-55-pieces-2-72-oz-77-g%2F119802",
     "img": "/images/products/The PUR Company, Chewing Gum, Spearmint.avif",
@@ -6567,9 +6823,10 @@ window.FOODOS_PRODUCTS = [
       "ללא סוכר"
     ],
     "_descStatus": "approved",
-    "desc": "מסטיק ספרמינט ממותק ב-100% קסיליטול — ללא אספרטם, ללא סוכר, טבעוני, ללא גלוטן וסויה. מיוצר בשווייץ. קסיליטול נחקר כמסייע למניעת עששת ולחיזוק מינרלים בשן. כשרות OU.",
-    "descNew": "מסטיק ספרמינט ממותק ב-100% קסיליטול, הממתיק שנחקר ומוכח כמפחית עששת ולא מזין את חיידקי הפה. ללא אספרטם, ללא סוכר, טבעוני, ללא גלוטן. מיוצר בשווייץ. OU כשר.",
-    "longDesc": "מסטיק איכותי הדוגל בשקיפות רכיבים מלאה. בניגוד לרוב המסטיקים המסחריים המכילים ממתיקים מלאכותיים כמו אספרטם או סוכרלוז, המסטיק של PUR ממותק ב-100% קסיליטול – סוכר אלכוהולי טבעי ממקור צמחי, שידוע מדעית כמסייע באיזון רמת החומציות בפה ובמניעת עששת (כיוון שחיידקי הפה אינם מסוגלים לפרק אותו). טעם המנטה העדינה (Spearmint) מחזיק מעמד זמן רב ומרענן את החך לאחר ארוחות בצורה בריאה ונקייה לחלוטין. (כשרות OU)."
+    "desc": "קסיליטול נחקר כמסייע למניעת עששת ולחיזוק מינרלים בשן. מסטיק ספרמינט ממותק ב-100% קסיליטול, ללא אספרטם, ללא סוכר, טבעוני, ללא גלוטן וסויה. מיוצר בשווייץ. כשרות OU.",
+    "descNew": "קסיליטול נחקר כמסייע למניעת עששת ולחיזוק מינרלים בשן. מסטיק ספרמינט ממותק ב-100% קסיליטול, ללא אספרטם, ללא סוכר, טבעוני, ללא גלוטן וסויה. מיוצר בשווייץ. כשרות OU.",
+    "longDesc": "מסטיק איכותי הדוגל בשקיפות רכיבים מלאה. בניגוד לרוב המסטיקים המסחריים המכילים ממתיקים מלאכותיים כמו אספרטם או סוכרלוז, המסטיק של PUR ממותק ב-100% קסיליטול – סוכר אלכוהולי טבעי ממקור צמחי, שידוע מדעית כמסייע באיזון רמת החומציות בפה ובמניעת עששת (כיוון שחיידקי הפה אינם מסוגלים לפרק אותו). טעם המנטה העדינה (Spearmint) מחזיק מעמד זמן רב ומרענן את החך לאחר ארוחות בצורה בריאה ונקייה לחלוטין. (כשרות OU).",
+    "priceILS": 19.46
   },
   {
     "id": 482,
@@ -6582,7 +6839,7 @@ window.FOODOS_PRODUCTS = [
     "cat": "תוספי אפייה",
     "url": "https://il.iherb.com/pr/foods-alive-agar-agar-powder-2-oz-56-g/107122",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffoods-alive-agar-agar-powder-2-oz-56-g%2F107122",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/107122/107122.jpg",
+    "img": "https://s3.images-iherb.com/fda/fda00025/d/18.jpg",
     "available": true,
     "dairy": false,
     "tags": [
@@ -6592,7 +6849,8 @@ window.FOODOS_PRODUCTS = [
     ],
     "_descStatus": "approved",
     "desc": "אגר אגר אורגני באבקה — תחליף טבעוני לג'לטין, מיוצר מאצות ים. מתאים לריבות, פודינגים, ג'לי וקינוחים. ללא גלוטן, Non-GMO. כשרות CRC.",
-    "longDesc": "אגר-אגר (או פשוט \"אגר\") הוא מרכיב חובה בקונדיטוריה הטבעונית, המתפקד כתחליף מוחלט לג'לטין מהחי. הוא מופק מאצות אדומות ומתאפיין בעוצמת קרישה גבוהה מאוד (פי 3 מג'לטין רגיל). יתרון קולינרי משמעותי של האגר הוא עמידותו בחום: בניגוד לג'לטין שנמס בטמפרטורת החדר בקיץ, קינוחים המבוססים על אגר שומרים על יציבותם גם מחוץ למקרר. הוא אידיאלי להכנת ג'לי פירות טבעי, פנקוטה טבעונית חלקה, עוגות מוס יציבות, ואף ליצירת ריבות ללא בישול ארוך. (כשרות CRC)."
+    "longDesc": "אגר-אגר (או פשוט \"אגר\") הוא מרכיב חובה בקונדיטוריה הטבעונית, המתפקד כתחליף מוחלט לג'לטין מהחי. הוא מופק מאצות אדומות ומתאפיין בעוצמת קרישה גבוהה מאוד (פי 3 מג'לטין רגיל). יתרון קולינרי משמעותי של האגר הוא עמידותו בחום: בניגוד לג'לטין שנמס בטמפרטורת החדר בקיץ, קינוחים המבוססים על אגר שומרים על יציבותם גם מחוץ למקרר. הוא אידיאלי להכנת ג'לי פירות טבעי, פנקוטה טבעונית חלקה, עוגות מוס יציבות, ואף ליצירת ריבות ללא בישול ארוך. (כשרות CRC).",
+    "priceILS": 39.34
   },
   {
     "id": 483,
@@ -6606,7 +6864,7 @@ window.FOODOS_PRODUCTS = [
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/simply-desserts-plant-based-instant-pudding-vanilla-sugar-free-1-7-oz-48-g/92663",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimply-desserts-plant-based-instant-pudding-vanilla-sugar-free-1-7-oz-48-g%2F92663%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/92663/92663.jpg",
+    "img": "https://s3.images-iherb.com/nsd/nsd95003/d/66.jpg",
     "available": true,
     "dairy": false,
     "tags": [
@@ -6615,13 +6873,15 @@ window.FOODOS_PRODUCTS = [
       "ללא גלוטן",
       "ללא לקטוז"
     ],
-    "desc": "פודינג וניל מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מתכין תוך דקות עם חלב צמחי. OK כשר פרווה.",
-    "descNew": "פודינג וניל מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מתכין תוך דקות עם חלב צמחי. OK כשר פרווה.",
+    "desc": "פודינג וניל מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מוכן תוך דקות עם חלב צמחי. OK כשר פרווה.",
+    "descNew": "פודינג וניל מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מוכן תוך דקות עם חלב צמחי. OK כשר פרווה.",
     "longDesc": "פתרון קינוח חכם ומהיר למי שנמנע מסוכר או ממוצרי חלב. אבקת האינסטנט פודינג של Simply Desserts מצליחה לשחזר את המרקם הקטיפתי והסמיך של פודינג קלאסי, אך ללא שימוש בג'לטין, ברכיבי חלב, או בסוכר לבן מעובד (מומתקת בתחליפים טבעיים). טעם הווניל עדין וקלאסי, וניתן להכין אותו בקלות על ידי טריפה עם כל חלב צמחי (שקדים, סויה או שיבולת שועל). מצוין כקינוח בפני עצמו, כבסיס לטריפל (Trifle) שכבות, או כקרם למילוי פחזניות ללא גלוטן. (כשרות OK).",
     "_descStatus": "approved",
     "seeAlso": [
       484
-    ]
+    ],
+    "priceILS": 12.03,
+    "seeAlsoNote": "אותו פודינג מיידי צמחי, בטעם שוקולד:"
   },
   {
     "id": 484,
@@ -6635,7 +6895,7 @@ window.FOODOS_PRODUCTS = [
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/simply-desserts-plant-based-instant-pudding-chocolate-sugar-free-1-7-oz-48-g/92662",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsimply-desserts-plant-based-instant-pudding-chocolate-sugar-free-1-7-oz-48-g%2F92662%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/92662/92662.jpg",
+    "img": "https://s3.images-iherb.com/nsd/nsd95000/d/74.jpg",
     "available": true,
     "dairy": false,
     "tags": [
@@ -6644,13 +6904,15 @@ window.FOODOS_PRODUCTS = [
       "ללא גלוטן",
       "ללא לקטוז"
     ],
-    "desc": "פודינג שוקולד מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מתכין תוך דקות עם חלב צמחי. OK כשר פרווה.",
-    "descNew": "פודינג שוקולד מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מתכין תוך דקות עם חלב צמחי. OK כשר פרווה.",
+    "desc": "פודינג שוקולד מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מוכן תוך דקות עם חלב צמחי. OK כשר פרווה.",
+    "descNew": "פודינג שוקולד מיידי על בסיס צמחי, ללא סוכר, ללא גלוטן וללא לקטוז. מוכן תוך דקות עם חלב צמחי. OK כשר פרווה.",
     "longDesc": "גרסת השוקולד העשירה לסדרת הפודינגים הצמחיים. בדומה לגרסת הווניל, אבקת פודינג זו אינה מכילה סוכר, רכיבי חלב או גלוטן, ונשענת על אבקת קקאו איכותית להענקת פרופיל שוקולדי עמוק. ההכנה דורשת רק הוספת נוזל וטריפה מהירה לקבלת קרם שוקולד סמיך, חלק ומפנק. זהו \"קינוח לשעת חירום\" המושלם כשמתעורר החשק למשהו מתוק וקר, וניתן להשתמש בו גם כקרם יציב לעיטור קאפקייקס או להכנת פאי שוקולד ללא אפייה וללא רגשות אשם. (כשרות OK).",
     "_descStatus": "approved",
     "seeAlso": [
       483
-    ]
+    ],
+    "priceILS": 11.99,
+    "seeAlsoNote": "אותו פודינג מיידי צמחי, בטעם וניל:"
   },
   {
     "id": 485,
@@ -6664,7 +6926,7 @@ window.FOODOS_PRODUCTS = [
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-18-mgo-696-8-8-oz-250-g/112008",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fcomvita-manuka-honey-umf-18-mgo-696-8-8-oz-250-g%2F112008%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/112008/112008.jpg",
+    "img": "https://s3.images-iherb.com/cmv/cmv00039/d/41.jpg",
     "available": true,
     "dairy": false,
     "tags": [
@@ -6679,7 +6941,9 @@ window.FOODOS_PRODUCTS = [
     "seeAlso": [
       486,
       487
-    ]
+    ],
+    "priceILS": 268.02,
+    "seeAlsoNote": "גרסאות UMF 10+ של אותו דבש מנוקה Comvita, מחיר נמוך יותר:"
   },
   {
     "id": 486,
@@ -6693,7 +6957,7 @@ window.FOODOS_PRODUCTS = [
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-10-mgo-263-8-8-oz-250-g/88563",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fcomvita-manuka-honey-umf-10-mgo-263-8-8-oz-250-g%2F88563%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/88563/88563.jpg",
+    "img": "https://s3.images-iherb.com/cmv/cmv00361/d/64.jpg",
     "available": true,
     "dairy": false,
     "tags": [
@@ -6708,7 +6972,9 @@ window.FOODOS_PRODUCTS = [
     "seeAlso": [
       485,
       487
-    ]
+    ],
+    "priceILS": 122.17,
+    "seeAlsoNote": "UMF 18+ לשימוש טיפולי, ואריזה גדולה של UMF 10+:"
   },
   {
     "id": 487,
@@ -6722,7 +6988,7 @@ window.FOODOS_PRODUCTS = [
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-10-mgo-263-17-6-oz-500-g/95048",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fcomvita-manuka-honey-umf-10-mgo-263-17-6-oz-500-g%2F95048%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/95048/95048.jpg",
+    "img": "https://s3.images-iherb.com/cmv/cmv00008/d/64.jpg",
     "available": true,
     "dairy": false,
     "tags": [
@@ -6737,7 +7003,9 @@ window.FOODOS_PRODUCTS = [
     "seeAlso": [
       485,
       486
-    ]
+    ],
+    "priceILS": 191.67,
+    "seeAlsoNote": "UMF 18+ לשימוש טיפולי, ואריזה קטנה לניסיון ראשון:"
   },
   {
     "id": 488,
@@ -6751,7 +7019,7 @@ window.FOODOS_PRODUCTS = [
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/date-lady-chocolate-spread-10-2-oz-290-g/143022",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fdate-lady-chocolate-spread-10-2-oz-290-g%2F143022%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/143022/143022.jpg",
+    "img": "https://s3.images-iherb.com/dtl/dtl00604/d/8.jpg",
     "available": true,
     "dairy": false,
     "tags": [
@@ -6767,7 +7035,9 @@ window.FOODOS_PRODUCTS = [
     "seeAlso": [
       489,
       490
-    ]
+    ],
+    "priceILS": 44.16,
+    "seeAlsoNote": "מוצרים נוספים של Date Lady, ממותקים מתמרים:"
   },
   {
     "id": 489,
@@ -6781,7 +7051,7 @@ window.FOODOS_PRODUCTS = [
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/date-lady-date-sugar-12-oz-340-g/98027",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fdate-lady-date-sugar-12-oz-340-g%2F98027%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/98027/98027.jpg",
+    "img": "https://s3.images-iherb.com/dtl/dtl00612/d/10.jpg",
     "available": true,
     "dairy": false,
     "tags": [
@@ -6798,7 +7068,9 @@ window.FOODOS_PRODUCTS = [
     "seeAlso": [
       488,
       490
-    ]
+    ],
+    "priceILS": 38.76,
+    "seeAlsoNote": "מוצרים נוספים של Date Lady, ממותקים מתמרים:"
   },
   {
     "id": 490,
@@ -6812,7 +7084,7 @@ window.FOODOS_PRODUCTS = [
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/date-lady-organic-barbecue-sauce-13-8-oz-391-g/98029",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fdate-lady-organic-barbecue-sauce-13-8-oz-391-g%2F98029%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/98029/98029.jpg",
+    "img": "https://s3.images-iherb.com/dtl/dtl00657/d/32.jpg",
     "available": true,
     "dairy": false,
     "tags": [
@@ -6833,7 +7105,9 @@ window.FOODOS_PRODUCTS = [
       489
     ],
     "glutenFree": true,
-    "organic": true
+    "organic": true,
+    "priceILS": 44.8,
+    "seeAlsoNote": "מוצרים נוספים של Date Lady, ממותקים מתמרים:"
   },
   {
     "id": 491,
@@ -6849,13 +7123,14 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "certVerified": true,
     "_certVerified": true,
-    "img": "",
+    "img": "https://s3.images-iherb.com/fda/fda00049/d/19.jpg",
     "tags": [
       "אורגני",
       "טבעוני",
       "ללא גלוטן"
     ],
-    "descNew": "שומשום שחור מגיע עם הקליפה שלו, וזו בדיוק הסיבה שהוא עשיר יותר. הקליפה מכילה אנתוציאנינים, אותם נוגדי חמצון שצובעים אוכל כהה וקשורים לתמיכה בבריאות הלב והכבד. Foods Alive מגדלת ב-certified organic, כלומר ללא חומרי הדברה. טעמו עמוק ואגוזי, מצוין לפיזור על קערת בוקר, יוגורט, ממרח שקדים, אורז יפני, ואפילו לתוך בלילות אפייה."
+    "descNew": "שומשום שחור מגיע עם הקליפה שלו, וזו בדיוק הסיבה שהוא עשיר יותר. הקליפה מכילה אנתוציאנינים, אותם נוגדי חמצון שצובעים אוכל כהה וקשורים לתמיכה בבריאות הלב והכבד. Foods Alive מגדלת ב-certified organic, כלומר ללא חומרי הדברה. טעמו עמוק ואגוזי, מצוין לפיזור על קערת בוקר, יוגורט, ממרח שקדים, אורז יפני, ואפילו לתוך בלילות אפייה.",
+    "priceILS": 38.25
   },
   {
     "id": 492,
@@ -6871,13 +7146,19 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "certVerified": true,
     "_certVerified": true,
-    "img": "",
+    "img": "https://s3.images-iherb.com/sog/sog18510/d/77.jpg",
     "tags": [
       "אורגני",
       "טבעוני",
       "ללא גלוטן"
     ],
-    "descNew": "הרעיון מאחורי All Purpose Seasoning פשוט: תערובת אחת שמכסה 80% מהמנות שמבשלים בבית. Simply Organic שילבה שום ובצל אורגניים, פפריקה מתוקה, פלפל שחור, אורגנו, בזיליקום ופטרוזיליה. לא צריך למדוד ולשלב, מספיק לפזר ולהמשיך. עובד מצוין על עוף שלם לפני הצלייה, על ירקות שורש לתנור, על ביצים מקושקשות ואפילו על פופקורן. Simply Organic עובדת עם חקלאים שמקפידים על גידול אורגני ועל שכר הוגן."
+    "descNew": "הרעיון מאחורי All Purpose Seasoning פשוט: תערובת אחת שמכסה 80% מהמנות שמבשלים בבית. Simply Organic שילבה שום ובצל אורגניים, פפריקה מתוקה, פלפל שחור, אורגנו, בזיליקום ופטרוזיליה. לא צריך למדוד ולשלב, מספיק לפזר ולהמשיך. עובד מצוין על עוף שלם לפני הצלייה, על ירקות שורש לתנור, על ביצים מקושקשות ואפילו על פופקורן. Simply Organic עובדת עם חקלאים שמקפידים על גידול אורגני ועל שכר הוגן.",
+    "priceILS": 22.96,
+    "seeAlso": [
+      405,
+      406
+    ],
+    "seeAlsoNote": "תיבולי אומאמי נוספים של Simply Organic:"
   },
   {
     "id": 493,
@@ -6893,13 +7174,19 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "certVerified": true,
     "_certVerified": true,
-    "img": "",
+    "img": "https://s3.images-iherb.com/npa/npa77180/d/27.jpg",
     "tags": [
       "אורגני",
       "חלבי"
     ],
     "descNew": "Love Crunch של Nature's Path נולדה ב-2010 כמתנת חתונה של שניים ממשפחת המייסדים. שיבולת שועל מלאה אורגנית משולבת עם שוקולד מריר Fair Trade (שוקולד שתומך ישירות בחקלאים במדינות מתפתחות), קוקוס מיובש, אבקת קקאו, ותות שדה ופטל מיובשים-הקפאה, שמשמרים את הצבע והטעם הטרי שלהם. הממתיק הוא סוכר קנה אורגני. מצוינת עם חלב צמחי או כנשנוש עצמאי. שימי לב: כשרות OU-D (חלבי) עקב המפעל, למרות שאינה מכילה רכיבי חלב.",
-    "priceILS": 28.77
+    "priceILS": 29.26,
+    "seeAlso": [
+      495,
+      496,
+      497
+    ],
+    "seeAlsoNote": "טעמים נוספים מסדרת Love Crunch של Nature's Path:"
   },
   {
     "id": 494,
@@ -6907,7 +7194,7 @@ window.FOODOS_PRODUCTS = [
     "nameHe": "ממתיק אלולוז נוזלי ללא קלוריות",
     "brand": "Wholesome",
     "cert": "OU",
-    "cat": "ממתיקים ומוצרים ללא סוכר",
+    "cat": "ממתיקים טבעיים",
     "url": "https://il.iherb.com/pr/wholesome-sweeteners-allulose-zero-calorie-liquid-sweetener-11-5-oz-326-g/104198",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fwholesome-sweeteners-allulose-zero-calorie-liquid-sweetener-11-5-oz-326-g%2F104198%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "desc": "ממתיק אלולוז נוזלי של Wholesome. אלולוז הוא סוכר נדיר שנמצא בטבע בתאנים ובחיטה, מתנהג כמו סוכר בבישול ואפייה, אבל הגוף לא סופג אותו, ולכן כמעט אפס קלוריות ואפס השפעה על רמת הסוכר בדם. ניתן לזלף ישירות לקפה, שייקים או מנה מוכנה. כשר OU.",
@@ -6915,13 +7202,14 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "certVerified": true,
     "_certVerified": true,
-    "img": "",
+    "img": "https://s3.images-iherb.com/whs/whs95612/d/18.jpg",
     "tags": [
       "ללא סוכר",
       "טבעוני",
       "ללא גלוטן"
     ],
-    "descNew": "אלולוז הוא אחד החידושים המעניינים בעולם הממתיקים. מדובר בסוכר שנמצא באופן טבעי בכמויות קטנות בתאנים, ענבים מיובשים ומייפל. הגוף אמנם סופג אותו חלקית, אבל לא מטבל אותו, כך שהוא יוצא בשתן ומכיל רק כ-0.2 קלוריות לגרם. מה שמייחד אותו: הוא מתקרמל ומשחים כמו סוכר אמיתי, מה שעושה אותו אידיאלי לאפייה ולרטבים שדורשים עומק של צבע. הגרסה הנוזלית של Wholesome נוחה במיוחד לזילוף ישיר, מתמוססת בקלות ומינונה מדויק. כשר OU."
+    "descNew": "אלולוז הוא אחד החידושים המעניינים בעולם הממתיקים. מדובר בסוכר שנמצא באופן טבעי בכמויות קטנות בתאנים, ענבים מיובשים ומייפל. הגוף אמנם סופג אותו חלקית, אבל לא מטבל אותו, כך שהוא יוצא בשתן ומכיל רק כ-0.2 קלוריות לגרם. מה שמייחד אותו: הוא מתקרמל ומשחים כמו סוכר אמיתי, מה שעושה אותו אידיאלי לאפייה ולרטבים שדורשים עומק של צבע. הגרסה הנוזלית של Wholesome נוחה במיוחד לזילוף ישיר, מתמוססת בקלות ומינונה מדויק. כשר OU.",
+    "priceILS": 32.26
   },
   {
     "id": 495,
@@ -6938,8 +7226,14 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "certVerified": true,
     "_certVerified": true,
-    "img": "",
-    "priceILS": 28.77
+    "img": "https://s3.images-iherb.com/npa/npa16207/d/8.jpg",
+    "priceILS": 28.31,
+    "seeAlso": [
+      493,
+      496,
+      497
+    ],
+    "seeAlsoNote": "טעמים נוספים מסדרת Love Crunch של Nature's Path:"
   },
   {
     "id": 496,
@@ -6956,8 +7250,14 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "certVerified": true,
     "_certVerified": true,
-    "img": "",
-    "priceILS": 28.77
+    "img": "https://s3.images-iherb.com/npa/npa77198/d/11.jpg",
+    "priceILS": 28.77,
+    "seeAlso": [
+      493,
+      495,
+      497
+    ],
+    "seeAlsoNote": "טעמים נוספים מסדרת Love Crunch של Nature's Path:"
   },
   {
     "id": 497,
@@ -6974,8 +7274,14 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "certVerified": true,
     "_certVerified": true,
-    "img": "",
-    "priceILS": 28.77
+    "img": "https://s3.images-iherb.com/npa/npa77182/d/11.jpg",
+    "priceILS": 27.67,
+    "seeAlso": [
+      493,
+      495,
+      496
+    ],
+    "seeAlsoNote": "טעמים נוספים מסדרת Love Crunch, כולל גרסה פרווה OU:"
   },
   {
     "id": 498,
@@ -6997,11 +7303,16 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "_certVerified": true,
     "tags": [],
-    "img": "https://s3.images-iherb.com/brw/brw01225/d/18.jpg",
+    "img": "https://s3.images-iherb.com/brw/brw01225/d/8.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsheila-g-s-brownie-brittle-dark-chocolate-sea-salt-5-oz-142-g%2F113284%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 20.32,
+    "priceILS": 19.92,
     "available": true,
-    "longDesc": "המוצר המקורי שהחל את שיגעון ה-Brownie Brittle בעולם הקונדיטוריה הנגישה. הפטנט פשוט וגאוני: דפי בראוניז דקיקים הנאפים עד לפריכות קיצונית, עמוסים בטעם קקאו אמיתי ומשובצים בנטיפי שוקולד קטנים. הם מספקים את החשק הבלתי נשלט לשוקולד, אך כיוון שהם דקים ואווריריים (בניגוד לבראוניז דחוס ועמוס חמאה וסוכר כבד), מנה גדולה מהם מכילה כמות קלוריות נמוכה משמעותית. מעבר לנשנוש נקי ישר מהשקית, הם נפלאים כשהם מרוסקים ומשמשים כבסיס קראנצ'י לפאי או תוספת פריכה מעל מוס שוקולד וגלידה. (כשרות OU)."
+    "longDesc": "המוצר המקורי שהחל את שיגעון ה-Brownie Brittle בעולם הקונדיטוריה הנגישה. הפטנט פשוט וגאוני: דפי בראוניז דקיקים הנאפים עד לפריכות קיצונית, עמוסים בטעם קקאו אמיתי ומשובצים בנטיפי שוקולד קטנים. הם מספקים את החשק הבלתי נשלט לשוקולד, אך כיוון שהם דקים ואווריריים (בניגוד לבראוניז דחוס ועמוס חמאה וסוכר כבד), מנה גדולה מהם מכילה כמות קלוריות נמוכה משמעותית. מעבר לנשנוש נקי ישר מהשקית, הם נפלאים כשהם מרוסקים ומשמשים כבסיס קראנצ'י לפאי או תוספת פריכה מעל מוס שוקולד וגלידה. (כשרות OU).",
+    "seeAlso": [
+      461,
+      499
+    ],
+    "seeAlsoNote": "טעמים נוספים של ביסקוויטי הבראוני של Sheila G's:"
   },
   {
     "id": 499,
@@ -7023,11 +7334,16 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "_certVerified": true,
     "tags": [],
-    "img": "https://s3.images-iherb.com/brw/brw01244/d/18.jpg",
+    "img": "https://s3.images-iherb.com/brw/brw01244/d/12.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fsheila-g-s-brownie-brittle-toffee-crunch-5-oz-142-g%2F83579%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
-    "priceILS": 20.32,
+    "priceILS": 20.02,
     "available": true,
-    "longDesc": "המוצר המקורי שהחל את שיגעון ה-Brownie Brittle בעולם הקונדיטוריה הנגישה. הפטנט פשוט וגאוני: דפי בראוניז דקיקים הנאפים עד לפריכות קיצונית, עמוסים בטעם קקאו אמיתי ומשובצים בנטיפי שוקולד קטנים. הם מספקים את החשק הבלתי נשלט לשוקולד, אך כיוון שהם דקים ואווריריים (בניגוד לבראוניז דחוס ועמוס חמאה וסוכר כבד), מנה גדולה מהם מכילה כמות קלוריות נמוכה משמעותית. מעבר לנשנוש נקי ישר מהשקית, הם נפלאים כשהם מרוסקים ומשמשים כבסיס קראנצ'י לפאי או תוספת פריכה מעל מוס שוקולד וגלידה. (כשרות OU)."
+    "longDesc": "המוצר המקורי שהחל את שיגעון ה-Brownie Brittle בעולם הקונדיטוריה הנגישה. הפטנט פשוט וגאוני: דפי בראוניז דקיקים הנאפים עד לפריכות קיצונית, עמוסים בטעם קקאו אמיתי ומשובצים בנטיפי שוקולד קטנים. הם מספקים את החשק הבלתי נשלט לשוקולד, אך כיוון שהם דקים ואווריריים (בניגוד לבראוניז דחוס ועמוס חמאה וסוכר כבד), מנה גדולה מהם מכילה כמות קלוריות נמוכה משמעותית. מעבר לנשנוש נקי ישר מהשקית, הם נפלאים כשהם מרוסקים ומשמשים כבסיס קראנצ'י לפאי או תוספת פריכה מעל מוס שוקולד וגלידה. (כשרות OU).",
+    "seeAlso": [
+      461,
+      498
+    ],
+    "seeAlsoNote": "טעמים נוספים של ביסקוויטי הבראוני של Sheila G's:"
   },
   {
     "id": 500,
@@ -7052,7 +7368,12 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/brm/brm11310/d/10.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fbob-s-red-mill-stone-ground-millet-flour-whole-grain-20-oz-567-g%2F97752%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 23.93,
-    "available": true
+    "available": true,
+    "seeAlso": [
+      342,
+      344
+    ],
+    "seeAlsoNote": "מוצרי דוחן וכוסמת נוספים של Bob's Red Mill:"
   },
   {
     "id": 501,
@@ -7104,7 +7425,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "img": "https://s3.images-iherb.com/ash/ash00001/d/1.jpg",
     "affiliateUrl": null,
-    "priceILS": null,
+    "priceILS": 77.53,
     "available": true
   },
   {
@@ -7225,11 +7546,37 @@ window.FOODOS_PRODUCTS = [
     "cat": "תבלינים",
     "url": "https://il.iherb.com/pr/simply-organic-black-garlic-finishing-salt-2-19-oz-62-g/125650",
     "affiliateUrl": "https://www.iherb.com/pr/simply-organic-black-garlic-finishing-salt-2-19-oz-62-g/125650?rcode=FOODOS",
-    "priceILS": "33.60",
+    "priceILS": 33.6,
     "available": true,
     "conf": "גבוהה",
     "desc": "מלח גימור ייחודי עם שום שחור מותסס, שמן שומשום לבן ושחור ופטרוזיליה. השום השחור מוסיף טעם עמוק ומתקתק שמתאים לביצים, אבוקדו, סטייק, ירקות קלויים ודגים.",
     "descNew": "מלח גימור עם שום שחור מותסס. הטעם שלו עמוק ומתקתק, שונה לגמרי מהשום הרגיל. כף קטנה על ביצה, אבוקדו או פרוסת לחם עם חמאה, ואפשר להרגיש את ההבדל.",
-    "longDesc": "שום שחור נוצר מהתססה איטית של שום טרי בחום נמוך למשך מספר שבועות. התהליך הזה ממיר את החריפות האופיינית לשום לטעם עמוק, מתקתק ומעט חמצמץ, עם ניחוחות שמזכירים בלסמי ומלאסה.\n\nמלח הגימור הזה של Simply Organic משלב שום שחור עם שומשום לבן ושחור, ופטרוזיליה. כל המרכיבים אורגניים וה-KSA מאמת את הכשרות.\n\nרעיונות לשימוש:\n• לפזר על ביצה עין או ביצה קשה\n• על אבוקדו קצוץ עם לימון\n• לסיים סטייק או פרגית מהמחבת\n• על ירקות קלויים מהתנור\n• על גבינת שמנת עם לחם טוב"
+    "longDesc": "שום שחור נוצר מהתססה איטית של שום טרי בחום נמוך למשך מספר שבועות. התהליך הזה ממיר את החריפות האופיינית לשום לטעם עמוק, מתקתק ומעט חמצמץ, עם ניחוחות שמזכירים בלסמי ומלאסה.\n\nמלח הגימור הזה של Simply Organic משלב שום שחור עם שומשום לבן ושחור, ופטרוזיליה. כל המרכיבים אורגניים וה-KSA מאמת את הכשרות.\n\nרעיונות לשימוש:\n• לפזר על ביצה עין או ביצה קשה\n• על אבוקדו קצוץ עם לימון\n• לסיים סטייק או פרגית מהמחבת\n• על ירקות קלויים מהתנור\n• על גבינת שמנת עם לחם טוב",
+    "img": "https://s3.images-iherb.com/sog/sog22108/d/24.jpg"
+  },
+  {
+    "id": 508,
+    "name": "Nuttzo, Keto, 7 Nut & Seed Butter, Crunchy, 12 oz (340 g)",
+    "nameHe": "חמאת 7 אגוזים וזרעים פריכה",
+    "brand": "Nuttzo",
+    "cert": "OU",
+    "cat": "ממרחים",
+    "url": "https://il.iherb.com/pr/nuttzo-keto-7-nut-seed-butter-crunchy-12-oz-340-g/102514",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fnuttzo-keto-7-nut-seed-butter-crunchy-12-oz-340-g%2F102514%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "img": "https://s3.images-iherb.com/ntz/ntz00278/d/40.jpg",
+    "priceILS": 53.87,
+    "available": true,
+    "conf": "גבוהה",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "glutenFree": true,
+    "tags": ["קטו", "פאלאו", "טבעוני", "ללא גלוטן", "ללא סוכר מוסף", "חלבון צמחי", "אגוזים", "ממרח", "ללא סויה", "Non-GMO"],
+    "seeAlso": [176, 178],
+    "seeAlsoNote": "ממרחי אגוזים כשרים נוספים, אם מחפשים טעם אחר:",
+    "desc": "ממרח 7 אגוזים וזרעים פריך של Nuttzo — שקדים, אגוזי ברזיל, פקאן, מקדמיה, קוקוס, זרעי פשתן וצ'יה. כשרות OU, קטו, פאלאו, טבעוני וללא גלוטן.",
+    "descNew": "ממרח שמשלב שבעה אגוזים וזרעים בצנצנת אחת: שקדים, מקדמיה, פקאן, אגוזי ברזיל, קוקוס, פשתן וצ'יה. הגרסה הפריכה שומרת על חתיכות קטנות שמוסיפות מרקם. כשרות OU מאומתת.",
+    "longDesc": "חמאת האגוזים הרגילה לוקחת אגוז אחד ומוסחרת אותו. Nuttzo מצאה את הדרך לשלב שבעה יחד, וזה הופך כל כף לחוויה תזונתית שונה לגמרי.\n\nהרכב השומנים כאן מגוון: חד-בלתי-רוויים מהשקדים, אומגה-3 מהפשתן ומה-ALA בצ'יה, ושומן רווי בריא מהקוקוס. המקדמיה וה-פקאן מוסיפים עומק וטעם עשיר, ואגוזי הברזיל מוסיפים סלניום, אחד המינרלים שהאוכלוסייה הישראלית חסרה בו.\n\nהגרסה הקריספי שומרת על שברי אגוזים קטנים, כך שיש בה מרקם שונה מחמאת אגוזים חלקה. מתאימה למריחה על לחם, לעירבוב בשייק או לאכילה בכפית.\n\nכשרות OU פרווה, מאושרת על ידי האיגוד האורתודוקסי.",
+    "_descStatus": "approved"
   }
 ];

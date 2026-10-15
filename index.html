@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טעמים כשרים | שוקולד וקמחים מ-iHerb</title>
+    <meta name="description" content="מבחר מוצרים כשרים באיכות פרימיום מ-iHerb - שוקולדים משובחים וקמחים איכותיים עם הכשרים מהימנים">
+
+    <!-- Google Fonts - Heebo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✡</text></svg>">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <span class="logo-mark">✡</span>
+                    <div class="logo-text">
+                        <span class="logo-title">טעמים כשרים</span>
+                        <span class="logo-sub">פרימיום מ-iHerb</span>
+                    </div>
+                </a>
+
+                <nav class="nav" id="mainNav">
+                    <button class="nav-item active" data-category="all">
+                        <span class="nav-icon">✦</span>
+                        <span>הכל</span>
+                    </button>
+                    <button class="nav-item" data-category="chocolate">
+                        <span class="nav-icon">🍫</span>
+                        <span>שוקולד</span>
+                    </button>
+                    <button class="nav-item" data-category="flour">
+                        <span class="nav-icon">🌾</span>
+                        <span>קמחים</span>
+                    </button>
+                </nav>
+
+                <button class="mobile-toggle" id="mobileToggle" aria-label="תפריט">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <button class="mobile-nav-item active" data-category="all">
+                <span class="nav-icon">✦</span>
+                <span>כל המוצרים</span>
+            </button>
+            <button class="mobile-nav-item" data-category="chocolate">
+                <span class="nav-icon">🍫</span>
+                <span>שוקולד וקקאו</span>
+            </button>
+            <button class="mobile-nav-item" data-category="flour">
+                <span class="nav-icon">🌾</span>
+                <span>קמחים לאפייה</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">👑</span>
+                    <span>נבחר עבור 56,000 חברי קהילה</span>
+                </div>
+                <h1 class="hero-title">
+                    מוצרים כשרים
+                    <span class="title-accent">שנבחרו בקפידה עבורכם</span>
+                </h1>
+                <p class="hero-tagline">״כי אתם מגיעים רק את הטוב ביותר״</p>
+                <p class="hero-text">
+                    בחרנו, טעמנו ובדקנו — כדי שתוכלו לאפות בראש שקט.
+                    <br>רק הכשרים הכי מהימנים. רק מה שהיינו קונים בעצמנו.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalCount">0</span>
+                        <span class="stat-label">מוצרים</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">2</span>
+                        <span class="stat-label">קטגוריות</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">100%</span>
+                        <span class="stat-label">כשר מהימן</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="deco-circle"></div>
+        </div>
+    </section>
+
+    <!-- Category Title -->
+    <section class="category-header">
+        <div class="container">
+            <div class="category-title-wrap">
+                <h2 class="category-title" id="categoryTitle">כל המוצרים</h2>
+                <span class="category-count" id="categoryCount">0 מוצרים</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <main class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products injected by JS -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState">
+                <span class="empty-icon">🔍</span>
+                <h3>לא נמצאו מוצרים</h3>
+                <p>נסו קטגוריה אחרת</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">✡</div>
+                    <h3>הכשרים מהימנים</h3>
+                    <p>רק מוצרים עם OU, OK, KOF-K, Star-K, COR ועוד הכשרים מאושרים</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">💰</div>
+                    <h3>חיסכון משמעותי</h3>
+                    <p>עד 50% זול מהמחירים בארץ על מוצרים איכותיים</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🚀</div>
+                    <h3>משלוח מהיר</h3>
+                    <p>7-10 ימי עסקים ישירות עד הבית</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kosher Info -->
+    <section class="kosher-section">
+        <div class="container">
+            <div class="kosher-card">
+                <div class="kosher-header">
+                    <span class="kosher-badge">✡</span>
+                    <h3>הכשרים מאושרים בלבד</h3>
+                </div>
+                <p class="kosher-text">
+                    כל המוצרים באתר נבדקו ונבחרו בקפידה. אנו כוללים רק מוצרים עם הכשרים מהרשימה המאושרת.
+                </p>
+                <div class="kosher-tiers">
+                    <div class="tier">
+                        <span class="tier-label">הכי מהימנים:</span>
+                        <div class="tier-badges">
+                            <span class="k-badge primary">OU</span>
+                            <span class="k-badge primary">OK</span>
+                            <span class="k-badge primary">KOF-K</span>
+                            <span class="k-badge primary">Star-K</span>
+                            <span class="k-badge primary">COR</span>
+                        </div>
+                    </div>
+                    <div class="tier">
+                        <span class="tier-label">מהימנים:</span>
+                        <div class="tier-badges">
+                            <span class="k-badge">CRC</span>
+                            <span class="k-badge">MK</span>
+                            <span class="k-badge">KSA</span>
+                            <span class="k-badge">EarthKosher</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">✡ טעמים כשרים</span>
+                    <p>מבחר מוצרים כשרים איכותיים מ-iHerb<br>לקהילת הבישול הכשר הגדולה בישראל</p>
+                </div>
+                <div class="footer-disclosure">
+                    <h4>גילוי נאות</h4>
+                    <p>הקישורים באתר הם קישורי שותפים. הרכישה דרכם תומכת בפעילות הקהילה ללא עלות נוספת עבורכם.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 טעמים כשרים. נבנה באהבה לקהילה.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

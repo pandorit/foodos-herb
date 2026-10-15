@@ -721,6 +721,13 @@
               <span class="detail-label">מותג</span>
               <span class="detail-value"><a class="detail-link" id="sidebar-brand" href="#">טוען...</a></span>
             </div>
+            <div class="detail-row" id="sidebar-price-row" style="display:none;">
+              <span class="detail-label">מחיר</span>
+              <span class="detail-value" style="display:flex;flex-direction:column;gap:2px;">
+                <span id="sidebar-price-value" style="font-family:'AnerShapiro',sans-serif;font-size:1.1rem;font-weight:400;color:var(--teal-dark);line-height:1;"></span>
+                <span style="font-size:0.7rem;color:var(--text-soft);">ב-iHerb — משתנה בהתאם למשקל</span>
+              </span>
+            </div>
 
             <div class="detail-row" id="sidebar-dairy-row" style="display:none;">
               <span class="detail-label">סיווג</span>
@@ -930,6 +937,15 @@
       document.getElementById('product-name-he').textContent = product.nameHe || product.name;
       document.getElementById('product-name-en').textContent = product.name;
 
+      // ── Price (sidebar)
+      if (product.priceILS) {
+        const priceRow = document.getElementById('sidebar-price-row');
+        const priceVal = document.getElementById('sidebar-price-value');
+        const hasMultipleSizes = product.sizes && product.sizes.length > 1;
+        priceVal.textContent = (hasMultipleSizes ? 'מ-' : '') + '₪' + parseFloat(product.priceILS).toFixed(2);
+        priceRow.style.display = 'flex';
+      }
+
       // ── Descriptions
       // Short: prefer descNew (humanized) over original desc
       const shortText = product.descNew || product.desc || '';
@@ -1036,22 +1052,41 @@
       });
       btnGroup.appendChild(backBtn);
 
-      // ── See Also (alternatives)
+      // ── See Also (related products)
       if (product.seeAlso && product.seeAlso.length > 0) {
         const alts = product.seeAlso.map(id => allProducts.find(x => x.id === id)).filter(Boolean);
         if (alts.length > 0) {
           const seeAlsoWrap = document.createElement('div');
-          seeAlsoWrap.style.cssText = 'margin-top:1rem;padding:0.75rem 1rem;background:#EBF6F6;border-radius:10px;font-size:.85rem;';
-          const label = document.createElement('span');
-          label.style.cssText = 'color:#2C6360;font-weight:600;margin-left:6px;';
-          label.textContent = 'אלטרנטיבה:';
-          seeAlsoWrap.appendChild(label);
+          seeAlsoWrap.style.cssText = 'margin-top:1.2rem;padding:1rem 1.1rem;background:#EBF6F6;border-radius:12px;';
+
+          const noteText = product.seeAlsoNote || 'ראה גם:';
+          const note = document.createElement('p');
+          note.style.cssText = 'margin:0 0 0.65rem 0;font-size:0.82rem;color:#2C6360;font-weight:700;line-height:1.4;';
+          note.textContent = noteText;
+          seeAlsoWrap.appendChild(note);
+
           alts.forEach(function(alt) {
             const a = document.createElement('a');
             a.href = 'product.html?id=' + alt.id;
-            a.style.cssText = 'color:#4A9D9A;font-weight:600;text-decoration:none;';
-            const availStr = alt.available === false ? ' (לא זמין כרגע)' : ' (זמין)';
-            a.textContent = (alt.nameHe || alt.name) + ' — ' + alt.cert + availStr;
+            a.style.cssText = 'display:flex;align-items:center;gap:10px;text-decoration:none;background:white;border:1px solid #C8E4E3;border-radius:9px;padding:9px 12px;margin-bottom:6px;transition:box-shadow .15s;';
+            a.onmouseenter = function(){ this.style.boxShadow='0 2px 8px rgba(74,157,154,.15)'; };
+            a.onmouseleave = function(){ this.style.boxShadow='none'; };
+
+            const nameSpan = document.createElement('span');
+            nameSpan.style.cssText = 'flex:1;font-family:"AnerShapiro",sans-serif;font-size:1rem;color:#1A1A1A;line-height:1.3;';
+            nameSpan.textContent = alt.nameHe || alt.name;
+
+            const metaSpan = document.createElement('span');
+            metaSpan.style.cssText = 'font-size:0.72rem;color:#6B8F8E;white-space:nowrap;';
+            metaSpan.textContent = alt.cert + (alt.available === false ? ' · לא זמין' : '');
+
+            const arrow = document.createElement('span');
+            arrow.style.cssText = 'color:#4A9D9A;font-size:0.85rem;';
+            arrow.textContent = '←';
+
+            a.appendChild(nameSpan);
+            a.appendChild(metaSpan);
+            a.appendChild(arrow);
             seeAlsoWrap.appendChild(a);
           });
           btnGroup.parentElement.appendChild(seeAlsoWrap);

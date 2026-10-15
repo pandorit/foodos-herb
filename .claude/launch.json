@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "FOODOS Herb",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "7825"],
+      "port": 7825
+    }
+  ]
+}
