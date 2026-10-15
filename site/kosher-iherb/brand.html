@@ -19,6 +19,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="page-title">מותג — Foodos Online</title>
+  <script src="data/products-data.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     @font-face {
@@ -324,14 +325,27 @@
     document.getElementById('brand-title-small').textContent = brandName;
     document.getElementById('bc-brand').textContent = brandName;
 
-    // Load both data files in parallel
-    if (location.protocol === 'file:') throw new Error('file-protocol');
-    const [productsRes, brandsRes] = await Promise.all([
-      fetch('data/products_explained_human_descriptions.json'),
-      fetch('data/brands_with_descriptions2.json')
-    ]);
-    const allProducts = (await productsRes.json()).filter(p => !p.suspended);
-    const allBrands   = await brandsRes.json();
+    // Load products: merge JS base with JSON overrides
+    let baseProducts = window.FOODOS_PRODUCTS || [];
+    let allBrands = [];
+    let allProducts = baseProducts;
+    try {
+      const [productsRes, brandsRes] = await Promise.all([
+        fetch('data/products_explained_human_descriptions.json'),
+        fetch('data/brands_with_descriptions2.json')
+      ]);
+      if (productsRes.ok) {
+        const jsonProducts = await productsRes.json();
+        const overrideMap = {};
+        jsonProducts.forEach(p => { overrideMap[p.id] = p; });
+        allProducts = baseProducts.map(p => overrideMap[p.id] ? Object.assign({}, p, overrideMap[p.id]) : p);
+        jsonProducts.forEach(p => { if (!baseProducts.find(b => b.id === p.id)) allProducts.push(p); });
+      }
+      if (brandsRes.ok) allBrands = await brandsRes.json();
+    } catch(e) {
+      console.warn('Could not fetch data, using embedded:', e.message);
+    }
+    allProducts = allProducts.filter(p => !p.suspended);
 
     // Find brand info
     const brandInfo = allBrands.find(b => b.brand === brandName);
