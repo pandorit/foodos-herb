@@ -19,6 +19,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="page-title">קטגוריה — Foodos Online</title>
+  <meta id="meta-description" name="description" content="מוצרים כשרים מאומתים מ-iHerb עם משלוח ישיר לישראל — נבדקו ידנית על ידי קהילת פודוס.">
+  <meta name="robots" content="index, follow">
+  <meta id="og-title" property="og:title" content="קטגוריה — Foodos Online">
+  <meta id="og-description" property="og:description" content="מוצרים כשרים מאומתים מ-iHerb עם משלוח ישיר לישראל.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="data/products-data.js"></script>
   <style>
@@ -567,7 +573,11 @@
       return;
     }
 
-    document.title = `${catName} — Foodos Online`;
+    document.title = `${catName} כשר מ-iHerb — Foodos Online`;
+    const catDesc = catDescriptions[catName] || `מוצרים כשרים בקטגוריית ${catName} מ-iHerb עם משלוח לישראל.`;
+    document.getElementById('meta-description').setAttribute('content', catDesc);
+    document.getElementById('og-title').setAttribute('content', `${catName} כשר מ-iHerb — Foodos Online`);
+    document.getElementById('og-description').setAttribute('content', catDesc);
     document.getElementById('bc-cat').textContent = catName;
     
       // Update breadcrumb

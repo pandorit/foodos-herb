@@ -18,7 +18,14 @@
   <script src="cookie-consent.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="page-title">מוצר — FOODOS herb</title>
+  <title id="page-title">מוצר כשר מ-iHerb — Foodos Online</title>
+  <meta id="meta-description" name="description" content="מוצר כשר מ-iHerb, נבדק ידנית על ידי קהילת פודוס. כשרות מאומתת, משלוח ישיר לישראל.">
+  <meta name="robots" content="index, follow">
+  <meta id="og-title" property="og:title" content="מוצר כשר מ-iHerb — Foodos Online">
+  <meta id="og-description" property="og:description" content="מוצר כשר מ-iHerb, נבדק ידנית על ידי קהילת פודוס.">
+  <meta id="og-image" property="og:image" content="">
+  <meta property="og:type" content="product">
+  <meta property="og:locale" content="he_IL">
   <!-- Embedded data — loaded first so init() can use window.FOODOS_PRODUCTS even via file:// -->
   <script src="data/products-data.js"></script>
   <script src="data/brands-data.js"></script>
@@ -934,7 +941,13 @@
 
     function renderProduct(product, brands, allProducts) {
       // ── Page title
-      document.title = (product.nameHe || product.name) + ' — FOODOS herb';
+      const productTitle = (product.nameHe || product.name) + ' כשר מ-iHerb — Foodos Online';
+      document.title = productTitle;
+      const productDesc = (product.descNew || product.desc || '').substring(0, 155) || `${product.nameHe || product.name} — מוצר כשר מ-iHerb, כשרות ${product.cert}, משלוח ישיר לישראל.`;
+      document.getElementById('meta-description').setAttribute('content', productDesc);
+      document.getElementById('og-title').setAttribute('content', productTitle);
+      document.getElementById('og-description').setAttribute('content', productDesc);
+      if (product.img) document.getElementById('og-image').setAttribute('content', product.img);
 
       // ── Breadcrumb
       const catStr = catDisplay(product.cat);
