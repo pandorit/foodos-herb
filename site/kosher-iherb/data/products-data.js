@@ -169,7 +169,20 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/fro/fro18475/d/36.jpg",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-organic-cardamom-seed-ground-2-08-oz-58-g%2F35882%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 59.59,
-    "available": true
+    "available": true,
+    "sizes": [
+      {
+        "label": "58 גרם",
+        "url": "https://www.iherb.com/pr/frontier-co-op-organic-cardamom-seed-ground-2-08-oz-58-g/35882",
+        "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-organic-cardamom-seed-ground-2-08-oz-58-g%2F35882%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1"
+      },
+      {
+        "label": "453 גרם — אריזת חסכון",
+        "url": "https://www.iherb.com/pr/frontier-co-op-organic-decorticated-cardamom-seed-ground-16-oz-453-g/30966",
+        "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-organic-decorticated-cardamom-seed-ground-16-oz-453-g%2F30966%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+        "desc": "₪245.22 — חסכון של כ-30% ביחס למחיר ל-100 גרם"
+      }
+    ]
   },
   {
     "id": 18,
@@ -7961,7 +7974,20 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "desc": "תיבול טאקו של Frontier Co-op, 66 גרם. תערובת כמון, פפריקה, שום ואורגנו ללא מלח מוסף ובלי MSG. KSA כשר.",
     "descNew": "תיבול טאקו של Frontier Co-op: אריזה נוחה לשימוש יומיומי. מצוין לבשר טחון, שעועית שחורה וירקות שורש. KSA כשר.",
-    "_descStatus": "approved"
+    "_descStatus": "approved",
+    "sizes": [
+      {
+        "label": "66 גרם",
+        "url": "https://www.iherb.com/pr/frontier-co-op-taco-seasoning-2-33-oz-66-g/35368",
+        "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-taco-seasoning-2-33-oz-66-g%2F35368%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1"
+      },
+      {
+        "label": "453 גרם — אריזת חסכון",
+        "url": "https://www.iherb.com/pr/frontier-co-op-organic-taco-seasoning-16-oz-453-g/30991",
+        "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Ffrontier-co-op-taco-seasoning-16-oz-453-g%2F30991%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+        "desc": "₪62.30 — חסכון של כ-56% ביחס למחיר ל-100 גרם"
+      }
+    ]
   },
   {
     "id": 527,
