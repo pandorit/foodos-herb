@@ -427,7 +427,7 @@
             ${p.priceILS ? `<div class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</div>` : ''}
             <div class="card-desc">${(p.descNew||p.desc||'').replace(/\s*—\s*/g, ', ')}</div>
             <div class="card-btns">
-              <a href="product.html?id=${p.id}" class="card-btn-secondary">לדף המוצר</a>
+              <a href="product.html?id=${p.id}" class="card-btn-secondary">דף המוצר</a>
               <a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">לחנות iHerb ←</a>
             </div>
           </div>
