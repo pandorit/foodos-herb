@@ -122,11 +122,11 @@
     .card-cat-txt a { color: inherit; }
     .card-name { font-family: var(--serif); font-size: 0.92rem; font-weight: 700; line-height: 1.35; color: var(--text); margin-bottom: 7px; }
     .card-desc { font-size: 0.78rem; color: var(--text-soft); line-height: 1.5; margin-bottom: 0.7rem; }
-    .card-btns { display: flex; gap: 6px; }
-    .card-btn { display: flex; align-items: center; justify-content: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: background .18s; flex: 1; }
+    .card-btns { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+    .card-btn { display: flex; align-items: center; justify-content: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: background .18s; width: 100%; }
     .card-btn:hover { background: var(--teal-mid); }
-    .card-btn-secondary { display: flex; align-items: center; justify-content: center; gap: 5px; background: transparent; color: var(--teal-dark); border: 1.5px solid var(--teal-dark); font-size: 0.78rem; font-weight: 600; padding: 8px 14px; border-radius: var(--radius-pill); transition: all .18s; flex: 1; }
-    .card-btn-secondary:hover { background: var(--teal-light); }
+    .card-btn-secondary { font-size: 0.73rem; color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
+    .card-btn-secondary:hover { color: var(--teal-dark); }
     .card-name-en { font-size: 0.67rem; color: var(--text-soft); margin-bottom: 6px; }
     .card-price { font-size: 0.8rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.45rem; }
     .card-unavailable .card-img-wrap { filter: grayscale(55%); opacity: .8; }
