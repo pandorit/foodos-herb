@@ -317,7 +317,20 @@
       "Bash(Select-String -Path \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\\\\site\\\\foodos-herb-homepage.html\" -Pattern \"cat-cards-row|cat-scroll\")",
       "Bash(Select-Object -First 10)",
       "Bash(python3 -m http.server 7825)",
-      "Bash(echo \"Server PID: $!\")"
+      "Bash(echo \"Server PID: $!\")",
+      "Bash(nohup python3 *)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:7824/foodos-herb-homepage.html)",
+      "Bash(python3 -m http.server 7824 --directory \"/c/Users/zoheret/OneDrive/מסמכים/claude-code/FOODOS/KOSHER IHERB/site\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:7824/)",
+      "WebFetch(domain:ugc.iherb.com)",
+      "WebFetch(domain:catalog.iherb.com)",
+      "Bash(curl -s --max-time 30 \"https://feeds.performancehorizon.com/zoheret_foodos/1100l435/d308f21607a39260041b4a256cb066b4\")",
+      "Bash(node -e \"const data = require\\('C:/Users/zoheret/OneDrive/\\\\u05de\\\\u05e1\\\\u05de\\\\u05db\\\\u05d9\\\\u05dd/claude-code/FOODOS/KOSHER IHERB/site/kosher-iherb/data/products-data.js'\\); const ids=[14,16,50,189,516,520,521,525,527]; ids.forEach\\(id=>{const p=data.find\\(x=>x.id===id\\); if\\(p\\) console.log\\('ID',id,'nameHe:',p.nameHe,'suspended:',p.suspended,'cert:',p.cert\\); else console.log\\('ID',id,'NOT FOUND'\\);}\\);\")",
+      "Bash(dir /s /b \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\")",
+      "Bash(findstr /i \"brand מותג\")",
+      "Bash(dir /b \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\\\\site\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); try { JSON.parse\\(fs.readFileSync\\('C:/Users/zoheret/OneDrive/מסמכים/claude-code/FOODOS/KOSHER IHERB/site/kosher-iherb/data/brands.json','utf8'\\)\\); console.log\\('JSON valid'\\); } catch\\(e\\) { console.error\\('JSON error:', e.message\\); }\")"
     ]
   }
 }

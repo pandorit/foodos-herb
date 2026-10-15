@@ -7886,8 +7886,8 @@ window.FOODOS_PRODUCTS = [
     "priceILS": 14.46,
     "available": true,
     "dairy": false,
-    "desc": "אבקת בצל אורגנית מ-California Gold Nutrition. מבצל אמריקאי, לא מקורן, לא עובד ב-ETO. OU כשר.",
-    "descNew": "CGN אבקת בצל אורגנית: בסיס לכל מתכון שדורש טעם בצל מרוכז. CGN Foods אורגני, לא מקורן, OU כשר.",
+    "desc": "אבקת בצל אורגנית מ-California Gold Nutrition. מבצל אמריקאי, ללא שימוש בחומרים כימיים לסטריליזציה. OU כשר.",
+    "descNew": "CGN אבקת בצל אורגנית: בסיס לכל מתכון שדורש טעם בצל מרוכז. אורגני, OU כשר.",
     "_descStatus": "approved"
   },
   {
