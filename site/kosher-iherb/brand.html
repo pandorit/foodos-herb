@@ -112,7 +112,7 @@
 
     /* ── PRODUCT GRID ── */
     .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
-    .product-card { background: var(--card-bg); border-radius: var(--radius-lg); overflow: hidden; transition: transform .22s, box-shadow .22s; }
+    .product-card { background: var(--card-bg); border-radius: var(--radius-lg); overflow: hidden; transition: transform .22s, box-shadow .22s; cursor: pointer; }
     .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .card-img-wrap { background: white; height: 170px; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid rgba(0,0,0,.04); }
     .card-emoji { font-size: 4rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,.08)); }
@@ -122,11 +122,8 @@
     .card-cat-txt a { color: inherit; }
     .card-name { font-family: var(--serif); font-size: 0.92rem; font-weight: 700; line-height: 1.35; color: var(--text); margin-bottom: 7px; }
     .card-desc { font-size: 0.78rem; color: var(--text-soft); line-height: 1.5; margin-bottom: 0.7rem; }
-    .card-btns { display: flex; flex-direction: column; gap: 6px; align-items: center; }
     .card-btn { display: flex; align-items: center; justify-content: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: background .18s; width: 100%; }
     .card-btn:hover { background: var(--teal-mid); }
-    .card-btn-secondary { font-size: 0.73rem; color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
-    .card-btn-secondary:hover { color: var(--teal-dark); }
     .card-name-en { font-size: 0.67rem; color: var(--text-soft); margin-bottom: 6px; }
     .card-price { font-size: 0.8rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.45rem; }
     .card-unavailable .card-img-wrap { filter: grayscale(55%); opacity: .8; }
@@ -410,8 +407,8 @@
       const shortName = parts.length > 1 ? parts.slice(1, parts.length > 2 ? -1 : undefined).join(',').trim() : p.name;
       const cat = Array.isArray(p.cat) ? p.cat[0] : (p.cat||'');
       return `
-        <div class="product-card${p.available === false ? ' card-unavailable' : ''}">
-          <div class="card-img-wrap" style="cursor:pointer" onclick="window.location.href='product.html?id=${p.id}'">
+        <div class="product-card${p.available === false ? ' card-unavailable' : ''}" onclick="window.location.href='product.html?id=${p.id}'">
+          <div class="card-img-wrap">
             ${p.img
               ? `<img src="${p.img}" alt="${(p.nameHe||p.name||'').replace(/"/g,'')}" style="width:100%;height:100%;object-fit:contain;padding:12px" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
               : ''}
@@ -421,15 +418,10 @@
           </div>
           <div class="card-body">
             <div class="card-cat-txt"><a href="category.html?cat=${encodeURIComponent(cat)}">${cat}</a></div>
-            <a href="product.html?id=${p.id}" style="text-decoration:none;color:inherit">
             ${p.nameHe ? `<div class="card-name">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>` : `<div class="card-name" dir="auto">${shortName}</div>`}
-            </a>
             ${p.priceILS ? `<div class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</div>` : ''}
             <div class="card-desc">${(p.descNew||p.desc||'').replace(/\s*—\s*/g, ', ')}</div>
-            <div class="card-btns">
-              <a href="product.html?id=${p.id}" class="card-btn-secondary">דף המוצר</a>
-              <a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">לחנות iHerb ←</a>
-            </div>
+            <a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn" onclick="event.stopPropagation()">לחנות iHerb ←</a>
           </div>
         </div>`;
     }).join('');
