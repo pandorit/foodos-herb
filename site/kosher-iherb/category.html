@@ -595,13 +595,19 @@
       document.querySelector('.cat-hero').style.background = catBg[catName];
     }
 
-    // Load products — prefer pre-loaded JS (works from file://) then fetch
-    let rawProducts;
-    if (window.FOODOS_PRODUCTS) {
-      rawProducts = window.FOODOS_PRODUCTS;
-    } else {
+    // Load products — start with embedded JS, then merge JSON overrides on top
+    let rawProducts = window.FOODOS_PRODUCTS || [];
+    try {
       const res = await fetch('data/products_explained_human_descriptions.json');
-      rawProducts = await res.json();
+      if (res.ok) {
+        const jsonProducts = await res.json();
+        const overrideMap = {};
+        jsonProducts.forEach(p => { overrideMap[p.id] = p; });
+        rawProducts = rawProducts.map(p => overrideMap[p.id] ? Object.assign({}, p, overrideMap[p.id]) : p);
+        jsonProducts.forEach(p => { if (!rawProducts.find(b => b.id === p.id)) rawProducts.push(p); });
+      }
+    } catch (e) {
+      console.warn('Could not fetch products JSON, using embedded data:', e.message);
     }
     const allProducts = rawProducts.filter(p => !p.suspended);
 

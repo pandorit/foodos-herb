@@ -868,26 +868,40 @@
 
       let products, brands;
 
-      // Use embedded data (works with file:// and http://)
-      if (window.FOODOS_PRODUCTS && window.FOODOS_BRANDS) {
-        products = window.FOODOS_PRODUCTS;
-        brands   = window.FOODOS_BRANDS;
-      } else {
-        // Fallback: fetch from server (requires http://)
-        try {
-          const [pRes, bRes] = await Promise.all([
-            fetch('data/products_explained_human_descriptions.json'),
-            fetch('data/brands.json')
-          ]);
-          if (!pRes.ok) throw new Error('products fetch failed: ' + pRes.status);
-          if (!bRes.ok) throw new Error('brands fetch failed: ' + bRes.status);
-          products = await pRes.json();
-          brands   = await bRes.json();
-        } catch (e) {
-          showError('שגיאה בטעינת נתוני המוצרים. אנא רעננו את הדף.');
-          console.error(e);
-          return;
+      // Always start with the embedded JS data (works with file:// too)
+      let baseProducts = window.FOODOS_PRODUCTS || [];
+      brands = window.FOODOS_BRANDS || {};
+
+      // Then fetch the admin-editable JSON and merge it on top (JSON wins for any field it defines)
+      try {
+        const [pRes, bRes] = await Promise.all([
+          fetch('data/products_explained_human_descriptions.json'),
+          fetch('data/brands.json')
+        ]);
+        if (pRes.ok) {
+          const jsonProducts = await pRes.json();
+          // Build a map of JSON overrides keyed by id
+          const overrideMap = {};
+          jsonProducts.forEach(p => { overrideMap[p.id] = p; });
+          // Merge: JSON fields override JS fields for matching ids
+          products = baseProducts.map(p => overrideMap[p.id] ? Object.assign({}, p, overrideMap[p.id]) : p);
+          // Also include any products that exist only in JSON (not in JS)
+          jsonProducts.forEach(p => {
+            if (!baseProducts.find(b => b.id === p.id)) products.push(p);
+          });
+        } else {
+          products = baseProducts;
         }
+        if (bRes.ok) brands = await bRes.json();
+      } catch (e) {
+        // JSON fetch failed — fall back to embedded JS data only
+        products = baseProducts;
+        console.warn('Could not fetch products JSON, using embedded data:', e.message);
+      }
+
+      if (!products.length) {
+        showError('שגיאה בטעינת נתוני המוצרים. אנא רעננו את הדף.');
+        return;
       }
 
       const product = products.find(p => p.id === productId);
