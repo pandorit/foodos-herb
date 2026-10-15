@@ -408,17 +408,19 @@
       const cat = Array.isArray(p.cat) ? p.cat[0] : (p.cat||'');
       return `
         <div class="product-card${p.available === false ? ' card-unavailable' : ''}">
-          <div class="card-img-wrap">
+          <div class="card-img-wrap" style="cursor:pointer" onclick="window.location.href='product.html?id=${p.id}'">
             ${p.img
               ? `<img src="${p.img}" alt="${(p.nameHe||p.name||'').replace(/"/g,'')}" style="width:100%;height:100%;object-fit:contain;padding:12px" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
               : ''}
             <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
-            <a href="cert.html?c=${encodeURIComponent(p.cert||'')}" class="cert-badge-abs" style="background:${cc}">${p.cert}</a>
+            <a href="cert.html?c=${encodeURIComponent(p.cert||'')}" class="cert-badge-abs" style="background:${cc}" onclick="event.stopPropagation()">${p.cert}</a>
             ${p.available === false ? '<span class="badge-unavailable">אזל מהמלאי</span>' : ''}
           </div>
           <div class="card-body">
             <div class="card-cat-txt"><a href="category.html?cat=${encodeURIComponent(cat)}">${cat}</a></div>
+            <a href="product.html?id=${p.id}" style="text-decoration:none;color:inherit">
             ${p.nameHe ? `<div class="card-name">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>` : `<div class="card-name" dir="auto">${shortName}</div>`}
+            </a>
             ${p.priceILS ? `<div class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</div>` : ''}
             <div class="card-desc">${(p.descNew||p.desc||'').replace(/\s*—\s*/g, ', ')}</div>
             <a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">לחנות iHerb ←</a>
