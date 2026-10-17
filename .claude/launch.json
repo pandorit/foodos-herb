@@ -4,7 +4,7 @@
     {
       "name": "FOODOS Herb",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "7825"],
+      "runtimeArgs": ["-m", "http.server", "7825", "--directory", "site"],
       "port": 7825
     }
   ]

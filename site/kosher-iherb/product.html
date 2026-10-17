@@ -717,7 +717,7 @@
             </div>
             <div class="sidebar-card-title">פרטי המוצר</div>
             <div class="detail-row">
-              <span class="detail-label">כשרות</span>
+              <span class="detail-label">כשרות מאומתת</span>
               <span class="detail-value"><a class="detail-badge" id="sidebar-cert" href="#">✡ OU</a></span>
             </div>
             <div class="detail-row">
@@ -732,23 +732,13 @@
               <span class="detail-label">מחיר</span>
               <span class="detail-value" style="display:flex;flex-direction:column;gap:2px;">
                 <span id="sidebar-price-value" style="font-family:'AnerShapiro',sans-serif;font-size:1.1rem;font-weight:400;color:var(--teal-dark);line-height:1;"></span>
-                <span style="font-size:0.7rem;color:var(--text-soft);">ב-iHerb — משתנה בהתאם למשקל</span>
+                <span id="sidebar-price-note" style="font-size:0.7rem;color:var(--text-soft);display:none;">ב-iHerb, משתנה בהתאם למשקל</span>
               </span>
             </div>
 
             <div class="detail-row" id="sidebar-dairy-row" style="display:none;">
               <span class="detail-label">סיווג</span>
               <span class="detail-value"><span class="detail-badge-dairy">🥛 חלבי</span></span>
-            </div>
-            <div class="trust-icons">
-              <div class="trust-item">
-                <span class="trust-icon">✡</span>
-                <span>כשר מאומת</span>
-              </div>
-              <div class="trust-item">
-                <span class="trust-icon">🔍</span>
-                <span>נבדק ידנית</span>
-              </div>
             </div>
           </aside>
 
@@ -968,8 +958,10 @@
       if (product.priceILS) {
         const priceRow = document.getElementById('sidebar-price-row');
         const priceVal = document.getElementById('sidebar-price-value');
+        const priceNote = document.getElementById('sidebar-price-note');
         const hasMultipleSizes = product.sizes && product.sizes.length > 1;
-        priceVal.textContent = (hasMultipleSizes ? 'מ-' : '') + '₪' + parseFloat(product.priceILS).toFixed(2);
+        priceVal.textContent = (hasMultipleSizes ? 'החל מ-' : '') + '₪' + parseFloat(product.priceILS).toFixed(2);
+        priceNote.style.display = hasMultipleSizes ? 'block' : 'none';
         priceRow.style.display = 'flex';
       }
 
