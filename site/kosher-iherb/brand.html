@@ -370,7 +370,7 @@
     ).join('');
 
     // Build certs dropdown
-    const allCertNames = [...new Set(allProducts.map(p => p.cert).filter(Boolean))].sort((a,b) => a.localeCompare(b,'en'));
+    const allCertNames = [...new Set(allProducts.map(p => p.cert).filter(c => c && c !== 'כלי מטבח'))].sort((a,b) => a.localeCompare(b,'en'));
     document.getElementById('certs-dd-list').innerHTML = allCertNames.map(c =>
       `<a href="cert.html?c=${encodeURIComponent(c)}" class="brand-dd-item">${c}</a>`
     ).join('');
@@ -380,7 +380,7 @@
 
     // Stats
     const cats  = [...new Set(products.map(p => p.cat))];
-    const certs = [...new Set(products.map(p => p.cert))];
+    const certs = [...new Set(products.map(p => p.cert).filter(c => c && c !== 'כלי מטבח'))];
     document.getElementById('stat-products').textContent = products.length;
     document.getElementById('stat-cats').textContent = cats.length;
     document.getElementById('stat-certs').textContent = certs.length;

@@ -928,8 +928,8 @@
       .hero-arrow { display: none; }
 
       /* ── TYPOGRAPHY ── */
-      .hero h1 { font-size: 2rem; }
-      .hero-sub { font-size: 0.9rem; margin-bottom: 1.4rem; }
+      .hero h1 { font-size: 2.3rem; }
+      .hero-sub { font-size: 1rem; margin-bottom: 1.4rem; }
       .hero-stats { gap: 1.2rem; flex-wrap: wrap; }
       .section-pad { padding: 3rem 0; }
     }
@@ -1173,8 +1173,8 @@
         מוצרים כשרים מ-iHERB שנבדקו ידנית, ג'אדטים קולינריים והמלצות מרחבי הרשת.
       </p>
       <div class="hero-btns">
-        <a href="#" class="btn-hero">גלו את המוצרים ←</a>
-        <a href="#" class="btn-hero-outline">על הפרויקט</a>
+        <a href="#products" class="btn-hero">גלו את המוצרים ←</a>
+        <a href="kosher-iherb/about.html" class="btn-hero-outline">על הפרויקט</a>
       </div>
       <div class="hero-stats">
         <div class="hstat">
@@ -1568,7 +1568,7 @@
           <li><a href="#">קטגוריות</a></li>
           <li><a href="kosher-iherb/certs.html">הכשרויות המאושרות</a></li>
           <li><a href="#">מוצרים חדשים</a></li>
-          <li><a href="#">על הפרויקט</a></li>
+          <li><a href="kosher-iherb/about.html">על הפרויקט</a></li>
         </ul>
       </div>
       <div>
@@ -1691,7 +1691,7 @@
   function updateHeroStats() {
     const total = allProducts.length;
     const cats  = new Set(allProducts.map(p => p.cat).filter(Boolean)).size;
-    const certs = new Set(allProducts.map(p => p.cert).filter(Boolean)).size;
+    const certs = new Set(allProducts.map(p => p.cert).filter(c => c && c !== 'כלי מטבח')).size;
     // Update all occurrences of the product count
     ['hero-kicker-count','stat-products','testi-count','ticker-count'].forEach(id => {
       const el = document.getElementById(id);
@@ -1834,14 +1834,11 @@
   function buildCertPills() {
     const seen = new Set();
     const certs = ['הכל'];
-    allProducts.forEach(p => { if(p.cert && !seen.has(p.cert)){seen.add(p.cert);certs.push(p.cert);} });
+    allProducts.forEach(p => { if(p.cert && p.cert !== 'כלי מטבח' && !seen.has(p.cert)){seen.add(p.cert);certs.push(p.cert);} });
     certs.sort((a,b) => a==='הכל'?-1:b==='הכל'?1:a.localeCompare(b));
     document.getElementById('cert-pills').innerHTML = certs.map(c => {
       if (c === 'הכל') {
         return `<button class="pill pill-sm${activeCert==='הכל'?' active':''}" onclick="setCert(this,'הכל')">הכל</button>`;
-      }
-      if (c === 'כלי מטבח') {
-        return `<a class="pill pill-sm" href="kosher-iherb/category.html?cat=${encodeURIComponent(c)}">${c}</a>`;
       }
       return `<a class="pill pill-sm" href="kosher-iherb/cert.html?c=${encodeURIComponent(c)}">${c}</a>`;
     }).join('');
@@ -2119,8 +2116,8 @@
 
     // Certs (with cert count)
     const certCount = {};
-    allProducts.forEach(p => { if(p.cert) certCount[p.cert] = (certCount[p.cert]||0)+1; });
-    const certs = [...new Set(allProducts.map(p => p.cert).filter(Boolean))]
+    allProducts.forEach(p => { if(p.cert && p.cert !== 'כלי מטבח') certCount[p.cert] = (certCount[p.cert]||0)+1; });
+    const certs = [...new Set(allProducts.map(p => p.cert).filter(c => c && c !== 'כלי מטבח'))]
       .sort((a,b) => (certCount[b]||0)-(certCount[a]||0));
     document.getElementById('dd-certs-list').innerHTML = certs.map(c =>
       `<a href="kosher-iherb/cert.html?c=${encodeURIComponent(c)}" class="nav-dd-item">

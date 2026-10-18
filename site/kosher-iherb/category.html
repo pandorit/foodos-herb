@@ -633,7 +633,7 @@
 
     // Stats
     const brandSet = new Set(catProducts.map(p => p.brand).filter(Boolean));
-    const certSet  = new Set(catProducts.map(p => p.cert).filter(Boolean));
+    const certSet  = new Set(catProducts.map(p => p.cert).filter(c => c && c !== 'כלי מטבח'));
     document.getElementById('stat-products').textContent = catProducts.length;
     document.getElementById('stat-brands').textContent   = brandSet.size;
     document.getElementById('stat-certs').textContent    = certSet.size;

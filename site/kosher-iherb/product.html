@@ -921,7 +921,7 @@
         `<a class="nav-dd-item" href="brand.html?b=${encodeURIComponent(b)}">${b}</a>`
       ).join('');
       // Certs
-      const certNames = [...new Set(active.map(p => p.cert).filter(Boolean))].sort();
+      const certNames = [...new Set(active.map(p => p.cert).filter(c => c && c !== 'כלי מטבח'))].sort();
       document.getElementById('certs-dd-list').innerHTML = certNames.map(c =>
         `<a class="nav-dd-item" href="cert.html?cert=${encodeURIComponent(c)}">${c}</a>`
       ).join('');
