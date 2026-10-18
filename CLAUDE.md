@@ -16,6 +16,23 @@
 
 ---
 
+## CRITICAL — המילה "HERB" אסורה בלוגו ובדומיין
+
+**המילה "HERB" (או "herb") אסורה לחלוטין כחלק מהלוגו, שם המותג, או הדומיין הגלוי.**
+שם המותג התקני היחיד הוא **"FOODOS Online"** (עם לוגו העיגול הטיל, קובץ `FOODOS_online2_LOGO.png`).
+
+- אסור: לוגו/כותרת/תגית/aria-label/title-tag עם "FOODOS herb", "herb", או וריאציה דומה.
+- `kosher-iherb` הוא שם תיקייה טכני פנימי בלבד ואסור שיופיע ללקוח כשם מותג.
+
+**איפה כן מותר שהמילה "herb"/"iHerb" תופיע:**
+- בנתיב ה-URL עצמו: `online.foodos.co.il/kosher-iherb` (אושר על ידי iHerb, זה לא שם המותג אלא נתיב טכני).
+- בדף "אודות" (`about.html`), כשמדברים על הקשר לחברת iHerb האמיתית.
+- בטקסט תיאורי בעמוד הבית שמסביר את אופי האתר ומניין מגיעים המוצרים (כלומר, אזכור לגיטימי של "iHerb" כחברה/ספק, לא כחלק מהמותג של פודוס עצמו).
+
+נתגלה ותוקן באוקטובר 2026: קבצי `index.html`, `404.html`, `product.html`, `terms.html`, `privacy.html`, `accessibility.html` ו-`about.html` כולם הכילו שרידי לוגו ישנים עם המילה "herb" חשופה (בתג `<title>`, בתווית הלוגו בניווט, ובפירורי לחם). כל אלה הוחלפו בלוגו האמיתי (`<img class="logo-img">`).
+
+---
+
 ## Approved Kosher Certifications
 
 **Most Reliable:** OU, OK, KOF-K, Star-K, COR

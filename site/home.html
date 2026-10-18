@@ -21,9 +21,9 @@
   <title>Foodos Online — מוצרים כשרים מ-iHerb עם משלוח לישראל</title>
   <meta name="description" content="340+ מוצרי מזון כשרים מ-iHerb שנבדקו ידנית על ידי קהילת פודוס. כשרות OU, OK, KOF-K ועוד — עם משלוח ישיר לישראל.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://online.foodos.co.il/foodos-herb-homepage">
+  <link rel="canonical" href="https://online.foodos.co.il/home">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://online.foodos.co.il/foodos-herb-homepage">
+  <meta property="og:url" content="https://online.foodos.co.il/home">
   <meta property="og:title" content="Foodos Online — מוצרים כשרים מ-iHerb עם משלוח לישראל">
   <meta property="og:description" content="340+ מוצרי מזון כשרים מ-iHerb שנבדקו ידנית על ידי קהילת פודוס. כשרות OU, OK, KOF-K ועוד — עם משלוח ישיר לישראל.">
   <meta property="og:locale" content="he_IL">
@@ -2099,7 +2099,7 @@
         const count = allProducts.filter(t.test).length;
         const href = lifestylePages[t.key]
           ? lifestylePages[t.key]
-          : `foodos-herb-homepage.html?tag=${encodeURIComponent(t.key)}#products`;
+          : `home.html?tag=${encodeURIComponent(t.key)}#products`;
         return `<a href="${href}" class="nav-dd-item" style="display:flex;justify-content:space-between;align-items:center">
           <span>${t.icon} ${t.key}</span>
           <span style="color:var(--text-soft);font-size:.72rem;background:var(--teal-light);padding:1px 7px;border-radius:99px;font-weight:600;margin-right:.5rem">${count}</span>

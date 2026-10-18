@@ -86,17 +86,7 @@
       overflow: visible;
     }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-    .logo-circle {
-      width: 44px; height: 44px;
-      background: var(--teal);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 8px rgba(74,157,154,.3);
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
+    .logo-img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 8px rgba(74,157,154,.2); flex-shrink: 0; }
     .logo-name {
       font-family: var(--serif); font-size: 1.05rem; font-weight: 700;
       color: var(--text); line-height: 1.1;
@@ -622,15 +612,15 @@
   <!-- NAV -->
   <nav class="nav" role="navigation" aria-label="ניווט ראשי">
     <div class="nav-inner">
-      <a href="../foodos-herb-homepage.html" class="logo" aria-label="FOODOS herb בית">
-        <div class="logo-circle">פ</div>
+      <a href="../home.html" class="logo" aria-label="FOODOS Online בית">
+        <img src="../FOODOS_online2_LOGO.png" alt="FOODOS Online" class="logo-img">
         <div class="logo-name">
-          FOODOS herb
+          FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
           <small>מדריך מוצרים כשרים</small>
         </div>
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="../foodos-herb-homepage.html#products">מוצרים</a></li>
+        <li><a href="../home.html#products">מוצרים</a></li>
         <li class="nav-has-dd">
           <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'cats-dd-panel')">קטגוריות ▾</a>
           <div class="nav-dropdown-panel" id="cats-dd-panel">
@@ -649,7 +639,7 @@
             <div class="nav-dd-list" id="certs-dd-list"></div>
           </div>
         </li>
-        <li><a href="../foodos-herb-homepage.html#values">על הפרויקט</a></li>
+        <li><a href="../home.html#values">על הפרויקט</a></li>
         <li><a href="https://il.iherb.com" target="_blank" rel="noopener noreferrer sponsored" class="nav-cta">לחנות iHerb ←</a></li>
       </ul>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="תפריט" onclick="toggleNav()">☰</button>
@@ -659,7 +649,7 @@
   <!-- BREADCRUMB -->
   <div class="breadcrumb-bar" id="breadcrumb-bar">
     <div class="breadcrumb-inner">
-      <a href="../foodos-herb-homepage.html">FOODOS herb</a>
+      <a href="../home.html">בית</a>
       <span class="breadcrumb-sep">←</span>
       <span id="breadcrumb-cat-link"><a href="#" id="breadcrumb-cat">קטגוריה</a></span>
       <span class="breadcrumb-sep">←</span>
@@ -681,7 +671,7 @@
       <div class="error-emoji">🔍</div>
       <h1 class="error-title">המוצר לא נמצא</h1>
       <p class="error-msg" id="error-msg">לא הצלחנו למצוא את המוצר המבוקש. ייתכן שהקישור שגוי או שהמוצר הוסר.</p>
-      <a href="../foodos-herb-homepage.html" class="btn-primary" style="display:inline-flex;">חזרה לדף הבית</a>
+      <a href="../home.html" class="btn-primary" style="display:inline-flex;">חזרה לדף הבית</a>
     </div>
 
     <!-- Product content (hidden until loaded) -->
@@ -1351,7 +1341,7 @@
       FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
     </div>
     <ul style="display:flex;gap:1.5rem;list-style:none;">
-      <li><a href="../foodos-herb-homepage.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">דף הבית</a></li>
+      <li><a href="../home.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">דף הבית</a></li>
       <li><a href="certs.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">הכשרויות</a></li>
       <li><a href="../privacy.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">פרטיות</a></li>
       <li><a href="../terms.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">תנאי שימוש</a></li>
