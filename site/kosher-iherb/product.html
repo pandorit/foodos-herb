@@ -730,6 +730,11 @@
               <span class="detail-label">סיווג</span>
               <span class="detail-value"><span class="detail-badge-dairy">🥛 חלבי</span></span>
             </div>
+
+            <div class="detail-row" id="sidebar-availability-row" style="display:none;">
+              <span class="detail-label">זמינות</span>
+              <span class="detail-value"><span style="background:#9CA3AF;color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:999px;">אזל מהמלאי</span></span>
+            </div>
           </aside>
 
         </div>
@@ -1030,12 +1035,18 @@
         });
       } else if (product.affiliateUrl || product.url) {
         const a = document.createElement('a');
-        a.className = 'btn-primary';
-        a.href = product.affiliateUrl || product.url;
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer sponsored';
         const priceStr = product.priceILS ? ' — ₪' + parseFloat(product.priceILS).toFixed(2) : '';
-        a.textContent = 'לרכישה ב-iHerb' + priceStr + ' ←';
+        if (product.available === false) {
+          a.className = 'btn-secondary';
+          a.style.cssText = 'opacity:.45;cursor:default;pointer-events:none';
+          a.textContent = 'אזל מהמלאי כרגע';
+        } else {
+          a.className = 'btn-primary';
+          a.href = product.affiliateUrl || product.url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer sponsored';
+          a.textContent = 'לרכישה ב-iHerb' + priceStr + ' ←';
+        }
         btnGroup.appendChild(a);
       }
 
@@ -1118,6 +1129,10 @@
 
       if (product.dairy) {
         document.getElementById('sidebar-dairy-row').style.display = 'flex';
+      }
+
+      if (product.available === false) {
+        document.getElementById('sidebar-availability-row').style.display = 'flex';
       }
 
       // ── Show product content
