@@ -220,6 +220,13 @@
     .btn-group {
       display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem;
     }
+    .product-report-btn {
+      display: block; width: 100%; background: none; border: none;
+      color: var(--text-soft, #8a8a8a); font-family: var(--sans); font-size: 0.78rem;
+      font-weight: 500; padding: 4px 0; margin-top: 4px; cursor: pointer;
+      text-align: center; transition: color .15s;
+    }
+    .product-report-btn:hover { color: #e85d04; }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 6px;
       background: var(--teal); color: white;
@@ -612,15 +619,15 @@
   <!-- NAV -->
   <nav class="nav" role="navigation" aria-label="ניווט ראשי">
     <div class="nav-inner">
-      <a href="../home.html" class="logo" aria-label="FOODOS Online בית">
+      <a href="index.html" class="logo" aria-label="FOODOS Online בית">
         <img src="../FOODOS_online2_LOGO.png" alt="FOODOS Online" class="logo-img">
         <div class="logo-name">
           FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
-          <small>מדריך מוצרים כשרים</small>
+          <small>כשר, שווה וקולינרי - זה כאן.</small>
         </div>
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="../home.html#products">מוצרים</a></li>
+        <li><a href="index.html#products">מוצרים</a></li>
         <li class="nav-has-dd">
           <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'cats-dd-panel')">קטגוריות ▾</a>
           <div class="nav-dropdown-panel" id="cats-dd-panel">
@@ -639,7 +646,7 @@
             <div class="nav-dd-list" id="certs-dd-list"></div>
           </div>
         </li>
-        <li><a href="../home.html#values">על הפרויקט</a></li>
+        <li><a href="index.html#values">על הפרויקט</a></li>
         <li><a href="https://il.iherb.com" target="_blank" rel="noopener noreferrer sponsored" class="nav-cta">לחנות iHerb ←</a></li>
       </ul>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="תפריט" onclick="toggleNav()">☰</button>
@@ -649,7 +656,7 @@
   <!-- BREADCRUMB -->
   <div class="breadcrumb-bar" id="breadcrumb-bar">
     <div class="breadcrumb-inner">
-      <a href="../home.html">בית</a>
+      <a href="index.html">בית</a>
       <span class="breadcrumb-sep">←</span>
       <span id="breadcrumb-cat-link"><a href="#" id="breadcrumb-cat">קטגוריה</a></span>
       <span class="breadcrumb-sep">←</span>
@@ -671,7 +678,7 @@
       <div class="error-emoji">🔍</div>
       <h1 class="error-title">המוצר לא נמצא</h1>
       <p class="error-msg" id="error-msg">לא הצלחנו למצוא את המוצר המבוקש. ייתכן שהקישור שגוי או שהמוצר הוסר.</p>
-      <a href="../home.html" class="btn-primary" style="display:inline-flex;">חזרה לדף הבית</a>
+      <a href="index.html" class="btn-primary" style="display:inline-flex;">חזרה לדף הבית</a>
     </div>
 
     <!-- Product content (hidden until loaded) -->
@@ -1012,16 +1019,15 @@
 
           const a = document.createElement('a');
           const isAvailable = size.available !== false;
+          a.href = size.affiliateUrl || size.url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer sponsored';
           if (isAvailable) {
             a.className = 'btn-primary';
-            a.href = size.affiliateUrl || size.url;
-            a.target = '_blank';
-            a.rel = 'noopener noreferrer sponsored';
             a.textContent = 'לרכישה ב-iHerb (' + size.label + ') ←';
           } else {
             a.className = 'btn-secondary';
-            a.style.cssText = 'opacity:.45;cursor:default;pointer-events:none';
-            a.textContent = size.label + ' — לא זמין כרגע';
+            a.textContent = size.label + ' — אזל מהמלאי, לבדיקת זמינות ב-iHerb ←';
           }
           wrap.appendChild(a);
 
@@ -1036,15 +1042,14 @@
       } else if (product.affiliateUrl || product.url) {
         const a = document.createElement('a');
         const priceStr = product.priceILS ? ' — ₪' + parseFloat(product.priceILS).toFixed(2) : '';
+        a.href = product.affiliateUrl || product.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer sponsored';
         if (product.available === false) {
           a.className = 'btn-secondary';
-          a.style.cssText = 'opacity:.45;cursor:default;pointer-events:none';
-          a.textContent = 'אזל מהמלאי כרגע';
+          a.textContent = 'אזל מהמלאי, לבדיקת זמינות ב-iHerb ←';
         } else {
           a.className = 'btn-primary';
-          a.href = product.affiliateUrl || product.url;
-          a.target = '_blank';
-          a.rel = 'noopener noreferrer sponsored';
           a.textContent = 'לרכישה ב-iHerb' + priceStr + ' ←';
         }
         btnGroup.appendChild(a);
@@ -1071,6 +1076,21 @@
         }
       });
       btnGroup.appendChild(backBtn);
+
+      // ── Report cert removal
+      const reportBtn = document.createElement('button');
+      reportBtn.className = 'product-report-btn';
+      reportBtn.type = 'button';
+      reportBtn.textContent = '🚩 דווח על הסרת כשרות';
+      reportBtn.addEventListener('click', function() {
+        const msg = 'שלום! דיווח על בעיית כשרות:\n' +
+          'מוצר: ' + (product.nameHe || product.name) + '\n' +
+          'קוד: #' + product.id + '\n' +
+          'כשרות נוכחית: ' + (product.cert || '') +
+          (product.url ? '\nלינק: ' + product.url : '');
+        window.open('https://wa.me/972506543718?text=' + encodeURIComponent(msg), '_blank');
+      });
+      btnGroup.appendChild(reportBtn);
 
       // ── See Also (related products)
       if (product.seeAlso && product.seeAlso.length > 0) {
@@ -1356,7 +1376,7 @@
       FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
     </div>
     <ul style="display:flex;gap:1.5rem;list-style:none;">
-      <li><a href="../home.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">דף הבית</a></li>
+      <li><a href="index.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">דף הבית</a></li>
       <li><a href="certs.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">הכשרויות</a></li>
       <li><a href="../privacy.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">פרטיות</a></li>
       <li><a href="../terms.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">תנאי שימוש</a></li>
@@ -1365,6 +1385,7 @@
   <div style="font-size:0.72rem;color:rgba(255,255,255,.35);text-align:center;margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.08);max-width:1160px;margin-right:auto;margin-left:auto;padding-right:2rem;padding-left:2rem;">
     © 2026 Foodos Online · online.foodos.co.il · קישורי שותפים עם iHerb Associates
     <br>אתר זה כולל קישורי שותפים — אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
+    <br>המידע על כשרות ותזונה נבדק בקפידה, אך אינו מחליף בדיקה עצמאית מול iHerb ותווית המוצר בפועל. <a href="terms.html" style="color:rgba(255,255,255,.55);text-decoration:underline;">פרטים בתנאי השימוש</a>
   </div>
 </footer>
 <script src="https://negishot.co.il/cdn/widget.php?code=NGS_D51C06908CC9"></script>
