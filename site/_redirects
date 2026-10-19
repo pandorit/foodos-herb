@@ -1,5 +1,7 @@
 /admin              /admin/index.html              200
-/kosher-iherb/      /home.html      302
-/foodos-herb-homepage          /home.html      301
-/foodos-herb-homepage.html     /home.html      301
+/kosher-iherb       /kosher-iherb/index.html        200
+/home               /kosher-iherb/      301
+/home.html          /kosher-iherb/      301
+/foodos-herb-homepage          /kosher-iherb/      301
+/foodos-herb-homepage.html     /kosher-iherb/      301
 /*                  /404.html                        404

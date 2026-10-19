@@ -34,7 +34,7 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --teal:#4A9D9A; --teal-dark:#2C6360; --teal-light:#EBF6F6;
+      --teal:#4A9D9A; --teal-dark:#2C6360; --teal-light:#EBF6F6; --teal-xlight:#C8E8E7;
       --bg:#FFFFFF; --text:#1A1A1A; --text-mid:#3D3D3D; --text-soft:#6B7280;
       --border:#E5E7E5;
       --serif:'Playfair Display',Georgia,serif;
@@ -58,6 +58,22 @@
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
     .nav-links a:hover { color: var(--teal); text-decoration: none; }
     .nav-cta { background: var(--teal) !important; color: white !important; padding: 9px 20px; border-radius: var(--radius-pill); }
+
+    /* MEGA MENU */
+    .nav-cats-trigger { display: flex; align-items: center; gap: 4px; cursor: pointer; font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; background: none; border: none; font-family: inherit; }
+    .nav-cats-trigger:hover { color: var(--teal); }
+    .nav-cats-trigger::after { content: '▾'; font-size: 0.7rem; transition: transform .22s; }
+    .nav-cats-trigger.mega-open::after { transform: rotate(180deg); }
+    .mega-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; background: #fff; border-top: 2px solid var(--teal-xlight); border-bottom: 1px solid var(--border); box-shadow: 0 12px 40px rgba(0,0,0,.10); z-index: 199; padding: 2rem 0 2.2rem; }
+    .mega-menu.open { display: block; }
+    .mega-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; }
+    .mega-col-title { display: block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px; color: var(--teal-dark); margin-bottom: 0.9rem; padding-bottom: 0.55rem; border-bottom: 2px solid var(--teal-xlight); }
+    .mega-col a { display: block; font-size: 0.84rem; font-weight: 500; color: var(--text-mid); padding: 4px 0; transition: color .14s; }
+    .mega-col a:hover { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .mega-overlay { display: none; position: fixed; inset: 0; z-index: 198; background: rgba(0,0,0,.18); }
+    .mega-overlay.open { display: block; }
+    @media (max-width: 900px) { .mega-inner { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 640px) { .nav-links { display: none; } .mega-menu { position: fixed; top: 0; bottom: 0; overflow-y: auto; padding: 1rem 0; z-index: 300; } .mega-inner { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; } }
 
     /* HERO BAR */
     .page-hero { background: var(--teal-light); border-bottom: 1px solid rgba(74,157,154,.15); padding: 3rem 0; }
@@ -117,50 +133,119 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">דף הבית</a></li>
+      <li><a href="index.html#products">מוצרים</a></li>
+      <li><button class="nav-cats-trigger" id="cats-trigger" aria-haspopup="true" aria-expanded="false">קטגוריות</button></li>
       <li><a href="certs.html">הכשרויות</a></li>
       <li><a href="https://www.iherb.com" target="_blank" rel="noopener sponsored" class="nav-cta">לחנות iHerb</a></li>
     </ul>
   </div>
 </nav>
 
+<!-- MEGA MENU -->
+<div class="mega-overlay" id="mega-overlay"></div>
+<div class="mega-menu" id="mega-menu" role="navigation" aria-label="קטגוריות מוצרים">
+  <div class="mega-inner">
+    <div class="mega-col">
+      <span class="mega-col-title">בישול ותיבול</span>
+      <a href="category.html?cat=%D7%AA%D7%91%D7%9C%D7%99%D7%A0%D7%99%D7%9D">תבלינים</a>
+      <a href="category.html?cat=%D7%9E%D7%9C%D7%97">מלח</a>
+      <a href="category.html?cat=%D7%A9%D7%9E%D7%A0%D7%99%D7%9D">שמנים</a>
+      <a href="category.html?cat=%D7%A8%D7%98%D7%91%D7%99%D7%9D">רטבים</a>
+      <a href="category.html?cat=%D7%90%D7%A1%D7%99%D7%99%D7%AA%D7%99">אסייתי</a>
+      <a href="category.html?cat=%D7%97%D7%95%D7%9E%D7%A5">חומץ</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">אפייה ולחמים</span>
+      <a href="category.html?cat=%D7%A7%D7%9E%D7%97%D7%99%D7%9D">קמחים</a>
+      <a href="category.html?cat=%D7%90%D7%A4%D7%99%D7%99%D7%94">אפייה</a>
+      <a href="category.html?cat=%D7%AA%D7%95%D7%A1%D7%A4%D7%99+%D7%90%D7%A4%D7%99%D7%99%D7%94">תוספי אפייה</a>
+      <a href="category.html?cat=%D7%A7%D7%95%D7%A0%D7%93%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%94">קונדיטוריה</a>
+      <a href="category.html?cat=%D7%9C%D7%97%D7%9E%D7%99%D7%9D">לחמים</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">דגנים וקטניות</span>
+      <a href="category.html?cat=%D7%A7%D7%98%D7%A0%D7%99%D7%95%D7%AA">קטניות</a>
+      <a href="category.html?cat=%D7%90%D7%95%D7%A8%D7%96+%D7%95%D7%A4%D7%A1%D7%98%D7%94">אורז ופסטה</a>
+      <a href="category.html?cat=%D7%93%D7%92%D7%A0%D7%99+%D7%91%D7%95%D7%A7%D7%A8">דגני בוקר</a>
+      <a href="category.html?cat=%D7%9E%D7%98%D7%91%D7%97">מטבח</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">חטיפים ומתוקים</span>
+      <a href="category.html?cat=%D7%97%D7%98%D7%99%D7%A4%D7%99%D7%9D">חטיפים</a>
+      <a href="category.html?cat=%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%93">שוקולד</a>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%A7%D7%99%D7%9D">ממתקים</a>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%99%D7%A7%D7%99%D7%9D+%D7%98%D7%91%D7%A2%D7%99%D7%99%D7%9D">ממתיקים טבעיים</a>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%AA%D7%99%D7%A7%D7%99%D7%9D+%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D+%D7%9C%D7%9C%D7%90+%D7%A1%D7%95%D7%9B%D7%A8">ממתיקים ומוצרים ללא סוכר</a>
+      <a href="category.html?cat=%D7%A7%D7%99%D7%A0%D7%95%D7%97%D7%99%D7%9D">קינוחים</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">שתייה</span>
+      <a href="category.html?cat=%D7%A9%D7%AA%D7%99%D7%99%D7%94+%D7%97%D7%9E%D7%94">שתייה חמה</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">ממרחים ובריאות</span>
+      <a href="category.html?cat=%D7%9E%D7%9E%D7%A8%D7%97%D7%99%D7%9D">ממרחים</a>
+      <a href="category.html?cat=%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99+%D7%93%D7%92%D7%99%D7%9D">שימורי דגים</a>
+      <a href="category.html?cat=%D7%A9%D7%9E%D7%A8%D7%99%D7%9D+%D7%AA%D7%96%D7%95%D7%A0%D7%AA%D7%99%D7%99%D7%9D">שמרים תזונתיים</a>
+      <a href="category.html?cat=%D7%A1%D7%95%D7%A4%D7%A8+%D7%A4%D7%95%D7%93">סופר פוד</a>
+      <a href="category.html?cat=%D7%9E%D7%95%D7%A6%D7%A8%D7%99+%D7%97%D7%9C%D7%91%D7%95%D7%9F">מוצרי חלבון</a>
+      <a href="category.html?cat=%D7%9B%D7%9C%D7%99+%D7%9E%D7%98%D7%91%D7%97">כלי מטבח</a>
+    </div>
+  </div>
+</div>
+
 <!-- HERO -->
 <div class="page-hero" role="banner">
   <div class="container">
-    <h1>אודות הפרויקט</h1>
-    <p class="updated">איך פרויקט אישי אחד הפך לאתר שמוודא כשרות אמינה על מוצרי iHerb, בשביל כל מי שלא רוצה להגדיל תמונות של תוויות בשתיים בלילה.</p>
+    <h1 id="about-title">אודות הפרויקט</h1>
+    <p class="updated" id="about-subtitle"></p>
   </div>
 </div>
 
 <!-- CONTENT -->
 <main class="about-body" id="main-content">
-  <div class="container">
-
-    <h2>איך הכל התחיל</h2>
-    <p>רוב האנשים מכירים את איהרב בגלל תוספי תזונה, אבל אני הכרתי אותו כספק אמין לקוסמטיקה קוריאנית. מה שהתחיל כרכישה בודדת, הפך להתמכרות, ותוך כדי שיטוט לילי בפיד (למה, מה אתם עושים לפני השינה?) גיליתי בהפתעה את האיכויות הקולינריות שלו. האתר שהחשבתי בהתחלה כמקביל האמריקאי לסופר פארם התגלה כגן עדן לוולנס פודי. די מהר גיליתי את תגית הכשרות באיהרב (שמסתתרת אי שם, אלמד את מי שרוצה), אבל באותה מהירות הבנתי שהיא לא רלוונטית עבורי כפודוסית. שמדובר בתגית כללית שמסמנת מוצרים בעלי כל כשרות, בעוד אני נצמדת לכשרויות אורתודוקסיות בלבד.</p>
-
-    <h2>הגילוי שהוביל לפרויקט</h2>
-    <p>כששאלתי חברה שגרה באה"ב איך יהודים אמריקאים קונים מוצרים באיהרב, היא ענתה שהם פשוט יודעים לבד מה כשר כי הם מכירים את המותגים, ואם לא, הם פשוט בודקים כל מוצר בפני עצמו. מגדילים את התמונה באתר ומחפשים כשרות שהם מזהים.</p>
-    <p>אז זה מה שעשיתי. סיננתי לפי כשרות, התחלתי לחפש OU על מוצרים שעניינו אותי, ושמרתי לי אותם ברשימת המשאלות. ואז עברתי ל-OK ומשום ל-KOF-K, ושם כבר התחלתי מחקר עומק לגבי כשרויות אורתודוקסיות, ורשימת המוצרים המועדפים שלי הלכה והתארכה.</p>
-
-    <h2>איך זה עובד היום</h2>
-    <p>האתר הנוכחי מבוסס במידה רבה על הרשימה ההיא, אבל הוא גדול ועשיר ממנה עשרות מונים. כל מוצר באתר נבדק ידנית כדי לוודא שהוא מכיל כשרות שניתן לסמוך עליה המומלצת ע"י אתר הכשרות האמריקאי CRC (שהוא האורים והתומים שלי בהקשר הזה), כי עם כל הכבוד לקלוד קוד כפרה עליו, שעזר לי רבות בבניית האתר, בכל הנוגע לזיהוי כשרויות, עדיין יש לו דרך.</p>
-    <p>חשוב לי לציין שמאז שהתחלתי את הפרויקט ועד רגע ההשקה היו כמה מוצרים שנאלצתי להסיר כי בבדיקה חוזרת מסתבר שהכשרות ירדה. זו הסיבה שמתחת לכל מוצר יש כפתור "דווח" שמפנה ישירות לוואטסאפ שלי, במידה וזיהיתם מוצר שלא מקיים את ההבטחה.</p>
-
-    <div class="affiliate-notice" role="note" aria-label="גילוי נאות קישורי שותפים">
-      <strong>גילוי נאות:</strong> אתר זה הוא שותף רשמי של iHerb ונהנה מעמלה קטנה בעת רכישה מהקישורים דרכו, מה שמאפשר את המשך התחזוקה שלו.
-    </div>
-
-    <p class="signoff">יאללה, צאו לשופינג כשר.<span class="name">זוהרת ניר כהן</span></p>
-
-    <div class="community-box">
-      <h2>קהילת פודוס</h2>
-      <p>אתר זה הינו פרויקט אישי שלי כמנהלת קהילת פודוס, קהילה דיגיטלית של מעל 50K פודי'ז שומרי כשרות המתקיימת ומתדיינת בפייסבוק על כל מה שכשר, טעים ומה שביניהם.</p>
-      <a href="https://www.facebook.com/groups/239619486529305" target="_blank" rel="noopener" class="community-btn">הצטרפו לקהילת פודוס בפייסבוק ←</a>
-    </div>
-
+  <div class="container" id="about-container">
+    <p style="color:var(--text-soft)">טוען תוכן...</p>
   </div>
 </main>
+
+<script>
+  fetch('data/about_content.json?v=' + Date.now())
+    .then(r => r.json())
+    .then(renderAbout)
+    .catch(err => console.error('שגיאה בטעינת תוכן האודות:', err));
+
+  function esc(s) {
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function renderAbout(data) {
+    document.getElementById('about-title').textContent = data.hero.title;
+    document.getElementById('about-subtitle').textContent = data.hero.subtitle;
+
+    let html = '';
+    (data.sections || []).forEach(sec => {
+      html += `<h2>${esc(sec.heading)}</h2>`;
+      (sec.body || []).forEach(p => { html += `<p>${esc(p)}</p>`; });
+    });
+
+    html += `<div class="affiliate-notice" role="note" aria-label="גילוי נאות קישורי שותפים">
+      <strong>גילוי נאות:</strong> ${esc(data.affiliate_notice)}
+    </div>`;
+
+    html += `<p class="signoff">${esc(data.signoff.text)}<span class="name">${esc(data.signoff.name)}</span></p>`;
+
+    html += `<div class="community-box">
+      <h2>${esc(data.community.heading)}</h2>
+      <p>${esc(data.community.body)}</p>
+      <a href="${esc(data.community.link)}" target="_blank" rel="noopener" class="community-btn">${esc(data.community.cta)}</a>
+    </div>`;
+
+    document.getElementById('about-container').innerHTML = html;
+  }
+</script>
 
 <!-- FOOTER -->
 <footer class="footer">

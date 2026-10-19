@@ -170,6 +170,40 @@
     @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2,1fr); } .cert-stats { gap: 1.5rem; } }
     @media (max-width: 640px) { .product-grid { grid-template-columns: 1fr; } .brands-grid { grid-template-columns: repeat(2,1fr); } }
 
+    /* ── NAV DROPDOWNS ── */
+    .nav-item { position: relative; }
+    .nav-dd-trigger {
+      background: none; border: none; cursor: pointer; padding: 0;
+      font-family: var(--sans); font-size: 0.88rem; font-weight: 500;
+      color: var(--text-mid); display: inline-flex; align-items: center; gap: 5px;
+      transition: color .18s; white-space: nowrap;
+    }
+    .nav-dd-trigger:hover { color: var(--teal); }
+    .dd-arrow { font-size: .65rem; display: inline-block; transition: transform .2s; }
+    .nav-dropdown {
+      position: absolute; top: 100%; right: 0;
+      padding-top: 8px;
+      background: white; border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-lg);
+      min-width: 210px; max-height: 420px; overflow-y: auto;
+      padding: .45rem 0; z-index: 500;
+      opacity: 0; transform: translateY(-6px); pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    .nav-item:hover .nav-dropdown { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .nav-dd-item {
+      display: block; padding: .52rem 1.1rem;
+      font-size: .83rem; color: var(--text-mid);
+      transition: background .1s, color .1s; white-space: nowrap;
+    }
+    .nav-dd-item:hover { background: var(--teal-light); color: var(--teal-dark); }
+    .nav-dd-divider { height: 1px; background: var(--border); margin: .35rem .8rem; }
+    .nav-dd-header {
+      font-size: .67rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--text-soft); padding: .6rem 1.1rem .3rem; display: block;
+    }
+
     /* ── MEGA MENU ── */
     .nav-cats-trigger { display: flex; align-items: center; gap: 4px; cursor: pointer; font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; background: none; border: none; font-family: inherit; }
     .nav-cats-trigger:hover { color: var(--teal); }
@@ -202,8 +236,16 @@
     <ul class="nav-links">
       <li><a href="index.html#products">מוצרים</a></li>
       <li><button class="nav-cats-trigger" id="cats-trigger" aria-haspopup="true" aria-expanded="false">קטגוריות</button></li>
-      <li><a href="certs.html">הכשרויות</a></li>
-      <li><a href="index.html#values">על הפרויקט</a></li>
+      <li class="nav-item">
+        <a href="certs.html" class="nav-dd-trigger" style="text-decoration:none;">הכשרויות <span class="dd-arrow">▾</span></a>
+        <div class="nav-dropdown" id="dd-certs">
+          <a href="certs.html" class="nav-dd-all-link" style="display:block;font-size:.82rem;font-weight:700;color:var(--teal);padding:6px 0 10px;border-bottom:1px solid var(--border);margin-bottom:8px;">כל הכשרויות שלנו ←</a>
+          <span class="nav-dd-header">קפצי לכשרות ספציפית</span>
+          <div class="nav-dd-divider"></div>
+          <div id="dd-certs-list"></div>
+        </div>
+      </li>
+      <li><a href="about.html">על הפרויקט</a></li>
     </ul>
   </div>
 </nav>
@@ -356,7 +398,7 @@
     <ul class="footer-links">
       <li><a href="index.html#products">כל המוצרים</a></li>
       <li><a href="index.html#categories">קטגוריות</a></li>
-      <li><a href="index.html#values">על הפרויקט</a></li>
+      <li><a href="about.html">על הפרויקט</a></li>
     </ul>
   </div>
   <div class="footer-copy">
@@ -453,11 +495,26 @@
     // Load both data files in parallel
     if (location.protocol === 'file:') throw new Error('file-protocol');
     const [productsRes, certsRes] = await Promise.all([
-      fetch('data/products_explained_human_descriptions.json'),
-      fetch('data/certs.json')
+      fetch('data/products_explained_human_descriptions.json?v=' + Date.now()),
+      fetch('data/certs.json?v=' + Date.now())
     ]);
     const allProducts = (await productsRes.json()).filter(p => !p.suspended);
     const allCerts    = await certsRes.json();
+
+    // Populate הכשרויות nav dropdown
+    const navCertCount = {};
+    allProducts.forEach(p => { if (p.cert && p.cert !== 'כלי מטבח') navCertCount[p.cert] = (navCertCount[p.cert]||0) + 1; });
+    const navCertNames = [...new Set(allProducts.map(p => p.cert).filter(c => c && c !== 'כלי מטבח'))]
+      .sort((a,b) => (navCertCount[b]||0) - (navCertCount[a]||0));
+    const ddCertsList = document.getElementById('dd-certs-list');
+    if (ddCertsList) {
+      ddCertsList.innerHTML = navCertNames.map(c =>
+        `<a href="cert.html?c=${encodeURIComponent(c)}" class="nav-dd-item">
+          <span>${c}</span>
+          <span style="color:var(--text-soft);font-size:.72rem;float:left;margin-right:.5rem">${navCertCount[c]}</span>
+        </a>`
+      ).join('');
+    }
 
     // Find cert info
     const certInfo = allCerts.find(c => c.cert === certName);
