@@ -2040,7 +2040,9 @@
           : `<div class="card-name" dir="auto">${shortName}</div>`}
         ${(() => {
           const raw = (p.desc||'').replace(/\s*—\s*/g, ', ');
-          const sentences = raw.match(/[^.!?]+[.!?]+(?!\d)/g) || [raw];
+          // מגן על נקודה עשרונית (כמו 4.7) לפני פיצול למשפטים, כדי שלא תיחתך/תתהפך חזותית (bidi)
+          const protectedRaw = raw.replace(/(\d)\.(\d)/g, '$1\u0000$2');
+          const sentences = (protectedRaw.match(/[^.!?]+[.!?]+/g) || [protectedRaw]).map(s => s.replace(/\u0000/g, '.'));
           const first2 = sentences.slice(0,2).join(' ').trim();
           const rest = sentences.slice(2).join(' ').trim();
           const uid = 'hp-desc-' + p.id;
