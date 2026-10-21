@@ -463,7 +463,24 @@
       "Bash(powershell -NoProfile -Command \"Get-ChildItem 'C:\\\\Users\\\\zoheret\\\\.claude\\\\projects\\\\C--Users-zoheret-OneDrive--------claude-code-FOODOS-KOSHER-IHERB\\\\*.jsonl' | Select-Object Name, LastWriteTime, Length | Format-Table -AutoSize\")",
       "Bash(git -C \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\" diff --stat .claude/settings.local.json)",
       "Bash(git -C \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\" diff .claude/settings.local.json)",
-      "Bash(git -C \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\" add .claude/settings.local.json site/kosher-iherb/about.html site/kosher-iherb/accessibility.html site/kosher-iherb/brand.html site/kosher-iherb/category.html site/kosher-iherb/cert.html site/kosher-iherb/certs.html site/kosher-iherb/data/content.json site/kosher-iherb/data/products_explained_human_descriptions.json site/kosher-iherb/index.html site/kosher-iherb/privacy.html site/kosher-iherb/product.html site/kosher-iherb/terms.html \"site/images/products/Organic Vanilla Bean Paste With Seeds.avif\" \"site/images/products/חלבון אורז.avif\" \"site/images/products/קמח תורמוס.avif\")"
+      "Bash(git -C \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\" add .claude/settings.local.json site/kosher-iherb/about.html site/kosher-iherb/accessibility.html site/kosher-iherb/brand.html site/kosher-iherb/category.html site/kosher-iherb/cert.html site/kosher-iherb/certs.html site/kosher-iherb/data/content.json site/kosher-iherb/data/products_explained_human_descriptions.json site/kosher-iherb/index.html site/kosher-iherb/privacy.html site/kosher-iherb/product.html site/kosher-iherb/terms.html \"site/images/products/Organic Vanilla Bean Paste With Seeds.avif\" \"site/images/products/חלבון אורז.avif\" \"site/images/products/קמח תורמוס.avif\")",
+      "Bash(git -C \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\" ls-files -- \"site/FOODOS_online2_LOGO.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} | content-type: %{content_type} | size: %{size_download}\" \"https://online.foodos.co.il/FOODOS_online2_LOGO.png\")",
+      "Bash(curl -s \"https://online.foodos.co.il/kosher-iherb/\")",
+      "Bash(magick -version)",
+      "Bash(ffmpeg -version)",
+      "Bash(python -c \"from PIL import Image; print\\('PIL OK'\\)\")",
+      "Bash(ffmpeg -i \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\\\\site\\\\FOODOS_online2_LOGO.png\" -vf \"negate,cropdetect=limit=24:round=2\" -f null -)",
+      "Bash(ffmpeg -loop 1 -i \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\\\\site\\\\FOODOS_online2_LOGO.png\" -frames:v 1 -vf \"negate,cropdetect=limit=24:round=2\" -f null -)",
+      "Bash(ffmpeg -loop 1 -i \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\\\\site\\\\FOODOS_online2_LOGO.png\" -frames:v 3 -vf \"negate,cropdetect=limit=16:round=2:skip=0\" -f null -)",
+      "Bash(ffmpeg -y -i \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\\\\site\\\\FOODOS_online2_LOGO.png\" -vf \"crop=694:692:142:48,colorkey=white:0.12:0.08,scale=512:512\" \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\\\\site\\\\favicon.png\")",
+      "Bash(git push *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} | content-type: %{content_type} | size: %{size_download}\\\\n\" \"https://online.foodos.co.il/favicon.png\")",
+      "Bash(curl -s -o \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\iherb_feed.dat\" \"https://feeds.performancehorizon.com/zoheret_foodos/1100l435/d308f21607a39260041b4a256cb066b4\" --max-time 120)",
+      "Bash(head -1 \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\iherb_feed.dat\" | tr '|' '\\\\n' | cat -n)",
+      "Bash(awk -F'|' 'NR>1 && $4==\"CLF-06291\"' \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\iherb_feed.dat\")",
+      "Bash(awk -F'|' '{print \"img: \"$2}')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://s3.images-iherb.com/clf/clf06291/d/47.jpg\")"
     ]
   }
 }

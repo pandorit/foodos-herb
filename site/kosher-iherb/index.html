@@ -1247,6 +1247,7 @@
             <option value="price-asc">מחיר: מהזול ליקר ↑</option>
             <option value="price-desc">מחיר: מהיקר לזול ↓</option>
             <option value="name-asc">א-ב לפי שם מוצר</option>
+            <option value="hearts-desc">❤️ הכי אהובים</option>
           </select>
         </div>
         <div class="product-grid" id="product-grid">
@@ -1632,6 +1633,8 @@
   let activeCert = 'הכל';
   let activeTag  = 'הכל';
   let activeSort = 'default';
+  let heartCounts = {}; // { productId: count }, נטען מ-/api/likes
+  let topHeartsSet = new Set(); // 20 המוצרים עם הכי הרבה לבבות, מחושב אחרי טעינת heartCounts
 
   // ── TAG DETECTION ─────────────────────────────────────────────
   // סיווג ידני למוצרי "סוכר טבעי" ו"תחליפי סוכר": קבוצה א' = המוצר הוא עצמו הממתיק/התחליף,
@@ -1677,6 +1680,7 @@
       if (/sugar.?free|zero.?sugar|אפס סוכר|0g sugar|0\s*גרם\s*סוכר/i.test(txt)) return false;
       return /maple|מייפל|honey|דבש|silan|סילאן|date.?syrup|סירופ.?תמרים|agave|אגבה|coconut.?sugar|סוכר קוקוס|coconut.?nectar|נקטר קוקוס|date.?sugar|סוכר תמרים/i.test(txt);
     }, groupOf: p => NATURAL_SUGAR_GROUP_A.has(p.id) ? 'A' : 'B' },
+    { key: 'האהובים',     icon: '❤️', test: p => topHeartsSet.has(p.id) },
     { key: 'קיטו',        icon: '🥑', test: p => /keto|paleo|קיטו|פליאו|low.?carb/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'עשיר בחלבון', icon: '💪', test: p => /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'חלבי',        icon: '🥛', test: p => p.dairy === true || /\-D$/i.test(p.cert||'') },
@@ -1760,6 +1764,7 @@
       buildNavDropdowns();
       updateHeroStats();
       buildCatCards();
+      loadHeartCounts();
 
       // Scroll to products if tag/cat was given in URL
       if (urlTag || urlCat) {
@@ -1925,7 +1930,9 @@
       const unavailDiff = (a.available === false ? 1 : 0) - (b.available === false ? 1 : 0);
       if (unavailDiff !== 0) return unavailDiff;
       // מיון לפי בחירת המשתמש
-      if (activeSort === 'price-asc') {
+      if (activeSort === 'hearts-desc') {
+        return (heartCounts[b.id] || 0) - (heartCounts[a.id] || 0);
+      } else if (activeSort === 'price-asc') {
         return (a.priceILS || Infinity) - (b.priceILS || Infinity);
       } else if (activeSort === 'price-desc') {
         const ap = a.priceILS || 0, bp = b.priceILS || 0;
@@ -2189,16 +2196,45 @@
   }
   function toggleLike(id, btn) {
     const likes = getLikes();
+    let action;
     if (likes.has(id)) {
       likes.delete(id);
       btn.classList.remove('liked');
+      action = 'unlike';
     } else {
       likes.add(id);
       btn.classList.remove('liked');
       void btn.offsetWidth; // restart animation
       btn.classList.add('liked');
+      action = 'like';
     }
     saveLikes(likes);
+    // עדכון המונה המשותף בשרת; לא חוסם את חוויית המשתמש אם זה נכשל
+    fetch('/api/like', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, action })
+    }).then(r => r.ok ? r.json() : null).then(data => {
+      if (data && typeof data.count === 'number') heartCounts[id] = data.count;
+    }).catch(() => {}); // כשל שקט - הלב המקומי כבר התעדכן
+  }
+  async function loadHeartCounts() {
+    try {
+      const res = await fetch('/api/likes');
+      if (!res.ok) return;
+      heartCounts = await res.json();
+      topHeartsSet = new Set(
+        Object.entries(heartCounts)
+          .filter(([, count]) => count > 0)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 20)
+          .map(([id]) => Number(id))
+      );
+      buildTagPills();
+      if (activeSort === 'hearts-desc' || activeTag === 'האהובים') applyFilters();
+    } catch (e) {
+      console.warn('loadHeartCounts failed:', e.message);
+    }
   }
   function initLikes() {
     const likes = getLikes();
