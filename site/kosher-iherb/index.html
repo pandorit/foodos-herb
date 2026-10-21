@@ -1634,11 +1634,21 @@
   let activeSort = 'default';
 
   // ── TAG DETECTION ─────────────────────────────────────────────
+  // סיווג ידני למוצרי "סוכר טבעי" ו"תחליפי סוכר": קבוצה א' = המוצר הוא עצמו הממתיק/התחליף,
+  // קבוצה ב' = מוצר מוכן (רוטב, חטיף, קינוח...) שרק מכיל את הממתיק/התחליף כרכיב.
+  // EXCLUDE = מוצרים שהתאימו לביטוי המילות-מפתח אך לא קשורים בפועל (אזכור אגבי / תמצית ללא תוכן ממתיק).
+  const NATURAL_SUGAR_GROUP_A = new Set([81,93,94,95,329,398,430,431,451,478,485,486,487,489]);
+  const NATURAL_SUGAR_EXCLUDE = new Set([50,474,494]);
+  const SUGAR_SUB_GROUP_A = new Set([208,209,226,301,305,306,307,471,494]);
+  const SUGAR_SUB_EXCLUDE = new Set([26]);
+
   const TAG_DEFS = [
     { key: 'אורגני',    icon: '🌿', test: p => /organic/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.descNew||'')) },
     { key: 'ללא גלוטן', icon: '🌾', test: p => /gluten|גלוטן/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'טבעוני',   icon: '🥦', test: p => /vegan|טבעוני|plant.?based/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
-    { key: 'ללא סוכר', icon: '🚫', test: p => {
+    { key: 'תחליפי סוכר', icon: '🚫', group: true, test: p => {
+      if (SUGAR_SUB_EXCLUDE.has(p.id)) return false;
+      if (SUGAR_SUB_GROUP_A.has(p.id)) return true;
       const txt = p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'');
       // ביטויים שאינם שקולים ל"ללא סוכר בכלל": ללא סוכר לבן/מזוקק/מעובד, כמעט ללא סוכר
       const cleanTxt = txt
@@ -1656,13 +1666,17 @@
       // מוצרי הקטגוריה "ללא סוכר" — מלבד אלו עם סוכר טבעי
       if ((p.cat||'').includes('ממתיקים ומוצרים ללא סוכר') && !/coconut.?sugar|סוכר קוקוס|coconut.?nectar|נקטר קוקוס|maple|מייפל|honey|דבש|date|תמר|agave|אגבה/i.test(p.name + ' ' + txt)) return true;
       return false;
-    }},
-    { key: 'סוכר טבעי', icon: '🍯', test: p => {
-      const txt = p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'');
+    }, groupOf: p => SUGAR_SUB_GROUP_A.has(p.id) ? 'A' : 'B' },
+    { key: 'סוכר טבעי', icon: '🍯', group: true, test: p => {
+      if (NATURAL_SUGAR_EXCLUDE.has(p.id)) return false;
+      if (NATURAL_SUGAR_GROUP_A.has(p.id)) return true;
+      // רק name/desc/descNew - לא longDesc, כי שם מופיעים טיפים למתכונים ("לגלייז: דבש/מייפל")
+      // ואזכורי טעמים אחרים בסדרה שלא קשורים למוצר עצמו, וגורמים לטעויות סיווג
+      const txt = p.name + ' ' + (p.desc||'') + ' ' + (p.descNew||'');
       // מוצר שהוא ללא סוכר לחלוטין לא ייחשב כ"סוכר טבעי" (למשל Walden Farms Honey BBQ)
       if (/sugar.?free|zero.?sugar|אפס סוכר|0g sugar|0\s*גרם\s*סוכר/i.test(txt)) return false;
       return /maple|מייפל|honey|דבש|silan|סילאן|date.?syrup|סירופ.?תמרים|agave|אגבה|coconut.?sugar|סוכר קוקוס|coconut.?nectar|נקטר קוקוס|date.?sugar|סוכר תמרים/i.test(txt);
-    }},
+    }, groupOf: p => NATURAL_SUGAR_GROUP_A.has(p.id) ? 'A' : 'B' },
     { key: 'קיטו',        icon: '🥑', test: p => /keto|paleo|קיטו|פליאו|low.?carb/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'עשיר בחלבון', icon: '💪', test: p => /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'חלבי',        icon: '🥛', test: p => p.dairy === true || /\-D$/i.test(p.cert||'') },
@@ -1901,6 +1915,12 @@
       }
       return true;
     }).sort((a, b) => {
+      // תגיות מקובצות (סוכר טבעי / תחליפי סוכר): קבוצה א' (הממתיק עצמו) תמיד לפני קבוצה ב' (מוצרים שמכילים אותו)
+      const activeTagDef = activeTag !== 'הכל' ? TAG_DEFS.find(t => t.key === activeTag) : null;
+      if (activeTagDef && activeTagDef.group) {
+        const groupDiff = (activeTagDef.groupOf(a) === 'A' ? 0 : 1) - (activeTagDef.groupOf(b) === 'A' ? 0 : 1);
+        if (groupDiff !== 0) return groupDiff;
+      }
       // לא זמינים — תמיד לסוף
       const unavailDiff = (a.available === false ? 1 : 0) - (b.available === false ? 1 : 0);
       if (unavailDiff !== 0) return unavailDiff;
@@ -1935,7 +1955,21 @@
       return;
     }
     const start = currentPage * PAGE_SIZE;
-    filteredProducts.slice(start, start + PAGE_SIZE).forEach(p => {
+    const activeTagDef = activeTag !== 'הכל' ? TAG_DEFS.find(t => t.key === activeTag) : null;
+    // גבול בין קבוצה א' (הממתיק/התחליף עצמו) לקבוצה ב' (מוצרים שמכילים אותו), לתגיות מקובצות בלבד
+    const dividerIndex = (activeTagDef && activeTagDef.group)
+      ? filteredProducts.findIndex(p => activeTagDef.groupOf(p) === 'B')
+      : -1;
+    filteredProducts.slice(start, start + PAGE_SIZE).forEach((p, i) => {
+      const globalIndex = start + i;
+      if (dividerIndex > 0 && globalIndex === dividerIndex) {
+        const divider = document.createElement('div');
+        divider.style.cssText = 'grid-column:1/-1;display:flex;align-items:center;gap:.75rem;margin:.75rem 0 .25rem';
+        divider.innerHTML = `<div style="flex:1;height:1px;background:var(--border,#e2e2e2)"></div>
+          <span style="font-size:.9rem;color:var(--text-soft,#666);white-space:nowrap">מוצרים הממותקים ב${activeTag} בלבד</span>
+          <div style="flex:1;height:1px;background:var(--border,#e2e2e2)"></div>`;
+        grid.appendChild(divider);
+      }
       const div = document.createElement('div');
       div.className = 'product-card' + (p.available === false ? ' card-unavailable' : '');
       div.innerHTML = buildCard(p);
