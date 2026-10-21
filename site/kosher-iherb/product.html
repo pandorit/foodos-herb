@@ -17,6 +17,7 @@
   </script>
   <script src="cookie-consent.js"></script>
   <meta charset="UTF-8">
+  <link rel="icon" href="/FOODOS_online2_LOGO.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="page-title">מוצר כשר מ-iHerb — Foodos Online</title>
   <meta id="meta-description" name="description" content="מוצר כשר מ-iHerb, נבדק ידנית על ידי קהילת פודוס. כשרות מאומתת, משלוח ישיר לישראל.">
@@ -109,6 +110,20 @@
       white-space: nowrap;
     }
     .nav-cta:hover { background: var(--teal-mid) !important; }
+    /* ── NAV SEARCH ── */
+    .nav-search-item { position: relative; display: flex; align-items: center; }
+    .nav-search-trigger { background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-mid, #3D3D3D); display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background .15s, color .15s; }
+    .nav-search-trigger:hover { background: var(--teal-light, #EBF6F6); color: var(--teal-dark, #2C6360); }
+    .nav-search-box { position: absolute; top: 100%; left: 0; margin-top: 10px; display: none; align-items: center; gap: 6px; background: var(--bg, #fff); border: 1px solid var(--border, #E5E7E5); border-radius: var(--radius, 10px); box-shadow: var(--shadow-lg, 0 8px 24px rgba(0,0,0,.12)); padding: 6px; z-index: 500; }
+    .nav-search-box.open { display: flex; }
+    .nav-search-input { border: none; outline: none; font-family: inherit; font-size: .85rem; padding: 7px 10px; width: 190px; text-align: right; background: var(--bg-soft, #F8F9F8); border-radius: 8px; color: var(--text, #1A1A1A); }
+    .nav-search-go { background: var(--teal, #4A9D9A); color: #fff; border: none; border-radius: 8px; padding: 7px 12px; cursor: pointer; font-size: .85rem; flex-shrink: 0; }
+    .nav-search-go:hover { background: var(--teal-dark, #2C6360); }
+    @media (max-width: 640px) {
+      .nav-search-item { width: 100%; padding: 0 1.5rem; }
+      .nav-search-box { position: static; margin-top: 8px; box-shadow: none; border: none; padding: 0; background: transparent; }
+      .nav-search-input { width: 100%; }
+    }
     .nav-has-dd { position: relative; }
     .nav-dd-trigger { cursor: pointer; }
     .nav-dropdown-panel { display: none; position: absolute; top: calc(100% + 12px); right: 0; background: white; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 8px 32px rgba(0,0,0,.12); min-width: 240px; max-height: 400px; overflow-y: auto; z-index: 300; padding: 10px; }
@@ -648,10 +663,43 @@
         </li>
         <li><a href="about.html">על הפרויקט</a></li>
         <li><a href="https://il.iherb.com" target="_blank" rel="noopener noreferrer sponsored" class="nav-cta">לחנות iHerb ←</a></li>
+        <li class="nav-item nav-search-item">
+          <button type="button" class="nav-search-trigger" id="nav-search-trigger" aria-label="חיפוש מוצרים" aria-haspopup="true" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          <div class="nav-search-box" id="nav-search-box">
+            <input type="text" id="nav-search-input" class="nav-search-input" placeholder="חפש מוצר, מותג..." autocomplete="off">
+            <button type="button" class="nav-search-go" id="nav-search-go" aria-label="חפש">←</button>
+          </div>
+        </li>
       </ul>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="תפריט" onclick="toggleNav()">☰</button>
     </div>
   </nav>
+  <script>
+  (function(){
+    var trigger = document.getElementById('nav-search-trigger');
+    var box = document.getElementById('nav-search-box');
+    var input = document.getElementById('nav-search-input');
+    var goBtn = document.getElementById('nav-search-go');
+    if(!trigger || !box || !input) return;
+    function closeBox(){ box.classList.remove('open'); trigger.setAttribute('aria-expanded','false'); }
+    function openBox(){ box.classList.add('open'); trigger.setAttribute('aria-expanded','true'); input.focus(); }
+    function goSearch(){
+      var q = input.value.trim();
+      if(q) window.location.href = 'index.html?q=' + encodeURIComponent(q);
+    }
+    trigger.addEventListener('click', function(e){
+      e.stopPropagation();
+      if(box.classList.contains('open')) closeBox(); else openBox();
+    });
+    box.addEventListener('click', function(e){ e.stopPropagation(); });
+    document.addEventListener('click', closeBox);
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeBox(); });
+    input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); goSearch(); } });
+    if(goBtn) goBtn.addEventListener('click', goSearch);
+  })();
+  </script>
 
   <!-- BREADCRUMB -->
   <div class="breadcrumb-bar" id="breadcrumb-bar">

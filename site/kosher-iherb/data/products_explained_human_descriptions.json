@@ -2072,6 +2072,28 @@
     "priceILS": 32.31
   },
   {
+    "id": 528,
+    "name": "Taylor & Colledge, Organic Vanilla Bean Paste With Seeds, 1.7 oz (50 g)",
+    "url": "https://www.iherb.com/pr/taylor-colledge-organic-vanilla-bean-paste-with-seeds-1-7-oz-50-g/118784",
+    "desc": "משחת וניל גורמה של Taylor & Colledge, עם זרעי וניל אמיתיים הנראים לעין ומרקם סמיך שמחליף תמצית וניל נוזלית ביחס של אחד לאחד. אלטרנטיבה נוחה לתמצית וניל נוזלית, ללא אלכוהול, מתאימה גם לאפייה בחום גבוה. חברה אוסטרלית שמתמחה במשחות תמציות גורמה. שלושת הטעמים של Taylor & Colledge - שקדים, לבנדר ווניל - כשרים (KA).",
+    "cert": "KA",
+    "cat": [
+      "קונדיטוריה",
+      "תוספי אפייה"
+    ],
+    "conf": "גבוהה",
+    "brand": "Taylor & Colledge",
+    "longDesc": "משחת תמצית וניל גורמה עם זרעי וניל אמיתיים הנראים בבירור במרקם, מבוססת על תמצית וניל, סוכר, אינולין וזרעי וניל, ללא אלכוהול. בניגוד לתמצית וניל נוזלית שבה האלכוהול מתנדף בחימום ולוקח איתו חלק מהארומה, המשחה שומרת על הטעם גם באפייה בחום גבוה, ומתאימה היטב גם לקינוחים קרים. (כשרות KA).\n\nכדאי לדעת: הניחוח עשיר וריכוז הטעם גבוה יחסית לתמצית נוזלית, כך שבקבוק קטן מחזיק הרבה זמן. הנוכחות הוויזואלית של זרעי הוניל השחורים היא יתרון נוסף בקינוחים לבנים כמו קצפת או פנה קוטה.\n\nרעיונות לשימוש:\n• תחליף ישיר לתמצית וניל נוזלית, כפית תמורת כפית, בעוגות ועוגיות\n• לקצפת, פנה קוטה או קרם וניל, כשרוצים גם את מראה הזרעים\n• לגלידה ביתית ולקרם ברולה\n• לבלילת פנקייק או וופל כדי להעמיק את טעם הוניל",
+    "descNew": "משחת וניל גורמה של Taylor & Colledge, עם זרעי וניל אמיתיים ומרקם סמיך שמחליף תמצית וניל נוזלית ביחס של אחד לאחד. אלטרנטיבה נוחה ונטולת אלכוהול לתמצית וניל, מתאימה גם לאפייה בחום גבוה.",
+    "nameHe": "משחת תמצית וניל עם זרעים",
+    "certNote": "שלושת הטעמים (שקד, לבנדר ווניל) כשרים (KA).",
+    "_descStatus": "approved",
+    "dairy": false,
+    "tags": [],
+    "img": "/images/products/Organic Vanilla Bean Paste With Seeds.avif",
+    "available": true
+  },
+  {
     "id": 197,
     "name": "Artisana Organics, Hazelnut Cacao Spread, 227g",
     "url": "https://www.iherb.com/pr/artisana-organics-hazelnut-cacao-spread-8-oz-227-g/64996",
@@ -2244,7 +2266,7 @@
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/145082/145082.jpg",
+    "img": "/images/products/קמח תורמוס.avif",
     "available": false
   },
   {
@@ -2418,7 +2440,7 @@
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://s3.images-iherb.com/nbc/nbc03001/d/39.jpg",
+    "img": "/images/products/חלבון אורז.avif",
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fnutribiotic-organic-rice-protein-powder-plain-3-lb-1-36-kg%2F44487%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "priceILS": 192.53,
     "available": true

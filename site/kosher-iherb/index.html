@@ -17,6 +17,7 @@
   </script>
   <script src="../cookie-consent.js"></script>
   <meta charset="UTF-8">
+  <link rel="icon" href="/FOODOS_online2_LOGO.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foodos Online — מוצרים כשרים מ-iHerb עם משלוח לישראל</title>
   <meta name="description" content="340+ מוצרי מזון כשרים מ-iHerb שנבדקו ידנית על ידי קהילת פודוס. כשרות OU, OK, KOF-K ועוד — עם משלוח ישיר לישראל.">
@@ -1726,8 +1727,17 @@
       const urlParams = new URLSearchParams(window.location.search);
       const urlTag = urlParams.get('tag');
       const urlCat = urlParams.get('cat');
+      const urlQ = urlParams.get('q');
       if (urlTag) activeTag = decodeURIComponent(urlTag);
       if (urlCat) activeCat = decodeURIComponent(urlCat);
+      if (urlQ) {
+        const srchEl = document.getElementById('srch');
+        if (srchEl) srchEl.value = decodeURIComponent(urlQ);
+        setTimeout(() => {
+          const heroSearch = document.querySelector('.search-bar-outer');
+          if (heroSearch) heroSearch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 200);
+      }
 
       buildTagPills();
       buildCatPills();
@@ -1996,7 +2006,7 @@
           : `<div class="card-name" dir="auto">${shortName}</div>`}
         ${(() => {
           const raw = (p.desc||'').replace(/\s*—\s*/g, ', ');
-          const sentences = raw.match(/[^.!?]+[.!?]+/g) || [raw];
+          const sentences = raw.match(/[^.!?]+[.!?]+(?!\d)/g) || [raw];
           const first2 = sentences.slice(0,2).join(' ').trim();
           const rest = sentences.slice(2).join(' ').trim();
           const uid = 'hp-desc-' + p.id;
