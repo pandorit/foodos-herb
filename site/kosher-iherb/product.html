@@ -781,6 +781,11 @@
               </span>
             </div>
 
+            <div class="detail-row" id="sidebar-minqty-row" style="display:none;">
+              <span class="detail-label">כמות מינימלית</span>
+              <span class="detail-value" id="sidebar-minqty-value"></span>
+            </div>
+
             <div class="detail-row" id="sidebar-dairy-row" style="display:none;">
               <span class="detail-label">סיווג</span>
               <span class="detail-value"><span class="detail-badge-dairy">🥛 חלבי</span></span>
@@ -1013,6 +1018,12 @@
         priceVal.textContent = (hasMultipleSizes ? 'החל מ-' : '') + '₪' + parseFloat(product.priceILS).toFixed(2);
         priceNote.style.display = hasMultipleSizes ? 'block' : 'none';
         priceRow.style.display = 'flex';
+      }
+
+      // ── כמות מינימלית להזמנה (iHerb מגביל חלק מהמוצרים)
+      if (product.minQty && product.minQty > 1) {
+        document.getElementById('sidebar-minqty-value').textContent = product.minQty + ' יחידות';
+        document.getElementById('sidebar-minqty-row').style.display = 'flex';
       }
 
       // ── Descriptions
