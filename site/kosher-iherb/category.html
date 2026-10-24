@@ -904,7 +904,8 @@
           const protectedRaw = raw.replace(/(\d)\.(\d)/g, '$1\u0000$2');
           const sentences = (protectedRaw.match(/[^.!?]+[.!?]+/g) || [protectedRaw]).map(s => s.replace(/\u0000/g, '.'));
           const first2 = sentences.slice(0,2).join(' ').trim();
-          const rest = p.longDesc || sentences.slice(2).join(' ').trim();
+          // רק המשך של desc הקצר - longDesc (עם "כדאי לדעת"/"טיפים לשימוש") שמור לעמוד המוצר בלבד
+          const rest = sentences.slice(2).join(' ').trim();
           const uid = 'desc-' + p.id;
           if (rest) {
             return `<div class="card-desc">${first2}</div>
