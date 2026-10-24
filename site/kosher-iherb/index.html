@@ -1732,14 +1732,21 @@
 
   async function initProducts() {
     try {
-      // Use pre-loaded window.FOODOS_PRODUCTS (works with file:// and http://)
-      // Falls back to fetch for http:// servers that don't serve the JS file
-      if (window.FOODOS_PRODUCTS) {
-        allProducts = window.FOODOS_PRODUCTS.filter(p => !p.suspended);
-      } else {
-        const res = await fetch('data/products_explained_human_descriptions.json');
-        allProducts = (await res.json()).filter(p => !p.suspended);
-      }
+      // בסיס: window.FOODOS_PRODUCTS (products-data.js, נטען מיד, עובד גם ב-file://)
+      // ואז דריסה/הוספה מ-JSON הרשמי - מוצרים שנוספו רק ל-JSON (כמו קטגוריית תוספי תזונה)
+      // לא יופיעו בכלל אם מסתמכים רק על products-data.js
+      let rawProducts = window.FOODOS_PRODUCTS || [];
+      try {
+        const res = await fetch('data/products_explained_human_descriptions.json?v=' + Date.now());
+        if (res.ok) {
+          const jsonProducts = await res.json();
+          const overrideMap = {};
+          jsonProducts.forEach(p => { overrideMap[p.id] = p; });
+          rawProducts = rawProducts.map(p => overrideMap[p.id] ? Object.assign({}, p, overrideMap[p.id]) : p);
+          jsonProducts.forEach(p => { if (!rawProducts.find(b => b.id === p.id)) rawProducts.push(p); });
+        }
+      } catch (e) { console.warn('Could not fetch products JSON, using embedded data:', e.message); }
+      allProducts = rawProducts.filter(p => !p.suspended);
 
       // Pre-activate tag/cat from URL params (?tag=X or ?cat=X)
       const urlParams = new URLSearchParams(window.location.search);

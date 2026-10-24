@@ -371,7 +371,7 @@
     let allProducts = baseProducts;
     try {
       const [productsRes, brandsRes] = await Promise.all([
-        fetch('data/products_explained_human_descriptions.json'),
+        fetch('data/products_explained_human_descriptions.json?v=' + Date.now()),
         fetch('data/brands_with_descriptions2.json')
       ]);
       if (productsRes.ok) {

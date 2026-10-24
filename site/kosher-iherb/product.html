@@ -927,7 +927,7 @@
       // Then fetch the admin-editable JSON and merge it on top (JSON wins for any field it defines)
       try {
         const [pRes, bRes] = await Promise.all([
-          fetch('data/products_explained_human_descriptions.json'),
+          fetch('data/products_explained_human_descriptions.json?v=' + Date.now()),
           fetch('data/brands.json')
         ]);
         if (pRes.ok) {

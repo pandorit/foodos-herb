@@ -1076,7 +1076,7 @@
     }
 
     const [productsRes, certsRes] = await Promise.all([
-      fetch('data/products_explained_human_descriptions.json'),
+      fetch('data/products_explained_human_descriptions.json?v=' + Date.now()),
       fetch('data/certs_with_descriptions.json')
     ]);
     const allProducts = (await productsRes.json()).filter(p => !p.suspended);

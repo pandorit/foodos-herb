@@ -654,7 +654,7 @@
     // Load products — start with embedded JS, then merge JSON overrides on top
     let rawProducts = window.FOODOS_PRODUCTS || [];
     try {
-      const res = await fetch('data/products_explained_human_descriptions.json');
+      const res = await fetch('data/products_explained_human_descriptions.json?v=' + Date.now());
       if (res.ok) {
         const jsonProducts = await res.json();
         const overrideMap = {};
