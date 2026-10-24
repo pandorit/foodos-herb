@@ -7913,5 +7913,27 @@
     "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fnew-chapter-magnesium-ashwagandha-60-vegan-tablets%2F114126%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
     "available": true,
     "priceILS": 100.94
+  },
+  {
+    "id": 542,
+    "name": "YumVs, Magnesium Citrate Gummies, Raspberry, 90 Gummies",
+    "url": "https://www.iherb.com/pr/yumvs-magnesium-citrate-gummies-raspberry-90-gummies/104169",
+    "desc": "סוכריות גומי בטעם פטל עם מגנזיום ציטראט, 900 מ׳׳ג למנה (3 גומיות). מגנזיום ציטראט נספג היטב, וצורת הגומי נוחה למי שמתקשה לבלוע כדורים. צמחוני, ללא סויה, ללא גלוטן, ללא חיטה, ללא ביצים. כשרות OU.",
+    "cert": "OU",
+    "cat": "תוספי תזונה",
+    "conf": "גבוהה",
+    "brand": "YumVs",
+    "longDesc": "מגנזיום ציטראט הוא אחת הצורות הנפוצות והנספגות היטב של מגנזיום, ולעיתים נבחר גם לתמיכה בפעילות מעיים סדירה. הפורמט כאן הוא גומי טעים בטעם פטל, כמנה יומית של 3 גומיות (900 מ׳׳ג מגנזיום ציטראט).\n\nכדאי לדעת: תוספי מגנזיום בכמות גבוהה עלולים לגרום לשלשול קל אצל חלק מהאנשים - אם זה קורה, כדאי לבדוק עם רופא/ה אם להפחית את המנה. גומי מתוק יכול להתפרש כסוכריה - חשוב לשמור הרחק מהישג ידם של ילדים כדי למנוע נטילת מנת יתר בטעות.\n\nטיפים לשימוש:\n• 3 גומיות ביום, לפי הוראת היצרן\n• ניתן לפצל למספר מנות קטנות יותר אם יש רגישות למערכת העיכול\n• לשמור הרחק מהישג יד ילדים",
+    "descNew": "סוכריות גומי בטעם פטל עם מגנזיום ציטראט, 900 מ׳׳ג למנה. צורת מגנזיום נספגת היטב בפורמט נוח למי שמתקשה לבלוע כדורים. צמחוני, ללא סויה, גלוטן, חיטה וביצים. כשרות OU.",
+    "nameHe": "גומי מגנזיום ציטראט",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": [],
+    "img": "https://s3.images-iherb.com/yuv/yuv61076/d/56.jpg",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Fyumvs-magnesium-citrate-gummies-raspberry-90-gummies%2F104169%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "available": true,
+    "priceILS": 55.9
   }
 ]
