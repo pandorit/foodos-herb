@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "FOODOS Herb",
+      "name": "FOODOS Online",
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "7825", "--directory", "site"],
       "port": 7825
