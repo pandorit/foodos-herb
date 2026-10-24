@@ -407,6 +407,9 @@
       <div class="cat-emoji-display" id="hero-emoji">📦</div>
       <h1 class="cat-title" id="cat-title">טוען...</h1>
       <p class="cat-subtitle" id="cat-subtitle">מוצרים כשרים מאומתים בקטגוריה זו, זמינים ב-iHerb עם משלוח ישיר לישראל.</p>
+      <p id="supplements-disclaimer" style="display:none;max-width:640px;margin:.75rem auto 0;font-size:.85rem;line-height:1.5;color:var(--text-soft,#666);background:rgba(0,0,0,.04);border-radius:10px;padding:.6rem 1rem;">
+        ⚠️ בנוגע לתוספי תזונה: האתר מנגיש מידע על כשרות המוצר בלבד, ואינו גוף רפואי. נטילת כל תוסף תזונה, ובפרט בהריון, בהנקה, תחת טיפול תרופתי או במצב רפואי קיים, מחייבת התייעצות מראש עם רופא/ה.
+      </p>
       <div class="cat-stats">
         <div><div class="cat-stat-num" id="stat-products">—</div><div class="cat-stat-label">מוצרים</div></div>
         <div><div class="cat-stat-num" id="stat-brands">—</div><div class="cat-stat-label">מותגים</div></div>
@@ -634,6 +637,10 @@
     if (catDescriptions[catName]) {
       document.getElementById('cat-subtitle').textContent = catDescriptions[catName];
     }
+
+    // אזהרת אחריות לקטגוריית תוספי תזונה
+    const suppDisclaimer = document.getElementById('supplements-disclaimer');
+    if (suppDisclaimer) suppDisclaimer.style.display = (catName === 'תוספי תזונה') ? 'block' : 'none';
 
     const emoji = catEmoji[catName] || '📦';
     document.getElementById('hero-emoji').textContent = emoji;
