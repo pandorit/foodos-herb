@@ -426,7 +426,7 @@
   <div class="filter-bar-inner">
     <div class="filter-group" id="subtype-filter-group" style="display:none;">
       <span class="filter-group-label">סוג תוסף:</span>
-      <div id="subtype-pills-wrap"></div>
+      <select class="sort-select" id="subtype-select" onchange="setSubtype(this.value)"></select>
     </div>
     <div class="filter-divider" id="subtype-filter-divider" style="display:none;"></div>
     <div class="filter-group">
@@ -437,6 +437,7 @@
     <div class="filter-group">
       <span class="filter-group-label">מותג:</span>
       <div id="brand-pills-wrap"></div>
+      <select class="sort-select" id="brand-select" onchange="setBrand(this.value)" style="display:none;"></select>
     </div>
     <div class="filter-divider"></div>
     <div class="filter-group">
@@ -718,24 +719,37 @@
       `<button class="pill${c===activeCert?' active':''}" onclick="setCert(this,'${c.replace(/'/g,"\\'")}')">${c}</button>`
     ).join('');
 
-    // Brand filter pills
+    // Brand filter - בקטגוריית תוספי תזונה: רשימה נפתחת. בשאר הקטגוריות: pills כרגיל
     const brands = ['הכל', ...[...brandSet].sort((a,b) => a.localeCompare(b,'he'))];
-    document.getElementById('brand-pills-wrap').innerHTML = brands.map(b =>
-      `<button class="pill${b===activeBrand?' active':''}" onclick="setBrand(this,'${b.replace(/'/g,"\\'")}')">${b}</button>`
-    ).join('');
-
-    // תת-קטגוריות לפי סוג תוסף - רק בקטגוריית תוספי תזונה
+    const brandPillsWrap = document.getElementById('brand-pills-wrap');
+    const brandSelect = document.getElementById('brand-select');
     const subtypeGroup = document.getElementById('subtype-filter-group');
     const subtypeDivider = document.getElementById('subtype-filter-divider');
+    const subtypeSelect = document.getElementById('subtype-select');
+
     if (catName === 'תוספי תזונה') {
+      // מותג כרשימה נפתחת
+      brandSelect.innerHTML = brands.map(b =>
+        `<option value="${b.replace(/"/g,'&quot;')}"${b===activeBrand?' selected':''}>${b==='הכל'?'כל המותגים':b}</option>`
+      ).join('');
+      brandPillsWrap.style.display = 'none';
+      brandSelect.style.display = 'inline-block';
+
+      // תת-קטגוריה לפי סוג תוסף, גם כרשימה נפתחת
       const subtypeSet = new Set(catProducts.map(p => supplementSubtype(p)));
       const subtypes = ['הכל', ...[...subtypeSet].sort((a,b) => a.localeCompare(b,'he'))];
-      document.getElementById('subtype-pills-wrap').innerHTML = subtypes.map(s =>
-        `<button class="pill${s===activeSubtype?' active':''}" onclick="setSubtype(this,'${s.replace(/'/g,"\\'")}')">${s}</button>`
+      subtypeSelect.innerHTML = subtypes.map(s =>
+        `<option value="${s.replace(/"/g,'&quot;')}"${s===activeSubtype?' selected':''}>${s==='הכל'?'כל הסוגים':s}</option>`
       ).join('');
       subtypeGroup.style.display = 'flex';
       subtypeDivider.style.display = 'block';
     } else {
+      // Pills כרגיל
+      brandPillsWrap.innerHTML = brands.map(b =>
+        `<button class="pill${b===activeBrand?' active':''}" onclick="setBrand('${b.replace(/'/g,"\\'")}')">${b}</button>`
+      ).join('');
+      brandPillsWrap.style.display = '';
+      brandSelect.style.display = 'none';
       subtypeGroup.style.display = 'none';
       subtypeDivider.style.display = 'none';
       activeSubtype = 'הכל';
@@ -758,17 +772,20 @@
     applyFilter();
   }
 
-  function setBrand(el, brand) {
+  function setBrand(brand) {
     activeBrand = brand;
-    document.querySelectorAll('#brand-pills-wrap .pill').forEach(b => b.classList.remove('active'));
-    el.classList.add('active');
+    document.querySelectorAll('#brand-pills-wrap .pill').forEach(b => {
+      b.classList.toggle('active', b.textContent.trim() === brand);
+    });
+    const sel = document.getElementById('brand-select');
+    if (sel) sel.value = brand;
     applyFilter();
   }
 
-  function setSubtype(el, subtype) {
+  function setSubtype(subtype) {
     activeSubtype = subtype;
-    document.querySelectorAll('#subtype-pills-wrap .pill').forEach(b => b.classList.remove('active'));
-    el.classList.add('active');
+    const sel = document.getElementById('subtype-select');
+    if (sel) sel.value = subtype;
     applyFilter();
   }
 
@@ -838,12 +855,16 @@
 
   function resetFilters() {
     activeCert = 'הכל'; activeBrand = 'הכל'; activeSubtype = 'הכל'; activeSort = 'default';
-    document.querySelectorAll('#cert-pills-wrap .pill, #brand-pills-wrap .pill, #subtype-pills-wrap .pill').forEach(b => {
+    document.querySelectorAll('#cert-pills-wrap .pill, #brand-pills-wrap .pill').forEach(b => {
       b.classList.remove('active');
       if (b.textContent.trim() === 'הכל') b.classList.add('active');
     });
     const sortSel = document.getElementById('sort-select');
     if (sortSel) sortSel.value = 'default';
+    const brandSel = document.getElementById('brand-select');
+    if (brandSel) brandSel.value = 'הכל';
+    const subtypeSel = document.getElementById('subtype-select');
+    if (subtypeSel) subtypeSel.value = 'הכל';
     applyFilter();
   }
 
