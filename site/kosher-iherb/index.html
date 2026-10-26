@@ -1580,7 +1580,7 @@
           <li><a href="#">FOODOS בפייסבוק</a></li>
           <li><a href="mailto:foodos.is.online@gmail.com">יצירת קשר</a></li>
           <li><a href="#">הגשת מוצר לבדיקה</a></li>
-          <li><a href="https://www.iherb.com" target="_blank" rel="noopener sponsored">לחנות iHerb</a></li>
+          <li><a href="https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2F%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1" target="_blank" rel="noopener sponsored">לחנות iHerb</a></li>
         </ul>
       </div>
       <div>
@@ -2075,8 +2075,8 @@
         <div class="card-actions">
           <a href="product.html?id=${p.id}" class="card-btn-outline">פרטים ←</a>
           ${p.sizes && p.sizes.length > 1
-            ? p.sizes.map(s => `<a href="${s.url}" target="_blank" rel="noopener noreferrer" class="card-btn card-btn-size">${s.label} ←</a>`).join('')
-            : `<a href="${p.url||'#'}" target="_blank" rel="noopener noreferrer" class="card-btn">iHerb ←</a>`}
+            ? p.sizes.map(s => `<a href="${s.affiliateUrl||s.url}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn card-btn-size">${s.label} ←</a>`).join('')
+            : `<a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">iHerb ←</a>`}
         </div>
         <button class="card-report-btn" onclick="openReport(${p.id}, '${(p.nameHe||p.name||'').replace(/'/g,"\\'")}', '${(p.cert||'').replace(/'/g,"\\'")}', '${(p.url||'').replace(/'/g,"\\'")}')">דווח על הסרת כשרות</button>
       </div>`;
