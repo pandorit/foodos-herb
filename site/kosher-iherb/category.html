@@ -424,6 +424,11 @@
 <!-- ── FILTER BAR ── -->
 <div class="filter-bar">
   <div class="filter-bar-inner">
+    <div class="filter-group" id="subtype-filter-group" style="display:none;">
+      <span class="filter-group-label">סוג תוסף:</span>
+      <div id="subtype-pills-wrap"></div>
+    </div>
+    <div class="filter-divider" id="subtype-filter-divider" style="display:none;"></div>
     <div class="filter-group">
       <span class="filter-group-label">כשרות:</span>
       <div id="cert-pills-wrap"></div>
@@ -579,10 +584,32 @@
 
   let catProducts = [];
   let filteredProducts = [];
-  let activeCert  = 'הכל';
-  let activeBrand = 'הכל';
+  let activeCert    = 'הכל';
+  let activeBrand   = 'הכל';
+  let activeSubtype = 'הכל';
   let activeSort  = 'default';
   let currentPage = 0;
+
+  // תת-קטגוריות לפי סוג תוסף - רלוונטי רק לקטגוריית "תוספי תזונה"
+  // כל מוצר מסווג לסוג הראשון שמתאים (לפי סדר העדיפות הזה), לא רב-ברירה
+  const SUPPLEMENT_SUBTYPES = [
+    { key: 'שינה',              test: p => /melatonin|מלטונין|sleep|שינה/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'אנרגיה',            test: p => /energy|אנרגיה|NAD\+|nicotinamide riboside/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'חומץ תפוחים',       test: p => /apple cider vinegar|חומץ תפוחים/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'פטריות פונקציונליות', test: p => /mushroom|פטריי?ת|lion.?s mane/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'ירוקים וסופרפוד',    test: p => /greens blend|superfood|ירוקים|סופר.?פוד/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'עיכול וסיבים',      test: p => /fiber|סיבים|digest|עיכול/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'קולגן',             test: p => /collagen|קולגן/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'פרוביוטיקה',        test: p => /probiotic|פרוביוטיק/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'אומגה 3',           test: p => /omega.?3|אומגה.?3|fish oil|שמן דגים/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'צמחים ואדפטוגנים',  test: p => /ashwagandha|אשווגנדה|turmeric|כורכום|berberine|ברברין|nattokinase|נאטוקינאז|colostrum|קולוסטרום|quercetin/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'ויטמינים',          test: p => /vitamin|ויטמין|multivitamin|מולטי.?ויטמין|methylfolate|מתילפולאט/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'מינרלים',           test: p => /magnesium|מגנזיום|zinc|אבץ|iron|ברזל|calcium|סידן/i.test(p.name + ' ' + (p.desc||'')) },
+  ];
+  function supplementSubtype(p) {
+    const match = SUPPLEMENT_SUBTYPES.find(t => t.test(p));
+    return match ? match.key : 'אחר';
+  }
   const PAGE_SIZE = 12;
   let splitMode = false;
 
@@ -697,6 +724,23 @@
       `<button class="pill${b===activeBrand?' active':''}" onclick="setBrand(this,'${b.replace(/'/g,"\\'")}')">${b}</button>`
     ).join('');
 
+    // תת-קטגוריות לפי סוג תוסף - רק בקטגוריית תוספי תזונה
+    const subtypeGroup = document.getElementById('subtype-filter-group');
+    const subtypeDivider = document.getElementById('subtype-filter-divider');
+    if (catName === 'תוספי תזונה') {
+      const subtypeSet = new Set(catProducts.map(p => supplementSubtype(p)));
+      const subtypes = ['הכל', ...[...subtypeSet].sort((a,b) => a.localeCompare(b,'he'))];
+      document.getElementById('subtype-pills-wrap').innerHTML = subtypes.map(s =>
+        `<button class="pill${s===activeSubtype?' active':''}" onclick="setSubtype(this,'${s.replace(/'/g,"\\'")}')">${s}</button>`
+      ).join('');
+      subtypeGroup.style.display = 'flex';
+      subtypeDivider.style.display = 'block';
+    } else {
+      subtypeGroup.style.display = 'none';
+      subtypeDivider.style.display = 'none';
+      activeSubtype = 'הכל';
+    }
+
     // Other categories — also use parseCats so comma-strings are extracted correctly
     const allCats = [...new Set(allProducts.flatMap(p => parseCats(p)))].sort((a,b)=>a.localeCompare(b,'he'));
     document.getElementById('other-cats').innerHTML = allCats
@@ -721,10 +765,18 @@
     applyFilter();
   }
 
+  function setSubtype(el, subtype) {
+    activeSubtype = subtype;
+    document.querySelectorAll('#subtype-pills-wrap .pill').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    applyFilter();
+  }
+
   function applyFilter() {
     filteredProducts = catProducts.filter(p => {
       if (activeCert  !== 'הכל' && p.cert  !== activeCert)  return false;
       if (activeBrand !== 'הכל' && p.brand !== activeBrand) return false;
+      if (activeSubtype !== 'הכל' && supplementSubtype(p) !== activeSubtype) return false;
       return true;
     }).sort((a, b) => {
       // מוצרים שאינם זמינים — תמיד אחרונים
@@ -755,7 +807,7 @@
     });
     currentPage = 0;
     renderProducts(true);
-    const hasF = activeCert !== 'הכל' || activeBrand !== 'הכל';
+    const hasF = activeCert !== 'הכל' || activeBrand !== 'הכל' || activeSubtype !== 'הכל';
     document.getElementById('reset-btn').style.display = hasF ? 'inline-block' : 'none';
   }
 
@@ -785,8 +837,8 @@
   // ────────────────────────────────────────────────────────────
 
   function resetFilters() {
-    activeCert = 'הכל'; activeBrand = 'הכל'; activeSort = 'default';
-    document.querySelectorAll('#cert-pills-wrap .pill, #brand-pills-wrap .pill').forEach(b => {
+    activeCert = 'הכל'; activeBrand = 'הכל'; activeSubtype = 'הכל'; activeSort = 'default';
+    document.querySelectorAll('#cert-pills-wrap .pill, #brand-pills-wrap .pill, #subtype-pills-wrap .pill').forEach(b => {
       b.classList.remove('active');
       if (b.textContent.trim() === 'הכל') b.classList.add('active');
     });
@@ -925,7 +977,7 @@
               ? '<span class="card-btn-disabled">לא זמין כרגע</span>'
               : `<a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">לחנות iHerb ←</a>`}
         </div>
-        <a href="mailto:foodos.online@gmail.com?subject=דיווח על מוצר ${p.id}&body=שם מוצר: ${encodeURIComponent(p.nameHe||p.name)}%0Aבעיה:" class="card-report-link">🚩 דווח על שגיאה</a>
+        <a href="mailto:foodos.online@gmail.com?subject=דיווח על מוצר ${p.id}&body=שם מוצר: ${encodeURIComponent(p.nameHe||p.name)}%0Aבעיה:" class="card-report-link">🚩 דווח על הסרת כשרות</a>
       </div>`;
   }
 
