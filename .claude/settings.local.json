@@ -495,7 +495,22 @@
       "Bash(node \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-zoheret-OneDrive--------claude-code-FOODOS-KOSHER-IHERB\\\\a84589ea-1caa-4256-8a51-00a50d255bea\\\\scratchpad\\\\add_list2.js\")",
       "Bash(curl -s \"https://online.foodos.co.il/kosher-iherb/data/products_explained_human_descriptions.json?v=2\")",
       "Bash(awk -F'|' '{print $11}')",
-      "Bash(node \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-zoheret-OneDrive--------claude-code-FOODOS-KOSHER-IHERB\\\\a84589ea-1caa-4256-8a51-00a50d255bea\\\\scratchpad\\\\add_list5.js\")"
+      "Bash(node \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-zoheret-OneDrive--------claude-code-FOODOS-KOSHER-IHERB\\\\a84589ea-1caa-4256-8a51-00a50d255bea\\\\scratchpad\\\\add_list5.js\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://s3.images-iherb.com/thk/thk71303/d/82.jpg\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://s3.images-iherb.com/thk/thk71097/d/71.jpg\")",
+      "Bash(node \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-zoheret-OneDrive--------claude-code-FOODOS-KOSHER-IHERB\\\\a84589ea-1caa-4256-8a51-00a50d255bea\\\\scratchpad\\\\add_think_bars.js\")",
+      "Bash(node \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-zoheret-OneDrive--------claude-code-FOODOS-KOSHER-IHERB\\\\a84589ea-1caa-4256-8a51-00a50d255bea\\\\scratchpad\\\\add_think_lineup.js\")",
+      "Bash(curl -s \"https://online.foodos.co.il/kosher-iherb/data/products_explained_human_descriptions.json?v=99\")",
+      "Bash(awk -F'|' 'NR>1 && $6 ~ /Supplement/ && $8==\"InStock\" && $11 ~ /Kosher/ && $10 !~ /NOW Foods/ && $1 ~ /[Ff]ocus|[Bb]acopa|[Rr]hodiola|[Aa][Dd][Hh][Dd]|[Aa]ttention|[Pp]hosphatidylserine|[Gg]inkgo/' \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\iherb_feed.dat\")",
+      "Bash(awk -F'|' '{print $10\"|||\"$1\"|||\"$3}')",
+      "Bash(node \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-zoheret-OneDrive--------claude-code-FOODOS-KOSHER-IHERB\\\\a84589ea-1caa-4256-8a51-00a50d255bea\\\\scratchpad\\\\add_focus_supps.js\")",
+      "Bash(node \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-zoheret-OneDrive--------claude-code-FOODOS-KOSHER-IHERB\\\\a84589ea-1caa-4256-8a51-00a50d255bea\\\\scratchpad\\\\migrate_cat_urls.js\")",
+      "Bash(grep -n \"category.html?cat=\\\\${encodeURIComponent\" \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\\\\site\\\\kosher-iherb\\\\brand.html\")",
+      "Bash(grep -rn \"category.html?cat=\\\\${encodeURIComponent\" \"C:\\\\Users\\\\zoheret\\\\OneDrive\\\\מסמכים\\\\claude-code\\\\FOODOS\\\\KOSHER IHERB\\\\site\\\\kosher-iherb\" --include=\"*.html\")",
+      "Bash(node \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-zoheret-OneDrive--------claude-code-FOODOS-KOSHER-IHERB\\\\a84589ea-1caa-4256-8a51-00a50d255bea\\\\scratchpad\\\\migrate_cat_urls2.js\")",
+      "Bash(node -e \"const d=require\\('C:/Users/zoheret/OneDrive/מסמכים/claude-code/FOODOS/KOSHER IHERB/site/kosher-iherb/data/brands_with_descriptions2.json'\\); console.log\\(Object.keys\\(d\\).slice\\(0,5\\)\\)\")",
+      "Bash(node -e \"const d=require\\('C:/Users/zoheret/OneDrive/מסמכים/claude-code/FOODOS/KOSHER IHERB/site/kosher-iherb/data/brands_with_descriptions2.json'\\); console.log\\(JSON.stringify\\(d[0]\\)\\)\")",
+      "Bash(node -e \"const d=require\\('C:/Users/zoheret/OneDrive/מסמכים/claude-code/FOODOS/KOSHER IHERB/site/kosher-iherb/data/content.json'\\); console.log\\(JSON.stringify\\(d.categorySlugs,null,0\\)\\)\")"
     ]
   }
 }

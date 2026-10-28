@@ -877,6 +877,8 @@
       return new URLSearchParams(window.location.search).get(name);
     }
 
+    let CATEGORY_SLUGS = {}; // שם קטגוריה בעברית -> slug אנגלי
+
     function certLabel(cert) {
       return cert ? '✡ ' + cert : '';
     }
@@ -890,7 +892,7 @@
 
     function catSlug(cat) {
       const c = Array.isArray(cat) ? cat[0] : cat;
-      return encodeURIComponent(c || '');
+      return CATEGORY_SLUGS[c] || encodeURIComponent(c || '');
     }
 
     function escape(str) {
@@ -926,10 +928,17 @@
 
       // Then fetch the admin-editable JSON and merge it on top (JSON wins for any field it defines)
       try {
-        const [pRes, bRes] = await Promise.all([
+        const [pRes, bRes, cRes] = await Promise.all([
           fetch('data/products_explained_human_descriptions.json?v=' + Date.now()),
-          fetch('data/brands.json')
+          fetch('data/brands.json'),
+          fetch('data/content.json?v=' + Date.now())
         ]);
+        if (cRes.ok) {
+          try {
+            const cdata = await cRes.json();
+            if (cdata.categorySlugs) CATEGORY_SLUGS = cdata.categorySlugs;
+          } catch(e) {}
+        }
         if (pRes.ok) {
           const jsonProducts = await pRes.json();
           // Build a map of JSON overrides keyed by id
@@ -968,7 +977,7 @@
       // Categories
       const cats = [...new Set(active.flatMap(p => Array.isArray(p.cat) ? p.cat : [p.cat]).filter(Boolean))].sort();
       document.getElementById('cats-dd-list').innerHTML = cats.map(c =>
-        `<a class="nav-dd-item" href="category.html?cat=${encodeURIComponent(c)}">${c}</a>`
+        `<a class="nav-dd-item" href="category.html?cat=${catSlug(c)}">${c}</a>`
       ).join('');
       // Brands
       const brandNames = [...new Set(active.map(p => p.brand).filter(Boolean))].sort();

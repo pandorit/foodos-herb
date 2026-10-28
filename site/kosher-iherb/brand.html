@@ -329,6 +329,9 @@
     'Kosher Scroll K':'#1a5c5c','כלי מטבח':'#555'
   };
 
+  let CATEGORY_SLUGS = {}; // שם קטגוריה בעברית -> slug אנגלי
+  function catSlug(heb) { return CATEGORY_SLUGS[heb] || encodeURIComponent(heb); }
+
   async function init() {
     const params = new URLSearchParams(location.search);
     const brandName = params.get('b') || '';
@@ -370,10 +373,17 @@
     let allBrands = [];
     let allProducts = baseProducts;
     try {
-      const [productsRes, brandsRes] = await Promise.all([
+      const [productsRes, brandsRes, contentRes] = await Promise.all([
         fetch('data/products_explained_human_descriptions.json?v=' + Date.now()),
-        fetch('data/brands_with_descriptions2.json')
+        fetch('data/brands_with_descriptions2.json'),
+        fetch('data/content.json?v=' + Date.now())
       ]);
+      if (contentRes.ok) {
+        try {
+          const cdata = await contentRes.json();
+          if (cdata.categorySlugs) CATEGORY_SLUGS = cdata.categorySlugs;
+        } catch(e) {}
+      }
       if (productsRes.ok) {
         const jsonProducts = await productsRes.json();
         const overrideMap = {};
@@ -404,7 +414,7 @@
     // Build categories dropdown
     const allCatNames = [...new Set(allProducts.flatMap(p => Array.isArray(p.cat) ? p.cat : [p.cat]).filter(Boolean))].sort((a,b) => a.localeCompare(b,'he'));
     document.getElementById('cats-dd-list').innerHTML = allCatNames.map(c =>
-      `<a href="category.html?cat=${encodeURIComponent(c)}" class="brand-dd-item">${c}</a>`
+      `<a href="category.html?cat=${catSlug(c)}" class="brand-dd-item">${c}</a>`
     ).join('');
 
     // Build certs dropdown
@@ -458,7 +468,7 @@
             ${p.available === false ? '<span class="badge-unavailable">אזל מהמלאי</span>' : ''}
           </div>
           <div class="card-body">
-            <div class="card-cat-txt"><a href="category.html?cat=${encodeURIComponent(cat)}">${cat}</a></div>
+            <div class="card-cat-txt"><a href="category.html?cat=${catSlug(cat)}">${cat}</a></div>
             ${p.nameHe ? `<div class="card-name">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>` : `<div class="card-name" dir="auto">${shortName}</div>`}
             ${p.priceILS ? `<div class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</div>` : ''}
             <div class="card-desc">${(p.descNew||p.desc||'').replace(/\s*—\s*/g, ', ')}</div>
