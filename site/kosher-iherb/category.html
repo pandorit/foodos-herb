@@ -1019,7 +1019,7 @@
               ? '<span class="card-btn-disabled">לא זמין כרגע</span>'
               : `<a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">לחנות iHerb ←</a>`}
         </div>
-        <a href="mailto:foodos.online@gmail.com?subject=דיווח על מוצר ${p.id}&body=שם מוצר: ${encodeURIComponent(p.nameHe||p.name)}%0Aבעיה:" class="card-report-link">🚩 דווח על הסרת כשרות</a>
+        <a href="https://wa.me/972506543718?text=${encodeURIComponent('שלום! דיווח על בעיית כשרות:\nמוצר: ' + (p.nameHe||p.name) + '\nקוד: #' + p.id + '\nכשרות נוכחית: ' + (p.cert||'') + (p.url ? '\nלינק: ' + p.url : ''))}" target="_blank" rel="noopener noreferrer" class="card-report-link">🚩 דווח על הסרת כשרות</a>
       </div>`;
   }
 
