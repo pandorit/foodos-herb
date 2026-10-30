@@ -8094,5 +8094,28 @@ window.FOODOS_PRODUCTS = [
     "desc": "תערובת 24 עשבי תיבול ותבלינים אורגניים של Bragg, ללא מלח. מהמוצרים הקלאסיים של המותג. KSA כשר.",
     "descNew": "Bragg Sprinkle: 24 עשבים ותבלינים אורגניים ללא מלח. פזרי על ירקות, פסטה, ביצים ועוף. תחליף טוב לתיבול בסיסי בלי להוסיף נתרן. KSA כשר.",
     "_descStatus": "approved"
+  },
+  {
+    "id": 582,
+    "name": "Organic Traditions, Superfoods, Chocolate Latte, 5.3 oz (150 g)",
+    "nameHe": "לאטה שוקולד",
+    "brand": "Organic Traditions",
+    "cat": ["סופר פוד", "שתייה חמה"],
+    "cert": "OU",
+    "certVerified": true,
+    "_certVerified": true,
+    "conf": "גבוהה",
+    "img": "https://s3.images-iherb.com/ogt/ogt00136/d/18.jpg",
+    "url": "https://www.iherb.com/pr/organic-traditions-superfoods-chocolate-latte-5-3-oz-150-g/106038",
+    "affiliateUrl": "https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2Fpr%2Forganic-traditions-superfoods-chocolate-latte-5-3-oz-150-g%2F106038%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1",
+    "priceILS": 52.89,
+    "available": true,
+    "dairy": false,
+    "desc": "שוקו חם אינסטנט מבוסס חלב קוקוס, עם אשווגנדה להרגעה וקינמון. מתוק בעדינות מסוכר קוקוס, מיליארד פרוביוטיקה בכל מנה. כשרות OU.",
+    "descNew": "שוקו חם אינסטנט מבית Organic Traditions: חלב קוקוס אורגני, קקאו, אשווגנדה להרגעה, קינמון, הל וג'וז אגוז. מיליארד פרוביוטיקה תומכת מעי בכל מנה. כשרות OU. כמו שאר מוצרי המותג ברשימה (Turmeric Latte, Matcha Latte, Mind Fuel).",
+    "longDesc": "תערובת שוקו חם אינסטנטית מבוססת חלב קוקוס, קקאו, סוכר קוקוס ואשווגנדה, עם מיליארד פרוביוטיקה עמידת חום (Bacillus coagulans) בכל מנה. נועדה ליצור כוס שוקו קרמית ומרגיעה בלי חלב מן החי ובלי קפאין.\n\nלעומת שוקו חם רגיל, זו תערובת עם תוספת אדפטוגנית (אשווגנדה) שעשויה לסייע בהפחתת מתח, לצד תבלינים (קינמון, הל, ג'וז אגוז) שמעשירים את הטעם. מכילה קוקוס ועלולה להכיל עקבות אגוזי עץ ושומשום.\n\nרעיונות לשימוש:\n• לערבב 1.5 כפות עם 180-240 מ\"ל מים חמים או חלב צמחי\n• להקציף או לבחוש היטב כדי למנוע גושים\n• אפשר להגיש גם קר עם קרח בימי קיץ",
+    "seeAlso": [456, 455, 448],
+    "seeAlsoNote": "עוד לאטה וסופרפוד מאותו המותג:",
+    "_descStatus": "approved"
   }
 ];

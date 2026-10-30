@@ -279,6 +279,14 @@
       (sec.body || []).forEach(p => { html += `<p>${esc(p)}</p>`; });
     });
 
+    if (data.iherb_info) {
+      html += `<div class="community-box">
+        <h2>${esc(data.iherb_info.heading)}</h2>
+        <p>${esc(data.iherb_info.body)}</p>
+        <a href="${esc(data.iherb_info.link)}" class="community-btn">${esc(data.iherb_info.cta)}</a>
+      </div>`;
+    }
+
     html += `<div class="affiliate-notice" role="note" aria-label="גילוי נאות קישורי שותפים">
       <strong>גילוי נאות:</strong> ${esc(data.affiliate_notice)}
     </div>`;
@@ -293,6 +301,19 @@
 
     document.getElementById('about-container').innerHTML = html;
   }
+
+  // ── MEGA MENU ──
+  (function() {
+    const trigger = document.getElementById('cats-trigger');
+    const menu    = document.getElementById('mega-menu');
+    const overlay = document.getElementById('mega-overlay');
+    if (!trigger || !menu) return;
+    function openMega() { menu.classList.add('open'); overlay.classList.add('open'); trigger.classList.add('mega-open'); trigger.setAttribute('aria-expanded','true'); }
+    function closeMega() { menu.classList.remove('open'); overlay.classList.remove('open'); trigger.classList.remove('mega-open'); trigger.setAttribute('aria-expanded','false'); }
+    trigger.addEventListener('click', e => { e.preventDefault(); menu.classList.contains('open') ? closeMega() : openMega(); });
+    overlay.addEventListener('click', closeMega);
+    document.addEventListener('keydown', e => { if (e.key==='Escape') closeMega(); });
+  })();
 </script>
 
 <!-- FOOTER -->

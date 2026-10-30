@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google Analytics — נטען רק אחרי הסכמת עוגיות -->
+  <script>
+    window.loadGA4 = function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JKCJC4WR8J';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-JKCJC4WR8J');
+    };
+  </script>
+  <script src="cookie-consent.js"></script>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.png?v=2" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>איך מזמינים מ-iHerb — Foodos Online</title>
+  <meta name="description" content="מי זו iHerb, איך מזמינים נכון, ומה הטבות קהילת FOODOS: קוד קופון, משלוח חינם וסף המס.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'VarelaRound';
+      src: url('Varela_Round/VarelaRound-Regular.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'AnerShapiro';
+      src: url('../fonts/OHAnerShapiro-Regular.woff2') format('woff2'),
+           url('../fonts/OHAnerShapiro-Regular.woff') format('woff');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal:#4A9D9A; --teal-dark:#2C6360; --teal-light:#EBF6F6; --teal-xlight:#C8E8E7;
+      --lime:#7AB648; --orange:#E85D04;
+      --bg:#FFFFFF; --text:#1A1A1A; --text-mid:#3D3D3D; --text-soft:#6B7280;
+      --border:#E5E7E5;
+      --serif:'Playfair Display',Georgia,serif;
+      --sans:'VarelaRound','Inter',system-ui,sans-serif;
+      --radius-pill:100px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--text); background: var(--bg); direction: rtl; line-height: 1.75; overflow-x: hidden; }
+    a { text-decoration: none; color: var(--teal); }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 3px; }
+
+    /* NAV */
+    .nav { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 200; height: 68px; display: flex; align-items: center; }
+    .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 8px rgba(74,157,154,.2); flex-shrink: 0; }
+    .logo-name { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.1; }
+    .logo-name small { display: block; font-family: var(--sans); font-size: 0.6rem; font-weight: 500; color: var(--teal); letter-spacing: 1px; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
+    .nav-links a:hover { color: var(--teal); text-decoration: none; }
+    .nav-cta { background: var(--teal) !important; color: white !important; padding: 9px 20px; border-radius: var(--radius-pill); }
+    /* ── NAV SEARCH ── */
+    .nav-search-item { position: relative; display: flex; align-items: center; }
+    .nav-search-trigger { background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-mid, #3D3D3D); display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background .15s, color .15s; }
+    .nav-search-trigger:hover { background: var(--teal-light, #EBF6F6); color: var(--teal-dark, #2C6360); }
+    .nav-search-box { position: absolute; top: 100%; left: 0; margin-top: 10px; display: none; align-items: center; gap: 6px; background: var(--bg, #fff); border: 1px solid var(--border, #E5E7E5); border-radius: var(--radius, 10px); box-shadow: var(--shadow-lg, 0 8px 24px rgba(0,0,0,.12)); padding: 6px; z-index: 500; }
+    .nav-search-box.open { display: flex; }
+    .nav-search-input { border: none; outline: none; font-family: inherit; font-size: .85rem; padding: 7px 10px; width: 190px; text-align: right; background: var(--bg-soft, #F8F9F8); border-radius: 8px; color: var(--text, #1A1A1A); }
+    .nav-search-go { background: var(--teal, #4A9D9A); color: #fff; border: none; border-radius: 8px; padding: 7px 12px; cursor: pointer; font-size: .85rem; flex-shrink: 0; }
+    .nav-search-go:hover { background: var(--teal-dark, #2C6360); }
+    @media (max-width: 640px) {
+      .nav-search-box { left: auto; right: 0; }
+      .nav-search-input { width: 140px; }
+    }
+
+    /* MEGA MENU */
+    .nav-cats-trigger { display: flex; align-items: center; gap: 4px; cursor: pointer; font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; background: none; border: none; font-family: inherit; }
+    .nav-cats-trigger:hover { color: var(--teal); }
+    .nav-cats-trigger::after { content: '▾'; font-size: 0.7rem; transition: transform .22s; }
+    .nav-cats-trigger.mega-open::after { transform: rotate(180deg); }
+    .mega-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; background: #fff; border-top: 2px solid var(--teal-xlight); border-bottom: 1px solid var(--border); box-shadow: 0 12px 40px rgba(0,0,0,.10); z-index: 199; padding: 2rem 0 2.2rem; }
+    .mega-menu.open { display: block; }
+    .mega-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; }
+    .mega-col-title { display: block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px; color: var(--teal-dark); margin-bottom: 0.9rem; padding-bottom: 0.55rem; border-bottom: 2px solid var(--teal-xlight); }
+    .mega-col a { display: block; font-size: 0.84rem; font-weight: 500; color: var(--text-mid); padding: 4px 0; transition: color .14s; }
+    .mega-col a:hover { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .mega-overlay { display: none; position: fixed; inset: 0; z-index: 198; background: rgba(0,0,0,.18); }
+    .mega-overlay.open { display: block; }
+    @media (max-width: 900px) { .mega-inner { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 640px) { .nav-links { display: none; } .mega-menu { position: fixed; top: 0; bottom: 0; overflow-y: auto; padding: 1rem 0; z-index: 300; } .mega-inner { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; } }
+
+    /* HERO BAR */
+    .page-hero { background: var(--teal-light); border-bottom: 1px solid rgba(74,157,154,.15); padding: 3rem 0; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--teal-dark); margin-bottom: 0.4rem; }
+    .page-hero .updated { font-size: 0.92rem; color: var(--text-mid); margin-top: 0.6rem; max-width: 620px; }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 2rem; }
+
+    /* COUPON BOX */
+    .coupon-box { background: linear-gradient(135deg, var(--teal-dark), var(--teal)); border-radius: 16px; padding: 1.8rem 2rem; margin: 2.2rem 0; color: white; }
+    .coupon-box .coupon-kicker { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal-xlight); margin-bottom: 0.5rem; }
+    .about-body .coupon-box h2 { font-family: var(--serif); font-size: 1.5rem; margin: 0 0 0.7rem; padding-top: 0; border-top: none; color: white; }
+    .coupon-box p { color: rgba(255,255,255,.92); font-size: 0.95rem; margin-bottom: 1rem; }
+    .coupon-code { display: inline-block; background: white; color: var(--teal-dark); font-weight: 700; font-size: 1.1rem; letter-spacing: 2px; padding: 8px 20px; border-radius: 8px; font-family: var(--serif); }
+    .coupon-box .coupon-note { font-size: 0.78rem; color: rgba(255,255,255,.75); margin-top: 1rem; margin-bottom: 0; }
+
+    /* CONTENT */
+    .about-body { padding: 2.5rem 0 5rem; }
+    .about-body h2 { font-family: 'AnerShapiro', cursive; font-size: 1.7rem; font-weight: 400; color: var(--teal-dark); margin: 2.6rem 0 0.9rem; padding-top: 2.2rem; border-top: 1px solid var(--border); }
+    .about-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .about-body p { font-size: 0.97rem; color: var(--text-mid); margin-bottom: 1rem; }
+    .about-body strong { color: var(--text); }
+    .info-list { list-style: none; margin: 1.2rem 0; }
+    .info-list li { display: flex; gap: 10px; align-items: flex-start; padding: 0.8rem 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; color: var(--text-mid); }
+    .info-list li:last-child { border-bottom: none; }
+    .info-list .info-icon { flex-shrink: 0; font-size: 1.1rem; line-height: 1.5; }
+    .info-list strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    .shop-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 0.5rem; background: var(--teal-dark); color: white; font-weight: 600; font-size: 0.92rem; padding: 11px 24px; border-radius: var(--radius-pill); }
+    .shop-cta:hover { background: var(--teal); text-decoration: none; }
+
+    .affiliate-notice {
+      background: #FFF8F0; border: 1.5px solid #E85D04; border-radius: 10px;
+      padding: 1rem 1.4rem; margin: 2rem 0; font-size: 0.9rem; color: var(--text-mid);
+    }
+    .affiliate-notice strong { color: #E85D04; }
+
+    /* FOOTER */
+    .footer { background: var(--teal-dark); padding: 2rem 0; }
+    .footer-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: white; }
+    .footer-brand span { background: linear-gradient(90deg,#4A9D9A,#A8D44B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-links { display: flex; gap: 1.2rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,.6); transition: color .18s; }
+    .footer-links a:hover { color: white; text-decoration: none; }
+    .footer-links a:focus-visible { outline: 2px solid white; outline-offset: 3px; border-radius: 3px; }
+    .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,.35); text-align: center; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.08); }
+
+    @media (max-width: 768px) {
+      .nav-links li:not(:last-child) { display: none; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="ניווט ראשי">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="Foodos Online - דף הבית">
+      <img src="../FOODOS_online2_LOGO.png" alt="FOODOS Online" class="logo-img">
+      <div class="logo-name">FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
+        <small>כשר, שווה וקולינרי - זה כאן.</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#products">מוצרים</a></li>
+      <li><button class="nav-cats-trigger" id="cats-trigger" aria-haspopup="true" aria-expanded="false">קטגוריות</button></li>
+      <li><a href="certs.html">הכשרויות</a></li>
+      <li><a href="https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2F%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1" target="_blank" rel="noopener sponsored" class="nav-cta">לחנות iHerb</a></li>
+    </ul>
+    <div class="nav-search-item" id="nav-search-item">
+      <button type="button" class="nav-search-trigger" id="nav-search-trigger" aria-label="חיפוש מוצרים" aria-haspopup="true" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <div class="nav-search-box" id="nav-search-box">
+        <input type="text" id="nav-search-input" class="nav-search-input" placeholder="חפש מוצר, מותג..." autocomplete="off">
+        <button type="button" class="nav-search-go" id="nav-search-go" aria-label="חפש">←</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var trigger = document.getElementById('nav-search-trigger');
+  var box = document.getElementById('nav-search-box');
+  var input = document.getElementById('nav-search-input');
+  var goBtn = document.getElementById('nav-search-go');
+  if(!trigger || !box || !input) return;
+  function closeBox(){ box.classList.remove('open'); trigger.setAttribute('aria-expanded','false'); }
+  function openBox(){ box.classList.add('open'); trigger.setAttribute('aria-expanded','true'); input.focus(); }
+  function goSearch(){
+    var q = input.value.trim();
+    if(q) window.location.href = 'index.html?q=' + encodeURIComponent(q);
+  }
+  trigger.addEventListener('click', function(e){
+    e.stopPropagation();
+    if(box.classList.contains('open')) closeBox(); else openBox();
+  });
+  box.addEventListener('click', function(e){ e.stopPropagation(); });
+  document.addEventListener('click', closeBox);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeBox(); });
+  input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); goSearch(); } });
+  if(goBtn) goBtn.addEventListener('click', goSearch);
+})();
+</script>
+
+<!-- MEGA MENU -->
+<div class="mega-overlay" id="mega-overlay"></div>
+<div class="mega-menu" id="mega-menu" role="navigation" aria-label="קטגוריות מוצרים">
+  <div class="mega-inner">
+    <div class="mega-col">
+      <span class="mega-col-title">בישול ותיבול</span>
+      <a href="category.html?cat=spices">תבלינים</a>
+      <a href="category.html?cat=salt">מלח</a>
+      <a href="category.html?cat=oils">שמנים</a>
+      <a href="category.html?cat=sauces">רטבים</a>
+      <a href="category.html?cat=asian">אסייתי</a>
+      <a href="category.html?cat=vinegar">חומץ</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">אפייה ולחמים</span>
+      <a href="category.html?cat=flours">קמחים</a>
+      <a href="category.html?cat=baking">אפייה</a>
+      <a href="category.html?cat=baking-supplies">תוספי אפייה</a>
+      <a href="category.html?cat=confectionery">קונדיטוריה</a>
+      <a href="category.html?cat=breads">לחמים</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">דגנים וקטניות</span>
+      <a href="category.html?cat=legumes-rice-pasta">קטניות, אורז ופסטה</a>
+      <a href="category.html?cat=cereal">דגני בוקר</a>
+      <a href="category.html?cat=kitchen">מטבח</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">חטיפים ומתוקים</span>
+      <a href="category.html?cat=snacks">חטיפים</a>
+      <a href="category.html?cat=chocolate">שוקולד</a>
+      <a href="category.html?cat=candy">ממתקים</a>
+      <a href="category.html?cat=natural-sweeteners">ממתיקים טבעיים</a>
+      <a href="category.html?cat=sugar-free">ממתיקים ומוצרים ללא סוכר</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">שתייה</span>
+      <a href="category.html?cat=hot-drinks">שתייה חמה</a>
+      <a href="category.html?cat=drinks">שתייה קרה</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">ממרחים ובריאות</span>
+      <a href="category.html?cat=spreads">ממרחים</a>
+      <a href="category.html?cat=canned-fish">שימורי דגים</a>
+      <a href="category.html?cat=nutritional-yeast">שמרים תזונתיים</a>
+      <a href="category.html?cat=superfood">סופר פוד</a>
+      <a href="category.html?cat=protein-products">מוצרי חלבון</a>
+      <a href="category.html?cat=supplements">תוספי תזונה</a>
+      <a href="category.html?cat=kitchen-tools">כלי מטבח</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="page-hero" role="banner">
+  <div class="container">
+    <h1>איך מזמינים מ-iHerb, ומה חשוב לדעת</h1>
+    <p class="updated">כל מה שרציתם לדעת על האתר שממנו אנחנו קונים, כולל ההטבה הבלעדית לקהילת FOODOS.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<main class="about-body" id="main-content">
+  <div class="container">
+
+    <div class="coupon-box">
+      <div class="coupon-kicker">הטבה לקהילת FOODOS</div>
+      <h2>קוד קופון בלעדי לכל האתר</h2>
+      <p>קוד הקופון שלנו תקף על כל המוצרים ב-iHerb, לא רק על מוצרי הקולינריה שבאתר הזה: 10% הנחה להזמנה הראשונה שלכם, ו-5% הנחה לכל הזמנה חוזרת.</p>
+      <span class="coupon-code">FOODOS</span>
+      <p class="coupon-note">ניתן לממש קוד הנחה אחד בלבד בכל הזמנה (אין כפל מבצעים או קופונים). הקוד לא תלוי רישיות אותיות.</p>
+    </div>
+
+    <h2>מי זו iHerb?</h2>
+    <p>iHerb הוא אתר קמעונאות אמריקאי שפועל כבר כ-30 שנה, והפך עבור הצרכן הישראלי לכתובת מרכזית לצרכנות חכמה: מבריאות, תוספי תזונה וויטמינים, דרך טיפוח וקוסמטיקה, ועד מזון, תזונה וספורט. באתר מעל 50,000 מוצרים, נוכחות ב-180 שווקים ברחבי העולם, תמיכה ב-42 שפות, ומעל 60 מיליון ביקורות אמיתיות של לקוחות.</p>
+    <p>חלק גדול מהמותגים והמוצרים שאפשר למצוא ב-iHerb פשוט לא זמינים בישראל, או זמינים במחיר גבוה משמעותית. זו הסיבה המרכזית שבגללה הקמנו את FOODOS: לרכז עבורכם את מוצרי הקולינריה הכשרים הכי שווים באתר, כדי שתוכלו לקנות בביטחון.</p>
+
+    <h2>מה חשוב לדעת לפני ההזמנה</h2>
+    <ul class="info-list">
+      <li>
+        <span class="info-icon">🌐</span>
+        <div><strong>חוויית קנייה בעברית</strong>גם האתר וגם האפליקציה זמינים במלואם בעברית, עם חיפוש נוח, סינון מדויק, שמירת מוצרים והזנת קודי הנחה בקלות.</div>
+      </li>
+      <li>
+        <span class="info-icon">💳</span>
+        <div><strong>מטבע ומחירים</strong>אפשר לבחור באיזה מטבע לשלם. יש שמעדיפים לשלם בדולרים בגלל כרטיס האשראי שלהם; מחיר המקור הוא בדולרים ומתעדכן בהתאם לשער.</div>
+      </li>
+      <li>
+        <span class="info-icon">📦</span>
+        <div><strong>משלוח חינם</strong>בהזמנה מעל 180 ש"ח (כ-60$) המשלוח חינם, עם אפשרות לבחור בין משלוח עד הבית לבין איסוף עצמאי מלוקר או נקודת איסוף.</div>
+      </li>
+      <li>
+        <span class="info-icon">🧾</span>
+        <div><strong>סף המס (75$)</strong>iHerb פועלת בשיטת DDP: כל המיסים הרלוונטיים (אם ההזמנה עוברת את סף הפטור) מחושבים ומוצגים כבר בשלב הקופה, כך שאין הפתעות או עיכוב במכס בעת קבלת החבילה.</div>
+      </li>
+      <li>
+        <span class="info-icon">📬</span>
+        <div><strong>טיפ להזמנות גדולות</strong>רוצים להזמין מעל 75$? אפשר לפצל ולבצע עד 3 הזמנות עוקבות, והמערכת תרווח את המשלוחים אוטומטית כדי שלא יאוחדו לצרכי חישוב המכס.</div>
+      </li>
+      <li>
+        <span class="info-icon">✅</span>
+        <div><strong>מוצרים אותנטיים</strong>כל המוצרים מגיעים ישירות מספקים ומפיצים מורשים, בלי מוכרי צד ג' וללא חשש לזיופים.</div>
+      </li>
+      <li>
+        <span class="info-icon">📅</span>
+        <div><strong>תאריכי תפוגה ברורים</strong>בדיוק כמו קנייה בחנות פיזית, לכל מוצר מוצג תאריך השימוש המומלץ, כך שאפשר לסמוך על הטריות.</div>
+      </li>
+      <li>
+        <span class="info-icon">⭐</span>
+        <div><strong>חוכמת ההמונים</strong>מעל 60 מיליון ביקורות שנכתבו רק על ידי לקוחות שרכשו את המוצר בפועל, עם אפשרות לסנן ביקורות מישראל. על כל ביקורת שתכתבו אחרי רכישה מקבלים זיכוי של 1$ לקנייה הבאה (בכפוף לתקנון).</div>
+      </li>
+      <li>
+        <span class="info-icon">💬</span>
+        <div><strong>שירות לקוחות 24/7</strong>אפשר ליצור קשר עם צוות התמיכה בצ'אט או באימייל, בכל שעה.</div>
+      </li>
+    </ul>
+
+    <a href="https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2F%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1" target="_blank" rel="noopener sponsored" class="shop-cta">לחנות ב-iHerb ←</a>
+
+    <div class="affiliate-notice" role="note" aria-label="גילוי נאות קישורי שותפים">
+      <strong>גילוי נאות:</strong> אתר זה כולל קישורי שותפים עם iHerb Associates. אנו עשויים לקבל עמלה בעת רכישה דרך הקישורים שבאתר, ללא תוספת תשלום מצדכם.
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">FOODOS <span>Online</span></div>
+    <ul class="footer-links" aria-label="קישורי פוטר">
+      <li><a href="index.html">דף הבית</a></li>
+      <li><a href="category.html">מוצרים</a></li>
+      <li><a href="about.html">על הפרויקט</a></li>
+      <li><a href="accessibility.html">הצהרת נגישות</a></li>
+      <li><a href="privacy.html">מדיניות פרטיות</a></li>
+      <li><a href="terms.html">תנאי שימוש</a></li>
+      <li><a href="mailto:foodos.is.online@gmail.com">צור קשר</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">
+    © 2026 Foodos Online · online.foodos.co.il · קישורי שותפים עם iHerb Associates
+    <br>אתר זה כולל קישורי שותפים — אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
+    <br>המידע על כשרות ותזונה נבדק בקפידה, אך אינו מחליף בדיקה עצמאית מול iHerb ותווית המוצר בפועל. <a href="terms.html" style="color:rgba(255,255,255,.55);text-decoration:underline;">פרטים בתנאי השימוש</a>
+  </div>
+</footer>
+
+<script>
+  // ── MEGA MENU ──
+  (function() {
+    const trigger = document.getElementById('cats-trigger');
+    const menu    = document.getElementById('mega-menu');
+    const overlay = document.getElementById('mega-overlay');
+    if (!trigger || !menu) return;
+    function openMega() { menu.classList.add('open'); overlay.classList.add('open'); trigger.classList.add('mega-open'); trigger.setAttribute('aria-expanded','true'); }
+    function closeMega() { menu.classList.remove('open'); overlay.classList.remove('open'); trigger.classList.remove('mega-open'); trigger.setAttribute('aria-expanded','false'); }
+    trigger.addEventListener('click', e => { e.preventDefault(); menu.classList.contains('open') ? closeMega() : openMega(); });
+    overlay.addEventListener('click', closeMega);
+    document.addEventListener('keydown', e => { if (e.key==='Escape') closeMega(); });
+  })();
+</script>
+
+<script src="https://negishot.co.il/cdn/widget.php?code=NGS_D51C06908CC9"></script>
+</body>
+</html>

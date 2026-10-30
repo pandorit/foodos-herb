@@ -323,6 +323,14 @@
     .trust-icon { font-size: 1rem; flex-shrink: 0; }
 
     /* ── BRAND SECTION ── */
+    .iherb-info-strip { background: var(--teal-light); border-top: 1px solid rgba(74,157,154,.18); border-bottom: 1px solid rgba(74,157,154,.18); padding: 1.1rem 0; }
+    .iherb-info-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 10px; }
+    .iherb-info-icon { font-size: 1.25rem; flex-shrink: 0; }
+    .iherb-info-inner p { font-size: 0.86rem; color: var(--text-mid); line-height: 1.6; }
+    .iherb-info-inner strong { color: var(--teal-dark); }
+    .iherb-info-inner a { color: var(--teal-dark); font-weight: 600; white-space: nowrap; }
+    @media (max-width: 640px) { .iherb-info-inner { align-items: flex-start; } }
+
     .brand-section {
       background: var(--teal-light);
       border-top: 1px solid rgba(74,157,154,.18);
@@ -797,6 +805,14 @@
             </div>
           </aside>
 
+        </div>
+      </section>
+
+      <!-- IHERB ORDER INFO -->
+      <section class="iherb-info-strip">
+        <div class="iherb-info-inner">
+          <span class="iherb-info-icon">🛍️</span>
+          <p>להזמנה מ-iHerb: קוד קופון <strong>FOODOS</strong> מעניק 10% הנחה ללקוח חדש ו-5% לרכישה חוזרת, על כל מוצרי האתר. משלוח חינם מעל 180 ₪, והמסים (אם רלוונטי, מעל 75$) מוצגים כבר בקופה. <a href="iherb.html">כל מה שצריך לדעת על ההזמנה ←</a></p>
         </div>
       </section>
 
@@ -1446,6 +1462,7 @@
     <ul style="display:flex;gap:1.5rem;list-style:none;">
       <li><a href="index.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">דף הבית</a></li>
       <li><a href="certs.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">הכשרויות</a></li>
+      <li><a href="iherb.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">איך מזמינים מ-iHerb</a></li>
       <li><a href="privacy.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">פרטיות</a></li>
       <li><a href="terms.html" style="font-size:0.82rem;color:rgba(255,255,255,.6);">תנאי שימוש</a></li>
     </ul>
