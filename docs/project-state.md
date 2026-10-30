@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-10-05  
 **Domain:** online.foodos.co.il/kosher-iherb/ (NOT herb.foodos.co.il — redirect/alias only)  
-**Hosting:** Netlify, publish dir: `site/`  
+**Hosting:** Cloudflare Pages (הועבר מ-Netlify), publish dir: `site/`  
 **Git remote:** verified via `git remote -v`
 
 ---
@@ -82,9 +82,10 @@ We use the **cRc ASKcRc database** (asktherav.com or crcweb.org) as the authorit
 | `terms.html` | Terms of use | Full legal text, implemented |
 | `accessibility.html` | Accessibility statement | Full legal text + negishot widget |
 
-### Redirects (`netlify.toml`)
+### Redirects (`netlify.toml` — ישן, לא פעיל מאז המעבר ל-Cloudflare Pages)
 
 `/kosher-iherb/` -> `/foodos-herb-homepage.html` (302)
+(יש לבדוק/להגדיר מחדש הפניות מקבילות בהגדרות Cloudflare Pages אם עדיין נדרשות)
 
 ---
 
@@ -154,9 +155,10 @@ Tags like "ללא גלוטן", "אורגני", "טבעוני" are matched by reg
 
 ## Deployment
 
-- Push to `main` -> Netlify auto-deploys
+- Push to `master` -> Cloudflare Pages auto-deploys (הועבר מ-Netlify)
 - No build step — pure static HTML/CSS/JS
-- `netlify.toml` handles redirects and cache headers
+- Serverless functions: `functions/api/like.js` + `functions/api/likes.js` (Cloudflare Pages Functions), דורשים KV namespace binding בשם `LIKES_KV` בהגדרות הפרויקט ב-Cloudflare
+- `netlify.toml` ו-`netlify/functions/` נותרו בריפו כקוד ישן, לא בשימוש
 
 ---
 

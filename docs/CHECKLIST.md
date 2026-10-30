@@ -125,7 +125,7 @@
 - [ ] שמור את הקבצים.
 - [ ] `git add` לקבצים הרלוונטיים בלבד (אל תוסיף קבצים זרים).
 - [ ] `git commit` עם הודעה ברורה, למשל: `add product 528: Frontier Za'atar`.
-- [ ] `git push origin master` — פריסה ל-Netlify מתרחשת אוטומטית.
+- [ ] `git push origin master` — פריסה ל-Cloudflare Pages מתרחשת אוטומטית.
 - [ ] בדוק ב-`https://online.foodos.co.il/kosher-iherb/product.html?id=528` שהמוצר חי.
 
 ---

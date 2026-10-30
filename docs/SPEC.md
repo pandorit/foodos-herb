@@ -23,7 +23,7 @@
 | נתיב מאושר על ידי iHerb | `online.foodos.co.il/kosher-iherb` |
 | GitHub repo | `pandorit/foodos-herb` |
 | Publish directory | `site/` |
-| Hosting | Netlify (פעיל). מעבר ל-Cloudflare Pages — בדיון, לא בוצע טכנית. `netlify.toml` פעיל. |
+| Hosting | Cloudflare Pages (פעיל, הועבר מ-Netlify). Functions ב-`functions/api/` (`like.js`/`likes.js`) דורשים KV binding בשם `LIKES_KV`. `netlify.toml` ו-`netlify/functions/` נותרו כקוד ישן ולא פעיל. |
 | DNS | mynames.co.il |
 | Build | אין — אתר סטטי לחלוטין (HTML/CSS/JS) |
 | שרת מקומי | `python -m http.server 7824` מתיקיית `site/` |
