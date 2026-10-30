@@ -946,12 +946,6 @@
 </head>
 <body>
 
-<!-- ── ANNOUNCEMENT BAR ──────────────────────────── -->
-<div class="announce-bar">
-  🎁 קוד קופון <button type="button" class="coupon-inline-copy" onclick="copyCouponCode(this)" aria-label="העתק את קוד הקופון FOODOS"><span class="coupon-code-text">FOODOS</span><span class="copy-icon" aria-hidden="true">📋</span></button> · <strong>10%</strong> ללקוח חדש · <strong>5%</strong> לרכישה חוזרת · בכל האתר
-  <span class="announce-bar-disclosure">חשוב לנו שתדעו: בזכות קוד הקופון אתם נהנים מהנחה, ואנחנו נהנים מעמלת שותף קטנה שמסייעת בתחזוקת האתר, בלי שום תוספת תשלום מצידכם.</span>
-</div>
-
 <!-- ── NAV ──────────────────────────────────────── -->
 <nav class="nav">
   <div class="nav-inner">
@@ -1834,9 +1828,10 @@
       { name: 'קמחים',              icon: 'la-bread-slice',   cat: 'קמחים'     },
       { name: 'שתייה חמה',          icon: 'la-mug-hot',       cat: 'שתייה חמה' },
       { name: 'חטיפים',             icon: 'la-apple-alt',     cat: 'חטיפים'    },
-      { name: 'קטניות, אורז ופסטה', icon: 'la-utensils',      cat: 'קטניות'    },
+      { name: 'קטניות, אורז ופסטה', icon: 'la-utensils',      cat: 'קטניות, אורז ופסטה' },
       { name: 'סופר פוד',           icon: 'la-seedling',      cat: 'סופר פוד'  },
       { name: 'רטבים',              icon: 'la-wine-bottle',   cat: 'רטבים'     },
+      { name: 'תוספי תזונה',        icon: 'la-pills',         cat: 'תוספי תזונה' },
     ];
 
     row.innerHTML = CATS.map(c => {
