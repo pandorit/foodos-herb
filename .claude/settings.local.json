@@ -510,7 +510,12 @@
       "Bash(node \"C:\\\\Users\\\\zoheret\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-zoheret-OneDrive--------claude-code-FOODOS-KOSHER-IHERB\\\\a84589ea-1caa-4256-8a51-00a50d255bea\\\\scratchpad\\\\migrate_cat_urls2.js\")",
       "Bash(node -e \"const d=require\\('C:/Users/zoheret/OneDrive/מסמכים/claude-code/FOODOS/KOSHER IHERB/site/kosher-iherb/data/brands_with_descriptions2.json'\\); console.log\\(Object.keys\\(d\\).slice\\(0,5\\)\\)\")",
       "Bash(node -e \"const d=require\\('C:/Users/zoheret/OneDrive/מסמכים/claude-code/FOODOS/KOSHER IHERB/site/kosher-iherb/data/brands_with_descriptions2.json'\\); console.log\\(JSON.stringify\\(d[0]\\)\\)\")",
-      "Bash(node -e \"const d=require\\('C:/Users/zoheret/OneDrive/מסמכים/claude-code/FOODOS/KOSHER IHERB/site/kosher-iherb/data/content.json'\\); console.log\\(JSON.stringify\\(d.categorySlugs,null,0\\)\\)\")"
+      "Bash(node -e \"const d=require\\('C:/Users/zoheret/OneDrive/מסמכים/claude-code/FOODOS/KOSHER IHERB/site/kosher-iherb/data/content.json'\\); console.log\\(JSON.stringify\\(d.categorySlugs,null,0\\)\\)\")",
+      "Bash(ls .github/workflows)",
+      "Bash(cat CNAME)",
+      "Bash(find . -maxdepth 1 -iname \"*.yml\")",
+      "Bash(node -e \"require\\('./site/kosher-iherb/data/certs_with_descriptions.json'\\); console.log\\('valid JSON'\\)\")",
+      "Bash(node -e \"const d=require\\('./site/kosher-iherb/data/content.json'\\); console.log\\('valid, categories count:', Object.keys\\(d.categories\\).length\\)\")"
     ]
   }
 }

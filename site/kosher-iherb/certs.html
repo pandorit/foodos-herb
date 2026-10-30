@@ -109,6 +109,13 @@
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
     .nav-links a:hover { color: var(--teal); }
     .nav-links a.active { color: var(--teal); font-weight: 700; }
+    .nav-has-dd { position: relative; }
+    .nav-dd-trigger { cursor: pointer; }
+    .nav-dropdown-panel { display: none; position: absolute; top: calc(100% + 12px); right: 0; background: white; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 8px 32px rgba(0,0,0,.12); min-width: 240px; max-height: 400px; overflow-y: auto; z-index: 300; padding: 10px; }
+    .nav-dropdown-panel.open { display: block; }
+    .nav-dd-list { display: flex; flex-direction: column; gap: 2px; }
+    .nav-dd-item { display: block; padding: 7px 12px; border-radius: 8px; font-size: 0.82rem; font-weight: 500; color: var(--text-mid); text-decoration: none; transition: background .12s; }
+    .nav-dd-item:hover { background: var(--teal-light); color: var(--teal-dark); }
     /* ── NAV SEARCH ── */
     .nav-search-item { position: relative; display: flex; align-items: center; }
     .nav-search-trigger { background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-mid, #3D3D3D); display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background .15s, color .15s; }
@@ -792,7 +799,18 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html#products">מוצרים</a></li>
-      <li><a href="index.html#categories">קטגוריות</a></li>
+      <li class="nav-has-dd" id="cats-dd-wrap">
+        <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'cats-dd-panel')">קטגוריות ▾</a>
+        <div class="nav-dropdown-panel" id="cats-dd-panel">
+          <div class="nav-dd-list" id="cats-dd-list"></div>
+        </div>
+      </li>
+      <li class="nav-has-dd" id="brands-dd-wrap">
+        <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'brands-dd-panel')">מותגים ▾</a>
+        <div class="nav-dropdown-panel" id="brands-dd-panel">
+          <div class="nav-dd-list" id="brands-dd-list"></div>
+        </div>
+      </li>
       <li><a href="certs.html" class="active">הכשרויות</a></li>
       <li><a href="about.html">על הפרויקט</a></li>
     </ul>
@@ -1064,6 +1082,12 @@
     'KCK':          'Vaad HaKashruth of Kansas City, קנזס סיטי',
   };
 
+  let CATEGORY_SLUGS = {};
+  function catSlug(heb) {
+    const c = Array.isArray(heb) ? heb[0] : heb;
+    return CATEGORY_SLUGS[c] || encodeURIComponent(c || '');
+  }
+
   async function init() {
     if (location.protocol === 'file:') {
       document.getElementById('cert-cards-grid').innerHTML = `
@@ -1075,12 +1099,27 @@
       return;
     }
 
-    const [productsRes, certsRes] = await Promise.all([
+    const [productsRes, certsRes, contentRes] = await Promise.all([
       fetch('data/products_explained_human_descriptions.json?v=' + Date.now()),
-      fetch('data/certs_with_descriptions.json')
+      fetch('data/certs_with_descriptions.json'),
+      fetch('data/content.json?v=' + Date.now())
     ]);
     const allProducts = (await productsRes.json()).filter(p => !p.suspended);
     const allCerts    = await certsRes.json();
+    try {
+      const cdata = await contentRes.json();
+      if (cdata.categorySlugs) CATEGORY_SLUGS = cdata.categorySlugs;
+    } catch (e) {}
+
+    // Build nav dropdowns (categories, brands)
+    const allCatNames = [...new Set(allProducts.flatMap(p => Array.isArray(p.cat) ? p.cat : [p.cat]).filter(Boolean))].sort((a,b) => a.localeCompare(b,'he'));
+    document.getElementById('cats-dd-list').innerHTML = allCatNames.map(c =>
+      `<a href="category.html?cat=${catSlug(c)}" class="nav-dd-item">${c}</a>`
+    ).join('');
+    const allBrandNames = [...new Set(allProducts.map(p => p.brand).filter(Boolean))].sort((a,b) => a.localeCompare(b,'he'));
+    document.getElementById('brands-dd-list').innerHTML = allBrandNames.map(b =>
+      `<a href="brand.html?b=${encodeURIComponent(b)}" class="nav-dd-item">${b}</a>`
+    ).join('');
 
     // Count products per cert
     const prodCount = {};
@@ -1161,6 +1200,19 @@
       <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-soft)">
         <strong>שגיאה בטעינת הנתונים</strong><br><span style="font-size:.82rem">${e.message}</span>
       </div>`;
+  });
+
+  function toggleDD(e, panelId) {
+    e.preventDefault();
+    const panel = document.getElementById(panelId);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown-panel').forEach(p => p.classList.remove('open'));
+    if (!isOpen) panel.classList.add('open');
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-has-dd')) {
+      document.querySelectorAll('.nav-dropdown-panel').forEach(p => p.classList.remove('open'));
+    }
   });
 </script>
 <script src="https://negishot.co.il/cdn/widget.php?code=NGS_D51C06908CC9"></script>
