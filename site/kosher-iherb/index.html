@@ -1650,7 +1650,7 @@
   let activeTag  = 'הכל';
   let activeSort = 'default';
   let heartCounts = {}; // { productId: count }, נטען מ-/api/likes
-  let topHeartsSet = new Set(); // 20 המוצרים עם הכי הרבה לבבות, מחושב אחרי טעינת heartCounts
+  let topHeartsSet = new Set(); // 12 המוצרים עם הכי הרבה לבבות, מחושב אחרי טעינת heartCounts
   let CATEGORY_SLUGS = {}; // שם קטגוריה בעברית -> slug אנגלי, נטען מ-content.json
   function catSlug(heb) {
     const c = Array.isArray(heb) ? heb[0] : heb;
@@ -2298,7 +2298,7 @@
         Object.entries(heartCounts)
           .filter(([, count]) => count > 0)
           .sort((a, b) => b[1] - a[1])
-          .slice(0, 20)
+          .slice(0, 12)
           .map(([id]) => Number(id))
       );
       buildTagPills();
