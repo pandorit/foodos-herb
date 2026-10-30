@@ -713,6 +713,9 @@
     .search-hero-title { font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 900; color: var(--text); margin-bottom: 0.4rem; }
     .search-hero-title em { font-style: italic; color: var(--teal); }
     .search-hero-sub { font-size: 0.88rem; color: var(--text-soft); }
+    .search-hero-coupon { font-size: 0.9rem; color: var(--text-mid); margin-top: 0.9rem; }
+    .coupon-inline-copy-light { display: inline-flex; align-items: center; gap: 4px; background: var(--teal-light); border: 1px dashed var(--teal); border-radius: 6px; padding: 1px 8px; font-weight: 700; color: var(--teal-dark); cursor: pointer; font-family: inherit; font-size: 0.95em; line-height: 1.6; vertical-align: middle; }
+    .coupon-inline-copy-light:hover { background: var(--teal-xlight); }
     .search-bar-outer { max-width: 620px; margin: 0 auto 2rem; }
     .search-bar-inner { display: flex; align-items: center; background: white; border: 2px solid var(--border); border-radius: var(--radius-pill); padding: 5px 5px 5px 18px; box-shadow: var(--shadow-sm); transition: border-color .2s, box-shadow .2s; gap: 8px; }
     .search-bar-inner:focus-within { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(74,157,154,.1); }
@@ -1213,6 +1216,7 @@
     <div class="search-hero-wrap">
       <h2 class="search-hero-title">אוהבים את iHerb? שומרי כשרות? זה הפיד החדש שלכם!</h2>
       <p class="search-hero-sub">כל המוצרים נבדקו ידנית שהינם בעלי כשרות אמינה מרשימת הכשרויות המאושרת של ארגון CRC</p>
+      <p class="search-hero-coupon">🎁 קוד קופון <button type="button" class="coupon-inline-copy-light" onclick="copyCouponCode(this)" aria-label="העתק את קוד הקופון FOODOS"><span class="coupon-code-text">FOODOS</span><span class="copy-icon" aria-hidden="true">📋</span></button> · 10% ללקוח חדש · 5% לרכישה חוזרת · בכל האתר</p>
     </div>
 
     <div class="search-bar-outer">
