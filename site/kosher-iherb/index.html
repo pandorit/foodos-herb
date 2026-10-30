@@ -112,6 +112,11 @@
       letter-spacing: 0.2px;
     }
     .announce-bar strong { color: var(--teal-xlight); font-weight: 700; }
+    .announce-bar-disclosure { display: block; font-size: 0.68rem; font-weight: 400; color: rgba(255,255,255,.55); margin-top: 2px; }
+    .coupon-inline-copy { display: inline-flex; align-items: center; gap: 4px; background: white; border: 1px dashed var(--teal-xlight); border-radius: 6px; padding: 1px 8px; font-weight: 700; color: var(--teal-dark); cursor: pointer; font-family: inherit; font-size: 0.95em; line-height: 1.6; vertical-align: middle; }
+    .coupon-inline-copy:hover { background: var(--teal-xlight); }
+    .coupon-inline-copy .copy-icon { font-size: 0.9em; }
+    @media (max-width: 640px) { .announce-bar { padding: 8px 1rem; } }
 
     /* ── LOGO ───────────────────────────────── */
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
@@ -938,7 +943,11 @@
 </head>
 <body>
 
-
+<!-- ── ANNOUNCEMENT BAR ──────────────────────────── -->
+<div class="announce-bar">
+  🎁 קוד קופון <button type="button" class="coupon-inline-copy" onclick="copyCouponCode(this)" aria-label="העתק את קוד הקופון FOODOS"><span class="coupon-code-text">FOODOS</span><span class="copy-icon" aria-hidden="true">📋</span></button> · <strong>10%</strong> ללקוח חדש · <strong>5%</strong> לרכישה חוזרת · בכל האתר
+  <span class="announce-bar-disclosure">חשוב לנו שתדעו: בזכות קוד הקופון אתם נהנים מהנחה, ואנחנו נהנים מעמלת שותף קטנה שמסייעת בתחזוקת האתר, בלי שום תוספת תשלום מצידכם.</span>
+</div>
 
 <!-- ── NAV ──────────────────────────────────────── -->
 <nav class="nav">
@@ -2212,6 +2221,35 @@
   }
 
   initProducts();
+
+  // ── COPY COUPON CODE ──
+  function copyCouponCode(btn) {
+    const code = 'FOODOS';
+    const done = () => {
+      const textEl = btn.querySelector('.coupon-code-text');
+      const iconEl = btn.querySelector('.copy-icon');
+      const prevText = textEl.textContent;
+      const prevIcon = iconEl.textContent;
+      textEl.textContent = 'הועתק!';
+      iconEl.textContent = '✓';
+      setTimeout(() => { textEl.textContent = prevText; iconEl.textContent = prevIcon; }, 1500);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code).then(done).catch(() => fallbackCopy(code, done));
+    } else {
+      fallbackCopy(code, done);
+    }
+  }
+  function fallbackCopy(text, cb) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); cb(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
 
   // ── REPORT MODAL ─────────────────────────────────────────────
   // ── LIKES ──────────────────────────────────────

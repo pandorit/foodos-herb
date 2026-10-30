@@ -324,12 +324,15 @@
 
     /* ── BRAND SECTION ── */
     .iherb-info-strip { background: var(--teal-light); border-top: 1px solid rgba(74,157,154,.18); border-bottom: 1px solid rgba(74,157,154,.18); padding: 1.1rem 0; }
-    .iherb-info-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 10px; }
-    .iherb-info-icon { font-size: 1.25rem; flex-shrink: 0; }
+    .iherb-info-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: flex-start; gap: 10px; }
+    .iherb-info-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 2px; }
     .iherb-info-inner p { font-size: 0.86rem; color: var(--text-mid); line-height: 1.6; }
     .iherb-info-inner strong { color: var(--teal-dark); }
     .iherb-info-inner a { color: var(--teal-dark); font-weight: 600; white-space: nowrap; }
-    @media (max-width: 640px) { .iherb-info-inner { align-items: flex-start; } }
+    .iherb-info-disclosure { font-size: 0.76rem; color: var(--text-soft); margin-top: 4px; }
+    .coupon-inline-copy { display: inline-flex; align-items: center; gap: 4px; background: white; border: 1px dashed var(--teal); border-radius: 6px; padding: 1px 8px; font-weight: 700; color: var(--teal-dark); cursor: pointer; font-family: inherit; font-size: 0.85em; line-height: 1.5; }
+    .coupon-inline-copy:hover { background: var(--teal-xlight); }
+    .coupon-inline-copy .copy-icon { font-size: 0.85em; }
 
     .brand-section {
       background: var(--teal-light);
@@ -812,7 +815,10 @@
       <section class="iherb-info-strip">
         <div class="iherb-info-inner">
           <span class="iherb-info-icon">🛍️</span>
-          <p>להזמנה מ-iHerb: קוד קופון <strong>FOODOS</strong> מעניק 10% הנחה ללקוח חדש ו-5% לרכישה חוזרת, על כל מוצרי האתר. משלוח חינם מעל 180 ₪, והמסים (אם רלוונטי, מעל 75$) מוצגים כבר בקופה. <a href="iherb.html">כל מה שצריך לדעת על ההזמנה ←</a></p>
+          <div class="iherb-info-text">
+            <p>להזמנה מ-iHerb: קוד קופון <button type="button" class="coupon-inline-copy" onclick="copyCouponCode(this)" aria-label="העתק את קוד הקופון FOODOS"><span class="coupon-code-text">FOODOS</span><span class="copy-icon" aria-hidden="true">📋</span></button> מעניק 10% הנחה ללקוח חדש ו-5% לרכישה חוזרת, על כל מוצרי האתר. משלוח חינם מעל 180 ₪, והמסים (אם רלוונטי, מעל 75$) מוצגים כבר בקופה. <a href="iherb.html">כל מה שצריך לדעת על ההזמנה ←</a></p>
+            <p class="iherb-info-disclosure">חשוב לנו שתדעו: בזכות קוד הקופון אתם נהנים מהנחה, ואנחנו נהנים מעמלת שותף קטנה שמסייעת בתחזוקת האתר, בלי שום תוספת תשלום מצידכם.</p>
+          </div>
         </div>
       </section>
 
@@ -1452,6 +1458,35 @@
 
     // Run
     init();
+
+    // ── COPY COUPON CODE ──
+    function copyCouponCode(btn) {
+      const code = 'FOODOS';
+      const done = () => {
+        const textEl = btn.querySelector('.coupon-code-text');
+        const iconEl = btn.querySelector('.copy-icon');
+        const prevText = textEl.textContent;
+        const prevIcon = iconEl.textContent;
+        textEl.textContent = 'הועתק!';
+        iconEl.textContent = '✓';
+        setTimeout(() => { textEl.textContent = prevText; iconEl.textContent = prevIcon; }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).then(done).catch(() => fallbackCopy(code, done));
+      } else {
+        fallbackCopy(code, done);
+      }
+    }
+    function fallbackCopy(text, cb) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); cb(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
   </script>
 
 <footer style="background:var(--teal-dark);padding:2rem 0 1.2rem;margin-top:3rem;">

@@ -102,7 +102,9 @@
     .coupon-box .coupon-kicker { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal-xlight); margin-bottom: 0.5rem; }
     .about-body .coupon-box h2 { font-family: var(--serif); font-size: 1.5rem; margin: 0 0 0.7rem; padding-top: 0; border-top: none; color: white; }
     .coupon-box p { color: rgba(255,255,255,.92); font-size: 0.95rem; margin-bottom: 1rem; }
-    .coupon-code { display: inline-block; background: white; color: var(--teal-dark); font-weight: 700; font-size: 1.1rem; letter-spacing: 2px; padding: 8px 20px; border-radius: 8px; font-family: var(--serif); }
+    .coupon-code { display: inline-flex; align-items: center; gap: 10px; background: white; color: var(--teal-dark); font-weight: 700; font-size: 1.1rem; letter-spacing: 2px; padding: 8px 14px 8px 20px; border-radius: 8px; font-family: var(--serif); border: none; cursor: pointer; transition: background .15s; }
+    .coupon-code:hover { background: var(--teal-xlight); }
+    .coupon-code .copy-icon { font-size: 0.95rem; letter-spacing: 0; flex-shrink: 0; }
     .coupon-box .coupon-note { font-size: 0.78rem; color: rgba(255,255,255,.75); margin-top: 1rem; margin-bottom: 0; }
 
     /* CONTENT */
@@ -265,8 +267,12 @@
       <div class="coupon-kicker">הטבה לקהילת FOODOS</div>
       <h2>קוד קופון בלעדי לכל האתר</h2>
       <p>קוד הקופון שלנו תקף על כל המוצרים ב-iHerb, לא רק על מוצרי הקולינריה שבאתר הזה: 10% הנחה להזמנה הראשונה שלכם, ו-5% הנחה לכל הזמנה חוזרת.</p>
-      <span class="coupon-code">FOODOS</span>
+      <button type="button" class="coupon-code" id="coupon-copy-btn" onclick="copyCouponCode(this)" aria-label="העתק את קוד הקופון FOODOS">
+        <span class="coupon-code-text">FOODOS</span>
+        <span class="copy-icon" aria-hidden="true">📋</span>
+      </button>
       <p class="coupon-note">ניתן לממש קוד הנחה אחד בלבד בכל הזמנה (אין כפל מבצעים או קופונים). הקוד לא תלוי רישיות אותיות.</p>
+      <p class="coupon-note">חשוב לנו שתדעו: בזכות קוד הקופון אתם נהנים מהנחה, ואנחנו נהנים מעמלת שותף קטנה שמסייעת בתחזוקת האתר, בלי שום תוספת תשלום מצידכם.</p>
     </div>
 
     <h2>מי זו iHerb?</h2>
@@ -344,6 +350,35 @@
 </footer>
 
 <script>
+  // ── COPY COUPON CODE ──
+  function copyCouponCode(btn) {
+    const code = 'FOODOS';
+    const done = () => {
+      const textEl = btn.querySelector('.coupon-code-text');
+      const iconEl = btn.querySelector('.copy-icon');
+      const prevText = textEl.textContent;
+      const prevIcon = iconEl.textContent;
+      textEl.textContent = 'הועתק!';
+      iconEl.textContent = '✓';
+      setTimeout(() => { textEl.textContent = prevText; iconEl.textContent = prevIcon; }, 1500);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code).then(done).catch(() => fallbackCopy(code, done));
+    } else {
+      fallbackCopy(code, done);
+    }
+  }
+  function fallbackCopy(text, cb) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); cb(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
   // ── MEGA MENU ──
   (function() {
     const trigger = document.getElementById('cats-trigger');
