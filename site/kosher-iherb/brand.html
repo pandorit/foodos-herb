@@ -139,6 +139,8 @@
     .card-btn { display: flex; align-items: center; justify-content: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.78rem; font-weight: 600; padding: 8px 16px; border-radius: var(--radius-pill); transition: background .18s; width: 100%; }
     .card-btn:hover { background: var(--teal-mid); }
     .card-link-secondary { display: block; text-align: center; font-size: 0.72rem; color: var(--text-soft); margin-top: 6px; text-decoration: underline; text-underline-offset: 2px; }
+    .card-report-link { display: block; text-align: center; font-size: 0.68rem; color: var(--text-soft); margin-top: 4px; padding: 2px 0; transition: color .15s; text-decoration: none; }
+    .card-report-link:hover { color: #E85D04; text-decoration: underline; }
     .card-link-secondary:hover { color: var(--teal); }
     .card-name-en { font-size: 0.67rem; color: var(--text-soft); margin-bottom: 6px; }
     .card-price { font-size: 0.8rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.45rem; }
@@ -475,6 +477,7 @@
             <div class="card-desc">${(p.descNew||p.desc||'').replace(/\s*—\s*/g, ', ')}</div>
             <a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn" onclick="event.stopPropagation()">לחנות iHerb ←</a>
             <a href="product.html?id=${p.id}" class="card-link-secondary" onclick="event.stopPropagation()">דף המוצר</a>
+            <a href="https://wa.me/972506543718?text=${encodeURIComponent('שלום! דיווח על בעיית כשרות:\nמוצר: ' + (p.nameHe||p.name) + '\nקוד: #' + p.id + '\nכשרות נוכחית: ' + (p.cert||'') + (p.url ? '\nלינק: ' + p.url : ''))}" target="_blank" rel="noopener noreferrer" class="card-report-link" onclick="event.stopPropagation()">🚩 דווח על הסרת כשרות</a>
           </div>
         </div>`;
     }).join('');

@@ -161,9 +161,12 @@
     .card-name { font-family: 'AnerShapiro', cursive; font-size: 1.05rem; font-weight: 400; line-height: 1.35; color: var(--text); margin-bottom: 6px; }
     .card-name-he { font-family: 'AnerShapiro', cursive; font-size: 1.1rem; font-weight: 400; line-height: 1.3; color: var(--text); margin-bottom: 2px; }
     .card-name-en { font-size: 0.68rem; color: var(--text-soft); line-height: 1.3; margin-bottom: 6px; }
+    .card-price { font-size: 0.82rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 4px; }
     .card-desc { font-size: 0.76rem; color: var(--text-soft); line-height: 1.5; margin-bottom: 0.7rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .card-btn { display: flex; align-items: center; justify-content: center; gap: 5px; background: var(--teal-dark); color: white; font-size: 0.76rem; font-weight: 600; padding: 7px 14px; border-radius: var(--radius-pill); transition: background .18s; }
     .card-btn:hover { background: var(--teal-mid); }
+    .card-report-link { display: block; text-align: center; font-size: 0.68rem; color: var(--text-soft); margin-top: 4px; padding: 2px 0; transition: color .15s; text-decoration: none; }
+    .card-report-link:hover { color: #E85D04; text-decoration: underline; }
     .results-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
     .results-count { font-size: 0.82rem; color: var(--text-soft); }
 
@@ -696,8 +699,10 @@
           <a href="category.html?cat=${catSlug(p.cat||'')}" class="card-cat-lnk">${p.cat||''}</a>
         </div>
         ${p.nameHe ? `<div class="card-name-he">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>` : `<div class="card-name" dir="auto">${shortName}</div>`}
+        ${p.priceILS ? `<div class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</div>` : ''}
         <div class="card-desc">${(p.desc||'').replace(/\s*—\s*/g, ', ')}</div>
         <a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">לחנות iHerb ←</a>
+        <a href="https://wa.me/972506543718?text=${encodeURIComponent('שלום! דיווח על בעיית כשרות:\nמוצר: ' + (p.nameHe||p.name) + '\nקוד: #' + p.id + '\nכשרות נוכחית: ' + (p.cert||'') + (p.url ? '\nלינק: ' + p.url : ''))}" target="_blank" rel="noopener noreferrer" class="card-report-link">🚩 דווח על הסרת כשרות</a>
       </div>`;
   }
 
