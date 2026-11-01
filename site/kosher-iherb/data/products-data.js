@@ -8761,5 +8761,27 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-pumpkin-spice-3-2-oz-90-g/154435?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 32.63,
     "available": true
+  },
+  {
+    "id": 612,
+    "name": "The Spice Lab, Rosemary Roasted Garlic, 4.9 oz (138 g)",
+    "url": "https://www.iherb.com/pr/the-spice-lab-rosemary-roasted-garlic-4-9-oz-138-g/102792",
+    "desc": "תערובת תיבול רוזמרין ושום קלוי של The Spice Lab, תיבול רב-תכליתי לבשר ולפסטה. כשרות OU.",
+    "cert": "OU",
+    "cat": "תבלינים",
+    "conf": "גבוהה",
+    "brand": "The Spice Lab",
+    "longDesc": "תערובת תיבול עם רוזמרין ושום קלוי, תיבול רב-תכליתי ארומטי.\n\nכדאי לדעת: לפי היצרן, מתאים גם כתיבול לבשר וגם כתוספת ישירה לפסטה.\n\nרעיונות לשימוש:\n• תיבול לבשר או עוף לפני צלייה\n• מעורבב בשמן זית ומטובל מעל פסטה\n• על ירקות שורש לפני אפייה",
+    "descNew": "תערובת תיבול רוזמרין ושום קלוי, רב-תכליתית. לבשר ולפסטה. כשרות OU.",
+    "nameHe": "תערובת תיבול רוזמרין ושום קלוי",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["Non-GMO"],
+    "img": "https://s3.images-iherb.com/sla/sla06269/d/57.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-rosemary-roasted-garlic-4-9-oz-138-g/102792?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 18.84,
+    "available": true
   }
 ];
