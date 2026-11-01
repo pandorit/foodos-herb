@@ -270,7 +270,7 @@
         </div>
         <div class="brand-cert-chips" id="brand-cert-chips"></div>
       </div>
-      <a id="brand-iherb-link" href="https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2F%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1%26rcode%3DFOODOS" target="_blank" rel="noopener noreferrer sponsored" class="brand-iherb-btn">לחנות iHerb ←</a>
+      <a id="brand-iherb-link" href="https://il.iherb.com/?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS" target="_blank" rel="noopener noreferrer sponsored" class="brand-iherb-btn">לחנות iHerb ←</a>
     </div>
   </div>
 </section>
@@ -442,10 +442,9 @@
       `<a href="cert.html?c=${encodeURIComponent(c)}" class="brand-cert-chip" title="עמוד הכשרות ${c}">${c}</a>`
     ).join('');
 
-    // iHerb search link (עטוף בקישור שותפים, כדי שגם חיפוש לפי מותג יזוכה בעמלה)
-    const searchDest = encodeURIComponent(`https://il.iherb.com/search?kw=${brandName}&ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS`);
+    // iHerb search link (עם קוד השותפים rcode=FOODOS, לינק ישיר בלי עטיפת Partnerize)
     document.getElementById('brand-iherb-link').href =
-      `https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:${searchDest}`;
+      `https://il.iherb.com/search?kw=${encodeURIComponent(brandName)}&ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS`;
 
     // Render products
     const grid = document.getElementById('product-grid');
