@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google Analytics, נטען רק אחרי הסכמת עוגיות -->
+  <script>
+    window.loadGA4 = function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JKCJC4WR8J';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-JKCJC4WR8J');
+    };
+  </script>
+  <script src="cookie-consent.js" defer></script>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.png?v=2" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>כל הקטגוריות, Foodos Online</title>
+  <meta name="description" content="כל קטגוריות המזון הכשר באתר, מאורגנות כמו מזווה: תבלינים ושמנים, אפייה ולחם, דגנים וקטניות, נשנושים ומתוקים, שתייה, בריאות ועוד.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="כל הקטגוריות, Foodos Online">
+  <meta property="og:description" content="כל קטגוריות המזון הכשר באתר, מאורגנות כמו מזווה אמיתי.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="data/products-data.js"></script>
+  <style>
+    @font-face {
+      font-family: 'VarelaRound';
+      src: url('Varela_Round/VarelaRound-Regular.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'AnerShapiro';
+      src: url('../fonts/OHAnerShapiro-Regular.woff2') format('woff2'),
+           url('../fonts/OHAnerShapiro-Regular.woff') format('woff');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal:#4A9D9A; --teal-dark:#2C6360; --teal-xdark:#1A4F4D; --teal-mid:#3A8380;
+      --teal-light:#EBF6F6; --teal-xlight:#C8E8E7; --lime:#7AB648; --orange:#E85D04;
+      --bg:#FFFFFF; --bg-soft:#F8F9F8; --text:#1A1A1A; --text-mid:#3D3D3D; --text-soft:#6B7280;
+      --border:#E5E7E5; --card-bg:#F4F4F2;
+      --serif:'Playfair Display',Georgia,serif;
+      --sans:'VarelaRound','Inter',system-ui,sans-serif;
+      --radius-sm:8px; --radius:14px; --radius-lg:20px; --radius-pill:100px;
+      --shadow-sm:0 1px 4px rgba(0,0,0,.06); --shadow:0 4px 16px rgba(0,0,0,.08); --shadow-lg:0 12px 40px rgba(0,0,0,.12);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--text); background: var(--bg); direction: rtl; line-height: 1.6; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
+    img { display: block; max-width: 100%; }
+
+    /* ── NAV ── */
+    .nav { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 200; height: 68px; display: flex; align-items: center; overflow: visible; }
+    .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; box-shadow: 0 3px 12px rgba(74,157,154,.3); position: relative; z-index: 201; }
+    .logo-name { font-family: var(--serif); font-size: 1.25rem; font-weight: 700; color: var(--text); line-height: 1.1; }
+    .logo-name small { display: block; font-family: var(--sans); font-size: 0.76rem; font-weight: 500; color: var(--teal); letter-spacing: 1px; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-search-item { position: relative; display: flex; align-items: center; }
+    .nav-search-trigger { background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-mid); display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background .15s, color .15s; }
+    .nav-search-trigger:hover { background: var(--teal-light); color: var(--teal-dark); }
+    .nav-search-box { position: absolute; top: 100%; left: 0; margin-top: 10px; display: none; align-items: center; gap: 6px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 6px; z-index: 500; }
+    .nav-search-box.open { display: flex; }
+    .nav-search-input { border: none; outline: none; font-family: inherit; font-size: .85rem; padding: 7px 10px; width: 190px; text-align: right; background: var(--bg-soft); border-radius: 8px; color: var(--text); }
+    .nav-search-go { background: var(--teal); color: #fff; border: none; border-radius: 8px; padding: 7px 12px; cursor: pointer; font-size: .85rem; flex-shrink: 0; }
+    .nav-search-go:hover { background: var(--teal-dark); }
+
+    /* ── HAMBURGER / CATEGORIES TRIGGER / MEGA MENU (shared across site) ── */
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px 8px; font-size: 1.5rem; color: var(--text-mid); line-height: 1; border-radius: var(--radius-sm); transition: background .15s; }
+    .nav-hamburger:hover { background: var(--teal-light); }
+    .nav-cats-trigger { display: flex; align-items: center; gap: 4px; cursor: pointer; }
+    .nav-cats-trigger::after { content: '▾'; font-size: 0.7rem; transition: transform .22s; }
+    .nav-cats-trigger.mega-open::after { transform: rotate(180deg); }
+    .mega-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; background: #fff; border-top: 2px solid var(--teal-xlight); border-bottom: 1px solid var(--border); box-shadow: 0 12px 40px rgba(0,0,0,.10); z-index: 199; padding: 2rem 0 2.2rem; }
+    .mega-menu.open { display: block; }
+    .mega-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; }
+    .mega-col-title { display: block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px; color: var(--teal-dark); margin-bottom: 0.9rem; padding-bottom: 0.55rem; border-bottom: 2px solid var(--teal-xlight); }
+    .mega-col a { display: block; font-size: 0.84rem; font-weight: 500; color: var(--text-mid); padding: 4px 0; transition: color .14s; }
+    .mega-col a:hover { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .mega-overlay { display: none; position: fixed; inset: 0; z-index: 198; background: rgba(0,0,0,.18); }
+    .mega-overlay.open { display: block; }
+
+    /* ── HERO ── */
+    .pantry-hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .pantry-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 85% 20%, rgba(168,212,75,.14) 0%, transparent 55%), radial-gradient(ellipse at 10% 90%, rgba(74,157,154,.12) 0%, transparent 55%); }
+    .pantry-hero-inner { position: relative; z-index: 1; }
+    .pantry-breadcrumb { font-size: 0.78rem; color: var(--text-soft); display: flex; align-items: center; gap: 6px; margin-bottom: 1.6rem; }
+    .pantry-breadcrumb a { color: var(--teal); }
+    .pantry-breadcrumb-sep { opacity: .4; }
+    .pantry-hero h1 { font-family: 'AnerShapiro', cursive; font-weight: 400; font-size: clamp(2.8rem, 6vw, 4.2rem); color: var(--teal-dark); line-height: 1.05; margin-bottom: 0.9rem; max-width: 14ch; }
+    .pantry-hero p { font-size: 1rem; color: var(--text-mid); line-height: 1.75; max-width: 46ch; }
+    .pantry-hero-count { font-family: var(--serif); font-weight: 700; color: var(--teal-dark); }
+
+    /* ── PANTRY INDEX (not a card grid, an editorial list, grouped like a real pantry) ── */
+    .pantry-index { padding: 1rem 0 5rem; }
+    .pantry-group { padding: 2.6rem 0; border-bottom: 1px solid var(--border); }
+    .pantry-group:first-child { padding-top: 1.4rem; }
+    .pantry-group:last-child { border-bottom: none; }
+    .pantry-group-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.6rem; }
+    .pantry-group-title { font-family: var(--serif); font-weight: 900; font-style: italic; font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--text); white-space: nowrap; }
+    .pantry-group-rule { flex: 1; height: 1px; background: linear-gradient(to left, var(--border), transparent); }
+    .pantry-group-note { font-size: 0.82rem; color: var(--text-soft); margin-bottom: 1.4rem; max-width: 60ch; }
+    .pantry-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.4rem; }
+    .pantry-row { display: flex; align-items: flex-start; gap: 0.9rem; padding: 0.85rem 0; border-bottom: 1px dashed var(--border); }
+    .pantry-row:last-child, .pantry-rows > .pantry-row:nth-last-child(2) { border-bottom: none; }
+    .pantry-row-icon { font-size: 1.3rem; line-height: 1; flex-shrink: 0; margin-top: 2px; width: 1.6rem; text-align: center; }
+    .pantry-row-main { flex: 1; min-width: 0; }
+    .pantry-row-top { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
+    .pantry-row-name { font-family: 'AnerShapiro', cursive; font-size: 1.35rem; font-weight: 400; color: var(--text); transition: color .15s; }
+    .pantry-row:hover .pantry-row-name { color: var(--teal-dark); }
+    .pantry-row-count { font-size: 0.72rem; color: var(--text-soft); white-space: nowrap; flex-shrink: 0; }
+    .pantry-row-desc { font-size: 0.78rem; color: var(--text-soft); line-height: 1.5; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+
+    /* subtle one-time entrance, single orchestrated reveal, not per-card hover gimmicks */
+    .pantry-group { opacity: 0; animation: pantryIn .5s ease-out forwards; }
+    .pantry-group:nth-child(1) { animation-delay: .02s; }
+    .pantry-group:nth-child(2) { animation-delay: .07s; }
+    .pantry-group:nth-child(3) { animation-delay: .12s; }
+    .pantry-group:nth-child(4) { animation-delay: .17s; }
+    .pantry-group:nth-child(5) { animation-delay: .22s; }
+    .pantry-group:nth-child(6) { animation-delay: .27s; }
+    .pantry-group:nth-child(7) { animation-delay: .32s; }
+    .pantry-group:nth-child(8) { animation-delay: .37s; }
+    @keyframes pantryIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) { .pantry-group { opacity: 1; animation: none; } }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--teal-dark); padding: 2.5rem 0 1.5rem; }
+    .footer-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: white; }
+    .footer-brand span { background: linear-gradient(90deg,#4A9D9A,#A8D44B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,.6); }
+    .footer-links a:hover { color: white; }
+    .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,.35); text-align: center; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.08); }
+
+    @media (max-width: 900px) {
+      .mega-inner { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+      .pantry-rows { grid-template-columns: 1fr; }
+      .pantry-rows > .pantry-row:nth-last-child(2) { border-bottom: 1px dashed var(--border); }
+    }
+    @media (max-width: 640px) {
+      .nav-hamburger { display: block; }
+      .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: 0; position: absolute; top: 68px; right: 0; left: 0; background: white; border-bottom: 1px solid var(--border); padding: 0.5rem 0; box-shadow: var(--shadow); z-index: 190; }
+      .nav-links.nav-open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 10px 1.5rem; font-size: 0.95rem; }
+      .nav-cats-trigger::after { display: none; }
+      .mega-menu { position: fixed; top: 0; bottom: 0; right: 0; left: 0; overflow-y: auto; padding: 1rem 0; z-index: 300; }
+      .mega-inner { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+      .pantry-hero { padding: 2.4rem 0 2rem; }
+      .pantry-group-title { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="../FOODOS_online2_LOGO.png" alt="FOODOS Online" class="logo-img">
+      <div class="logo-name">
+        FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
+        <small>כשר, שווה וקולינרי - זה כאן.</small>
+      </div>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#products">מוצרים</a></li>
+      <li>
+        <a class="nav-cats-trigger" id="cats-trigger" href="categories.html" role="button" aria-haspopup="true" aria-expanded="false">קטגוריות</a>
+      </li>
+      <li><a href="certs.html">הכשרויות</a></li>
+      <li><a href="about.html">על הפרויקט</a></li>
+      <li class="nav-item nav-search-item">
+        <button type="button" class="nav-search-trigger" id="nav-search-trigger" aria-label="חיפוש מוצרים" aria-haspopup="true" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <div class="nav-search-box" id="nav-search-box">
+          <input type="text" id="nav-search-input" class="nav-search-input" placeholder="חפש מוצר, מותג..." autocomplete="off">
+          <button type="button" class="nav-search-go" id="nav-search-go" aria-label="חפש">←</button>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="תפריט" onclick="toggleNav()">☰</button>
+  </div>
+</nav>
+<script>
+(function(){
+  var trigger = document.getElementById('nav-search-trigger');
+  var box = document.getElementById('nav-search-box');
+  var input = document.getElementById('nav-search-input');
+  var goBtn = document.getElementById('nav-search-go');
+  if(!trigger || !box || !input) return;
+  function closeBox(){ box.classList.remove('open'); trigger.setAttribute('aria-expanded','false'); }
+  function openBox(){ box.classList.add('open'); trigger.setAttribute('aria-expanded','true'); input.focus(); }
+  function goSearch(){
+    var q = input.value.trim();
+    if(q) window.location.href = 'index.html?q=' + encodeURIComponent(q);
+  }
+  trigger.addEventListener('click', function(e){
+    e.stopPropagation();
+    if(box.classList.contains('open')) closeBox(); else openBox();
+  });
+  box.addEventListener('click', function(e){ e.stopPropagation(); });
+  document.addEventListener('click', closeBox);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeBox(); });
+  input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); goSearch(); } });
+  if(goBtn) goBtn.addEventListener('click', goSearch);
+})();
+</script>
+
+<!-- ── MEGA MENU ── -->
+<div class="mega-overlay" id="mega-overlay"></div>
+<div class="mega-menu" id="mega-menu" role="navigation" aria-label="קטגוריות מוצרים">
+  <div class="mega-inner">
+    <div class="mega-col">
+      <span class="mega-col-title">בישול ותיבול</span>
+      <a href="category.html?cat=spices">תבלינים</a>
+      <a href="category.html?cat=salt">מלח</a>
+      <a href="category.html?cat=oils">שמנים</a>
+      <a href="category.html?cat=sauces">רטבים</a>
+      <a href="category.html?cat=asian">אסייתי</a>
+      <a href="category.html?cat=vinegar">חומץ</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">אפייה ולחמים</span>
+      <a href="category.html?cat=flours">קמחים</a>
+      <a href="category.html?cat=baking">אפייה</a>
+      <a href="category.html?cat=baking-supplies">תוספי אפייה</a>
+      <a href="category.html?cat=confectionery">קונדיטוריה</a>
+      <a href="category.html?cat=breads">לחמים</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">דגנים וקטניות</span>
+      <a href="category.html?cat=legumes">קטניות</a>
+      <a href="category.html?cat=legumes-rice-pasta">אורז ופסטה</a>
+      <a href="category.html?cat=cereal">דגני בוקר</a>
+      <a href="category.html?cat=kitchen">מטבח</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">חטיפים ומתוקים</span>
+      <a href="category.html?cat=snacks">חטיפים</a>
+      <a href="category.html?cat=chocolate">שוקולד</a>
+      <a href="category.html?cat=candy">ממתקים</a>
+      <a href="category.html?cat=natural-sweeteners">ממתיקים טבעיים</a>
+      <a href="category.html?cat=sugar-free">ממתיקים ומוצרים ללא סוכר</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">שתייה</span>
+      <a href="category.html?cat=hot-drinks">שתייה חמה</a>
+      <a href="category.html?cat=drinks">שתייה קרה</a>
+    </div>
+    <div class="mega-col">
+      <span class="mega-col-title">ממרחים ובריאות</span>
+      <a href="category.html?cat=spreads">ממרחים</a>
+      <a href="category.html?cat=canned-fish">שימורי דגים</a>
+      <a href="category.html?cat=nutritional-yeast">שמרים תזונתיים</a>
+      <a href="category.html?cat=superfood">סופר פוד</a>
+      <a href="category.html?cat=protein-products">מוצרי חלבון</a>
+      <a href="category.html?cat=supplements">תוספי תזונה</a>
+      <a href="category.html?cat=kitchen-tools">כלי מטבח</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<section class="pantry-hero">
+  <div class="container pantry-hero-inner">
+    <div class="pantry-breadcrumb">
+      <a href="index.html">בית</a>
+      <span class="pantry-breadcrumb-sep">›</span>
+      <span>קטגוריות</span>
+    </div>
+    <h1>המזווה המלא שלנו</h1>
+    <p>כל <span class="pantry-hero-count" id="hero-count">42</span> הקטגוריות באתר, מסודרות כמו שהיינו מסדרות אותן בבית: לא לפי האלפבית, אלא לפי איפה כל דבר באמת משמש אתכם במטבח.</p>
+  </div>
+</section>
+
+<!-- ── PANTRY INDEX ── -->
+<section class="pantry-index">
+  <div class="container" id="pantry-groups">
+    <!-- נבנה ב-JS -->
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">FOODOS <span>Online</span></div>
+    <ul class="footer-links" aria-label="קישורי פוטר">
+      <li><a href="index.html#products">כל המוצרים</a></li>
+      <li><a href="categories.html">קטגוריות</a></li>
+      <li><a href="iherb.html">איך מזמינים מ-iHerb</a></li>
+      <li><a href="about.html">על הפרויקט</a></li>
+      <li><a href="accessibility.html">הצהרת נגישות</a></li>
+      <li><a href="privacy.html">מדיניות פרטיות</a></li>
+      <li><a href="terms.html">תנאי שימוש</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">
+    © 2026 Foodos Online · online.foodos.co.il · קישורי שותפים עם iHerb Associates
+    <br>אתר זה כולל קישורי שותפים, אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
+    <br>המידע על כשרות ותזונה נבדק בקפידה, אך אינו מחליף בדיקה עצמאית מול iHerb ותווית המוצר בפועל. <a href="terms.html" style="color:rgba(255,255,255,.55);text-decoration:underline;">פרטים בתנאי השימוש</a>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+    document.getElementById('nav-links').classList.toggle('nav-open');
+  }
+
+  // Mega menu hover/click logic (same behavior as every other page)
+  (function initMegaMenu() {
+    const trigger = document.getElementById('cats-trigger');
+    const menu = document.getElementById('mega-menu');
+    const overlay = document.getElementById('mega-overlay');
+    if (!trigger || !menu) return;
+    let hideTimer = null;
+    function openMega() { clearTimeout(hideTimer); menu.classList.add('open'); overlay.classList.add('open'); trigger.classList.add('mega-open'); trigger.setAttribute('aria-expanded','true'); }
+    function closeMega() { hideTimer = setTimeout(() => { menu.classList.remove('open'); overlay.classList.remove('open'); trigger.classList.remove('mega-open'); trigger.setAttribute('aria-expanded','false'); }, 120); }
+    trigger.addEventListener('mouseenter', openMega);
+    trigger.addEventListener('mouseleave', closeMega);
+    menu.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+    menu.addEventListener('mouseleave', closeMega);
+    overlay.addEventListener('click', closeMega);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMega(); });
+  })();
+
+  // ── PANTRY GROUPS: hand-grouped like a real pantry, not alphabetical ──
+  const GROUPS = [
+    { title: 'מטבח יומיומי', note: 'מה שמגיע לסיר או למחבת כל יום.', cats: [
+      {heb:'תבלינים', slug:'spices', icon:'🌿'},
+      {heb:'מלח', slug:'salt', icon:'🧂'},
+      {heb:'שמנים', slug:'oils', icon:'🫒'},
+      {heb:'רטבים', slug:'sauces', icon:'🥫'},
+      {heb:'תיבול', slug:'seasoning', icon:'🌶️'},
+      {heb:'אסייתי', slug:'asian', icon:'🥢'},
+      {heb:'מרקים', slug:'soups', icon:'🍲'},
+      {heb:'חומץ', slug:'vinegar', icon:'🍶'},
+    ]},
+    { title: 'אפייה ולחם', note: 'כל מה שצריך כדי שמשהו יצא מהתנור.', cats: [
+      {heb:'קמחים', slug:'flours', icon:'🌾'},
+      {heb:'אפייה', slug:'baking', icon:'🧁'},
+      {heb:'לחמים', slug:'breads', icon:'🍞'},
+      {heb:'תוספי אפייה', slug:'baking-supplies', icon:'🥄'},
+    ]},
+    { title: 'דגנים, קטניות ואורז', note: 'הבסיס של ארוחה, לא התוספת שלה.', cats: [
+      {heb:'קטניות', slug:'legumes', icon:'🫘'},
+      {heb:'פסטה', slug:'pasta', icon:'🍝'},
+      {heb:'דגנים', slug:'grains', icon:'🌾'},
+      {heb:'דגני בוקר', slug:'cereal', icon:'🥣'},
+      {heb:'אגוזים וזרעים', slug:'nuts-seeds', icon:'🥜'},
+      {heb:'קטניות, אורז ופסטה', slug:'legumes-rice-pasta', icon:'🍚'},
+    ]},
+    { title: 'נשנושים ומתוקים', note: 'הצד הכיפי, בלי יוצא דופן אחד שמשתלט על המדף.', cats: [
+      {heb:'ביסקוויטים', slug:'biscuits', icon:'🍪'},
+      {heb:'קונדיטוריה', slug:'confectionery', icon:'🎂'},
+      {heb:'חטיפים', slug:'snacks', icon:'🍿'},
+      {heb:'שוקולד', slug:'chocolate', icon:'🍫'},
+      {heb:'ממתקים', slug:'candy', icon:'🍬'},
+      {heb:'ממתקים טבעיים', slug:'natural-sweets', icon:'🌴'},
+      {heb:'ריבות', slug:'jams', icon:'🍓'},
+      {heb:'ממתיקים ומוצרים ללא סוכר', slug:'sugar-free', icon:'🍃'},
+      {heb:'ממתיקים טבעיים', slug:'natural-sweeteners', icon:'🍁'},
+    ]},
+    { title: 'שתייה', note: 'חם, קר, עם קפאין או בלי.', cats: [
+      {heb:'תה', slug:'tea', icon:'🍵'},
+      {heb:'קפה', slug:'coffee', icon:'☕'},
+      {heb:'שתייה חמה', slug:'hot-drinks', icon:'🫖'},
+      {heb:'שתייה', slug:'drinks', icon:'🥤'},
+      {heb:'קרמרים ותחליפי חלב', slug:'creamers', icon:'🥛'},
+    ]},
+    { title: 'מזווה ושימורים', note: 'מה שמחזיק זמן בארון, לרגע שלא מתכננים מראש.', cats: [
+      {heb:'ממרחים', slug:'spreads', icon:'🫙'},
+      {heb:'שימורי דגים', slug:'canned-fish', icon:'🐟'},
+      {heb:'שימורי תזונתיים', slug:'canned-goods', icon:'🥫'},
+      {heb:'שמרים תזונתיים', slug:'nutritional-yeast', icon:'🧀'},
+    ]},
+    { title: 'בריאות ותזונה', note: 'מעבר למזון הרגיל, לשגרה יומיומית.', cats: [
+      {heb:'סופר פוד', slug:'superfood', icon:'🌱'},
+      {heb:'בריאות', slug:'health', icon:'💚'},
+      {heb:'תוספי תזונה', slug:'supplements', icon:'💊'},
+      {heb:'מוצרי חלבון', slug:'protein-products', icon:'💪'},
+    ]},
+    { title: 'למטבח עצמו', note: 'לא אוכלים את זה, אבל המטבח לא עובד בלעדיו.', cats: [
+      {heb:'כלי מטבח', slug:'kitchen-tools', icon:'🔪'},
+      {heb:'מטבח', slug:'kitchen', icon:'🧽'},
+    ]},
+  ];
+
+  function esc(s) { const d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+
+  async function init() {
+    let allProducts = window.FOODOS_PRODUCTS || [];
+    let catDescriptions = {};
+    try {
+      const [prodRes, contentRes] = await Promise.all([
+        fetch('data/products_explained_human_descriptions.json?v=' + Date.now()),
+        fetch('data/content.json?v=' + Date.now())
+      ]);
+      if (prodRes.ok) {
+        const overrideArr = await prodRes.json();
+        const overrideMap = {};
+        overrideArr.forEach(p => { overrideMap[p.id] = p; });
+        allProducts = allProducts.map(p => overrideMap[p.id] ? Object.assign({}, p, overrideMap[p.id]) : p);
+        overrideArr.forEach(p => { if (!allProducts.find(b => b.id === p.id)) allProducts.push(p); });
+      }
+      if (contentRes.ok) {
+        const cdata = await contentRes.json();
+        if (cdata.categories) catDescriptions = cdata.categories;
+      }
+    } catch (e) { console.warn('Could not load live product data, counts will be blank:', e.message); }
+
+    allProducts = allProducts.filter(p => !p.suspended);
+    const counts = {};
+    allProducts.forEach(p => {
+      const cats = Array.isArray(p.cat) ? p.cat : [p.cat];
+      cats.filter(Boolean).forEach(c => { counts[c] = (counts[c] || 0) + 1; });
+    });
+
+    const totalCats = GROUPS.reduce((n, g) => n + g.cats.length, 0);
+    const heroCount = document.getElementById('hero-count');
+    if (heroCount) heroCount.textContent = totalCats;
+
+    const wrap = document.getElementById('pantry-groups');
+    wrap.innerHTML = GROUPS.map(group => `
+      <div class="pantry-group">
+        <div class="pantry-group-head">
+          <span class="pantry-group-title">${esc(group.title)}</span>
+          <span class="pantry-group-rule"></span>
+        </div>
+        <p class="pantry-group-note">${esc(group.note)}</p>
+        <div class="pantry-rows">
+          ${group.cats.map(c => {
+            const n = counts[c.heb] || 0;
+            const desc = catDescriptions[c.heb] || '';
+            return `<a class="pantry-row" href="category.html?cat=${encodeURIComponent(c.slug)}">
+              <span class="pantry-row-icon">${c.icon}</span>
+              <span class="pantry-row-main">
+                <span class="pantry-row-top">
+                  <span class="pantry-row-name">${esc(c.heb)}</span>
+                  <span class="pantry-row-count">${n} מוצרים</span>
+                </span>
+                <span class="pantry-row-desc">${esc(desc)}</span>
+              </span>
+            </a>`;
+          }).join('')}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  init();
+</script>
+
+</body>
+</html>
