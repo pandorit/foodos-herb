@@ -2102,10 +2102,10 @@
           ${p.priceILS ? `<span class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</span>` : ''}
         </div>` : ''}
         <div class="card-actions">
-          <a href="product.html?id=${p.id}" class="card-btn-outline">פרטים ←</a>
           ${p.sizes && p.sizes.length > 1
             ? p.sizes.map(s => `<a href="${s.affiliateUrl||s.url}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn card-btn-size">${s.label} ←</a>`).join('')
-            : `<a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">iHerb ←</a>`}
+            : `<a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn">לחצו לרכישה ב-iHerb ←</a>`}
+          <a href="product.html?id=${p.id}" class="card-btn-outline">לדף המוצר המלא ←</a>
         </div>
         <button class="card-report-btn" onclick="openReport(${p.id}, '${(p.nameHe||p.name||'').replace(/'/g,"\\'")}', '${(p.cert||'').replace(/'/g,"\\'")}', '${(p.url||'').replace(/'/g,"\\'")}')">דווח על הסרת כשרות</button>
       </div>`;

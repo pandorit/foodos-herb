@@ -252,6 +252,15 @@
       white-space: nowrap;
     }
     .btn-primary:hover { background: var(--teal-mid); transform: translateY(-1px); }
+    .sidebar-shop-btn {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      background: var(--teal); color: white;
+      font-family: var(--sans); font-size: 0.88rem; font-weight: 700;
+      padding: 11px 16px; border-radius: var(--radius-pill);
+      margin-top: 1rem; transition: background .18s; text-align: center;
+    }
+    .sidebar-shop-btn:hover { background: var(--teal-mid); }
+    .sidebar-shop-btn.unavailable { background: #9CA3AF; }
     .btn-secondary {
       display: inline-flex; align-items: center; gap: 6px;
       background: transparent; color: var(--teal-dark);
@@ -806,6 +815,8 @@
               <span class="detail-label">זמינות</span>
               <span class="detail-value"><span style="background:#9CA3AF;color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:999px;">אזל מהמלאי</span></span>
             </div>
+
+            <a class="sidebar-shop-btn" id="sidebar-shop-btn" href="#" target="_blank" rel="noopener noreferrer sponsored" style="display:none;">לחצו לרכישה ב-iHerb ←</a>
           </aside>
 
         </div>
@@ -1243,6 +1254,18 @@
 
       if (product.available === false) {
         document.getElementById('sidebar-availability-row').style.display = 'flex';
+      }
+
+      const sidebarShopBtn = document.getElementById('sidebar-shop-btn');
+      if (product.affiliateUrl || product.url) {
+        sidebarShopBtn.href = product.affiliateUrl || product.url;
+        sidebarShopBtn.style.display = 'flex';
+        if (product.available === false) {
+          sidebarShopBtn.textContent = 'אזל מהמלאי, לבדיקת זמינות ←';
+          sidebarShopBtn.classList.add('unavailable');
+        } else {
+          sidebarShopBtn.textContent = 'לחצו לרכישה ב-iHerb ←';
+        }
       }
 
       // ── Show product content

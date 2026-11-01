@@ -475,8 +475,8 @@
             ${p.nameHe ? `<div class="card-name">${p.nameHe}</div><div class="card-name-en" dir="auto">${shortName}</div>` : `<div class="card-name" dir="auto">${shortName}</div>`}
             ${p.priceILS ? `<div class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</div>` : ''}
             <div class="card-desc">${(p.descNew||p.desc||'').replace(/\s*—\s*/g, ', ')}</div>
-            <a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn" onclick="event.stopPropagation()">לחנות iHerb ←</a>
-            <a href="product.html?id=${p.id}" class="card-link-secondary" onclick="event.stopPropagation()">דף המוצר</a>
+            <a href="${p.affiliateUrl||p.url||'#'}" target="_blank" rel="noopener noreferrer sponsored" class="card-btn" onclick="event.stopPropagation()">לחצו לרכישה ב-iHerb ←</a>
+            <a href="product.html?id=${p.id}" class="card-link-secondary" onclick="event.stopPropagation()">לדף המוצר המלא ←</a>
             <a href="https://wa.me/972506543718?text=${encodeURIComponent('שלום! דיווח על בעיית כשרות:\nמוצר: ' + (p.nameHe||p.name) + '\nקוד: #' + p.id + '\nכשרות נוכחית: ' + (p.cert||'') + (p.url ? '\nלינק: ' + p.url : ''))}" target="_blank" rel="noopener noreferrer" class="card-report-link" onclick="event.stopPropagation()">🚩 דווח על הסרת כשרות</a>
           </div>
         </div>`;
