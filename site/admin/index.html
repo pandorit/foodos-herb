@@ -340,7 +340,7 @@
       <div class="topbar-logo-text">FOODOS <span>Admin</span></div>
     </div>
     <div class="topbar-right">
-      <span class="topbar-branch">ענף: dev</span>
+      <span class="topbar-branch">⚠️ שמירה = פרסום מיידי לאתר החי</span>
       <span class="topbar-user" id="topbar-user"></span>
       <button class="btn-logout" onclick="doLogout()">יציאה</button>
     </div>
@@ -513,17 +513,21 @@
     <hr class="drawer-divider">
     <div class="drawer-row">
       <div class="drawer-field">
-        <label class="drawer-label">מחיר ($)</label>
+        <label class="drawer-label">מחיר (₪)</label>
         <input type="number" id="edit-price" class="drawer-input" dir="ltr" step="0.01" min="0">
       </div>
       <div class="drawer-field">
         <label class="drawer-label">הכשרות</label>
-        <input type="text" id="edit-cert" class="drawer-input" dir="ltr" readonly style="color:var(--text-soft);cursor:default;">
+        <select id="edit-cert" class="drawer-input" dir="ltr" onchange="checkDairyHint()"></select>
       </div>
     </div>
     <div class="drawer-field">
-      <label class="drawer-label">קישור iHerb</label>
-      <input type="url" id="edit-link" class="drawer-input" dir="ltr" placeholder="https://iherb.com/...">
+      <label class="drawer-label">תגיות <span style="font-weight:400;color:var(--text-soft)">(מופרדות בפסיק)</span></label>
+      <input type="text" id="edit-tags" class="drawer-input" placeholder="אורגני, טבעוני, ללא גלוטן...">
+    </div>
+    <div class="drawer-field">
+      <label class="drawer-label">קישור iHerb <span style="font-weight:400;color:var(--text-soft)">(עם קוד שותפים)</span></label>
+      <input type="url" id="edit-link" class="drawer-input" dir="ltr" placeholder="https://iherb.prf.hn/click/...">
     </div>
     <hr class="drawer-divider">
     <div class="drawer-field">
@@ -542,6 +546,14 @@
         </div>
         <button class="toggle" id="toggle-available" onclick="toggleField('available')"></button>
       </div>
+      <div class="toggle-field">
+        <div>
+          <div class="toggle-field-label">חלבי</div>
+          <div class="toggle-field-desc">חובה לסמן אם ההכשרות OU-D</div>
+        </div>
+        <button class="toggle" id="toggle-dairy" onclick="toggleField('dairy')"></button>
+      </div>
+      <div id="dairy-hint" style="display:none;margin-top:8px;padding:8px 12px;background:var(--amber-bg,#FFF8E8);color:var(--amber,#B8860B);border-radius:var(--radius);font-size:0.78rem;">⚠️ הכשרות OU-D אבל "חלבי" כבוי. כדאי להדליק.</div>
     </div>
     <div id="drawer-iherb-wrap" style="margin-top:1rem;padding:10px 14px;background:var(--teal-light);border-radius:var(--radius);font-size:0.8rem;">
       <a id="drawer-iherb-a" href="#" target="_blank" style="color:var(--teal-dark);font-weight:600;">פתח ב-iHerb ↗</a>
@@ -557,11 +569,19 @@
 
 <script>
 const REPO = 'pandorit/foodos-herb';
-const BRANCH = 'dev';
+const BRANCH = 'master';
 const FILE_PATH = 'site/kosher-iherb/data/products_explained_human_descriptions.json';
+const BASE_FILE_PATH = 'site/kosher-iherb/data/products-data.js';
 const API = 'https://api.github.com';
 
-let token = '', products = [], fileSha = '', pendingChanges = {};
+// Approved kosher certifications (per project CLAUDE.md)
+const APPROVED_CERTS = [
+  'OU', 'OU-D', 'OU-P', 'OU-M', 'OK', 'KOF-K', 'Star-K', 'COR',
+  'CRC', 'JSOR', 'MK', 'Kehilla Kosher', 'EarthKosher', 'KVH', 'MR',
+  'KSA', 'Kosher Scroll K', 'Kosher Check', 'KCK', 'KA', 'Badatz Stern'
+];
+
+let token = '', products = [], baseProducts = [], overrideProducts = [], fileSha = '', pendingChanges = {};
 
 // ── AUTH ──
 const getToken = () => localStorage.getItem('foodos_token') || '';
@@ -606,33 +626,49 @@ async function initApp() {
 }
 
 // ── LOAD ──
+async function fetchGhFile(path) {
+  const res = await ghGet(`/repos/${REPO}/contents/${path}?ref=${BRANCH}`, token);
+  if (!res.ok) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(`GitHub ${res.status} (${path}): ${errData.message || res.statusText}`);
+  }
+  const data = await res.json();
+  if (!data.content) throw new Error(`הקובץ ${path} ריק או גדול מדי (>1MB) ב-GitHub`);
+  const b64 = data.content.replace(/\n/g, '');
+  let decoded;
+  try {
+    const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+    decoded = new TextDecoder('utf-8').decode(bytes);
+  } catch (_) {
+    decoded = decodeURIComponent(escape(atob(b64)));
+  }
+  return { text: decoded, sha: data.sha };
+}
+
 async function loadProducts() {
   document.getElementById('products-container').innerHTML = '<div class="loading"><div class="spinner"></div><span>טוען מוצרים...</span></div>';
   try {
-    const res = await ghGet(`/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`, token);
-    if (!res.ok) {
-      const errData = await res.json().catch(() => ({}));
-      throw new Error(`GitHub ${res.status}: ${errData.message || res.statusText}`);
-    }
-    const data = await res.json();
-    if (!data.content) throw new Error('הקובץ ריק או גדול מדי (>1MB) ב-GitHub');
-    fileSha = data.sha;
-    // Decode base64 content with proper UTF-8 support
-    const b64 = data.content.replace(/\n/g, '');
-    let decoded;
-    try {
-      // Modern approach: TextDecoder handles UTF-8 correctly
-      const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
-      decoded = new TextDecoder('utf-8').decode(bytes);
-    } catch (_) {
-      // Fallback: legacy escape/unescape approach
-      decoded = decodeURIComponent(escape(atob(b64)));
-    }
-    // Handle double-stringified JSON (content wrapped in extra quotes)
-    if (decoded.startsWith('"') && decoded.endsWith('"')) {
-      decoded = JSON.parse(decoded);
-    }
-    products = JSON.parse(decoded);
+    const [overrideFile, baseFile] = await Promise.all([
+      fetchGhFile(FILE_PATH),
+      fetchGhFile(BASE_FILE_PATH)
+    ]);
+    fileSha = overrideFile.sha;
+
+    let overrideText = overrideFile.text;
+    if (overrideText.startsWith('"') && overrideText.endsWith('"')) overrideText = JSON.parse(overrideText);
+    overrideProducts = JSON.parse(overrideText);
+
+    // products-data.js is "window.FOODOS_PRODUCTS = [ ... ];" — strip the assignment to parse the array
+    const baseJsonText = baseFile.text.replace(/^[^=]*=\s*/, '').replace(/;\s*$/, '');
+    baseProducts = JSON.parse(baseJsonText);
+
+    // Merge exactly like the live site does: base fields, overridden per-field by the override file,
+    // plus any products that exist only in the override file.
+    const overrideMap = {};
+    overrideProducts.forEach(p => { overrideMap[p.id] = p; });
+    products = baseProducts.map(p => overrideMap[p.id] ? Object.assign({}, p, overrideMap[p.id]) : p);
+    overrideProducts.forEach(p => { if (!baseProducts.find(b => b.id === p.id)) products.push(p); });
+
     pendingChanges = {};
     updateStats(); populateCertFilter(); renderTable(products);
   } catch(e) {
@@ -688,7 +724,7 @@ function renderTable(list) {
         <span class="changed-dot ${changed?'visible':''}" id="dot-${p.id}"></span>
         <input type="text" value="${esc(eff.nameHe||'')}" onchange="quickEdit(${p.id},'nameHe',this.value)" oninput="markInput(this,${p.id})" placeholder="שם בעברית">
       </td>
-      <td><span class="cert-badge">${p.cert||'—'}</span></td>
+      <td><span class="cert-badge">${eff.cert||'—'}</span></td>
       <td><div class="toggle-wrap"><button class="toggle ${isActive?'on':'off'}" onclick="quickToggle(${p.id},'suspended',this)"></button><span class="toggle-label">${isActive?'פעיל':'מושהה'}</span></div></td>
       <td><div class="toggle-wrap"><button class="toggle ${isAvail?'on':'off'}" onclick="quickToggle(${p.id},'available',this)"></button><span class="toggle-label">${isAvail?'זמין':'לא זמין'}</span></div></td>
       <td><button class="btn-edit" onclick="openDrawer(${p.id})">עריכה מלאה</button></td>
@@ -766,20 +802,34 @@ function openDrawer(id) {
   const p = products.find(x=>x.id===id);
   const eff = {...p, ...(pendingChanges[id]||{})};
   document.getElementById('drawer-title').textContent = eff.nameHe || eff.name || `מוצר #${id}`;
-  document.getElementById('drawer-subtitle').textContent = `ID:${id} | ${p.brand||''} | ${p.cert||''}`;
+  document.getElementById('drawer-subtitle').textContent = `ID:${id} | ${p.brand||''} | ${eff.cert||''}`;
   document.getElementById('edit-id').value = id;
   document.getElementById('edit-nameHe').value = eff.nameHe || '';
   document.getElementById('edit-name').value = p.name || '';
   document.getElementById('edit-descNew').value = eff.descNew || '';
   document.getElementById('edit-longDesc').value = eff.longDesc || '';
-  document.getElementById('edit-price').value = eff.price || '';
-  document.getElementById('edit-cert').value = p.cert || '';
-  document.getElementById('edit-link').value = eff.link || '';
-  document.getElementById('drawer-iherb-a').href = eff.link || '#';
+  document.getElementById('edit-price').value = eff.priceILS || '';
+  const certSel = document.getElementById('edit-cert');
+  const certOptions = APPROVED_CERTS.includes(eff.cert) || !eff.cert
+    ? APPROVED_CERTS
+    : [eff.cert, ...APPROVED_CERTS]; // keep an unrecognized existing value visible rather than silently dropping it
+  certSel.innerHTML = certOptions.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('');
+  certSel.value = eff.cert || APPROVED_CERTS[0];
+  document.getElementById('edit-tags').value = (eff.tags||[]).join(', ');
+  document.getElementById('edit-link').value = eff.affiliateUrl || eff.url || '';
+  document.getElementById('drawer-iherb-a').href = eff.affiliateUrl || eff.url || '#';
   setToggle('toggle-active', !eff.suspended);
   setToggle('toggle-available', eff.available !== false);
+  setToggle('toggle-dairy', eff.dairy === true);
+  checkDairyHint();
   document.getElementById('drawer-overlay').classList.add('open');
   document.getElementById('edit-drawer').classList.add('open');
+}
+
+function checkDairyHint() {
+  const cert = document.getElementById('edit-cert').value;
+  const dairyOn = document.getElementById('toggle-dairy').dataset.on === '1';
+  document.getElementById('dairy-hint').style.display = (cert === 'OU-D' && !dairyOn) ? 'block' : 'none';
 }
 
 function closeDrawer() {
@@ -794,9 +844,10 @@ function setToggle(id, isOn) {
 }
 
 function toggleField(field) {
-  const id = field==='active' ? 'toggle-active' : 'toggle-available';
+  const id = field==='active' ? 'toggle-active' : field==='dairy' ? 'toggle-dairy' : 'toggle-available';
   const isOn = document.getElementById(id).dataset.on === '1';
   setToggle(id, !isOn);
+  if (field === 'dairy' || field === 'active') checkDairyHint();
 }
 
 function saveDrawer() {
@@ -810,13 +861,20 @@ function saveDrawer() {
   const longDesc = document.getElementById('edit-longDesc').value.trim();
   if (longDesc !== (orig.longDesc||'')) changes.longDesc = longDesc;
   const price = parseFloat(document.getElementById('edit-price').value);
-  if (!isNaN(price) && price !== orig.price) changes.price = price;
+  if (!isNaN(price) && price !== orig.priceILS) changes.priceILS = price;
+  const cert = document.getElementById('edit-cert').value;
+  if (cert !== (orig.cert||'')) changes.cert = cert;
+  const tags = document.getElementById('edit-tags').value.split(',').map(s=>s.trim()).filter(Boolean);
+  const origTags = orig.tags || [];
+  if (JSON.stringify(tags) !== JSON.stringify(origTags)) changes.tags = tags;
   const link = document.getElementById('edit-link').value.trim();
-  if (link !== (orig.link||'')) changes.link = link;
+  if (link !== (orig.affiliateUrl||orig.url||'')) changes.affiliateUrl = link;
   const suspended = document.getElementById('toggle-active').dataset.on === '0';
   if (suspended !== (orig.suspended||false)) changes.suspended = suspended;
   const available = document.getElementById('toggle-available').dataset.on === '1';
   if (available !== (orig.available!==false)) changes.available = available;
+  const dairy = document.getElementById('toggle-dairy').dataset.on === '1';
+  if (dairy !== (orig.dairy===true)) changes.dairy = dairy;
   if (Object.keys(changes).length) {
     pendingChanges[id] = {...(pendingChanges[id]||{}), ...changes};
   }
@@ -830,11 +888,28 @@ function saveDrawer() {
 async function saveChanges() {
   const n = Object.keys(pendingChanges).length;
   if (!n) return;
+  const ok = confirm(`לשמור ${n} שינויים? זה יפורסם מיידית לאתר החי (online.foodos.co.il), בלי שלב בדיקה נוסף.`);
+  if (!ok) return;
   const btn = document.getElementById('save-all-btn');
   btn.innerHTML = '⏳ שומר...'; btn.disabled = true;
   try {
-    const updated = products.map(p => pendingChanges[p.id] ? {...p, ...pendingChanges[p.id]} : p);
-    const json = JSON.stringify(updated, null, 2);
+    // Apply pending changes to the override file only: merge into an existing override
+    // entry, or create a new minimal one (id + changed fields) for base-only products.
+    const overrideMap = {};
+    overrideProducts.forEach(p => { overrideMap[p.id] = p; });
+    Object.keys(pendingChanges).forEach(idStr => {
+      const id = parseInt(idStr, 10);
+      const changes = pendingChanges[id];
+      if (overrideMap[id]) {
+        Object.assign(overrideMap[id], changes);
+      } else {
+        const entry = Object.assign({ id }, changes);
+        overrideMap[id] = entry;
+        overrideProducts.push(entry);
+      }
+    });
+
+    const json = JSON.stringify(overrideProducts, null, 2);
     const content = btoa(unescape(encodeURIComponent(json)));
     const res = await fetch(`${API}/repos/${REPO}/contents/${FILE_PATH}`, {
       method: 'PUT',
@@ -844,10 +919,14 @@ async function saveChanges() {
     if (!res.ok) { const e = await res.json(); throw new Error(e.message); }
     const result = await res.json();
     fileSha = result.content.sha;
-    products = updated;
+    // Refresh the merged display list from the now-saved state
+    const freshMap = {};
+    overrideProducts.forEach(p => { freshMap[p.id] = p; });
+    products = baseProducts.map(p => freshMap[p.id] ? Object.assign({}, p, freshMap[p.id]) : p);
+    overrideProducts.forEach(p => { if (!baseProducts.find(b => b.id === p.id)) products.push(p); });
     pendingChanges = {};
     updateStats(); filterProducts(); updateSaveBtn();
-    showToast(`✅ ${n} שינויים נשמרו ב-GitHub (ענף dev)`);
+    showToast(`✅ ${n} שינויים נשמרו, Cloudflare יפרוס לאתר תוך דקה-שתיים`);
   } catch(e) {
     showToast('❌ שגיאה: ' + e.message, true);
     btn.innerHTML = `💾 שמירה (${n}) ל-GitHub`;
@@ -993,7 +1072,7 @@ async function saveContent() {
     const result = await res.json();
     contentSha = result.content.sha;
     siteContent = updated;
-    showToast('✅ תוכן האתר נשמר ב-GitHub (ענף dev)');
+    showToast('✅ תוכן האתר נשמר, Cloudflare יפרוס לאתר תוך דקה-שתיים');
   } catch(e) {
     showToast('❌ שגיאה: ' + e.message, true);
   }
