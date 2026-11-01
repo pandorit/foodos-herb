@@ -270,7 +270,7 @@
         </div>
         <div class="brand-cert-chips" id="brand-cert-chips"></div>
       </div>
-      <a id="brand-iherb-link" href="https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2F%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1" target="_blank" rel="noopener noreferrer sponsored" class="brand-iherb-btn">לחנות iHerb ←</a>
+      <a id="brand-iherb-link" href="https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:https%3A%2F%2Fil.iherb.com%2F%3Fccode%3DIL%26currcode%3DILS%26langcode%3Den-US%26fld%3D1%26rcode%3DFOODOS" target="_blank" rel="noopener noreferrer sponsored" class="brand-iherb-btn">לחנות iHerb ←</a>
     </div>
   </div>
 </section>
@@ -443,7 +443,7 @@
     ).join('');
 
     // iHerb search link (עטוף בקישור שותפים, כדי שגם חיפוש לפי מותג יזוכה בעמלה)
-    const searchDest = encodeURIComponent(`https://il.iherb.com/search?kw=${brandName}&ccode=IL&currcode=ILS&langcode=en-US&fld=1`);
+    const searchDest = encodeURIComponent(`https://il.iherb.com/search?kw=${brandName}&ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS`);
     document.getElementById('brand-iherb-link').href =
       `https://iherb.prf.hn/click/camref:1011l5NRzk/creativeref:1100l48780/destination:${searchDest}`;
 
