@@ -207,6 +207,27 @@
       background: none; border: none; font-size: 1.3rem; color: var(--text-soft);
       cursor: pointer; padding: 4px; line-height: 1;
     }
+    .drawer-nav-btn {
+      background: none; border: 1.5px solid var(--border); color: var(--text-mid);
+      font-family: 'Heebo', sans-serif; font-size: 0.78rem; font-weight: 600;
+      padding: 6px 12px; border-radius: var(--radius); cursor: pointer; transition: all .15s;
+    }
+    .drawer-nav-btn:hover:not(:disabled) { border-color: var(--teal); color: var(--teal-dark); }
+    .drawer-nav-btn:disabled { opacity: .35; cursor: default; }
+    .text-review-chip {
+      background: var(--bg); border: 1.5px solid var(--border); color: var(--text-mid);
+      font-family: 'Heebo', sans-serif; font-size: 0.82rem; font-weight: 600;
+      padding: 7px 14px; border-radius: var(--radius-pill, 100px); cursor: pointer; transition: all .15s;
+    }
+    .text-review-chip:hover { border-color: var(--teal); }
+    .text-review-chip.active[data-val="ok"] { background: #EBF6F6; border-color: var(--teal); color: var(--teal-dark); }
+    .text-review-chip.active[data-val="ready"] { background: #E8F7EC; border-color: #2E9E4D; color: #1E7A38; }
+    .text-review-chip.active[data-val="planned"] { background: #FFF8E8; border-color: #C9962F; color: #8A6A1E; }
+    .text-review-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+    .text-review-dot[data-val="ok"] { background: var(--teal); }
+    .text-review-dot[data-val="ready"] { background: #2E9E4D; }
+    .text-review-dot[data-val="planned"] { background: #C9962F; }
+    .text-review-dot[data-val=""] { background: transparent; border: 1.5px solid var(--border); }
     .drawer-body { flex: 1; overflow-y: auto; padding: 1.5rem 1.8rem; }
     .drawer-field { margin-bottom: 1.4rem; }
     .drawer-label { font-size: 0.8rem; font-weight: 600; color: var(--text-mid); margin-bottom: 6px; display: block; }
@@ -379,6 +400,13 @@
       <select id="filter-cert" class="filter-select" onchange="filterProducts()">
         <option value="">כל ההכשרויות</option>
       </select>
+      <select id="filter-text-review" class="filter-select" onchange="filterProducts()">
+        <option value="">כל סטטוסי הטקסט</option>
+        <option value="ok">✅ סבבה</option>
+        <option value="ready">🆕 עודכן, לפרסום</option>
+        <option value="planned">📝 מתוכנן לתיקון</option>
+        <option value="none">⬜ לא סומן</option>
+      </select>
       <button id="save-all-btn" class="btn-save-all" onclick="saveChanges()">💾 שמירה ל-GitHub</button>
     </div>
 
@@ -487,7 +515,11 @@
       <div class="drawer-title" id="drawer-title">עריכת מוצר</div>
       <div class="drawer-subtitle" id="drawer-subtitle"></div>
     </div>
-    <button class="drawer-close" onclick="closeDrawer()">✕</button>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <button class="drawer-nav-btn" id="drawer-prev-btn" onclick="navigateDrawer(-1)" title="המוצר הקודם ברשימה הנוכחית">→ הקודם</button>
+      <button class="drawer-nav-btn" id="drawer-next-btn" onclick="navigateDrawer(1)" title="המוצר הבא ברשימה הנוכחית">הבא ←</button>
+      <button class="drawer-close" onclick="closeDrawer()">✕</button>
+    </div>
   </div>
   <div class="drawer-body">
     <input type="hidden" id="edit-id">
@@ -508,6 +540,14 @@
       <textarea id="edit-longDesc" class="drawer-textarea" placeholder="תיאור מלא לדף המוצר. תומך Markdown: **מודגש**, [טקסט](קישור)..." style="min-height:130px;"></textarea>
       <div style="font-size:0.72rem;color:var(--text-soft);margin-top:5px;line-height:1.5;">
         קישור למוצר אחר: <code style="background:var(--teal-light);padding:1px 5px;border-radius:4px;">[שם המוצר](/product?id=23)</code>
+      </div>
+    </div>
+    <div class="drawer-field">
+      <label class="drawer-label">סטטוס הטקסטים <span style="font-weight:400;color:var(--text-soft)">(סימון אישי בלבד, לא משפיע על האתר)</span></label>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;" id="text-review-chips">
+        <button type="button" class="text-review-chip" data-val="ok" onclick="clickTextReview('ok')">✅ סבבה</button>
+        <button type="button" class="text-review-chip" data-val="ready" onclick="clickTextReview('ready')">🆕 עודכן, לפרסום</button>
+        <button type="button" class="text-review-chip" data-val="planned" onclick="clickTextReview('planned')">📝 מתוכנן לתיקון</button>
       </div>
     </div>
     <hr class="drawer-divider">
@@ -582,6 +622,8 @@ const APPROVED_CERTS = [
 ];
 
 let token = '', products = [], baseProducts = [], overrideProducts = [], fileSha = '', pendingChanges = {};
+let currentList = []; // the list currently shown in the table (after filters), for drawer prev/next
+let currentTextReview = ''; // the _textReview value selected in the currently-open drawer
 
 // ── AUTH ──
 const getToken = () => localStorage.getItem('foodos_token') || '';
@@ -696,24 +738,30 @@ function filterProducts() {
   const q = document.getElementById('search-input').value.toLowerCase();
   const status = document.getElementById('filter-status').value;
   const cert = document.getElementById('filter-cert').value;
+  const textReview = document.getElementById('filter-text-review').value;
   const filtered = products.filter(p => {
+    const eff = {...p, ...(pendingChanges[p.id]||{})};
     const matchQ = !q || (p.name||'').toLowerCase().includes(q) || (p.nameHe||'').includes(q) || (p.brand||'').toLowerCase().includes(q) || (p.cert||'').toLowerCase().includes(q);
     const matchS = !status || (status==='active' && !p.suspended && p.available!==false) || (status==='suspended' && p.suspended) || (status==='unavailable' && !p.suspended && p.available===false);
     const matchC = !cert || p.cert === cert;
-    return matchQ && matchS && matchC;
+    const matchT = !textReview || (textReview==='none' ? !eff._textReview : eff._textReview === textReview);
+    return matchQ && matchS && matchC && matchT;
   });
   renderTable(filtered);
 }
 
 // ── RENDER ──
 function renderTable(list) {
+  currentList = list;
   if (!list.length) { document.getElementById('products-container').innerHTML = '<div class="empty-state">לא נמצאו מוצרים</div>'; return; }
+  const textReviewTitle = { ok: 'סבבה', ready: 'עודכן, לפרסום', planned: 'מתוכנן לתיקון' };
   const rows = list.map(p => {
     const eff = {...p, ...(pendingChanges[p.id]||{})};
     const isActive = !eff.suspended;
     const isAvail = eff.available !== false;
     const changed = !!pendingChanges[p.id];
     const isPinned = eff.pinned === true;
+    const tr = eff._textReview || '';
     return `<tr>
       <td class="product-id">${p.id}</td>
       <td style="width:36px;text-align:center;">
@@ -725,6 +773,7 @@ function renderTable(list) {
         <input type="text" value="${esc(eff.nameHe||'')}" onchange="quickEdit(${p.id},'nameHe',this.value)" oninput="markInput(this,${p.id})" placeholder="שם בעברית">
       </td>
       <td><span class="cert-badge">${eff.cert||'—'}</span></td>
+      <td style="text-align:center;" title="${tr ? textReviewTitle[tr] : 'לא סומן'}"><span class="text-review-dot" data-val="${tr}"></span></td>
       <td><div class="toggle-wrap"><button class="toggle ${isActive?'on':'off'}" onclick="quickToggle(${p.id},'suspended',this)"></button><span class="toggle-label">${isActive?'פעיל':'מושהה'}</span></div></td>
       <td><div class="toggle-wrap"><button class="toggle ${isAvail?'on':'off'}" onclick="quickToggle(${p.id},'available',this)"></button><span class="toggle-label">${isAvail?'זמין':'לא זמין'}</span></div></td>
       <td><button class="btn-edit" onclick="openDrawer(${p.id})">עריכה מלאה</button></td>
@@ -732,7 +781,7 @@ function renderTable(list) {
   }).join('');
   document.getElementById('products-container').innerHTML = `
     <table class="products-table">
-      <thead><tr><th>#</th><th>❤️</th><th>מותג / שם</th><th>שם עברית</th><th>הכשרות</th><th>פעיל</th><th>זמין</th><th></th></tr></thead>
+      <thead><tr><th>#</th><th>❤️</th><th>מותג / שם</th><th>שם עברית</th><th>הכשרות</th><th>טקסט</th><th>פעיל</th><th>זמין</th><th></th></tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
 }
@@ -822,8 +871,34 @@ function openDrawer(id) {
   setToggle('toggle-available', eff.available !== false);
   setToggle('toggle-dairy', eff.dairy === true);
   checkDairyHint();
+  setTextReview(eff._textReview || '');
+
+  const idx = currentList.findIndex(x => x.id === id);
+  document.getElementById('drawer-prev-btn').disabled = idx <= 0;
+  document.getElementById('drawer-next-btn').disabled = idx === -1 || idx >= currentList.length - 1;
+
   document.getElementById('drawer-overlay').classList.add('open');
   document.getElementById('edit-drawer').classList.add('open');
+}
+
+function navigateDrawer(delta) {
+  const id = parseInt(document.getElementById('edit-id').value);
+  const idx = currentList.findIndex(x => x.id === id);
+  const nextIdx = idx + delta;
+  if (idx === -1 || nextIdx < 0 || nextIdx >= currentList.length) return;
+  openDrawer(currentList[nextIdx].id);
+}
+
+function setTextReview(val) {
+  currentTextReview = val;
+  document.querySelectorAll('#text-review-chips .text-review-chip').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.val === val);
+  });
+}
+
+function clickTextReview(val) {
+  // clicking the already-active chip clears it back to "not marked"
+  setTextReview(currentTextReview === val ? '' : val);
 }
 
 function checkDairyHint() {
@@ -875,6 +950,7 @@ function saveDrawer() {
   if (available !== (orig.available!==false)) changes.available = available;
   const dairy = document.getElementById('toggle-dairy').dataset.on === '1';
   if (dairy !== (orig.dairy===true)) changes.dairy = dairy;
+  if (currentTextReview !== (orig._textReview||'')) changes._textReview = currentTextReview;
   if (Object.keys(changes).length) {
     pendingChanges[id] = {...(pendingChanges[id]||{}), ...changes};
   }
