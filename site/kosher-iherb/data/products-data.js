@@ -8629,5 +8629,27 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://il.iherb.com/pr/phytoral-iron-gummies-with-vitamin-c-vitamin-b-complex-grape-60-gummies/139335?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 47.44,
     "available": true
+  },
+  {
+    "id": 606,
+    "name": "The Spice Lab, Country Style Honey Mustard, 6 oz (170 g)",
+    "url": "https://www.iherb.com/pr/the-spice-lab-country-style-honey-mustard-6-oz-170-g/108219",
+    "desc": "תערובת תיבול חרדל ודבש כפרית של The Spice Lab, לעוף ולבשר. ללא גלוטן, טבעי לחלוטין. כשרות OU.",
+    "cert": "OU",
+    "cat": "תבלינים",
+    "conf": "גבוהה",
+    "brand": "The Spice Lab",
+    "longDesc": "תערובת תיבול יבשה בטעם חרדל ודבש, מיועדת בעיקר לעוף ולבשר. ללא גלוטן, ללא תוספים מלאכותיים.\n\nכדאי לדעת: לפי היצרן, אפשר לתבל ולהשאיר את הבשר לנוח 30 דקות, או לתבל מראש ולהשהות במקרר עד למחרת לטעם עמוק יותר.\n\nרעיונות לשימוש:\n• תיבול לעוף לפני צלייה או אפייה\n• על נתחי בשר לפני גריל\n• מעל ירקות שורש לפני אפייה",
+    "descNew": "תערובת תיבול חרדל ודבש כפרית, לעוף ולבשר. ללא גלוטן, טבעי. כשרות OU.",
+    "nameHe": "תערובת תיבול חרדל ודבש כפרי",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["ללא גלוטן", "Non-GMO"],
+    "img": "https://s3.images-iherb.com/sla/sla04114/d/59.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-country-style-honey-mustard-6-oz-170-g/108219?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 19.40,
+    "available": false
   }
 ];
