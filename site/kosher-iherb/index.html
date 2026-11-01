@@ -395,13 +395,6 @@
       box-shadow: 0 4px 20px rgba(0,0,0,.2);
     }
     .btn-hero:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.28); }
-    .btn-hero-outline {
-      background: transparent; color: rgba(255,255,255,.88);
-      font-weight: 600; font-size: 0.92rem; padding: 15px 26px;
-      border-radius: var(--radius-pill); border: 1.5px solid rgba(255,255,255,.35);
-      transition: border-color .2s, background .2s;
-    }
-    .btn-hero-outline:hover { border-color: rgba(255,255,255,.7); background: rgba(255,255,255,.08); }
     .hero-stats {
       display: flex; gap: 2.5rem; margin-top: 2.5rem;
       padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.15);
@@ -742,7 +735,7 @@
     .cat-sidebar-item.active { color: var(--teal-dark); font-weight: 700; }
 
     /* mobile cat select */
-    .cat-select-wrap { display: none; }
+    .cat-select-wrap, .cert-select-wrap { display: none; }
     .cat-select { width: 100%; padding: 10px 14px; font-size: 0.9rem; font-family: var(--sans); color: var(--text); background: white; border: 1.5px solid var(--border); border-radius: var(--radius-pill); appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A9D9A' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: left 14px center; cursor: pointer; }
     .cat-select:focus { outline: none; border-color: var(--teal); }
 
@@ -750,6 +743,8 @@
       .products-with-sidebar { flex-direction: column; }
       .cat-sidebar { display: none; }
       .cat-select-wrap { display: block; margin-bottom: 1rem; }
+      #cert-pills { display: none; }
+      .cert-select-wrap { display: block; }
     }
 
     /* ── CATEGORY DRAWER TRIGGER ── */
@@ -939,7 +934,10 @@
       /* ── TYPOGRAPHY ── */
       .hero h1 { font-size: 2.3rem; }
       .hero-sub { font-size: 1rem; margin-bottom: 1.4rem; }
-      .hero-stats { gap: 1.2rem; flex-wrap: wrap; }
+      .hero-stats { gap: 0.6rem; flex-wrap: nowrap; justify-content: space-between; }
+      .hero-stats .hstat { flex: 1; min-width: 0; }
+      .hero-stats .hstat-num { font-size: 1.25rem; }
+      .hero-stats .hstat-label { font-size: 0.6rem; white-space: nowrap; }
       .section-pad { padding: 3rem 0; }
     }
   </style>
@@ -1182,8 +1180,7 @@
         מוצרים כשרים מ-iHERB שנבדקו ידנית, ג'אדטים קולינריים והמלצות מרחבי הרשת.
       </p>
       <div class="hero-btns">
-        <a href="#products" class="btn-hero">גלו את המוצרים ←</a>
-        <a href="about.html" class="btn-hero-outline">על הפרויקט</a>
+        <a href="about.html" class="btn-hero">על הפרויקט</a>
       </div>
       <div class="hero-stats">
         <div class="hstat">
@@ -1210,7 +1207,7 @@
     <div class="search-hero-wrap">
       <h2 class="search-hero-title">אוהבים את iHerb? שומרי כשרות? זה הפיד החדש שלכם!</h2>
       <p class="search-hero-sub">כל המוצרים נבדקו ידנית שהינם בעלי כשרות אמינה מרשימת הכשרויות המאושרת של ארגון CRC</p>
-      <p class="search-hero-coupon">🎁 קוד קופון <button type="button" class="coupon-inline-copy-light" onclick="copyCouponCode(this)" aria-label="העתק את קוד הקופון FOODOS"><span class="coupon-code-text">FOODOS</span><span class="copy-icon" aria-hidden="true">📋</span></button> · 10% ללקוח חדש · 5% לרכישה חוזרת · בכל האתר</p>
+      <p class="search-hero-coupon">🎁 קוד קופון <button type="button" class="coupon-inline-copy-light" onclick="copyCouponCode(this)" aria-label="העתק את קוד הקופון FOODOS"><span class="coupon-code-text">FOODOS</span><span class="copy-icon" aria-hidden="true">📋</span></button> · 20% ללקוח חדש · 10% לרכישה חוזרת · בכל האתר</p>
     </div>
 
     <div class="search-bar-outer">
@@ -1228,6 +1225,11 @@
     <div class="filter-section">
       <div class="filter-section-label">כשרות</div>
       <div class="filter-pills-row" id="cert-pills"></div>
+      <div class="cert-select-wrap">
+        <select class="cat-select" id="cert-select" onchange="onCertSelectChange(this.value)">
+          <option value="הכל">כל הכשרויות</option>
+        </select>
+      </div>
     </div>
 
     <div class="products-with-sidebar">
@@ -1910,6 +1912,22 @@
       }
       return `<a class="pill pill-sm" href="cert.html?c=${encodeURIComponent(c)}">${c}</a>`;
     }).join('');
+    const sel = document.getElementById('cert-select');
+    if (sel) {
+      sel.innerHTML = certs.map(c =>
+        `<option value="${c.replace(/"/g,'&quot;')}"${c===activeCert?' selected':''}>${c==='הכל'?'כל הכשרויות':c}</option>`
+      ).join('');
+    }
+  }
+
+  function onCertSelectChange(cert) {
+    if (cert === 'הכל') {
+      activeCert = 'הכל';
+      buildCertPills();
+      applyFilters();
+    } else {
+      window.location.href = 'cert.html?c=' + encodeURIComponent(cert);
+    }
   }
 
   function buildTagPills() {
