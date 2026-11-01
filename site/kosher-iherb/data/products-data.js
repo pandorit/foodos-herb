@@ -8783,5 +8783,27 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-rosemary-roasted-garlic-4-9-oz-138-g/102792?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 18.84,
     "available": true
+  },
+  {
+    "id": 613,
+    "name": "The Spice Lab, Rotisserie Chicken Seasoning, 5.6 oz (158 g)",
+    "url": "https://www.iherb.com/pr/the-spice-lab-rotisserie-chicken-seasoning-5-6-oz-158-g/142203",
+    "desc": "תיבול לעוף רוטיסרי של The Spice Lab, תערובת תיבול עשירה ומלוחה לעוף ולעופות. כשרות OU.",
+    "cert": "OU",
+    "cat": "תבלינים",
+    "conf": "גבוהה",
+    "brand": "The Spice Lab",
+    "longDesc": "תערובת תיבול בהשראת עוף רוטיסרי קלאסי, טעם עשיר ומלוח שמתאים לכל סוגי העוף.\n\nכדאי לדעת: לפי היצרן, התוצאה הכי טובה מתקבלת אם משהים את העוף המתובל במקרר ללילה לפני הבישול, כדי שהטעמים יחלחלו.\n\nרעיונות לשימוש:\n• תיבול לעוף שלם לפני צלייה בתנור\n• על צלעות חזיר או ירקות שורש\n• תחת העור לפני אפיית עוף",
+    "descNew": "תיבול לעוף רוטיסרי, טעם עשיר ומלוח. לעוף ולעופות. כשרות OU.",
+    "nameHe": "תיבול עוף רוטיסרי",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": [],
+    "img": "https://s3.images-iherb.com/sla/sla02813/d/41.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-rotisserie-chicken-seasoning-5-6-oz-158-g/142203?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 19.32,
+    "available": true
   }
 ];
