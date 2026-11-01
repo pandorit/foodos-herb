@@ -108,11 +108,15 @@
     .cat-hero-text { }
     .cat-breadcrumb-wrap { margin-bottom: 1.5rem; }
     .cat-emoji-display { font-size: 1.5rem; margin-bottom: 0.8rem; }
-    .cat-title { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 900; color: var(--teal-dark); line-height: 1.1; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+    .cat-title { font-family: 'AnerShapiro', cursive; font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 400; color: var(--teal-dark); line-height: 1.1; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
     .cat-subtitle { font-size: 0.95rem; color: var(--text-soft); line-height: 1.7; max-width: 520px; }
     .cat-stats { display: flex; gap: 2.5rem; margin-top: 1.8rem; flex-wrap: wrap; }
     .cat-stat-num { font-family: var(--serif); font-size: 1.8rem; font-weight: 900; color: var(--teal-dark); line-height: 1; }
     .cat-stat-label { font-size: 0.72rem; color: var(--text-soft); margin-top: 3px; }
+    .cat-hero.dark-bg .cat-title,
+    .cat-hero.dark-bg .cat-stat-num { color: #fff; }
+    .cat-hero.dark-bg .cat-subtitle,
+    .cat-hero.dark-bg .cat-stat-label { color: rgba(255,255,255,.82); }
     .cat-hero-emoji { font-size: 8rem; opacity: .18; filter: drop-shadow(0 8px 24px rgba(74,157,154,.3)); }
 
     /* ── IHERB INFO STRIP ── */
@@ -549,6 +553,7 @@
     'חטיפים':'linear-gradient(135deg,#F4E0D0,#E8C0A0)',
     'קטניות':'linear-gradient(135deg,#D8ECF4,#A8CCE0)'
   };
+  const catBgDark = { 'שוקולד': true };
   const certColors = {
     'OU':'#1a3c8c','OU-D':'#1D4ED8','OU-P':'#1a3c8c','OU-M':'#1a3c8c',
     'OK':'#2c7a6e','KOF-K':'#5c4a9a','Star-K':'#8a3c1a',
@@ -715,6 +720,7 @@
     if (catBg[catName]) {
       document.querySelector('.cat-hero').style.background = catBg[catName];
     }
+    document.querySelector('.cat-hero').classList.toggle('dark-bg', !!catBgDark[catName]);
 
     // Load products — start with embedded JS, then merge JSON overrides on top
     let rawProducts = window.FOODOS_PRODUCTS || [];
