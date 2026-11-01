@@ -95,13 +95,6 @@
     .page-hero .updated { font-size: 0.92rem; color: var(--text-mid); margin-top: 0.6rem; max-width: 560px; }
     .container { max-width: 760px; margin: 0 auto; padding: 0 2rem; }
 
-    /* AFFILIATE NOTICE */
-    .affiliate-notice {
-      background: #FFF8F0; border: 1.5px solid #E85D04; border-radius: 10px;
-      padding: 1rem 1.4rem; margin: 2rem 0; font-size: 0.9rem; color: var(--text-mid);
-    }
-    .affiliate-notice strong { color: #E85D04; }
-
     /* CONTENT */
     .about-body { padding: 3rem 0 5rem; }
     .about-body h2 { font-family: 'AnerShapiro', cursive; font-size: 1.7rem; font-weight: 400; color: var(--teal-dark); margin: 2.6rem 0 0.9rem; padding-top: 2.2rem; border-top: 1px solid var(--border); }
@@ -286,10 +279,6 @@
         <a href="${esc(data.iherb_info.link)}" class="community-btn">${esc(data.iherb_info.cta)}</a>
       </div>`;
     }
-
-    html += `<div class="affiliate-notice" role="note" aria-label="גילוי נאות קישורי שותפים">
-      <strong>גילוי נאות:</strong> ${esc(data.affiliate_notice)}
-    </div>`;
 
     html += `<p class="signoff">${esc(data.signoff.text)}<span class="name">${esc(data.signoff.name)}</span></p>`;
 
