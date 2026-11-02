@@ -2092,6 +2092,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "affiliateUrl": "https://il.iherb.com/pr/taylor-colledge-organic-vanilla-bean-paste-with-seeds-1-7-oz-50-g/118784?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 72.33,
     "available": true
   },
   {
