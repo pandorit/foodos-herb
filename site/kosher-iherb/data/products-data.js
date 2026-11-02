@@ -498,7 +498,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/bra/bra00116/d/41.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-apple-cider-vinegar-with-the-mother-16-fl-oz-473-ml/5817?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 29.81,
+    "priceILS": 30.47,
     "available": true,
     "pinned": true
   },
@@ -2092,7 +2092,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "affiliateUrl": "https://il.iherb.com/pr/taylor-colledge-organic-vanilla-bean-paste-with-seeds-1-7-oz-50-g/118784?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 72.33,
+    "priceILS": 49.09,
     "available": true
   },
   {
