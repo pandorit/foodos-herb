@@ -802,7 +802,7 @@
             <div class="detail-row" id="sidebar-price-row" style="display:none;">
               <span class="detail-label">מחיר</span>
               <span class="detail-value" style="display:flex;flex-direction:column;gap:2px;">
-                <span id="sidebar-price-value" style="font-family:'AnerShapiro',sans-serif;font-size:1.1rem;font-weight:400;color:var(--teal-dark);line-height:1;"></span>
+                <span id="sidebar-price-value" style="font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--teal-dark);line-height:1;"></span>
                 <span id="sidebar-price-note" style="font-size:0.7rem;color:var(--text-soft);display:none;">ב-iHerb, משתנה בהתאם למשקל</span>
               </span>
             </div>
@@ -1172,16 +1172,10 @@
         imgWrap.style.display = 'block';
       }
 
-      const backBtn = document.createElement('button');
+      const backBtn = document.createElement('a');
       backBtn.className = 'btn-secondary';
-      backBtn.textContent = 'חזרה לקטגוריה';
-      backBtn.addEventListener('click', function() {
-        if (window.history.length > 1) {
-          window.history.back();
-        } else {
-          window.location.href = 'category.html?cat=' + catSlug(product.cat);
-        }
-      });
+      backBtn.textContent = 'לקטגוריה';
+      backBtn.href = 'category.html?cat=' + catSlug(product.cat);
       btnGroup.appendChild(backBtn);
 
       // ── Report cert removal
