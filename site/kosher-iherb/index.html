@@ -1961,6 +1961,18 @@
     document.querySelectorAll('#tag-pills .pill-tag').forEach(b => b.classList.remove('active'));
     el.classList.add('active');
     applyFilters();
+    scrollToResults();
+  }
+
+  // Scrolls the product results into view, so filtering on mobile (where the
+  // results sit below the fold) doesn't look like nothing happened.
+  function scrollToResults() {
+    const el = document.getElementById('product-grid');
+    if (!el) return;
+    const navH = document.querySelector('.nav')?.offsetHeight || 68;
+    const top = el.getBoundingClientRect().top + window.scrollY - navH - 12;
+    // only scroll down to it, never jump up past where the user already is
+    if (top > window.scrollY + 40) window.scrollTo({ top, behavior: 'smooth' });
   }
 
   function applyFilters() {
@@ -2137,7 +2149,7 @@
     btn.textContent = open ? 'קרא עוד ↓' : 'פחות ↑';
   }
 
-  document.getElementById('srch')?.addEventListener('keydown', e => { if(e.key==='Enter') applyFilters(); });
+  document.getElementById('srch')?.addEventListener('keydown', e => { if(e.key==='Enter') { applyFilters(); scrollToResults(); } });
 
   // ── NAV DROPDOWNS ────────────────────────────────
   let ddOpen = null;
