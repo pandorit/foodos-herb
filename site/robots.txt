@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /kosher-iherb/data/
 
 Sitemap: https://online.foodos.co.il/sitemap.xml
