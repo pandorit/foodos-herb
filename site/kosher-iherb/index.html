@@ -905,10 +905,17 @@
         cursor: pointer;
       }
       .nav-links > li:last-child > * { border-bottom: none !important; }
-      /* הסתרת sub-dropdowns ו-arrows במובייל */
-      .nav-links .nav-dropdown,
-      .nav-links .nav-dropdown-brands { display: none !important; }
-      .nav-links .dd-arrow { display: none; }
+      /* sub-dropdowns on mobile: in-flow accordion instead of a floating flyout */
+      .nav-links .nav-dropdown {
+        display: none; position: static; opacity: 1; transform: none; pointer-events: auto;
+        min-width: 0; max-width: 100%; width: 100%; box-shadow: none; border: none;
+        border-radius: 0; background: var(--bg-soft); padding: .3rem 0;
+      }
+      .nav-links .nav-dropdown.open { display: block; }
+      .nav-links .nav-dropdown-brands { min-width: 0; }
+      .nav-links #dd-brands-list { columns: 1; }
+      .nav-links .dd-arrow { transition: transform .2s; }
+      .nav-links .nav-dd-trigger.active .dd-arrow { transform: rotate(180deg); }
       .nav-links .nav-cats-trigger::after { display: none !important; }
       /* כפתור iHerb */
       .nav-links .nav-cta {
