@@ -815,6 +815,7 @@
       margin-right: 2px;
     }
     .pill-tag.active .tag-count { color: var(--teal-dark); opacity: 1; }
+    .tag-desc-line { font-size: 0.85rem; color: var(--text-mid); background: var(--teal-light); border-radius: 8px; padding: 8px 14px; margin: 1rem 0 0; line-height: 1.6; }
     .results-meta { display: flex; align-items: center; justify-content: space-between; margin: 1.2rem 0 1rem; gap: 0.5rem; flex-wrap: wrap; }
     .results-meta-right { display: flex; align-items: center; gap: 0.5rem; }
     .results-count-txt { font-size: 0.82rem; color: var(--text-soft); font-weight: 500; }
@@ -1256,6 +1257,7 @@
             <option value="הכל">כל הקטגוריות</option>
           </select>
         </div>
+        <p class="tag-desc-line" id="tag-desc-line" style="display:none;"></p>
         <div class="results-meta">
           <div class="results-meta-right">
             <span class="results-count-txt" id="results-count">טוען מוצרים...</span>
@@ -1706,7 +1708,8 @@
       return /maple|מייפל|honey|דבש|silan|סילאן|date.?syrup|סירופ.?תמרים|agave|אגבה|coconut.?sugar|סוכר קוקוס|coconut.?nectar|נקטר קוקוס|date.?sugar|סוכר תמרים/i.test(txt);
     }, groupOf: p => NATURAL_SUGAR_GROUP_A.has(p.id) ? 'A' : 'B' },
     { key: 'האהובים',     icon: '❤️', test: p => topHeartsSet.has(p.id) },
-    { key: 'קיטו',        icon: '🥑', test: p => /keto|paleo|קיטו|פליאו|low.?carb/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
+    { key: 'קיטו',        icon: '🥑', desc: 'דיאטת קיטו מתמקדת בדלת פחמימות קיצונית, כדי להיכנס למצב קטוזיס. לא משנה אם המזון מעובד או לא, כל עוד הפחמימות נמוכות.', test: p => /keto|קיטו|low.?carb|דל(ת)? פחמימות/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
+    { key: 'פליאו',       icon: '🍖', desc: 'דיאטת פליאו מתמקדת במקור המזון, לא בכמות הפחמימות: בשר, דגים, ירקות, פירות ואגוזים בלבד, בלי דגנים, קטניות, חלב או סוכר מעובד.', test: p => /paleo|פליאו/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'עשיר בחלבון', icon: '💪', test: p => p.id !== 304 && /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'חלבי',        icon: '🥛', test: p => p.dairy === true || /\-D$/i.test(p.cert||'') },
     { key: 'פרווה',       icon: '🌱', test: p => p.dairy !== true && !/\-D$/i.test(p.cert||'') },
@@ -2066,6 +2069,14 @@
     document.getElementById('results-count').textContent = `${filteredProducts.length} מוצרים`;
     const hasF = activeCat !== 'הכל' || activeCert !== 'הכל' || activeTag !== 'הכל' || (document.getElementById('srch')?.value||'').trim();
     document.getElementById('reset-btn').style.display = hasF ? 'inline-block' : 'none';
+    const tagDescEl = document.getElementById('tag-desc-line');
+    const activeTagDef = activeTag !== 'הכל' ? TAG_DEFS.find(t => t.key === activeTag) : null;
+    if (activeTagDef && activeTagDef.desc) {
+      tagDescEl.textContent = activeTagDef.desc;
+      tagDescEl.style.display = 'block';
+    } else {
+      tagDescEl.style.display = 'none';
+    }
   }
 
   function scrollCats(dir) {
