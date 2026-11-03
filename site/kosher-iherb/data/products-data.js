@@ -2312,6 +2312,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "affiliateUrl": "https://il.iherb.com/pr/kaizen-protein-rice-original-8-oz-226-g/135887?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 41.06,
     "available": true
   },
   {
@@ -2332,7 +2333,10 @@ window.FOODOS_PRODUCTS = [
     "dairy": true,
     "tags": [],
     "affiliateUrl": "https://il.iherb.com/pr/tru-fru-freeze-dried-fresh-blueberries-creme-3-4-oz-96-g/154702?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "available": true
+    "available": false,
+    "suspended": true,
+    "suspendReason": "המוצר הופסק לצמיתות ב-iHerb (Discontinued)",
+    "suspendDate": "2026-11-03"
   },
   {
     "id": 212,
@@ -6310,6 +6314,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "edited",
     "certVerified": true,
     "img": "/images/products/Sunfood, Superfoods, Organic Matcha Powder.avif",
+    "priceILS": 60.02,
     "available": true,
     "seeAlso": [
       455
@@ -6848,6 +6853,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "url": "https://il.iherb.com/pr/nate-s-honey-hot-honey-infused-with-chili-pepper-16-oz-454-g/162072",
     "img": "/images/products/Nate's Honey, Hot Honey, Infused with Chili Pepper.avif",
+    "priceILS": 48.30,
     "available": true,
     "desc": "דבש פרחוני עם פלפל צ'ילי — גרסה גדולה יותר (454 גרם) עם כשרות OU. טעם מתוק-חריף עדין, מצוין לגבינות, פיצה ואפייה. אלטרנטיבה מעולה ל-Mike's.",
     "seeAlso": [
@@ -6876,8 +6882,9 @@ window.FOODOS_PRODUCTS = [
       "חטיפים"
     ],
     "url": "https://il.iherb.com/pr/ready-protein-puffs-pink-himalayan-sea-salt-6-bags-3-1-oz-88-g-each/149627",
-    "affiliateUrl": "https://il.iherb.com/pr/ready-protein-puffs-pink-himalayan-sea-salt-6-bags-3-1-oz-88-g-each/149627?rcode=FOODOS",
+    "affiliateUrl": "https://il.iherb.com/pr/ready-protein-puffs-pink-himalayan-sea-salt-6-bags-3-1-oz-88-g-each/149627?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/149627/149627.jpg",
+    "priceILS": 114.41,
     "available": true,
     "dairy": false,
     "tags": [

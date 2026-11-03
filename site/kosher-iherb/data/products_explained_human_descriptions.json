@@ -6321,6 +6321,7 @@
     "_descStatus": "edited",
     "certVerified": true,
     "img": "/images/products/Sunfood, Superfoods, Organic Matcha Powder.avif",
+    "priceILS": 60.02,
     "available": true,
     "seeAlso": [
       455
@@ -6866,6 +6867,7 @@
     "url": "https://il.iherb.com/pr/nate-s-honey-hot-honey-infused-with-chili-pepper-16-oz-454-g/162072",
     "affiliateUrl": "https://il.iherb.com/pr/nate-s-honey-hot-honey-infused-with-chili-pepper-16-oz-454-g/162072?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "img": "/images/products/Nate's Honey, Hot Honey, Infused with Chili Pepper.avif",
+    "priceILS": 48.30,
     "available": true,
     "desc": "דבש פרחוני עם פלפל צ'ילי — גרסה גדולה יותר (454 גרם) עם כשרות OU. טעם מתוק-חריף עדין, מצוין לגבינות, פיצה ואפייה. אלטרנטיבה מעולה ל-Mike's.",
     "seeAlso": [
@@ -6894,8 +6896,9 @@
       "חטיפים"
     ],
     "url": "https://il.iherb.com/pr/ready-protein-puffs-pink-himalayan-sea-salt-6-bags-3-1-oz-88-g-each/149627",
-    "affiliateUrl": "https://il.iherb.com/pr/ready-protein-puffs-pink-himalayan-sea-salt-6-bags-3-1-oz-88-g-each/149627?rcode=FOODOS",
+    "affiliateUrl": "https://il.iherb.com/pr/ready-protein-puffs-pink-himalayan-sea-salt-6-bags-3-1-oz-88-g-each/149627?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/149627/149627.jpg",
+    "priceILS": 114.41,
     "available": true,
     "dairy": false,
     "tags": [
