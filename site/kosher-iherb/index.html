@@ -1929,13 +1929,9 @@
   }
 
   function onCertSelectChange(cert) {
-    if (cert === 'הכל') {
-      activeCert = 'הכל';
-      buildCertPills();
-      applyFilters();
-    } else {
-      window.location.href = 'cert.html?c=' + encodeURIComponent(cert);
-    }
+    activeCert = cert;
+    buildCertPills();
+    applyFilters();
   }
 
   function buildTagPills() {
