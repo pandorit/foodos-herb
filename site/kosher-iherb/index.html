@@ -853,6 +853,7 @@
     .card-like-btn .heart-fill { fill: none; stroke: #ccc; stroke-width: 2; transition: fill .2s, stroke .2s; }
     .card-like-btn.liked .heart-fill { fill: #e53e3e; stroke: #e53e3e; }
     .card-like-btn.liked { animation: heartPop .25s ease; }
+    .card-like-count { position: absolute; top: 44px; right: 10px; background: white; color: #e53e3e; font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 100px; box-shadow: 0 1px 6px rgba(0,0,0,.12); font-family: var(--sans); line-height: 1.3; }
     @keyframes heartPop { 0%{transform:scale(1)} 50%{transform:scale(1.35)} 100%{transform:scale(1)} }
 
     /* ── RESPONSIVE ─────────────────────────── */
@@ -1706,7 +1707,7 @@
     }, groupOf: p => NATURAL_SUGAR_GROUP_A.has(p.id) ? 'A' : 'B' },
     { key: 'האהובים',     icon: '❤️', test: p => topHeartsSet.has(p.id) },
     { key: 'קיטו',        icon: '🥑', test: p => /keto|paleo|קיטו|פליאו|low.?carb/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
-    { key: 'עשיר בחלבון', icon: '💪', test: p => /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
+    { key: 'עשיר בחלבון', icon: '💪', test: p => p.id !== 304 && /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'חלבי',        icon: '🥛', test: p => p.dairy === true || /\-D$/i.test(p.cert||'') },
     { key: 'פרווה',       icon: '🌱', test: p => p.dairy !== true && !/\-D$/i.test(p.cert||'') },
     { key: 'נטול קפאין',  icon: '☕', test: p => /caffeine.?free|decaf|נטול קפאין|ללא קפאין|דל קפאין|בלי קפאין|בלי טיפת קפאין/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
@@ -2105,6 +2106,7 @@
         <button class="card-like-btn" id="like-${p.id}" onclick="event.stopPropagation();toggleLike(${p.id}, this)" title="שמור למועדפים">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="heart-fill" d="M12 21C12 21 3 14.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 14.5 12 21 12 21Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
+        <span class="card-like-count" id="like-count-${p.id}" style="${heartCounts[p.id] > 0 ? '' : 'display:none'}">${heartCounts[p.id] || ''}</span>
         ${p.available === false ? '<span class="badge-unavailable">אזל מהמלאי</span>' : ''}
       </div>
       <div class="card-body">
@@ -2318,7 +2320,11 @@
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id, action })
     }).then(r => r.ok ? r.json() : null).then(data => {
-      if (data && typeof data.count === 'number') heartCounts[id] = data.count;
+      if (data && typeof data.count === 'number') {
+        heartCounts[id] = data.count;
+        const el = document.getElementById('like-count-' + id);
+        if (el) { el.textContent = data.count > 0 ? data.count : ''; el.style.display = data.count > 0 ? '' : 'none'; }
+      }
     }).catch(() => {}); // כשל שקט - הלב המקומי כבר התעדכן
   }
   async function loadHeartCounts() {
@@ -2335,6 +2341,11 @@
       );
       buildTagPills();
       if (activeSort === 'hearts-desc' || activeTag === 'האהובים') applyFilters();
+      // עדכון תגי הספירה על הכרטיסים הגלויים, גם בלי לסנן מחדש לפי "האהובים"
+      Object.entries(heartCounts).forEach(([id, count]) => {
+        const el = document.getElementById('like-count-' + id);
+        if (el) { el.textContent = count > 0 ? count : ''; el.style.display = count > 0 ? '' : 'none'; }
+      });
     } catch (e) {
       console.warn('loadHeartCounts failed:', e.message);
     }
