@@ -591,7 +591,7 @@
     if (location.protocol === 'file:') throw new Error('file-protocol');
     const [productsRes, certsRes, contentRes] = await Promise.all([
       fetch('data/products_explained_human_descriptions.json?v=' + Date.now()),
-      fetch('data/certs.json?v=' + Date.now()),
+      fetch('data/certs_with_descriptions.json?v=' + Date.now()),
       fetch('data/content.json?v=' + Date.now())
     ]);
     const allProducts = (await productsRes.json()).filter(p => !p.suspended);
