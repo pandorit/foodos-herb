@@ -8453,7 +8453,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bog/bog02856/d/32.jpg",
     "url": "https://www.iherb.com/pr/bareorganics-organic-amla-powder-8-oz-227-g/131803",
     "affiliateUrl": "https://www.iherb.com/pr/bareorganics-organic-amla-powder-8-oz-227-g/131803?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 90.30,
+    "priceILS": 90.96,
     "available": true,
     "dairy": false,
     "desc": "אבקת פרי אמלה (דומדמנית הודית) אורגנית של BareOrganics, מהמוכרות ברפואה האיורוודית. כשרות Star-K.",
@@ -9098,28 +9098,6 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/pnb/pnb90007/d/60.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/peanut-butter-co-peanut-protein-powder-pure-peanut-6-5-oz-184-g/79610?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 25.63,
-    "available": true
-  },
-  {
-    "id": 627,
-    "name": "BareOrganics, Organic Amla Powder, 8 oz (227 g)",
-    "url": "https://www.iherb.com/pr/bareorganics-organic-amla-powder-8-oz-227-g/131803",
-    "desc": "אבקת עמלה (Amla) אורגנית של BareOrganics, מפרי העומדות ההודי, עשיר בוויטמין C טבעי. לשייקים ולתזונה איורוודית. כשרות Star-K.",
-    "cert": "Star-K",
-    "cat": "סופר פוד",
-    "conf": "גבוהה",
-    "brand": "BareOrganics",
-    "longDesc": "אבקה המופקת מפרי העומדות ההודי (Amla, Indian Gooseberry), אחד הפירות העשירים ביותר בוויטמין C הטבעי, ורכיב מרכזי ברפואה האיורוודית המסורתית. הטעם חמוץ וחריף, ולכן משתלב בדרך כלל בתוך שייק או משקה ולא נאכל לבד (כשרות Star-K).\n\nכדאי לדעת: הטעם החמוץ-עוקצני חזק, ולכן רוב האנשים מתחילים בכמות קטנה (חצי כפית) ומגדילים בהדרגה.\n\nרעיונות לשימוש:\n• כפית בשייק פירות לאיזון המתיקות ותוספת ויטמין C\n• מעורבב בכוס מים חמימים עם דבש, נהוג כמשקה בוקר איורוודי\n• בתערובת עם אבקות סופר-פוד נוספות",
-    "descNew": "אבקת עמלה אורגנית של BareOrganics, מפרי העומדות ההודי, עשיר בוויטמין C טבעי. לשייקים ולתזונה איורוודית. כשרות Star-K.",
-    "nameHe": "אבקת עמלה אורגנית",
-    "_descStatus": "approved",
-    "certVerified": true,
-    "_certVerified": true,
-    "dairy": false,
-    "tags": [],
-    "img": "https://s3.images-iherb.com/bog/bog02856/d/32.jpg",
-    "affiliateUrl": "https://il.iherb.com/pr/bareorganics-organic-amla-powder-8-oz-227-g/131803?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 90.96,
     "available": true
   }
 ];
