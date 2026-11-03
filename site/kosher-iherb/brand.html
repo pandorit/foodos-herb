@@ -179,7 +179,35 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, 1fr); } .brand-stats { gap: 1.5rem; } }
-    @media (max-width: 640px) { .product-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .brand-meta-row { flex-direction: column; } }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px 8px; font-size: 1.5rem; color: var(--text-mid); line-height: 1; border-radius: 8px; }
+    @media (max-width: 640px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .brand-meta-row { flex-direction: column; }
+      .nav-hamburger { display: block; }
+      .nav-links {
+        display: none; flex-direction: column; gap: 0;
+        position: absolute; top: 68px; right: 0; left: 0;
+        background: white; border-bottom: 1px solid var(--border);
+        padding: 0.4rem 0; box-shadow: 0 4px 16px rgba(0,0,0,.08);
+        z-index: 190;
+      }
+      .nav-links.nav-open { display: flex; }
+      .nav-links > li { width: 100%; }
+      .nav-links > li > a,
+      .nav-links > li > .nav-dd-trigger {
+        display: block !important; width: 100% !important;
+        padding: 11px 1.4rem !important; font-size: 0.95rem !important;
+        text-align: right !important; color: var(--text-mid) !important;
+        border-bottom: 1px solid var(--border) !important;
+      }
+      .nav-links > li:last-child > a { border-bottom: none !important; }
+      .nav-dropdown-panel {
+        display: none; position: static; min-width: 0; max-width: 100%;
+        box-shadow: none; border: none; border-radius: 0; background: var(--bg-soft);
+        padding: 0.3rem 0;
+      }
+      .nav-dropdown-panel.open { display: block; }
+    }
   </style>
 </head>
 <body>
@@ -194,7 +222,8 @@
         <small>כשר, שווה וקולינרי - זה כאן.</small>
       </div>
     </a>
-    <ul class="nav-links">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="תפריט" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html#products">מוצרים</a></li>
       <li class="nav-has-dd" id="cats-dd-wrap">
         <a href="#" class="nav-dd-trigger" onclick="toggleDD(event,'cats-dd-panel')">קטגוריות ▾</a>
@@ -486,6 +515,12 @@
           </div>
         </div>`;
     }).join('');
+  }
+
+  // ── Hamburger ──
+  function toggleNav() {
+    const links = document.getElementById('nav-links');
+    if (links) links.classList.toggle('nav-open');
   }
 
   // ── NAV DROPDOWNS ──

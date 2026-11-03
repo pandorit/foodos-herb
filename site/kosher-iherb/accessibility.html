@@ -54,6 +54,7 @@
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
     .nav-links a:hover { color: var(--teal); text-decoration: none; }
     .nav-cta { background: var(--teal) !important; color: white !important; padding: 9px 20px; border-radius: var(--radius-pill); }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px 8px; font-size: 1.5rem; color: var(--text-mid); line-height: 1; border-radius: 8px; }
 
     /* HERO BAR */
     .page-hero { background: var(--teal-light); border-bottom: 1px solid rgba(74,157,154,.15); padding: 3rem 0; }
@@ -112,8 +113,27 @@
     .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,.35); text-align: center; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.08); }
 
     @media (max-width: 768px) {
-      .nav-links li:not(:last-child) { display: none; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 640px) {
+      .nav-hamburger { display: block; }
+      .nav-links {
+        display: none; flex-direction: column; gap: 0;
+        position: absolute; top: 68px; right: 0; left: 0;
+        background: white; border-bottom: 1px solid var(--border);
+        padding: 0.4rem 0; box-shadow: 0 4px 16px rgba(0,0,0,.08);
+        z-index: 190;
+      }
+      .nav-links.nav-open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links > li > a {
+        display: block !important; width: 100% !important;
+        padding: 11px 1.4rem !important; font-size: 0.95rem !important;
+        text-align: right !important; color: var(--text-mid) !important;
+        background: none !important; border-bottom: 1px solid var(--border) !important;
+      }
+      .nav-links > li:last-child > * { border-bottom: none !important; }
+      .nav-links .nav-cta { margin: 0.6rem 1.4rem !important; width: calc(100% - 2.8rem) !important; text-align: center !important; border-radius: 100px !important; }
     }
   </style>
 </head>
@@ -128,13 +148,20 @@
         <small>כשר, שווה וקולינרי - זה כאן.</small>
       </div>
     </a>
-    <ul class="nav-links">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="תפריט" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html">דף הבית</a></li>
       <li><a href="certs.html">הכשרויות</a></li>
       <li><a href="https://il.iherb.com/?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS" target="_blank" rel="noopener sponsored" class="nav-cta">לחנות iHerb</a></li>
     </ul>
   </div>
 </nav>
+<script>
+  function toggleNav() {
+    const links = document.getElementById('nav-links');
+    if (links) links.classList.toggle('nav-open');
+  }
+</script>
 
 <!-- HERO -->
 <div class="page-hero" role="banner">

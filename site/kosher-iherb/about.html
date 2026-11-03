@@ -59,6 +59,7 @@
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .18s; }
     .nav-links a:hover { color: var(--teal); text-decoration: none; }
     .nav-cta { background: var(--teal) !important; color: white !important; padding: 9px 20px; border-radius: var(--radius-pill); }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px 8px; font-size: 1.5rem; color: var(--text-mid); line-height: 1; border-radius: 8px; }
     /* ── NAV SEARCH ── */
     .nav-search-item { position: relative; display: flex; align-items: center; }
     .nav-search-trigger { background: none; border: none; padding: 6px; cursor: pointer; color: var(--text-mid, #3D3D3D); display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background .15s, color .15s; }
@@ -87,7 +88,31 @@
     .mega-overlay { display: none; position: fixed; inset: 0; z-index: 198; background: rgba(0,0,0,.18); }
     .mega-overlay.open { display: block; }
     @media (max-width: 900px) { .mega-inner { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 640px) { .nav-links { display: none; } .mega-menu { position: fixed; top: 0; bottom: 0; overflow-y: auto; padding: 1rem 0; z-index: 300; } .mega-inner { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; } }
+    @media (max-width: 640px) {
+      .nav-hamburger { display: block; }
+      .nav-links {
+        display: none; flex-direction: column; gap: 0;
+        position: absolute; top: 68px; right: 0; left: 0;
+        background: white; border-bottom: 1px solid var(--border);
+        padding: 0.4rem 0; box-shadow: 0 4px 16px rgba(0,0,0,.08);
+        z-index: 190;
+      }
+      .nav-links.nav-open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links > li > a,
+      .nav-links > li > button,
+      .nav-links > li > .nav-cats-trigger {
+        display: block !important; width: 100% !important;
+        padding: 11px 1.4rem !important; font-size: 0.95rem !important;
+        text-align: right !important; color: var(--text-mid) !important;
+        background: none !important; border: none !important;
+        border-bottom: 1px solid var(--border) !important; box-shadow: none !important;
+      }
+      .nav-links > li:last-child > * { border-bottom: none !important; }
+      .nav-links .nav-cta { margin: 0.6rem 1.4rem !important; width: calc(100% - 2.8rem) !important; text-align: center !important; border-radius: 100px !important; }
+      .mega-menu { position: fixed; top: 0; bottom: 0; overflow-y: auto; padding: 1rem 0; z-index: 300; }
+      .mega-inner { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+    }
 
     /* HERO BAR */
     .page-hero { background: var(--teal-light); border-bottom: 1px solid rgba(74,157,154,.15); padding: 3rem 0; }
@@ -123,7 +148,6 @@
     .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,.35); text-align: center; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.08); }
 
     @media (max-width: 768px) {
-      .nav-links li:not(:last-child) { display: none; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
     }
   </style>
@@ -139,7 +163,8 @@
         <small>כשר, שווה וקולינרי - זה כאן.</small>
       </div>
     </a>
-    <ul class="nav-links">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="תפריט" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html#products">מוצרים</a></li>
       <li><button class="nav-cats-trigger" id="cats-trigger" aria-haspopup="true" aria-expanded="false">קטגוריות</button></li>
       <li><a href="certs.html">הכשרויות</a></li>
@@ -291,13 +316,23 @@
     document.getElementById('about-container').innerHTML = html;
   }
 
+  // ── Hamburger ──
+  function toggleNav() {
+    const links = document.getElementById('nav-links');
+    if (links) links.classList.toggle('nav-open');
+  }
+
   // ── MEGA MENU ──
   (function() {
     const trigger = document.getElementById('cats-trigger');
     const menu    = document.getElementById('mega-menu');
     const overlay = document.getElementById('mega-overlay');
     if (!trigger || !menu) return;
-    function openMega() { menu.classList.add('open'); overlay.classList.add('open'); trigger.classList.add('mega-open'); trigger.setAttribute('aria-expanded','true'); }
+    function openMega() {
+      const navLinks = document.getElementById('nav-links');
+      if (navLinks) navLinks.classList.remove('nav-open');
+      menu.classList.add('open'); overlay.classList.add('open'); trigger.classList.add('mega-open'); trigger.setAttribute('aria-expanded','true');
+    }
     function closeMega() { menu.classList.remove('open'); overlay.classList.remove('open'); trigger.classList.remove('mega-open'); trigger.setAttribute('aria-expanded','false'); }
     trigger.addEventListener('click', e => { e.preventDefault(); menu.classList.contains('open') ? closeMega() : openMega(); });
     overlay.addEventListener('click', closeMega);
