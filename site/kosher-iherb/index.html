@@ -2191,6 +2191,9 @@
     const isOpen = menu.classList.contains('open');
     closeAllDD();
     if (!isOpen) {
+      // Close the mobile hamburger drawer so it doesn't render stacked under the mega menu
+      const navLinks = document.getElementById('nav-links');
+      if (navLinks) navLinks.classList.remove('nav-open');
       // Position directly below the nav
       const navEl = document.querySelector('.nav');
       if (navEl) menu.style.top = navEl.getBoundingClientRect().bottom + 'px';
