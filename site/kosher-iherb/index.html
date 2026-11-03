@@ -1708,6 +1708,7 @@
     { key: 'קיטו',        icon: '🥑', test: p => /keto|paleo|קיטו|פליאו|low.?carb/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'עשיר בחלבון', icon: '💪', test: p => /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'חלבי',        icon: '🥛', test: p => p.dairy === true || /\-D$/i.test(p.cert||'') },
+    { key: 'פרווה',       icon: '🌱', test: p => p.dairy !== true && !/\-D$/i.test(p.cert||'') },
     { key: 'נטול קפאין',  icon: '☕', test: p => /caffeine.?free|decaf|נטול קפאין|ללא קפאין|דל קפאין|בלי קפאין|בלי טיפת קפאין/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
   ];
   function getProductTags(p) {
