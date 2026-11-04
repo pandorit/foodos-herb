@@ -330,10 +330,14 @@
     let hideTimer = null;
     function openMega() { clearTimeout(hideTimer); menu.classList.add('open'); overlay.classList.add('open'); trigger.classList.add('mega-open'); trigger.setAttribute('aria-expanded','true'); }
     function closeMega() { hideTimer = setTimeout(() => { menu.classList.remove('open'); overlay.classList.remove('open'); trigger.classList.remove('mega-open'); trigger.setAttribute('aria-expanded','false'); }, 120); }
-    trigger.addEventListener('mouseenter', openMega);
-    trigger.addEventListener('mouseleave', closeMega);
-    menu.addEventListener('mouseenter', () => clearTimeout(hideTimer));
-    menu.addEventListener('mouseleave', closeMega);
+    // Desktop: hover (לא על מובייל/מגע — שם mouseenter+mouseleave מדומים נורים זה אחר זה
+    // כמעט מיד בעקבות הקשה, וגורמים לתפריט להיפתח ולהיסגר תוך רגע)
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      trigger.addEventListener('mouseenter', openMega);
+      trigger.addEventListener('mouseleave', closeMega);
+      menu.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+      menu.addEventListener('mouseleave', closeMega);
+    }
     overlay.addEventListener('click', closeMega);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMega(); });
   })();

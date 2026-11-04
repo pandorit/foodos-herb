@@ -1066,11 +1066,14 @@
       }, 120);
     }
 
-    // Desktop: hover
-    trigger.addEventListener('mouseenter', openMega);
-    trigger.addEventListener('mouseleave', closeMega);
-    menu.addEventListener('mouseenter', () => clearTimeout(hideTimer));
-    menu.addEventListener('mouseleave', closeMega);
+    // Desktop: hover (לא על מובייל/מגע — שם mouseenter+mouseleave מדומים נורים זה אחר זה
+    // כמעט מיד בעקבות הקשה, וגורמים לתפריט להיפתח ולהיסגר תוך רגע)
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      trigger.addEventListener('mouseenter', openMega);
+      trigger.addEventListener('mouseleave', closeMega);
+      menu.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+      menu.addEventListener('mouseleave', closeMega);
+    }
 
     // Mobile/click: toggle
     trigger.addEventListener('click', function(e) {

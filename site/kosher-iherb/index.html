@@ -1656,7 +1656,7 @@
   let activeTag  = 'הכל';
   let activeSort = 'default';
   let heartCounts = {}; // { productId: count }, נטען מ-/api/likes
-  let topHeartsSet = new Set(); // 12 המוצרים עם הכי הרבה לבבות, מחושב אחרי טעינת heartCounts
+  let topHeartsSet = new Set(); // 20 המוצרים עם הכי הרבה לבבות, מחושב אחרי טעינת heartCounts
   let CATEGORY_SLUGS = {}; // שם קטגוריה בעברית -> slug אנגלי, נטען מ-content.json
   function catSlug(heb) {
     const c = Array.isArray(heb) ? heb[0] : heb;
@@ -1708,6 +1708,7 @@
       return /maple|מייפל|honey|דבש|silan|סילאן|date.?syrup|סירופ.?תמרים|agave|אגבה|coconut.?sugar|סוכר קוקוס|coconut.?nectar|נקטר קוקוס|date.?sugar|סוכר תמרים/i.test(txt);
     }, groupOf: p => NATURAL_SUGAR_GROUP_A.has(p.id) ? 'A' : 'B' },
     { key: 'האהובים',     icon: '❤️', test: p => topHeartsSet.has(p.id) },
+    { key: 'הרשימה שלי',  icon: '📝', desc: 'המוצרים ששמרת בלב על המכשיר הזה, כמו רשימת משאלות אישית. השמירה מקומית בלבד, בלי הרשמה או פרטים אישיים.', test: p => getLikes().has(p.id) },
     { key: 'קיטו',        icon: '🥑', desc: 'דיאטת קיטו מתמקדת בדלת פחמימות קיצונית, כדי להיכנס למצב קטוזיס. לא משנה אם המזון מעובד או לא, כל עוד הפחמימות נמוכות.', test: p => /keto|קיטו|low.?carb|דל(ת)? פחמימות/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'פליאו',       icon: '🍖', desc: 'דיאטת פליאו מתמקדת במקור המזון, לא בכמות הפחמימות: בשר, דגים, ירקות, פירות ואגוזים בלבד, בלי דגנים, קטניות, חלב או סוכר מעובד.', test: p => /paleo|פליאו/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
     { key: 'עשיר בחלבון', icon: '💪', test: p => p.id !== 304 && /protein|חלבון|pea protein|soy protein|egg protein|egg wrap/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'') + ' ' + (p.descNew||'')) },
@@ -2003,6 +2004,10 @@
       // לא זמינים — תמיד לסוף
       const unavailDiff = (a.available === false ? 1 : 0) - (b.available === false ? 1 : 0);
       if (unavailDiff !== 0) return unavailDiff;
+      // תגית "האהובים": תמיד ממוין לפי כמות לייקים, מי שקיבל הכי הרבה למעלה
+      if (activeTag === 'האהובים') {
+        return (heartCounts[b.id] || 0) - (heartCounts[a.id] || 0);
+      }
       // מיון לפי בחירת המשתמש
       if (activeSort === 'hearts-desc') {
         return (heartCounts[b.id] || 0) - (heartCounts[a.id] || 0);
@@ -2346,7 +2351,7 @@
         Object.entries(heartCounts)
           .filter(([, count]) => count > 0)
           .sort((a, b) => b[1] - a[1])
-          .slice(0, 12)
+          .slice(0, 20)
           .map(([id]) => Number(id))
       );
       buildTagPills();
