@@ -1181,6 +1181,17 @@
       backBtn.href = 'category.html?cat=' + catSlug(product.cat);
       btnGroup.appendChild(backBtn);
 
+      // ── Share via WhatsApp (לעצמך או לאחרים)
+      const shareBtn = document.createElement('button');
+      shareBtn.className = 'btn-secondary';
+      shareBtn.type = 'button';
+      shareBtn.textContent = '📤 שיתוף בוואטסאפ';
+      shareBtn.addEventListener('click', function() {
+        const msg = (product.nameHe || product.name) + '\n' + window.location.href;
+        window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+      });
+      btnGroup.appendChild(shareBtn);
+
       // ── Report cert removal
       const reportBtn = document.createElement('button');
       reportBtn.className = 'product-report-btn';
