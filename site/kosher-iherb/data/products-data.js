@@ -56,7 +56,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro04873/d/5.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-ground-smoked-paprika-16-oz-453-g/70425?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 76.54,
+    "priceILS": 78.24,
     "available": true
   },
   {
@@ -78,7 +78,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro02955/d/9.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-tellicherry-black-peppercorns-whole-16-oz-453-g/31013?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 80.95,
+    "priceILS": 82.75,
     "available": true
   },
   {
@@ -168,7 +168,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro18475/d/36.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-cardamom-seed-ground-2-08-oz-58-g/35882?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 59.59,
+    "priceILS": 60.91,
     "available": true,
     "sizes": [
       {
@@ -203,7 +203,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sog/sog19088/d/40.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-garam-masala-seasoning-with-cardamom-cinnamon-cloves-1-79-oz-51-g/101645?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.57,
+    "priceILS": 24.09,
     "available": true
   },
   {
@@ -225,7 +225,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro04412/d/11.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-fluer-de-sel-sea-salt-16-oz-453-g/46433?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 67.84,
+    "priceILS": 69.34,
     "available": true
   },
   {
@@ -247,7 +247,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro04419/d/2.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-kosher-flake-sea-salt-16-oz-453-g/141392?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 39.68,
+    "priceILS": 40.52,
     "available": true
   },
   {
@@ -292,7 +292,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro00863/d/13.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-psyllium-husk-whole-16-oz-453-g/30981?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 81.63,
+    "priceILS": 83.44,
     "available": true
   },
   {
@@ -314,7 +314,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sog/sog19515/d/67.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simply-organic-ceylon-cinnamon-2-08-oz-59-g/65526?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 35.75,
+    "priceILS": 36.55,
     "available": true
   },
   {
@@ -336,7 +336,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sog/sog18608/d/42.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simply-organic-onion-powder-3-oz-85-g/31435?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 25,
+    "priceILS": 25.56,
     "available": true
   },
   {
@@ -358,7 +358,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sog/sog18606/d/58.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simply-organic-italian-seasoning-0-95-oz-27-g/31414?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 21.43,
+    "priceILS": 21.91,
     "available": true
   },
   {
@@ -384,7 +384,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sog/sog19492/d/70.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simply-organic-pure-madagascar-vanilla-non-alcoholic-flavoring-2-fl-oz-59-ml/55779?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 40.57,
+    "priceILS": 41.47,
     "available": true
   },
   {
@@ -406,7 +406,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/rtc/rtc80160/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/redmond-real-salt-ancient-kosher-sea-salt-16-oz-454-g/110070?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 44.14,
+    "priceILS": 45.12,
     "available": true
   },
   {
@@ -428,7 +428,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spt/spt00200/d/37.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/spectrum-culinary-organic-coconut-oil-refined-14-fl-oz-414-ml/53692?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 45.32,
+    "priceILS": 46.33,
     "available": true
   },
   {
@@ -450,7 +450,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spt/spt93451/d/64.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/spectrum-culinary-organic-virgin-coconut-oil-unrefined-14-fl-oz-414-ml/53760?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 56.42,
+    "priceILS": 57.67,
     "available": true
   },
   {
@@ -472,7 +472,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nut/nut10676/d/78.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/nutiva-organic-coconut-oil-buttery-14-fl-oz-414-ml/68678?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 46.52,
+    "priceILS": 47.55,
     "available": true,
     "pinned": true
   },
@@ -547,7 +547,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/ccs/ccs00204/d/99.jpg",
     "available": true,
-    "priceILS": 30.77,
+    "priceILS": 31.45,
     "seeAlso": [
       304
     ],
@@ -642,7 +642,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00068/d/21.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-nibs-unsweetened-8-oz-227-g/79888?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 49.55,
+    "priceILS": 50.65,
     "available": true,
     "seeAlso": [
       68
@@ -668,7 +668,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav02131/d/9.jpg",
     "available": true,
-    "priceILS": 63.12,
+    "priceILS": 64.52,
     "seeAlso": [
       66
     ],
@@ -693,7 +693,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00023/d/27.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-superfood-cacao-goji-bites-8-oz-227-g/43469?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 40.94,
+    "priceILS": 41.85,
     "available": true
   },
   {
@@ -715,7 +715,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav70042/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-hemp-powder-12-oz-340-g/79890?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 52.89,
+    "priceILS": 54.06,
     "available": true
   },
   {
@@ -735,7 +735,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm02546/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-large-flake-nutritional-yeast-gluten-free-5-oz-142-g/89491?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 30.36,
+    "priceILS": 31.04,
     "available": true,
     "seeAlso": [
       121,
@@ -762,7 +762,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fda/fda08008/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/foods-alive-cacao-butter-wafers-8-oz-227-g/107120?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 80.75,
+    "priceILS": 82.54,
     "available": true
   },
   {
@@ -817,7 +817,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/now/now06948/d/57.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/now-foods-real-food-organic-maple-syrup-grade-a-dark-color-16-fl-oz-473-ml/13573?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 60.14,
+    "priceILS": 61.48,
     "available": true,
     "pinned": true
   },
@@ -866,7 +866,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spc/spc24237/d/20.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/endangered-species-chocolate-smooth-dark-chocolate-72-cocoa-3-oz-85-g/32747?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 17.41,
+    "priceILS": 17.4,
     "available": true
   },
   {
@@ -891,7 +891,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/lov/lov00188/d/17.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/chocolove-extreme-dark-chocolate-88-cocoa-3-2-oz-90-g/70595?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 17.5,
+    "priceILS": 17.89,
     "available": true
   },
   {
@@ -937,7 +937,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/34435/34435.jpg",
-    "available": false
+    "available": true
   },
   {
     "id": 95,
@@ -1001,7 +1001,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/lat/lat00047/d/47.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/la-tourangelle-toasted-sesame-oil-8-45-fl-oz-250-ml/109340?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 37.61,
+    "priceILS": 38.45,
     "available": true
   },
   {
@@ -1023,7 +1023,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/edn/edn13360/d/9.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/eden-foods-organic-shiro-miso-12-1-oz-345-g/12267?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 57.19,
+    "priceILS": 58.46,
     "available": true
   },
   {
@@ -1065,7 +1065,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/ccs/ccs00236/d/48.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/coconut-secret-coconut-aminos-teriyaki-light-sweet-10-fl-oz-296-ml/61146?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 39.62,
+    "priceILS": 40.5,
     "available": true
   },
   {
@@ -1087,7 +1087,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spm/spm00513/d/58.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simple-mills-almond-flour-crackers-fine-ground-sea-salt-4-25-oz-120-g/75275?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.61,
+    "priceILS": 27.2,
     "available": true
   },
   {
@@ -1131,7 +1131,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/rxb/rxb00430/d/58.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/rxbar-protein-bar-chocolate-sea-salt-12-bars-1-8-oz-52-g-each/74967?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 151.21,
+    "priceILS": 154.57,
     "available": true
   },
   {
@@ -1194,7 +1194,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/bra/bra06605/d/30.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-nutritional-yeast-4-5-oz-127-g/56885?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 29.73,
+    "priceILS": 30.39,
     "available": true,
     "seeAlso": [
       75,
@@ -1345,7 +1345,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro19525/d/45.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-chipotle-smoked-red-jalapenos-2-15-oz-61-g/50379?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 21.82,
+    "priceILS": 22.3,
     "available": true
   },
   {
@@ -1385,7 +1385,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm03315/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-brown-rice-flour-whole-grain-gluten-free-24-oz-680-g/103982?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 28.78,
+    "priceILS": 29.42,
     "available": true
   },
   {
@@ -1408,7 +1408,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm03535/d/6.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-tapioca-flour-gluten-free-16-oz-454-g/126948?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.26,
+    "priceILS": 23.78,
     "available": true
   },
   {
@@ -1428,7 +1428,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm05381/d/14.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-super-fine-almond-flour-16-oz-453-g/89504?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 53.05,
+    "priceILS": 54.22,
     "available": true
   },
   {
@@ -1448,7 +1448,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm11332/d/6.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-gluten-free-chickpea-flour-1-lb-454-g/126943?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 20.4,
+    "priceILS": 20.86,
     "available": true
   },
   {
@@ -1488,7 +1488,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm11539/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-teff-flour-whole-grain-gluten-free-20-oz-567-g/103993?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 40.25,
+    "priceILS": 41.14,
     "available": true
   },
   {
@@ -1508,7 +1508,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm11377/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-oat-flour-whole-grain-gluten-free-18-oz-510-g/103976?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 32.2,
+    "priceILS": 32.91,
     "available": true
   },
   {
@@ -1533,7 +1533,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro23190/d/27.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-pure-vanilla-flavoring-alcohol-free-2-fl-oz-59-ml/56763?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 44.41,
+    "priceILS": 45.4,
     "available": true
   },
   {
@@ -1555,7 +1555,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wld/wld00054/d/40.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/wild-planet-albacore-wild-tuna-no-salt-added-5-oz-142-g/34643?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.55,
+    "priceILS": 24.07,
     "available": true
   },
   {
@@ -1577,7 +1577,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wld/wld00049/d/29.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/wild-planet-wild-sockeye-salmon-skinless-boneless-6-oz-170-g/34649?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 46.46,
+    "priceILS": 47.49,
     "available": true,
     "seeAlso": [
       155
@@ -1603,7 +1603,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wld/wld00047/d/41.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/wild-planet-wild-pink-salmon-skinless-boneless-6-oz-170-g/34652?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 32.16,
+    "priceILS": 32.88,
     "available": true,
     "seeAlso": [
       154
@@ -1629,7 +1629,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wld/wld00080/d/63.jpg",
     "available": true,
-    "priceILS": 13.48
+    "priceILS": 13.78
   },
   {
     "id": 162,
@@ -1732,7 +1732,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/csf/csf70108/d/28.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/chosen-foods-100-pure-avocado-oil-16-9-fl-oz-500-ml/110116?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 74.53,
+    "priceILS": 76.19,
     "available": true
   },
   {
@@ -1754,7 +1754,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/lat/lat00001/d/59.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/la-tourangelle-california-walnut-oil-16-9-fl-oz-500-ml/73003?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 47.04,
+    "priceILS": 48.09,
     "available": true
   },
   {
@@ -1776,7 +1776,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/ats/ats00056/d/43.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/artisana-organics-raw-pecan-butter-with-cashews-8-oz-227-g/27159?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 52.51,
+    "priceILS": 53.68,
     "available": true,
     "seeAlso": [178, 508],
     "seeAlsoNote": "ממרחי אגוזים כשרים נוספים, כל אחד עם אופי שונה:"
@@ -1800,7 +1800,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/jnb/jnb00031/d/30.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/justin-s-nut-butter-classic-almond-butter-16-oz-454-g/36200?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 61.83,
+    "priceILS": 63.2,
     "available": true,
     "seeAlso": [176, 508],
     "seeAlsoNote": "ממרחי אגוזים כשרים נוספים, כל אחד עם אופי שונה:"
@@ -1824,7 +1824,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro02319/d/2.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-everything-blend-16-oz-453-g/141381?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 54.06,
+    "priceILS": 55.26,
     "available": true
   },
   {
@@ -1846,7 +1846,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sog/sog18043/d/59.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simply-organic-everything-blend-3-49-oz-99-g/101646?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.47,
+    "priceILS": 23.99,
     "available": true,
     "pinned": true
   },
@@ -1889,7 +1889,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro02348/d/7.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-tequila-lime-seasoning-16-oz-453-g/146049?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 52.74,
+    "priceILS": 45.87,
     "available": true
   },
   {
@@ -1911,7 +1911,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro18923/d/47.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-cajun-seasoning-2-08-oz-59-g/35926?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 20.51,
+    "priceILS": 20.97,
     "available": true
   },
   {
@@ -1936,7 +1936,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro02745/d/3.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-stir-fry-seasoning-16-oz-453-g/152788?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 123.53,
+    "priceILS": 78.36,
     "available": true
   },
   {
@@ -1958,7 +1958,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro18994/d/36.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-adobo-seasoning-2-86-oz-81-g/35372?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 20.82,
+    "priceILS": 21.29,
     "available": true
   },
   {
@@ -1980,7 +1980,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro02778/d/9.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-taco-seasoning-16-oz-453-g/30991?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 62.3,
+    "priceILS": 63.68,
     "available": true
   },
   {
@@ -2002,7 +2002,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro18346/d/56.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-five-spice-powder-1-92-oz-54-g/35916?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 18.88,
+    "priceILS": 19.3,
     "available": true,
     "pinned": true
   },
@@ -2069,7 +2069,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "/images/products/Gourmet Lavender Extract Paste.avif",
     "available": true,
-    "priceILS": 32.31
+    "priceILS": 33.03
   },
   {
     "id": 528,
@@ -2114,7 +2114,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/ats/ats00095/d/45.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/artisana-organics-hazelnut-cacao-spread-8-oz-227-g/64996?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 46.32,
+    "priceILS": 47.35,
     "available": true
   },
   {
@@ -2137,7 +2137,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sfm/sfm10200/d/15.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/seapoint-farms-dry-roasted-edamame-sea-salt-4-oz-113-g/50287?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 10.66,
+    "priceILS": 10.9,
     "available": true
   },
   {
@@ -2159,7 +2159,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/svk/svk17408/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/saltverk-flaky-sea-salt-3-17-oz-90-g/159297?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 44.21,
+    "priceILS": 45.19,
     "available": true
   },
   {
@@ -2181,7 +2181,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/lsn/lsn00054/d/29.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/le-saunier-de-camargue-fleur-de-sel-finishing-sea-salt-4-4-oz-125-g/21347?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 42.62,
+    "priceILS": 43.57,
     "available": true,
     "pinned": true
   },
@@ -2204,7 +2204,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/ats/ats00093/d/39.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/artisana-organics-cashew-cacao-spread-8-oz-227-g/64995?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 37.9,
+    "priceILS": 38.74,
     "available": true
   },
   {
@@ -2226,7 +2226,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/whs/whs95812/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/wholesome-sweeteners-allulose-zero-calorie-sweetener-12-oz-340-g/104197?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 43.66,
+    "priceILS": 44.63,
     "available": true
   },
   {
@@ -2248,7 +2248,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/pyb/pyb41065/d/6.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/pyure-organic-allulose-sweetener-9-oz-255-g/135980?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 45.93,
+    "priceILS": 46.95,
     "available": true
   },
   {
@@ -2290,7 +2290,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "affiliateUrl": "https://il.iherb.com/pr/kaizen-lupin-flour-32-oz-907-g/139559?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 91.13,
+    "priceILS": 92.33,
     "available": true
   },
   {
@@ -2357,7 +2357,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00029/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-acai-powder-4-oz-113-g/86442?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 68.53,
+    "priceILS": 70.05,
     "available": true
   },
   {
@@ -2379,7 +2379,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00064/d/14.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-maqui-powder-3-oz-85-g/8258?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 68.02,
+    "priceILS": 69.53,
     "available": true
   },
   {
@@ -2401,7 +2401,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00020/d/31.jpg",
     "available": true,
-    "priceILS": 67.56
+    "priceILS": 69.06
   },
   {
     "id": 215,
@@ -2422,7 +2422,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00090/d/2.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-goji-powder-4-oz-113-g/147420?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 47.35,
+    "priceILS": 48.4,
     "available": true
   },
   {
@@ -2444,7 +2444,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00024/d/17.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-pomegranate-powder-8-oz-227-g/14313?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 70.5,
+    "priceILS": 72.07,
     "available": true
   },
   {
@@ -2489,7 +2489,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm11311/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-oat-flour-whole-grain-20-oz-567-g/103977?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.41,
+    "priceILS": 26.99,
     "available": true
   },
   {
@@ -2553,7 +2553,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fry/fry45169/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/fryaway-cooking-oil-solidifier-pan-fry-4-packets-2-1-oz-60-g/136036?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 39.03,
+    "priceILS": 39.89,
     "available": true
   },
   {
@@ -2593,7 +2593,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/shr/shr01337/d/22.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/stasher-reusable-silicone-food-bag-half-gallon-clear-64-fl-oz-1-89-l/85818?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 89.15,
+    "priceILS": 72.9,
     "available": true
   },
   {
@@ -2615,7 +2615,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/cim/cim12947/d/51.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/citrus-magic-veggie-wash-fruit-and-vegetable-wash-16-fl-oz-473-ml/12282?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 37.41,
+    "priceILS": 38.24,
     "available": true
   },
   {
@@ -2655,7 +2655,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/iyc/iyc01020/d/59.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/if-you-care-parchment-baking-paper-70-sq-ft-65-ft-x-13-in/26445?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 33.42,
+    "priceILS": 34.16,
     "available": true
   },
   {
@@ -2698,7 +2698,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/edn/edn13464/d/11.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/eden-foods-organic-genmai-miso-12-1-oz-345-g/12028?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 58.5,
+    "priceILS": 59.79,
     "available": true
   },
   {
@@ -2792,7 +2792,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/cos/cos01191/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-alaskan-pink-salmon-in-spring-water-2-5-oz-70-g/104395?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 10.84,
+    "priceILS": 11.09,
     "available": true,
     "pinned": true
   },
@@ -2835,7 +2835,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/ktt/ktt03070/d/26.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/kettle-foods-potato-chips-honey-dijon-5-oz-141-g/33434?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.24,
+    "priceILS": 23.69,
     "available": true
   },
   {
@@ -2857,7 +2857,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/npa/npa86004/d/49.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/nature-s-path-envirokidz-organic-panda-puffs-cereal-peanut-butter-10-6-oz-300-g/41146?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 28.48,
+    "priceILS": 29.12,
     "available": true
   },
   {
@@ -2879,7 +2879,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/bpl/bpl00235/d/60.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/pb2-foods-original-powdered-peanut-butter-16-oz-454-g/57781?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 43.44,
+    "priceILS": 44.41,
     "available": true
   },
   {
@@ -2901,7 +2901,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/ces/ces05319/d/68.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/celestial-seasonings-herbal-tea-black-cherry-berry-caffeine-free-20-tea-bags-1-6-oz-45-g/39563?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 19.11,
+    "priceILS": 19.54,
     "available": true
   },
   {
@@ -2923,7 +2923,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/ces/ces05310/d/68.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/celestial-seasonings-herbal-tea-cinnamon-apple-spice-caffeine-free-20-tea-bags-1-7-oz-48-g/14653?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 19.39,
+    "priceILS": 19.82,
     "available": true
   },
   {
@@ -2945,7 +2945,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/shk/shk00071/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/sahale-snacks-glazed-mix-maple-pecans-4-oz-113-g/59671?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 28,
+    "priceILS": 28.63,
     "available": true
   },
   {
@@ -2990,7 +2990,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/equ/equ90202/d/31.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/equal-exchange-organic-hot-cocoa-12-oz-340-g/32783?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 39.44,
+    "priceILS": 40.32,
     "available": true
   },
   {
@@ -3034,7 +3034,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/tee/tee80010/d/71.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/teeccino-chicory-herbal-coffee-vanilla-nut-medium-roast-caffeine-free-11-oz-312-g/9581?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 48.84,
+    "priceILS": 49.93,
     "available": true
   },
   {
@@ -3056,7 +3056,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "/images/products/Chicory Herbal Coffee, Almond Amaretto.avif",
     "available": true,
-    "priceILS": 49.76
+    "priceILS": 50.87
   },
   {
     "id": 269,
@@ -3077,7 +3077,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/npa/npa77143/d/44.jpg",
     "available": true,
-    "priceILS": 27.39
+    "priceILS": 28
   },
   {
     "id": 273,
@@ -3118,7 +3118,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/qpc/qpc00475/d/19.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/quinn-snacks-filled-pretzel-nuggets-peanut-butter-7-oz-198-g/97930?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.82,
+    "priceILS": 27.42,
     "available": true
   },
   {
@@ -3160,7 +3160,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sfm/sfm00421/d/14.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/seapoint-farms-seaweed-crisps-pumpkin-sesame-1-2-oz-35-g/68232?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 16.04,
+    "priceILS": 16.4,
     "available": true
   },
   {
@@ -3182,7 +3182,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/edw/edw00042/d/30.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/edward-sons-organic-baked-crisp-brown-rice-snaps-toasted-onion-3-5-oz-100-g/32693?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 20.11,
+    "priceILS": 20.56,
     "available": true
   },
   {
@@ -3244,7 +3244,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wal/wal88069/d/59.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/walden-farms-caramel-syrup-12-fl-oz-355-ml/44610?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 25.41,
+    "priceILS": 25.98,
     "available": true,
     "seeAlso": [
       363
@@ -3290,7 +3290,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/jnn/jnn50026/d/3.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/jennies-macaroons-very-vanilla-coconut-bites-with-marshmallows-tender-coconut-5-25-oz-149-g/156111?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.65,
+    "priceILS": 24.17,
     "available": true
   },
   {
@@ -3373,7 +3373,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/hlg/hlg00623/d/85.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/health-garden-all-natural-monk-fruit-sweetener-classic-40-packets-8-47-oz-240-g/123594?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 30.98,
+    "priceILS": 31.66,
     "available": true
   },
   {
@@ -3395,7 +3395,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/bpl/bpl00744/d/32.jpg",
     "available": true,
-    "priceILS": 96.73
+    "priceILS": 98.88
   },
   {
     "id": 304,
@@ -3416,7 +3416,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/bra/bra00016/d/28.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-liquid-aminos-soy-protein-seasoning-16-fl-oz-473-ml/38027?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 31.37,
+    "priceILS": 32.07,
     "available": true,
     "pinned": true,
     "seeAlso": [
@@ -3443,7 +3443,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/lak/lak00025/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/lakanto-monkfruit-sweetener-with-erythritol-golden-16-oz-454-g/90765?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 44.18,
+    "priceILS": 45.16,
     "available": true,
     "seeAlso": [
       306,
@@ -3470,7 +3470,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/lak/lak00022/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/lakanto-monkfruit-sweetener-with-erythritol-classic-16-oz-454-g/89995?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 43.91,
+    "priceILS": 44.89,
     "available": true,
     "seeAlso": [
       305,
@@ -3497,7 +3497,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/lak/lak00052/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/lakanto-monkfruit-sweetener-with-erythritol-powdered-16-oz-454-g/89994?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 49.37,
+    "priceILS": 50.47,
     "available": true,
     "seeAlso": [
       305,
@@ -3524,7 +3524,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm03555/d/18.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-xanthan-gum-8-oz-227-g/89485?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 48.96,
+    "priceILS": 50.04,
     "available": true
   },
   {
@@ -3614,7 +3614,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/anc/anc21030/d/44.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/ancient-harvest-plant-based-protein-pasta-green-lentil-quinoa-penne-9-6-oz-272-g/74437?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 25.38,
+    "priceILS": 25.95,
     "available": true
   },
   {
@@ -3636,7 +3636,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/anc/anc26030/d/36.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/ancient-harvest-plant-based-protein-pasta-red-lentil-quinoa-rotini-8-oz-227g/74438?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 25.03,
+    "priceILS": 25.59,
     "available": true
   },
   {
@@ -3781,7 +3781,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro19590/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-premium-nutritional-yeast-3-6-oz-102-g/106602?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.14,
+    "priceILS": 26.72,
     "available": true,
     "seeAlso": [
       339,
@@ -3809,7 +3809,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro02326/d/16.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-nutritional-yeast-mini-flakes-16-oz-453-g/30690?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 79.01,
+    "priceILS": 80.77,
     "available": true,
     "seeAlso": [
       338,
@@ -3859,7 +3859,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/koc/koc60077/d/38.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/king-oscar-skinless-boneless-salmon-in-olive-oil-with-lemon-4-05-oz-115-g/138744?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 22.15,
+    "priceILS": 22.64,
     "available": true
   },
   {
@@ -3905,7 +3905,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm02580/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-organic-buckwheat-whole-grain-16-oz-454-g/97772?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 31.89,
+    "priceILS": 32.59,
     "available": true
   },
   {
@@ -3927,7 +3927,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm12406/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-millet-whole-grain-gluten-free-28-oz-794-g/103991?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 29.11,
+    "priceILS": 29.75,
     "available": true,
     "seeAlso": [
       500
@@ -3953,7 +3953,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm11642/d/14.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-sorghum-flour-gluten-free-22-oz-624-g/103983?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 28.64,
+    "priceILS": 29.28,
     "available": true
   },
   {
@@ -3978,7 +3978,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm02505/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-arrowroot-starch-flour-16-oz-454-g/89499?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 32.69,
+    "priceILS": 33.42,
     "available": true
   },
   {
@@ -4000,7 +4000,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm01815/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-organic-coconut-flour-gluten-free-16-oz-453-g/89502?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 29.82,
+    "priceILS": 30.48,
     "available": true
   },
   {
@@ -4022,7 +4022,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm03375/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-old-fashioned-rolled-oats-whole-grain-gluten-free-32-oz-907-g/89516?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 47.61,
+    "priceILS": 48.67,
     "available": true
   },
   {
@@ -4044,7 +4044,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm03937/d/9.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-organic-flaxseed-meal-whole-ground-16-oz-453-g/77015?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 35.92,
+    "priceILS": 36.72,
     "available": true
   },
   {
@@ -4352,7 +4352,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wal/wal55022/d/43.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/walden-farms-honey-barbecue-sauce-12-fl-oz-355-ml/53115?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 25.48,
+    "priceILS": 26.05,
     "available": true,
     "longDesc": "גרסה מתקתקה יותר לרוטב הברביקיו של Walden Farms, המשלבת את טעמי העישון העמוקים יחד עם ארומה ומתקתקות המזכירות דבש אמיתי – אך לחלוטין ללא דבש, ללא סוכר וללא קלוריות. הרוטב מעניק זיגוג מבריק וטעם מנחם למנות עוף, כנפיים, או בשר מפורק (Pulled Beef), ומאפשר ליהנות מחוויית \"ברביקיו אמריקאי\" מתוק וממכר תוך שמירה קפדנית על תזונה דלת פחמימות וקלוריות. (כשרות OU).",
     "seeAlso": [
@@ -4553,7 +4553,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wal/wal11022/d/56.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/walden-farms-sweet-creamy-creamer-12-fl-oz-355-ml/102460?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 25.51,
+    "priceILS": 26.07,
     "available": true,
     "longDesc": "קרמר נוזלי המיועד לשדרוג קפה הבוקר, המעניק מרקם עשיר וקרמי לצד מתיקות מעודנת, מבלי להוסיף קלוריות או סוכר למשקה. הוא מבוסס על ממתיקים טבעיים בלבד (ללא סוכרלוז) ואינו מכיל רכיבי חלב (כשרות OU פרווה), מה שמאפשר להשתמש בו גם במשקאות חלביים וגם לאחר ארוחה בשרית. פתרון מדויק ופרקטי לשליטה על הערכים התזונתיים מבלי להתפשר על פינוק בקפה. (כשרות OU)."
   },
@@ -4575,7 +4575,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wal/wal33103/d/61.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/walden-farms-bleu-cheese-dressing-12-fl-oz-355-ml/41659?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 25.68,
+    "priceILS": 26.25,
     "available": true,
     "longDesc": "רוטב מאתגר לשחזור בגרסה דלת-קלוריות, הצליח לשמור על האופי והטעם הדומיננטי של גבינה כחולה אמיתית. הרוטב אינו מכיל שומן, סוכר או קלוריות, אך מספק את העוקץ והעומק המלוח המאפיינים גבינות בשלות. הוא מעולה לזילוף מעל סלטים ירוקים עשירים (כמו סלט וולדורף או אגסים), כמטבל קלאסי לכנפי עוף בסגנון באפלו, או כמטבל מרענן לירקות טריים חתוכים. (כשרות OU)."
   },
@@ -4597,7 +4597,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wal/wal11033/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/walden-farms-creamer-french-vanilla-12-fl-oz-355-ml/114281?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 25.57,
+    "priceILS": 26.14,
     "available": true
   },
   {
@@ -4677,7 +4677,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spm/spm00522/d/77.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simple-mills-crunchy-almond-flour-cookies-double-chocolate-5-5-oz-156-g/75291?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.43,
+    "priceILS": 27.01,
     "available": true,
     "longDesc": "עוגיות פריכות המיוצרות מקמח שקדים ותערובת זרעים, בתוספת כפולה של שוקולד וקקאו טהור. בניגוד לעוגיות תעשייתיות עמוסות קמח לבן וסוכר מעובד, הן ממותקות באמצעות סוכר קוקוס אורגני ואינן מכילות רכיבים מלאכותיים או גלוטן. המרקם שלהן קראנצ'י ומוצק, והן מספקות טעם שוקולדי עמוק ומספקים נשנוש איכותי ומזין ליד הקפה, עם ערכים תזונתיים גבוהים יותר משמעותית מעוגיות רגילות. (כשרות OU).\n\nכדאי לדעת: הבידול העיקרי הוא בסיס השקדים וההתאמה למי שמחפש מוצר ללא גלוטן. זו עדיין עוגייה מתוקה — לא מוצר שהיתרון שלו הוא 'בריאותי' אוטומטי.",
     "seeAlso": [
@@ -4704,7 +4704,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spm/spm00523/d/75.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simple-mills-crunchy-almond-flour-cookies-toasted-pecan-5-5-oz-156-g/75292?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.52,
+    "priceILS": 27.11,
     "available": true,
     "longDesc": "עוגיות פריכות המשלבות את הבסיס האיכותי של קמח שקדים וקמח קוקוס עם שבבי פקאן קלויים. האפייה המדויקת מדגישה את הטעם האגוזי והחמים של הפקאן, ומעניקה עוגייה יציבה וטעימה להפליא ללא שום שימוש בדגנים המכילים גלוטן. ממותקות באופן טבעי בסוכר קוקוס, מה שהופך אותן לבחירה שקולה ואיכותית למי שמחפש פינוק מתוק עם מינימום עיבוד תעשייתי. (כשרות OU).\n\nכדאי לדעת: הבידול העיקרי הוא בסיס השקדים וההתאמה למי שמחפש מוצר ללא גלוטן. זו עדיין עוגייה מתוקה — לא מוצר שהיתרון שלו הוא 'בריאותי' אוטומטי.",
     "seeAlso": [
@@ -4731,7 +4731,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spm/spm00519/d/113.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simple-mills-crunchy-almond-flour-cookies-chocolate-chip-5-5-oz-156-g/75290?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.71,
+    "priceILS": 27.3,
     "available": true,
     "longDesc": "התשובה הבריאה לעוגיית השוקולד צ'יפס הקלאסית. עוגיות אלו מבוססות על קמח שקדים, קמח קוקוס ועמילן טפיוקה, עם נטיפי שוקולד מריר איכותיים ומתיקות עדינה של סוכר קוקוס. הן פריכות, עשירות בטעם ונטולות גלוטן, חומרים משמרים או צבעי מאכל. בחירה מצוינת לילדים ולמבוגרים כאחד שרוצים ליהנות מחטיף שוקולד צ'יפס ביתי ואפוי ברשימת רכיבים נקייה לחלוטין. (כשרות OU).\n\nכדאי לדעת: הבידול העיקרי הוא בסיס השקדים וההתאמה למי שמחפש מוצר ללא גלוטן. זו עדיין עוגייה מתוקה — לא מוצר שהיתרון שלו הוא 'בריאותי' אוטומטי.",
     "seeAlso": [
@@ -4758,7 +4758,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spm/spm00512/d/64.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simple-mills-almond-flour-crackers-rosemary-sea-salt-4-25-oz-120-g/75282?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.61,
+    "priceILS": 27.2,
     "available": true,
     "longDesc": "קרקרים פריכים המבוססים על תערובת מזינה של קמח שקדים, פשתן וגרעיני חמניה, בתוספת עלי רוזמרין מיובשים ומלח ים. ארומת הרוזמרין הדומיננטית מעניקה להם אופי ים-תיכוני בולט, שהופך אותם למתאימים במיוחד לשילוב במגשי אירוח לצד גבינות עזים, פטריות או ממרחים שונים. הם נטולי גלוטן, ללא דגנים וללא חומרים מלאכותיים, ומספקים שומנים בריאים וחלבון בכל ביס. (כשרות OU).\n\nכדאי לדעת: הם מעניינים בעיקר כאלטרנטיבה ללא גלוטן וכקרקר עם בסיס אגוזים/זרעים. זה לא אומר בהכרח שהם דלי קלוריות יותר מקרקר רגיל — ההבדל הוא בהרכב, בטעם ובמרקם."
   },
@@ -4780,7 +4780,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spm/spm00514/d/60.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simple-mills-almond-flour-crackers-sun-dried-tomato-basil-4-25-oz-120-g/75283?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.61,
+    "priceILS": 27.2,
     "available": true,
     "longDesc": "קרקרים עשירים ומלאי טעם המשלבים את הבסיס הבריא של קמח שקדים וזרעים יחד עם עגבניות מיובשות ובזיליקום טרי. הטעמים האיטלקיים מורגשים היטב בכל ביס ומעניקים עומק מלוח-חמצמץ שמשתלב נפלא עם מטבלים או כנשנוש עומד בפני עצמו. הם אפויים (לא מטוגנים), נטולי גלוטן לחלוטין, ומהווים אלטרנטיבה מזינה ומספקת לקרקרים תעשעיתיים מבוססי קמח חיטה לבן. (כשרות OU).\n\nכדאי לדעת: הם מעניינים בעיקר כאלטרנטיבה ללא גלוטן וכקרקר עם בסיס אגוזים/זרעים. זה לא אומר בהכרח שהם דלי קלוריות יותר מקרקר רגיל — ההבדל הוא בהרכב, בטעם ובמרקם."
   },
@@ -4802,7 +4802,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spm/spm00515/d/46.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simple-mills-almond-flour-crackers-farmhouse-cheddar-4-25-oz-120-g/75285?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.61,
+    "priceILS": 27.2,
     "available": true,
     "longDesc": "קרקרים המיועדים לחובבי הגבינה. הם משלבים את קמח השקדים והזרעים המזין של Simple Mills יחד עם גבינת צ'דר אמיתית ומובחרת המעניקה להם טעם גבינתי עמוק, מלוח וממכר. ללא חומרי טעם מלאכותיים או צבעי מאכל סינתטיים, וללא גלוטן כלל. הם פריכים ויציבים, ומתאימים באופן מושלם לנשנוש מהיר, להגשה באירוח, או לשילוב בקופסת האוכל של הילדים. (כשרות OU).\n\nכדאי לדעת: הם מעניינים בעיקר כאלטרנטיבה ללא גלוטן וכקרקר עם בסיס אגוזים/זרעים. זה לא אומר בהכרח שהם דלי קלוריות יותר מקרקר רגיל — ההבדל הוא בהרכב, בטעם ובמרקם."
   },
@@ -4844,7 +4844,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/spm/spm67278/d/16.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simple-mills-almond-flour-crackers-parmesan-garlic-4-25-oz-120-g/160634?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 28.2,
+    "priceILS": 28.82,
     "available": true,
     "longDesc": "הקרקרים של Simple Mills מבוססים על קמח שקדים או זרעים במקום קמח חיטה רגיל. זה נותן טעם אגוזי, קראנץ' עדין ומרקם מעט יותר שביר מקרקר חיטה.\n\nקרקרים פריכים של Simple Mills בטעם פרמזן ושום, עשויים מקמח שקדים ללא גלוטן. שילוב קלאסי ועשיר של גבינה ושום שמתאים מצוין לגבינות רכות, ריקוטה או ציפוי ים תיכוני. חלבי OU-D.\n\nכדאי לדעת: הם מעניינים בעיקר כאלטרנטיבה ללא גלוטן וכקרקר עם בסיס אגוזים/זרעים. זה לא אומר בהכרח שהם דלי קלוריות יותר מקרקר רגיל — ההבדל הוא בהרכב, בטעם ובמרקם."
   },
@@ -4866,7 +4866,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/wld/wld00120/d/60.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/wild-planet-wild-white-anchovies-in-extra-virgin-olive-oil-4-4-oz-125-g/80963?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 13.72,
+    "priceILS": 14.02,
     "available": true,
     "longDesc": "אנשובי לבן של Wild Planet הוא דג קטן המשומר טרי בשמן זית כתית מעולה, מים ומלח. הוא שונה מאנשובי כהה ומיושן במלח: טעמו נקי ועדין יותר, המרקם רך, והוא אינו אמור להיות מלוח וחריף במיוחד (כשרות OU).\n\nלעומת פילה אנשובי קלאסי בצנצנת, האנשובי הלבן פחות מיושן, פחות מלוח ומתאים גם לאכילה כמנה עצמאית. לעומת סרדינים, הוא קטן ועדין יותר; אפשר להשתמש בו בסלטים ובטוסטים בלי שיתפקד רק כ\"מלח דגים\" ברוטב.\n\nרעיונות לשימוש:\n• לסלט\n• לכריך\n• לפסטה או קציצות לפי הדג\n• על קרקרים עם לימון או חרדל",
     "seeAlso": [
@@ -4945,7 +4945,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/cpn/cpn00803/d/46.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/crown-prince-natural-kipper-snacks-with-cracked-black-pepper-3-25-oz-92-g/44032?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 14.62,
+    "priceILS": 14.94,
     "available": true,
     "longDesc": "\"קיפרס\" (Kippers) הם למעשה פילטים של דג הרינג איכותי שנידוג בטבע, אשר עברו תהליך מסורתי של עישון חם טבעי על עצי עץ קשה. הגרסה הזו מתובלת בפלפל שחור גרוס המוסיף עקצוץ שמחמיא לשומניות הטבעית (והבריאה) של ההרינג. הדג מתאפיין במרקם בשרני ומוצק, עשיר מאוד בחלבון ובשמני אומגה 3. הוא מוכן לאכילה ישירות מהקופסה, ומצוין לצד קרקרים, על לחם שיפון כהה עם חמאה, או כתוספת מעניינת לסלטים מבוססי תפוחי אדמה.\n\nכדאי לדעת: לעומת סרדינים הם בדרך כלל בשרניים ומעושנים יותר, עם אופי צפון-אירופי.",
     "seeAlso": [
@@ -4971,7 +4971,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/cpn/cpn00802/d/92.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/crown-prince-natural-kipper-snacks-naturally-smoked-3-25-oz-92-g/27596?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 14.07,
+    "priceILS": 14.39,
     "available": true,
     "longDesc": "הגרסה הקלאסית והנקייה ביותר של הרינג מעושן. הפילטים נטולי העצמות נידוגים באוקיינוס ומעושנים בשיטות מסורתיות ללא כל תוספת של תמציות עשן מלאכותיות או כימיקלים. התוצאה היא דג בעל צבע זהוב, טעם מעושן עמוק שאינו משתלט, ומרקם שומני ועסיסי. זהו פתרון נהדר ועתיר-חלבון לארוחת בוקר בסגנון אירופאי מסורתי, או כחומר גלם להכנת ממרחי דגים מעושנים ביתיים עם מעט גבינת שמנת ועירית.\n\nכדאי לדעת: לעומת סרדינים הם בדרך כלל בשרניים ומעושנים יותר, עם אופי צפון-אירופי.",
     "seeAlso": [
@@ -5025,7 +5025,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "img": "https://s3.images-iherb.com/cta/cta00152/d/30.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/catalina-crunch-protein-cereal-cinnamon-toast-9-oz-255-g/107031?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 42.8,
+    "priceILS": 43.75,
     "available": true,
     "longDesc": "הערך התזונתי המרכזי כאן הוא תכולת החלבון; כדאי להשוות בין מוצרים לפי גרם חלבון למנה, גודל המנה, כמות סוכר ורשימת הרכיבים — ולא רק לפי הכיתוב 'Protein' על החזית. במוצרי חלבון, המדד החשוב הוא לא רק גרם החלבון: כדאי להסתכל גם על גודל המנה, כמות הסוכר, סוג הממתיקים ורשימת הרכיבים (כשרות CRC).\n\nלעומת קורנפלקס או דגני בוקר לילדים, הוא בדרך כלל פחות מתוק ויותר מרוכז בחלבון ובסיבים. לעומת גרנולה, הוא נוטה להיות פריך ויבש יותר ופחות שומני; כדאי לבדוק את טעם הווריאנט ואת רשימת הממתיקים למי שרגיש לממתיקים מסוימים."
   },
@@ -5047,7 +5047,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/pmk/pmk63985/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/primal-kitchen-mayo-with-avocado-oil-17-fl-oz-503-ml/117019?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 56.84,
+    "priceILS": 58.11,
     "available": true,
     "longDesc": "מהפכה בקטגוריית המיונז. רוב המיונזים המסחריים מבוססים כמעט לחלוטין על שמני זרעים תעשייתיים זולים (כמו קנולה או סויה). המיונז של Primal Kitchen מבוסס אך ורק על שמן אבוקדו טהור, הידוע ביציבותו וביתרונותיו התזונתיים. יחד עם ביצי חופש אורגניות וקצת חומץ תפוחים, מתקבל מיונז בעל מרקם חלק, עשיר וטעם נקי מאוד, שאינו מתפשר על הבריאות. הוא חומר הגלם האידיאלי לתזונת פליאו וקיטו, וכבסיס לרטבי איולי וסלטי כרוב.\n\nכדאי לדעת: לעומת שמן זית כתית הוא פחות ארומטי ולכן מתאים כשלא רוצים שטעם השמן יהיה חלק מרכזי במנה."
   },
@@ -5069,7 +5069,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm03392/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-double-acting-baking-powder-14-oz-397-g/89507?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 24.17,
+    "priceILS": 24.71,
     "available": true,
     "longDesc": "אבקת אפייה דו-פעולתית היא תערובת של בסיס וחומצות שמתפיחה בלילה בשני שלבים: תחילה כאשר היא נרטבת, ואז שוב בחום התנור. היא אינה שמרים ואינה סודה לשתייה; תפקידה ליצור בועות אוויר מהירות בעוגות, מאפינס, פנקייקים ולחמים מהירים (כשרות Kehilla Kosher).\n\nלעומת סודה לשתייה, אבקת אפייה כבר כוללת את החומצות הדרושות להפעלה, ולכן אין צורך להוסיף לה מיץ לימון או יוגורט. לעומת שמרים, היא פועלת מיד ואינה דורשת תפיחה; המוצר נטול גלוטן, אך הוא אינו מתאים למתכוני לחם שמרים שדורשים זמן ופיתוח מבנה.\n\nרעיונות לשימוש:\n• להשתמש בכפית אחת אבקת אפייה לכל כוס קמח בעוגות בחושות, מאפינס ופנקייקים\n• לערבב היטב עם החומרים היבשים לפני הוספת הנוזלים, כדי לפזר את ההתפחה באופן אחיד\n• לאפות מיד לאחר ערבוב הבלילה, ולא להשאיר אותה זמן רב על השיש\n• להשתמש בפנקייקים מ-1 כוס קמח עם כפית אבקת אפייה לקבלת מרקם אוורירי\n• לבדוק תוקף: אבקה ישנה עלולה לאבד יעילות ולתת מאפה שטוח\n• לא להחליף ישירות בסודה לשתייה בלי להתאים את החומצה והכמות במתכון"
   },
@@ -5091,7 +5091,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/hlg/hlg00644/d/28.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/health-garden-ketchup-sugar-free-16-fl-oz-473-ml/106073?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 25.59,
+    "priceILS": 26.16,
     "available": true,
     "longDesc": "קטשופ ללא סוכר של Health Garden הוא רוטב עגבניות מתובל שנועד לתת טעם קטשופ מוכר בלי סוכר רגיל. הוא עדיין רוטב מעובד עם חמיצות, מלח, תבלינים וממתיקים חלופיים, ולא רסק עגבניות טבעי (כשרות OU).\n\nלעומת קטשופ רגיל, הוא פחות מתוק ובדרך כלל בעל פחות קלוריות וסוכר למנה. לעומת רסק עגבניות, הוא מוכן לאכילה, מתובל וחמצמץ יותר; הטעם עשוי להיות שונה מקטשופ קלאסי בגלל שימוש בממתיקים חלופיים.\n\nרעיונות לשימוש:\n• להגיש כף עד שתיים לצד שניצל, המבורגר, צ'יפס או קציצות\n• למרוח שכבה דקה בכריך טוסט, המבורגר או נקניקייה\n• לערבב 3 כפות קטשופ עם כפית חרדל, שום ופפריקה לרוטב לקציצות או כנפיים\n• להשתמש כרוטב בסיס לפיצה אישית או טוסט פיצה\n• לערבב עם מיונז לקבלת רוטב ורוד לצ'יפס, סלט תפוחי אדמה או כריכים\n• לנער לפני השימוש ולשמור במקרר לאחר הפתיחה"
   },
@@ -5135,7 +5135,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nuc/nuc00623/d/11.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/nuco-organic-coconut-wraps-original-5-wraps-14-g-each/86083?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 31.52,
+    "priceILS": 32.22,
     "available": true,
     "longDesc": "עטיפות קוקוס הן יריעות דקות וגמישות המשמשות כתחליף לטורטייה או ללחם. הן עשויות משלושה רכיבים בלבד — בשר קוקוס, מי קוקוס ושמן קוקוס כתית — ולכן טעמן עדין אך מעט קוקוסי, והן אינן ניטרליות כמו לאפה מקמח חיטה (כשרות Star-K).\n\nלעומת טורטיית חיטה, זו עטיפה ללא דגנים וללא גלוטן, אך היא קטנה יותר, פחות אלסטית ובעלת טעם קוקוס מורגש. לעומת עטיפת חסה, היא יכולה להכיל מילוי רטוב יחסית בלי להיקרע מיד, אך מכילה קוקוס ומעט שומן טבעי ממנו.\n\nרעיונות לשימוש:\n• למלא עטיפה אחת ב-2 כפות חומוס, רבע אבוקדו, גזר מגורר ועלי חסה ולגלגל בעדינות\n• להכין ארוחת בוקר עם ביצה מקושקשת מביצה או שתיים, עגבנייה, בצל סגול ואבוקדו\n• למרוח כף וחצי ממרח קשיו או חמאת שקדים, להוסיף בננה פרוסה וקינמון ולגלגל\n• למלא בטונה, מלפפון, גזר ואבוקדו כדי ליצור עטיפה בסגנון סושי ללא אורז\n• לחתוך לריבועים קטנים ולהגיש עם חומוס או גוואקמולה במקום קרקרים\n• להניח את העטיפה בטמפרטורת החדר לפני הקיפול אם היא התקשחה בקור, כדי למנוע סדקים"
   },
@@ -5160,7 +5160,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sdd/sdd55903/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/seed-mill-chocolate-sesame-sauce-10-93-oz-310-g/157090?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 41.78,
+    "priceILS": 42.7,
     "available": true,
     "longDesc": "רוטב שוקולד-שומשום הוא ממרח נוזלי-סמיך שמחבר טחינה משומשום טחון עם שיבולת שועל, סוכר דמררה ושוקולד מריר. הוא קרוב יותר לטחינה מתוקה ושוקולדית מאשר לממרח שוקולד חלבי או לסירופ שוקולד דליל (כשרות OU).\n\nלעומת ממרח אגוזי לוז ושוקולד, הבסיס הוא שומשום ולא אגוזים, ולכן הטעם אגוזי-קלוי ומעט מריר יותר. לעומת טחינה גולמית, המוצר כבר ממותק ומכיל שוקולד ושיבולת שועל; הוא מכיל שומשום וסויה, ועלול לכלול גלוטן בהתאם לרגישות לשיבולת שועל.\n\nרעיונות לשימוש:\n• לזלף כף עד שתיים על יוגורט, גלידה, פנקייקים או דייסת שיבולת שועל\n• להשתמש כמילוי לקרפ, טוסט מתוק או עוגיות סנדוויץ'\n• לערבב כף עם חלב חם או משקה שיבולת שועל להכנת משקה שוקולד-טחינה\n• להגיש כמטבל לתותים, בננות, תפוחים או בייגלה מלוח\n• לחמם בעדינות אם הרוטב התמצק בקור, בלי להרתיח"
   },
@@ -5182,7 +5182,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/edn/edn49115/d/19.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/eden-foods-organic-traditional-barley-malt-syrup-20-oz-566-g/11224?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 60,
+    "priceILS": 61.34,
     "available": true,
     "longDesc": "סירופ לתת שעורה מופק מגרעיני שעורה מונבטים שעברו תסיסה איטית. התוצאה סמיכה וכהה, עם מתיקות מתונה וטעם אגוזי שמזכיר קרמל קלוי ולחם כפרי. באפייה הוא מקנה צבע שחום ואופי כהה. בייגלה ניו יורקי ולחם שיפון (פומפרניקל) מסורתי בדרך כלל כוללים אותו, כי הוא נותן את הקרום המבריק והמרקם הלעיס האופייניים. (כשרות OK).\n\nכדאי לדעת: הטעם שלו מורגש, ולכן זה לא תחליף ניטרלי לסוכר. הוא מיועד בעיקר ללחמים וממרחים שרוצים בהם את הטעם הכהה והעמוק הזה."
   },
@@ -5337,7 +5337,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sog/sog15737/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simply-organic-umami-blends-roasted-garlic-herb-2-19-oz-62-g/116997?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 32.61,
+    "priceILS": 33.34,
     "available": true,
     "seeAlso": [
       406,
@@ -5364,7 +5364,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sog/sog19651/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simply-organic-umami-blends-original-3-14-oz-89-g/117007?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 32.96,
+    "priceILS": 33.7,
     "available": true,
     "seeAlso": [
       405,
@@ -5391,7 +5391,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/svk/svk03922/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/saltverk-arctic-thyme-salt-2-82-oz-80-g/159300?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 43.94,
+    "priceILS": 44.91,
     "available": true
   },
   {
@@ -5413,7 +5413,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/svk/svk03927/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/saltverk-birch-smoked-salt-3-17-oz-90-g/159301?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 44.21,
+    "priceILS": 45.19,
     "available": true
   },
   {
@@ -5435,7 +5435,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/svk/svk03929/d/25.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/saltverk-lava-salt-3-17-oz-90-g/159298?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 44.13,
+    "priceILS": 45.11,
     "available": true
   },
   {
@@ -5457,7 +5457,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/svk/svk03928/d/25.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/saltverk-licorice-salt-3-17-oz-90-g/159299?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 44.21,
+    "priceILS": 45.19,
     "available": true
   },
   {
@@ -5479,7 +5479,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/svk/svk17427/d/25.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/saltverk-seaweed-salt-3-17-oz-90-g/159302?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 44.32,
+    "priceILS": 45.31,
     "available": true
   },
   {
@@ -5501,7 +5501,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sla/sla00061/d/48.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-india-black-kala-namak-4-oz-113-g/102784?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 21.92,
+    "priceILS": 22.41,
     "available": true
   },
   {
@@ -5523,7 +5523,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/shk/shk00507/d/11.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/sahale-snacks-glazed-mix-pomegranate-vanilla-cashews-4-oz-113-g/59662?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 30.8,
+    "priceILS": 31.48,
     "available": true
   },
   {
@@ -5545,7 +5545,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/shk/shk00508/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/sahale-snacks-glazed-mix-honey-almonds-4-oz-113-g/59661?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 30.8,
+    "priceILS": 31.48,
     "available": true
   },
   {
@@ -5567,7 +5567,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/shk/shk90003/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/sahale-snacks-glazed-mix-tangerine-vanilla-cashew-macadamia-4-oz-113-g/83382?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 30.8,
+    "priceILS": 31.48,
     "available": true
   },
   {
@@ -5589,7 +5589,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/shk/shk00072/d/16.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/sahale-snacks-glazed-mix-natural-pomegranate-pistachios-4-oz-113-g/59712?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 30.8,
+    "priceILS": 31.48,
     "available": true
   },
   {
@@ -5611,7 +5611,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/shk/shk00056/d/14.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/sahale-snacks-glazed-mix-valdosta-pecans-4-oz-113-g/59663?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 30.8,
+    "priceILS": 31.48,
     "available": true
   },
   {
@@ -5633,7 +5633,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/shk/shk00028/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/sahale-snacks-glazed-mix-banana-rum-pecans-4-oz-113-g/83350?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 27.25,
+    "priceILS": 27.85,
     "available": true
   },
   {
@@ -5715,7 +5715,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/yue/yue00186/d/35.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/yumearth-organic-pops-assorted-flavors-50-individually-wrapped-pops-10-9-oz-310-g/10888?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 49.04,
+    "priceILS": 50.12,
     "available": true
   },
   {
@@ -5737,7 +5737,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/yue/yue01961/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/yumearth-organic-chewys-fruit-chews-5-oz-142-g/104822?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.48,
+    "priceILS": 27.07,
     "available": true
   },
   {
@@ -5759,7 +5759,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/yue/yue01945/d/20.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/yumearth-organic-giggles-chewy-candy-bites-5-oz-142-g/101326?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.38,
+    "priceILS": 26.97,
     "available": true
   },
   {
@@ -5784,7 +5784,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/set/set00090/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/big-tree-farms-organic-golden-coconut-sugar-1-lb-454-g/85089?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 27.64,
+    "priceILS": 28.26,
     "available": true,
     "seeAlso": [
       431,
@@ -5815,7 +5815,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/set/set10700/d/17.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/big-tree-farms-organic-vanilla-coconut-sugar-14-oz-396-g/53522?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 32.37,
+    "priceILS": 33.09,
     "available": true,
     "seeAlso": [
       430,
@@ -5843,7 +5843,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/tcc/tcc00679/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/true-citrus-true-lime-crystallized-lime-2-29-oz-65-g/126540?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 13.59,
+    "priceILS": 13.89,
     "available": true,
     "seeAlso": [
       433,
@@ -5870,7 +5870,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/tcc/tcc00678/d/34.jpg",
     "available": true,
-    "priceILS": 13.51,
+    "priceILS": 13.81,
     "seeAlso": [
       432,
       434
@@ -5896,7 +5896,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/tcc/tcc00677/d/34.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/true-citrus-true-lemon-crystallized-lemon-pepper-2-12-oz-60-g/88626?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 13.51,
+    "priceILS": 13.81,
     "available": true,
     "seeAlso": [
       433
@@ -5922,7 +5922,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/tcc/tcc00675/d/34.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/true-citrus-true-lime-crystallized-lime-garlic-cilantro-salt-free-1-94-oz-55-g/88625?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 13.59,
+    "priceILS": 13.89,
     "available": true,
     "seeAlso": [
       432
@@ -5951,7 +5951,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/qst/qst00600/d/68.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/quest-nutrition-protein-cookie-chocolate-chip-4-cookies-2-08-oz-59-g-each/119037?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 48.24,
+    "priceILS": 49.31,
     "available": true
   },
   {
@@ -5976,7 +5976,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/qst/qst00610/d/80.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/quest-nutrition-protein-cookie-double-chocolate-chip-4-cookies-2-08-oz-59-g-each/119038?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 48.24,
+    "priceILS": 49.31,
     "available": true
   },
   {
@@ -5998,7 +5998,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/qst/qst00604/d/58.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/quest-nutrition-protein-cookie-peanut-butter-4-cookies-2-04-oz-58-g-each/119039?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 48.24,
+    "priceILS": 49.31,
     "available": true
   },
   {
@@ -6043,7 +6043,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/qst/qst00774/d/131.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/quest-nutrition-protein-cookie-snickerdoodle-12-cookies-2-04-oz-58-g-each/86011?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 49.31,
+    "priceILS": 154.97,
     "available": true
   },
   {
@@ -6065,7 +6065,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/qst/qst01450/d/45.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/quest-nutrition-protein-cookie-white-chocolate-macadamia-12-cookies-2-04-oz-58-g-each/144933?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 151.53,
+    "priceILS": 154.9,
     "available": true
   },
   {
@@ -6107,7 +6107,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/cps/cps45125/d/22.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/crisp-power-protein-pretzels-variety-pack-6-bags-1-75-oz-50-g-each/149057?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 92.43,
+    "priceILS": 94.48,
     "available": true
   },
   {
@@ -6132,7 +6132,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/twp/twp79603/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/twin-peaks-ingredients-protein-puffs-nacho-cheese-10-6-oz-300-g/122774?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 102.34,
+    "priceILS": 104.61,
     "available": true,
     "seeAlso": [
       450
@@ -6203,7 +6203,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "img": "https://s3.images-iherb.com/npa/npa17212/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/nature-s-path-love-crunch-premium-organic-granola-double-chocolate-chunk-11-5-oz-325-g/96540?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 28.8,
+    "priceILS": 29.44,
     "available": true,
     "descNew": "Love Crunch של Nature's Path נולדה ב-2010 כמתנת חתונה של שניים ממשפחת המייסדים. שיבולת שועל מלאה אורגנית עם שוקולד מריר Fair Trade ושוקולד לבן, לתוצאה עשירה ומורכבת. ללא מרכיבי חלב בפועל, אך מיוצרת במפעל חלבי (OU-D). מצוינת עם חלב צמחי, יוגורט, או כנשנוש יבש.",
     "longDesc": "Love Crunch הוא גרנולה מתוקה המבוססת על שיבולת שועל, עם חתיכות שוקולד מריר. זהו מוצר אפוי ופריך יותר מדגני בוקר תפוחים, ובדרך כלל נאכל בכמות קטנה יותר כתוספת ליוגורט, חלב או קינוח (כשרות OU-D).\n\nלעומת קורנפלקס, גרנולה צפופה ושומנית יותר ולכן מנה קטנה מספיקה. לעומת שיבולת שועל טבעית, היא כבר ממותקת ומתובלת ומכילה שוקולד, כך שהיא נוחה להגשה אך פחות ניטרלית ופחות מתאימה למי שרוצה לשלוט בכמות הסוכר."
@@ -6226,7 +6226,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "img": "https://s3.images-iherb.com/twp/twp79608/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/twin-peaks-ingredients-protein-puffs-mesquite-bbq-10-6-oz-300-g/122776?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 102.73,
+    "priceILS": 105.02,
     "available": true,
     "longDesc": "פתרון מדויק למי שמתגעגע לחטיפי תירס פריכים ומתובלים (כמו במבה אדומה או צ'יטוס), אך שומר על תזונה קפדנית, עתירת חלבון או קטוגנית. הפאפס האלו מציעים מרקם אוורירי ומתפצח במיוחד, ועטופים בתיבול ברביקיו מסורתי על בסיס עץ מסקיט המעניק עומק מעושן, מלוח וטיפה פיקנטי. בניגוד לנשנושים רגילים מלאי עמילן, כל מנה (כוס) מספקת 21 גרם של חלבון (ממי גבינה) ורק שני גרם פחמימות. מצוין גם כקרוטונים מתובלים מעל סלטים או מרקי חורף. (כשרות OU-D).\n\nכדאי לדעת: מי שמחפש בעיקר טעם של חטיף קלאסי עשוי להעדיף מוצר רגיל; מי שמחפש יותר חלבון בכל נשנוש יקבל כאן יתרון ברור.",
     "seeAlso": [
@@ -6339,7 +6339,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "edited",
     "certVerified": true,
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/106063/106063.jpg",
-    "available": false,
+    "available": true,
     "seeAlso": [
       454
     ],
@@ -6364,7 +6364,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "img": "https://s3.images-iherb.com/ogt/ogt00132/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/organic-traditions-superfoods-turmeric-latte-5-3-oz-150-g/106062?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 51.29,
+    "priceILS": 52.43,
     "available": true
   },
   {
@@ -6387,7 +6387,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "img": "https://s3.images-iherb.com/lsf/lsf00688/d/2.jpg",
     "available": true,
-    "priceILS": 72.67
+    "priceILS": 74.28
   },
   {
     "id": 458,
@@ -6406,7 +6406,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "img": "https://s3.images-iherb.com/lsf/lsf00628/d/7.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/laird-superfood-performance-mushrooms-3-17-oz-90-g/77799?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 73.07,
+    "priceILS": 74.7,
     "available": true
   },
   {
@@ -6429,7 +6429,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "img": "https://s3.images-iherb.com/lsf/lsf00601/d/12.jpg",
     "available": true,
-    "priceILS": 40.61
+    "priceILS": 41.51
   },
   {
     "id": 460,
@@ -6475,7 +6475,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "img": "https://s3.images-iherb.com/brw/brw01224/d/28.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/sheila-g-s-brownie-brittle-chocolate-chip-5-oz-142-g/83581?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 20.92,
+    "priceILS": 21.39,
     "available": true,
     "seeAlso": [
       498,
@@ -6589,7 +6589,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "img": "https://s3.images-iherb.com/hap/hap00148/d/27.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/happy-family-organics-happy-baby-organic-yogis-freeze-dried-yogurt-fruit-snacks-crawling-baby-mixed-berry-1-oz-28-g/25218?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.34,
+    "priceILS": 23.86,
     "available": true
   },
   {
@@ -6616,7 +6616,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "img": "https://s3.images-iherb.com/sog/sog18513/d/96.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simply-organic-cinnamon-2-45-oz-69-g/31367?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.64,
+    "priceILS": 24.17,
     "available": true,
     "seeAlso": [
       1
@@ -6660,7 +6660,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "img": "https://s3.images-iherb.com/oga/oga00686/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/orgain-organic-protein-50-superfoods-creamy-chocolate-fudge-2-02-lbs-918-g/105862?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 199.57,
+    "priceILS": 204,
     "available": true
   },
   {
@@ -6686,7 +6686,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "img": "https://s3.images-iherb.com/hlg/hlg63822/d/55.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/health-garden-pure-raw-monk-fruit-sweetener-3-oz-85-g/138803?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 191.32,
+    "priceILS": 195.57,
     "available": true
   },
   {
@@ -6733,7 +6733,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "img": "https://s3.images-iherb.com/mci/mci07086/d/47.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/mccormick-pure-vanilla-extract-1-fl-oz-29-ml/99195?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.74,
+    "priceILS": 24.27,
     "available": true,
     "seeAlso": [
       474,
@@ -6758,7 +6758,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "img": "https://s3.images-iherb.com/fro/fro23081/d/48.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-maple-flavor-non-alcoholic-2-fl-oz-59-ml/35809?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 26.66,
+    "priceILS": 27.25,
     "available": true,
     "seeAlso": [
       473,
@@ -6783,7 +6783,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "img": "https://s3.images-iherb.com/sog/sog18528/d/42.jpg",
     "available": true,
-    "priceILS": 18.62,
+    "priceILS": 19.04,
     "seeAlso": [
       473,
       474,
@@ -6807,7 +6807,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved",
     "img": "https://s3.images-iherb.com/sog/sog18529/d/42.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simply-organic-orange-flavor-2-fl-oz-59-ml/31278?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 18.62,
+    "priceILS": 19.04,
     "available": true,
     "seeAlso": [
       473,
@@ -6835,7 +6835,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved",
     "img": "https://s3.images-iherb.com/pfm/pfm40010/d/66.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/organic-valley-ghee-clarified-butter-7-5-oz-212-g/82576?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 48.2,
+    "priceILS": 49.27,
     "available": true,
     "longDesc": "הגהי (Ghee) הוא אוצר קולינרי מהמטבח ההודי והאיורוודי. הוא מיוצר על ידי המסה איטית של חמאה אורגנית מפרות רועות-אחו, עד לאידוי כל הנוזלים וסינון מוצקי החלב (לקטוז וקזאין). התוצאה היא שומן טהור בצבע זהוב עמוק, בעל טעם עשיר, חמאתי, מקורמל ומעט אגוזי. בניגוד לחמאה רגילה שנשרפת בקלות, הגהי מתהדר בנקודת עשן גבוהה מאוד (כ-250°C), מה שהופך אותו למושלם להקפצה בטמפרטורות גבוהות, צריבת נתחי בשר, או פשוט למריחה על לחם חם. (כשרות OU-D)."
   },
@@ -6928,7 +6928,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved",
     "desc": "פאפס חלבון קריספי בטעם צ'יפוטלה מעושן. 25 גרם חלבון לשקית, ללא סויה, ללא חלב. כשרות OU.",
     "longDesc": "גרסה נועזת ופיקנטית לחטיף החלבון האוורירי. התיבול מתבסס על פלפלי צ'יפוטלה (חלפניו מעושן ויבש), המעניקים לפאפס צבע שחום, טעם מעושן עמוק, ועוקץ חריף שמצטבר ככל שאוכלים. זהו פתרון קלאסי לצורך בנשנוש מלוח ומתובל מול הטלוויזיה, המחליף את חטיפי הצ'יפס והנאצ'וס המטוגנים בחלופה עתירת חלבון (21 גרם למנה), אפויה, ודלת פחמימות ששומרת על שובע לאורך זמן. (כשרות OU).",
-    "priceILS": 112.91,
+    "priceILS": 115.42,
     "seeAlsoNote": "טעמים נוספים מאותה סדרת חטיפי חלבון:"
   },
   {
@@ -6954,7 +6954,7 @@ window.FOODOS_PRODUCTS = [
     "desc": "קסיליטול נחקר כמסייע למניעת עששת ולחיזוק מינרלים בשן. מסטיק ספרמינט ממותק ב-100% קסיליטול, ללא אספרטם, ללא סוכר, טבעוני, ללא גלוטן וסויה. מיוצר בשווייץ. כשרות OU.",
     "descNew": "קסיליטול נחקר כמסייע למניעת עששת ולחיזוק מינרלים בשן. מסטיק ספרמינט ממותק ב-100% קסיליטול, ללא אספרטם, ללא סוכר, טבעוני, ללא גלוטן וסויה. מיוצר בשווייץ. כשרות OU.",
     "longDesc": "מסטיק איכותי הדוגל בשקיפות רכיבים מלאה. בניגוד לרוב המסטיקים המסחריים המכילים ממתיקים מלאכותיים כמו אספרטם או סוכרלוז, המסטיק של PUR ממותק ב-100% קסיליטול – סוכר אלכוהולי טבעי ממקור צמחי, שידוע מדעית כמסייע באיזון רמת החומציות בפה ובמניעת עששת (כיוון שחיידקי הפה אינם מסוגלים לפרק אותו). טעם המנטה העדינה (Spearmint) מחזיק מעמד זמן רב ומרענן את החך לאחר ארוחות בצורה בריאה ונקייה לחלוטין. (כשרות OU).",
-    "priceILS": 19.46
+    "priceILS": 19.89
   },
   {
     "id": 482,
@@ -6978,7 +6978,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved",
     "desc": "אגר אגר אורגני באבקה — תחליף טבעוני לג'לטין, מיוצר מאצות ים. מתאים לריבות, פודינגים, ג'לי וקינוחים. ללא גלוטן, Non-GMO. כשרות CRC.",
     "longDesc": "אגר-אגר (או פשוט \"אגר\") הוא מרכיב חובה בקונדיטוריה הטבעונית, המתפקד כתחליף מוחלט לג'לטין מהחי. הוא מופק מאצות אדומות ומתאפיין בעוצמת קרישה גבוהה מאוד (פי 3 מג'לטין רגיל). יתרון קולינרי משמעותי של האגר הוא עמידותו בחום: בניגוד לג'לטין שנמס בטמפרטורת החדר בקיץ, קינוחים המבוססים על אגר שומרים על יציבותם גם מחוץ למקרר. הוא אידיאלי להכנת ג'לי פירות טבעי, פנקוטה טבעונית חלקה, עוגות מוס יציבות, ואף ליצירת ריבות ללא בישול ארוך. (כשרות CRC).",
-    "priceILS": 39.34
+    "priceILS": 40.22
   },
   {
     "id": 483,
@@ -7008,7 +7008,7 @@ window.FOODOS_PRODUCTS = [
     "seeAlso": [
       484
     ],
-    "priceILS": 12.03,
+    "priceILS": 12.3,
     "seeAlsoNote": "אותו פודינג מיידי צמחי, בטעם שוקולד:"
   },
   {
@@ -7039,7 +7039,7 @@ window.FOODOS_PRODUCTS = [
     "seeAlso": [
       483
     ],
-    "priceILS": 11.99,
+    "priceILS": 12.26,
     "seeAlsoNote": "אותו פודינג מיידי צמחי, בטעם וניל:"
   },
   {
@@ -7070,7 +7070,7 @@ window.FOODOS_PRODUCTS = [
       486,
       487
     ],
-    "priceILS": 268.02,
+    "priceILS": 273.98,
     "seeAlsoNote": "גרסאות UMF 10+ של אותו דבש מנוקה Comvita, מחיר נמוך יותר:"
   },
   {
@@ -7101,7 +7101,7 @@ window.FOODOS_PRODUCTS = [
       485,
       487
     ],
-    "priceILS": 122.17,
+    "priceILS": 124.89,
     "seeAlsoNote": "UMF 18+ לשימוש טיפולי, ואריזה גדולה של UMF 10+:"
   },
   {
@@ -7132,7 +7132,7 @@ window.FOODOS_PRODUCTS = [
       485,
       486
     ],
-    "priceILS": 191.67,
+    "priceILS": 195.93,
     "seeAlsoNote": "UMF 18+ לשימוש טיפולי, ואריזה קטנה לניסיון ראשון:"
   },
   {
@@ -7164,7 +7164,7 @@ window.FOODOS_PRODUCTS = [
       489,
       490
     ],
-    "priceILS": 44.16,
+    "priceILS": 45.14,
     "seeAlsoNote": "מוצרים נוספים של Date Lady, ממותקים מתמרים:"
   },
   {
@@ -7197,7 +7197,7 @@ window.FOODOS_PRODUCTS = [
       488,
       490
     ],
-    "priceILS": 38.76,
+    "priceILS": 39.62,
     "seeAlsoNote": "מוצרים נוספים של Date Lady, ממותקים מתמרים:"
   },
   {
@@ -7234,7 +7234,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "glutenFree": true,
     "organic": true,
-    "priceILS": 44.8,
+    "priceILS": 45.8,
     "seeAlsoNote": "מוצרים נוספים של Date Lady, ממותקים מתמרים:"
   },
   {
@@ -7258,7 +7258,7 @@ window.FOODOS_PRODUCTS = [
       "ללא גלוטן"
     ],
     "descNew": "שומשום שחור מגיע עם הקליפה שלו, וזו בדיוק הסיבה שהוא עשיר יותר. הקליפה מכילה אנתוציאנינים, אותם נוגדי חמצון שצובעים אוכל כהה וקשורים לתמיכה בבריאות הלב והכבד. Foods Alive מגדלת ב-certified organic, כלומר ללא חומרי הדברה. טעמו עמוק ואגוזי, מצוין לפיזור על קערת בוקר, יוגורט, ממרח שקדים, אורז יפני, ואפילו לתוך בלילות אפייה.",
-    "priceILS": 38.25
+    "priceILS": 39.1
   },
   {
     "id": 492,
@@ -7281,7 +7281,7 @@ window.FOODOS_PRODUCTS = [
       "ללא גלוטן"
     ],
     "descNew": "הרעיון מאחורי All Purpose Seasoning פשוט: תערובת אחת שמכסה 80% מהמנות שמבשלים בבית. Simply Organic שילבה שום ובצל אורגניים, פפריקה מתוקה, פלפל שחור, אורגנו, בזיליקום ופטרוזיליה. לא צריך למדוד ולשלב, מספיק לפזר ולהמשיך. עובד מצוין על עוף שלם לפני הצלייה, על ירקות שורש לתנור, על ביצים מקושקשות ואפילו על פופקורן. Simply Organic עובדת עם חקלאים שמקפידים על גידול אורגני ועל שכר הוגן.",
-    "priceILS": 22.96,
+    "priceILS": 23.47,
     "seeAlso": [
       405,
       406
@@ -7308,7 +7308,7 @@ window.FOODOS_PRODUCTS = [
       "חלבי"
     ],
     "descNew": "Love Crunch של Nature's Path נולדה ב-2010 כמתנת חתונה של שניים ממשפחת המייסדים. שיבולת שועל מלאה אורגנית משולבת עם שוקולד מריר Fair Trade (שוקולד שתומך ישירות בחקלאים במדינות מתפתחות), קוקוס מיובש, אבקת קקאו, ותות שדה ופטל מיובשים-הקפאה, שמשמרים את הצבע והטעם הטרי שלהם. הממתיק הוא סוכר קנה אורגני. מצוינת עם חלב צמחי או כנשנוש עצמאי. שימי לב: כשרות OU-D (חלבי) עקב המפעל, למרות שאינה מכילה רכיבי חלב.",
-    "priceILS": 29.26,
+    "priceILS": 29.91,
     "seeAlso": [
       495,
       496,
@@ -7337,7 +7337,7 @@ window.FOODOS_PRODUCTS = [
       "ללא גלוטן"
     ],
     "descNew": "אלולוז הוא אחד החידושים המעניינים בעולם הממתיקים. מדובר בסוכר שנמצא באופן טבעי בכמויות קטנות בתאנים, ענבים מיובשים ומייפל. הגוף אמנם סופג אותו חלקית, אבל לא מטבל אותו, כך שהוא יוצא בשתן ומכיל רק כ-0.2 קלוריות לגרם. מה שמייחד אותו: הוא מתקרמל ומשחים כמו סוכר אמיתי, מה שעושה אותו אידיאלי לאפייה ולרטבים שדורשים עומק של צבע. הגרסה הנוזלית של Wholesome נוחה במיוחד לזילוף ישיר, מתמוססת בקלות ומינונה מדויק. כשר OU.",
-    "priceILS": 32.26
+    "priceILS": 32.97
   },
   {
     "id": 495,
@@ -7355,7 +7355,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "_certVerified": true,
     "img": "https://s3.images-iherb.com/npa/npa16207/d/8.jpg",
-    "priceILS": 28.31,
+    "priceILS": 28.94,
     "seeAlso": [
       493,
       496,
@@ -7379,7 +7379,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "_certVerified": true,
     "img": "https://s3.images-iherb.com/npa/npa77198/d/11.jpg",
-    "priceILS": 28.77,
+    "priceILS": 29.41,
     "seeAlso": [
       493,
       495,
@@ -7403,7 +7403,7 @@ window.FOODOS_PRODUCTS = [
     "certVerified": true,
     "_certVerified": true,
     "img": "https://s3.images-iherb.com/npa/npa77182/d/11.jpg",
-    "priceILS": 27.67,
+    "priceILS": 28.29,
     "seeAlso": [
       493,
       495,
@@ -7464,7 +7464,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brw/brw01244/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/sheila-g-s-brownie-brittle-toffee-crunch-5-oz-142-g/83579?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 20.02,
+    "priceILS": 20.46,
     "available": true,
     "longDesc": "המוצר המקורי שהחל את שיגעון ה-Brownie Brittle בעולם הקונדיטוריה הנגישה. הפטנט פשוט וגאוני: דפי בראוניז דקיקים הנאפים עד לפריכות קיצונית, עמוסים בטעם קקאו אמיתי ומשובצים בנטיפי שוקולד קטנים. הם מספקים את החשק הבלתי נשלט לשוקולד, אך כיוון שהם דקים ואווריריים (בניגוד לבראוניז דחוס ועמוס חמאה וסוכר כבד), מנה גדולה מהם מכילה כמות קלוריות נמוכה משמעותית. מעבר לנשנוש נקי ישר מהשקית, הם נפלאים כשהם מרוסקים ומשמשים כבסיס קראנצ'י לפאי או תוספת פריכה מעל מוס שוקולד וגלידה. (כשרות OU).",
     "seeAlso": [
@@ -7495,7 +7495,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "img": "https://s3.images-iherb.com/brm/brm11310/d/10.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-stone-ground-millet-flour-whole-grain-20-oz-567-g/97752?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.93,
+    "priceILS": 24.46,
     "available": true,
     "seeAlso": [
       342,
@@ -7553,7 +7553,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "img": "https://s3.images-iherb.com/ash/ash00001/d/1.jpg",
     "affiliateUrl": "https://www.iherb.com/pr/ashapops-popped-water-lily-seeds-vegan-cheese/107820?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 77.53,
+    "priceILS": 79.26,
     "available": true
   },
   {
@@ -7580,7 +7580,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "img": "https://s3.images-iherb.com/cgn/cgn02177/d/74.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/california-gold-nutrition-foods-organic-pumpkin-spice-5-oz-142-g/112144?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 21.91,
+    "priceILS": 23.9,
     "available": true
   },
   {
@@ -7607,7 +7607,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "img": "https://s3.images-iherb.com/fda/fda00005/d/5.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/foods-alive-sprouted-crisps-onion-garlic-4-oz-113-g/72856?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 31.27,
+    "priceILS": 31.97,
     "available": true
   },
   {
@@ -7635,7 +7635,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "img": "https://s3.images-iherb.com/tra/tra00219/d/58.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/traditional-medicinals-organic-nighty-night-extra-lemon-balm-valerian-caffeine-free-16-wrapped-tea-bags-0-85-oz-24-g/63379?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 24.47,
+    "priceILS": 25.01,
     "available": true
   },
   {
@@ -7662,7 +7662,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "img": "https://s3.images-iherb.com/ygt/ygt20454/d/70.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/yogi-tea-stress-relief-honey-lavender-caffeine-free-16-tea-bags-1-02-oz-29-g/41988?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 18.48,
+    "priceILS": 18.89,
     "available": true
   },
   {
@@ -7674,7 +7674,7 @@ window.FOODOS_PRODUCTS = [
     "cat": "תבלינים",
     "url": "https://il.iherb.com/pr/simply-organic-black-garlic-finishing-salt-2-19-oz-62-g/125650",
     "affiliateUrl": "https://www.iherb.com/pr/simply-organic-black-garlic-finishing-salt-2-19-oz-62-g/125650?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 33.6,
+    "priceILS": 34.35,
     "available": true,
     "conf": "גבוהה",
     "desc": "מלח גימור ייחודי עם שום שחור מותסס, שמן שומשום לבן ושחור ופטרוזיליה. השום השחור מוסיף טעם עמוק ומתקתק שמתאים לביצים, אבוקדו, סטייק, ירקות קלויים ודגים.",
@@ -7719,7 +7719,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra01316/d/25.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-apple-cider-vinegar-with-the-mother-honey-16-fl-oz-473-ml/124282",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-apple-cider-vinegar-with-the-mother-honey-16-fl-oz-473-ml/124282?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 43.28,
+    "priceILS": 44.24,
     "available": true,
     "dairy": false,
     "conf": "גבוהה",
@@ -7741,7 +7741,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra01716/d/24.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-apple-cider-vinegar-with-the-mother-cranberry-apple-16-fl-oz-473-ml/110953",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-apple-cider-vinegar-with-the-mother-cranberry-apple-16-fl-oz-473-ml/110953?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 43.15,
+    "priceILS": 44.11,
     "available": true,
     "dairy": false,
     "conf": "גבוהה",
@@ -7763,7 +7763,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra01433/d/8.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-apple-cider-vinegar-with-the-mother-honey-cayenne-16-fl-oz-473-ml/139603",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-apple-cider-vinegar-with-the-mother-honey-cayenne-16-fl-oz-473-ml/139603?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 43.31,
+    "priceILS": 44.28,
     "available": true,
     "dairy": false,
     "conf": "גבוהה",
@@ -7785,7 +7785,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra05216/d/24.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-apple-cider-vinegar-refresher-apple-cinnamon-16-fl-oz-473-ml/139599",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-apple-cider-vinegar-refresher-apple-cinnamon-16-fl-oz-473-ml/139599?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 27.25,
+    "priceILS": 27.85,
     "available": true,
     "dairy": false,
     "conf": "גבוהה",
@@ -7807,7 +7807,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra05016/d/24.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-apple-cider-vinegar-refreshers-beverage-honey-green-tea-16-fl-oz-473-ml/139601",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-apple-cider-vinegar-refreshers-beverage-honey-green-tea-16-fl-oz-473-ml/139601?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 27.25,
+    "priceILS": 27.85,
     "available": true,
     "dairy": false,
     "conf": "גבוהה",
@@ -7829,7 +7829,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra05316/d/25.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-apple-cider-vinegar-refreshers-beverage-concord-grape-hibiscus-16-fl-oz-473-ml/139600",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-apple-cider-vinegar-refreshers-beverage-concord-grape-hibiscus-16-fl-oz-473-ml/139600?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 27.25,
+    "priceILS": 27.85,
     "available": true,
     "dairy": false,
     "conf": "גבוהה",
@@ -7851,7 +7851,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra05116/d/24.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-apple-cider-vinegar-refreshers-beverage-ginger-lemon-honey-16-fl-oz-473-ml/139602",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-apple-cider-vinegar-refreshers-beverage-ginger-lemon-honey-16-fl-oz-473-ml/139602?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 27.25,
+    "priceILS": 27.85,
     "available": true,
     "dairy": false,
     "conf": "גבוהה",
@@ -7874,7 +7874,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra01616/d/38.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-apple-cider-vinegar-with-the-mother-citrus-ginger-16-fl-oz-473-ml/110954",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-apple-cider-vinegar-with-the-mother-citrus-ginger-16-fl-oz-473-ml/110954?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 43.28,
+    "priceILS": 44.24,
     "available": true,
     "dairy": false,
     "desc": "חומץ תפוחים אורגני של Bragg בטעם ג'ינג'ר ולימון/ליים. ממותק קלות בדבש, עם חמיצות פירותית ונגיעת חריפות מג'ינג'ר. כשרות KSA.",
@@ -7896,7 +7896,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra03012/d/32.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-dressing-marinade-with-bragg-apple-cider-vinegar-vinaigrette-12-fl-oz-354-ml/110955",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-dressing-marinade-with-bragg-apple-cider-vinegar-vinaigrette-12-fl-oz-354-ml/110955?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 37.80,
+    "priceILS": 38.64,
     "available": true,
     "dairy": false,
     "desc": "רוטב ויניגרט אורגני של Bragg. שמן זית כתית, חומץ תפוחים של Bragg, קוקוס ליקוויד אמינוס, דבש ושום. מוכן לשימוש כרוטב סלט או מרינדה. כשרות KSA.",
@@ -7916,7 +7916,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra03112/d/24.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-dressing-marinade-with-apple-cider-vinegar-ginger-sesame-12-fl-oz-354-ml/110958",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-dressing-marinade-with-apple-cider-vinegar-ginger-sesame-12-fl-oz-354-ml/110958?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 37.80,
+    "priceILS": 38.64,
     "available": true,
     "dairy": false,
     "desc": "רוטב ג'ינג'ר ושומשום אורגני של Bragg. שמן שומשום, ג'ינג'ר וקוקוס ליקוויד אמינוס עם חומץ תפוחים. מצוין לסלטים אסייתיים ומרינדות. כשרות KSA.",
@@ -7936,7 +7936,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra03512/d/24.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-dressing-marinade-with-apple-cider-vinegar-12-fl-oz-354-ml/110957",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-dressing-marinade-with-apple-cider-vinegar-12-fl-oz-354-ml/110957?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 37.80,
+    "priceILS": 38.64,
     "available": true,
     "dairy": false,
     "desc": "רוטב ויניגרט ללא שמן, קל בקלוריות (15 קל למנה) של Bragg. מבוסס על חומץ תפוחים אורגני ללא שמן. מתאים לדיאטה ולסלטים קלים. כשרות KSA.",
@@ -7956,7 +7956,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra06604/d/25.jpg",
     "url": "https://www.iherb.com/pr/bragg-nutritional-yeast-roasted-garlic-3-oz-85-g/118833",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-nutritional-yeast-roasted-garlic-3-oz-85-g/118833?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 28.88,
+    "priceILS": 29.52,
     "available": true,
     "dairy": false,
     "desc": "שמרי תזונה של Bragg בטעם שום קלוי. ספק חלבון מלא, תחליף גבינה טבעוני, מקור לוויטמינים מקבוצת B. טעם גבינתי-שומי מצוין לפופקורן, פסטה וסלטים. כשרות KSA.",
@@ -7976,7 +7976,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sla/sla06278/d/40.jpg",
     "url": "https://www.iherb.com/pr/the-spice-lab-everything-more-seasoning-4-6-oz-130-g/102788",
     "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-everything-more-seasoning-4-6-oz-130-g/102788?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 18.05,
+    "priceILS": 18.45,
     "available": true,
     "dairy": false,
     "desc": "תערובת ה'הכל' הקלאסית לבייגל של The Spice Lab. שומשום, פרג, שום, בצל ומלח. OU כשר.",
@@ -7996,7 +7996,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sla/sla01195/d/31.jpg",
     "url": "https://www.iherb.com/pr/the-spice-lab-himalayan-pink-salt-coarse-grain-1-lb-453-g/102785",
     "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-himalayan-pink-salt-coarse-grain-1-lb-453-g/102785?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 15.00,
+    "priceILS": 15.33,
     "available": true,
     "dairy": false,
     "desc": "מלח הימליה ורוד גס של The Spice Lab. 100% טהור, טבעי ולא מעובד, עם 84 מינרלים טבעיים. OU כשר.",
@@ -8016,7 +8016,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/cgn/cgn01720/d/117.jpg",
     "url": "https://www.iherb.com/pr/california-gold-nutrition-foods-organic-onion-powder-2-5-oz-70-g/98290",
     "affiliateUrl": "https://il.iherb.com/pr/california-gold-nutrition-foods-organic-onion-powder-2-5-oz-70-g/98290?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 14.46,
+    "priceILS": 11.82,
     "available": true,
     "dairy": false,
     "desc": "אבקת בצל אורגנית מ-California Gold Nutrition. מבצל אמריקאי, ללא שימוש בחומרים כימיים לסטריליזציה. OU כשר.",
@@ -8037,7 +8037,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/cgn/cgn02041/d/66.jpg",
     "url": "https://www.iherb.com/pr/california-gold-nutrition-foods-organic-basil-leaves-1-05-oz-30-g/106889",
     "affiliateUrl": "https://il.iherb.com/pr/california-gold-nutrition-foods-organic-basil-leaves-1-05-oz-30-g/106889?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 16.54,
+    "priceILS": 13.53,
     "available": true,
     "dairy": false,
     "desc": "עלי בזיליקום אורגניים מיובשים של California Gold Nutrition. מתאים לרטבי עגבניות, פסטות, פיצה ומרינדות. OU כשר.",
@@ -8057,7 +8057,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/cgn/cgn02036/d/47.jpg",
     "url": "https://www.iherb.com/pr/california-gold-nutrition-foods-organic-cayenne-2-75-oz-77-g/106900",
     "affiliateUrl": "https://il.iherb.com/pr/california-gold-nutrition-foods-organic-cayenne-2-75-oz-77-g/106900?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 17.69,
+    "priceILS": 14.46,
     "available": true,
     "dairy": false,
     "desc": "פלפל קאיין אורגני של California Gold Nutrition. מוסיף חריפות וחום לכל מנה. מצוין לאוכל מקסיקני, הודי, תאילנדי ורטבי פסטה. OU כשר.",
@@ -8077,7 +8077,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/fro/fro18921/d/52.jpg",
     "url": "https://www.iherb.com/pr/frontier-co-op-taco-seasoning-2-33-oz-66-g/35368",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-taco-seasoning-2-33-oz-66-g/35368?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 19.01,
+    "priceILS": 19.44,
     "available": true,
     "dairy": false,
     "desc": "תיבול טאקו של Frontier Co-op, 66 גרם. תערובת כמון, פפריקה, שום ואורגנו ללא מלח מוסף ובלי MSG. KSA כשר.",
@@ -8110,7 +8110,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bra/bra06002/d/24.jpg",
     "url": "https://www.iherb.com/pr/bragg-organic-sprinkle-24-herbs-spices-salt-free-seasoning-blend-1-5-oz-42-g/109814",
     "affiliateUrl": "https://il.iherb.com/pr/bragg-organic-sprinkle-24-herbs-spices-salt-free-seasoning-blend-1-5-oz-42-g/109814?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.65,
+    "priceILS": 24.17,
     "available": true,
     "dairy": false,
     "desc": "תערובת 24 עשבי תיבול ותבלינים אורגניים של Bragg, ללא מלח. מהמוצרים הקלאסיים של המותג. KSA כשר.",
@@ -8130,7 +8130,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/ogt/ogt00136/d/18.jpg",
     "url": "https://www.iherb.com/pr/organic-traditions-superfoods-chocolate-latte-5-3-oz-150-g/106038",
     "affiliateUrl": "https://il.iherb.com/pr/organic-traditions-superfoods-chocolate-latte-5-3-oz-150-g/106038?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 52.89,
+    "priceILS": 53.31,
     "available": true,
     "dairy": false,
     "desc": "שוקו חם אינסטנט מבוסס חלב קוקוס, עם אשווגנדה להרגעה וקינמון. מתוק בעדינות מסוכר קוקוס, מיליארד פרוביוטיקה בכל מנה. כשרות OU.",
@@ -8153,7 +8153,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sfd/sfd10170/d/9.jpg",
     "url": "https://www.iherb.com/pr/sunfood-superfoods-organic-acai-maqui-bowl-mix-6-oz-170-g/76998",
     "affiliateUrl": "https://www.iherb.com/pr/sunfood-superfoods-organic-acai-maqui-bowl-mix-6-oz-170-g/76998?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 57.66,
+    "priceILS": 58.09,
     "available": true,
     "dairy": false,
     "desc": "תערובת אבקות על בסיס אסאי ומאקי להכנת קערות סמודי (acai bowl) בבית, מבית Sunfood. מכילה גם בננה, לוקומה, אוכמניות, מאקה אדומה וצ'יה. כשרות EarthKosher.",
@@ -8174,7 +8174,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sfd/sfd80601/d/11.jpg",
     "url": "https://www.iherb.com/pr/sunfood-organic-acai-powder-4-oz-113-g/59392",
     "affiliateUrl": "https://www.iherb.com/pr/sunfood-organic-acai-powder-4-oz-113-g/59392?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 75.63,
+    "priceILS": 76.19,
     "available": true,
     "dairy": false,
     "desc": "אבקת אסאי אורגנית טהורה של Sunfood, פרי-העל הסגול מברזיל. מתאימה לשייקים, קערות אסאי ואפייה. כשרות EarthKosher.",
@@ -8216,8 +8216,8 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sfd/sfd10116/d/8.jpg",
     "url": "https://www.iherb.com/pr/sunfood-organic-golden-milk-super-blend-6-oz-170-g/90015",
     "affiliateUrl": "https://www.iherb.com/pr/sunfood-organic-golden-milk-super-blend-6-oz-170-g/90015?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 51.15,
-    "available": false,
+    "priceILS": 51.53,
+    "available": true,
     "dairy": false,
     "desc": "תערובת גולדן מילק אדפטוגנית של Sunfood: כורכום, מאקה, גוג'י, קינמון, ג'ינג'ר, בוסוולה, הל ופלפל שחור. כשרות EarthKosher.",
     "descNew": "תערובת גולדן מילק אדפטוגנית של Sunfood עם כורכום, מאקה, גוג'י וקינמון. ללא תוספת סוכר. כשרות EarthKosher.",
@@ -8237,7 +8237,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sfd/sfd10300/d/6.jpg",
     "url": "https://www.iherb.com/pr/sunfood-organic-red-blend-4-oz-113-g/137023",
     "affiliateUrl": "https://www.iherb.com/pr/sunfood-organic-red-blend-4-oz-113-g/137023?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 51.01,
+    "priceILS": 51.39,
     "available": true,
     "dairy": false,
     "desc": "תערובת אבקות פירות אדומים של Sunfood: תות, קאמו קאמו, חמוציות, סלק, דובדבן חמוץ, רימון וחומץ תפוחים. ויטמין C, בלי תוספת סוכר. כשרות EarthKosher.",
@@ -8258,7 +8258,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sfd/sfd10105/d/9.jpg",
     "url": "https://www.iherb.com/pr/sunfood-organic-moringa-powder-8-oz-227-g/71863",
     "affiliateUrl": "https://www.iherb.com/pr/sunfood-organic-moringa-powder-8-oz-227-g/71863?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 61.30,
+    "priceILS": 61.75,
     "available": true,
     "dairy": false,
     "desc": "אבקת מורינגה אורגנית טהורה של Sunfood, עלה-על ירוק עשיר בברזל. מתאימה לשייקים, מרקים וחומוס. כשרות EarthKosher.",
@@ -8279,7 +8279,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sfd/sfd10334/d/6.jpg",
     "url": "https://www.iherb.com/pr/sunfood-organic-cacao-superlatte-6-oz-170-g/137026",
     "affiliateUrl": "https://www.iherb.com/pr/sunfood-organic-cacao-superlatte-6-oz-170-g/137026?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 53.08,
+    "priceILS": 53.47,
     "available": true,
     "dairy": false,
     "desc": "לאטה קקאו עם פטריית רעמה (Lion's Mane) לתמיכה בריכוז, מבית Sunfood. גם קינמון, תרד וקייל. 70 קלוריות למנה. כשרות EarthKosher.",
@@ -8300,8 +8300,8 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/sfd/sfd10068/d/9.jpg",
     "url": "https://www.iherb.com/pr/sunfood-organic-superfood-smoothie-mix-original-8-oz-227-g/65169",
     "affiliateUrl": "https://www.iherb.com/pr/sunfood-organic-superfood-smoothie-mix-original-8-oz-227-g/65169?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 62.38,
-    "available": false,
+    "priceILS": 62.84,
+    "available": true,
     "dairy": false,
     "desc": "תערובת סמודי עשירת חלבון (12 גרם למנה) של Sunfood: חלבון אפונה, המפ, שקדים ודלעת, עם 13 סופר-פודים כמו מאקי, מאקה וגוג'י. כשרות EarthKosher.",
     "descNew": "תערובת סמודי עשירת חלבון וסופר-פודים של Sunfood, 12 גרם חלבון למנה. מבוססת חלבון טבעוני. כשרות EarthKosher.",
@@ -8321,7 +8321,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bog/bog02853/d/24.jpg",
     "url": "https://www.iherb.com/pr/bareorganics-freeze-dried-raw-organic-acai-berry-powder-4-oz-114-g/131802",
     "affiliateUrl": "https://www.iherb.com/pr/bareorganics-freeze-dried-raw-organic-acai-berry-powder-4-oz-114-g/131802?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 75.42,
+    "priceILS": 75.97,
     "available": true,
     "dairy": false,
     "desc": "אבקת פרי אסאי גולמית של BareOrganics, מיובשת בהקפאה לשימור הטעם והערכים התזונתיים. מתאימה לשייקים וקערות אסאי. כשרות Star-K.",
@@ -8343,7 +8343,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bog/bog02967/d/24.jpg",
     "url": "https://www.iherb.com/pr/bareorganics-organic-spirulina-powder-8-oz-227-g/131815",
     "affiliateUrl": "https://www.iherb.com/pr/bareorganics-organic-spirulina-powder-8-oz-227-g/131815?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 90.38,
+    "priceILS": 91.04,
     "available": true,
     "dairy": false,
     "desc": "אבקת ספירולינה אורגנית של BareOrganics, אצת-על ירוקה-כחולה עשירה בחלבון. מתאימה לשייקים ומיצים ירוקים. כשרות Star-K.",
@@ -8365,7 +8365,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bog/bog03587/d/32.jpg",
     "url": "https://www.iherb.com/pr/bareorganics-organic-tiger-nut-flour-12-oz-340-g/131808",
     "affiliateUrl": "https://www.iherb.com/pr/bareorganics-organic-tiger-nut-flour-12-oz-340-g/131808?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 76.76,
+    "priceILS": 77.32,
     "available": true,
     "dairy": false,
     "desc": "קמח טבעי מפקעות שקד-אדמה (טייגר נאט) של BareOrganics, ללא גלוטן וללא אגוזים אמיתיים. תחליף טחון להחלפה חלקית של קמח רגיל. כשרות Star-K.",
@@ -8387,7 +8387,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bog/bog02864/d/24.jpg",
     "url": "https://www.iherb.com/pr/bareorganics-organic-chlorella-powder-8-oz-227-g/131813",
     "affiliateUrl": "https://www.iherb.com/pr/bareorganics-organic-chlorella-powder-8-oz-227-g/131813?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 99.59,
+    "priceILS": 100.32,
     "available": true,
     "dairy": false,
     "desc": "אבקת כלורלה אורגנית של BareOrganics, אצת-על ירוקה בטעם עדין יותר מספירולינה. מתאימה לשייקים ירוקים. כשרות Star-K.",
@@ -8409,7 +8409,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bog/bog02877/d/24.jpg",
     "url": "https://www.iherb.com/pr/bareorganics-raw-organic-wheatgrass-powder-8-oz-227-g/131812",
     "affiliateUrl": "https://www.iherb.com/pr/bareorganics-raw-organic-wheatgrass-powder-8-oz-227-g/131812?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 90.53,
+    "priceILS": 91.2,
     "available": true,
     "dairy": false,
     "desc": "אבקת עשב חיטה גולמית ואורגנית של BareOrganics. מתאימה לשייקים ירוקים. כשרות Star-K. שימו לב: iHerb אינם מסמנים את המוצר הזה כ'ללא גלוטן'.",
@@ -8431,7 +8431,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bog/bog02997/d/24.jpg",
     "url": "https://www.iherb.com/pr/bareorganics-organic-irish-sea-moss-powder-8-oz-227-g/131806",
     "affiliateUrl": "https://www.iherb.com/pr/bareorganics-organic-irish-sea-moss-powder-8-oz-227-g/131806?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 99.59,
+    "priceILS": 100.32,
     "available": true,
     "dairy": false,
     "desc": "אבקת אצת ים אירית אורגנית של BareOrganics, נקצרת בפרו. אצה פופולרית לאחרונה לשייקים ולבישול. כשרות Star-K.",
@@ -8475,7 +8475,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bog/bog02954/d/32.jpg",
     "url": "https://www.iherb.com/pr/bareorganics-raw-organic-milk-thistle-seed-powder-8-oz-227-g/131821",
     "affiliateUrl": "https://www.iherb.com/pr/bareorganics-raw-organic-milk-thistle-seed-powder-8-oz-227-g/131821?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 91.25,
+    "priceILS": 91.2,
     "available": true,
     "dairy": false,
     "desc": "אבקת זרעי גדילן מצוי (Milk Thistle) גולמית ואורגנית של BareOrganics, עשירה בסילימרין, תרכובת נוגדת חמצון שנחקרה רבות בהקשר לבריאות הכבד. כשרות Star-K.",
@@ -8497,7 +8497,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/bog/bog02951/d/32.jpg",
     "url": "https://www.iherb.com/pr/bareorganics-organic-energy-stamina-blend-powder-8-oz-227-g/131819",
     "affiliateUrl": "https://www.iherb.com/pr/bareorganics-organic-energy-stamina-blend-powder-8-oz-227-g/131819?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 91.21,
+    "priceILS": 91.16,
     "available": true,
     "dairy": false,
     "desc": "תערובת אבקת סופר-פודים אורגנית של BareOrganics לאנרגיה וסיבולת: סלק, קקאו, מאקה, ג'ינג'ר ותפוח, ממותקת קלות בסטיביה וסוכר קוקוס. ללא קפאין. כשרות Star-K.",
@@ -8789,7 +8789,7 @@ window.FOODOS_PRODUCTS = [
     "tags": ["Non-GMO"],
     "img": "https://s3.images-iherb.com/sla/sla06273/d/57.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-spicy-italian-sun-dried-tomato-4-6-oz-130-g/103142?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 23.47,
+    "priceILS": 18.45,
     "available": true
   },
   {
@@ -8987,7 +8987,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/suw/suw02983/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/sunwarrior-sport-organic-active-protein-powder-vanilla-2-2-lb-1-kg/117102?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 154.90,
+    "priceILS": 166.87,
     "available": true
   },
   {
