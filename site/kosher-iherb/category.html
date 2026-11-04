@@ -649,17 +649,15 @@
   }
 
   // תת-קטגוריות לפי סוג ממתיק - רלוונטי רק לקטגוריית "ממתיקים ומוצרים ללא סוכר"
+  // רק ממתיקים ללא-סוכר/דלי-קלוריות אמיתיים - לא "סוכר טבעי" (מייפל/דבש/סילאן/אגבה/סוכר קוקוס),
+  // כי אלה עדיין סוכר אמיתי, ובקטגוריה הזו הם מופיעים רק כטעם מלאכותי (למשל "בטעם מייפל, ללא סוכר")
+  // ולא כממתיק בפועל - התאמה לפי שם היתה מייצרת שיוך שגוי
   const SWEETENER_SUBTYPES = [
     { key: 'סטיביה',       test: p => /stevia|סטיביה/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
     { key: 'אלולוז',       test: p => /allulose|אלולוז/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
     { key: 'מונק פרוט',    test: p => /monk ?fruit|מונק פרוט/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
     { key: 'אריתריטול',    test: p => /erythritol|אריתריטול/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
     { key: 'קסיליטול',     test: p => /xylitol|קסיליטול/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
-    { key: 'סוכר קוקוס',   test: p => /coconut.?sugar|coconut.?nectar|סוכר קוקוס|נקטר קוקוס/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
-    { key: 'מייפל',        test: p => /maple|מייפל/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
-    { key: 'דבש',          test: p => /honey|דבש/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
-    { key: 'סילאן ותמרים', test: p => /date.?syrup|silan|סילאן|סוכר תמרים|date.?sugar/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
-    { key: 'אגבה',         test: p => /agave|אגבה/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
   ];
   // בניגוד לתוספי תזונה, מוצר ממתיק אחד (למשל "מונק פרוט + אריתריטול") יכול להכיל כמה ממתיקים -
   // מחזיר מערך של כל ההתאמות, כדי שהמוצר יופיע תחת כל הסוגים הרלוונטיים ולא רק הראשון
