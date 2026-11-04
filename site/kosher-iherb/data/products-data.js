@@ -7052,7 +7052,8 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "cat": [
       "ממרחים",
-      "ממתיקים טבעיים"
+      "ממתיקים טבעיים",
+      "סופר פוד"
     ],
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-18-mgo-696-8-8-oz-250-g/112008",
@@ -7086,7 +7087,8 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "cat": [
       "ממרחים",
-      "ממתיקים טבעיים"
+      "ממתיקים טבעיים",
+      "סופר פוד"
     ],
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-10-mgo-263-8-8-oz-250-g/88563",
@@ -7120,7 +7122,8 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "cat": [
       "ממרחים",
-      "ממתיקים טבעיים"
+      "ממתיקים טבעיים",
+      "סופר פוד"
     ],
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-10-mgo-263-17-6-oz-500-g/95048",
