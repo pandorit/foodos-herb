@@ -661,15 +661,17 @@
     { key: 'סילאן ותמרים', test: p => /date.?syrup|silan|סילאן|סוכר תמרים|date.?sugar/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
     { key: 'אגבה',         test: p => /agave|אגבה/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
   ];
-  function sweetenerSubtype(p) {
-    const match = SWEETENER_SUBTYPES.find(t => t.test(p));
-    return match ? match.key : 'אחר';
+  // בניגוד לתוספי תזונה, מוצר ממתיק אחד (למשל "מונק פרוט + אריתריטול") יכול להכיל כמה ממתיקים -
+  // מחזיר מערך של כל ההתאמות, כדי שהמוצר יופיע תחת כל הסוגים הרלוונטיים ולא רק הראשון
+  function sweetenerSubtypes(p) {
+    const matches = SWEETENER_SUBTYPES.filter(t => t.test(p)).map(t => t.key);
+    return matches.length ? matches : ['אחר'];
   }
 
-  // מחזיר את פונקציית הסיווג הנכונה לפי הקטגוריה הפעילה (null אם אין תת-סינון לקטגוריה הזו)
+  // מחזיר את פונקציית הסיווג הנכונה לפי הקטגוריה הפעילה, תמיד כמערך התאמות (null אם אין תת-סינון לקטגוריה הזו)
   function activeSubtypeFn() {
-    if (resolvedCatName === 'תוספי תזונה') return supplementSubtype;
-    if (resolvedCatName === 'ממתיקים ומוצרים ללא סוכר') return sweetenerSubtype;
+    if (resolvedCatName === 'תוספי תזונה') return p => [supplementSubtype(p)];
+    if (resolvedCatName === 'ממתיקים ומוצרים ללא סוכר') return sweetenerSubtypes;
     return null;
   }
   const PAGE_SIZE = 12;
@@ -809,7 +811,7 @@
       // תת-קטגוריה (סוג תוסף / סוג ממתיק, לפי הקטגוריה), גם כרשימה נפתחת
       const subtypeLabel = document.getElementById('subtype-filter-label');
       subtypeLabel.textContent = catName === 'ממתיקים ומוצרים ללא סוכר' ? 'סוג ממתיק:' : 'סוג תוסף:';
-      const subtypeSet = new Set(catProducts.map(subtypeFn));
+      const subtypeSet = new Set(catProducts.flatMap(subtypeFn));
       const subtypes = ['הכל', ...[...subtypeSet].sort((a,b) => a.localeCompare(b,'he'))];
       subtypeSelect.innerHTML = subtypes.map(s =>
         `<option value="${s.replace(/"/g,'&quot;')}"${s===activeSubtype?' selected':''}>${s==='הכל'?'כל הסוגים':s}</option>`
@@ -858,7 +860,7 @@
     filteredProducts = catProducts.filter(p => {
       if (activeCert  !== 'הכל' && p.cert  !== activeCert)  return false;
       if (activeBrand !== 'הכל' && p.brand !== activeBrand) return false;
-      if (activeSubtype !== 'הכל' && subtypeFn && subtypeFn(p) !== activeSubtype) return false;
+      if (activeSubtype !== 'הכל' && subtypeFn && !subtypeFn(p).includes(activeSubtype)) return false;
       return true;
     }).sort((a, b) => {
       // מוצרים שאינם זמינים — תמיד אחרונים
