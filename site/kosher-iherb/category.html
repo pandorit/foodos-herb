@@ -666,10 +666,26 @@
     return matches.length ? matches : ['אחר'];
   }
 
+  // תת-קטגוריות לפי סוג ממתיק - רלוונטי רק לקטגוריית "ממתיקים טבעיים" (סוכר אמיתי, לא תחליפים)
+  // בכוונה בודק רק את p.name ולא desc/longDesc: תיאורים כאן מרבים להשוות ("אלטרנטיבה לדבש/אגבה/מייפל..."),
+  // מה שיצר שיוך שגוי כשנבדק גם שם (למשל סירופ תמרים הראה גם תחת "דבש")
+  const NATURAL_SWEETENER_SUBTYPES = [
+    { key: 'מייפל',        test: p => /maple|מייפל/i.test(p.name) },
+    { key: 'דבש',          test: p => /honey|דבש/i.test(p.name) },
+    { key: 'סוכר/נקטר קוקוס', test: p => /coconut.*(sugar|nectar)|סוכר קוקוס|נקטר קוקוס/i.test(p.name) },
+    { key: 'סילאן ותמרים', test: p => /date.?syrup|silan|סילאן|סוכר תמרים|date.?sugar/i.test(p.name) },
+    { key: 'אגבה',         test: p => /agave|אגבה/i.test(p.name) },
+  ];
+  function naturalSweetenerSubtypes(p) {
+    const matches = NATURAL_SWEETENER_SUBTYPES.filter(t => t.test(p)).map(t => t.key);
+    return matches.length ? matches : ['אחר'];
+  }
+
   // מחזיר את פונקציית הסיווג הנכונה לפי הקטגוריה הפעילה, תמיד כמערך התאמות (null אם אין תת-סינון לקטגוריה הזו)
   function activeSubtypeFn() {
     if (resolvedCatName === 'תוספי תזונה') return p => [supplementSubtype(p)];
     if (resolvedCatName === 'ממתיקים ומוצרים ללא סוכר') return sweetenerSubtypes;
+    if (resolvedCatName === 'ממתיקים טבעיים') return naturalSweetenerSubtypes;
     return null;
   }
   const PAGE_SIZE = 12;
@@ -808,7 +824,7 @@
     if (subtypeFn) {
       // תת-קטגוריה (סוג תוסף / סוג ממתיק, לפי הקטגוריה), גם כרשימה נפתחת
       const subtypeLabel = document.getElementById('subtype-filter-label');
-      subtypeLabel.textContent = catName === 'ממתיקים ומוצרים ללא סוכר' ? 'סוג ממתיק:' : 'סוג תוסף:';
+      subtypeLabel.textContent = catName === 'תוספי תזונה' ? 'סוג תוסף:' : 'סוג ממתיק:';
       const subtypeSet = new Set(catProducts.flatMap(subtypeFn));
       const subtypes = ['הכל', ...[...subtypeSet].sort((a,b) => a.localeCompare(b,'he'))];
       subtypeSelect.innerHTML = subtypes.map(s =>
