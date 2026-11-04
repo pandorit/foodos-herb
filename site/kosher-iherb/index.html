@@ -1801,10 +1801,9 @@
       if (urlQ) {
         const srchEl = document.getElementById('srch');
         if (srchEl) srchEl.value = decodeURIComponent(urlQ);
-        setTimeout(() => {
-          const heroSearch = document.querySelector('.search-bar-outer');
-          if (heroSearch) heroSearch.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 200);
+        // גולשים ישר לתוצאות (לא לשורת החיפוש) כדי שלא ייראה כאילו "אין תוצאות"
+        // כשבפועל הן קיימות אבל רחוקות מתחת לתגיות ולפילטרים, במיוחד במובייל
+        setTimeout(scrollToResults, 250);
       }
 
       buildTagPills();
