@@ -458,7 +458,7 @@
 <div class="filter-bar">
   <div class="filter-bar-inner">
     <div class="filter-group" id="subtype-filter-group" style="display:none;">
-      <span class="filter-group-label">סוג תוסף:</span>
+      <span class="filter-group-label" id="subtype-filter-label">סוג תוסף:</span>
       <select class="sort-select" id="subtype-select" onchange="setSubtype(this.value)"></select>
     </div>
     <div class="filter-divider" id="subtype-filter-divider" style="display:none;"></div>
@@ -647,6 +647,31 @@
     const match = SUPPLEMENT_SUBTYPES.find(t => t.test(p));
     return match ? match.key : 'אחר';
   }
+
+  // תת-קטגוריות לפי סוג ממתיק - רלוונטי רק לקטגוריית "ממתיקים ומוצרים ללא סוכר"
+  const SWEETENER_SUBTYPES = [
+    { key: 'סטיביה',       test: p => /stevia|סטיביה/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
+    { key: 'אלולוז',       test: p => /allulose|אלולוז/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
+    { key: 'מונק פרוט',    test: p => /monk ?fruit|מונק פרוט/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
+    { key: 'אריתריטול',    test: p => /erythritol|אריתריטול/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
+    { key: 'קסיליטול',     test: p => /xylitol|קסיליטול/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
+    { key: 'סוכר קוקוס',   test: p => /coconut.?sugar|coconut.?nectar|סוכר קוקוס|נקטר קוקוס/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
+    { key: 'מייפל',        test: p => /maple|מייפל/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
+    { key: 'דבש',          test: p => /honey|דבש/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
+    { key: 'סילאן ותמרים', test: p => /date.?syrup|silan|סילאן|סוכר תמרים|date.?sugar/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
+    { key: 'אגבה',         test: p => /agave|אגבה/i.test(p.name + ' ' + (p.desc||'') + ' ' + (p.longDesc||'')) },
+  ];
+  function sweetenerSubtype(p) {
+    const match = SWEETENER_SUBTYPES.find(t => t.test(p));
+    return match ? match.key : 'אחר';
+  }
+
+  // מחזיר את פונקציית הסיווג הנכונה לפי הקטגוריה הפעילה (null אם אין תת-סינון לקטגוריה הזו)
+  function activeSubtypeFn() {
+    if (resolvedCatName === 'תוספי תזונה') return supplementSubtype;
+    if (resolvedCatName === 'ממתיקים ומוצרים ללא סוכר') return sweetenerSubtype;
+    return null;
+  }
   const PAGE_SIZE = 12;
   let splitMode = false;
 
@@ -779,9 +804,12 @@
       `<option value="${b.replace(/"/g,'&quot;')}"${b===activeBrand?' selected':''}>${b==='הכל'?'כל המותגים':b}</option>`
     ).join('');
 
-    if (catName === 'תוספי תזונה') {
-      // תת-קטגוריה לפי סוג תוסף, גם כרשימה נפתחת
-      const subtypeSet = new Set(catProducts.map(p => supplementSubtype(p)));
+    const subtypeFn = activeSubtypeFn();
+    if (subtypeFn) {
+      // תת-קטגוריה (סוג תוסף / סוג ממתיק, לפי הקטגוריה), גם כרשימה נפתחת
+      const subtypeLabel = document.getElementById('subtype-filter-label');
+      subtypeLabel.textContent = catName === 'ממתיקים ומוצרים ללא סוכר' ? 'סוג ממתיק:' : 'סוג תוסף:';
+      const subtypeSet = new Set(catProducts.map(subtypeFn));
       const subtypes = ['הכל', ...[...subtypeSet].sort((a,b) => a.localeCompare(b,'he'))];
       subtypeSelect.innerHTML = subtypes.map(s =>
         `<option value="${s.replace(/"/g,'&quot;')}"${s===activeSubtype?' selected':''}>${s==='הכל'?'כל הסוגים':s}</option>`
@@ -826,10 +854,11 @@
   }
 
   function applyFilter() {
+    const subtypeFn = activeSubtypeFn();
     filteredProducts = catProducts.filter(p => {
       if (activeCert  !== 'הכל' && p.cert  !== activeCert)  return false;
       if (activeBrand !== 'הכל' && p.brand !== activeBrand) return false;
-      if (activeSubtype !== 'הכל' && supplementSubtype(p) !== activeSubtype) return false;
+      if (activeSubtype !== 'הכל' && subtypeFn && subtypeFn(p) !== activeSubtype) return false;
       return true;
     }).sort((a, b) => {
       // מוצרים שאינם זמינים — תמיד אחרונים
