@@ -905,7 +905,7 @@ window.FOODOS_PRODUCTS = [
     "brand": "Wholesome",
     "longDesc": "סוכר קוקוס אינו מופק מהפרי עצמו, אלא מצוף פרחי עץ הקוקוס המיובש בחום נמוך. בניגוד לסוכר לבן מעובד, הוא שומר על מינרלים טבעיים כמו ברזל, אבץ וסידן, ומתאפיין במדד גליקמי נמוך יותר. הוא אינו בטעם קוקוס כלל, אלא מציע טעם עשיר המזכיר סוכר חום כהה או קרמל, ומשתלב נפלא באפיית עוגיות, הכנת גרנולה, או המתקת קפה. מתפקד כתחליף ביחס של 1:1 לסוכר רגיל. (כשרות OU).\n\nכדאי לדעת: למרות המיתוג הטבעי, הוא עדיין סוכר; היתרון הקולינרי העיקרי מול סוכר לבן הוא הטעם והצבע.",
     "descNew": "סוכר קוקוס אורגני של Wholesome בעל תו סחר הוגן. מופק מלשד פרחי הקוקוס ואינו עובר זיקוק, כך שנשמרים מינרלים כמו אשלגן וברזל. אינדקס גליקמי נמוך מסוכר לבן, טעם קרמלי־עשיר.",
-    "nameHe": "סוכר קוקוס אורגני",
+    "nameHe": "סוכר קוקוס אורגני הוגן סחר",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
@@ -930,13 +930,13 @@ window.FOODOS_PRODUCTS = [
     "brand": "Big Tree Farms",
     "longDesc": "סוכר קוקוס הוא אחד הממתיקים הלא-מזוקקים הפופולריים והידידותיים ביותר לבישול ולאפייה. המותג Big Tree Farms מקפיד על תהליך ייצור מסורתי שמשמר את הטעם הקרמלי-אדמתי הייחודי של סוכר הקוקוס. מכיוון שהוא נוטה להתקרמל ולהשחים מהר יותר מסוכר לבן, הוא מושלם ליצירת מאפים שחומים וקריספיים כמו עוגיות שוקולד צ'יפס, וכבסיס לרטבי ברביקיו וטריאקי ביתיים. (כשרות EarthKosher).\n\nכדאי לדעת: למרות המיתוג הטבעי, הוא עדיין סוכר; היתרון הקולינרי העיקרי מול סוכר לבן הוא הטעם והצבע.",
     "descNew": "סוכר קוקוס אורגני של Big Tree Farms, שמייצרת ישירות עם קהילות חקלאים באינדונזיה. סוכר לא מזוקק בעל אינדקס גליקמי נמוך יחסית, מגיע מנקטר פרחי דקל הקוקוס. מתאים לאפייה, לקפה או ליוגורט בטעם קרמלי.",
-    "nameHe": "סוכר קוקוס אורגני",
+    "nameHe": "סוכר קוקוס אורגני, ביג טרי פארמס",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/34435/34435.jpg",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/set/set00155/s/26.jpg",
     "available": true
   },
   {
@@ -3670,7 +3670,7 @@ window.FOODOS_PRODUCTS = [
     "brand": "Madhava",
     "longDesc": "סוכר קוקוס הוא הבחירה המועדפת על קונדיטורים המחפשים ממתיק טבעי ולא מזוקק. הוא מופק מצוף פריחת עץ הקוקוס, ומכיוון שאינו עובר תהליכי הלבנה וזיקוק תעשייתיים, הוא שומר על טעמו הקרמלי-אדמתי הייחודי ועל מדד גליקמי נמוך יותר בהשוואה לסוכר קנים. למרות שמו, אין לו טעם של קוקוס כלל. הוא מחליף סוכר לבן או חום ביחס של 1:1 ומשדרג באופן מיידי עוגות בחושות, עוגיות דפדפים וגרנולה ביתית. (כשרות Scroll K).\n\nכדאי לדעת: למרות המיתוג הטבעי, הוא עדיין סוכר; היתרון הקולינרי העיקרי מול סוכר לבן הוא הטעם והצבע.",
     "descNew": "סוכר קוקוס אורגני של Madhava, לא מזוקק ובעל אינדקס גליקמי נמוך. מגיע מלשד פרחי דקל הקוקוס בתהליך מסורתי. שומר על מינרלים טבעיים ומעניק טעם קרמלי־עשיר בקפה ובאפייה.",
-    "nameHe": "סוכר קוקוס אורגני",
+    "nameHe": "סוכר קוקוס אורגני לא מזוקק",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
@@ -7050,7 +7050,10 @@ window.FOODOS_PRODUCTS = [
     "cert": "OU",
     "certVerified": true,
     "_certVerified": true,
-    "cat": "ממרחים",
+    "cat": [
+      "ממרחים",
+      "ממתיקים טבעיים"
+    ],
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-18-mgo-696-8-8-oz-250-g/112008",
     "affiliateUrl": "https://il.iherb.com/pr/comvita-manuka-honey-umf-18-mgo-696-8-8-oz-250-g/112008?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
@@ -7081,7 +7084,10 @@ window.FOODOS_PRODUCTS = [
     "cert": "OU",
     "certVerified": true,
     "_certVerified": true,
-    "cat": "ממרחים",
+    "cat": [
+      "ממרחים",
+      "ממתיקים טבעיים"
+    ],
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-10-mgo-263-8-8-oz-250-g/88563",
     "affiliateUrl": "https://il.iherb.com/pr/comvita-manuka-honey-umf-10-mgo-263-8-8-oz-250-g/88563?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
@@ -7112,7 +7118,10 @@ window.FOODOS_PRODUCTS = [
     "cert": "OU",
     "certVerified": true,
     "_certVerified": true,
-    "cat": "ממרחים",
+    "cat": [
+      "ממרחים",
+      "ממתיקים טבעיים"
+    ],
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/comvita-manuka-honey-umf-10-mgo-263-17-6-oz-500-g/95048",
     "affiliateUrl": "https://il.iherb.com/pr/comvita-manuka-honey-umf-10-mgo-263-17-6-oz-500-g/95048?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
