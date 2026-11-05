@@ -489,6 +489,7 @@
     <div class="results-meta">
       <span class="results-count" id="results-count">טוען...</span>
       <button class="reset-btn" id="reset-btn" onclick="resetFilters()" style="display:none">נקה פילטרים ✕</button>
+      <button class="reset-btn" id="share-filter-btn" onclick="shareFilteredView()" style="display:none">📤 שתף תצוגה זו</button>
     </div>
     <div class="product-grid" id="product-grid">
       <div class="skeleton-card"></div>
@@ -716,6 +717,9 @@
     // תומך גם ב-slug אנגלי חדש (?cat=supplements) וגם בשם העברי הישן (?cat=תוספי תזונה), לתאימות לאחור
     const catName = slugToHebrew[rawCat] || rawCat;
     resolvedCatName = catName;
+    // תת-סוג (?subtype=שינה) - כדי שאפשר יהיה לשתף קישור ישיר לתת-סינון (תוספי שינה, ממתיקי מונק פרוט וכו')
+    const rawSubtype = params.get('subtype');
+    if (rawSubtype) activeSubtype = decodeURIComponent(rawSubtype);
 
     if (!catName) {
       
@@ -848,11 +852,24 @@
     applyFilter();
   }
 
+  // מעדכן את כתובת ה-URL לפי הסינון הפעיל (כשרות/מותג/תת-סוג), כדי שאפשר יהיה
+  // להעתיק/לשתף קישור ישיר לתצוגה המסוננת הנוכחית (למשל תוספי שינה בלבד)
+  function syncUrlWithFilters() {
+    const params = new URLSearchParams();
+    const rawCat = new URLSearchParams(location.search).get('cat') || catSlug(resolvedCatName);
+    if (rawCat) params.set('cat', rawCat);
+    if (activeSubtype !== 'הכל') params.set('subtype', activeSubtype);
+    if (activeCert !== 'הכל') params.set('cert', activeCert);
+    if (activeBrand !== 'הכל') params.set('brand', activeBrand);
+    history.replaceState(null, '', location.pathname + '?' + params.toString());
+  }
+
   function setCert(cert) {
     activeCert = cert;
     const sel = document.getElementById('cert-select');
     if (sel) sel.value = cert;
     applyFilter();
+    syncUrlWithFilters();
   }
 
   function setBrand(brand) {
@@ -860,12 +877,14 @@
     const sel = document.getElementById('brand-select');
     if (sel) sel.value = brand;
     applyFilter();
+    syncUrlWithFilters();
   }
 
   function setSubtype(subtype) {
     activeSubtype = subtype;
     const sel = document.getElementById('subtype-select');
     if (sel) sel.value = subtype;
+    syncUrlWithFilters();
     applyFilter();
   }
 
@@ -907,6 +926,8 @@
     renderProducts(true);
     const hasF = activeCert !== 'הכל' || activeBrand !== 'הכל' || activeSubtype !== 'הכל';
     document.getElementById('reset-btn').style.display = hasF ? 'inline-block' : 'none';
+    const shareBtn = document.getElementById('share-filter-btn');
+    if (shareBtn) shareBtn.style.display = activeSubtype !== 'הכל' ? 'inline-block' : 'none';
   }
 
   function setSort(val) {
@@ -945,6 +966,17 @@
     const subtypeSel = document.getElementById('subtype-select');
     if (subtypeSel) subtypeSel.value = 'הכל';
     applyFilter();
+    syncUrlWithFilters();
+  }
+
+  // שיתוף בוואטסאפ של התצוגה המסוננת הנוכחית בדף הקטגוריה (תת-סוג/כשרות/מותג)
+  function shareFilteredView() {
+    const parts = [resolvedCatName];
+    if (activeSubtype !== 'הכל') parts.push(activeSubtype);
+    if (activeBrand !== 'הכל') parts.push(activeBrand);
+    if (activeCert !== 'הכל') parts.push(activeCert);
+    const msg = `${parts.join(' - ')} ב-FOODOS Online\n${window.location.href}`;
+    window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
   }
 
   function renderProducts(reset) {
