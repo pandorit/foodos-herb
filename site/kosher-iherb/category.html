@@ -202,6 +202,14 @@
     @keyframes heartPop { 0%{transform:scale(1)} 40%{transform:scale(1.35)} 70%{transform:scale(0.9)} 100%{transform:scale(1)} }
     .card-like-btn.liked { animation: heartPop .35s ease; }
 
+    /* ── SAVE (PIN) BUTTON — "שמרתי לעצמי", נפרד מהלב ── */
+    .card-save-btn { position: absolute; top: 8px; right: 46px; width: 32px; height: 32px; border-radius: 50%; background: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,.12); transition: transform .15s; z-index: 5; padding: 0; }
+    .card-save-btn:hover { transform: scale(1.15); }
+    .card-save-btn svg { width: 16px; height: 16px; transition: all .2s; }
+    .card-save-btn .pin-fill { fill: none; stroke: #ccc; stroke-width: 2; transition: all .2s; }
+    .card-save-btn.saved .pin-fill { fill: #d4a017; stroke: #d4a017; }
+    .card-save-btn.saved { animation: heartPop .35s ease; }
+
     .skeleton-card { background: var(--card-bg); border-radius: var(--radius-lg); height: 270px; animation: skel 1.4s ease-in-out infinite; }
     @keyframes skel { 0%,100%{opacity:1} 50%{opacity:.4} }
     .load-more-wrap { display: none; justify-content: center; margin-top: 2.2rem; }
@@ -955,6 +963,25 @@
   }
   // ────────────────────────────────────────────────────────────
 
+  // ── SAVED ("הרשימה שלי") — נפרד לגמרי מהלבבות, רשימה אישית מקומית בלבד ──
+  function getSaved() { try { return new Set(JSON.parse(localStorage.getItem('foodos_saved')||'[]')); } catch(e){ return new Set(); } }
+  function saveSaved(s) { localStorage.setItem('foodos_saved', JSON.stringify([...s])); }
+  function toggleSave(id, btn) {
+    const saved = getSaved();
+    const key = String(id);
+    if (saved.has(key)) { saved.delete(key); btn.classList.remove('saved'); }
+    else { saved.add(key); btn.classList.remove('saved'); void btn.offsetWidth; btn.classList.add('saved'); }
+    saveSaved(saved);
+  }
+  function initSaved() {
+    const saved = getSaved();
+    saved.forEach(id => {
+      const btn = document.getElementById('save-' + id);
+      if (btn) btn.classList.add('saved');
+    });
+  }
+  // ────────────────────────────────────────────────────────────
+
   function resetFilters() {
     activeCert = 'הכל'; activeBrand = 'הכל'; activeSubtype = 'הכל'; activeSort = 'default';
     const sortSel = document.getElementById('sort-select');
@@ -991,6 +1018,7 @@
       </div>`;
       document.getElementById('load-more-wrap').style.display = 'none';
       initLikes();
+      initSaved();
       return;
     }
 
@@ -1033,6 +1061,7 @@
 
       document.getElementById('load-more-wrap').style.display = 'none';
       initLikes();
+      initSaved();
       return;
     }
 
@@ -1048,6 +1077,7 @@
     document.getElementById('load-more-wrap').style.display =
       currentPage * PAGE_SIZE < filteredProducts.length ? 'flex' : 'none';
     initLikes();
+    initSaved();
   }
 
   function loadMore() { renderProducts(false); }
@@ -1067,8 +1097,11 @@
         <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
         <a href="cert.html?c=${encodeURIComponent(p.cert||'')}" class="cert-badge-abs" style="background:${cc}" onclick="event.stopPropagation()">${p.cert}</a>
         ${p.available === false ? '<span class="badge-unavailable">אזל מהמלאי</span>' : ''}
-        <button class="card-like-btn" id="like-${p.id}" onclick="event.stopPropagation();toggleLike(${p.id},this)" title="שמור למועדפים">
+        <button class="card-like-btn" id="like-${p.id}" onclick="event.stopPropagation();toggleLike(${p.id},this)" title="אהבנו ומכירים">
           <svg viewBox="0 0 24 24"><path class="heart-fill" d="M12 21C12 21 3 14.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.08C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 14.5 12 21 12 21Z"/></svg>
+        </button>
+        <button class="card-save-btn" id="save-${p.id}" onclick="event.stopPropagation();toggleSave(${p.id},this)" title="שמרתי לעצמי / מתעניינת">
+          <svg viewBox="0 0 24 24"><path class="pin-fill" d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>
         </button>
       </div>
       <div class="card-body">
