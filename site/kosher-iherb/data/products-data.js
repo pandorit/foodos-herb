@@ -8761,6 +8761,28 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved"
   },
   {
+    "id": 640,
+    "name": "Nature's Answer, Valerian Root, Fluid Extract, Alcohol Free, 1 fl oz (30 ml)",
+    "nameHe": "תמצית שורש ולריאן נוזלית, נטולת אלכוהול",
+    "brand": "Nature's Answer",
+    "cat": "תוספי תזונה",
+    "cert": "KOF-K",
+    "certVerified": true,
+    "_certVerified": true,
+    "conf": "גבוהה",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nta/nta00680/s/24.jpg",
+    "url": "https://il.iherb.com/pr/nature-s-answer-valerian-root-fluid-extract-alcohol-free-1-fl-oz-30-ml/134428",
+    "affiliateUrl": "https://il.iherb.com/pr/nature-s-answer-valerian-root-fluid-extract-alcohol-free-1-fl-oz-30-ml/134428?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 62.84,
+    "available": true,
+    "dairy": false,
+    "desc": "תמצית נוזלית של שורש ולריאן, 1000 מ\"ג למנה, נטולת אלכוהול וללא גלוטן, של Nature's Answer. עשב מסורתי להרגעה ולתמיכה בשינה. כשרות KOF-K, פרווה.",
+    "descNew": "תמצית שורש ולריאן נוזלית, נטולת אלכוהול, מבית Nature's Answer. להרגעה ולתמיכה בשינה. כשרות KOF-K.",
+    "longDesc": "ולריאן הוא עשב מסורתי שמשמש מזה מאות שנים כתמיכה בהרגעה ובשינה. Nature's Answer מפיקים אותו בטכנולוגיית Bio-Chelated Cold Extraction Process, שמירת פרופיל הרכיבים הפעילים של הצמח הטרי בלי שימוש בחום גבוה.\n\nכדאי לדעת: בניגוד לרוב תמציות הצמחים הנוזליות, הגרסה הזו נטולת אלכוהול לחלוטין, מתאימה למי שמעדיף/ה להימנע ממנו.\n\nרעיונות לשימוש:\n• לפי ההוראות על גבי האריזה, בדרך כלל כמה טיפות במים לפני השינה\n• מומלץ להתייעץ עם רופא/ה לפני תחילת שימוש, במיוחד בהריון, הנקה או בשילוב עם תרופות מרדימות",
+    "tags": ["ללא גלוטן"],
+    "_descStatus": "approved"
+  },
+  {
     "id": 598,
     "name": "Pyure, Organic Maple Flavored Syrup, Sugar-Free, 14 fl oz (414 ml)",
     "url": "https://www.iherb.com/pr/pyure-organic-maple-flavored-syrup-sugar-free-14-fl-oz-414-ml/80009",
