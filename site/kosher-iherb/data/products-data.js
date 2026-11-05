@@ -8651,6 +8651,28 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved"
   },
   {
+    "id": 635,
+    "name": "Bob's Red Mill, Organic Multi-Grain Pancake & Waffle Mix, 24 oz (680 g)",
+    "nameHe": "תערובת פנקייק ווופל רב-דגנים אורגנית",
+    "brand": "Bob's Red Mill",
+    "cat": "אפייה",
+    "cert": "Kehilla Kosher",
+    "certVerified": true,
+    "_certVerified": true,
+    "conf": "גבוהה",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/brm/brm11882/s/16.jpg",
+    "url": "https://il.iherb.com/pr/bob-s-red-mill-organic-multi-grain-pancake-waffle-mix-24-oz-680-g/89486",
+    "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-organic-multi-grain-pancake-waffle-mix-24-oz-680-g/89486?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 31.88,
+    "available": true,
+    "dairy": false,
+    "desc": "תערובת פנקייק ווופל אורגנית רב-דגנים של Bob's Red Mill: חיטה מלאה, שיפון, כוסמין, תירס, קמוט, קינואה ואורז חום מלא. פרווה. כשרות Kehilla Kosher.",
+    "descNew": "תערובת פנקייק ווופל אורגנית רב-דגנים, מבית Bob's Red Mill, משבעה דגנים מלאים שונים. פרווה. כשרות Kehilla Kosher.",
+    "longDesc": "תערובת עשירה המשלבת שבעה דגנים מלאים אורגניים: חיטה, גלוטן חיטה, שיפון, כוסמין, תירס, קמוט (חיטת חורסאן), קינואה ואורז חום, לצד סוכר קנים אורגני ואבקת אפייה. יוצרת פנקייק עתיר סיבים וטעם מורכב יותר מתערובת רגילה.\n\nכדאי לדעת: המוצר מכיל חיטה וגלוטן, לא מתאים לצליאקים או לתזונה ללא גלוטן, פליאו או קטו.\n\nרעיונות לשימוש:\n• 1 כוס תערובת + 2 כפות שמן + ביצה + כוס מים, לפי ההוראות\n• וופל בוקר עם סירופ מייפל ופירות\n• פנקייק עם אגוזים או שוקולד צ'יפס לגיוון",
+    "tags": ["אורגני"],
+    "_descStatus": "approved"
+  },
+  {
     "id": 598,
     "name": "Pyure, Organic Maple Flavored Syrup, Sugar-Free, 14 fl oz (414 ml)",
     "url": "https://www.iherb.com/pr/pyure-organic-maple-flavored-syrup-sugar-free-14-fl-oz-414-ml/80009",
