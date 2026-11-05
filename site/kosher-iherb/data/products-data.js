@@ -8830,6 +8830,31 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved"
   },
   {
+    "id": 643,
+    "name": "Sunwarrior, Harvest, Organic Matcha Powdered Drink Mix, 10.6 oz (300 g)",
+    "nameHe": "אבקת מאצ'ה אורגנית לשתייה",
+    "brand": "Sunwarrior",
+    "cat": [
+      "סופר פוד",
+      "שתייה חמה"
+    ],
+    "cert": "OU",
+    "certVerified": true,
+    "_certVerified": true,
+    "conf": "גבוהה",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/suw/suw92339/s/29.jpg",
+    "url": "https://il.iherb.com/pr/sunwarrior-harvest-organic-matcha-powdered-drink-mix-10-6-oz-300-g/161738",
+    "affiliateUrl": "https://il.iherb.com/pr/sunwarrior-harvest-organic-matcha-powdered-drink-mix-10-6-oz-300-g/161738?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 92.38,
+    "available": true,
+    "dairy": false,
+    "desc": "אבקת מאצ'ה אורגנית של Sunwarrior, תערובת של שתי דרגות מאצ'ה (קרמוניאלית ופרימיום). טבעונית, ללא גלוטן, ללא חלב. כשרות OU, פרווה.",
+    "descNew": "אבקת מאצ'ה אורגנית, מבית Sunwarrior, תערובת שתי דרגות איכות. לתה, לאטה ושייקים. כשרות OU.",
+    "longDesc": "מאצ'ה היא אבקת תה ירוק יפני טחון דק, עשירה ב-L-תיאנין שנותן אנרגיה רגועה ויציבה יותר מקפה, בלי הקפיצות והנפילות. Sunwarrior משלבים שתי דרגות מאצ'ה: קרמוניאלית (קציר ראשון, איכות גבוהה) ופרימיום (קציר שני), ליצירת טעם חלק ורב-תכליתי שמתאים גם לשתייה ישירה וגם לבישול.\n\nכדאי לדעת: בניגוד לתה ירוק רגיל שבו שותים את העלים ישירות, במאצ'ה צורכים את העלה הטחון כולו, כך שריכוז הקפאין והנוגדי החמצון גבוה יותר.\n\nרעיונות לשימוש:\n• כף אחת מוקצפת במים חמים לתה מאצ'ה קלאסי\n• לאטה מאצ'ה עם חלב צמחי\n• לשייקים, לאפייה או לקינוחים לצבע וטעם",
+    "tags": ["טבעוני", "ללא גלוטן", "אורגני"],
+    "_descStatus": "approved"
+  },
+  {
     "id": 598,
     "name": "Pyure, Organic Maple Flavored Syrup, Sugar-Free, 14 fl oz (414 ml)",
     "url": "https://www.iherb.com/pr/pyure-organic-maple-flavored-syrup-sugar-free-14-fl-oz-414-ml/80009",
