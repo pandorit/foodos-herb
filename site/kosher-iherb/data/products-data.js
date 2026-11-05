@@ -8673,6 +8673,28 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved"
   },
   {
+    "id": 636,
+    "name": "Chuao Chocolatier, Drinking Chocolate, Spicy Maya®, 12 oz (340 g)",
+    "nameHe": "שוקו חם חריף ספייסי מאיה",
+    "brand": "Chuao Chocolatier",
+    "cat": "שתייה חמה",
+    "cert": "OU-D",
+    "certVerified": true,
+    "_certVerified": true,
+    "conf": "גבוהה",
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/chc/chc00206/s/8.jpg",
+    "url": "https://il.iherb.com/pr/chuao-chocolatier-drinking-chocolate-spicy-maya-12-oz-340-g/154616",
+    "affiliateUrl": "https://il.iherb.com/pr/chuao-chocolatier-drinking-chocolate-spicy-maya-12-oz-340-g/154616?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 85.44,
+    "available": true,
+    "dairy": true,
+    "desc": "שוקו חם גורמה של Chuao Chocolatier, שוקולד מריר איכותי עם קינמון, פלפל צ'ילי פסייה וקאיין. חלבי. כשרות OU-D.",
+    "descNew": "שוקו חם חריף-מתוק של Chuao Chocolatier, מבוסס שוקולד מריר איכותי עם קינמון וצ'ילי. חלבי. כשרות OU-D.",
+    "longDesc": "שוקו חם בהשראת השוקולד המקסיקני המסורתי: שוקולד מריר פרימיום (83% פייר-טרייד) מעורבב עם חלב מיובש, קינמון, פלפל צ'ילי פסייה ופלפל קאיין, ליצירת שילוב מתוק-חריף-עשיר. מגיע בפחית מתכת לשימור טריות.\n\nכדאי לדעת: רמת החריפות עדינה-בינונית, לא צורבת, בעיקר מוסיפה חום בגרון בסוף הלגימה.\n\nרעיונות לשימוש:\n• 2-3 כפות גדושות + חלב חם, לערבב היטב\n• כתוספת לקפה הפוך לגרסת מוקה חריפה\n• מומסים בחלב על הגז לשוקו חם סמיך וקצפתי",
+    "tags": ["חלבי"],
+    "_descStatus": "approved"
+  },
+  {
     "id": 598,
     "name": "Pyure, Organic Maple Flavored Syrup, Sugar-Free, 14 fl oz (414 ml)",
     "url": "https://www.iherb.com/pr/pyure-organic-maple-flavored-syrup-sugar-free-14-fl-oz-414-ml/80009",
