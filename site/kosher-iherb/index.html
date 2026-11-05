@@ -730,7 +730,7 @@
     .product-grid { margin-top: 0; }
 
     /* סרגל קטגוריות — סגנון אמאזון */
-    .cat-sidebar-item { display: block; width: 100%; text-align: right; background: none; border: none; padding: 5px 0; font-size: 0.82rem; color: var(--text-mid); cursor: pointer; transition: color .15s; font-family: var(--sans); line-height: 1.4; }
+    .cat-sidebar-item { display: block; width: 100%; text-align: right; background: none; border: none; padding: 5px 0; font-size: 0.82rem; color: var(--text-mid); cursor: pointer; transition: color .15s; font-family: var(--sans); line-height: 1.4; text-decoration: none; }
     .cat-sidebar-item:hover { color: var(--teal); }
     .cat-sidebar-item.active { color: var(--teal-dark); font-weight: 700; }
 
@@ -1262,6 +1262,7 @@
           <div class="results-meta-right">
             <span class="results-count-txt" id="results-count">טוען מוצרים...</span>
             <button class="reset-btn" id="reset-btn" onclick="resetFilters()" style="display:none">נקה פילטרים ✕</button>
+            <button class="reset-btn" id="share-filter-btn" onclick="shareFilteredView()" style="display:none">📤 שתף תצוגה זו</button>
           </div>
           <select class="sort-select" id="sort-select" onchange="setSort(this.value)">
             <option value="default">מיון: ברירת מחדל</option>
@@ -1872,9 +1873,14 @@
     });
     const cats = ['הכל', ...[...existingCats].sort((a,b) => a.localeCompare(b,'he'))];
 
+    // "הכל" מנקה פילטר קטגוריה כאן בעמוד הבית (קישור לוגי, לא לדף קטגוריה אמיתי);
+    // כל קטגוריה אחרת מובילה ישירות ל-category.html - דף הקטגוריה הייעודי והאמין,
+    // במקום סינון בצד הלקוח בעמוד הזה שהתברר כלא אמין (לא תמיד גולל/מסתנכרן עם ה-URL)
     const nav = document.getElementById('cat-sidebar-list');
     if (nav) nav.innerHTML = cats.map(c =>
-      `<button class="cat-sidebar-item${c===activeCat?' active':''}" onclick="setCatSidebar('${c.replace(/'/g,"\\'")}')">${c}</button>`
+      c === 'הכל'
+        ? `<button class="cat-sidebar-item${c===activeCat?' active':''}" onclick="setCatSidebar('${c}')">${c}</button>`
+        : `<a class="cat-sidebar-item" href="category.html?cat=${catSlug(c)}">${c}</a>`
     ).join('');
 
     // sync mobile select — remove onchange first to prevent spurious re-fire
@@ -1885,7 +1891,11 @@
       sel.innerHTML = cats.map(c =>
         `<option value="${c.replace(/"/g,'&quot;')}"${c===activeCat?' selected':''}>${c==='הכל'?'כל הקטגוריות':c}</option>`
       ).join('');
-      sel.onchange = function() { setCatSidebar(this.value); };
+      sel.onchange = function() {
+        const v = this.value;
+        if (v === 'הכל') setCatSidebar(v);
+        else window.location.href = 'category.html?cat=' + catSlug(v);
+      };
     }
   }
 
@@ -1893,6 +1903,7 @@
     activeCat = cat;
     buildCatPills();
     applyFilters();
+    syncUrlWithFilters();
   }
 
   function openCatDrawer() {
@@ -1951,10 +1962,32 @@
     ).join('');
   }
 
+  // מעדכן את כתובת ה-URL בשורת הכתובת לפי הסינון הפעיל (תגית/קטגוריה),
+  // כדי שכל מבקרת תוכל פשוט להעתיק את הכתובת ולשתף קישור ישיר לתצוגה שלה
+  function syncUrlWithFilters() {
+    const params = new URLSearchParams();
+    if (activeTag !== 'הכל') params.set('tag', activeTag);
+    if (activeCat !== 'הכל') params.set('cat', activeCat);
+    const qs = params.toString();
+    const newUrl = window.location.pathname + (qs ? '?' + qs : '');
+    history.replaceState(null, '', newUrl);
+  }
+
+  // שיתוף בוואטסאפ של התצוגה המסוננת הנוכחית (תגית/קטגוריה), לעצמה או לאחרים
+  function shareFilteredView() {
+    const parts = [];
+    if (activeTag !== 'הכל') parts.push(activeTag);
+    if (activeCat !== 'הכל') parts.push(activeCat);
+    const label = parts.length ? parts.join(' + ') : 'מוצרים';
+    const msg = `${label} ב-FOODOS Online\n${window.location.href}`;
+    window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+  }
+
   function setCat(el, cat) {
     activeCat = cat;
     buildCatPills();
     applyFilters();
+    syncUrlWithFilters();
   }
 
   function setCert(el, cert) {
@@ -1970,6 +2003,7 @@
     el.classList.add('active');
     applyFilters();
     scrollToResults();
+    syncUrlWithFilters();
   }
 
   // Scrolls the product results into view, so filtering on mobile (where the
@@ -2073,6 +2107,9 @@
     document.getElementById('results-count').textContent = `${filteredProducts.length} מוצרים`;
     const hasF = activeCat !== 'הכל' || activeCert !== 'הכל' || activeTag !== 'הכל' || (document.getElementById('srch')?.value||'').trim();
     document.getElementById('reset-btn').style.display = hasF ? 'inline-block' : 'none';
+    const hasShareableF = activeCat !== 'הכל' || activeTag !== 'הכל';
+    const shareBtn = document.getElementById('share-filter-btn');
+    if (shareBtn) shareBtn.style.display = hasShareableF ? 'inline-block' : 'none';
     const tagDescEl = document.getElementById('tag-desc-line');
     const activeTagDef = activeTag !== 'הכל' ? TAG_DEFS.find(t => t.key === activeTag) : null;
     if (activeTagDef && activeTagDef.desc) {
@@ -2099,6 +2136,7 @@
     const sel = document.getElementById('sort-select');
     if (sel) sel.value = 'default';
     buildCatPills(); buildCertPills(); applyFilters(); buildNavDropdowns();
+    syncUrlWithFilters();
   }
 
   function buildCard(p) {
