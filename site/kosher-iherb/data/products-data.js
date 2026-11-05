@@ -8651,31 +8651,6 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved"
   },
   {
-    "id": 635,
-    "name": "Bob's Red Mill, Protein Pancake & Waffle Mix, Whole Grain, 14 oz (397 g)",
-    "nameHe": "תערובת פנקייק ווופל עשירת חלבון",
-    "brand": "Bob's Red Mill",
-    "cat": [
-      "אפייה",
-      "מוצרי חלבון"
-    ],
-    "cert": "Kehilla Kosher",
-    "certVerified": true,
-    "_certVerified": true,
-    "conf": "גבוהה",
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/brm/brm00209/s/12.jpg",
-    "url": "https://il.iherb.com/pr/bob-s-red-mill-protein-pancake-waffle-mix-whole-grain-14-oz-397-g/78662",
-    "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-protein-pancake-waffle-mix-whole-grain-14-oz-397-g/78662?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 39.96,
-    "available": true,
-    "dairy": true,
-    "desc": "תערובת פנקייק ווופל עשירת חלבון של Bob's Red Mill, 16 גרם חלבון למנה. מבוססת על קמח חיטה מלאה, אבקת חלבון מי גבינה ואפונה. חלבי. כשרות Kehilla Kosher.",
-    "descNew": "תערובת פנקייק ווופל עשירת חלבון (16 גרם למנה), מבית Bob's Red Mill. מבוססת קמח חיטה מלאה, חלבון מי גבינה ואפונה. חלבי. כשרות Kehilla Kosher.",
-    "longDesc": "תערובת פנקייק ווופל המועשרת בחלבון: 16 גרם חלבון למנה, משילוב של אבקת חלבון מי גבינה (Whey) ואפונה, לצד קמח חיטה מלאה דק טחון (Whole Wheat Pastry Flour). רק להוסיף מים ולערבב.\n\nכדאי לדעת: המוצר חלבי (מכיל חלבון מי גבינה) ומכיל חיטה וגלוטן, בניגוד לשאר תערובות הפנקייק ללא גלוטן של המותג. לא מתאים לתזונת פליאו או קטו.\n\nרעיונות לשימוש:\n• ארוחת בוקר עשירת חלבון, פשוט מוסיפים מים\n• כבסיס לפנקייק פוסט-אימון\n• עם פירות יער וסירופ מייפל",
-    "tags": ["עשיר בחלבון"],
-    "_descStatus": "approved"
-  },
-  {
     "id": 598,
     "name": "Pyure, Organic Maple Flavored Syrup, Sugar-Free, 14 fl oz (414 ml)",
     "url": "https://www.iherb.com/pr/pyure-organic-maple-flavored-syrup-sugar-free-14-fl-oz-414-ml/80009",
