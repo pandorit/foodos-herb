@@ -963,6 +963,10 @@
   }
   // ────────────────────────────────────────────────────────────
 
+  // דגל השקת פיצ'ר "הרשימה שלי" (נעץ): כל עוד false, הכפתור מוסתר ויזואלית,
+  // אבל השמירה ל-localStorage וכל שאר הלוגיקה ממשיכות לרוץ כרגיל. להשקה: להפוך ל-true.
+  const SAVED_FEATURE_VISIBLE = false;
+
   // ── SAVED ("הרשימה שלי") — נפרד לגמרי מהלבבות, רשימה אישית מקומית בלבד ──
   function getSaved() { try { return new Set(JSON.parse(localStorage.getItem('foodos_saved')||'[]')); } catch(e){ return new Set(); } }
   function saveSaved(s) { localStorage.setItem('foodos_saved', JSON.stringify([...s])); }
@@ -1100,7 +1104,7 @@
         <button class="card-like-btn" id="like-${p.id}" onclick="event.stopPropagation();toggleLike(${p.id},this)" title="אהבנו ומכירים">
           <svg viewBox="0 0 24 24"><path class="heart-fill" d="M12 21C12 21 3 14.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.08C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 14.5 12 21 12 21Z"/></svg>
         </button>
-        <button class="card-save-btn" id="save-${p.id}" onclick="event.stopPropagation();toggleSave(${p.id},this)" title="שמרתי לעצמי / מתעניינת">
+        <button class="card-save-btn" id="save-${p.id}" style="${SAVED_FEATURE_VISIBLE ? '' : 'display:none'}" onclick="event.stopPropagation();toggleSave(${p.id},this)" title="שמרתי לעצמי / מתעניינת">
           <span class="pin-emoji">📌</span>
         </button>
       </div>

@@ -1631,6 +1631,10 @@
 </footer>
 
 <script>
+  // דגל השקת פיצ'ר "הרשימה שלי" (נעץ): כל עוד false, הכפתור והתגית מוסתרים ויזואלית,
+  // אבל השמירה ל-localStorage וכל שאר הלוגיקה (getSaved/toggleSave) ממשיכות לרוץ כרגיל.
+  // להשקה: להפוך ל-true.
+  const SAVED_FEATURE_VISIBLE = false;
   // ── HERO CAROUSEL ────────────────────────────────
   let currentSlide = 0;
   const totalSlides = 5;
@@ -1962,8 +1966,9 @@
     const tagCounts = {};
     TAG_DEFS.forEach(t => { tagCounts[t.key] = allProducts.filter(t.test).length; });
     // "הרשימה שלי" מוצגת תמיד, גם באפס מוצרים, כדי שאנשים יגלו את הפיצ'ר ויתחילו להשתמש בו
+    // (רק אם SAVED_FEATURE_VISIBLE - עד להשקה רשמית התגית מוסתרת לגמרי, גם אם יש בטעות נתונים ישנים בדפדפן)
     const pills = [{ key:'הכל', icon:'', count: allProducts.length }]
-      .concat(TAG_DEFS.filter(t => tagCounts[t.key] > 0 || t.key === 'הרשימה שלי'));
+      .concat(TAG_DEFS.filter(t => t.key === 'הרשימה שלי' ? SAVED_FEATURE_VISIBLE : tagCounts[t.key] > 0));
     document.getElementById('tag-pills').innerHTML = pills.map(t =>
       `<button class="pill-tag${t.key===activeTag?' active':''}" onclick="setTag(this,'${t.key.replace(/'/g,"\\'")}')">
         ${t.icon ? t.icon+' ' : ''}${t.key}${t.key!=='הכל' ? `<span class="tag-count">${tagCounts[t.key]||''}</span>` : ''}
@@ -2170,7 +2175,7 @@
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="heart-fill" d="M12 21C12 21 3 14.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 14.5 12 21 12 21Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <span class="card-like-count" id="like-count-${p.id}" style="${heartCounts[p.id] > 0 ? '' : 'display:none'}">${heartCounts[p.id] || ''}</span>
-        <button class="card-save-btn" id="save-${p.id}" onclick="event.stopPropagation();toggleSave(${p.id}, this)" title="שמרתי לעצמי / מתעניינת">
+        <button class="card-save-btn" id="save-${p.id}" style="${SAVED_FEATURE_VISIBLE ? '' : 'display:none'}" onclick="event.stopPropagation();toggleSave(${p.id}, this)" title="שמרתי לעצמי / מתעניינת">
           <span class="pin-emoji">📌</span>
         </button>
         ${p.available === false ? '<span class="badge-unavailable">אזל מהמלאי</span>' : ''}
