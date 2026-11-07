@@ -3,6 +3,19 @@
 <head>
   <!-- Google Analytics — נטען רק אחרי הסכמת עוגיות -->
   <script>
+    // דף קטגוריה קובע את הכותרת האמיתית (שם הקטגוריה) רק אחרי שליפת הנתונים, באופן א-סינכרוני.
+    // כדי שהדיווח ל-GA4 לא ישלח את הכותרת הגנרית הזמנית מ-<head>, ה-pageview האוטומטי
+    // מבוטל (send_page_view:false), ונשלח ידנית רק אחרי ששני התנאים מתקיימים:
+    // גם הסקריפט נטען וגם הכותרת הסופית נקבעה - איזה מהם קורה קודם לא משנה.
+    window._gaReady = false;
+    window._titleReady = false;
+    window._pvSent = false;
+    window.maybeSendGA4PageView = function() {
+      if (window._gaReady && window._titleReady && !window._pvSent && typeof window.gtag === 'function') {
+        window._pvSent = true;
+        window.gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
+      }
+    };
     window.loadGA4 = function() {
       var s = document.createElement('script');
       s.async = true;
@@ -12,7 +25,9 @@
       function gtag(){dataLayer.push(arguments);}
       window.gtag = gtag;
       gtag('js', new Date());
-      gtag('config', 'G-JKCJC4WR8J');
+      gtag('config', 'G-JKCJC4WR8J', { send_page_view: false });
+      window._gaReady = true;
+      window.maybeSendGA4PageView();
     };
   </script>
   <script src="cookie-consent.js" defer></script>
@@ -745,6 +760,8 @@
     }
 
     document.title = `${catName} כשר מ-iHerb — Foodos Online`;
+    window._titleReady = true;
+    if (typeof window.maybeSendGA4PageView === 'function') window.maybeSendGA4PageView();
     const catDesc = catDescriptions[catName] || `מוצרים כשרים בקטגוריית ${catName} מ-iHerb עם משלוח לישראל.`;
     document.getElementById('meta-description').setAttribute('content', catDesc);
     document.getElementById('og-title').setAttribute('content', `${catName} כשר מ-iHerb — Foodos Online`);
