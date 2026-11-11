@@ -395,6 +395,16 @@
       box-shadow: 0 4px 20px rgba(0,0,0,.2);
     }
     .btn-hero:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.28); }
+    .hero-channels { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.4rem; }
+    .hero-channels-label { font-size: 0.8rem; color: rgba(255,255,255,.75); }
+    .hero-channel-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,.14); color: white;
+      font-size: 0.8rem; font-weight: 600;
+      padding: 7px 14px; border-radius: var(--radius-pill);
+      transition: background .15s;
+    }
+    .hero-channel-link:hover { background: rgba(255,255,255,.26); text-decoration: none; }
     .hero-stats {
       display: flex; gap: 2.5rem; margin-top: 2.5rem;
       padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.15);
@@ -1199,6 +1209,12 @@
       <div class="hero-btns">
         <a href="about.html" class="btn-hero">על הפרויקט</a>
       </div>
+      <div class="hero-channels">
+        <span class="hero-channels-label">להתעדכן במבצעים ומוצרים חדשים:</span>
+        <a href="https://chat.whatsapp.com/ETtIfnUzQmhHqsNw4STNlw" target="_blank" rel="noopener" class="hero-channel-link">📱 וואטסאפ</a>
+        <a href="https://whatsapp.com/channel/0029Vb9TfMg5q08awZsSAC33" target="_blank" rel="noopener" class="hero-channel-link">📢 ערוץ עדכונים</a>
+        <a href="https://t.me/foodos_online" target="_blank" rel="noopener" class="hero-channel-link">✈️ טלגרם</a>
+      </div>
       <div class="hero-stats">
         <div class="hstat">
           <span class="hstat-num" id="stat-products">340+</span>
@@ -1608,6 +1624,9 @@
         <div class="footer-col-title">קהילה</div>
         <ul class="footer-links" aria-label="קישורי קהילה">
           <li><a href="https://www.facebook.com/groups/239619486529305" target="_blank" rel="noopener">FOODOS בפייסבוק</a></li>
+          <li><a href="https://chat.whatsapp.com/ETtIfnUzQmhHqsNw4STNlw" target="_blank" rel="noopener">קבוצת וואטסאפ</a></li>
+          <li><a href="https://whatsapp.com/channel/0029Vb9TfMg5q08awZsSAC33" target="_blank" rel="noopener">ערוץ וואטסאפ</a></li>
+          <li><a href="https://t.me/foodos_online" target="_blank" rel="noopener">ערוץ טלגרם</a></li>
           <li><a href="mailto:foodos.is.online@gmail.com">יצירת קשר</a></li>
           <li><a href="https://wa.me/972506543718?text=%D7%A9%D7%9C%D7%95%D7%9D!%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%94%D7%A6%D7%A2%D7%94%20%D7%9C%D7%9E%D7%95%D7%A6%D7%A8%20%D7%A9%D7%9B%D7%93%D7%90%D7%99%20%D7%9C%D7%91%D7%93%D7%95%D7%A7%20%D7%95%D7%9C%D7%94%D7%95%D7%A1%D7%99%D7%A3%20%D7%9C-FOODOS%20Online%3A" target="_blank" rel="noopener noreferrer">הגשת מוצר לבדיקה</a></li>
           <li><a href="https://il.iherb.com/?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS" target="_blank" rel="noopener sponsored">לחנות iHerb</a></li>

@@ -135,6 +135,8 @@
     .community-box p { color: var(--text-mid); }
     .community-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 0.8rem; background: var(--teal-dark); color: white; font-weight: 600; font-size: 0.9rem; padding: 10px 22px; border-radius: var(--radius-pill); }
     .community-btn:hover { background: var(--teal); text-decoration: none; }
+    .community-links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .community-links .community-btn { margin-top: 0.8rem; }
 
     /* FOOTER */
     .footer { background: var(--teal-dark); padding: 2rem 0; }
@@ -310,7 +312,11 @@
     html += `<div class="community-box">
       <h2>${esc(data.community.heading)}</h2>
       <p>${esc(data.community.body)}</p>
-      <a href="${esc(data.community.link)}" target="_blank" rel="noopener" class="community-btn">${esc(data.community.cta)}</a>
+      <div class="community-links">
+        ${(data.community.links || []).map(l =>
+          `<a href="${esc(l.url)}" target="_blank" rel="noopener" class="community-btn">${esc(l.label)}</a>`
+        ).join('')}
+      </div>
     </div>`;
 
     document.getElementById('about-container').innerHTML = html;
