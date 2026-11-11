@@ -2071,6 +2071,13 @@
       // לא זמינים — תמיד לסוף
       const unavailDiff = (a.available === false ? 1 : 0) - (b.available === false ? 1 : 0);
       if (unavailDiff !== 0) return unavailDiff;
+      // תגית "עשיר בחלבון": מוצרים שחלבון הוא הייעוד המרכזי שלהם (קטגוריית "מוצרי חלבון") קודם,
+      // מוצרים שחלבון רק מוזכר בתיאור (חטיפים, סופר-פוד וכו') לסוף
+      if (activeTag === 'עשיר בחלבון') {
+        const isProteinCat = p => { const pc = Array.isArray(p.cat) ? p.cat : (p.cat ? p.cat.split(',').map(c=>c.trim()) : []); return pc.includes('מוצרי חלבון'); };
+        const proteinDiff = (isProteinCat(a) ? 0 : 1) - (isProteinCat(b) ? 0 : 1);
+        if (proteinDiff !== 0) return proteinDiff;
+      }
       // תגית "האהובים": תמיד ממוין לפי כמות לייקים, מי שקיבל הכי הרבה למעלה
       if (activeTag === 'האהובים') {
         return (heartCounts[b.id] || 0) - (heartCounts[a.id] || 0);
