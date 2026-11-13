@@ -2078,6 +2078,13 @@
         const proteinDiff = (isProteinCat(a) ? 0 : 1) - (isProteinCat(b) ? 0 : 1);
         if (proteinDiff !== 0) return proteinDiff;
       }
+      // תגית "ללא גלוטן": רטבים/תבלינים/ממרחים שבהם גלוטן רק מוזכר באגב (כמו רוטב סויה)
+      // לסוף, כדי שתוצאות מובהקות יותר (קמחים, קרקרים, תוספי אפייה) יופיעו קודם
+      if (activeTag === 'ללא גלוטן') {
+        const isCondiment = p => { const pc = Array.isArray(p.cat) ? p.cat : (p.cat ? p.cat.split(',').map(c=>c.trim()) : []); return pc.includes('רטבים') || pc.includes('תבלינים') || pc.includes('ממרחים'); };
+        const condDiff = (isCondiment(a) ? 1 : 0) - (isCondiment(b) ? 1 : 0);
+        if (condDiff !== 0) return condDiff;
+      }
       // תגית "האהובים": תמיד ממוין לפי כמות לייקים, מי שקיבל הכי הרבה למעלה
       if (activeTag === 'האהובים') {
         return (heartCounts[b.id] || 0) - (heartCounts[a.id] || 0);
