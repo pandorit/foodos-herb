@@ -1022,7 +1022,7 @@
         return;
       }
 
-      const product = products.find(p => p.id === productId);
+      const product = products.find(p => p.id === productId && !p.suspended);
 
       if (!product) {
         showError('המוצר עם מזהה ' + productId + ' לא נמצא במסד הנתונים.');
