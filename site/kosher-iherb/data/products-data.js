@@ -2702,6 +2702,28 @@ window.FOODOS_PRODUCTS = [
     "available": true
   },
   {
+    "id": 644,
+    "name": "Eden Foods, Organic Kuzu Root Starch, 3.5 oz (100 g)",
+    "url": "https://www.iherb.com/pr/eden-foods-organic-kuzu-root-starch-3-5-oz-100-g/10369",
+    "desc": "עמילן משורש קוזו פראי אורגני של Eden Foods, מיפן. מעבה טבעי וחזק שלא נפרד אחרי בישול, בשונה מעמילנים רגילים כמו קורנפלור. משמש לרטבים, מילוי פאי, גרייבי וקינוחים. כשר פרווה, ללא גלוטן.",
+    "cert": "OK",
+    "cat": "תוספי אפייה",
+    "conf": "גבוהה",
+    "brand": "Eden Foods",
+    "longDesc": "קוזו הוא שורש מסורתי ביפן, שנאסף בעונת החורף ומיובש בתהליך ארוך של כ-90 יום ליצירת עמילן בעל כושר עיבוי חזק מאוד, חזק יותר מעמילן תירס או קורנפלור רגילים, ואינו נפרד או 'נשבר' אחרי בישול וקירור חוזר. לשימוש: ממיסים כף אחת ב-2 כפות נוזל קר לכל כוס נוזל לקינוח סמיך, או כפית אחת לתוצאה דקה יותר לרוטב, מוסיפים תוך בחישה ומחממים עד שהתערובת מצטללת ומסמיכה. (כשרות OK, פרווה).\n\nכדאי לדעת: לעומת עמילן תירס או קורנפלור, קוזו יקר יותר אך יציב גם בהקפאה-הפשרה ובבישול חוזר, בלי לאבד מכוח העיבוי.",
+    "descNew": "עמילן משורש קוזו פראי אורגני של Eden Foods, מיפן. מעבה חזק במיוחד שלא נפרד אחרי בישול, בשונה מעמילנים רגילים. כשר פרווה וללא גלוטן.",
+    "nameHe": "עמילן קוזו אורגני",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": [],
+    "img": "https://s3.images-iherb.com/edn/edn30011/d/11.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/eden-foods-organic-kuzu-root-starch-3-5-oz-100-g/10369?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 64.03,
+    "available": true
+  },
+  {
     "id": 243,
     "name": "The Spice Lab, Hawaiian Black Lava Sea Salt, Fine Grain, 121g",
     "url": "https://www.iherb.com/pr/the-spice-lab-hawaiian-black-lava-sea-salt-fine-grain-4-3-oz-121-g/102781",
