@@ -8638,7 +8638,7 @@ window.FOODOS_PRODUCTS = [
     "name": "Bob's Red Mill, Potato Flakes, Instant Mashed Potatoes, 16 oz (454 g)",
     "nameHe": "פתיתי תפוחי אדמה לפירה מהיר",
     "brand": "Bob's Red Mill",
-    "cat": "מטבח",
+    "cat": "קטניות, אורז ופסטה",
     "cert": "Kehilla Kosher",
     "certVerified": true,
     "_certVerified": true,
