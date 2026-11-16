@@ -1331,6 +1331,7 @@
       <button class="ktab" onclick="showKCard(4, true)">🌱 חלבון צמחי</button>
       <button class="ktab" onclick="showKCard(5, true)">🌾 אפייה ללא גלוטן</button>
       <button class="ktab" onclick="showKCard(6, true)">🍜 אומאמי</button>
+      <button class="ktab" onclick="showKCard(7, true)">🍄 פטריות פונקציונליות</button>
     </div>
 
     <div class="knowledge-cards" id="knowledge-cards">
@@ -1514,10 +1515,36 @@
         </div>
       </div>
 
+      <!-- Card 7: פטריות פונקציונליות -->
+      <div class="kcard" id="kcard-7">
+        <div class="kcard-inner">
+          <div>
+            <span class="kcard-emoji">🍄</span>
+            <h3 class="kcard-title">פטריות פונקציונליות: מדריך מקיף</h3>
+            <div class="kcard-body">
+              <p>"פטריות פונקציונליות" הן לא פטריות האכילה הרגילות (פטריית כפתור, פורטבלו וכו'), אלא זנים שמשמשים מאות שנים ברפואה הסינית והיפנית המסורתית, כמו ליון'ס מיין, ריישי, קורדיספס וצ'אגה. כיום הן נמכרות כתוספים, תה וקפה נמס. חשוב לדעת: רוב המחקר עליהן עדיין בתחילתו, חלקו במבחנה או בבעלי חיים, והמחקר האנושי מוגבל בהיקפו. זה לא אומר שאין פוטנציאל, רק שכדאי להתייחס לטענות בזהירות ולא כהבטחה רפואית.</p>
+              <p><strong>ליון'ס מיין</strong> (Lion's Mane) נחקרה הכי הרבה מבין הארבע, בעיקר בהקשר קוגניטיבי (ריכוז, זיכרון). יש מחקר קטן ומעודד שבדק אותה באלצהיימר, אך ללא השוואה לתרופות מקובלות. <strong>ריישי</strong> (Reishi) נחקרה ביותר מ-26 מחקרים אנושיים, עם תוצאות מעורבות; מחקר אחד על 126 משתתפים מצא עלייה בתאי חיסון מסוימים. שתיהן מזוהות יותר עם "רגיעה ותפקוד" מאשר עם אנרגיה.</p>
+              <p><strong>קורדיספס</strong> (Cordyceps) מזוהה מסורתית עם אנרגיה וסיבולת גופנית, אבל רוב התמיכה המדעית שלה עדיין במחקרי בעלי חיים; מחקרים אנושיים קטנים מצאו שיפור צנוע בביצועי אימון אצל לא-מתאמנים. <strong>צ'אגה</strong> (Chaga) מזוהה עם נוגדי חמצון, אך גם כאן רוב הראיות מגיעות ממבחנה ומחקרי בעלי חיים, לא מבני אדם.</p>
+              <p>טיפ מעשי: אם מחפשים תוספת ממוקדת וחזקה בפטרייה אחת (לדוגמה קורדיספס לאנרגיה), תמצית נוזלית עדיפה. אם רוצים טעימה יומיומית נעימה מכמה פטריות יחד בלי מינון גבוה מאף אחת, תה או לאטה מתאימים יותר. אם מחפשים מינון מרוכז יותר בפורמט נוח לנטילה, סוכריות גומי הן אמצע הדרך.</p>
+            </div>
+          </div>
+          <div class="kcard-products">
+            <span class="kcard-products-label">מוצרים קשורים</span>
+            <div class="kcard-product-links">
+              <a href="product.html?id=662" class="kcard-product-link"><span class="kpl-icon">💧</span><span class="kpl-name">תמצית קורדיספס נטולת אלכוהול</span><span class="kpl-arrow">←</span></a>
+              <a href="product.html?id=665" class="kcard-product-link"><span class="kpl-icon">🍵</span><span class="kpl-name">תה צמחים, תערובת פטריות וולנס</span><span class="kpl-arrow">←</span></a>
+              <a href="product.html?id=663" class="kcard-product-link"><span class="kpl-icon">☕</span><span class="kpl-name">לאטה מאצ'ה מיידי עם פטריות</span><span class="kpl-arrow">←</span></a>
+              <a href="product.html?id=668" class="kcard-product-link"><span class="kpl-icon">🍬</span><span class="kpl-name">סוכריות גומי, תערובת 10 פטריות</span><span class="kpl-arrow">←</span></a>
+              <a href="product.html?id=669" class="kcard-product-link"><span class="kpl-icon">🍓</span><span class="kpl-name">סוכריות גומי, פטריות + אשווגנדה</span><span class="kpl-arrow">←</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div><!-- /knowledge-cards -->
 
     <div class="knowledge-footer">
-      <button class="knowledge-nav" onclick="showKCard((kCardIdx - 1 + 7) % 7, true)" aria-label="הקודם">›</button>
+      <button class="knowledge-nav" onclick="showKCard((kCardIdx - 1 + 8) % 8, true)" aria-label="הקודם">›</button>
       <button class="kdot active" onclick="showKCard(0, true)"></button>
       <button class="kdot" onclick="showKCard(1, true)"></button>
       <button class="kdot" onclick="showKCard(2, true)"></button>
@@ -1525,7 +1552,8 @@
       <button class="kdot" onclick="showKCard(4, true)"></button>
       <button class="kdot" onclick="showKCard(5, true)"></button>
       <button class="kdot" onclick="showKCard(6, true)"></button>
-      <button class="knowledge-nav" onclick="showKCard((kCardIdx + 1) % 7, true)" aria-label="הבא">‹</button>
+      <button class="kdot" onclick="showKCard(7, true)"></button>
+      <button class="knowledge-nav" onclick="showKCard((kCardIdx + 1) % 8, true)" aria-label="הבא">‹</button>
     </div>
   </div>
 </section>
@@ -2513,7 +2541,7 @@
   // ── KNOWLEDGE CARDS ─────────────────────────────
   var kCardIdx = 0;
   var kCardTimer = null;
-  var kCardTotal = 7;
+  var kCardTotal = 8;
 
   function showKCard(idx, isManual) {
     document.querySelectorAll('.kcard').forEach(function(c, i) { c.classList.toggle('active', i === idx); });
