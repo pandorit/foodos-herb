@@ -666,13 +666,18 @@
     { key: 'חומץ תפוחים',       test: p => /apple cider vinegar|חומץ תפוחים/i.test(p.name + ' ' + (p.desc||'')) },
     { key: 'פטריות פונקציונליות', test: p => /mushroom|פטריי?ת|lion.?s mane/i.test(p.name + ' ' + (p.desc||'')) },
     { key: 'ירוקים וסופרפוד',    test: p => /greens blend|superfood|ירוקים|סופר.?פוד/i.test(p.name + ' ' + (p.desc||'')) },
-    { key: 'עיכול וסיבים',      test: p => /fiber|סיבים|digest|עיכול/i.test(p.name + ' ' + (p.desc||'')) },
-    { key: 'קולגן',             test: p => /collagen|קולגן/i.test(p.name + ' ' + (p.desc||'')) },
-    { key: 'פרוביוטיקה',        test: p => /probiotic|פרוביוטיק/i.test(p.name + ' ' + (p.desc||'')) },
     { key: 'אומגה 3',           test: p => /omega.?3|אומגה.?3|fish oil|שמן דגים/i.test(p.name + ' ' + (p.desc||'')) },
-    { key: 'צמחים ואדפטוגנים',  test: p => /ashwagandha|אשווגנדה|turmeric|כורכום|berberine|ברברין|nattokinase|נאטוקינאז|colostrum|קולוסטרום|quercetin/i.test(p.name + ' ' + (p.desc||'')) },
+    // ויטמינים/מינרלים נבדקים לפני "תוספת" כמו פרוביוטיקה/אדפטוגנים/סיבים, כי מוצר בשם
+    // "Magnesium with Probiotics" או "Magnesium + Ashwagandha" הוא בעיקרו מוצר מינרל,
+    // לא פרוביוטיקה/אדפטוגן עם קצת מגנזיום
     { key: 'ויטמינים',          test: p => /vitamin|ויטמין|multivitamin|מולטי.?ויטמין|methylfolate|מתילפולאט/i.test(p.name + ' ' + (p.desc||'')) },
     { key: 'מינרלים',           test: p => /magnesium|מגנזיום|zinc|אבץ|iron|ברזל|calcium|סידן/i.test(p.name + ' ' + (p.desc||'')) },
+    // "עיכול" בלי גבול-מילה תופס גם "מערכת העיכול" כאזכור אגבי (לדוגמה "עדין על מערכת
+    // העיכול" בתיאור ספיגה), לכן מוחרג כשמופיע ככה ולא כנושא המוצר עצמו
+    { key: 'עיכול וסיבים',      test: p => /fiber|סיבים|digest|(?<!מערכת ה)עיכול/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'קולגן',             test: p => /collagen|קולגן/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'פרוביוטיקה',        test: p => /probiotic|פרוביוטיק/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'צמחים ואדפטוגנים',  test: p => /ashwagandha|אשווגנדה|turmeric|כורכום|berberine|ברברין|nattokinase|נאטוקינאז|colostrum|קולוסטרום|quercetin/i.test(p.name + ' ' + (p.desc||'')) },
   ];
   function supplementSubtype(p) {
     const match = SUPPLEMENT_SUBTYPES.find(t => t.test(p));
