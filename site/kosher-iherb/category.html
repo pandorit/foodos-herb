@@ -162,6 +162,8 @@
     .pill.active-cert { background: var(--teal-dark); border-color: var(--teal-dark); }
     .filter-divider { width: 1px; height: 24px; background: var(--border); flex-shrink: 0; }
     .sort-select { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.78rem; font-weight: 600; padding: 5px 10px 5px 28px; border-radius: var(--radius-pill); cursor: pointer; font-family: var(--sans); appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: left 8px center; direction: rtl; }
+    .cat-search-input { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.78rem; font-weight: 600; padding: 6px 12px; border-radius: var(--radius-pill); cursor: text; font-family: var(--sans); direction: rtl; }
+    .cat-search-input:focus { outline: none; border-color: var(--teal); }
     .sort-select:focus { outline: none; border-color: var(--teal); }
 
     /* ── PRODUCTS SECTION ── */
@@ -480,6 +482,10 @@
 <!-- ── FILTER BAR ── -->
 <div class="filter-bar">
   <div class="filter-bar-inner">
+    <div class="filter-group" id="cat-search-group">
+      <input type="text" id="cat-search-input" class="cat-search-input" placeholder="🔍 חיפוש בקטגוריה (למשל: מגנזיום)" oninput="setCatSearch(this.value)" style="min-width:200px;">
+    </div>
+    <div class="filter-divider"></div>
     <div class="filter-group" id="subtype-filter-group" style="display:none;">
       <span class="filter-group-label" id="subtype-filter-label">סוג תוסף:</span>
       <select class="sort-select" id="subtype-select" onchange="setSubtype(this.value)"></select>
@@ -646,6 +652,7 @@
   let activeCert    = 'הכל';
   let activeBrand   = 'הכל';
   let activeSubtype = 'הכל';
+  let activeCatSearch = '';
   let activeSort  = 'default';
   let currentPage = 0;
   let resolvedCatName = ''; // שם הקטגוריה בעברית, אחרי תרגום מ-slug אנגלי אם צריך
@@ -913,12 +920,22 @@
     applyFilter();
   }
 
+  function setCatSearch(q) {
+    activeCatSearch = (q || '').toLowerCase().trim();
+    currentPage = 0;
+    applyFilter();
+  }
+
   function applyFilter() {
     const subtypeFn = activeSubtypeFn();
     filteredProducts = catProducts.filter(p => {
       if (activeCert  !== 'הכל' && p.cert  !== activeCert)  return false;
       if (activeBrand !== 'הכל' && p.brand !== activeBrand) return false;
       if (activeSubtype !== 'הכל' && subtypeFn && !subtypeFn(p).includes(activeSubtype)) return false;
+      if (activeCatSearch) {
+        const hay = [p.name, p.nameHe, p.desc, p.longDesc, p.descNew, p.brand].filter(Boolean).join(' ').toLowerCase();
+        if (!hay.includes(activeCatSearch)) return false;
+      }
       return true;
     }).sort((a, b) => {
       // מוצרים שאינם זמינים — תמיד אחרונים
@@ -949,7 +966,7 @@
     });
     currentPage = 0;
     renderProducts(true);
-    const hasF = activeCert !== 'הכל' || activeBrand !== 'הכל' || activeSubtype !== 'הכל';
+    const hasF = activeCert !== 'הכל' || activeBrand !== 'הכל' || activeSubtype !== 'הכל' || !!activeCatSearch;
     document.getElementById('reset-btn').style.display = hasF ? 'inline-block' : 'none';
     const shareBtn = document.getElementById('share-filter-btn');
     if (shareBtn) shareBtn.style.display = activeSubtype !== 'הכל' ? 'inline-block' : 'none';
@@ -1004,7 +1021,7 @@
   // ────────────────────────────────────────────────────────────
 
   function resetFilters() {
-    activeCert = 'הכל'; activeBrand = 'הכל'; activeSubtype = 'הכל'; activeSort = 'default';
+    activeCert = 'הכל'; activeBrand = 'הכל'; activeSubtype = 'הכל'; activeSort = 'default'; activeCatSearch = '';
     const sortSel = document.getElementById('sort-select');
     if (sortSel) sortSel.value = 'default';
     const certSel = document.getElementById('cert-select');
@@ -1013,6 +1030,8 @@
     if (brandSel) brandSel.value = 'הכל';
     const subtypeSel = document.getElementById('subtype-select');
     if (subtypeSel) subtypeSel.value = 'הכל';
+    const searchInput = document.getElementById('cat-search-input');
+    if (searchInput) searchInput.value = '';
     applyFilter();
     syncUrlWithFilters();
   }
