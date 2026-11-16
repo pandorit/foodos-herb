@@ -671,7 +671,8 @@
     // "Magnesium with Probiotics" או "Magnesium + Ashwagandha" הוא בעיקרו מוצר מינרל,
     // לא פרוביוטיקה/אדפטוגן עם קצת מגנזיום
     { key: 'ויטמינים',          test: p => /vitamin|ויטמין|multivitamin|מולטי.?ויטמין|methylfolate|מתילפולאט/i.test(p.name + ' ' + (p.desc||'')) },
-    { key: 'מינרלים',           test: p => /magnesium|מגנזיום|zinc|אבץ|iron|ברזל|calcium|סידן/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'מגנזיום',           test: p => /magnesium|מגנזיום/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'מינרלים',           test: p => /zinc|אבץ|iron|ברזל|calcium|סידן/i.test(p.name + ' ' + (p.desc||'')) },
     // "עיכול" בלי גבול-מילה תופס גם "מערכת העיכול" כאזכור אגבי (לדוגמה "עדין על מערכת
     // העיכול" בתיאור ספיגה), לכן מוחרג כשמופיע ככה ולא כנושא המוצר עצמו
     { key: 'עיכול וסיבים',      test: p => /fiber|סיבים|digest|(?<!מערכת ה)עיכול/i.test(p.name + ' ' + (p.desc||'')) },
