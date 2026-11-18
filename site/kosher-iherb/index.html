@@ -17,7 +17,7 @@
   </script>
   <script src="../cookie-consent.js" defer></script>
   <meta charset="UTF-8">
-  <link rel="icon" href="/favicon.png?v=2" type="image/png">
+  <link rel="icon" href="/favicon.png?v=3" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foodos Online — מוצרים כשרים מ-iHerb עם משלוח לישראל</title>
   <meta name="description" content="340+ מוצרי מזון כשרים מ-iHerb שנבדקו ידנית על ידי קהילת פודוס. כשרות OU, OK, KOF-K ועוד — עם משלוח ישיר לישראל.">
@@ -68,13 +68,13 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --teal:        #4A9D9A;
-      --teal-dark:   #2C6360;
-      --teal-xdark:  #1A4F4D;
-      --teal-mid:    #3A8380;
-      --teal-light:  #EBF6F6;
-      --teal-xlight: #C8E8E7;
-      --lime:        #7AB648;
+      --teal:        #473A5E;
+      --teal-dark:   #2F2640;
+      --teal-xdark:  #1E1829;
+      --teal-mid:    #3C3250;
+      --teal-light:  #F0EDF5;
+      --teal-xlight: #D8D0E6;
+      --lime:        #6B5690;
       --orange:      #E85D04;
       --bg:          #FFFFFF;
       --bg-soft:     #F8F9F8;
@@ -120,19 +120,19 @@
 
     /* ── LOGO ───────────────────────────────── */
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-    .logo-img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex-shrink: 0; box-shadow: 0 2px 12px rgba(74,157,154,.25); }
+    .logo-img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex-shrink: 0; box-shadow: 0 2px 12px rgba(71,58,94,.25); }
     .logo-circle {
       width: 52px; height: 52px;
       background: var(--teal);
       border-radius: 50%;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      box-shadow: 0 2px 8px rgba(74,157,154,.3);
+      box-shadow: 0 2px 8px rgba(71,58,94,.3);
     }
     .logo-heb { font-size: 16px; line-height: 1; }
     .logo-foodos-txt { font-family: var(--serif); font-size: 8.5px; font-weight: 900; color: white; line-height: 1; letter-spacing: -0.2px; }
     .logo-herb {
       font-family: var(--sans); font-size: 8px; font-weight: 800;
-      background: linear-gradient(90deg, #4A9D9A, #A8D44B);
+      background: linear-gradient(90deg, #473A5E, #9686BE);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
       line-height: 1; letter-spacing: 0.5px;
     }
@@ -154,7 +154,7 @@
 
     /* ── HERO ───────────────────────────────── */
     .hero {
-      background: #1A4F4D;
+      background: #1E1829;
       min-height: 620px;
       position: relative;
       overflow: hidden;
@@ -169,12 +169,12 @@
     /* background radial glow elements */
     .hero-glow-1 {
       position: absolute; width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(74,157,154,.22) 0%, transparent 65%);
+      background: radial-gradient(circle, rgba(71,58,94,.22) 0%, transparent 65%);
       top: -150px; left: 30%; border-radius: 50%; pointer-events: none;
     }
     .hero-glow-2 {
       position: absolute; width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(120,210,200,.15) 0%, transparent 65%);
+      background: radial-gradient(circle, rgba(150,130,180,.15) 0%, transparent 65%);
       bottom: -100px; left: 5%; border-radius: 50%; pointer-events: none;
     }
 
@@ -210,7 +210,7 @@
     .hero-blob {
       position: absolute;
       width: 340px; height: 340px;
-      background: radial-gradient(ellipse, rgba(90,180,170,.3) 0%, rgba(74,157,154,.08) 55%, transparent 75%);
+      background: radial-gradient(ellipse, rgba(90,180,170,.3) 0%, rgba(71,58,94,.08) 55%, transparent 75%);
       border-radius: 50%;
       top: 50%; left: 50%; transform: translate(-50%, -50%);
       pointer-events: none;
@@ -495,7 +495,7 @@
     .btn-dark:hover { background: var(--teal-mid); }
     .btn-pricing { background: transparent; border: 1.5px solid var(--border); color: var(--text-mid); font-weight: 600; font-size: 0.82rem; padding: 13px 20px; border-radius: var(--radius-pill); display: flex; align-items: center; gap: 8px; }
     .featured-visual { background: var(--teal-light); border-radius: var(--radius-lg); height: 420px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-    .featured-visual::before { content: ''; position: absolute; width: 300px; height: 300px; background: rgba(74,157,154,.1); border-radius: 50%; bottom: -60px; right: -60px; }
+    .featured-visual::before { content: ''; position: absolute; width: 300px; height: 300px; background: rgba(71,58,94,.1); border-radius: 50%; bottom: -60px; right: -60px; }
     .featured-big-emoji { font-size: 7rem; filter: drop-shadow(0 8px 20px rgba(0,0,0,.15)); }
     .featured-cert-badge { margin-top: 1.5rem; background: white; border: 2px solid var(--teal); color: var(--teal-dark); font-size: 0.78rem; font-weight: 700; padding: 6px 18px; border-radius: var(--radius-pill); }
 
@@ -545,14 +545,14 @@
     .cat-scroll { flex: 1; min-width: 0; display: flex; gap: 1.4rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: none; align-items: flex-start; }
     .cat-scroll::-webkit-scrollbar { display: none; }
     .cat-card { flex-shrink: 0; width: 168px; display: flex; flex-direction: column; align-items: center; gap: 0; text-decoration: none; }
-    .cat-card-circle { width: 168px; height: 168px; border-radius: 50%; background: #EBF6F6; border: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem; padding: 18px; box-sizing: border-box; transition: transform .22s ease, box-shadow .22s ease, background .22s ease; box-shadow: 0 2px 12px rgba(74,157,154,.10); }
-    .cat-card:hover .cat-card-circle { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(74,157,154,.20); background: #d6eeee; }
+    .cat-card-circle { width: 168px; height: 168px; border-radius: 50%; background: #F0EDF5; border: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem; padding: 18px; box-sizing: border-box; transition: transform .22s ease, box-shadow .22s ease, background .22s ease; box-shadow: 0 2px 12px rgba(71,58,94,.10); }
+    .cat-card:hover .cat-card-circle { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(71,58,94,.20); background: #d6eeee; }
     .cat-card-icon { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
     .cat-card-icon i { font-size: 26px; color: #2E2E2E; line-height: 1; }
     .cat-card-name { font-family: 'AnerShapiro', sans-serif; font-size: 1.55rem; font-weight: 400; color: #2E2E2E; text-align: center; line-height: 1.2; padding: 0 8px; word-break: break-word; overflow-wrap: break-word; white-space: normal; }
     .cat-scroll-wrap { position: relative; display: flex; align-items: center; gap: 0.6rem; }
-    .cat-arrow { flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%; background: white; border: 1.5px solid #c8e4e3; color: #4A9D9A; font-size: 1.5rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .18s; box-shadow: 0 2px 8px rgba(74,157,154,.12); }
-    .cat-arrow:hover { background: #EBF6F6; border-color: #4A9D9A; box-shadow: 0 4px 14px rgba(74,157,154,.22); }
+    .cat-arrow { flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%; background: white; border: 1.5px solid #c8e4e3; color: #473A5E; font-size: 1.5rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .18s; box-shadow: 0 2px 8px rgba(71,58,94,.12); }
+    .cat-arrow:hover { background: #F0EDF5; border-color: #473A5E; box-shadow: 0 4px 14px rgba(71,58,94,.22); }
     /* רכיבים ישנים — הוסתרו */
     .cat-card-bg { display: none !important; }
     .cat-card-overlay { display: none !important; }
@@ -603,7 +603,7 @@
     .footer { background: var(--teal-dark); padding: 3.5rem 0 2rem; }
     .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
     .footer-brand-name { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
-    .footer-brand-name span { background: linear-gradient(90deg, #4A9D9A, #A8D44B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-brand-name span { background: linear-gradient(90deg, #473A5E, #9686BE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .footer-desc { font-size: 0.85rem; color: rgba(255,255,255,.6); line-height: 1.7; margin-bottom: 1.3rem; }
     .footer-cert-row { display: flex; gap: 6px; flex-wrap: wrap; }
     .f-cert-pill { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.75); font-size: 0.65rem; font-weight: 700; padding: 3px 10px; border-radius: var(--radius-pill); }
@@ -721,7 +721,7 @@
     .coupon-inline-copy-light:hover { background: var(--teal-xlight); }
     .search-bar-outer { max-width: 620px; margin: 0 auto 2rem; }
     .search-bar-inner { display: flex; align-items: center; background: white; border: 2px solid var(--border); border-radius: var(--radius-pill); padding: 5px 5px 5px 18px; box-shadow: var(--shadow-sm); transition: border-color .2s, box-shadow .2s; gap: 8px; }
-    .search-bar-inner:focus-within { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(74,157,154,.1); }
+    .search-bar-inner:focus-within { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(71,58,94,.1); }
     .search-bar-input { flex: 1; border: none; outline: none; background: transparent; font-family: var(--sans); font-size: 0.9rem; color: var(--text); text-align: right; min-width: 0; }
     .search-bar-input::placeholder { color: var(--text-soft); }
     .search-bar-btn { background: var(--teal); color: white; border: none; padding: 9px 22px; border-radius: var(--radius-pill); font-family: var(--sans); font-size: 0.85rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background .18s; flex-shrink: 0; }
@@ -975,9 +975,9 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo">
-      <img src="../FOODOS_online2_LOGO.png" alt="FOODOS Online" class="logo-img">
+      <img src="../FOODOS_online2_LOGO_purple_gold.png" alt="FOODOS Online" class="logo-img">
       <div class="logo-name">
-        FOODOS <span style="background:linear-gradient(90deg,#4A9D9A,#A8D44B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
+        FOODOS <span style="background:linear-gradient(90deg,#473A5E,#9686BE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Online</span>
         <small>כשר, שווה וקולינרי - זה כאן.</small>
       </div>
     </a>
@@ -1084,17 +1084,17 @@
   <svg class="hero-splash-svg" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <radialGradient id="glowCenter" cx="65%" cy="40%" r="55%">
-        <stop offset="0%"   stop-color="#3D8D8A" stop-opacity="0.6"/>
-        <stop offset="100%" stop-color="#1A4F4D" stop-opacity="0"/>
+        <stop offset="0%"   stop-color="#55456F" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#1E1829" stop-opacity="0"/>
       </radialGradient>
       <radialGradient id="glowLeft" cx="10%" cy="80%" r="40%">
-        <stop offset="0%"   stop-color="#4A9D9A" stop-opacity="0.35"/>
-        <stop offset="100%" stop-color="#1A4F4D" stop-opacity="0"/>
+        <stop offset="0%"   stop-color="#473A5E" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#1E1829" stop-opacity="0"/>
       </radialGradient>
     </defs>
 
     <!-- base -->
-    <rect width="1440" height="640" fill="#1A4F4D"/>
+    <rect width="1440" height="640" fill="#1E1829"/>
 
     <!-- radial glows for depth -->
     <rect width="1440" height="640" fill="url(#glowCenter)"/>
@@ -1102,29 +1102,29 @@
 
     <!-- wave 1 — darkest, bottom -->
     <path d="M0,520 C180,470 360,560 540,510 C720,460 900,530 1080,490 C1260,450 1380,500 1440,480 L1440,640 L0,640Z"
-          fill="#163F3D" opacity="0.95"/>
+          fill="#140F1C" opacity="0.95"/>
 
     <!-- wave 2 — medium teal -->
     <path d="M0,440 C200,400 380,480 580,435 C780,390 960,460 1150,420 C1300,390 1400,430 1440,415 L1440,640 L0,640Z"
-          fill="#2C6360" opacity="0.75"/>
+          fill="#2F2640" opacity="0.75"/>
 
     <!-- wave 3 — lighter teal, upper -->
     <path d="M0,340 C240,295 460,375 700,330 C900,295 1100,360 1300,320 C1380,305 1430,320 1440,315 L1440,500 C1380,515 1260,490 1100,528 C900,572 700,500 500,545 C300,585 120,530 0,560Z"
-          fill="#3A8380" opacity="0.45"/>
+          fill="#3C3250" opacity="0.45"/>
 
     <!-- wave 4 — brightest teal, decorative ripple -->
     <path d="M0,200 C150,170 300,210 450,185 C600,160 750,200 900,175 C1050,150 1200,185 1350,165 C1400,158 1430,162 1440,160 L1440,230 C1380,252 1240,218 1080,240 C880,268 680,228 480,252 C280,276 100,248 0,268Z"
-          fill="#4A9D9A" opacity="0.22"/>
+          fill="#473A5E" opacity="0.22"/>
 
-    <!-- lime accent arcs -->
+    <!-- accent arcs: purple tone + a touch of the logo's gold -->
     <path d="M1100,0 C1220,-20 1380,20 1440,80 L1440,0Z"
-          fill="#7AB648" opacity="0.5"/>
+          fill="#6B5690" opacity="0.5"/>
     <path d="M1180,0 C1280,10 1400,55 1440,120 L1440,0Z"
-          fill="#A8D44B" opacity="0.25"/>
+          fill="#C9972C" opacity="0.16"/>
 
-    <!-- subtle lime glow dots -->
-    <circle cx="1390" cy="160" r="18" fill="#A8D44B" opacity="0.35"/>
-    <circle cx="860"  cy="580" r="12" fill="#A8D44B" opacity="0.3"/>
+    <!-- subtle glow dots: one purple, one soft gold -->
+    <circle cx="1390" cy="160" r="18" fill="#C9972C" opacity="0.18"/>
+    <circle cx="860"  cy="580" r="12" fill="#9686BE" opacity="0.3"/>
   </svg>
 
   <div class="hero-glow-1"></div>

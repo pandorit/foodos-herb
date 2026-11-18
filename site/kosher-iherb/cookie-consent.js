@@ -15,8 +15,8 @@
     '#foodos-cc p{margin:0;font-size:.88rem;line-height:1.5;color:#e8f5f5;flex:1;min-width:200px;}',
     '#foodos-cc p a{color:#7dcfcc;text-decoration:underline;}',
     '#foodos-cc-btns{display:flex;gap:10px;flex-shrink:0;}',
-    '#foodos-cc-accept{background:#4A9D9A;color:#fff;border:none;padding:9px 22px;border-radius:100px;font-family:inherit;font-size:.85rem;font-weight:700;cursor:pointer;transition:background .18s;}',
-    '#foodos-cc-accept:hover{background:#2C6360;}',
+    '#foodos-cc-accept{background:#473A5E;color:#fff;border:none;padding:9px 22px;border-radius:100px;font-family:inherit;font-size:.85rem;font-weight:700;cursor:pointer;transition:background .18s;}',
+    '#foodos-cc-accept:hover{background:#2F2640;}',
     '#foodos-cc-decline{background:transparent;color:#aaa;border:1.5px solid #555;padding:9px 18px;border-radius:100px;font-family:inherit;font-size:.85rem;cursor:pointer;transition:all .18s;}',
     '#foodos-cc-decline:hover{border-color:#aaa;color:#ddd;}'
   ].join('');
