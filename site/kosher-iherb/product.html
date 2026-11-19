@@ -32,12 +32,12 @@
   </script>
   <script src="cookie-consent.js" defer></script>
   <meta charset="UTF-8">
-  <link rel="icon" href="/favicon.png?v=4" type="image/png">
+  <link rel="icon" href="/favicon.png?v=5" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="page-title">מוצר כשר מ-iHerb — Foodos Online</title>
+  <title id="page-title">מוצר כשר מ-iHerb, Foodos Online</title>
   <meta id="meta-description" name="description" content="מוצר כשר מ-iHerb, נבדק ידנית על ידי קהילת פודוס. כשרות מאומתת, משלוח ישיר לישראל.">
   <meta name="robots" content="index, follow">
-  <meta id="og-title" property="og:title" content="מוצר כשר מ-iHerb — Foodos Online">
+  <meta id="og-title" property="og:title" content="מוצר כשר מ-iHerb, Foodos Online">
   <meta id="og-description" property="og:description" content="מוצר כשר מ-iHerb, נבדק ידנית על ידי קהילת פודוס.">
   <meta id="og-image" property="og:image" content="">
   <meta property="og:type" content="product">
@@ -1052,11 +1052,11 @@
 
     function renderProduct(product, brands, allProducts) {
       // ── Page title
-      const productTitle = (product.nameHe || product.name) + ' כשר מ-iHerb — Foodos Online';
+      const productTitle = (product.nameHe || product.name) + ' כשר מ-iHerb, Foodos Online';
       document.title = productTitle;
       window._titleReady = true;
       if (typeof window.maybeSendGA4PageView === 'function') window.maybeSendGA4PageView();
-      const productDesc = (product.descNew || product.desc || '').substring(0, 155) || `${product.nameHe || product.name} — מוצר כשר מ-iHerb, כשרות ${product.cert}, משלוח ישיר לישראל.`;
+      const productDesc = (product.descNew || product.desc || '').substring(0, 155) || `${product.nameHe || product.name}, מוצר כשר מ-iHerb, כשרות ${product.cert}, משלוח ישיר לישראל.`;
       document.getElementById('meta-description').setAttribute('content', productDesc);
       document.getElementById('og-title').setAttribute('content', productTitle);
       document.getElementById('og-description').setAttribute('content', productDesc);
@@ -1154,7 +1154,7 @@
             a.textContent = 'לרכישה ב-iHerb (' + size.label + ') ←';
           } else {
             a.className = 'btn-secondary';
-            a.textContent = size.label + ' — אזל מהמלאי, לבדיקת זמינות ב-iHerb ←';
+            a.textContent = size.label + ', אזל מהמלאי, לבדיקת זמינות ב-iHerb ←';
           }
           wrap.appendChild(a);
 
@@ -1168,7 +1168,7 @@
         });
       } else if (product.affiliateUrl || product.url) {
         const a = document.createElement('a');
-        const priceStr = product.priceILS ? ' — ₪' + parseFloat(product.priceILS).toFixed(2) : '';
+        const priceStr = product.priceILS ? ', ₪' + parseFloat(product.priceILS).toFixed(2) : '';
         a.href = product.affiliateUrl || product.url;
         a.target = '_blank';
         a.rel = 'noopener noreferrer sponsored';
@@ -1559,7 +1559,7 @@
   </div>
   <div style="font-size:0.72rem;color:rgba(255,255,255,.35);text-align:center;margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.08);max-width:1160px;margin-right:auto;margin-left:auto;padding-right:2rem;padding-left:2rem;">
     © 2026 Foodos Online · online.foodos.co.il · קישורי שותפים עם iHerb Associates
-    <br>אתר זה כולל קישורי שותפים — אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
+    <br>אתר זה כולל קישורי שותפים, אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
     <br>המידע על כשרות ותזונה נבדק בקפידה, אך אינו מחליף בדיקה עצמאית מול iHerb ותווית המוצר בפועל. <a href="terms.html" style="color:rgba(255,255,255,.55);text-decoration:underline;">פרטים בתנאי השימוש</a>
   </div>
 </footer>
