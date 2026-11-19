@@ -32,7 +32,7 @@
   </script>
   <script src="cookie-consent.js" defer></script>
   <meta charset="UTF-8">
-  <link rel="icon" href="/favicon.png?v=3" type="image/png">
+  <link rel="icon" href="/favicon.png?v=4" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="page-title">קטגוריה — Foodos Online</title>
   <meta id="meta-description" name="description" content="מוצרים כשרים מאומתים מ-iHerb עם משלוח ישיר לישראל — נבדקו ידנית על ידי קהילת פודוס.">
@@ -156,6 +156,8 @@
     .filter-bar-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
     .filter-group { display: flex; align-items: center; gap: 0.5rem; }
     .filter-group-label { font-size: 0.7rem; font-weight: 700; color: var(--text-soft); text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+    /* בנייד שורת הסינון נערמת לגובה רב; מותג ומיון מוסתרים שם כדי לחסוך מקום, נשארים בדסקטופ */
+    @media (max-width: 640px) { .mobile-hide-filter { display: none !important; } }
     .pill { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.78rem; font-weight: 600; padding: 5px 14px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; font-family: var(--sans); }
     .pill:hover { border-color: var(--teal); color: var(--teal); }
     .pill.active { background: var(--teal); border-color: var(--teal); color: white; }
@@ -491,17 +493,22 @@
       <select class="sort-select" id="subtype-select" onchange="setSubtype(this.value)"></select>
     </div>
     <div class="filter-divider" id="subtype-filter-divider" style="display:none;"></div>
-    <div class="filter-group">
+    <div class="filter-group" id="capsule-filter-group" style="display:none;">
+      <span class="filter-group-label">סוג קפסולה:</span>
+      <select class="sort-select" id="capsule-select" onchange="setCapsuleType(this.value)"></select>
+    </div>
+    <div class="filter-divider" id="capsule-filter-divider" style="display:none;"></div>
+    <div class="filter-group" id="cert-filter-group">
       <span class="filter-group-label">כשרות:</span>
       <select class="sort-select" id="cert-select" onchange="setCert(this.value)"></select>
     </div>
-    <div class="filter-divider"></div>
-    <div class="filter-group">
+    <div class="filter-divider" id="brand-filter-divider"></div>
+    <div class="filter-group mobile-hide-filter" id="brand-filter-group">
       <span class="filter-group-label">מותג:</span>
       <select class="sort-select" id="brand-select" onchange="setBrand(this.value)"></select>
     </div>
-    <div class="filter-divider"></div>
-    <div class="filter-group">
+    <div class="filter-divider mobile-hide-filter" id="sort-filter-divider"></div>
+    <div class="filter-group mobile-hide-filter" id="sort-filter-group">
       <span class="filter-group-label">מיון:</span>
       <select class="sort-select" id="sort-select" onchange="setSort(this.value)">
         <option value="default">ברירת מחדל</option>
@@ -652,6 +659,7 @@
   let activeCert    = 'הכל';
   let activeBrand   = 'הכל';
   let activeSubtype = 'הכל';
+  let activeCapsuleType = 'הכל';
   let activeCatSearch = '';
   let activeSort  = 'default';
   let currentPage = 0;
@@ -682,6 +690,20 @@
   ];
   function supplementSubtype(p) {
     const match = SUPPLEMENT_SUBTYPES.find(t => t.test(p));
+    return match ? match.key : 'אחר';
+  }
+
+  // צורת נטילה - רלוונטי רק לקטגוריית "תוספי תזונה", עצמאי מסוג התוסף (ויטמין/מינרל/וכו')
+  // בודק בעיקר את השם, כי שם המוצר כמעט תמיד מציין את הצורה (Capsules/Gummies/Drops/Softgels/Powder)
+  const CAPSULE_TYPES = [
+    { key: 'סוכריות ג\'לי',   test: p => /gumm(y|ies)|סוכריו?ת\s*ג\'?ל?י|גומי/i.test(p.name) },
+    { key: 'טיפות',          test: p => /\bdrops?\b|טיפות/i.test(p.name) },
+    { key: 'אבקה',           test: p => /\bpowder\b|אבקה/i.test(p.name) },
+    { key: 'קפסולות ג\'ל רכות', test: p => /softgel/i.test(p.name) },
+    { key: 'קפסולות/טבליות', test: p => /capsule|caplet|tablet|קפסול|טבליה/i.test(p.name) },
+  ];
+  function capsuleType(p) {
+    const match = CAPSULE_TYPES.find(t => t.test(p));
     return match ? match.key : 'אחר';
   }
 
@@ -756,6 +778,8 @@
     // תת-סוג (?subtype=שינה) - כדי שאפשר יהיה לשתף קישור ישיר לתת-סינון (תוספי שינה, ממתיקי מונק פרוט וכו')
     const rawSubtype = params.get('subtype');
     if (rawSubtype) activeSubtype = decodeURIComponent(rawSubtype);
+    const rawCapsule = params.get('capsule');
+    if (rawCapsule) activeCapsuleType = decodeURIComponent(rawCapsule);
 
     if (!catName) {
       
@@ -857,6 +881,9 @@
     const subtypeGroup = document.getElementById('subtype-filter-group');
     const subtypeDivider = document.getElementById('subtype-filter-divider');
     const subtypeSelect = document.getElementById('subtype-select');
+    const capsuleGroup = document.getElementById('capsule-filter-group');
+    const capsuleDivider = document.getElementById('capsule-filter-divider');
+    const capsuleSelect = document.getElementById('capsule-select');
 
     brandSelect.innerHTML = brands.map(b =>
       `<option value="${b.replace(/"/g,'&quot;')}"${b===activeBrand?' selected':''}>${b==='הכל'?'כל המותגים':b}</option>`
@@ -880,6 +907,21 @@
       activeSubtype = 'הכל';
     }
 
+    // סוג קפסולה (צורת נטילה) - רק בקטגוריית "תוספי תזונה"
+    if (catName === 'תוספי תזונה') {
+      const capsuleSet = new Set(catProducts.map(capsuleType));
+      const capsuleTypesList = ['הכל', ...[...capsuleSet].sort((a,b) => a.localeCompare(b,'he'))];
+      capsuleSelect.innerHTML = capsuleTypesList.map(s =>
+        `<option value="${s.replace(/"/g,'&quot;')}"${s===activeCapsuleType?' selected':''}>${s==='הכל'?'כל הצורות':s}</option>`
+      ).join('');
+      capsuleGroup.style.display = 'flex';
+      capsuleDivider.style.display = 'block';
+    } else {
+      capsuleGroup.style.display = 'none';
+      capsuleDivider.style.display = 'none';
+      activeCapsuleType = 'הכל';
+    }
+
     // Other categories — also use parseCats so comma-strings are extracted correctly
     const allCats = [...new Set(allProducts.flatMap(p => parseCats(p)))].sort((a,b)=>a.localeCompare(b,'he'));
     document.getElementById('other-cats').innerHTML = allCats
@@ -897,6 +939,7 @@
     const rawCat = new URLSearchParams(location.search).get('cat') || catSlug(resolvedCatName);
     if (rawCat) params.set('cat', rawCat);
     if (activeSubtype !== 'הכל') params.set('subtype', activeSubtype);
+    if (activeCapsuleType !== 'הכל') params.set('capsule', activeCapsuleType);
     if (activeCert !== 'הכל') params.set('cert', activeCert);
     if (activeBrand !== 'הכל') params.set('brand', activeBrand);
     history.replaceState(null, '', location.pathname + '?' + params.toString());
@@ -926,6 +969,14 @@
     applyFilter();
   }
 
+  function setCapsuleType(type) {
+    activeCapsuleType = type;
+    const sel = document.getElementById('capsule-select');
+    if (sel) sel.value = type;
+    syncUrlWithFilters();
+    applyFilter();
+  }
+
   function setCatSearch(q) {
     activeCatSearch = (q || '').toLowerCase().trim();
     currentPage = 0;
@@ -938,6 +989,7 @@
       if (activeCert  !== 'הכל' && p.cert  !== activeCert)  return false;
       if (activeBrand !== 'הכל' && p.brand !== activeBrand) return false;
       if (activeSubtype !== 'הכל' && subtypeFn && !subtypeFn(p).includes(activeSubtype)) return false;
+      if (activeCapsuleType !== 'הכל' && capsuleType(p) !== activeCapsuleType) return false;
       if (activeCatSearch) {
         const hay = [p.name, p.nameHe, p.desc, p.longDesc, p.descNew, p.brand].filter(Boolean).join(' ').toLowerCase();
         if (!hay.includes(activeCatSearch)) return false;
@@ -972,7 +1024,7 @@
     });
     currentPage = 0;
     renderProducts(true);
-    const hasF = activeCert !== 'הכל' || activeBrand !== 'הכל' || activeSubtype !== 'הכל' || !!activeCatSearch;
+    const hasF = activeCert !== 'הכל' || activeBrand !== 'הכל' || activeSubtype !== 'הכל' || activeCapsuleType !== 'הכל' || !!activeCatSearch;
     document.getElementById('reset-btn').style.display = hasF ? 'inline-block' : 'none';
     const shareBtn = document.getElementById('share-filter-btn');
     if (shareBtn) shareBtn.style.display = activeSubtype !== 'הכל' ? 'inline-block' : 'none';
@@ -1027,7 +1079,7 @@
   // ────────────────────────────────────────────────────────────
 
   function resetFilters() {
-    activeCert = 'הכל'; activeBrand = 'הכל'; activeSubtype = 'הכל'; activeSort = 'default'; activeCatSearch = '';
+    activeCert = 'הכל'; activeBrand = 'הכל'; activeSubtype = 'הכל'; activeCapsuleType = 'הכל'; activeSort = 'default'; activeCatSearch = '';
     const sortSel = document.getElementById('sort-select');
     if (sortSel) sortSel.value = 'default';
     const certSel = document.getElementById('cert-select');
@@ -1036,6 +1088,8 @@
     if (brandSel) brandSel.value = 'הכל';
     const subtypeSel = document.getElementById('subtype-select');
     if (subtypeSel) subtypeSel.value = 'הכל';
+    const capsuleSel = document.getElementById('capsule-select');
+    if (capsuleSel) capsuleSel.value = 'הכל';
     const searchInput = document.getElementById('cat-search-input');
     if (searchInput) searchInput.value = '';
     applyFilter();
