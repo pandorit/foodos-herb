@@ -937,6 +937,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/set/set00155/s/26.jpg",
+    "priceILS": 29.08,
     "available": true
   },
   {
@@ -2333,7 +2334,8 @@ window.FOODOS_PRODUCTS = [
     "dairy": true,
     "tags": [],
     "affiliateUrl": "https://il.iherb.com/pr/tru-fru-freeze-dried-fresh-blueberries-creme-3-4-oz-96-g/154702?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "available": false,
+    "priceILS": 24.41,
+    "available": true,
     "suspended": true,
     "suspendReason": "המוצר הופסק לצמיתות ב-iHerb (Discontinued)",
     "suspendDate": "2026-11-03"
@@ -2932,7 +2934,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/brm/brm11919/d/11.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/bob-s-red-mill-organic-yellow-corn-polenta-24-oz-680-g/97771?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 30.90,
+    "priceILS": 30.92,
     "available": true
   },
   {
@@ -3090,7 +3092,7 @@ window.FOODOS_PRODUCTS = [
     "tags": ["טבעוני"],
     "img": "https://s3.images-iherb.com/enj/enj00000/d/3.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/enjoy-life-foods-100-real-chocolate-mini-chips-semi-sweet-9-oz-255-g/155390?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 40.00,
+    "priceILS": 40.03,
     "available": true
   },
   {
@@ -3354,7 +3356,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/hcm/hcm12422/v/68.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/nestle-hot-cocoa-mix-hot-chocolate-mix-rich-milk-chocolate-8-envelopes-0-28-oz-8-g-each/108500?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 19.85,
-    "available": false,
+    "available": true,
     "seeAlso": [670, 264],
     "seeAlsoNote": "עוד קקאו חם:"
   },
@@ -3442,7 +3444,8 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/99512/99512.jpg",
-    "available": false
+    "priceILS": 38.14,
+    "available": true
   },
   {
     "id": 249,
@@ -3978,21 +3981,22 @@ window.FOODOS_PRODUCTS = [
     "id": 296,
     "name": "Good Sense, Plantain Chips, With Sea Salt, 12 oz (340 g)",
     "url": "https://www.iherb.com/pr/good-sense-plantain-chips-with-sea-salt-12-oz-340-g/138623",
-    "desc": "צ'יפס בננה ירוקה (plantain) עם מלח ים של Good Sense. פריך יותר וטעים יותר מצ'יפס תפוח אדמה, עם רק שלושה מרכיבים. פלנטיין הוא בננה ירוקה שאינה מתוקה, ומצוינת כחלופה עשירה בעמילן. חלבי — מתאים לארוחות חלביות בלבד.",
+    "desc": "צ'יפס בננה ירוקה (plantain) עם מלח ים של Good Sense. פריך יותר וטעים יותר מצ'יפס תפוח אדמה, עם רק שלושה מרכיבים. פלנטיין הוא בננה ירוקה שאינה מתוקה, ומצוינת כחלופה עשירה בעמילן. חלבי, מתאים לארוחות חלביות בלבד.",
     "cert": "KSA",
     "cat": "חטיפים",
     "conf": "בינונית",
     "brand": "Good Sense",
     "longDesc": "פלנטיין הן \"בננות בישול\" גדולות ועמילניות, המהוות מזון יסוד באמריקה הלטינית ובקריביים. בניגוד לבננות רגילות, הפלנטיין אינו מתוק כשחותכים אותו בשלב הירוק. הפרוסות מטוגנות לפריכות גבוהה ומתובלות במלח ים בלבד. התוצאה היא חטיף מלוח שדומה בצורתו למטבעות, אך מציע טקסטורה קשה ופריכה יותר מצ'יפס תפוחי אדמה, וטעם עמילני עמוק שמשתלב מושלם עם מטבלים כמו סלסה חריפה או גוואקמולי. (כשרות KSA).\n\nכדאי לדעת: לעומת banana chips מתוקים, Plantain Chips פחות סוכריים ויותר תפוח־אדמה באופי. לעומת צ'יפס תפוחי אדמה הם בדרך כלל מעט צפופים ועבים יותר.",
-    "descNew": "צ'יפס בננה ירוקה (plantain) עם מלח ים של Good Sense. פריך יותר וטעים יותר מצ'יפס תפוח אדמה, עם רק שלושה מרכיבים. פלנטיין הוא בננה ירוקה שאינה מתוקה, ומצוינת כחלופה עשירה בעמילן. חלבי — מתאים לארוחות חלביות בלבד.",
+    "descNew": "צ'יפס בננה ירוקה (plantain) עם מלח ים של Good Sense. פריך יותר וטעים יותר מצ'יפס תפוח אדמה, עם רק שלושה מרכיבים. פלנטיין הוא בננה ירוקה שאינה מתוקה, ומצוינת כחלופה עשירה בעמילן. חלבי, מתאים לארוחות חלביות בלבד.",
     "dairy": true,
     "nameHe": "צ'יפס בננה עם מלח ים",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/138623/138623.jpg",
-    "available": false
+    "img": "images/products/296.jpg",
+    "priceILS": 31.77,
+    "available": true
   },
   {
     "id": 298,
@@ -5085,7 +5089,8 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/39764/39764.jpg",
-    "available": false,
+    "priceILS": 26.62,
+    "available": true,
     "longDesc": "מוצר חדשני וייחודי בקטגוריית המוצרים נטולי הקלוריות. מדובר בממרח לבן ואוורירי המדמה את הטעם והמרקם של קרם מרשמלו מתוק, אך ללא גרם אחד של סוכר, שומן או קלוריות. הוא מתפקד כמטבל מושלם וכיפי לצלחות פירות חתוכים (תותים ובננות), כתוספת מפתיעה בתוך שייקים, או לשדרוג קינוחים בהם רוצים להכניס מתיקות קרמית קלילה ומרשמלו-ית בלי להעמיס פחמימות ריקות. (כשרות OU מושהה)."
   },
   {
@@ -5108,7 +5113,8 @@ window.FOODOS_PRODUCTS = [
     "suspendReason": "אינו זמין במלאי",
     "suspendDate": "2026-09-19",
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/41662/41662.jpg",
-    "available": false,
+    "priceILS": 26.41,
+    "available": true,
     "longDesc": "ממרח תותים עשיר המבוסס על חומרי טעם טבעיים ותותים אמיתיים, המעניקים לו צבע אדום וטעם פירותי בולט, אך לחלוטין ללא תוספת סוכר, פירות מעוכים עתירי פרוקטוז או שומן. הוא מכיל אפס קלוריות למנה, מה שהופך אותו לתחליף מושלם לריבות תעשייתיות עמוסות סוכר. מצוין למריחה על טוסט בוקר, ערבוב לתוך יוגורט טבעי, או כבסיס מילוי קליל לעוגות וקינוחים דלי קלוריות. (כשרות OU מושהה)."
   },
   {
@@ -6378,7 +6384,8 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/63888/63888.jpg",
-    "available": false
+    "priceILS": 84.35,
+    "available": true
   },
   {
     "id": 427,
@@ -7024,6 +7031,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "edited",
     "certVerified": true,
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/106063/106063.jpg",
+    "priceILS": 98.7,
     "available": true,
     "seeAlso": [
       454,
@@ -7539,7 +7547,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "url": "https://il.iherb.com/pr/nate-s-honey-hot-honey-infused-with-chili-pepper-16-oz-454-g/162072",
     "img": "/images/products/Nate's Honey, Hot Honey, Infused with Chili Pepper.avif",
-    "priceILS": 48.30,
+    "priceILS": 49.49,
     "available": true,
     "desc": "דבש פרחוני עם פלפל צ'ילי — גרסה גדולה יותר (454 גרם) עם כשרות OU. טעם מתוק-חריף עדין, מצוין לגבינות, פיצה ואפייה. אלטרנטיבה מעולה ל-Mike's.",
     "seeAlso": [
@@ -7674,7 +7682,7 @@ window.FOODOS_PRODUCTS = [
     "cert": "OK",
     "certVerified": true,
     "_certVerified": true,
-    "cat": "קונדיטוריה",
+    "cat": "אפייה",
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/simply-desserts-plant-based-instant-pudding-vanilla-sugar-free-1-7-oz-48-g/92663",
     "affiliateUrl": "https://il.iherb.com/pr/simply-desserts-plant-based-instant-pudding-vanilla-sugar-free-1-7-oz-48-g/92663?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
@@ -7705,7 +7713,7 @@ window.FOODOS_PRODUCTS = [
     "cert": "OK",
     "certVerified": true,
     "_certVerified": true,
-    "cat": "קונדיטוריה",
+    "cat": "אפייה",
     "conf": "גבוהה",
     "url": "https://il.iherb.com/pr/simply-desserts-plant-based-instant-pudding-chocolate-sugar-free-1-7-oz-48-g/92662",
     "affiliateUrl": "https://il.iherb.com/pr/simply-desserts-plant-based-instant-pudding-chocolate-sugar-free-1-7-oz-48-g/92662?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
@@ -8894,7 +8902,7 @@ window.FOODOS_PRODUCTS = [
     "url": "https://www.iherb.com/pr/sunfood-organic-beet-powder-8-oz-227-g/90003",
     "affiliateUrl": "https://www.iherb.com/pr/sunfood-organic-beet-powder-8-oz-227-g/90003?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 54.75,
-    "available": false,
+    "available": true,
     "dairy": false,
     "desc": "אבקת סלק אורגנית טהורה של Sunfood. מתאימה לשייקים, לימונדות ואפייה, לצבע אדום טבעי וערך תזונתי. כשרות EarthKosher.",
     "descNew": "אבקת סלק אורגנית טהורה, מבית Sunfood. לשייקים, משקאות ואפייה. כשרות EarthKosher.",
@@ -9671,7 +9679,7 @@ window.FOODOS_PRODUCTS = [
     "tags": ["ללא גלוטן", "טבעוני"],
     "img": "https://s3.images-iherb.com/pht/pht77033/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/phytoral-kids-multivitamin-gummies-strawberry-raspberry-orange-90-gummies/139343?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 74.20,
+    "priceILS": 76.03,
     "available": true
   },
   {
@@ -9737,8 +9745,8 @@ window.FOODOS_PRODUCTS = [
     "tags": ["ללא גלוטן", "Non-GMO"],
     "img": "https://s3.images-iherb.com/sla/sla04114/d/59.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-country-style-honey-mustard-6-oz-170-g/108219?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 19.40,
-    "available": false
+    "priceILS": 20.03,
+    "available": true
   },
   {
     "id": 607,
@@ -9781,7 +9789,7 @@ window.FOODOS_PRODUCTS = [
     "tags": ["Non-GMO"],
     "img": "https://s3.images-iherb.com/sla/sla02883/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/the-spice-lab-sanding-con-aa-sugar-11-4-oz-323-g/150374?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 25.50,
+    "priceILS": 26.13,
     "available": true
   },
   {
@@ -10111,7 +10119,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/oga/oga00782/d/24.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/orgain-organic-protein-powder-plant-based-strawberries-n-cream-2-03-lbs-920-g/118758?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 189.80,
+    "priceILS": 194.48,
     "available": true
   },
   {
