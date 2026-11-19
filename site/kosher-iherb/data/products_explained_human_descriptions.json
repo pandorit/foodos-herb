@@ -2735,7 +2735,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/99512/99512.jpg",
-    "available": false
+    "priceILS": 38.14,
+    "available": true
   },
   {
     "id": 249,
@@ -3280,21 +3281,22 @@
     "name": "Good Sense, Plantain Chips, With Sea Salt, 12 oz (340 g)",
     "url": "https://www.iherb.com/pr/good-sense-plantain-chips-with-sea-salt-12-oz-340-g/138623",
     "affiliateUrl": "https://www.iherb.com/pr/good-sense-plantain-chips-with-sea-salt-12-oz-340-g/138623?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "desc": "צ'יפס בננה ירוקה (plantain) עם מלח ים של Good Sense. פריך יותר וטעים יותר מצ'יפס תפוח אדמה, עם רק שלושה מרכיבים. פלנטיין הוא בננה ירוקה שאינה מתוקה, ומצוינת כחלופה עשירה בעמילן. חלבי — מתאים לארוחות חלביות בלבד.",
+    "desc": "צ'יפס בננה ירוקה (plantain) עם מלח ים של Good Sense. פריך יותר וטעים יותר מצ'יפס תפוח אדמה, עם רק שלושה מרכיבים. פלנטיין הוא בננה ירוקה שאינה מתוקה, ומצוינת כחלופה עשירה בעמילן. חלבי, מתאים לארוחות חלביות בלבד.",
     "cert": "KSA",
     "cat": "חטיפים",
     "conf": "בינונית",
     "brand": "Good Sense",
     "longDesc": "פלנטיין הן \"בננות בישול\" גדולות ועמילניות, המהוות מזון יסוד באמריקה הלטינית ובקריביים. בניגוד לבננות רגילות, הפלנטיין אינו מתוק כשחותכים אותו בשלב הירוק. הפרוסות מטוגנות לפריכות גבוהה ומתובלות במלח ים בלבד. התוצאה היא חטיף מלוח שדומה בצורתו למטבעות, אך מציע טקסטורה קשה ופריכה יותר מצ'יפס תפוחי אדמה, וטעם עמילני עמוק שמשתלב מושלם עם מטבלים כמו סלסה חריפה או גוואקמולי. (כשרות KSA).\n\nכדאי לדעת: לעומת banana chips מתוקים, Plantain Chips פחות סוכריים ויותר תפוח־אדמה באופי. לעומת צ'יפס תפוחי אדמה הם בדרך כלל מעט צפופים ועבים יותר.",
-    "descNew": "צ'יפס בננה ירוקה (plantain) עם מלח ים של Good Sense. פריך יותר וטעים יותר מצ'יפס תפוח אדמה, עם רק שלושה מרכיבים. פלנטיין הוא בננה ירוקה שאינה מתוקה, ומצוינת כחלופה עשירה בעמילן. חלבי — מתאים לארוחות חלביות בלבד.",
+    "descNew": "צ'יפס בננה ירוקה (plantain) עם מלח ים של Good Sense. פריך יותר וטעים יותר מצ'יפס תפוח אדמה, עם רק שלושה מרכיבים. פלנטיין הוא בננה ירוקה שאינה מתוקה, ומצוינת כחלופה עשירה בעמילן. חלבי, מתאים לארוחות חלביות בלבד.",
     "dairy": true,
     "nameHe": "צ'יפס בננה עם מלח ים",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
     "tags": [],
-    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/138623/138623.jpg",
-    "available": false
+    "img": "images/products/296.jpg",
+    "priceILS": 31.77,
+    "available": true
   },
   {
     "id": 298,
@@ -5696,7 +5698,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/63888/63888.jpg",
-    "available": false
+    "priceILS": 84.35,
+    "available": true
   },
   {
     "id": 427,
