@@ -2816,7 +2816,7 @@ window.FOODOS_PRODUCTS = [
     "tags": ["טבעוני"],
     "img": "https://s3.images-iherb.com/vcb/vcb02949/d/1.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/vitacost-melatonin-natural-cherry-2-5-mg-60-chewable-tablets/159018?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 9.04,
+    "priceILS": 15.23,
     "available": true,
     "seeAlso": [649],
     "seeAlsoNote": "עוד תוסף לעיסה של Vitacost:"
@@ -8763,7 +8763,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/cgn/cgn02036/d/47.jpg",
     "url": "https://www.iherb.com/pr/california-gold-nutrition-foods-organic-cayenne-2-75-oz-77-g/106900",
     "affiliateUrl": "https://il.iherb.com/pr/california-gold-nutrition-foods-organic-cayenne-2-75-oz-77-g/106900?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 11.12,
+    "priceILS": 18.71,
     "available": true,
     "dairy": false,
     "desc": "פלפל קאיין אורגני של California Gold Nutrition. מוסיף חריפות וחום לכל מנה. מצוין לאוכל מקסיקני, הודי, תאילנדי ורטבי פסטה. OU כשר.",
