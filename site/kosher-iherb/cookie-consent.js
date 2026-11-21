@@ -1,8 +1,8 @@
-/* FOODOS Cookie Consent — Hebrew RTL */
+/* FOODOS Cookie Consent, Hebrew RTL */
 (function () {
   var KEY = 'foodos_cc';
 
-  // אם כבר ענתה — מפעיל כלים אם הסכימה, יוצא
+  // אם כבר ענתה, מפעיל כלים אם הסכימה, יוצא
   var saved = localStorage.getItem(KEY);
   if (saved === 'y') { if (typeof window.loadGA4 === 'function') window.loadGA4(); return; }
   if (saved === 'n') return;

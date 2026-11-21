@@ -432,7 +432,7 @@
 <section class="cert-desc-section" id="cert-desc-section">
   <div class="container">
     <div class="merged-notice" id="merged-notice" style="display:none">
-      <strong>שימו לב:</strong> הכשרות זו אינה פעילה עוד באופן עצמאי — <span id="merged-notice-text"></span>.
+      <strong>שימו לב:</strong> הכשרות זו אינה פעילה עוד באופן עצמאי, <span id="merged-notice-text"></span>.
       מוצרים ישנים עשויים עדיין לשאת את הסמל.
     </div>
     <div class="cert-desc-title" id="cert-desc-heading">על ההכשרות</div>
@@ -492,7 +492,7 @@
   </div>
   <div class="footer-copy">
     © 2026 Foodos Online · online.foodos.co.il · קישורי שותפים עם iHerb Associates
-    <br>אתר זה כולל קישורי שותפים — אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
+    <br>אתר זה כולל קישורי שותפים, אנו עשויים לקבל עמלה בעת רכישה, ללא תוספת תשלום מצדכם.
     <br>המידע על כשרות ותזונה נבדק בקפידה, אך אינו מחליף בדיקה עצמאית מול iHerb ותווית המוצר בפועל. <a href="terms.html" style="color:rgba(255,255,255,.55);text-decoration:underline;">פרטים בתנאי השימוש</a>
   </div>
 </footer>
@@ -558,7 +558,7 @@
       return;
     }
 
-    document.title = `${certName} — Foodos Online`;
+    document.title = `${certName}, Foodos Online`;
     document.getElementById('bc-cert').textContent = certName;
     
       // Update breadcrumb
@@ -772,7 +772,7 @@
       <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-soft)">
         <div style="font-size:2rem;margin-bottom:1rem">⚠️</div>
         ${isFile
-          ? `<strong>הקובץ נפתח ישירות — יש לפתוח דרך השרת המקומי</strong><br><br>
+          ? `<strong>הקובץ נפתח ישירות, יש לפתוח דרך השרת המקומי</strong><br><br>
              <code style="background:#f4f4f2;padding:6px 14px;border-radius:8px;font-size:.85rem">http://localhost:7824/kosher-iherb/</code>`
           : `<strong>שגיאה בטעינת הנתונים</strong><br><span style="font-size:.82rem">${e.message}</span>`
         }
