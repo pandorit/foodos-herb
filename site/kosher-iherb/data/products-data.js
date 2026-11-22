@@ -588,15 +588,18 @@ window.FOODOS_PRODUCTS = [
     "sizes": [
       {
         "label": "227 גרם",
-        "url": "https://www.iherb.com/pr/navitas-organics-organic-cacao-powder-unsweetened-8-oz-227-g/79887"
+        "url": "https://www.iherb.com/pr/navitas-organics-organic-cacao-powder-unsweetened-8-oz-227-g/79887",
+        "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-powder-unsweetened-8-oz-227-g/79887?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "454 גרם",
-        "url": "https://www.iherb.com/pr/navitas-organics-organic-cacao-powder-16-oz-454-g/8254"
+        "url": "https://www.iherb.com/pr/navitas-organics-organic-cacao-powder-16-oz-454-g/8254",
+        "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-powder-16-oz-454-g/8254?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "680 גרם",
-        "url": "https://www.iherb.com/pr/navitas-organics-organic-cacao-powder-unsweetened-24-oz-680-g/90758"
+        "url": "https://www.iherb.com/pr/navitas-organics-organic-cacao-powder-unsweetened-24-oz-680-g/90758",
+        "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-powder-unsweetened-24-oz-680-g/90758?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       }
     ],
     "desc": "אבקת קקאו גולמי (Raw Cacao) לא ממותקת מבית Navitas Organics, המופקת מפולי קקאו שעוברים עיבוד בטמפרטורה נמוכה כדי לשמור על ערכיהם התזונתיים. היא עשירה בפלבנואידים (נוגדי חמצון חזקים) ובמגנזיום, ומהווה רכיב מעולה לשייקים, דייסות, קינוחי בריאות ומאפים שרוצים להעניק להם טעם שוקולדי עמוק. בשל היותה גולמית ולא ממותקת, הטעם שלה מרוכז, מריר ועז יותר מאבקת קקאו תעשייתית רגילה, ולכן מומלץ לאזן אותה עם ממתיק טבעי לפי הטעם.",
@@ -625,11 +628,13 @@ window.FOODOS_PRODUCTS = [
     "sizes": [
       {
         "label": "227 גרם",
-        "url": "https://www.iherb.com/pr/navitas-organics-organic-cacao-nibs-unsweetened-8-oz-227-g/79888"
+        "url": "https://www.iherb.com/pr/navitas-organics-organic-cacao-nibs-unsweetened-8-oz-227-g/79888",
+        "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-nibs-unsweetened-8-oz-227-g/79888?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "454 גרם",
-        "url": "https://www.iherb.com/pr/navitas-organics-organic-cacao-nibs-16-oz-454-g/8257"
+        "url": "https://www.iherb.com/pr/navitas-organics-organic-cacao-nibs-16-oz-454-g/8257",
+        "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-nibs-16-oz-454-g/8257?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       }
     ],
     "desc": "פירורי קקאו אורגניים לא ממותקים מפולי קקאו גולמיים חתוכים ומיובשים בקור. מוצלחים כטופינג בריא ליוגורט, דייסות, שייקים או לגרנולה ונותנים עומק שוקולדי מר. עשיר במגנזיום, בברזל ובנוגדי חמצון. שימו לב שיש גם גרסה ממותקת של אותה חברה. זו הגרסה הניטראלית.",
@@ -799,11 +804,13 @@ window.FOODOS_PRODUCTS = [
     "sizes": [
       {
         "label": "473 מ\"ל",
-        "url": "https://www.iherb.com/pr/now-foods-real-food-organic-maple-syrup-grade-a-dark-color-16-fl-oz-473-ml/13573"
+        "url": "https://www.iherb.com/pr/now-foods-real-food-organic-maple-syrup-grade-a-dark-color-16-fl-oz-473-ml/13573",
+        "affiliateUrl": "https://il.iherb.com/pr/now-foods-real-food-organic-maple-syrup-grade-a-dark-color-16-fl-oz-473-ml/13573?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "946 מ\"ל",
-        "url": "https://www.iherb.com/pr/now-foods-real-food-organic-maple-syrup-grade-a-dark-color-32-fl-oz-946-ml/23365"
+        "url": "https://www.iherb.com/pr/now-foods-real-food-organic-maple-syrup-grade-a-dark-color-32-fl-oz-946-ml/23365",
+        "affiliateUrl": "https://il.iherb.com/pr/now-foods-real-food-organic-maple-syrup-grade-a-dark-color-32-fl-oz-946-ml/23365?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       }
     ],
     "desc": "סירופ מייפל קנדי טהור 100% של NOW Foods. דרגת Dark (Robust Taste) פירושה שרף שנאסף מאוחר בעונה, הגוון כהה יותר, הטעם מקורמל וחזק, ומחזיק היטב בתנור ובמרינדות. אפשר להחליף בו דבש או סילאן ביחס 1:1.",
@@ -3535,11 +3542,13 @@ window.FOODOS_PRODUCTS = [
     "sizes": [
       {
         "label": "70 גרם",
-        "url": "https://www.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-2-5-oz-70-g/104395"
+        "url": "https://www.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-2-5-oz-70-g/104395",
+        "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-2-5-oz-70-g/104395?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "142 גרם",
-        "url": "https://www.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-5-oz-142-g/104405"
+        "url": "https://www.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-5-oz-142-g/104405",
+        "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-5-oz-142-g/104405?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       }
     ],
     "desc": "סלמון ורוד פראי מאלסקה של Chicken of the Sea, במים ומלח בלבד. מוכן לצריכה מיידית ואינו זקוק לקירור - מעולה לקחת לחו\"ל, או לשילוב בסלט בעבודה. מקור נגיש לאומגה 3 במחיר סביר.",
@@ -5776,27 +5785,33 @@ window.FOODOS_PRODUCTS = [
     "sizes": [
       {
         "label": "קינמון טוסט",
-        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-cinnamon-toast-9-oz-255-g/107031"
+        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-cinnamon-toast-9-oz-255-g/107031",
+        "affiliateUrl": "https://il.iherb.com/pr/catalina-crunch-protein-cereal-cinnamon-toast-9-oz-255-g/107031?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "שוקולד-בוטנים",
-        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-chocolate-peanut-butter-9-oz-255-g/107021"
+        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-chocolate-peanut-butter-9-oz-255-g/107021",
+        "affiliateUrl": "https://il.iherb.com/pr/catalina-crunch-protein-cereal-chocolate-peanut-butter-9-oz-255-g/107021?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "שוקולד מריר",
-        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-dark-chocolate-9-oz-255-g/107036"
+        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-dark-chocolate-9-oz-255-g/107036",
+        "affiliateUrl": "https://il.iherb.com/pr/catalina-crunch-protein-cereal-dark-chocolate-9-oz-255-g/107036?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "פירותי",
-        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-fruity-8-oz-227-g/107022"
+        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-fruity-8-oz-227-g/107022",
+        "affiliateUrl": "https://il.iherb.com/pr/catalina-crunch-protein-cereal-fruity-8-oz-227-g/107022?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "דבש גרהם",
-        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-honey-graham-9-oz-255-g/107040"
+        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-honey-graham-9-oz-255-g/107040",
+        "affiliateUrl": "https://il.iherb.com/pr/catalina-crunch-protein-cereal-honey-graham-9-oz-255-g/107040?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "פירות יער",
-        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-triple-berry-blast-8-oz-227-g/143199"
+        "url": "https://www.iherb.com/pr/catalina-crunch-protein-cereal-triple-berry-blast-8-oz-227-g/143199",
+        "affiliateUrl": "https://il.iherb.com/pr/catalina-crunch-protein-cereal-triple-berry-blast-8-oz-227-g/143199?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       }
     ],
     "desc": "דגני בוקר חלבוניים של Catalina Crunch - 11 גרם חלבון ו-0 גרם סוכר למנה, בסיס מקמח אפונה וסיבים. 6 טעמים: קינמון, שוקולד-בוטנים, שוקולד מריר, פירותי, דבש גרהם ופירות יער. ללא גלוטן, קיטו ידידותי. כשר CRC.",
@@ -7442,11 +7457,13 @@ window.FOODOS_PRODUCTS = [
     "sizes": [
       {
         "label": "שוקולד",
-        "url": "https://il.iherb.com/pr/orgain-organic-protein-50-superfoods-creamy-chocolate-fudge-2-02-lbs-918-g/105862"
+        "url": "https://il.iherb.com/pr/orgain-organic-protein-50-superfoods-creamy-chocolate-fudge-2-02-lbs-918-g/105862",
+        "affiliateUrl": "https://il.iherb.com/pr/orgain-organic-protein-50-superfoods-creamy-chocolate-fudge-2-02-lbs-918-g/105862?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "וניל",
-        "url": "https://www.iherb.com/pr/orgain-organic-protein-50-superfoods-powder-vanilla-bean-2-02-lb-918-g/105861"
+        "url": "https://www.iherb.com/pr/orgain-organic-protein-50-superfoods-powder-vanilla-bean-2-02-lb-918-g/105861",
+        "affiliateUrl": "https://il.iherb.com/pr/orgain-organic-protein-50-superfoods-powder-vanilla-bean-2-02-lb-918-g/105861?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       }
     ],
     "desc": "אבקת חלבון צמחית עם 21 גרם חלבון ו-50 ירקות, פירות ועשבים לכל מנה. אחת הפופולריות בארה\"ב בקטגוריה. OU פרווה, אורגני.",
@@ -7515,11 +7532,13 @@ window.FOODOS_PRODUCTS = [
     "sizes": [
       {
         "label": "שוקולד חלב",
-        "url": "https://il.iherb.com/pr/peanut-butter-co-hazelnut-spread-milk-chocolatey-hazelnut-13-oz-369-g/85810"
+        "url": "https://il.iherb.com/pr/peanut-butter-co-hazelnut-spread-milk-chocolatey-hazelnut-13-oz-369-g/85810",
+        "affiliateUrl": "https://il.iherb.com/pr/peanut-butter-co-hazelnut-spread-milk-chocolatey-hazelnut-13-oz-369-g/85810?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       },
       {
         "label": "שוקולד מריר",
-        "url": "https://il.iherb.com/pr/peanut-butter-co-hazelnut-spread-dark-chocolatey-hazelnut-13-oz-369-g/85811"
+        "url": "https://il.iherb.com/pr/peanut-butter-co-hazelnut-spread-dark-chocolatey-hazelnut-13-oz-369-g/85811",
+        "affiliateUrl": "https://il.iherb.com/pr/peanut-butter-co-hazelnut-spread-dark-chocolatey-hazelnut-13-oz-369-g/85811?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
       }
     ],
     "certVerified": true,
@@ -10373,5 +10392,77 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://il.iherb.com/pr/viva-naturals-organic-psyllium-husk-powder-24-oz-680-g/113541?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 107.51,
     "available": true
+  },
+  {
+    "id": 678,
+    "name": "McCormick, All Purpose Seasoning, Everything Bagel with Sesame Seed, Onion, Garlic Salt and Poppy Seed, 4.8 oz (136 g)",
+    "url": "https://www.iherb.com/pr/mccormick-all-purpose-seasoning-everything-bagel-with-sesame-seed-onion-garlic-salt-and-poppy-seed-4-8-oz-136-g/121842",
+    "desc": "תיבול \"אוורית בייגל\" של McCormick: שומשום, בצל, מלח שום וזרעי פרג. מוסיפים על ביצה, אבוקדו, עוף או כל מה שרוצים לשדרג. כשרות OU, פליאו, ללא גלוטן.",
+    "cert": "OU",
+    "cat": "תבלינים",
+    "conf": "גבוהה",
+    "brand": "McCormick",
+    "longDesc": "תערובת התיבול שמדמה את הטעם האייקוני של בייגל \"אוורית\", בלי שום צורך באפייה: שומשום, בצל מיובש, מלח שום וזרעי פרג. מצוין על ביצים, אבוקדו טוסט, גבינה רכה, סלט או אפילו פופקורן. (כשרות OU).\n\nכדאי לדעת: המותג מציע עוד שני טעמים באותה סדרה, Umami עם פטריות ובצל, וגארלik-בצל עם פלפל שחור ומלח ים, שני אלה גם כן OU ופליאו.",
+    "descNew": "תיבול \"אוורית בייגל\" של McCormick: שומשום, בצל, מלח שום וזרעי פרג. כשרות OU, פליאו, ללא גלוטן.",
+    "nameHe": "תיבול אוורית בייגל",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["פליאו", "ללא גלוטן"],
+    "img": "https://s3.images-iherb.com/mci/mci00774/v/24.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/mccormick-all-purpose-seasoning-everything-bagel-with-sesame-seed-onion-garlic-salt-and-poppy-seed-4-8-oz-136-g/121842?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 31.21,
+    "available": true,
+    "seeAlso": [679, 680],
+    "seeAlsoNote": "עוד תיבולים מהסדרה:"
+  },
+  {
+    "id": 679,
+    "name": "McCormick, All Purpose Seasoning, Umami Seasoning with Mushrooms and Onion, 4.59 oz (130 g)",
+    "url": "https://www.iherb.com/pr/mccormick-all-purpose-seasoning-umami-seasoning-with-mushrooms-and-onion-4-59-oz-130-g/121841",
+    "desc": "תיבול אומאמי עם פטריות ובצל של McCormick, טעם עמוק ו\"בשרי\" בלי בשר. מעולה לירקות, אורז, טופו ומרקים. כשרות OU, פליאו, ללא גלוטן.",
+    "cert": "OU",
+    "cat": "תבלינים",
+    "conf": "גבוהה",
+    "brand": "McCormick",
+    "longDesc": "תערובת תיבול שמבוססת על פטריות ובצל מיובשים, מיועדת להוסיף עומק וטעם אומאמי (הטעם החמישי) לכל מנה, במיוחד מנות צמחוניות שרוצות \"תחושה בשרית\" בלי בשר בפועל. (כשרות OU).\n\nכדאי לדעת: חלק מסדרה של 3 תיבולים מאותו קו (גם Everything Bagel וגם Garlic-Onion), כולם OU ופליאו.",
+    "descNew": "תיבול אומאמי עם פטריות ובצל של McCormick, טעם עמוק בלי בשר. כשרות OU, פליאו, ללא גלוטן.",
+    "nameHe": "תיבול אומאמי, פטריות ובצל",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["פליאו", "ללא גלוטן"],
+    "img": "https://s3.images-iherb.com/mci/mci05311/v/24.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/mccormick-all-purpose-seasoning-umami-seasoning-with-mushrooms-and-onion-4-59-oz-130-g/121841?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 30.79,
+    "available": true,
+    "seeAlso": [678, 680],
+    "seeAlsoNote": "עוד תיבולים מהסדרה:"
+  },
+  {
+    "id": 680,
+    "name": "McCormick, All Purpose Seasoning, Garlic and Onion + Black Pepper and Sea Salt, 4.25 oz (120 g)",
+    "url": "https://www.iherb.com/pr/mccormick-all-purpose-seasoning-garlic-and-onion-black-pepper-and-sea-salt-4-25-oz-120-g/121844",
+    "desc": "תיבול שום-בצל עם פלפל שחור ומלח ים של McCormick, תיבול \"הכל-יכול\" בסיסי ואמין. כשרות OU, פליאו, ללא גלוטן.",
+    "cert": "OU",
+    "cat": "תבלינים",
+    "conf": "גבוהה",
+    "brand": "McCormick",
+    "longDesc": "תערובת תיבול קלאסית של שום, בצל, פלפל שחור ומלח ים, בלי שום תוספות או טעמים חריגים. מתאים לכל דבר: עוף, בשר, ירקות, תפוחי אדמה. (כשרות OU).\n\nכדאי לדעת: חלק מסדרה של 3 תיבולים מאותו קו (גם Everything Bagel וגם Umami פטריות ובצל), כולם OU ופליאו.",
+    "descNew": "תיבול שום-בצל עם פלפל שחור ומלח ים של McCormick. כשרות OU, פליאו, ללא גלוטן.",
+    "nameHe": "תיבול שום-בצל ופלפל שחור",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["פליאו", "ללא גלוטן"],
+    "img": "https://s3.images-iherb.com/mci/mci04080/v/24.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/mccormick-all-purpose-seasoning-garlic-and-onion-black-pepper-and-sea-salt-4-25-oz-120-g/121844?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 30.79,
+    "available": true,
+    "seeAlso": [678, 679],
+    "seeAlsoNote": "עוד תיבולים מהסדרה:"
   }
 ];
