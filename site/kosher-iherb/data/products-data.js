@@ -10279,5 +10279,27 @@ window.FOODOS_PRODUCTS = [
     "affiliateUrl": "https://il.iherb.com/pr/vitaworks-kids-melatonin-berry-120-chewables/150995?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 70.59,
     "available": true
+  },
+  {
+    "id": 677,
+    "name": "Viva Naturals, Organic Psyllium Husk Powder, 24 oz (680 g)",
+    "url": "https://www.iherb.com/pr/viva-naturals-organic-psyllium-husk-powder-24-oz-680-g/113541",
+    "desc": "אבקת קליפת פסיליום אורגנית, מקור טוב לסיבים תזונתיים, טחונה דק ומתמוססת בקלות בשייקים ומשקאות. כשרות OU. מאושר קטו ופאלאו, טבעוני, אורגני וללא גלוטן - אחד המוצרים הבודדים באתר עם כל התגיות האלה יחד, לפי בדיקת ה-badge הרשמי בדף iHerb.",
+    "cert": "OU",
+    "cat": "תוספי תזונה",
+    "conf": "גבוהה",
+    "brand": "Viva Naturals",
+    "longDesc": "קליפת פסיליום (Psyllium Husk) היא סיב תזונתי טבעי שסופג נוזלים ותומך בעיכול תקין ובתחושת שובע. האבקה של Viva Naturals טחונה דק (Finely Milled) ומתמוססת בקלות בשייק, מים או מיץ.\n\nעל גבי האריזה מוטבעים סימני הכשר ותזונה ברורים: עיגול U (OU), \"P\" (Paleo Certified), \"KETO CERTIFIED\" ו-\"Vegan\". גם דף המוצר ב-iHerb מאשר רשמית תחת \"Certifications and diet\": Organic, Vegan, Ketogenic diet, Kosher, Paleo, Gluten-free.",
+    "descNew": "אבקת קליפת פסיליום אורגנית, מקור טוב לסיבים, טחונה דק. כשרות OU, מאושר קטו ופאלאו, טבעוני, אורגני וללא גלוטן.",
+    "nameHe": "אבקת קליפת פסיליום אורגנית",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["קטו", "פאלאו", "טבעוני", "ללא גלוטן", "אורגני"],
+    "img": "https://s3.images-iherb.com/vva/vva74787/d/22.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/viva-naturals-organic-psyllium-husk-powder-24-oz-680-g/113541?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 107.51,
+    "available": true
   }
 ];
