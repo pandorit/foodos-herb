@@ -99,6 +99,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/35920/35920.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-garam-masala-seasoning-2-oz-56-g/35920?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -271,6 +272,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/35790/35790.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-vanilla-extract-2-fl-oz-59-ml/35790?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -523,6 +525,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/146949/146949.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/san-j-organic-tamari-brewed-soy-sauce-10-fl-oz-296-ml/146949?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -546,6 +549,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://s3.images-iherb.com/ccs/ccs00204/d/99.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/coconut-secret-coconut-aminos-original-8-fl-oz-237-ml/24098?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 31.45,
     "seeAlso": [
@@ -574,6 +578,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/8260/8260.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-maca-powder-16-oz-454-g/8260?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -667,6 +672,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav02131/d/9.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-sweet-nibs-8-oz-227-g/90332?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 64.52,
     "seeAlso": [
@@ -783,6 +789,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/106033/106033.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/organic-traditions-cacao-butter-8-oz-227-g/106033?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -842,6 +849,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/32749/32749.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/endangered-species-chocolate-88-cocoa-dark-chocolate-3-oz-85-g/32749?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -912,6 +920,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://s3.images-iherb.com/whs/whs92106/d/14.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/wholesome-organic-fair-trade-coconut-palm-sugar-16-oz-454-g/47429?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 33.78,
     "seeAlso": [
@@ -937,6 +946,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/set/set00155/s/26.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/big-tree-farms-organic-coconut-sugar-16-oz-454-g/34435?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 29.08,
     "available": true
   },
@@ -958,6 +968,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/24095/24095.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/coconut-secret-traditional-coconut-nectar-low-glycemic-sweetener-12-fl-oz-355-ml/24095?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1045,6 +1056,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/119819/119819.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/cholula-hot-sauce-original-5-fl-oz-150-ml/119819?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1153,6 +1165,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/32772/32772.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/enjoy-life-foods-dark-chocolate-mini-chips-10-oz-283-g/32772?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1173,6 +1186,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/61075/61075.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/enjoy-life-foods-dark-chocolate-mega-chunks-10-oz-283-g/61075?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1221,6 +1235,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/10177/10177.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/nutrex-hawaii-pure-hawaiian-spirulina-powder-5-oz-142-g/10177?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1241,6 +1256,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/119845/119845.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/popcorners-chips-white-cheddar-7-oz-198-4-g/119845?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1285,6 +1301,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/133549/133549.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/late-july-multigrain-tortilla-chips-sea-salt-7-5-oz-212-g/133549?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1305,6 +1322,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/35902/35902.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-herbes-de-provence-french-blend-with-savory-lavender-0-85-oz-24-g/35902?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1325,6 +1343,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/121901/121901.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-berbere-seasoning-2-3-oz-64-g/121901?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1629,6 +1648,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://s3.images-iherb.com/wld/wld00080/d/63.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/wild-planet-wild-sardines-in-extra-virgin-olive-oil-lightly-smoked-4-4-oz-125-g/34645?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 13.78
   },
@@ -1650,6 +1670,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/75455/75455.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/banza-penne-chickpeas-pasta-8-oz-227-g/75455?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1692,6 +1713,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/108183/108183.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/lundberg-organic-black-pearl-rice-1-lb-454-g/108183?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1712,6 +1734,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/108184/108184.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/lundberg-organic-gourmet-rice-wild-blend-32-oz-907-g/108184?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -1869,6 +1892,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/141372/141372.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-caribbean-jerk-seasoning-16-oz-453-g/141372?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -2025,6 +2049,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/149046/149046.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/bonne-maman-peanut-chocolate-spread-12-3-oz-350-g/149046?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -2047,6 +2072,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/118781/118781.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/taylor-colledge-gourmet-almond-extract-paste-1-4-oz-40-g/118781?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -2069,6 +2095,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "/images/products/Gourmet Lavender Extract Paste.avif",
+    "affiliateUrl": "https://il.iherb.com/pr/taylor-colledge-gourmet-lavender-extract-paste-1-4-oz-40-g/118782?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 33.03
   },
@@ -2270,6 +2297,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/145082/145082.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/carrington-farms-lupin-flour-16-oz-453-5-g/145082?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -2402,6 +2430,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00020/d/31.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-camu-powder-3-oz-85-g/23302?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 69.06
   },
@@ -2534,6 +2563,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/106083/106083.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/health-garden-monk-fruit-with-erythritol-classic-16-oz-454-g/106083?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -2676,6 +2706,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/63968/63968.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/iherb-goods-stainless-steel-tea-infuser-1-count/63968?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -3472,6 +3503,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/109575/109575.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/simply-organic-single-origin-california-onion-2-86-oz-81-g/109575?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -3492,6 +3524,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/99512/99512.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/big-tree-farms-organic-tamarind-teriyaki-marinade-sauce-10-fl-oz-296-ml/99512?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 38.14,
     "available": true
   },
@@ -3546,6 +3579,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/148501/148501.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/genova-yellowfin-tuna-in-extra-virgin-olive-oil-2-5-oz-70-g/148501?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -3787,6 +3821,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "/images/products/Chicory Herbal Coffee, Almond Amaretto.avif",
+    "affiliateUrl": "https://il.iherb.com/pr/teeccino-chicory-herbal-coffee-almond-amaretto-medium-roast-caffeine-free-11-oz-312-g/21370?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 50.87
   },
@@ -3808,6 +3843,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://s3.images-iherb.com/npa/npa77143/d/44.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/nature-s-path-organic-flax-plus-maple-pecan-crunch-cereal-11-5-oz-325-g/96525?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 28
   },
@@ -3829,6 +3865,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/14741/14741.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/organic-india-tulsi-original-caffeine-free-18-infusion-bags-1-14-oz-32-4-g/14741?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -3871,6 +3908,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/68231/68231.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/seapoint-farms-seaweed-crisps-almond-sesame-1-2-oz-35-g/68231?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -3935,6 +3973,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/111681/111681.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/pamela-s-products-pecan-shortbread-cookies-6-25-oz-177-g/111681?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -3955,6 +3994,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/87175/87175.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/nature-s-wild-organic-fitballs-all-natural-snacking-fruit-nut-bites-dates-hazelnuts-coconut-5-1-oz-144-g/87175?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -4001,6 +4041,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/101905/101905.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/pyure-organic-caramel-flavored-syrup-sugar-free-14-fl-oz-414-ml/101905?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -4043,6 +4084,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "tags": [],
     "img": "images/products/296.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/good-sense-plantain-chips-with-sea-salt-12-oz-340-g/138623?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 31.77,
     "available": true
   },
@@ -4064,6 +4106,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "/images/products/Organic Super Seed Crackers.avif",
+    "affiliateUrl": "https://il.iherb.com/pr/mary-s-gone-crackers-organic-super-seed-crackers-seaweed-black-sesame-4-oz-113-g/153318?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 18.77
   },
@@ -4085,6 +4128,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/108498/108498.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/nesquik-nestle-powder-chocolate-10-oz-285-g/108498?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -4127,6 +4171,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://s3.images-iherb.com/bpl/bpl00744/d/32.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/pb2-foods-performance-almond-protein-vanilla-16-oz-454-g/101637?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 98.88
   },
@@ -4278,6 +4323,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/145080/145080.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/carrington-farms-xanthan-gum-5-oz-142-g/145080?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -4298,6 +4344,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/141361/141361.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-xanthan-gum-16-oz-453-g/141361?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -4325,6 +4372,7 @@ window.FOODOS_PRODUCTS = [
     "suspendDate": "2026-09-08",
     "mergedInto": 59,
     "img": "https://s3.images-iherb.com/ccs/ccs00204/d/99.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/coconut-secret-coconut-aminos-original-8-fl-oz-237-ml/24098?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 30.77
   },
@@ -4390,6 +4438,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/104917/104917.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/chickapea-organic-penne-8-oz-227-g/104917?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -4613,6 +4662,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/143548/143548.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/king-oscar-wild-caught-sardines-in-extra-virgin-olive-oil-3-75-oz-106-g/143548?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false,
     "seeAlso": [
       500
@@ -5041,6 +5091,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/23304/23304.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-hemp-seeds-8-oz-227-g/23304?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -5225,6 +5276,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/120211/120211.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/walden-farms-marmalade-fruit-spread-orange-12-oz-340-g/120211?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false,
     "longDesc": "מרמלדת תפוזים המציעה את השילוב הקלאסי בין מתיקות עדינה לבין חרפרפות וחמיצות קלה המאפיינת קליפות הדרים, אך ללא גרם אחד של סוכר או קלוריות. היא אידיאלית למי שאוהב את הטעם הבריטי המסורתי של מרמלדת תפוזים עם התה של הבוקר, אך מעוניין להימנע מהסוכר והפחמימות של ריבות מסחריות. מצוינת כמריחה על לחם, או כזיגוג קליל ולא מעיק על נתחי עוף בתנור. (כשרות OU)."
   },
@@ -5373,6 +5425,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/122714/122714.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/walden-farms-chicken-dip-n-sauce-sweet-tangy-11-5-fl-oz-340-ml/122714?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -5392,6 +5445,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/20088/20088.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/walden-farms-calorie-free-dressing-italian-12-fl-oz-355-ml/20088?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -5558,6 +5612,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/75287/75287.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/simple-mills-almond-flour-crackers-cracked-black-pepper-4-25-oz-120-g/75287?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false,
     "longDesc": "קרקרים אפויים המבוססים על קמח שקדים ותערובת זרעים, בתוספת נוכחות בולטת של פלפל שחור גרוס. הפלפל אינו משמש כאן רק כתבלין רקע, אלא מעניק עוקצנות חמימה ומעט פיקנטית. הפרופיל הזה הופך אותם למלווים אידיאליים במגשי אירוח: החריפות העדינה חותכת נהדר את השומניות של גבינות עשירות (כמו ברי או קממבר) או מטבלי שמנת כבדים. הם נטולי גלוטן ומהווים אלטרנטיבה מזינה ודלת-פחמימה לאירוח.\n\nכדאי לדעת: הם מעניינים בעיקר כאלטרנטיבה ללא גלוטן וכקרקר עם בסיס אגוזים/זרעים. זה לא אומר בהכרח שהם דלי קלוריות יותר מקרקר רגיל, ההבדל הוא בהרכב, בטעם ובמרקם."
   },
@@ -6392,6 +6447,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/59713/59713.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/sahale-snacks-berry-macaroon-almond-mix-7-oz-198-g/59713?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -6412,6 +6468,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/63891/63891.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/sahale-snacks-almond-trail-mix-mango-tango-9-packs-1-5-oz-42-5-g-each/63891?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -6432,6 +6489,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/63888/63888.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/sahale-snacks-trail-mix-classic-fruit-nut-9-packs-1-5-oz-42-5-g-each/63888?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 84.35,
     "available": true
   },
@@ -6608,6 +6666,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://s3.images-iherb.com/tcc/tcc00678/d/34.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/true-citrus-true-lemon-crystallized-lemon-2-12-oz-60-g/88627?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 13.81,
     "seeAlso": [
@@ -6761,6 +6820,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/119040/119040.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/quest-nutrition-protein-cookie-peanut-butter-chocolate-chip-4-cookies-2-04-oz-58-g-each/119040?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -6825,6 +6885,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/155662/155662.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/jonnypops-freeze-dried-minis-raspberry-blueberry-cream-5-pops-10-g-each/155662?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false
   },
   {
@@ -6899,6 +6960,7 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/149626/149626.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/ready-protein-puffs-cinnamon-sugar-6-bags-3-17-oz-90-g-each/149626?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false,
     "seeAlso": [
       479,
@@ -6989,6 +7051,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "certVerified": true,
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/83676/83676.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/mike-s-hot-honey-infused-with-chilies-12-oz-340-g/83676?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false,
     "seeAlso": [
       478
@@ -7012,6 +7075,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "certVerified": true,
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/143033/143033.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/organic-india-chocolate-moringa-latte-superfood-mix-3-52-oz-100-g/143033?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false,
     "longDesc": "Chocolate Moringa Latte הוא תערובת לשתייה חמה המבוססת על קקאו, עלי מורינגה, אשווגנדה, כורכום ורכיבים צמחיים נוספים. המורינגה עצמה בעלת טעם ירוק-עשבוני, והקקאו נועד לאזן אותו; זהו משקה תערובת, לא קקאו חם קלאסי (כשרות OU).\n\nלעומת שוקו רגיל, הוא פחות מתוק ובעל טעם צמחי-מתובל יותר. לעומת מאצ'ה, הוא אינו מבוסס על תה ירוק ובדרך כלל אינו מכיל קפאין משמעותי; ההגדרות \"אדפטוגני\" ו\"סופרפוד\" אינן הבטחה להשפעה רפואית.\n\nרעיונות לשימוש:\n• לערבב 2 כפיות אבקה בכוס חלב חם או משקה צמחי\n• להקציף עם מעט נוזל חם בתחילה, ואז להוסיף את יתר החלב כדי לצמצם גושים\n• להכין משקה קר עם כוס חלב צמחי וקרח בבלנדר\n• להוסיף מעט סילאן או מייפל רק לאחר טעימה, אם הטעם הצמחי מורגש מדי"
   },
@@ -7053,6 +7117,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "edited",
     "certVerified": true,
     "img": "/images/products/Sunfood, Superfoods, Organic Matcha Powder.avif",
+    "affiliateUrl": "https://il.iherb.com/pr/sunfood-superfoods-organic-matcha-powder-4-oz-113-g/77003?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 60.02,
     "available": true,
     "seeAlso": [
@@ -7079,6 +7144,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "edited",
     "certVerified": true,
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/106063/106063.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/organic-traditions-superfoods-premium-tea-matcha-3-5-oz-100-g/106063?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 98.7,
     "available": true,
     "seeAlso": [
@@ -7128,6 +7194,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "edited",
     "certVerified": true,
     "img": "https://s3.images-iherb.com/lsf/lsf00688/d/2.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/laird-superfood-morning-jumpstart-2-7-oz-77-g/143805?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 74.28
   },
@@ -7170,6 +7237,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "edited",
     "certVerified": true,
     "img": "https://s3.images-iherb.com/lsf/lsf00601/d/12.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/laird-superfood-superfood-creamer-sweet-creamy-8-oz-227-g/77801?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 41.51
   },
@@ -7192,6 +7260,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved",
     "certVerified": true,
     "img": "https://s3.images-iherb.com/lsf/lsf13058/d/2.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/laird-superfood-instant-latte-chai-creamer-adaptogens-chai-8-oz-227-g/143678?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 53.37
   },
@@ -7276,6 +7345,7 @@ window.FOODOS_PRODUCTS = [
     "_certVerified": true,
     "dairy": false,
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/134599/134599.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/terra-real-vegetable-chips-sweet-potato-with-sea-salt-6-8-oz-192-g/134599?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": false,
     "seeAlso": [
       462
@@ -7524,6 +7594,7 @@ window.FOODOS_PRODUCTS = [
     "_descStatus": "approved",
     "_certVerified": true,
     "img": "https://s3.images-iherb.com/sog/sog18528/d/42.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/simply-organic-lemon-flavor-2-fl-oz-59-ml/31277?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
     "priceILS": 19.04,
     "seeAlso": [
@@ -7595,6 +7666,7 @@ window.FOODOS_PRODUCTS = [
     ],
     "url": "https://il.iherb.com/pr/nate-s-honey-hot-honey-infused-with-chili-pepper-16-oz-454-g/162072",
     "img": "/images/products/Nate's Honey, Hot Honey, Infused with Chili Pepper.avif",
+    "affiliateUrl": "https://il.iherb.com/pr/nate-s-honey-hot-honey-infused-with-chili-pepper-16-oz-454-g/162072?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 49.49,
     "available": true,
     "desc": "דבש פרחוני עם פלפל צ'ילי, גרסה גדולה יותר (454 גרם) עם כשרות OU. טעם מתוק-חריף עדין, מצוין לגבינות, פיצה ואפייה. אלטרנטיבה מעולה ל-Mike's.",
