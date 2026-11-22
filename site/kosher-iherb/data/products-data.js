@@ -10464,5 +10464,27 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "seeAlso": [678, 679],
     "seeAlsoNote": "עוד תיבולים מהסדרה:"
+  },
+  {
+    "id": 681,
+    "name": "Frontier Co-op, Gochugaru, Spicy & Sweet, 1.65 oz (47 g)",
+    "url": "https://www.iherb.com/pr/frontier-co-op-gochugaru-spicy-sweet-1-65-oz-47-g/145362",
+    "desc": "גוצ'וגארו, פלפל צ'ילי קוריאני טחון-גס, חריף ומתוק כאחד. הבסיס לקימצ'י אמיתי ולכל מנה קוריאנית מתובלת. כשרות KSA.",
+    "cert": "KSA",
+    "cat": "תבלינים",
+    "conf": "גבוהה",
+    "brand": "Frontier Co-op",
+    "longDesc": "גוצ'וגארו הוא פלפל צ'ילי קוריאני מיובש וטחון גס, עם חריפות מתונה-בינונית ומתיקות עדינה ברקע, שונה מפפריקה או צ'ילי פלקס רגילים בטעם ובמרקם. זהו המרכיב המרכזי בהכנת קימצ'י ביתי, וגם מצוין בתיבול מרקים קוריאניים, רטבים ומרינדות. (כשרות KSA).\n\nכדאי לדעת: אם מכינים קימצ'י בבית, זה הרכיב שהכי קשה למצוא תחליף איכותי שלו, אל תחליפו בפפריקה רגילה כי הטעם שונה משמעותית.",
+    "descNew": "גוצ'וגארו, פלפל צ'ילי קוריאני טחון-גס, חריף ומתוק. הבסיס לקימצ'י אמיתי. כשרות KSA.",
+    "nameHe": "גוצ'וגארו, פלפל צ'ילי קוריאני",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": [],
+    "img": "https://s3.images-iherb.com/fro/fro18344/v/8.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-gochugaru-spicy-sweet-1-65-oz-47-g/145362?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 25.94,
+    "available": true
   }
 ];
