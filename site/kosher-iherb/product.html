@@ -386,6 +386,33 @@
       max-width: 700px;
     }
 
+    .cert-section {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 2.4rem 0;
+    }
+    .cert-inner {
+      max-width: 1160px; margin: 0 auto; padding: 0 2rem;
+      display: flex; align-items: center; gap: 1.4rem;
+    }
+    .cert-logo-small {
+      width: 64px; height: 64px; flex-shrink: 0;
+      background: white; border: 1px solid var(--border); border-radius: 14px;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .cert-logo-small img { max-width: 80%; max-height: 80%; object-fit: contain; }
+    .cert-logo-small .cert-fallback-small { font-family: var(--serif); font-weight: 900; font-size: 1.2rem; color: var(--teal-dark); }
+    .cert-text-col { flex: 1; }
+    .cert-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 0.3rem;
+    }
+    .cert-name-link { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--text); }
+    .cert-name-link:hover { color: var(--teal); text-decoration: underline; }
+    .cert-desc-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; max-width: 700px; margin-top: 0.3rem; }
+    .cert-desc-text a { color: var(--teal-dark); font-weight: 600; }
+    @media (max-width: 640px) { .cert-inner { flex-direction: column; align-items: flex-start; } }
+
     /* ── RELATED SECTION ── */
     .related-section { padding: 3.5rem 0 4rem; background: var(--bg); }
     .related-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
@@ -857,6 +884,21 @@
         </div>
       </section>
 
+      <!-- CERT SECTION -->
+      <section class="cert-section" id="cert-section" style="display:none;">
+        <div class="cert-inner">
+          <div class="cert-logo-small" id="cert-logo-small">
+            <img id="cert-logo-small-img" src="" alt="" style="display:none">
+            <span class="cert-fallback-small" id="cert-fallback-small"></span>
+          </div>
+          <div class="cert-text-col">
+            <div class="cert-label">הכשרות</div>
+            <a class="cert-name-link" id="cert-name-link" href="#"></a>
+            <p class="cert-desc-text" id="cert-desc-text"></p>
+          </div>
+        </div>
+      </section>
+
       <!-- BRAND SECTION -->
       <section class="brand-section" id="brand-section" style="display:none;">
         <div class="brand-inner">
@@ -968,6 +1010,36 @@
       if (msg) document.getElementById('error-msg').textContent = msg;
     }
 
+    // cert logo images — folder: images/certs/ (same mapping as cert.html)
+    const certImages = {
+      'OU':           'images/certs/OU-Orthodox Union.svg.png',
+      'OK':           'images/certs/OK-Organized Kashrut.png',
+      'KOF-K':        'images/certs/KOF-K Kosher Certification.png',
+      'Star-K':       'images/certs/Star-K-Orthodox Jewish Council of Baltimore.jpg',
+      'KSA':          'images/certs/KSA -Kosher Supervision of America.png',
+      'COR':          'images/certs/COR -Kashruth Council of Canada.png',
+      'CRC':          'images/certs/CRC- Chicago Rabbinical Council.png',
+      'EarthKosher':  'images/certs/EarthKosher- Kosher Certification Agency COLORADO.jpg',
+      'Kehilla Kosher': 'images/certs/Kehilla Kosher Los Angeles - merge with OK.png',
+      'KA':           'images/certs/Kosher Authority of Australia and NZ.jpg',
+      'Kosher Scroll K': 'images/certs/kosher Scroll K.jpg',
+      'KCK':          'images/certs/KCK-Vaad HaKashruth Kansas City.png',
+      'Kosher Check': 'images/certs/Kosher Check.png',
+    };
+    const certFallbackText = {
+      'OU':'OU','OK':'OK','KOF-K':'K','Star-K':'★K','KSA':'KSA',
+      'EarthKosher':'🌍','COR':'COR','CRC':'cRc','Kehilla Kosher':'K',
+      'KA':'KA','Kosher Check':'✓','Kosher Scroll K':'K','KCK':'KCK'
+    };
+    let certsData = [];
+
+    // משפט וחצי על ההכשרה: המשפט הראשון המלא מתוך certDesc, בלי לגרור את כל הפסקה
+    function certShortBlurb(certDesc) {
+      if (!certDesc) return '';
+      const sentences = certDesc.match(/[^.!?]+[.!?]+/g) || [certDesc];
+      return sentences[0].trim();
+    }
+
     // ── Main ──────────────────────────────────────────────────────────────────
     async function init() {
       const productId = parseInt(getParam('id'), 10);
@@ -985,11 +1057,15 @@
 
       // Then fetch the admin-editable JSON and merge it on top (JSON wins for any field it defines)
       try {
-        const [pRes, bRes, cRes] = await Promise.all([
+        const [pRes, bRes, cRes, certsRes] = await Promise.all([
           fetch('data/products_explained_human_descriptions.json?v=' + Date.now()),
           fetch('data/brands.json'),
-          fetch('data/content.json?v=' + Date.now())
+          fetch('data/content.json?v=' + Date.now()),
+          fetch('data/certs_with_descriptions.json?v=' + Date.now())
         ]);
+        if (certsRes.ok) {
+          try { certsData = await certsRes.json(); } catch(e) {}
+        }
         if (cRes.ok) {
           try {
             const cdata = await cRes.json();
@@ -1303,6 +1379,33 @@
       // ── Show product content
       document.getElementById('loading-state').style.display = 'none';
       document.getElementById('product-content').style.display = 'block';
+
+      // ── Cert section
+      if (product.cert) {
+        const certInfo = certsData.find(c => c.cert === product.cert);
+        const blurb = certShortBlurb(certInfo && certInfo.certDesc);
+        if (blurb) {
+          const logoImg = document.getElementById('cert-logo-small-img');
+          const logoFallback = document.getElementById('cert-fallback-small');
+          const imgSrc = certImages[product.cert];
+          if (imgSrc) {
+            logoImg.src = imgSrc;
+            logoImg.alt = product.cert;
+            logoImg.style.display = 'block';
+            logoFallback.style.display = 'none';
+          } else {
+            logoImg.style.display = 'none';
+            logoFallback.style.display = 'block';
+            logoFallback.textContent = certFallbackText[product.cert] || product.cert;
+          }
+          const nameLink = document.getElementById('cert-name-link');
+          nameLink.textContent = product.cert;
+          nameLink.href = 'cert.html?c=' + encodeURIComponent(product.cert);
+          document.getElementById('cert-desc-text').innerHTML =
+            blurb + ' <a href="cert.html?c=' + encodeURIComponent(product.cert) + '">עוד על ההכשרה ←</a>';
+          document.getElementById('cert-section').style.display = 'block';
+        }
+      }
 
       // ── Brand section
       if (product.brand && brands[product.brand]) {

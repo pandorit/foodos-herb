@@ -140,6 +140,20 @@
     .cat-hero.dark-bg .cat-stat-label { color: rgba(255,255,255,.82); }
     .cat-hero-emoji { font-size: 8rem; opacity: .18; filter: drop-shadow(0 8px 24px rgba(71,58,94,.3)); }
 
+    /* ── SHARE ROW ── */
+    .share-row { display: flex; align-items: center; gap: 0.6rem; margin-top: 1.4rem; flex-wrap: wrap; }
+    .share-label { font-size: 0.78rem; font-weight: 700; color: var(--text-soft); margin-left: 4px; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: white; border: 1.5px solid var(--border); color: var(--text-mid);
+      font-size: 0.8rem; font-weight: 600; padding: 7px 14px; border-radius: var(--radius-pill);
+      transition: all .18s; cursor: pointer; font-family: var(--sans);
+    }
+    .share-btn:hover { border-color: var(--teal); color: var(--teal-dark); }
+    .share-btn.whatsapp:hover { border-color: #25D366; color: #128C3E; }
+    .share-btn.telegram:hover { border-color: #229ED9; color: #1B7FB0; }
+    .share-btn.facebook:hover { border-color: #1877F2; color: #1456B0; }
+
     /* ── IHERB INFO STRIP ── */
     .iherb-info-strip { background: var(--teal-light); border-bottom: 1px solid rgba(71,58,94,.18); padding: 1.1rem 0; }
     .iherb-info-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: flex-start; gap: 10px; }
@@ -460,6 +474,13 @@
         <div><div class="cat-stat-num" id="stat-brands">—</div><div class="cat-stat-label">מותגים</div></div>
         <div><div class="cat-stat-num" id="stat-certs">—</div><div class="cat-stat-label">הכשרויות</div></div>
       </div>
+      <div class="share-row">
+        <span class="share-label">שתפו את הרשימה:</span>
+        <a class="share-btn whatsapp" id="share-whatsapp" target="_blank" rel="noopener">💬 וואטסאפ</a>
+        <a class="share-btn telegram" id="share-telegram" target="_blank" rel="noopener">✈️ טלגרם</a>
+        <a class="share-btn facebook" id="share-facebook" target="_blank" rel="noopener">📘 פייסבוק</a>
+        <button type="button" class="share-btn" id="share-instagram" onclick="shareInstagram(this)">📸 אינסטגרם (העתק קישור)</button>
+      </div>
     </div>
     <div class="cat-hero-emoji">🛍️</div>
   </div>
@@ -691,8 +712,34 @@
   let CATEGORY_SLUGS = {}; // שם קטגוריה בעברית -> slug אנגלי
   function catSlug(heb) { return CATEGORY_SLUGS[heb] || encodeURIComponent(heb); }
 
+  function setupShareLinks() {
+    const pageUrl = location.href;
+    const shareText = 'ההמלצות שלי למבצע בלאק פריידי הכשר של iHerb 🛍️';
+    const waLink = document.getElementById('share-whatsapp');
+    if (waLink) waLink.href = 'https://wa.me/?text=' + encodeURIComponent(shareText + '\n' + pageUrl);
+    const tgLink = document.getElementById('share-telegram');
+    if (tgLink) tgLink.href = 'https://t.me/share/url?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(shareText);
+    const fbLink = document.getElementById('share-facebook');
+    if (fbLink) fbLink.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl);
+  }
+
+  function shareInstagram(btn) {
+    const pageUrl = location.href;
+    const done = () => {
+      const prev = btn.textContent;
+      btn.textContent = '✓ הועתק! הדביקו בסטורי או בביו';
+      setTimeout(() => { btn.textContent = prev; }, 2500);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(pageUrl).then(done).catch(() => fallbackCopy(pageUrl, done));
+    } else {
+      fallbackCopy(pageUrl, done);
+    }
+  }
+
   async function init() {
     window._titleReady = true;
+    setupShareLinks();
     if (typeof window.maybeSendGA4PageView === 'function') window.maybeSendGA4PageView();
 
     // Load products — start with embedded JS, then merge JSON overrides on top
