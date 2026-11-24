@@ -10963,5 +10963,29 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "seeAlso": [690, 691],
     "seeAlsoNote": "עוד מוצרי Om Mushrooms:"
+  },
+  {
+    "id": 702,
+    "name": "Om Mushrooms, Turkey Tail Mushroom Capsules, 90 Vegetable Capsules",
+    "url": "https://il.iherb.com/pr/om-mushrooms-turkey-tail-mushroom-capsules-90-vegetable-capsules/87228",
+    "desc": "תוסף פטריית Turkey Tail (זנב הודו) בקפסולות של Om Mushrooms. פטרייה פונקציונלית הנחקרת בעיקר בהקשר חיסוני. טבעוני, ללא גלוטן. כשרות EarthKosher.",
+    "cert": "EarthKosher",
+    "cat": ["תוספי תזונה", "פטריות פונקציונליות"],
+    "conf": "גבוהה",
+    "brand": "Om Mushrooms",
+    "longDesc": "קפסולות המכילות פטריית Turkey Tail (זנב הודו, Trametes versicolor), אחת מהפטריות הפונקציונליות הנחקרות ביותר, בעיקר בהקשר של תמיכה במערכת החיסון. Om Mushrooms מגדלת אותה בקליפורניה (כשרות EarthKosher).\n\nכדאי לדעת: זהו תוסף תזונה, לא תרופה, ואינו מיועד לאבחון, טיפול או ריפוי מחלה. נטילת כל תוסף, ובפרט בהריון, בהנקה או תחת טיפול תרופתי, מחייבת התייעצות עם רופא/ה.\n\nאופן נטילה מומלץ: 3 קפסולות ליום לפי היצרן, ניתן לחלק למספר מנות.",
+    "descNew": "תוסף פטריית Turkey Tail (זנב הודו) בקפסולות של Om Mushrooms. פטרייה פונקציונלית הנחקרת בעיקר בהקשר חיסוני. טבעוני, ללא גלוטן. כשרות EarthKosher.",
+    "nameHe": "טורקי טייל (זנב הודו) בקפסולות",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["טבעוני", "ללא גלוטן"],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/omm/omm00823/v/66.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/om-mushrooms-turkey-tail-mushroom-capsules-90-vegetable-capsules/87228?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 123.38,
+    "available": true,
+    "seeAlso": [690, 691, 701],
+    "seeAlsoNote": "עוד מוצרי Om Mushrooms:"
   }
 ];
