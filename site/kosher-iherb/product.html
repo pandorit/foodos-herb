@@ -430,6 +430,7 @@
       display: flex; flex-direction: column; gap: 0.6rem;
     }
     .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .related-cert-icon { width: 13px; height: 13px; object-fit: contain; border-radius: 2px; background: white; flex-shrink: 0; }
     .related-cert {
       display: inline-flex; align-items: center; gap: 4px;
       background: var(--teal); color: white;
@@ -1473,7 +1474,8 @@
 
           const certSpan = document.createElement('span');
           certSpan.className = 'related-cert';
-          certSpan.textContent = certLabel(rel.cert);
+          const relIconSrc = certImages[rel.cert];
+          certSpan.innerHTML = (relIconSrc ? `<img src="${relIconSrc}" class="related-cert-icon" alt="" loading="lazy" onerror="this.remove()">` : '') + escape(certLabel(rel.cert));
 
           const nameDiv = document.createElement('div');
           nameDiv.className = 'related-name';
