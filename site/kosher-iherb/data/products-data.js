@@ -10987,5 +10987,29 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "seeAlso": [690, 691, 701],
     "seeAlsoNote": "עוד מוצרי Om Mushrooms:"
+  },
+  {
+    "id": 703,
+    "name": "Om Mushrooms, Superfood Mushroom Blend, Hot Chocolate, 8.47 oz (240 g)",
+    "url": "https://il.iherb.com/pr/om-mushrooms-superfood-mushroom-blend-hot-chocolate-8-47-oz-240-g/110600",
+    "desc": "תערובת שוקו חם עם פטריות פונקציונליות ואשווגנדה של Om Mushrooms, ממותקת במונק פרוט וסוכר קוקוס. אורגני, טבעוני, ללא גלוטן. כשרות EarthKosher.",
+    "cert": "EarthKosher",
+    "cat": ["שתייה חמה", "פטריות פונקציונליות"],
+    "conf": "גבוהה",
+    "brand": "Om Mushrooms",
+    "longDesc": "תערובת שוקו חם המשלבת קקאו אורגני עם תערובת פטריות פונקציונליות ותמצית אשווגנדה (KSM-66), ממותקת במונק פרוט וסוכר קוקוס בלבד. מיועדת למי שרוצה לשלב את הטקס היומיומי של שוקו חם עם היתרונות המיוחסים לפטריות פונקציונליות ולאשווגנדה (כשרות EarthKosher).\n\nכדאי לדעת: כמו מוצרי מזון רבים, האריזה נושאת אזהרת Prop 65 הסטנדרטית של קליפורניה (חשיפה אפשרית לעופרת ברמת עקבות טבעית), נפוצה במוצרי קקאו וצמחים רבים ואינה ייחודית למוצר הזה. מיוצר במפעל שמעבד גם חיטה, סויה, חלב, אגוזים ודגים.\n\nאופן הכנה: כף אחת בכוס מים חמים או חלב/תחליף חלב, לערבב היטב.",
+    "descNew": "תערובת שוקו חם עם פטריות פונקציונליות ואשווגנדה של Om Mushrooms, ממותקת במונק פרוט וסוכר קוקוס. אורגני, טבעוני, ללא גלוטן. כשרות EarthKosher.",
+    "nameHe": "שוקו חם עם תערובת פטריות ואשווגנדה",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["אורגני", "טבעוני", "ללא גלוטן"],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/omm/omm99689/v/56.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/om-mushrooms-superfood-mushroom-blend-hot-chocolate-8-47-oz-240-g/110600?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 168.37,
+    "available": true,
+    "seeAlso": [690, 691, 701, 702],
+    "seeAlsoNote": "עוד מוצרי Om Mushrooms:"
   }
 ];
