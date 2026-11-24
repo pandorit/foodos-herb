@@ -10722,5 +10722,27 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "seeAlso": [690],
     "seeAlsoNote": "עוד מוצרי פטריות פונקציונליות:"
+  },
+  {
+    "id": 692,
+    "name": "Barney Butter, Bare Almond Butter, Smooth, 10 oz (284 g)",
+    "url": "https://il.iherb.com/pr/barney-butter-bare-almond-butter-smooth-10-oz-284-g/71265",
+    "desc": "ממרח שקדים חלק של Barney Butter, מרכיב יחיד בנוסף לשמן דקלים לייצוב המרקם. טבעוני, קטוגני, פליאו, ללא גלוטן. כשרות OU.",
+    "cert": "OU",
+    "cat": "ממרחים",
+    "conf": "גבוהה",
+    "brand": "Barney Butter",
+    "longDesc": "ממרח שקדים \"עירום\" (Bare) עם שני מרכיבים בלבד: שקדים ושמן דקלים (לייצוב מרקם ומניעת הפרדת שמן). ללא סוכר, מלח או תוספים אחרים, כך שהטעם הוא שקדים נקי. Barney Butter מייצרת במפעל ללא בוטנים (Peanut-free facility), חשוב לרגישים (כשרות OU).\n\nכדאי לדעת: לעומת חמאת שקדים \"קרנצ'י\", זו גרסה חלקה לגמרי. לעומת חמאת בוטנים, הטעם עדין יותר ופחות מלוח-ממותק.\n\nרעיונות לשימוש:\n• מריחה על טוסט או קרקר\n• בשייק בוקר עם בננה\n• כבסיס לרוטב לסלט אסייתי\n• באפיית עוגיות או אנרג'י בולס",
+    "descNew": "ממרח שקדים חלק של Barney Butter, מרכיב יחיד בנוסף לשמן דקלים לייצוב המרקם. טבעוני, קטוגני, פליאו, ללא גלוטן. כשרות OU.",
+    "nameHe": "ממרח שקדים חלק",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["טבעוני", "קטוגני", "פליאו", "ללא גלוטן"],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/byb/byb35125/v/39.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/barney-butter-bare-almond-butter-smooth-10-oz-284-g/71265?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 34.62,
+    "available": true
   }
 ];
