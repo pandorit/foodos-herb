@@ -1047,6 +1047,27 @@
       let baseProducts = window.FOODOS_PRODUCTS || [];
       brands = window.FOODOS_BRANDS || {};
 
+      // Set the real title/meta immediately from the embedded data, before the network
+      // fetches below resolve. Without this, document.title stays on the generic
+      // placeholder ("מוצר כשר מ-iHerb...") for the whole fetch round-trip, which both
+      // Google Analytics and (worse) Googlebot can see - hundreds of product pages all
+      // reporting the same generic title looks like duplicate content. renderProduct()
+      // re-sets these same fields later once the JSON override is merged in, so this is
+      // just a fast first pass, not a correctness risk.
+      const earlyProduct = baseProducts.find(p => p.id === productId && !p.suspended);
+      if (earlyProduct) {
+        const earlyTitle = (earlyProduct.nameHe || earlyProduct.name) + ' כשר מ-iHerb, Foodos Online';
+        document.title = earlyTitle;
+        window._titleReady = true;
+        if (typeof window.maybeSendGA4PageView === 'function') window.maybeSendGA4PageView();
+        document.getElementById('og-title').setAttribute('content', earlyTitle);
+        const earlyDesc = (earlyProduct.descNew || earlyProduct.desc || '').substring(0, 155);
+        if (earlyDesc) {
+          document.getElementById('meta-description').setAttribute('content', earlyDesc);
+          document.getElementById('og-description').setAttribute('content', earlyDesc);
+        }
+      }
+
       // Then fetch the admin-editable JSON and merge it on top (JSON wins for any field it defines)
       try {
         const [pRes, bRes, cRes, certsRes] = await Promise.all([

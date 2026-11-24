@@ -758,28 +758,46 @@
   let CATEGORY_SLUGS = {}; // שם קטגוריה בעברית -> slug אנגלי
   function catSlug(heb) { return CATEGORY_SLUGS[heb] || encodeURIComponent(heb); }
 
+    // עותק מקומי קבוע של מיפוי slug->עברית, זהה ל-content.json. קיים כדי שהכותרת
+    // האמיתית תיקבע מיד בטעינת הדף, בלי להמתין לרשת - אחרת document.title נשאר על
+    // "קטגוריה, Foodos Online" הגנרי כל משך קריאת content.json, מה שגם Google
+    // Analytics וגם Googlebot יכולים לתפוס (וליצור רושם של כותרת כפולה בהרבה עמודים).
+    const CATEGORY_SLUGS_INLINE = {"תבלינים":"spices","מלח":"salt","שמנים":"oils","רטבים":"sauces","תיבול":"seasoning","אסייתי":"asian","מרקים":"soups","קמחים":"flours","אפייה":"baking","לחמים":"breads","תוספי אפייה":"baking-supplies","ביסקוויטים":"biscuits","קונדיטוריה":"confectionery","קטניות":"legumes","פסטה":"pasta","דגנים":"grains","דגני בוקר":"cereal","אגוזים וזרעים":"nuts-seeds","חטיפים":"snacks","שוקולד":"chocolate","ממתקים":"candy","ממתקים טבעיים":"natural-sweets","ממתיקים ומוצרים ללא סוכר":"sugar-free","ריבות":"jams","תה":"tea","קפה":"coffee","שתייה חמה":"hot-drinks","שתייה":"drinks","קרמרים ותחליפי חלב":"creamers","ממרחים":"spreads","שימורי דגים":"canned-fish","שימורי תזונתיים":"canned-goods","סופר פוד":"superfood","בריאות":"health","תוספי תזונה":"supplements","מוצרי חלבון":"protein-products","כלי מטבח":"kitchen-tools","מטבח":"kitchen","חומץ":"vinegar","שמרים תזונתיים":"nutritional-yeast","קטניות, אורז ופסטה":"legumes-rice-pasta","ממתיקים טבעיים":"natural-sweeteners"};
+
   async function init() {
-    // טעינת תוכן מ-content.json (לא חיונית — fallback לברירות מחדל מקומיות)
     let slugToHebrew = {};
-    try {
-      if (location.protocol !== 'file:') {
-        const cr = await fetch('data/content.json?v=' + Date.now());
-        if (cr.ok) {
-          const cdata = await cr.json();
-          if (cdata.categories) Object.assign(catDescriptions, cdata.categories);
-          if (cdata.categorySlugs) {
-            CATEGORY_SLUGS = cdata.categorySlugs;
-            Object.entries(cdata.categorySlugs).forEach(([heb, slug]) => { slugToHebrew[slug] = heb; });
-          }
-        }
-      }
-    } catch(e) {}
+    Object.entries(CATEGORY_SLUGS_INLINE).forEach(([heb, slug]) => { slugToHebrew[slug] = heb; });
+    CATEGORY_SLUGS = CATEGORY_SLUGS_INLINE;
 
     const params = new URLSearchParams(location.search);
     const rawCat = params.get('cat') || '';
     // תומך גם ב-slug אנגלי חדש (?cat=supplements) וגם בשם העברי הישן (?cat=תוספי תזונה), לתאימות לאחור
     const catName = slugToHebrew[rawCat] || rawCat;
     resolvedCatName = catName;
+
+    // כותרת וmeta מיידיים, לפני כל קריאת רשת (ראו הערה למעלה)
+    if (catName) {
+      document.title = `${catName} כשר מ-iHerb, Foodos Online`;
+      window._titleReady = true;
+      if (typeof window.maybeSendGA4PageView === 'function') window.maybeSendGA4PageView();
+      document.getElementById('og-title').setAttribute('content', `${catName} כשר מ-iHerb, Foodos Online`);
+      const earlyDesc = catDescriptions[catName] || `מוצרים כשרים בקטגוריית ${catName} מ-iHerb עם משלוח לישראל.`;
+      document.getElementById('meta-description').setAttribute('content', earlyDesc);
+      document.getElementById('og-description').setAttribute('content', earlyDesc);
+      document.getElementById('cat-title').textContent = catName;
+    }
+
+    // טעינת תוכן מ-content.json (לא חיונית — fallback לברירות מחדל מקומיות, כבר הוצגו למעלה)
+    try {
+      if (location.protocol !== 'file:') {
+        const cr = await fetch('data/content.json?v=' + Date.now());
+        if (cr.ok) {
+          const cdata = await cr.json();
+          if (cdata.categories) Object.assign(catDescriptions, cdata.categories);
+          if (cdata.categorySlugs) CATEGORY_SLUGS = cdata.categorySlugs;
+        }
+      }
+    } catch(e) {}
     // תת-סוג (?subtype=שינה) - כדי שאפשר יהיה לשתף קישור ישיר לתת-סינון (תוספי שינה, ממתיקי מונק פרוט וכו')
     const rawSubtype = params.get('subtype');
     if (rawSubtype) activeSubtype = decodeURIComponent(rawSubtype);
@@ -801,13 +819,6 @@
       return;
     }
 
-    document.title = `${catName} כשר מ-iHerb, Foodos Online`;
-    window._titleReady = true;
-    if (typeof window.maybeSendGA4PageView === 'function') window.maybeSendGA4PageView();
-    const catDesc = catDescriptions[catName] || `מוצרים כשרים בקטגוריית ${catName} מ-iHerb עם משלוח לישראל.`;
-    document.getElementById('meta-description').setAttribute('content', catDesc);
-    document.getElementById('og-title').setAttribute('content', `${catName} כשר מ-iHerb, Foodos Online`);
-    document.getElementById('og-description').setAttribute('content', catDesc);
     document.getElementById('bc-cat').textContent = catName;
     
       // Update breadcrumb
