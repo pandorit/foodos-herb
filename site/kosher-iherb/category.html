@@ -766,11 +766,28 @@
     return matches.length ? matches : ['אחר'];
   }
 
+  // תת-קטגוריות לפי סוג פטרייה - רלוונטי רק לקטגוריית "פטריות פונקציונליות"
+  // מוצר "הכל-באחד" (כמו Master Blend) יכול להכיל כמה זנים, ולכן מחזיר מערך של כל ההתאמות
+  const MUSHROOM_SUBTYPES = [
+    { key: 'ליון׳ס מיין',  test: p => /lion.?s mane|ליון.?ס מיין|רעמת האריה|hericium/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'ריישי',        test: p => /reishi|ריישי|רישי|ganoderma/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'צ׳אגה',        test: p => /chaga|צ.?אגה/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'קורדיספס',     test: p => /cordyceps|קורדיספס|קורדיסספס/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'טורקי טייל',   test: p => /turkey tail|טורקי טייל|טרקי טייל/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'מייטייק',      test: p => /maitake|מייטייק/i.test(p.name + ' ' + (p.desc||'')) },
+    { key: 'תערובת זנים',  test: p => /master blend|blend|תערובת|wellness/i.test(p.name + ' ' + (p.desc||'')) },
+  ];
+  function mushroomSubtypes(p) {
+    const matches = MUSHROOM_SUBTYPES.filter(t => t.test(p)).map(t => t.key);
+    return matches.length ? matches : ['אחר'];
+  }
+
   // מחזיר את פונקציית הסיווג הנכונה לפי הקטגוריה הפעילה, תמיד כמערך התאמות (null אם אין תת-סינון לקטגוריה הזו)
   function activeSubtypeFn() {
     if (resolvedCatName === 'תוספי תזונה') return p => [supplementSubtype(p)];
     if (resolvedCatName === 'ממתיקים ומוצרים ללא סוכר') return sweetenerSubtypes;
     if (resolvedCatName === 'ממתיקים טבעיים') return naturalSweetenerSubtypes;
+    if (resolvedCatName === 'פטריות פונקציונליות') return mushroomSubtypes;
     return null;
   }
   const PAGE_SIZE = 12;
@@ -930,7 +947,7 @@
     if (subtypeFn) {
       // תת-קטגוריה (סוג תוסף / סוג ממתיק, לפי הקטגוריה), גם כרשימה נפתחת
       const subtypeLabel = document.getElementById('subtype-filter-label');
-      subtypeLabel.textContent = catName === 'תוספי תזונה' ? 'סוג תוסף:' : 'סוג ממתיק:';
+      subtypeLabel.textContent = catName === 'תוספי תזונה' ? 'סוג תוסף:' : catName === 'פטריות פונקציונליות' ? 'סוג פטרייה:' : 'סוג ממתיק:';
       const subtypeSet = new Set(catProducts.flatMap(subtypeFn));
       const subtypes = ['הכל', ...[...subtypeSet].sort((a,b) => a.localeCompare(b,'he'))];
       subtypeSelect.innerHTML = subtypes.map(s =>

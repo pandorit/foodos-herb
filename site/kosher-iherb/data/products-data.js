@@ -10939,5 +10939,29 @@ window.FOODOS_PRODUCTS = [
     "available": true,
     "seeAlso": [697, 698, 699],
     "seeAlsoNote": "עוד מוצרי מינרלים של Trace:"
+  },
+  {
+    "id": 701,
+    "name": "Om Mushrooms, Mushroom Powder, Cordyceps, 7.05 oz (200 g)",
+    "url": "https://il.iherb.com/pr/om-mushrooms-mushroom-powder-cordyceps-7-05-oz-200-g/112223",
+    "desc": "אבקת פטריית קורדיספס אורגנית של Om Mushrooms, גדלה על שיבולת שועל אורגנית. פטרייה פונקציונלית הנחקרת לתמיכה באנרגיה וסיבולת. טבעוני, ללא גלוטן. כשרות EarthKosher.",
+    "cert": "EarthKosher",
+    "cat": ["תוספי תזונה", "פטריות פונקציונליות"],
+    "conf": "גבוהה",
+    "brand": "Om Mushrooms",
+    "longDesc": "אבקת פטריית קורדיספס (Cordyceps), פטרייה פונקציונלית שנחקרת בעיקר בהקשר של תמיכה באנרגיה, סיבולת גופנית וביצועי אימון. Om Mushrooms מגדלת אותה על שיבולת שועל אורגנית בקליפורניה (כשרות EarthKosher).\n\nכדאי לדעת: זהו תוסף תזונה, לא תרופה, ואינו מיועד לאבחון, טיפול או ריפוי מחלה. נטילת כל תוסף, ובפרט בהריון, בהנקה או תחת טיפול תרופתי, מחייבת התייעצות עם רופא/ה.\n\nאופן שימוש מומלץ: כפית אחת ביום, מעורבבת בשייק, קפה או מאצ'ה.",
+    "descNew": "אבקת פטריית קורדיספס אורגנית של Om Mushrooms, גדלה על שיבולת שועל אורגנית. פטרייה פונקציונלית הנחקרת לתמיכה באנרגיה וסיבולת. טבעוני, ללא גלוטן. כשרות EarthKosher.",
+    "nameHe": "אבקת קורדיספס",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["טבעוני", "ללא גלוטן"],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/omm/omm55324/v/13.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/om-mushrooms-mushroom-powder-cordyceps-7-05-oz-200-g/112223?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 179.08,
+    "available": true,
+    "seeAlso": [690, 691],
+    "seeAlsoNote": "עוד מוצרי Om Mushrooms:"
   }
 ];
