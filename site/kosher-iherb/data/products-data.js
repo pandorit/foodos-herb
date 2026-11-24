@@ -3249,7 +3249,7 @@ window.FOODOS_PRODUCTS = [
     "tags": ["אורגני"],
     "img": "https://s3.images-iherb.com/bdh/bdh01542/d/40.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/buddha-teas-organic-herbal-tea-mushroom-wellness-blend-caffeine-free-18-tea-bags-1-27-oz-36-g/118839?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 20.95,
+    "priceILS": 36.28,
     "available": true,
     "seeAlso": [662, 668, 669],
     "seeAlsoNote": "עוד תוספי/מוצרי פטריות באתר:"
