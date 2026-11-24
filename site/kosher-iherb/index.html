@@ -729,7 +729,8 @@
     .filter-section { margin-bottom: 1rem; }
     .filter-section-label { font-size: 0.7rem; font-weight: 700; color: var(--text-soft); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.5rem; }
     .filter-pills-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-    .pill-sm { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.73rem; font-weight: 600; padding: 4px 12px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; text-decoration: none; display: inline-block; font-family: inherit; }
+    .pill-sm { border: 1.5px solid var(--border); background: var(--bg); color: var(--text-mid); font-size: 0.73rem; font-weight: 600; padding: 4px 12px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; font-family: inherit; }
+    .pill-cert-icon { width: 16px; height: 16px; object-fit: contain; border-radius: 3px; background: white; flex-shrink: 0; }
     .pill-sm:hover { border-color: var(--teal); color: var(--teal); }
     .pill-sm.active { background: var(--teal-dark); border-color: var(--teal-dark); color: white; }
     /* Tag pills — slightly distinct style */
@@ -856,8 +857,9 @@
     .load-more-btn { background: var(--bg); border: 2px solid var(--border); color: var(--text-mid); font-family: var(--sans); font-size: 0.88rem; font-weight: 600; padding: 12px 32px; border-radius: var(--radius-pill); cursor: pointer; transition: all .18s; }
     .load-more-btn:hover { border-color: var(--teal); color: var(--teal); }
     /* cert-corner clickable */
-    .cert-corner-link { position: absolute; top: 12px; left: 12px; font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); color: white; text-decoration: none; transition: opacity .15s; }
+    .cert-corner-link { position: absolute; top: 12px; left: 12px; font-size: 0.6rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); color: white; text-decoration: none; transition: opacity .15s; display: inline-flex; align-items: center; gap: 4px; }
     .cert-corner-link:hover { opacity: .8; }
+    .cert-corner-icon { width: 13px; height: 13px; object-fit: contain; border-radius: 2px; background: white; flex-shrink: 0; }
     .card-like-btn { position: absolute; top: 10px; right: 10px; background: white; border: none; cursor: pointer; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 6px rgba(0,0,0,.12); transition: transform .18s, box-shadow .18s; padding: 0; }
     .card-like-btn:hover { transform: scale(1.15); box-shadow: 0 3px 10px rgba(0,0,0,.18); }
     .card-like-btn svg { width: 16px; height: 16px; transition: fill .2s, stroke .2s; }
@@ -1801,8 +1803,29 @@
     'OK':'#2c7a6e','KOF-K':'#5c4a9a','Star-K':'#8a3c1a',
     'KSA':'#2c6360','EarthKosher':'#3a6e1a','COR':'#1a5c3c','CRC':'#3c1a5c',
     'Kehilla Kosher':'#7a5c2c','Kehilla':'#7a5c2c','KA':'#1a3c5c','Kosher Check':'#3c1a6e',
-    'Kosher Scroll K':'#1a5c5c','כלי מטבח':'#555'
+    'Kosher Scroll K':'#1a5c5c','KCK':'#8a2c5c','כלי מטבח':'#555'
   };
+  // לוגואים אמיתיים של כל גוף הכשרות - אותה מפה שמשמשת גם את cert.html ו-product.html,
+  // כדי שהסימן המוכר יופיע לצד השם בכל מקום שמציג כשרות, לא רק שם כתוב
+  const certImages = {
+    'OU':           'images/certs/OU-Orthodox Union.svg.png',
+    'OK':           'images/certs/OK-Organized Kashrut.png',
+    'KOF-K':        'images/certs/KOF-K Kosher Certification.png',
+    'Star-K':       'images/certs/Star-K-Orthodox Jewish Council of Baltimore.jpg',
+    'KSA':          'images/certs/KSA -Kosher Supervision of America.png',
+    'COR':          'images/certs/COR -Kashruth Council of Canada.png',
+    'CRC':          'images/certs/CRC- Chicago Rabbinical Council.png',
+    'EarthKosher':  'images/certs/EarthKosher- Kosher Certification Agency COLORADO.jpg',
+    'Kehilla Kosher': 'images/certs/Kehilla Kosher Los Angeles - merge with OK.png',
+    'KA':           'images/certs/Kosher Authority of Australia and NZ.jpg',
+    'Kosher Scroll K': 'images/certs/kosher Scroll K.jpg',
+    'KCK':          'images/certs/KCK-Vaad HaKashruth Kansas City.png',
+    'Kosher Check': 'images/certs/Kosher Check.png',
+  };
+  function certIconImg(cert, cls) {
+    const src = certImages[cert];
+    return src ? `<img src="${src}" class="${cls}" alt="" loading="lazy" onerror="this.remove()">` : '';
+  }
 
   function updateHeroStats() {
     const total = allProducts.length;
@@ -1997,7 +2020,7 @@
       if (c === 'הכל') {
         return `<button class="pill pill-sm${activeCert==='הכל'?' active':''}" onclick="setCert(this,'הכל')">הכל</button>`;
       }
-      return `<a class="pill pill-sm" href="cert.html?c=${encodeURIComponent(c)}">${c}</a>`;
+      return `<a class="pill pill-sm" href="cert.html?c=${encodeURIComponent(c)}">${certIconImg(c, 'pill-cert-icon')}${c}</a>`;
     }).join('');
     const sel = document.getElementById('cert-select');
     if (sel) {
@@ -2236,7 +2259,7 @@
           ? `<img src="${p.img}" alt="${p.nameHe||p.name||''}" style="width:100%;height:100%;object-fit:contain;padding:12px" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
           : ''}
         <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
-        <a href="${certUrl}" class="cert-corner-link" title="${p.cert}" style="background:${certColor}" onclick="event.stopPropagation()">${p.cert}</a>
+        <a href="${certUrl}" class="cert-corner-link" title="${p.cert}" style="background:${certColor}" onclick="event.stopPropagation()">${certIconImg(p.cert, 'cert-corner-icon')}${p.cert}</a>
         <button class="card-like-btn" id="like-${p.id}" onclick="event.stopPropagation();toggleLike(${p.id}, this)" title="אהבנו ומכירים">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="heart-fill" d="M12 21C12 21 3 14.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 14.5 12 21 12 21Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>

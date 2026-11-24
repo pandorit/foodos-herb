@@ -136,7 +136,8 @@
     .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .card-img-wrap { background: white; height: 170px; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid rgba(0,0,0,.04); }
     .card-emoji { font-size: 4rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,.08)); }
-    .cert-badge-abs { position: absolute; top: 10px; left: 10px; font-size: 0.58rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); color: white; }
+    .cert-badge-abs { position: absolute; top: 10px; left: 10px; font-size: 0.58rem; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-pill); color: white; display: inline-flex; align-items: center; gap: 4px; }
+    .cert-badge-icon { width: 13px; height: 13px; object-fit: contain; border-radius: 2px; background: white; flex-shrink: 0; }
     .card-body { padding: 1rem 1.1rem 1.2rem; }
     .card-cat-txt { font-size: 0.68rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
     .card-cat-txt a { color: inherit; }
@@ -368,8 +369,27 @@
     'OU':'#1a3c8c','OK':'#2c7a6e','KOF-K':'#5c4a9a','Star-K':'#8a3c1a',
     'KSA':'#2c6360','EarthKosher':'#3a6e1a','COR':'#1a5c3c','CRC':'#3c1a5c',
     'Kehilla':'#7a5c2c','KA':'#1a3c5c','Kosher Check':'#3c1a6e',
-    'Kosher Scroll K':'#1a5c5c','כלי מטבח':'#555'
+    'Kosher Scroll K':'#1a5c5c','KCK':'#8a2c5c','כלי מטבח':'#555'
   };
+  const certImages = {
+    'OU':           'images/certs/OU-Orthodox Union.svg.png',
+    'OK':           'images/certs/OK-Organized Kashrut.png',
+    'KOF-K':        'images/certs/KOF-K Kosher Certification.png',
+    'Star-K':       'images/certs/Star-K-Orthodox Jewish Council of Baltimore.jpg',
+    'KSA':          'images/certs/KSA -Kosher Supervision of America.png',
+    'COR':          'images/certs/COR -Kashruth Council of Canada.png',
+    'CRC':          'images/certs/CRC- Chicago Rabbinical Council.png',
+    'EarthKosher':  'images/certs/EarthKosher- Kosher Certification Agency COLORADO.jpg',
+    'Kehilla Kosher': 'images/certs/Kehilla Kosher Los Angeles - merge with OK.png',
+    'KA':           'images/certs/Kosher Authority of Australia and NZ.jpg',
+    'Kosher Scroll K': 'images/certs/kosher Scroll K.jpg',
+    'KCK':          'images/certs/KCK-Vaad HaKashruth Kansas City.png',
+    'Kosher Check': 'images/certs/Kosher Check.png',
+  };
+  function certIconImg(cert, cls) {
+    const src = certImages[cert];
+    return src ? `<img src="${src}" class="${cls}" alt="" loading="lazy" onerror="this.remove()">` : '';
+  }
 
   let CATEGORY_SLUGS = {}; // שם קטגוריה בעברית -> slug אנגלי
   function catSlug(heb) { return CATEGORY_SLUGS[heb] || encodeURIComponent(heb); }
@@ -505,7 +525,7 @@
               ? `<img src="${p.img}" alt="${(p.nameHe||p.name||'').replace(/"/g,'')}" style="width:100%;height:100%;object-fit:contain;padding:12px" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
               : ''}
             <span class="card-emoji" style="${p.img ? 'display:none' : ''}">${emoji}</span>
-            <a href="cert.html?c=${encodeURIComponent(p.cert||'')}" class="cert-badge-abs" style="background:${cc}" onclick="event.stopPropagation()">${p.cert}</a>
+            <a href="cert.html?c=${encodeURIComponent(p.cert||'')}" class="cert-badge-abs" style="background:${cc}" onclick="event.stopPropagation()">${certIconImg(p.cert, 'cert-badge-icon')}${p.cert}</a>
             ${p.available === false ? '<span class="badge-unavailable">אזל מהמלאי</span>' : ''}
           </div>
           <div class="card-body">
