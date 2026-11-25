@@ -478,10 +478,10 @@
         <div><div class="cat-stat-num" id="stat-certs">—</div><div class="cat-stat-label">הכשרויות</div></div>
       </div>
       <div class="share-row">
-        <span class="share-label">שתפו את הרשימה:</span>
-        <a class="share-btn whatsapp" id="share-whatsapp" target="_blank" rel="noopener">💬 וואטסאפ</a>
-        <a class="share-btn telegram" id="share-telegram" target="_blank" rel="noopener">✈️ טלגרם</a>
-        <a class="share-btn facebook" id="share-facebook" target="_blank" rel="noopener">📘 פייסבוק</a>
+        <span class="share-label">עקבו אחרי העדכונים שלנו גם ב:</span>
+        <a class="share-btn whatsapp" id="share-whatsapp" href="https://chat.whatsapp.com/ETtIfnUzQmhHqsNw4STNlw" target="_blank" rel="noopener">💬 וואטסאפ</a>
+        <a class="share-btn telegram" id="share-telegram" href="https://t.me/foodos_online" target="_blank" rel="noopener">✈️ טלגרם</a>
+        <a class="share-btn facebook" id="share-facebook" href="https://whatsapp.com/channel/0029Vb9TfMg5q08awZsSAC33" target="_blank" rel="noopener">📢 ערוץ עדכונים</a>
         <a class="share-btn" id="share-instagram" href="https://www.instagram.com/foodos.online/" target="_blank" rel="noopener">📸 אינסטגרם</a>
       </div>
     </div>
@@ -738,20 +738,8 @@
   let CATEGORY_SLUGS = {}; // שם קטגוריה בעברית -> slug אנגלי
   function catSlug(heb) { return CATEGORY_SLUGS[heb] || encodeURIComponent(heb); }
 
-  function setupShareLinks() {
-    const pageUrl = location.href;
-    const shareText = 'ההמלצות שלי למבצע בלאק פריידי הכשר של iHerb 🛍️';
-    const waLink = document.getElementById('share-whatsapp');
-    if (waLink) waLink.href = 'https://wa.me/?text=' + encodeURIComponent(shareText + '\n' + pageUrl);
-    const tgLink = document.getElementById('share-telegram');
-    if (tgLink) tgLink.href = 'https://t.me/share/url?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(shareText);
-    const fbLink = document.getElementById('share-facebook');
-    if (fbLink) fbLink.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl);
-  }
-
   async function init() {
     window._titleReady = true;
-    setupShareLinks();
     if (typeof window.maybeSendGA4PageView === 'function') window.maybeSendGA4PageView();
 
     // Load products — start with embedded JS, then merge JSON overrides on top
