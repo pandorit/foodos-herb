@@ -21,6 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="page-title">הכשרות, Foodos Online</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Heebo:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="data/products-data.js?v=20261125"></script>
   <style>
     @font-face {
       font-family: 'VarelaRound';
@@ -530,7 +531,7 @@
   const certFallbackText = {
     'OU':'OU','OK':'OK','KOF-K':'K','Star-K':'★K','KSA':'KSA',
     'EarthKosher':'🌍','COR':'COR','CRC':'cRc','Kehilla Kosher':'K',
-    'KA':'KA','Kosher Check':'✓','Kosher Scroll K':'K','כלי מטבח':'🔪','KCK':'KCK','RCC':'RCC'
+    'KA':'KA','Kosher Check':'✓','Kosher Scroll K':'K','כלי מטבח':'🔪','KCK':'KCK','RCC':'RCC','Star D':'D'
   };
 
   let certProducts = [];
@@ -600,7 +601,14 @@
       fetch('data/certs_with_descriptions.json?v=' + Date.now()),
       fetch('data/content.json?v=' + Date.now())
     ]);
-    const allProducts = (await productsRes.json()).filter(p => !p.suspended);
+    // בסיס: window.FOODOS_PRODUCTS (products-data.js) + דריסה/הוספה מ-JSON הרשמי
+    let rawProducts = window.FOODOS_PRODUCTS || [];
+    const jsonProducts = await productsRes.json();
+    const overrideMap = {};
+    jsonProducts.forEach(p => { overrideMap[p.id] = p; });
+    rawProducts = rawProducts.map(p => overrideMap[p.id] ? Object.assign({}, p, overrideMap[p.id]) : p);
+    jsonProducts.forEach(p => { if (!rawProducts.find(b => b.id === p.id)) rawProducts.push(p); });
+    const allProducts = rawProducts.filter(p => !p.suspended);
     const allCerts    = await certsRes.json();
     try {
       const cdata = await contentRes.json();
