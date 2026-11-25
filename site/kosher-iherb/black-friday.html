@@ -482,7 +482,7 @@
         <a class="share-btn whatsapp" id="share-whatsapp" target="_blank" rel="noopener">💬 וואטסאפ</a>
         <a class="share-btn telegram" id="share-telegram" target="_blank" rel="noopener">✈️ טלגרם</a>
         <a class="share-btn facebook" id="share-facebook" target="_blank" rel="noopener">📘 פייסבוק</a>
-        <button type="button" class="share-btn" id="share-instagram" onclick="shareInstagram(this)">📸 אינסטגרם (העתק קישור)</button>
+        <a class="share-btn" id="share-instagram" href="https://www.instagram.com/foodos.online/" target="_blank" rel="noopener">📸 אינסטגרם</a>
       </div>
     </div>
     <div class="cat-hero-emoji">🛍️</div>
@@ -557,7 +557,7 @@
     btn.textContent = open ? 'קרא עוד ↓' : 'פחות ↑';
   }
 
-  const BLACKFRIDAY_IDS = [183,528,473,49,68,505,249,296,190,198,673,674,453,679,406,681];
+  const BLACKFRIDAY_IDS = [183,528,473,49,68,505,249,296,190,198,673,674,453,679,406,681,683,684,685,686,90,28,427,493,1,4,5,18,24,25,141,152,182,185,186,188,189,474,526,14,16,27,187,339,340];
   const catEmoji = {
     'תבלינים':'🧂','שמנים':'🫒','תה':'🍵','חטיפים':'🍿','אסייתי':'🍜',
     'שימורי דגים':'🐟','קונדיטוריה':'🎂','סופר פוד':'💚'
@@ -747,20 +747,6 @@
     if (tgLink) tgLink.href = 'https://t.me/share/url?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(shareText);
     const fbLink = document.getElementById('share-facebook');
     if (fbLink) fbLink.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl);
-  }
-
-  function shareInstagram(btn) {
-    const pageUrl = location.href;
-    const done = () => {
-      const prev = btn.textContent;
-      btn.textContent = '✓ הועתק! הדביקו בסטורי או בביו';
-      setTimeout(() => { btn.textContent = prev; }, 2500);
-    };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(pageUrl).then(done).catch(() => fallbackCopy(pageUrl, done));
-    } else {
-      fallbackCopy(pageUrl, done);
-    }
   }
 
   async function init() {

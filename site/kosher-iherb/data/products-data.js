@@ -316,7 +316,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/sog/sog19515/d/67.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/simply-organic-ceylon-cinnamon-2-08-oz-59-g/65526?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 36.55,
+    "priceILS": 38.91,
     "available": true
   },
   {
@@ -906,7 +906,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/lov/lov00188/d/17.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/chocolove-extreme-dark-chocolate-88-cocoa-3-2-oz-90-g/70595?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 17.89,
+    "priceILS": 19.05,
     "available": true
   },
   {
@@ -1560,7 +1560,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/fro/fro23190/d/27.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-pure-vanilla-flavoring-alcohol-free-2-fl-oz-59-ml/56763?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 45.4,
+    "priceILS": 48.34,
     "available": true
   },
   {
@@ -6527,7 +6527,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/yue/yue00186/d/35.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/yumearth-organic-pops-assorted-flavors-50-individually-wrapped-pops-10-9-oz-310-g/10888?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 50.12,
+    "priceILS": 53.37,
     "available": true
   },
   {
@@ -8156,7 +8156,7 @@ window.FOODOS_PRODUCTS = [
       "חלבי"
     ],
     "descNew": "Love Crunch של Nature's Path נולדה ב-2010 כמתנת חתונה של שניים ממשפחת המייסדים. שיבולת שועל מלאה אורגנית משולבת עם שוקולד מריר Fair Trade (שוקולד שתומך ישירות בחקלאים במדינות מתפתחות), קוקוס מיובש, אבקת קקאו, ותות שדה ופטל מיובשים-הקפאה, שמשמרים את הצבע והטעם הטרי שלהם. הממתיק הוא סוכר קנה אורגני. מצוינת עם חלב צמחי או כנשנוש עצמאי. שימי לב: כשרות OU-D (חלבי) עקב המפעל, למרות שאינה מכילה רכיבי חלב.",
-    "priceILS": 29.91,
+    "priceILS": 31.85,
     "seeAlso": [
       495,
       496,
@@ -8925,7 +8925,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/fro/fro18921/d/52.jpg",
     "url": "https://www.iherb.com/pr/frontier-co-op-taco-seasoning-2-33-oz-66-g/35368",
     "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-taco-seasoning-2-33-oz-66-g/35368?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 19.44,
+    "priceILS": 20.7,
     "available": true,
     "dairy": false,
     "desc": "תיבול טאקו של Frontier Co-op, 66 גרם. תערובת כמון, פפריקה, שום ואורגנו ללא מלח מוסף ובלי MSG. KSA כשר.",

@@ -484,6 +484,48 @@
   </div>
 </section>
 
+<!-- ── MUSHROOM EDUCATION (רק בקטגוריית פטריות פונקציונליות) ── -->
+<section class="mushroom-edu-section" id="mushroom-edu-section" style="display:none;">
+  <div class="mushroom-edu-inner">
+    <h2 class="mushroom-edu-title">איזו פטרייה בשביל מה, ומה ההבדל בין המוצרים</h2>
+    <div class="mushroom-edu-grid">
+      <div class="mushroom-edu-card">
+        <div class="mushroom-edu-emoji">🦁</div>
+        <h3>ליון'ס מיין (רעמת האריה)</h3>
+        <p>הפטרייה הכי מזוהה עם תפקוד קוגניטיבי, ריכוז וזיכרון. נראית כמו כדור לבן ושעיר, ומכאן השם.</p>
+      </div>
+      <div class="mushroom-edu-card">
+        <div class="mushroom-edu-emoji">🍄</div>
+        <h3>ריישי</h3>
+        <p>פטריית "הרגיעה", נחקרת בהקשר של שינה, חוסן למתח ותמיכה חיסונית. טעם מריר-אדמתי מאוד, לרוב בקפסולות או תמצית.</p>
+      </div>
+      <div class="mushroom-edu-card">
+        <div class="mushroom-edu-emoji">🌑</div>
+        <h3>צ'אגה</h3>
+        <p>גידול שחור וקשה שצומח על גזעי עצי ליבנה, עשיר בנוגדי חמצון. בדרך כלל אבקה או תמצית, לקפה ולשייקים.</p>
+      </div>
+      <div class="mushroom-edu-card">
+        <div class="mushroom-edu-emoji">⚡</div>
+        <h3>קורדיספס</h3>
+        <p>מזוהה עם אנרגיה, סיבולת וביצועי אימון. הגרסה הנמכרת כתוסף מגודלת במעבדה, לא נאספת בטבע.</p>
+      </div>
+      <div class="mushroom-edu-card">
+        <div class="mushroom-edu-emoji">🦃</div>
+        <h3>טורקי טייל (זנב הודו)</h3>
+        <p>נקראת כך בגלל הדמיון לזנב תרנגול הודו הפרוש. מהפטריות הנחקרות ביותר בהקשר של תמיכה במערכת החיסון.</p>
+      </div>
+      <div class="mushroom-edu-card">
+        <div class="mushroom-edu-emoji">🍵</div>
+        <h3>תערובות וחלופות קפה/תה</h3>
+        <p>מוצרים כמו קפה-פטריות או תה "וולנס" משלבים כמה זנים במינון נמוך יותר, נוחים לשתייה יומיומית אך פחות ממוקדים מתוסף נקי.</p>
+      </div>
+    </div>
+    <div class="mushroom-edu-note">
+      <strong>מיצלית מול פרי-גוף:</strong> חלק מהמוצרים מגודלים על "מיצלית" (שורשי הפטרייה, גדלים לרוב על דגנים כמו שיבולת שועל או אורז, זול ומהיר יותר לייצור), ואחרים משתמשים בתמצית מ"פרי הגוף" של הפטרייה עצמה (החלק הנראה מעל הקרקע). יש ויכוח בתעשייה סביב השאלה איזו שיטה עשירה יותר ברכיבים הפעילים; זה לא הופך מוצר אחד ל"רע" והשני ל"טוב", אלא הבדל בגישת ייצור ששווה להכיר כשמשווים מוצרים ומחירים.
+    </div>
+  </div>
+</section>
+
 <!-- ── FILTER BAR ── -->
 <div class="filter-bar">
   <div class="filter-bar-inner">
@@ -802,7 +844,7 @@
     // האמיתית תיקבע מיד בטעינת הדף, בלי להמתין לרשת - אחרת document.title נשאר על
     // "קטגוריה, Foodos Online" הגנרי כל משך קריאת content.json, מה שגם Google
     // Analytics וגם Googlebot יכולים לתפוס (וליצור רושם של כותרת כפולה בהרבה עמודים).
-    const CATEGORY_SLUGS_INLINE = {"תבלינים":"spices","מלח":"salt","שמנים":"oils","רטבים":"sauces","תיבול":"seasoning","אסייתי":"asian","מרקים":"soups","קמחים":"flours","אפייה":"baking","לחמים":"breads","תוספי אפייה":"baking-supplies","ביסקוויטים":"biscuits","קונדיטוריה":"confectionery","קטניות":"legumes","פסטה":"pasta","דגנים":"grains","דגני בוקר":"cereal","אגוזים וזרעים":"nuts-seeds","חטיפים":"snacks","שוקולד":"chocolate","ממתקים":"candy","ממתקים טבעיים":"natural-sweets","ממתיקים ומוצרים ללא סוכר":"sugar-free","ריבות":"jams","תה":"tea","קפה":"coffee","שתייה חמה":"hot-drinks","שתייה":"drinks","קרמרים ותחליפי חלב":"creamers","ממרחים":"spreads","שימורי דגים":"canned-fish","שימורי תזונתיים":"canned-goods","סופר פוד":"superfood","בריאות":"health","תוספי תזונה":"supplements","מוצרי חלבון":"protein-products","כלי מטבח":"kitchen-tools","מטבח":"kitchen","חומץ":"vinegar","שמרים תזונתיים":"nutritional-yeast","קטניות, אורז ופסטה":"legumes-rice-pasta","ממתיקים טבעיים":"natural-sweeteners"};
+    const CATEGORY_SLUGS_INLINE = {"תבלינים":"spices","מלח":"salt","שמנים":"oils","רטבים":"sauces","תיבול":"seasoning","אסייתי":"asian","מרקים":"soups","קמחים":"flours","אפייה":"baking","לחמים":"breads","תוספי אפייה":"baking-supplies","ביסקוויטים":"biscuits","קונדיטוריה":"confectionery","קטניות":"legumes","פסטה":"pasta","דגנים":"grains","דגני בוקר":"cereal","אגוזים וזרעים":"nuts-seeds","חטיפים":"snacks","שוקולד":"chocolate","ממתקים":"candy","ממתקים טבעיים":"natural-sweets","ממתיקים ומוצרים ללא סוכר":"sugar-free","ריבות":"jams","תה":"tea","קפה":"coffee","שתייה חמה":"hot-drinks","שתייה":"drinks","קרמרים ותחליפי חלב":"creamers","ממרחים":"spreads","שימורי דגים":"canned-fish","שימורי תזונתיים":"canned-goods","סופר פוד":"superfood","בריאות":"health","תוספי תזונה":"supplements","מוצרי חלבון":"protein-products","כלי מטבח":"kitchen-tools","מטבח":"kitchen","חומץ":"vinegar","שמרים תזונתיים":"nutritional-yeast","קטניות, אורז ופסטה":"legumes-rice-pasta","ממתיקים טבעיים":"natural-sweeteners","דבש":"honey","פטריות פונקציונליות":"functional-mushrooms"};
 
   async function init() {
     let slugToHebrew = {};
