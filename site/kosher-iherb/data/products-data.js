@@ -38,6 +38,28 @@ window.FOODOS_PRODUCTS = [
     ]
   },
   {
+    "id": 709,
+    "name": "Frontier Co-op, Organic Lemon Peel, 47g",
+    "url": "https://il.iherb.com/pr/frontier-co-op-organic-lemon-peel-1-7-oz-47-g/35865",
+    "desc": "קליפת לימון מיובשת וטחונה גס של Frontier Co-op, עם ארומת הדר רעננה. מעולה לתיבול דגים, עופות, רטבים ואפייה, בלי המרירות של הלבן שמתחת לקליפה.",
+    "cert": "KSA",
+    "cat": "תבלינים",
+    "conf": "גבוהה",
+    "brand": "Frontier Co-op",
+    "longDesc": "קליפת לימון מיובשת מעניקה ארומת הדר מרוכזת בלי החמיצות של מיץ הלימון עצמו, ובלי להוסיף נוזלים למתכון. מתאימה לתיבול דגים, עוף, רטבים, מרינדות ומאפים מתוקים.\n\nכדאי לדעת: קליפת לימון יבשה חזקה יותר ממש טרייה, ולכן כדאי להתחיל בכמות קטנה ולהוסיף לפי הטעם.",
+    "descNew": "קליפת לימון מיובשת וטחונה גס של Frontier Co-op, עם ארומת הדר רעננה. מעולה לתיבול דגים, עופות, רטבים ואפייה.",
+    "nameHe": "קליפת לימון יבשה",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["טבעוני", "ללא גלוטן"],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/fro/fro18429/v/36.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/frontier-co-op-organic-lemon-peel-1-7-oz-47-g/35865?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 29.38,
+    "available": true
+  },
+  {
     "id": 4,
     "name": "Frontier Co-op, Organic Ground Smoked Paprika, 453g",
     "url": "https://www.iherb.com/pr/frontier-co-op-organic-ground-smoked-paprika-16-oz-453-g/70425",
@@ -579,7 +601,8 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/8260/8260.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-maca-powder-16-oz-454-g/8260?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "available": false
+    "priceILS": 83.68,
+    "available": true
   },
   {
     "id": 63,
@@ -619,7 +642,9 @@ window.FOODOS_PRODUCTS = [
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/79887/79887.jpg",
-    "available": false
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-powder-unsweetened-8-oz-227-g/79887?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 52.24,
+    "available": true
   },
   {
     "id": 66,
@@ -652,7 +677,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00068/d/21.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-nibs-unsweetened-8-oz-227-g/79888?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 50.65,
+    "priceILS": 53.93,
     "available": true,
     "seeAlso": [
       68
@@ -679,7 +704,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/nav/nav02131/d/9.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-sweet-nibs-8-oz-227-g/90332?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
-    "priceILS": 64.52,
+    "priceILS": 68.70,
     "seeAlso": [
       66
     ],
@@ -704,7 +729,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00023/d/27.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-superfood-cacao-goji-bites-8-oz-227-g/43469?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 41.85,
+    "priceILS": 44.56,
     "available": true
   },
   {
@@ -726,7 +751,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav70042/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-hemp-powder-12-oz-340-g/79890?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 54.06,
+    "priceILS": 57.56,
     "available": true
   },
   {
@@ -2394,7 +2419,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00029/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-acai-powder-4-oz-113-g/86442?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 70.05,
+    "priceILS": 74.59,
     "available": true
   },
   {
@@ -2416,7 +2441,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00064/d/14.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-maqui-powder-3-oz-85-g/8258?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 69.53,
+    "priceILS": 74.03,
     "available": true
   },
   {
@@ -2439,7 +2464,7 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/nav/nav00020/d/31.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-camu-powder-3-oz-85-g/23302?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "available": true,
-    "priceILS": 69.06
+    "priceILS": 73.54
   },
   {
     "id": 215,
@@ -2460,7 +2485,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00090/d/2.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-goji-powder-4-oz-113-g/147420?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 48.4,
+    "priceILS": 51.53,
     "available": true
   },
   {
@@ -2482,7 +2507,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00024/d/17.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-pomegranate-powder-8-oz-227-g/14313?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 72.07,
+    "priceILS": 76.73,
     "available": true
   },
   {
@@ -2508,6 +2533,135 @@ window.FOODOS_PRODUCTS = [
     "img": "https://s3.images-iherb.com/nav/nav02132/d/14.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-turmeric-powder-8-oz-227-g/86443?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
     "priceILS": 44.85,
+    "available": true
+  },
+  {
+    "id": 704,
+    "name": "Navitas Organics, Organic Maca Powder, 4 oz (113g)",
+    "url": "https://il.iherb.com/pr/navitas-organics-organic-maca-powder-4-oz-113-g/62875",
+    "desc": "אבקת מאקה אורגנית מהררי האנדים בפרו, בגודל אריזה קטן יותר. שורש שנחשב במסורת אינקה למחזק אנרגיה טבעי, עשיר בברזל, סידן, אבץ ואמינו-חומצות.",
+    "cert": "EarthKosher",
+    "cat": [
+      "סופר פוד",
+      "שתייה חמה"
+    ],
+    "conf": "בינונית",
+    "brand": "Navitas Organics",
+    "descNew": "אבקת מאקה אורגנית מהררי האנדים בפרו, בגודל אריזה קטן יותר. שורש שנחשב במסורת אינקה למחזק אנרגיה טבעי, עשיר בברזל, סידן, אבץ ואמינו-חומצות.",
+    "nameHe": "אבקת מאקה אורגנית, אריזה קטנה",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": [],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nav/nav02023/v/20.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-maca-powder-4-oz-113-g/62875?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 29.00,
+    "available": true
+  },
+  {
+    "id": 705,
+    "name": "Navitas Organics, Organic Superfood+ Berry Blend, 5.3 oz (150g)",
+    "url": "https://il.iherb.com/pr/navitas-organics-organic-superfood-berry-blend-5-3-oz-150-g/102458",
+    "desc": "תערובת סופר-פוד של Navitas המשלבת אבקות פירות יער (אסאי, מאקי, גוג'י) עם אדפטוגנים. מעולה להוספה לשייקים לצבע ולערך תזונתי.",
+    "cert": "EarthKosher",
+    "cat": "סופר פוד",
+    "conf": "בינונית",
+    "brand": "Navitas Organics",
+    "descNew": "תערובת סופר-פוד של Navitas המשלבת אבקות פירות יער (אסאי, מאקי, גוג'י) עם אדפטוגנים. מעולה להוספה לשייקים לצבע ולערך תזונתי.",
+    "nameHe": "תערובת סופר-פוד פירות יער",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": [],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nav/nav02251/v/9.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-superfood-berry-blend-5-3-oz-150-g/102458?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 55.60,
+    "available": true
+  },
+  {
+    "id": 706,
+    "name": "Navitas Organics, Organic Superfood+ Greens Blend, 6.3 oz (180g)",
+    "url": "https://il.iherb.com/pr/navitas-organics-organic-superfood-greens-blend-6-3-oz-180-g/102456",
+    "desc": "תערובת סופר-פוד ירוקה של Navitas, המשלבת אבקות ירק ודשא (כמו ספירולינה וחיטת פרא) לתוספת תזונתית נוחה לשייקים.",
+    "cert": "EarthKosher",
+    "cat": "סופר פוד",
+    "conf": "בינונית",
+    "brand": "Navitas Organics",
+    "descNew": "תערובת סופר-פוד ירוקה של Navitas, המשלבת אבקות ירק ודשא (כמו ספירולינה וחיטת פרא) לתוספת תזונתית נוחה לשייקים.",
+    "nameHe": "תערובת סופר-פוד ירוקה",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": [],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nav/nav02250/v/9.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-superfood-greens-blend-6-3-oz-180-g/102456?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 56.23,
+    "available": true
+  },
+  {
+    "id": 707,
+    "name": "Navitas Organics, Organic Cacao Butter Wafers, Unsweetened, 8 oz (227g)",
+    "url": "https://il.iherb.com/pr/navitas-organics-organic-cacao-butter-wafers-unsweetened-8-oz-227-g/116938",
+    "desc": "פתיתי חמאת קקאו אורגניים טהורים וטבעיים, ללא תוספת סוכר. מתאימים להמסה לתוך קינוחים ושוקולד ביתי, או כבסיס שומני עשיר בתזונה דלת פחמימות.",
+    "cert": "EarthKosher",
+    "cat": "קונדיטוריה",
+    "conf": "בינונית",
+    "brand": "Navitas Organics",
+    "descNew": "פתיתי חמאת קקאו אורגניים טהורים וטבעיים, ללא תוספת סוכר. מתאימים להמסה לתוך קינוחים ושוקולד ביתי, או כבסיס שומני עשיר בתזונה דלת פחמימות.",
+    "nameHe": "חמאת קקאו אורגנית בפתיתים",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["טבעוני", "ללא גלוטן", "קטוגני"],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nav/nav02263/v/12.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-butter-wafers-unsweetened-8-oz-227-g/116938?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 83.10,
+    "available": true
+  },
+  {
+    "id": 708,
+    "name": "Navitas Organics, Organic Golden Berries, 8 oz (227g)",
+    "url": "https://il.iherb.com/pr/navitas-organics-organic-golden-berries-8-oz-227-g/39660",
+    "desc": "גרגרי גולדן ברי (פיזאליס) מיובשים ואורגניים, בעלי טעם מתוק-חמצמץ המזכיר שילוב של אננס ודובדבן. נשנוש מזין או תוספת לגרנולה ולתערובות טרייל מיקס.",
+    "cert": "EarthKosher",
+    "cat": "סופר פוד",
+    "conf": "בינונית",
+    "brand": "Navitas Organics",
+    "descNew": "גרגרי גולדן ברי (פיזאליס) מיובשים ואורגניים, בעלי טעם מתוק-חמצמץ המזכיר שילוב של אננס ודובדבן. נשנוש מזין או תוספת לגרנולה ולתערובות טרייל מיקס.",
+    "nameHe": "גולדן ברי מיובש אורגני",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": ["טבעוני", "ללא גלוטן"],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nav/nav00089/v/16.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-golden-berries-8-oz-227-g/39660?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 58.47,
+    "available": true
+  },
+  {
+    "id": 710,
+    "name": "Navitas Organics, Superfood+ Hemp Bites, Blueberry, 8 oz (227g)",
+    "url": "https://il.iherb.com/pr/navitas-organics-superfood-hemp-bites-blueberry-8-oz-227-g/43471",
+    "desc": "נשנוש סופר-פוד לעיס מבית Navitas, המבוסס על תמרים, קשיו וזרעי קנביס (המפ), עם אוכמניות מיובשות. חטיף מוכן לאכילה, עשיר בסיבים ובחומצות שומן מאוזנות.",
+    "cert": "EarthKosher",
+    "cat": "סופר פוד",
+    "conf": "בינונית",
+    "brand": "Navitas Organics",
+    "descNew": "נשנוש סופר-פוד לעיס מבית Navitas, המבוסס על תמרים, קשיו וזרעי קנביס (המפ), עם אוכמניות מיובשות. חטיף מוכן לאכילה, עשיר בסיבים ובחומצות שומן מאוזנות.",
+    "nameHe": "חטיפי המפ ואוכמניות",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": [],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nav/nav00010/v/25.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-superfood-hemp-bites-blueberry-8-oz-227-g/43471?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 43.71,
     "available": true
   },
   {
@@ -2782,7 +2936,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/cos/cos00614/d/2.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-mackerel-in-oil-2-5-oz-70-g/149053?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 8.91,
+    "priceILS": 9.26,
     "available": true,
     "seeAlso": [646, 647, 249],
     "seeAlsoNote": "עוד פאוצ'ים מוכנים לאכילה של Chicken of the Sea:"
@@ -2806,7 +2960,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/cos/cos00791/d/6.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-albacore-tuna-spring-water-2-5-oz-70-g/116535?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 9.23,
+    "priceILS": 9.60,
     "available": true,
     "seeAlso": [645, 647, 249],
     "seeAlsoNote": "עוד פאוצ'ים מוכנים לאכילה של Chicken of the Sea:"
@@ -2830,7 +2984,7 @@ window.FOODOS_PRODUCTS = [
     "tags": [],
     "img": "https://s3.images-iherb.com/cos/cos00392/d/6.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-light-tuna-in-spring-water-2-5-oz-70-g/129130?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 7.39,
+    "priceILS": 7.68,
     "available": true,
     "seeAlso": [645, 646, 249],
     "seeAlsoNote": "עוד פאוצ'ים מוכנים לאכילה של Chicken of the Sea:"
@@ -3537,36 +3691,24 @@ window.FOODOS_PRODUCTS = [
   },
   {
     "id": 249,
-    "name": "Chicken of the Sea, Wild Caught Alaskan Pink Salmon, In Spring Water",
-    "url": "https://www.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-2-5-oz-70-g/104395",
-    "sizes": [
-      {
-        "label": "70 גרם",
-        "url": "https://www.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-2-5-oz-70-g/104395",
-        "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-2-5-oz-70-g/104395?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
-      },
-      {
-        "label": "142 גרם",
-        "url": "https://www.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-5-oz-142-g/104405",
-        "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-5-oz-142-g/104405?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS"
-      }
-    ],
-    "desc": "סלמון ורוד פראי מאלסקה של Chicken of the Sea, במים ומלח בלבד. מוכן לצריכה מיידית ואינו זקוק לקירור - מעולה לקחת לחו\"ל, או לשילוב בסלט בעבודה. מקור נגיש לאומגה 3 במחיר סביר.",
+    "name": "Chicken of the Sea, Wild Caught Alaskan Pink Salmon, Lemon Pepper",
+    "url": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-alaskan-pink-salmon-lemon-pepper-2-5-oz-70-g/104399",
+    "desc": "סלמון ורוד פראי מאלסקה של Chicken of the Sea, בתיבול לימון ופלפל. מוכן לצריכה מיידית ואינו זקוק לקירור - מעולה לקחת לחו\"ל, או לשילוב בסלט בעבודה. מקור נגיש לאומגה 3 במחיר סביר.",
     "cert": "OU",
     "cat": "שימורי דגים",
     "conf": "גבוהה",
     "brand": "Chicken of the Sea",
-    "longDesc": "קופסת שימורים נגישה של סלמון פרא מסוג \"פינק\" (Pink) – זן המאופיין בצבע ורוד בהיר וטעם מעודן מאוד בהשוואה לסוקאי העז. הדג נדג באופן חופשי לחופי אלסקה וכבוש במי מעיין בלבד. מאחר והוא בושם במים ולא במיציו הטבעיים או בשמן, הטעם שלו קליל וניטרלי יחסית, מה שהופך אותו לבסיס פרקטי מאוד לסלט סלמון מעורבב עם מיונז (על תקן תחליף טרנדי לטונה הסטנדרטית), או ליצירת לביבות וקציצות דג מהירות לארוחת ערב קלה. (כשרות OU).\n\nכדאי לדעת: לעומת סוקאי הוא פחות עוצמתי ובדרך כלל מתאים במיוחד לקציצות, סלטים ופשטידות.",
-    "descNew": "סלמון ורוד פראי מאלסקה של Chicken of the Sea, במים ומלח בלבד. מוכן לצריכה מיידית ואינו זקוק לקירור - מעולה לקחת לחו\"ל, או לשילוב בסלט בעבודה. מקור נגיש לאומגה 3 במחיר סביר.",
-    "nameHe": "סלמון אלסקה ורוד",
+    "longDesc": "קופסת שימורים נגישה של סלמון פרא מסוג \"פינק\" (Pink) – זן המאופיין בצבע ורוד בהיר וטעם מעודן מאוד בהשוואה לסוקאי העז. הדג נדג באופן חופשי לחופי אלסקה, הפעם בתיבול לימון ופלפל שמעניק טוויסט רענן יותר לעומת הגרסה הפשוטה במי מעיין. אפשר לאכול ישירות מהשקית, להוסיף לסלט או ליצור ממנו קציצות דג מהירות. (כשרות OU).\n\nכדאי לדעת: לעומת סוקאי הוא פחות עוצמתי ובדרך כלל מתאים במיוחד לקציצות, סלטים ופשטידות.",
+    "descNew": "סלמון ורוד פראי מאלסקה של Chicken of the Sea, בתיבול לימון ופלפל. מוכן לצריכה מיידית ואינו זקוק לקירור - מעולה לקחת לחו\"ל, או לשילוב בסלט בעבודה. מקור נגיש לאומגה 3 במחיר סביר.",
+    "nameHe": "סלמון אלסקה ורוד, לימון ופלפל",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://s3.images-iherb.com/cos/cos01191/d/10.jpg",
-    "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-alaskan-pink-salmon-in-spring-water-2-5-oz-70-g/104395?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 11.09,
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cos/cos01172/v/10.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-alaskan-pink-salmon-lemon-pepper-2-5-oz-70-g/104399?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 12.51,
     "available": true,
     "pinned": true
   },
@@ -5777,6 +5919,33 @@ window.FOODOS_PRODUCTS = [
       389
     ],
     "seeAlsoNote": "קיפרס פלפל Crown Prince, חריף יותר:"
+  },
+  {
+    "id": 711,
+    "name": "King Oscar, Kipper Snacks, Lightly Smoked Herring Fillets, 3.54 oz (100g)",
+    "brand": "King Oscar",
+    "cat": "שימורי דגים",
+    "cert": "OU",
+    "conf": "גבוהה",
+    "url": "https://il.iherb.com/pr/king-oscar-kipper-snacks-lightly-smoked-herring-fillets-3-54-oz-100-g/104811",
+    "desc": "הרינג פראי קלות מעושן של King Oscar, מותג דגים נורווגי ותיק. פילטים נטולי עצמות, מוכנים לאכילה ישירות מהקופסה. עשיר באומגה 3, OU פרווה.",
+    "descNew": "הרינג פראי קלות מעושן של King Oscar, מותג דגים נורווגי ותיק. פילטים נטולי עצמות, מוכנים לאכילה ישירות מהקופסה. עשיר באומגה 3.",
+    "nameHe": "קיפרס הרינג מעושן קלות",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": false,
+    "tags": [],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/koc/koc60051/v/15.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/king-oscar-kipper-snacks-lightly-smoked-herring-fillets-3-54-oz-100-g/104811?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 15.79,
+    "available": true,
+    "longDesc": "King Oscar הוא מותג דגים נורווגי המתמחה בדגי ים צפוניים מזה למעלה 150 שנה. הקיפרס (הרינג מעושן) שלהם קלוש-מעושן בעדינות, עם מרקם עדין יותר מגרסאות המעושנות בעוצמה. מתאים כנשנוש חלבון ישיר מהקופסה, על קרקרים, או כבסיס לממרח דגים ביתי.\n\nכדאי לדעת: לעומת קיפרס Crown Prince, הטעם כאן עדין ופחות מעושן.",
+    "seeAlso": [
+      390,
+      389
+    ],
+    "seeAlsoNote": "עוד אפשרויות קיפרס מעושן:"
   },
   {
     "id": 391,

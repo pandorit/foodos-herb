@@ -581,7 +581,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/8260/8260.jpg",
-    "available": false
+    "priceILS": 83.68,
+    "available": true
   },
   {
     "id": 63,
@@ -619,7 +620,8 @@
     "dairy": false,
     "tags": [],
     "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/s3-media/Images/Products/79887/79887.jpg",
-    "available": false
+    "priceILS": 52.24,
+    "available": true
   },
   {
     "id": 66,
@@ -650,7 +652,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00068/d/21.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-cacao-nibs-unsweetened-8-oz-227-g/79888?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 51.9,
+    "priceILS": 53.93,
     "available": true,
     "seeAlso": [
       68
@@ -677,7 +679,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav02131/d/9.jpg",
     "available": true,
-    "priceILS": 64.52,
+    "priceILS": 68.70,
     "seeAlso": [
       66
     ],
@@ -702,7 +704,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00023/d/27.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-superfood-cacao-goji-bites-8-oz-227-g/43469?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 42.88,
+    "priceILS": 44.56,
     "available": true
   },
   {
@@ -724,7 +726,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav70042/d/12.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-hemp-powder-12-oz-340-g/79890?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 55.4,
+    "priceILS": 57.56,
     "available": true
   },
   {
@@ -2326,7 +2328,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00029/d/8.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-acai-powder-4-oz-113-g/86442?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 71.78,
+    "priceILS": 74.59,
     "available": true
   },
   {
@@ -2348,7 +2350,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00064/d/14.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-maqui-powder-3-oz-85-g/8258?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 71.25,
+    "priceILS": 74.03,
     "available": true
   },
   {
@@ -2371,7 +2373,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00020/d/31.jpg",
     "available": true,
-    "priceILS": 70.77
+    "priceILS": 73.54
   },
   {
     "id": 215,
@@ -2392,7 +2394,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00090/d/2.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-goji-powder-4-oz-113-g/147420?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 49.59,
+    "priceILS": 51.53,
     "available": true
   },
   {
@@ -2414,7 +2416,7 @@
     "tags": [],
     "img": "https://s3.images-iherb.com/nav/nav00024/d/17.jpg",
     "affiliateUrl": "https://il.iherb.com/pr/navitas-organics-organic-pomegranate-powder-8-oz-227-g/14313?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 72.07,
+    "priceILS": 76.73,
     "available": true
   },
   {
@@ -2740,34 +2742,24 @@
   },
   {
     "id": 249,
-    "name": "Chicken of the Sea, Wild Caught Alaskan Pink Salmon, In Spring Water",
-    "url": "https://www.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-2-5-oz-70-g/104395",
-    "sizes": [
-      {
-        "label": "70 גרם",
-        "url": "https://www.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-2-5-oz-70-g/104395"
-      },
-      {
-        "label": "142 גרם",
-        "url": "https://www.iherb.com/pr/chicken-of-the-sea-wild-caught-pink-salmon-5-oz-142-g/104405"
-      }
-    ],
-    "desc": "סלמון ורוד פראי מאלסקה של Chicken of the Sea, במים ומלח בלבד. מוכן לצריכה מיידית ואינו זקוק לקירור - מעולה לקחת לחו\"ל, או לשילוב בסלט בעבודה. מקור נגיש לאומגה 3 במחיר סביר.",
+    "name": "Chicken of the Sea, Wild Caught Alaskan Pink Salmon, Lemon Pepper",
+    "url": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-alaskan-pink-salmon-lemon-pepper-2-5-oz-70-g/104399",
+    "desc": "סלמון ורוד פראי מאלסקה של Chicken of the Sea, בתיבול לימון ופלפל. מוכן לצריכה מיידית ואינו זקוק לקירור - מעולה לקחת לחו\"ל, או לשילוב בסלט בעבודה. מקור נגיש לאומגה 3 במחיר סביר.",
     "cert": "OU",
     "cat": "שימורי דגים",
     "conf": "גבוהה",
     "brand": "Chicken of the Sea",
-    "longDesc": "קופסת שימורים נגישה של סלמון פרא מסוג \"פינק\" (Pink) – זן המאופיין בצבע ורוד בהיר וטעם מעודן מאוד בהשוואה לסוקאי העז. הדג הגיע מחופי אלסקה ונכבש במי מעיין בלבד. מאחר והוא בושל במים ולא במיציו הטבעיים או בשמן, הטעם שלו קליל וניטרלי יחסית, מה שהופך אותו לבסיס פרקטי מאוד לסלט סלמון מעורבב עם מיונז (על תקן תחליף טרנדי לטונה הסטנדרטית), או ליצירת לביבות וקציצות דג מהירות לארוחת ערב קלה. (כשרות OU).\n\nכדאי לדעת: לעומת סוקאי הוא פחות עוצמתי ובדרך כלל מתאים במיוחד לקציצות, סלטים ופשטידות.",
-    "descNew": "סלמון ורוד פראי מאלסקה של Chicken of the Sea, במים ומלח בלבד. מוכן לצריכה מיידית ואינו זקוק לקירור - מעולה לקחת לחו\"ל, או לשילוב בסלט בעבודה. מקור נגיש לאומגה 3 במחיר סביר.",
-    "nameHe": "סלמון אלסקה ורוד",
+    "longDesc": "קופסת שימורים נגישה של סלמון פרא מסוג \"פינק\" (Pink) – זן המאופיין בצבע ורוד בהיר וטעם מעודן מאוד בהשוואה לסוקאי העז. הדג הגיע מחופי אלסקה, הפעם בתיבול לימון ופלפל שמעניק טוויסט רענן יותר לעומת הגרסה הפשוטה במי מעיין. אפשר לאכול ישירות מהשקית, להוסיף לסלט או ליצור ממנו קציצות דג מהירות. (כשרות OU).\n\nכדאי לדעת: לעומת סוקאי הוא פחות עוצמתי ובדרך כלל מתאים במיוחד לקציצות, סלטים ופשטידות.",
+    "descNew": "סלמון ורוד פראי מאלסקה של Chicken of the Sea, בתיבול לימון ופלפל. מוכן לצריכה מיידית ואינו זקוק לקירור - מעולה לקחת לחו\"ל, או לשילוב בסלט בעבודה. מקור נגיש לאומגה 3 במחיר סביר.",
+    "nameHe": "סלמון אלסקה ורוד, לימון ופלפל",
     "_descStatus": "approved",
     "certVerified": true,
     "_certVerified": true,
     "dairy": false,
     "tags": [],
-    "img": "https://s3.images-iherb.com/cos/cos01191/d/10.jpg",
-    "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-alaskan-pink-salmon-in-spring-water-2-5-oz-70-g/104395?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 12.01,
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cos/cos01172/v/10.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/chicken-of-the-sea-wild-caught-alaskan-pink-salmon-lemon-pepper-2-5-oz-70-g/104399?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 12.51,
     "available": true,
     "pinned": true
   },
