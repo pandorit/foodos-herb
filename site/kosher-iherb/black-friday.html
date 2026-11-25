@@ -470,7 +470,7 @@
         </div>
       </div>
       <div class="cat-emoji-display">🛍️</div>
-      <h1 class="cat-title">ההמלצות שלי למבצע בלאק פריידי של איהרב</h1>
+      <h1 class="cat-title">מוצרי iHerb בהזדמנות במבצע בלאק פריידי - 20% הנחה!</h1>
       <p class="cat-subtitle">איהרב מציף במבצעים בבלאק פריידי, אבל לא כל מוצר שם באמת בהנחה. עברתי מוצר-מוצר, ווידאתי ידנית שההנחה פעילה ושהכשרות מאומתת, וכינסתי כאן רק את מה שבאמת שווה. על כל מחיר מוצג תקבלו 20% הנחה נוספת עם קוד הקופון NOVDEAL26.</p>
       <div class="cat-stats">
         <div><div class="cat-stat-num" id="stat-products">—</div><div class="cat-stat-label">מוצרים</div></div>
@@ -850,6 +850,18 @@
     window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
   }
 
+  // אריזות חסכון (453 גרם) - יורדות לסוף העמוד תחת כותרת נפרדת, לא מתערבבות עם שאר ההמלצות
+  const BULK_PACK_IDS = new Set([4,5,14,24,25,27,182,185,187,189,339,340]);
+
+  function appendCards(grid, products) {
+    products.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'product-card' + (p.available === false ? ' card-unavailable' : '');
+      div.innerHTML = buildCard(p);
+      grid.appendChild(div);
+    });
+  }
+
   function renderAll(products) {
     const grid = document.getElementById('product-grid');
     grid.innerHTML = '';
@@ -863,12 +875,20 @@
       return;
     }
 
-    products.forEach(p => {
-      const div = document.createElement('div');
-      div.className = 'product-card' + (p.available === false ? ' card-unavailable' : '');
-      div.innerHTML = buildCard(p);
-      grid.appendChild(div);
-    });
+    const regular = products.filter(p => !BULK_PACK_IDS.has(p.id));
+    const bulk = products.filter(p => BULK_PACK_IDS.has(p.id));
+
+    appendCards(grid, regular);
+
+    if (bulk.length) {
+      grid.insertAdjacentHTML('beforeend', `
+        <div class="subsection-header" style="grid-column:1/-1">
+          <span class="subsection-title">📦 אריזות חסכון</span>
+          <span class="subsection-count">${bulk.length} מוצרים</span>
+        </div>`);
+      appendCards(grid, bulk);
+    }
+
     initLikes();
     initSaved();
   }
