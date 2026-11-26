@@ -1531,7 +1531,7 @@ window.FOODOS_PRODUCTS = [
     "id": 143,
     "name": "Bob's Red Mill, White Rice Flour, 680g",
     "url": "https://www.iherb.com/pr/bob-s-red-mill-white-rice-flour-24-oz-680-g/103986",
-    "desc": "קמח אורז לבן טחון באבן של Bob's Red Mill, ללא גלוטן. טוב לקרקרים, פנקייקים ולסמיכת רטבים אסייתיים. Bob's Red Mill מאורגון מתמחה בקמחים ללא גלוטן.",
+    "desc": "קמח אורז לבן טחון באבן של Bob's Red Mill, ללא גלוטן. טוב לקרקרים, פנקייקים ולהסמכת רטבים אסייתיים. Bob's Red Mill מאורגון מתמחה בקמחים ללא גלוטן.",
     "cert": "Kehilla Kosher",
     "cat": "קמחים",
     "conf": "גבוהה",
