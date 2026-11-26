@@ -1078,7 +1078,6 @@
       <a href="category.html?cat=superfood">סופר פוד</a>
       <a href="category.html?cat=protein-products">מוצרי חלבון</a>
       <a href="category.html?cat=supplements">תוספי תזונה</a>
-      <a href="category.html?cat=functional-mushrooms">פטריות פונקציונליות</a>
       <a href="category.html?cat=kitchen-tools">כלי מטבח</a>
     </div>
   </div>
@@ -1808,6 +1807,13 @@
     'Kehilla Kosher':'#7a5c2c','Kehilla':'#7a5c2c','KA':'#1a3c5c','Kosher Check':'#3c1a6e',
     'Kosher Scroll K':'#1a5c5c','KCK':'#8a2c5c','RCC':'#4a2c6e','Star D':'#b8860b','כלי מטבח':'#555'
   };
+  // הבהרה קצרה (עיר/ארגון) ליד שמות כשרות לא מוכרים ברשימת בחירה טקסטואלית (select
+  // רגיל לא תומך בתמונות בתוך option, אז כאן מוסיפים טקסט מבהיר במקום לוגו)
+  const certHint = {
+    'COR': 'קנדה', 'CRC': 'שיקגו', 'KA': 'אוסטרליה', 'KCK': 'קנזס סיטי',
+    'KSA': 'לוס אנג\'לס', 'RCC': 'קליפורניה', 'EarthKosher': 'קולורדו',
+    'Kosher Check': 'קנדה', 'Kosher Scroll K': 'דנבר', 'Star D': 'חלבי, Star-K',
+  };
   // לוגואים אמיתיים של כל גוף הכשרות - אותה מפה שמשמשת גם את cert.html ו-product.html,
   // כדי שהסימן המוכר יופיע לצד השם בכל מקום שמציג כשרות, לא רק שם כתוב
   const certImages = {
@@ -2030,7 +2036,7 @@
     const sel = document.getElementById('cert-select');
     if (sel) {
       sel.innerHTML = certs.map(c =>
-        `<option value="${c.replace(/"/g,'&quot;')}"${c===activeCert?' selected':''}>${c==='הכל'?'כל הכשרויות':c}</option>`
+        `<option value="${c.replace(/"/g,'&quot;')}"${c===activeCert?' selected':''}>${c==='הכל'?'כל הכשרויות':c+(certHint[c]?' ('+certHint[c]+')':'')}</option>`
       ).join('');
     }
   }

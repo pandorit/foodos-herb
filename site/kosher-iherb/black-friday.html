@@ -451,7 +451,6 @@
       <a href="category.html?cat=superfood">סופר פוד</a>
       <a href="category.html?cat=protein-products">מוצרי חלבון</a>
       <a href="category.html?cat=supplements">תוספי תזונה</a>
-      <a href="category.html?cat=functional-mushrooms">פטריות פונקציונליות</a>
       <a href="category.html?cat=kitchen-tools">כלי מטבח</a>
     </div>
   </div>
@@ -915,7 +914,7 @@
               ${sizeStr ? `<span class="card-size-tag">${sizeStr}</span>` : ''}
               ${p.priceILS ? `<span class="card-price">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</span>` : ''}
             </div>
-            ${p.priceILS ? `<span class="card-coupon-note">המחיר כולל קוד NOVEXTRA26</span>` : ''}
+            ${p.priceILS ? `<span class="card-coupon-note">המחיר לפני הנחה, קוד NOVEXTRA26 מוריד עוד</span>` : ''}
           </div>
         </div>
         ${(p.dairy === true || /\-D$/i.test(p.cert||'')) ? '<span class="dairy-badge">🥛 חלבי</span>' : ''}
