@@ -11798,5 +11798,28 @@ window.FOODOS_PRODUCTS = [
     "priceILS": 78.46,
     "available": true,
     "seeAlso": [738]
+  },
+  {
+    "id": 740,
+    "name": "Tru Fru, Freeze-Dried Bananas, Dark Chocolate, 3.4 oz (96 g)",
+    "url": "https://il.iherb.com/pr/tru-fru-freeze-dried-bananas-dark-chocolate-3-4-oz-96-g/154700",
+    "desc": "בננות טריות מיובשות בהקפאה (freeze-dried), טבולות בשוקולד מריר של Tru Fru. מרקם פריך בחוץ ופירותי בפנים. מכיל חלב וסויה. כשרות OU-D, חלבי.",
+    "cert": "OU-D",
+    "cat": ["ממתקים", "שוקולד"],
+    "conf": "גבוהה",
+    "brand": "Tru Fru",
+    "longDesc": "חטיף בננות של Tru Fru: פרי טרי שעבר הקפאה-ייבוש (freeze-dried) ונשמר פריך ושלם, טבול בשוקולד מריר אמיתי (לא ציפוי קרם כמו בגרסת האוכמניות). התוצאה היא שילוב של מרקם פריך-פירותי עם שוקולד עשיר. כ-3.5 מנות באריזה; מנה של 28 גרם מכילה 150 קלוריות, 7 גרם שומן ו-13 גרם סוכר, מתוכם 10 גרם מתוספים. מכיל חלב וסויה, ועלול להכיל עקבות בוטנים ואגוזי עץ. ללא גלוטן. (כשרות OU-D, בשל השוקולד שמיוצר בציוד חלבי).\n\nכדאי לדעת: זמין למכירה רק בחודשים הקרים (אמצע אוקטובר עד אמצע יוני) כי המוצר רגיש לחום ועלול להימס או להתקלקל במשלוח בקיץ.",
+    "descNew": "בננות טריות מיובשות בהקפאה, טבולות בשוקולד מריר. פריך מבחוץ, פירותי מבפנים. מכיל חלב וסויה. OU-D כשר.",
+    "nameHe": "בננות מיובשות בשוקולד מריר Tru Fru",
+    "_descStatus": "approved",
+    "certVerified": true,
+    "_certVerified": true,
+    "dairy": true,
+    "tags": [],
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/tfr/tfr35823/k/2.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/tru-fru-freeze-dried-bananas-dark-chocolate-3-4-oz-96-g/154700?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 29.84,
+    "available": true,
+    "seeAlso": [531]
   }
 ];
