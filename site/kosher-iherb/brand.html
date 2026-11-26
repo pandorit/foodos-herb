@@ -334,6 +334,14 @@
   </div>
 </section>
 
+<!-- ── BRAND SAFETY NOTE ── -->
+<div class="desc-strip" id="brand-safety-strip" style="display:none">
+  <div class="container">
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--teal-dark)">בטיחות ושימוש</h3>
+    <p class="desc-text" id="brand-safety-note" style="white-space:pre-line"></p>
+  </div>
+</div>
+
 <!-- ── FOOTER ── -->
 <footer class="footer">
   <div class="footer-inner">
@@ -467,6 +475,10 @@
       document.getElementById('brand-sub').textContent = brandInfo.brandDesc.split('.')[0] + '.';
       document.getElementById('brand-desc-full').textContent = brandInfo.brandDesc;
       document.getElementById('desc-strip').style.display = 'block';
+    }
+    if (brandInfo?.brandSafetyNote) {
+      document.getElementById('brand-safety-note').textContent = brandInfo.brandSafetyNote;
+      document.getElementById('brand-safety-strip').style.display = 'block';
     }
 
     // Build brands dropdown
