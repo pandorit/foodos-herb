@@ -255,10 +255,15 @@
     .load-more-btn:hover { border-color: var(--teal); color: var(--teal); }
 
     /* ── SUB-SECTION DIVIDER ── */
-    .subsection-header { margin: 2.5rem 0 1.2rem; display: flex; align-items: center; gap: 1rem; }
+    .subsection-header { margin: 2.5rem 0 1.2rem; display: flex; align-items: center; gap: 1rem; scroll-margin-top: 150px; }
     .subsection-header::after { content: ''; flex: 1; height: 1px; background: var(--border); }
     .subsection-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--text); white-space: nowrap; }
     .subsection-count { font-size: 0.75rem; color: var(--text-soft); background: var(--teal-light); padding: 3px 10px; border-radius: var(--radius-pill); white-space: nowrap; }
+    .dept-nav { gap: 8px; overflow-x: auto; padding: 4px 2px 10px; margin-top: 12px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .dept-nav::-webkit-scrollbar { display: none; }
+    .dept-nav-link { display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0; font-size: 0.78rem; font-weight: 600; color: var(--teal-dark); background: var(--teal-light); border: 1px solid var(--teal-xlight); border-radius: var(--radius-pill); padding: 6px 12px; text-decoration: none; white-space: nowrap; transition: background .15s; }
+    .dept-nav-link:hover { background: var(--teal-xlight); }
+    .dept-nav-count { font-size: 0.68rem; color: var(--text-soft); background: #fff; border-radius: var(--radius-pill); padding: 1px 6px; }
 
     /* ── OTHER CATEGORIES ── */
     .other-cats-section { background: var(--bg-soft); border-top: 1px solid var(--border); padding: 2.5rem 0; }
@@ -481,6 +486,7 @@
         <div><div class="cat-stat-num" id="stat-brands">—</div><div class="cat-stat-label">מותגים</div></div>
         <div><div class="cat-stat-num" id="stat-certs">—</div><div class="cat-stat-label">הכשרויות</div></div>
       </div>
+      <nav class="dept-nav" id="dept-nav" style="display:none"></nav>
       <div class="share-row">
         <span class="share-label">עקבו אחרי העדכונים שלנו גם ב:</span>
         <a class="share-btn whatsapp" id="share-whatsapp" href="https://chat.whatsapp.com/ETtIfnUzQmhHqsNw4STNlw" target="_blank" rel="noopener">💬 וואטסאפ</a>
@@ -561,11 +567,23 @@
     btn.textContent = open ? 'קרא עוד ↓' : 'פחות ↑';
   }
 
-  const BLACKFRIDAY_IDS = [183,528,473,49,68,505,249,296,190,198,673,674,453,679,406,681,683,488,685,686,90,28,427,493,1,4,5,18,24,25,141,152,182,185,186,188,189,474,526,14,16,27,187,339,340,475,645,646,647,704,705,706,707,708,710,60,63,66,69,73,212,213,215,709,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730];
+  const BLACKFRIDAY_IDS = [183,528,473,49,68,505,249,296,190,198,673,674,453,679,406,681,683,488,685,686,90,28,427,493,1,4,5,18,24,25,141,152,182,185,186,188,189,474,526,14,16,27,187,339,340,475,645,646,647,704,705,706,707,708,710,60,63,66,69,73,212,213,215,709,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,
+    143,144,146,147,148,149,151,343,344,345,347,348,500,529,593,630,631,653,
+    153,154,155,156,341,386,387,388,389,390,711,
+    438,440,441,445,
+    50,304,81,
+    732,733,734,735,736,737];
   // אחוז הנחת NOVEXTRA26 בפועל (מעבר למחיר המוצג בדף המוצר) - אומת ידנית ב-26/11/2026
-  // על 16 מותגים שונים מתוך הרשימה הזו (כולל אישור ישיר של המשתמשת בעגלה בפועל
-  // על Nutiva ו-Simply Organic), כולם הראו 25% ללא יוצא מן הכלל
+  // על 16 מותגים מהרשימה המקורית (כולל אישור ישיר של המשתמשת בעגלה בפועל על Nutiva
+  // ו-Simply Organic) - כולם 25%. ברשימות שהתווספו אחר כך (קמחים/דגים/חטיפי חלבון/מוצרים
+  // פופולריים) נמצאו גם יוצאי-דופן ב-15% (Quest Nutrition, Bragg, NOW Foods, BareOrganics,
+  // Crown Prince Natural) - לכן הדיפולט הוא 25% עם מפת חריגים מפורשת למי שבאמת 15%.
   const NOVEXTRA_TIER = 0.25;
+  const DISCOUNT_OVERRIDES = {
+    593: 0.15, 387: 0.15, 388: 0.15, 389: 0.15, 390: 0.15,
+    438: 0.15, 440: 0.15, 441: 0.15, 50: 0.15, 304: 0.15, 81: 0.15, 732: 0.15,
+  };
+  function discountFor(id) { return DISCOUNT_OVERRIDES[id] ?? NOVEXTRA_TIER; }
   const catEmoji = {
     'תבלינים':'🧂','שמנים':'🫒','תה':'🍵','חטיפים':'🍿','אסייתי':'🍜',
     'שימורי דגים':'🐟','קונדיטוריה':'🎂','סופר פוד':'💚'
@@ -851,6 +869,35 @@
   // אריזות חסכון (453 גרם) - יורדות לסוף העמוד תחת כותרת נפרדת, לא מתערבבות עם שאר ההמלצות
   const BULK_PACK_IDS = new Set([4,5,14,24,25,27,182,185,187,189,339,340]);
 
+  // "פתרון לאוכל בחו"ל": בחירה אוצרתית חוצת-קטגוריות (תחליף חלב שלא דורש קירור + דגים
+  // בשקית קלת-משקל במקום קופסת שימורים כבדה) - רשימת מזהים ידנית, לא נגזרת משדה cat
+  const TRAVEL_FOOD_IDS = new Set([721,722,734,735,736,737,249,645,646,647]);
+
+  // חלוקת המחלקות לעמוד המבצעים - כל מוצר משובץ למחלקה אחת בלבד, לפי סדר העדיפות הזה
+  const DEPARTMENTS = [
+    { key: 'travel',   title: '🧳 פתרון לאוכל בחו"ל' },
+    { key: 'spices',   title: '🧂 תבלינים ותיבול', cats: ['תבלינים','מלח'] },
+    { key: 'baking',   title: '🌾 קמחים ואפייה', cats: ['קמחים','אפייה','תוספי אפייה','קונדיטוריה'] },
+    { key: 'snacks',   title: '🍬 ממתקים וחטיפים', cats: ['ממתקים','שוקולד','חטיפים'] },
+    { key: 'fish',     title: '🐟 שימורי דגים', cats: ['שימורי דגים'] },
+    { key: 'protein',  title: '💪 מוצרי חלבון', cats: ['מוצרי חלבון'] },
+    { key: 'superfood',title: '💚 סופר פוד ובריאות', cats: ['סופר פוד','תוספי תזונה','ממתיקים טבעיים'] },
+    { key: 'drinks',   title: '🍵 תה ושתייה חמה', cats: ['תה ושתייה חמה','שתייה חמה'] },
+    { key: 'general',  title: '🍳 קולינריה כללית' }, // קאטש-אול: כל מה שלא שויך למחלקה ספציפית
+  ];
+
+  function productCats(p) { return Array.isArray(p.cat) ? p.cat : [p.cat]; }
+
+  function assignDepartment(p) {
+    if (TRAVEL_FOOD_IDS.has(p.id)) return 'travel';
+    const cats = productCats(p);
+    for (const d of DEPARTMENTS) {
+      if (!d.cats) continue;
+      if (d.cats.some(c => cats.includes(c))) return d.key;
+    }
+    return 'general';
+  }
+
   function appendCards(grid, products) {
     products.forEach(p => {
       const div = document.createElement('div');
@@ -858,6 +905,25 @@
       div.innerHTML = buildCard(p);
       grid.appendChild(div);
     });
+  }
+
+  // קפיצה דרך scrollIntoView ישירות, ולא בהסתמך על ניווט hash טבעי של הדפדפן -
+  // על עמוד ארוך וגבוה כמו זה, קפיצת hash רגילה לא תמיד זזה בפועל
+  function jumpToDept(key) {
+    const el = document.getElementById('dept-' + key);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function renderDeptNav(groups, bulkCount) {
+    const nav = document.getElementById('dept-nav');
+    if (!nav) return;
+    const visible = DEPARTMENTS.filter(d => groups[d.key].length);
+    let html = visible.map(d =>
+      `<a href="#dept-${d.key}" class="dept-nav-link" onclick="event.preventDefault();jumpToDept('${d.key}')">${d.title}<span class="dept-nav-count">${groups[d.key].length}</span></a>`
+    ).join('');
+    if (bulkCount) html += `<a href="#dept-bulk" class="dept-nav-link" onclick="event.preventDefault();jumpToDept('bulk')">📦 אריזות חסכון<span class="dept-nav-count">${bulkCount}</span></a>`;
+    nav.innerHTML = html;
+    nav.style.display = (visible.length > 1 || bulkCount) ? 'flex' : 'none';
   }
 
   function renderAll(products) {
@@ -870,17 +936,34 @@
         <div style="font-size:2.5rem;margin-bottom:.6rem">🔍</div>
         <strong>לא נמצאו מוצרים</strong>
       </div>`;
+      const nav = document.getElementById('dept-nav');
+      if (nav) nav.style.display = 'none';
       return;
     }
 
     const regular = products.filter(p => !BULK_PACK_IDS.has(p.id));
     const bulk = products.filter(p => BULK_PACK_IDS.has(p.id));
 
-    appendCards(grid, regular);
+    const groups = {};
+    DEPARTMENTS.forEach(d => groups[d.key] = []);
+    regular.forEach(p => groups[assignDepartment(p)].push(p));
+
+    renderDeptNav(groups, bulk.length);
+
+    DEPARTMENTS.forEach(d => {
+      const items = groups[d.key];
+      if (!items.length) return;
+      grid.insertAdjacentHTML('beforeend', `
+        <div class="subsection-header" id="dept-${d.key}" style="grid-column:1/-1">
+          <span class="subsection-title">${d.title}</span>
+          <span class="subsection-count">${items.length} מוצרים</span>
+        </div>`);
+      appendCards(grid, items);
+    });
 
     if (bulk.length) {
       grid.insertAdjacentHTML('beforeend', `
-        <div class="subsection-header" style="grid-column:1/-1">
+        <div class="subsection-header" id="dept-bulk" style="grid-column:1/-1">
           <span class="subsection-title">📦 אריזות חסכון</span>
           <span class="subsection-count">${bulk.length} מוצרים</span>
         </div>`);
@@ -919,12 +1002,13 @@
           <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0;">
             <div style="display:flex;align-items:center;gap:5px;">
               ${sizeStr ? `<span class="card-size-tag">${sizeStr}</span>` : ''}
-              ${p.priceILS ? `<span class="card-discount-badge">${Math.round(NOVEXTRA_TIER*100)}% הנחה</span>` : ''}
+              ${p.priceILS ? `<span class="card-discount-badge">${Math.round(discountFor(p.id)*100)}% הנחה</span>` : ''}
             </div>
             ${p.priceILS ? `<div style="display:flex;align-items:baseline;gap:5px;">
-              <span class="card-price-final">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${(Number(p.priceILS)*(1-NOVEXTRA_TIER)).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</span>
+              <span class="card-price-final">${p.sizes && p.sizes.length > 1 ? 'החל מ-' : ''}${(Number(p.priceILS)*(1-discountFor(p.id))).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</span>
               <span class="card-price-original">${Number(p.priceILS).toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2})} ₪</span>
             </div>` : ''}
+            ${p.perUnitLabel ? `<span style="font-size:0.64rem;color:var(--text-soft)">${p.perUnitLabel}</span>` : ''}
           </div>
         </div>
         ${(p.dairy === true || /\-D$/i.test(p.cert||'')) ? '<span class="dairy-badge">🥛 חלבי</span>' : ''}
