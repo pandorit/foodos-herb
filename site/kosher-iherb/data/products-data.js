@@ -8957,8 +8957,8 @@ window.FOODOS_PRODUCTS = [
   },
   {
     "id": 502,
-    "name": "Ashapops, Popped Water Lily Seeds, Vegan Cheese, 1.23 oz (35 g)",
-    "url": "https://www.iherb.com/pr/ashapops-popped-water-lily-seeds-vegan-cheese/107820",
+    "name": "AshaPops, Popped Water Lily Seeds, Vegan Cheese, 1 oz (28g)",
+    "url": "https://il.iherb.com/pr/ashapops-popped-water-lily-seeds-vegan-cheese-1-oz-28-g/150448",
     "desc": "זרעי שושנת הנילוס קלויים בטעם גבינה טבעונית מבית Ashapops. חטיף מהפכני ובריא שמגיע מסופר-פוד עתיק: זרעי לוטוס (Makhana) שצצו מחוץ להודו ותופסים את עולם הצניפים בסערה. פריכים, קלים, וממכרים.",
     "cert": "OU",
     "cat": "חטיפים",
@@ -8977,9 +8977,9 @@ window.FOODOS_PRODUCTS = [
       "חטיף בריא",
       "ללא דגנים"
     ],
-    "img": "https://s3.images-iherb.com/ash/ash00001/d/1.jpg",
-    "affiliateUrl": "https://www.iherb.com/pr/ashapops-popped-water-lily-seeds-vegan-cheese/107820?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
-    "priceILS": 79.26,
+    "img": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/asa/asa00154/v/6.jpg",
+    "affiliateUrl": "https://il.iherb.com/pr/ashapops-popped-water-lily-seeds-vegan-cheese-1-oz-28-g/150448?ccode=IL&currcode=ILS&langcode=en-US&fld=1&rcode=FOODOS",
+    "priceILS": 29.91,
     "available": true
   },
   {
